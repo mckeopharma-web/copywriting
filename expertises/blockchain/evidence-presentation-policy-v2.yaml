@@ -1,6 +1,7 @@
 policy:
   id: policy:evidence-presentation:progressive-disclosure-v1
-  version: 1.0
+  version: 1.1
+  graph_status: APPLIED_TO_NEOFORT
   page: https://mickael-umt.com/expertises/blockchain/
   objective: >-
     Preserve landing-page commercial rhythm while keeping every factual claim
@@ -8,10 +9,7 @@ policy:
 
 levels:
   L1_DECISION:
-    audience:
-      - executive
-      - product
-      - technical_decision_maker
+    audience: [executive, product, technical_decision_maker]
     purpose: decision_and_value
     default_render_mode: SILENT_CITATION
     rules:
@@ -20,11 +18,7 @@ levels:
       require_citation_marker_for_fact: true
       prefer_buyer_consequence_first: true
   L2_EVIDENCE:
-    audience:
-      - technical_evaluator
-      - risk
-      - security
-      - due_diligence
+    audience: [technical_evaluator, risk, security, due_diligence]
     purpose: provenance_and_boundary
     required_fields:
       - eu_id
@@ -65,9 +59,27 @@ citation:
     touch_required: true
     keyboard_required: true
 
+llm_judge_pipeline:
+  orchestration_policy_id: policy:llm-judge:evidence-to-presentation-v1
+  upstream_evidence_judges:
+    - judge:evidence-unit:champion-v2
+    - judge:evidence-unit:macro-market-v1
+  rule: >-
+    Passing EvidenceUnit quality does not authorize direct insertion of source
+    apparatus into landing copy. Presentation is a separate fail-closed judgement.
+
 presentation_judge:
   id: judge:evidence-placement:presentation-v1
+  name: Evidence Placement Progressive Disclosure LLM Judge
+  version: 1.1
+  judge_type: LLM_AS_JUDGE
+  score_version: EUP-PRESENTATION-100-v1
+  execution_mode: PROMPT_DRIVEN_EXTERNAL_ORCHESTRATOR
   fail_closed: true
+  auto_publish: false
+  thresholds:
+    pass: 85
+    champion: 95
   score_formula:
     semantic_fit: 0.30
     executive_readability: 0.25
@@ -75,7 +87,8 @@ presentation_judge:
     traceability: 0.15
     progressive_disclosure_accessibility: 0.10
   hard_gates:
-    - l1_claim_entailed_by_admitted_eu
+    - upstream_evidence_unit_admitted
+    - l1_claim_entailed_by_eu
     - no_bibliographic_apparatus_in_silent_citation_l1
     - max_one_inline_numeric_datum_unless_data_explanation
     - l2_has_metric_population_period_source_boundary
@@ -91,44 +104,55 @@ placements:
     l1_copy: "Rendez les décisions et transactions vérifiables sans sur-construire l’infrastructure."
     render_mode: METRIC_CHIP
     eu_id: EU-MACRO-TOKENIZED-ASSETS-GROWTH-5X-2025-2026
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:proposition:mechanism
     l1_copy: "Le cadrage peut conclure à une blockchain, une attestation, une preuve ZK — ou à aucune blockchain. Je pars de la propriété à prouver, puis du mécanisme le plus simple qui la rend vérifiable."
     render_mode: METRIC_CHIP
     eu_id: EU-MACRO-TOKENIZED-ASSETS-23.3B-2026Q1
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:consequences:platform-first
     l1_copy: "Le choix de plateforme vient après le flux économique, les contreparties et la propriété à vérifier."
     render_mode: SILENT_CITATION
     eu_id: EU-MACRO-STABLECOIN-PAYMENT-390B-2025
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:consequence:key-governance
     l1_copy: "Les droits de signature, de révocation et de reprise sont spécifiés avant le déploiement — pas après l’incident."
     render_mode: SILENT_CITATION
     eu_id: EU-AFT-KEY-RECOVERY-CORPUS-2026
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:consequences:multisig-governance
     l1_copy: "Un multisig fixe un seuil. La gouvernance définit l’autorité, l’exception et la reprise."
     render_mode: SILENT_CITATION
     eu_id: EU-BC-EIP7702-MALICIOUS-AUTH-2026
+    graph_status: BLOCKED_UPSTREAM_EVIDENCE_JUDGE
   - sequence_id: seq:blockchain:consequence:history
     l1_copy: "Signer un fichier ne prouve pas la continuité de son historique."
     render_mode: SILENT_CITATION
     eu_id: EU-CROSBY-PROOF-VERIFY-2009
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:engagements:crypto-not-audit
     l1_copy: "Une preuve cryptographique démontre une propriété ; elle ne remplace ni audit, ni gouvernance, ni contrôle."
     render_mode: SILENT_CITATION
-    eu_id: CURRENT_TECHNICAL_SECURITY_ASSURANCE_EU
+    eu_id: EU-BC-SC-SLR-TAXONOMY-2026
+    graph_status: BLOCKED_UPSTREAM_EVIDENCE_JUDGE
   - sequence_id: seq:blockchain:functional:selective-disclosure
     l1_copy: "Rendez la propriété nécessaire vérifiable sans publier les données qui n’ont pas à l’être."
     render_mode: METRIC_CHIP
     eu_id: EU-JISA-BBS-VERIFY-2024
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:trigger:privacy
     l1_copy: "Un partenaire peut vérifier l’affirmation sans recevoir le secret qui la fonde."
     render_mode: SILENT_CITATION
     eu_id: EU-ZKSA-VERIFY-2021
+    graph_status: PENDING_XPATH
   - sequence_id: seq:blockchain:resultats:independent-verifier
     l1_copy: "Le résultat reste vérifiable sans dépendre de l’opérateur qui l’a produit."
     render_mode: SILENT_CITATION
-    eu_id: EU-MACRO-APPIA-PARTICIPANTS-61-2026
-    challenger_eu_id: EU-BC-X402-FACILITATOR-VIOLATIONS-15OF15-2026
-    challenger_status: PENDING_JUDGE
+    eu_id: null
+    graph_status: EVIDENCE_GAP
+    note: >-
+      Previous macro proxy removed from the proposed presentation mapping because
+      it does not directly entail the independent-verification claim.
 
 aliases:
   - sequence_id: seq:blockchain:consequences:history-integrity
@@ -137,3 +161,8 @@ aliases:
   - sequence_id: seq:blockchain:proposition:onchain-offchain
     canonical_sequence_id: seq:blockchain:functional:selective-disclosure
     public_citation: false
+
+graph_run:
+  id: run:blockchain:evidence-presentation:2026-08-31:v3
+  status: QUEUED_FOR_PRESENTATION_JUDGE
+  decisions: 12
