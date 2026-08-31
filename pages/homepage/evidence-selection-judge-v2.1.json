@@ -1,0 +1,84 @@
+{
+  "run_id": "homepage-eu-selection:2026-08-31:judge-v2.1",
+  "page_url": "https://mickael-umt.com/",
+  "judge_id": "judge:evidence-unit:champion-v2",
+  "model": "GPT-5.6 Sol",
+  "score_policy": "EU-CHAMPION-100-v1",
+  "before_count": 20,
+  "after_count": 20,
+  "substitution_count": 4,
+  "formula": {
+    "x": "{quant_variable, quant_value, quant_unit, population, period, primary_source_url}",
+    "u": "{boundary, limitations, source_independence, conflict_of_interest, uncertainty}",
+    "F": "F=f(x,u,b,s): admitted EvidenceUnit after literal source verification, LLM entailment, research/competition gates, binding and separated support",
+    "G": "G=g(Y,F): publishable placement iff F supports the sequence/CTA premise, XPath is unique, support is not stitched and selected-EU cardinality is invariant"
+  },
+  "substitutions": [
+    {
+      "sequence_id": "nlp:home:intent:scene-card:01:01",
+      "old_eu": "EU-FC-SPRAWL-01",
+      "old_score_v2": 62,
+      "new_eu": "EU-MNSC-DEV-AI-RCT-4867-2026",
+      "new_score": 98,
+      "delta": 36,
+      "source_url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535",
+      "source_verification": "VERIFIED_ON_CANONICAL_ARTICLE_PAGE",
+      "xpath": "//section[@data-section-id='intent']//article[@data-scene='construire-systemes']//h3[contains(concat(' ',normalize-space(@class),' '),' scene-card-headline ')]"
+    },
+    {
+      "sequence_id": "nlp:home:intent:scene-card:03:01",
+      "old_eu": "EU-FC-DATAPLATFORM-01",
+      "old_score_v2": 62,
+      "new_eu": "EU-REQENG-TRACEABILITY-QE-2025",
+      "new_score": 98,
+      "delta": 36,
+      "source_url": "https://link.springer.com/article/10.1007/s00766-025-00447-4",
+      "source_verification": "VERIFIED_ON_CANONICAL_ARTICLE_PAGE",
+      "xpath": "//section[@data-section-id='intent']//article[@data-scene='decisions-defendables']//h3[contains(concat(' ',normalize-space(@class),' '),' scene-card-headline ')]"
+    },
+    {
+      "sequence_id": "nlp:home:intent:scene-card:05:01",
+      "old_eu": "EU-FC-SKILLS-01",
+      "old_score_v2": 62,
+      "new_eu": "EU-NATMED-CDSS-ADOPTION-1138-2026",
+      "new_score": 99,
+      "delta": 37,
+      "source_url": "https://www.nature.com/articles/s41591-026-04601-5",
+      "source_verification": "VERIFIED_ON_CANONICAL_ARTICLE_PAGE",
+      "xpath": "//section[@data-section-id='intent']//article[@data-scene='transmettre-capacite']//h3[contains(concat(' ',normalize-space(@class),' '),' scene-card-headline ')]"
+    },
+    {
+      "sequence_id": "nlp:home:intent:scene-card:06:01",
+      "old_eu": "EU-MKT-AI-AUTOMATION-2028",
+      "old_score_v2": 66,
+      "new_eu": "EU-MKTSCI-GENAI-PERSONALIZED-VIDEO-2025",
+      "new_score": 99,
+      "delta": 33,
+      "source_url": "https://pubsonline.informs.org/doi/10.1287/mksc.2023.0494",
+      "source_verification": "VERIFIED_ON_CANONICAL_ARTICLE_PAGE",
+      "xpath": "//section[@data-section-id='intent']//article[@data-scene='industrialiser-contexte']//h3[contains(concat(' ',normalize-space(@class),' '),' scene-card-headline ')]"
+    }
+  ],
+  "selected_eu_ids": [
+    "EU-MNSC-DEV-AI-RCT-4867-2026",
+    "EU-CCS-AI-ASSISTED-INSECURE-CODE-2023",
+    "EU-REQENG-TRACEABILITY-QE-2025",
+    "EU-PHARMA-EMA-EVIDENCE-2028",
+    "EU-NATMED-CDSS-ADOPTION-1138-2026",
+    "EU-MKTSCI-GENAI-PERSONALIZED-VIDEO-2025",
+    "EU-PROG-AIPA-BOUNDED-AGENTS-2026",
+    "EU-METR-TIMEHORIZON-2026",
+    "EU-IS-DATAQUALITY-ML-2025",
+    "EU-AISI-CYBER-COMPUTE-2026",
+    "EU-NIST-PQC-MIGRATION-2035-V2",
+    "EU-FDA-CSA-MACHINE-TESTS-2026",
+    "EU-CDISC-360I-AUTOMATION-2026",
+    "EU-MHRA-PV-SIGNAL-SOURCES-2026",
+    "EU-NATMED-LLM-CDSS-CLUSTER-RCT-9691-2026",
+    "EU-STANFORD-RAI-SKILLS-2026",
+    "EU-MKTSCI-SOCIAL-ADS-37M-RCT-2020",
+    "EU-ORGSCI-JAGGED-FRONTIER-2026",
+    "EU-EMSE-SECURE-CODING-2026",
+    "EU-QJE-GENAI-WORK-2025"
+  ]
+}
