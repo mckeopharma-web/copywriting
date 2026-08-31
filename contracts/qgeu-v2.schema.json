@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mickael-umt.com/contracts/qgeu-v2.schema.json",
+  "title": "QuestionDrivenGraphEvidenceUnit v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "question",
+    "metric_contract",
+    "reasoning_mode",
+    "production",
+    "retrieval",
+    "series",
+    "derivation",
+    "graph",
+    "answer",
+    "provenance",
+    "quality_gate"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "id": {"type": "string", "minLength": 1},
+    "question": {"$ref": "#/$defs/question"},
+    "metric_contract": {"$ref": "#/$defs/metricContract"},
+    "reasoning_mode": {"const": "DEDUCTIVE"},
+    "production": {"$ref": "#/$defs/production"},
+    "retrieval": {"$ref": "#/$defs/retrieval"},
+    "series": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/series"}
+    },
+    "derivation": {"$ref": "#/$defs/derivation"},
+    "graph": {"$ref": "#/$defs/graph"},
+    "answer": {"$ref": "#/$defs/answer"},
+    "provenance": {"$ref": "#/$defs/provenance"},
+    "quality_gate": {"$ref": "#/$defs/qualityGate"}
+  },
+  "$defs": {
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "decision_context", "answer_type", "reasoning_required", "causal_intent"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "decision_context": {"type": "string"},
+        "answer_type": {
+          "enum": ["trend", "comparison", "ratio", "growth", "share", "spread", "decomposition", "threshold"]
+        },
+        "reasoning_required": {"const": "DEDUCTIVE"},
+        "causal_intent": {"const": false}
+      }
+    },
+    "metricContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject",
+        "variable",
+        "statistic_type",
+        "unit",
+        "population",
+        "geography",
+        "frequency",
+        "aggregation",
+        "comparability_keys"
+      ],
+      "properties": {
+        "subject": {"type": "string", "minLength": 1},
+        "variable": {"type": "string", "minLength": 1},
+        "statistic_type": {"enum": ["stock", "flow", "rate", "share", "index", "count", "price", "value"]},
+        "unit": {"type": "string", "minLength": 1},
+        "population": {"type": "string", "minLength": 1},
+        "geography": {"type": "string", "minLength": 1},
+        "frequency": {"type": "string", "minLength": 1},
+        "aggregation": {"type": "string", "minLength": 1},
+        "comparability_keys": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "production": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "source_data_original", "transformation_original", "visualization_original"],
+      "properties": {
+        "mode": {"enum": ["FETCH_SOURCE_GRAPH", "REBUILD_FROM_SOURCE_DATA", "DERIVE_ORIGINAL"]},
+        "source_data_original": {"type": "boolean"},
+        "transformation_original": {"type": "boolean"},
+        "visualization_original": {"type": "boolean"}
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "candidate_kind", "source_id", "hard_gate_pass", "score"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "candidate_kind": {"enum": ["SOURCE_GRAPH", "SOURCE_DATASET", "SOURCE_SERIES", "SOURCE_TABLE"]},
+        "source_id": {"type": "string", "minLength": 1},
+        "hard_gate_pass": {"type": "boolean"},
+        "score": {"type": ["number", "null"], "minimum": 0, "maximum": 100}
+      }
+    },
+    "retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resolution_order", "candidates", "selected_candidate_id"],
+      "properties": {
+        "resolution_order": {
+          "type": "array",
+          "prefixItems": [
+            {"const": "FETCH_SOURCE_GRAPH"},
+            {"const": "REBUILD_FROM_SOURCE_DATA"},
+            {"const": "DERIVE_ORIGINAL"},
+            {"const": "ROUTE_OUT"}
+          ],
+          "items": false
+        },
+        "selected_candidate_id": {"type": "string", "minLength": 1},
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/candidate"}
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "period", "value", "unit", "population", "geography", "epistemic_status", "source_ref"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "period": {"type": "string", "minLength": 1},
+        "value": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1},
+        "population": {"type": "string", "minLength": 1},
+        "geography": {"type": "string", "minLength": 1},
+        "epistemic_status": {"enum": ["OBSERVED", "DERIVED_DETERMINISTIC"]},
+        "source_ref": {"type": ["string", "null"]}
+      }
+    },
+    "series": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "subject", "variable", "unit", "population", "geography", "frequency", "observations"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "subject": {"type": "string", "minLength": 1},
+        "variable": {"type": "string", "minLength": 1},
+        "unit": {"type": "string", "minLength": 1},
+        "population": {"type": "string", "minLength": 1},
+        "geography": {"type": "string", "minLength": 1},
+        "frequency": {"type": "string", "minLength": 1},
+        "observations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/observation"}
+        }
+      }
+    },
+    "derivation": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["reasoning_mode", "operation", "formula", "input_series_ids", "assumptions", "forbidden_inferences", "version"],
+      "properties": {
+        "reasoning_mode": {"const": "DEDUCTIVE"},
+        "operation": {"type": "string", "minLength": 1},
+        "formula": {"type": "string", "minLength": 1},
+        "input_series_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "assumptions": {"type": "array", "items": {"type": "string"}},
+        "forbidden_inferences": {"type": "array", "items": {"type": "string"}},
+        "version": {"type": "string", "minLength": 1}
+      }
+    },
+    "graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chart_type", "series_ids", "y_scale", "missing_data_policy", "transform_disclosure", "title", "subtitle", "alt_text"],
+      "properties": {
+        "chart_type": {"enum": ["line", "bar", "area", "scatter", "slope", "indexed_line", "small_multiple"]},
+        "series_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "y_scale": {"enum": ["linear", "log"]},
+        "missing_data_policy": {"type": "string"},
+        "transform_disclosure": {"type": "string"},
+        "title": {"type": "string", "minLength": 1},
+        "subtitle": {"type": "string"},
+        "alt_text": {"type": "string", "minLength": 1}
+      }
+    },
+    "answer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement", "answer_type", "epistemic_status", "scope_boundary", "causal_language_allowed"],
+      "properties": {
+        "statement": {"type": "string", "minLength": 1},
+        "answer_type": {"type": "string"},
+        "value": {"type": ["number", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "epistemic_status": {"enum": ["OBSERVED", "DERIVED_DETERMINISTIC"]},
+        "scope_boundary": {"type": "string", "minLength": 1},
+        "causal_language_allowed": {"const": false}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_ids", "observation_ids", "input_hash", "derivation_hash", "graph_spec_hash", "output_hash", "execution_ref"],
+      "properties": {
+        "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "observation_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "input_hash": {"type": "string", "minLength": 1},
+        "derivation_hash": {"type": "string", "minLength": 1},
+        "graph_spec_hash": {"type": "string", "minLength": 1},
+        "output_hash": {"type": "string", "minLength": 1},
+        "execution_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "qualityGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "question_answered",
+        "metric_contract_complete",
+        "source_admissible",
+        "source_provenance_complete",
+        "definition_stable_or_harmonized",
+        "unit_dimension_valid",
+        "population_geography_compatible",
+        "temporal_alignment_valid",
+        "missingness_explicit",
+        "deduction_reproducible",
+        "no_hidden_model_or_forecast",
+        "no_unsupported_causality",
+        "chart_encoding_truthful",
+        "observed_derived_distinguished",
+        "uncertainty_not_invented",
+        "conclusion_entailed_by_data",
+        "provenance_manifest_complete"
+      ],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL"]},
+        "question_answered": {"type": "boolean"},
+        "metric_contract_complete": {"type": "boolean"},
+        "source_admissible": {"type": "boolean"},
+        "source_provenance_complete": {"type": "boolean"},
+        "definition_stable_or_harmonized": {"type": "boolean"},
+        "unit_dimension_valid": {"type": "boolean"},
+        "population_geography_compatible": {"type": "boolean"},
+        "temporal_alignment_valid": {"type": "boolean"},
+        "missingness_explicit": {"type": "boolean"},
+        "deduction_reproducible": {"type": "boolean"},
+        "no_hidden_model_or_forecast": {"type": "boolean"},
+        "no_unsupported_causality": {"type": "boolean"},
+        "chart_encoding_truthful": {"type": "boolean"},
+        "observed_derived_distinguished": {"type": "boolean"},
+        "uncertainty_not_invented": {"type": "boolean"},
+        "conclusion_entailed_by_data": {"type": "boolean"},
+        "provenance_manifest_complete": {"type": "boolean"}
+      }
+    }
+  }
+}
