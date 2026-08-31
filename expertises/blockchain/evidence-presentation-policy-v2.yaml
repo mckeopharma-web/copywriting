@@ -1,0 +1,139 @@
+policy:
+  id: policy:evidence-presentation:progressive-disclosure-v1
+  version: 1.0
+  page: https://mickael-umt.com/expertises/blockchain/
+  objective: >-
+    Preserve landing-page commercial rhythm while keeping every factual claim
+    traceable to an admitted EvidenceUnit and a verified primary source.
+
+levels:
+  L1_DECISION:
+    audience:
+      - executive
+      - product
+      - technical_decision_maker
+    purpose: decision_and_value
+    default_render_mode: SILENT_CITATION
+    rules:
+      source_metadata_inline: false
+      max_inline_numeric_datums: 1
+      require_citation_marker_for_fact: true
+      prefer_buyer_consequence_first: true
+  L2_EVIDENCE:
+    audience:
+      - technical_evaluator
+      - risk
+      - security
+      - due_diligence
+    purpose: provenance_and_boundary
+    required_fields:
+      - eu_id
+      - metric
+      - population_or_context
+      - period
+      - source_short
+      - boundary
+      - internal_evidence_href
+      - external_source_href
+    interaction:
+      desktop: hover_and_focus
+      mobile: tap
+      keyboard: required
+
+render_modes:
+  SILENT_CITATION:
+    description: Fluent Level-1 claim with citation marker only.
+    default: true
+  METRIC_CHIP:
+    description: Metric separated visually from the main sentence.
+  INLINE_NUMBER:
+    description: One bounded number inside Level-1 copy; requires judge justification.
+  SOURCE_AUTHORITY:
+    description: Source institution may be named because authority is itself part of the message.
+
+citation:
+  visible_style: numeric_superscript
+  stable_identity: eu_id
+  internal_route_template: /evidence/{eu_id}/
+  bibliography:
+    enabled: true
+    collapsed_by_default: true
+    heading: Sources & méthodes
+    generated_from_graph: true
+  accessibility:
+    hover_only_forbidden: true
+    touch_required: true
+    keyboard_required: true
+
+presentation_judge:
+  id: judge:evidence-placement:presentation-v1
+  fail_closed: true
+  score_formula:
+    semantic_fit: 0.30
+    executive_readability: 0.25
+    rhythm_continuity: 0.20
+    traceability: 0.15
+    progressive_disclosure_accessibility: 0.10
+  hard_gates:
+    - l1_claim_entailed_by_admitted_eu
+    - no_bibliographic_apparatus_in_silent_citation_l1
+    - max_one_inline_numeric_datum_unless_data_explanation
+    - l2_has_metric_population_period_source_boundary
+    - citation_resolves_to_exactly_one_eu
+    - internal_evidence_href_resolves
+    - external_source_verified
+    - pointer_keyboard_touch_supported
+    - xpath_claim_anchor_match_count_equals_one
+    - alias_does_not_create_duplicate_public_citation
+
+placements:
+  - sequence_id: seq:blockchain:hero:h1
+    l1_copy: "Rendez les décisions et transactions vérifiables sans sur-construire l’infrastructure."
+    render_mode: METRIC_CHIP
+    eu_id: EU-MACRO-TOKENIZED-ASSETS-GROWTH-5X-2025-2026
+  - sequence_id: seq:blockchain:proposition:mechanism
+    l1_copy: "Le cadrage peut conclure à une blockchain, une attestation, une preuve ZK — ou à aucune blockchain. Je pars de la propriété à prouver, puis du mécanisme le plus simple qui la rend vérifiable."
+    render_mode: METRIC_CHIP
+    eu_id: EU-MACRO-TOKENIZED-ASSETS-23.3B-2026Q1
+  - sequence_id: seq:blockchain:consequences:platform-first
+    l1_copy: "Le choix de plateforme vient après le flux économique, les contreparties et la propriété à vérifier."
+    render_mode: SILENT_CITATION
+    eu_id: EU-MACRO-STABLECOIN-PAYMENT-390B-2025
+  - sequence_id: seq:blockchain:consequence:key-governance
+    l1_copy: "Les droits de signature, de révocation et de reprise sont spécifiés avant le déploiement — pas après l’incident."
+    render_mode: SILENT_CITATION
+    eu_id: EU-AFT-KEY-RECOVERY-CORPUS-2026
+  - sequence_id: seq:blockchain:consequences:multisig-governance
+    l1_copy: "Un multisig fixe un seuil. La gouvernance définit l’autorité, l’exception et la reprise."
+    render_mode: SILENT_CITATION
+    eu_id: EU-BC-EIP7702-MALICIOUS-AUTH-2026
+  - sequence_id: seq:blockchain:consequence:history
+    l1_copy: "Signer un fichier ne prouve pas la continuité de son historique."
+    render_mode: SILENT_CITATION
+    eu_id: EU-CROSBY-PROOF-VERIFY-2009
+  - sequence_id: seq:blockchain:engagements:crypto-not-audit
+    l1_copy: "Une preuve cryptographique démontre une propriété ; elle ne remplace ni audit, ni gouvernance, ni contrôle."
+    render_mode: SILENT_CITATION
+    eu_id: CURRENT_TECHNICAL_SECURITY_ASSURANCE_EU
+  - sequence_id: seq:blockchain:functional:selective-disclosure
+    l1_copy: "Rendez la propriété nécessaire vérifiable sans publier les données qui n’ont pas à l’être."
+    render_mode: METRIC_CHIP
+    eu_id: EU-JISA-BBS-VERIFY-2024
+  - sequence_id: seq:blockchain:trigger:privacy
+    l1_copy: "Un partenaire peut vérifier l’affirmation sans recevoir le secret qui la fonde."
+    render_mode: SILENT_CITATION
+    eu_id: EU-ZKSA-VERIFY-2021
+  - sequence_id: seq:blockchain:resultats:independent-verifier
+    l1_copy: "Le résultat reste vérifiable sans dépendre de l’opérateur qui l’a produit."
+    render_mode: SILENT_CITATION
+    eu_id: EU-MACRO-APPIA-PARTICIPANTS-61-2026
+    challenger_eu_id: EU-BC-X402-FACILITATOR-VIOLATIONS-15OF15-2026
+    challenger_status: PENDING_JUDGE
+
+aliases:
+  - sequence_id: seq:blockchain:consequences:history-integrity
+    canonical_sequence_id: seq:blockchain:consequence:history
+    public_citation: false
+  - sequence_id: seq:blockchain:proposition:onchain-offchain
+    canonical_sequence_id: seq:blockchain:functional:selective-disclosure
+    public_citation: false
