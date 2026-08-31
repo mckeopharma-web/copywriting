@@ -37,7 +37,7 @@ runs:
         PYTHONPATH: src
       run: |
         set -euo pipefail
-        python -m py_compile src/eu_pipeline.py
+        python -m py_compile src/eu_pipeline.py src/eu_pipeline_entrypoint.py
         python -m unittest -v src/test_eu_pipeline.py
 
     - name: Run F/G EvidenceUnit quality gate
@@ -49,7 +49,7 @@ runs:
         OPENAI_MODEL: ${{ inputs.model }}
       run: |
         set -euo pipefail
-        python src/eu_pipeline.py \
+        python src/eu_pipeline_entrypoint.py \
           --mode "$EVIDENCE_PIPELINE_MODE" \
           --page-url "$EVIDENCE_PAGE_URL" \
           --expected-count "$HOMEPAGE_EU_COUNT"
