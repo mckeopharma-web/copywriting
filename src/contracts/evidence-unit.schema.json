@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mickael-umt.com/schemas/evidence-unit-v3.json",
+  "title": "EvidenceUnit quantitative copy contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "quant_variable",
+    "quant_value",
+    "quant_unit",
+    "population",
+    "period",
+    "primary_source_url",
+    "source_fact",
+    "boundary_short"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 3},
+    "quant_variable": {"type": "string", "minLength": 3},
+    "quant_value": {"type": ["string", "number"], "pattern": ".*\\d.*"},
+    "quant_unit": {"type": "string", "minLength": 1},
+    "population": {"type": "string", "minLength": 2},
+    "period": {"type": "string", "minLength": 2},
+    "primary_source_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "source_fact": {"type": "string", "minLength": 20},
+    "boundary_short": {"type": "string", "minLength": 10},
+    "recommendation_source_url": {"type": ["string", "null"], "format": "uri"},
+    "champion_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "judge_hard_gate_pass": {"type": ["boolean", "null"]}
+  }
+}
