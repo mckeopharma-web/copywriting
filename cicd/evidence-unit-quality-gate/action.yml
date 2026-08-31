@@ -1,0 +1,54 @@
+name: EvidenceUnit LLM Judge Quality Gate
+description: Generate/audit EvidenceUnits, verify source claims, judge quality, enforce F=f(x,u,...) and G=g(Y,F), then validate XPath placements.
+inputs:
+  mode:
+    description: check is read-only; apply may persist candidate EUs/gaps to Neo4j after hard gates pass.
+    required: false
+    default: check
+  page-url:
+    description: Public page to audit.
+    required: false
+    default: https://mickael-umt.com/
+  expected-eu-count:
+    description: Selected EvidenceUnit cardinality invariant for the page.
+    required: false
+    default: '20'
+  model:
+    description: LLM-as-a-judge model ID.
+    required: false
+    default: gpt-5.6-sol
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: pip
+        cache-dependency-path: src/requirements-evidence-ci.txt
+
+    - name: Install EvidenceUnit gate runtime
+      shell: bash
+      run: python -m pip install --disable-pip-version-check -r src/requirements-evidence-ci.txt
+
+    - name: Run F/G EvidenceUnit quality gate
+      shell: bash
+      env:
+        EVIDENCE_PIPELINE_MODE: ${{ inputs.mode }}
+        EVIDENCE_PAGE_URL: ${{ inputs.page-url }}
+        HOMEPAGE_EU_COUNT: ${{ inputs.expected-eu-count }}
+        OPENAI_MODEL: ${{ inputs.model }}
+      run: |
+        set -euo pipefail
+        python src/eu_pipeline.py \
+          --mode "$EVIDENCE_PIPELINE_MODE" \
+          --page-url "$EVIDENCE_PAGE_URL" \
+          --expected-count "$HOMEPAGE_EU_COUNT"
+
+    - name: Upload EvidenceUnit gate report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: evidence-unit-quality-gate
+        path: artifacts/evidence-unit-quality-gate.json
+        if-no-files-found: error
