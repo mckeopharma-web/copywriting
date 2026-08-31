@@ -79,14 +79,18 @@ neo4j_run:
   status: QUEUED_FOR_PRESENTATION_JUDGE
   decisions: 12
   queue_statuses:
-    PENDING_XPATH: 8
+    PENDING_XPATH_CANONICAL: 7
+    ALIAS_PENDING_XPATH: 2
     BLOCKED_UPSTREAM_EVIDENCE_JUDGE: 2
     EVIDENCE_GAP: 1
-    ALIAS_PENDING_XPATH: 1
+  neo4j_status_rollup:
+    PENDING_XPATH: 9
+    BLOCKED_UPSTREAM_EVIDENCE_JUDGE: 2
+    EVIDENCE_GAP: 1
   note: >-
-    NeoFort reports 12 queued decisions across PENDING_XPATH,
-    BLOCKED_UPSTREAM_EVIDENCE_JUDGE and EVIDENCE_GAP. Alias decisions inherit
-    their public citation from the canonical sequence and cannot emit a duplicate marker.
+    NeoFort reports 12 queued decisions. The two alias decisions are included in
+    the PENDING_XPATH rollup, inherit their canonical public citation and cannot
+    emit a duplicate citation marker.
 
 known_blocks:
   - sequence_id: seq:blockchain:consequences:multisig-governance
