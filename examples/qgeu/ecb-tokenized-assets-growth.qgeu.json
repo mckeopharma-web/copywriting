@@ -1,0 +1,161 @@
+{
+  "schema_version": "2.0",
+  "id": "QGEU-ECB-TOKENIZED-ASSETS-GROWTH-2025-2026-V2",
+  "question": {
+    "text": "Quelle a été la croissance relative de la valeur des actifs traditionnels tokenisés enregistrés sur des blockchains publiques entre T1 2025 et T1 2026 ?",
+    "decision_context": "Quantifier un changement historique descriptif sans extrapoler ni inférer une causalité.",
+    "answer_type": "growth",
+    "reasoning_required": "DEDUCTIVE",
+    "causal_intent": false
+  },
+  "metric_contract": {
+    "subject": "traditional assets recorded on public blockchains",
+    "variable": "market_value",
+    "statistic_type": "stock",
+    "unit": "EUR billion",
+    "population": "tokenised traditional assets recorded on public blockchains",
+    "geography": "global",
+    "frequency": "quarterly",
+    "aggregation": "end_period",
+    "comparability_keys": [
+      "subject",
+      "variable",
+      "unit",
+      "population",
+      "geography",
+      "aggregation",
+      "period semantics"
+    ]
+  },
+  "reasoning_mode": "DEDUCTIVE",
+  "production": {
+    "mode": "DERIVE_ORIGINAL",
+    "source_data_original": false,
+    "transformation_original": true,
+    "visualization_original": true
+  },
+  "retrieval": {
+    "resolution_order": [
+      "FETCH_SOURCE_GRAPH",
+      "REBUILD_FROM_SOURCE_DATA",
+      "DERIVE_ORIGINAL",
+      "ROUTE_OUT"
+    ],
+    "selected_candidate_id": "qgeu:candidate:ecb-tokenized-assets-source-data-v2",
+    "candidates": [
+      {
+        "id": "qgeu:candidate:ecb-tokenized-assets-source-data-v2",
+        "candidate_kind": "SOURCE_TABLE",
+        "source_id": "src:ecb:2026-08-26-tokenised-market",
+        "hard_gate_pass": true,
+        "score": 100
+      }
+    ]
+  },
+  "series": [
+    {
+      "id": "qgeu:series:ecb-tokenized-assets-eur-bn",
+      "subject": "traditional assets recorded on public blockchains",
+      "variable": "market_value",
+      "unit": "EUR billion",
+      "population": "tokenised traditional assets recorded on public blockchains",
+      "geography": "global",
+      "frequency": "quarterly",
+      "observations": [
+        {
+          "id": "qgeu:obs:ecb-tokenized-assets:2025Q1",
+          "period": "2025-Q1",
+          "value": 4.7,
+          "unit": "EUR billion",
+          "population": "tokenised traditional assets recorded on public blockchains",
+          "geography": "global",
+          "epistemic_status": "OBSERVED",
+          "source_ref": "src:ecb:2026-08-26-tokenised-market"
+        },
+        {
+          "id": "qgeu:obs:ecb-tokenized-assets:2026Q1",
+          "period": "2026-Q1",
+          "value": 23.3,
+          "unit": "EUR billion",
+          "population": "tokenised traditional assets recorded on public blockchains",
+          "geography": "global",
+          "epistemic_status": "OBSERVED",
+          "source_ref": "src:ecb:2026-08-26-tokenised-market"
+        }
+      ]
+    }
+  ],
+  "derivation": {
+    "reasoning_mode": "DEDUCTIVE",
+    "operation": "ratio + percentage_change",
+    "formula": "ratio=x_end/x_start; pct=100*(x_end-x_start)/x_start",
+    "input_series_ids": ["qgeu:series:ecb-tokenized-assets-eur-bn"],
+    "assumptions": [
+      "same metric definition across periods",
+      "same population and geography",
+      "end-period stock values are comparable"
+    ],
+    "forbidden_inferences": [
+      "unsupported_causality",
+      "hidden_extrapolation",
+      "undeclared_interpolation",
+      "silent_imputation"
+    ],
+    "scalar_outputs": {
+      "ratio": 4.957446808510638,
+      "percent_change": 395.7446808510639
+    },
+    "version": "2.0"
+  },
+  "graph": {
+    "chart_type": "slope",
+    "series_ids": ["qgeu:series:ecb-tokenized-assets-eur-bn"],
+    "y_scale": "linear",
+    "missing_data_policy": "gap; no silent interpolation",
+    "transform_disclosure": "Observed EUR billion endpoints are plotted; 4.96x and +395.7% are deterministic annotations.",
+    "title": "Tokenised traditional assets: end-Q1 2025 to end-Q1 2026",
+    "subtitle": "Source observations: EUR 4.7bn to EUR 23.3bn; derived ratio about 4.96x (+395.7%); no forecast.",
+    "alt_text": "Two observed end-of-quarter values rise from EUR 4.7bn in Q1 2025 to EUR 23.3bn in Q1 2026. This is about 4.96 times the baseline and does not establish cause or future growth."
+  },
+  "answer": {
+    "statement": "At end-Q1 2026 the reported market value was about 4.96 times the end-Q1 2025 level, equivalent to approximately +395.7%.",
+    "answer_type": "growth",
+    "value": 4.957446808510638,
+    "unit": "x versus 2025-Q1",
+    "epistemic_status": "DERIVED_DETERMINISTIC",
+    "scope_boundary": "Historical arithmetic comparison only; no causal or forecast claim.",
+    "causal_language_allowed": false
+  },
+  "provenance": {
+    "source_ids": ["src:ecb:2026-08-26-tokenised-market"],
+    "observation_ids": [
+      "qgeu:obs:ecb-tokenized-assets:2025Q1",
+      "qgeu:obs:ecb-tokenized-assets:2026Q1"
+    ],
+    "input_hash": "sha256:pending-source-snapshot-hash",
+    "derivation_hash": "sha256:pending-derivation-hash",
+    "graph_spec_hash": "sha256:pending-graph-spec-hash",
+    "output_hash": "sha256:pending-output-hash",
+    "execution_ref": "neofort:ontology:qgeu-v2@2.0"
+  },
+  "quality_gate": {
+    "status": "PASS",
+    "question_answered": true,
+    "metric_contract_complete": true,
+    "source_admissible": true,
+    "source_provenance_complete": true,
+    "definition_stable_or_harmonized": true,
+    "unit_dimension_valid": true,
+    "population_geography_compatible": true,
+    "temporal_alignment_valid": true,
+    "missingness_explicit": true,
+    "deduction_reproducible": true,
+    "no_hidden_model_or_forecast": true,
+    "no_unsupported_causality": true,
+    "chart_encoding_truthful": true,
+    "observed_derived_distinguished": true,
+    "uncertainty_not_invented": true,
+    "conclusion_entailed_by_data": true,
+    "provenance_manifest_complete": true
+  }
+}
