@@ -1,0 +1,106 @@
+schema_version: 3.0
+updated_at: 2026-08-31
+scope: https://mickael-umt.com/expertises/blockchain/
+status: APPLIED_TO_NEOFORT
+
+objective: >-
+  Separate scientific evidence quality from landing-page presentation quality.
+  An EvidenceUnit may pass the evidence judge without being allowed to inject
+  bibliographic apparatus directly into Level-1 buyer copy.
+
+pipeline:
+  - EvidenceUnit
+  - EvidenceUnitJudge
+  - EvidenceUnitAdmission
+  - EvidencePresentationDecision
+  - EvidencePlacementPresentationJudge
+  - XPathVerification
+  - PublicationGate
+
+upstream_judges:
+  dominant_research:
+    id: judge:evidence-unit:champion-v2
+    type: LLM_AS_JUDGE
+    version: "2.0"
+    downstream_presentation_gate: true
+  macro_market:
+    id: judge:evidence-unit:macro-market-v1
+    type: LLM_AS_JUDGE
+    version: "1.0"
+    downstream_presentation_gate: true
+
+presentation_judge:
+  id: judge:evidence-placement:presentation-v1
+  name: Evidence Placement Progressive Disclosure LLM Judge
+  type: LLM_AS_JUDGE
+  version: "1.1"
+  score_version: EUP-PRESENTATION-100-v1
+  execution_mode: PROMPT_DRIVEN_EXTERNAL_ORCHESTRATOR
+  fail_closed: true
+  auto_publish: false
+  thresholds:
+    pass: 85
+    champion: 95
+  weights:
+    semantic_fit: 30
+    executive_readability: 25
+    rhythm_continuity: 20
+    traceability: 15
+    progressive_disclosure_accessibility: 10
+  hard_gates:
+    - upstream_evidence_unit_admitted
+    - l1_claim_entailed_by_eu
+    - no_bibliographic_apparatus_in_silent_citation_l1
+    - max_one_inline_numeric_datum_unless_data_explanation
+    - l2_has_metric_population_period_source_boundary
+    - citation_resolves_to_exactly_one_eu
+    - internal_evidence_href_resolves
+    - external_source_verified
+    - pointer_keyboard_touch_supported
+    - xpath_claim_anchor_match_count_equals_one
+    - alias_does_not_create_duplicate_public_citation
+
+presentation_policy:
+  id: policy:evidence-presentation:progressive-disclosure-v1
+  version: "1.1"
+  level_1: L1_DECISION
+  level_2: L2_EVIDENCE
+  default_render_mode: SILENT_CITATION
+  render_modes:
+    - SILENT_CITATION
+    - METRIC_CHIP
+    - INLINE_NUMBER
+    - SOURCE_AUTHORITY
+  citation_style: NUMERIC_SUPERSCRIPT
+  internal_route_template: /evidence/{eu_id}/
+
+neo4j_run:
+  id: run:blockchain:evidence-presentation:2026-08-31:v3
+  status: QUEUED_FOR_PRESENTATION_JUDGE
+  decisions: 12
+  queue_statuses:
+    PENDING_XPATH: 8
+    BLOCKED_UPSTREAM_EVIDENCE_JUDGE: 2
+    EVIDENCE_GAP: 1
+    ALIAS_PENDING_XPATH: 1
+  note: >-
+    NeoFort reports 12 queued decisions across PENDING_XPATH,
+    BLOCKED_UPSTREAM_EVIDENCE_JUDGE and EVIDENCE_GAP. Alias decisions inherit
+    their public citation from the canonical sequence and cannot emit a duplicate marker.
+
+known_blocks:
+  - sequence_id: seq:blockchain:consequences:multisig-governance
+    eu_id: EU-BC-EIP7702-MALICIOUS-AUTH-2026
+    reason: selected EvidenceUnit has not yet passed an accepted upstream evidence judge
+  - sequence_id: seq:blockchain:engagements:crypto-not-audit
+    eu_id: EU-BC-SC-SLR-TAXONOMY-2026
+    reason: selected EvidenceUnit has not yet passed an accepted upstream evidence judge
+  - sequence_id: seq:blockchain:resultats:independent-verifier
+    eu_id: null
+    reason: evidence gap; previous macro proxy was removed from the proposed presentation mapping because it does not directly entail independent verification
+
+publication_rule: >-
+  A presentation score cannot override failed or pending scientific evidence.
+  Publication requires an admitted EvidenceUnit, Level-1 entailment, complete
+  Level-2 disclosure, verified source links, accessible citation interaction,
+  and XPath match_count = 1.
