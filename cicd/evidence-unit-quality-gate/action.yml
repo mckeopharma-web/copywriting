@@ -31,6 +31,15 @@ runs:
       shell: bash
       run: python -m pip install --disable-pip-version-check -r src/requirements-evidence-ci.txt
 
+    - name: Compile and unit-test deterministic gates
+      shell: bash
+      env:
+        PYTHONPATH: src
+      run: |
+        set -euo pipefail
+        python -m py_compile src/eu_pipeline.py
+        python -m unittest -v src/test_eu_pipeline.py
+
     - name: Run F/G EvidenceUnit quality gate
       shell: bash
       env:
