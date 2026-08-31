@@ -1,0 +1,36 @@
+name: QG-EU quality gate
+
+on:
+  pull_request:
+    paths:
+      - 'examples/qgeu/**'
+      - 'contracts/qgeu-v2.schema.json'
+      - 'src/qgeu/**'
+      - 'tests/qgeu/**'
+      - '.skills/qgeu-v2/**'
+      - 'docs/qgeu-v2.md'
+  push:
+    branches: [main]
+    paths:
+      - 'examples/qgeu/**'
+      - 'contracts/qgeu-v2.schema.json'
+      - 'src/qgeu/**'
+      - 'tests/qgeu/**'
+      - '.skills/qgeu-v2/**'
+      - 'docs/qgeu-v2.md'
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic-qgeu-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate all QG-EU documents
+        run: python -m src.qgeu.validate --root examples/qgeu
+      - name: Run QG-EU regression tests
+        run: python -m unittest discover -s tests/qgeu -p 'test_*.py' -v
