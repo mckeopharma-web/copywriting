@@ -1,0 +1,58 @@
+name: EvidenceUnit quality gate
+
+on:
+  pull_request:
+    paths:
+      - '.skills/evidence-unit-judge/**'
+      - 'src/**'
+      - 'cicd/**'
+      - 'pages/**'
+      - 'expertises/**'
+      - '.github/workflows/evidence-unit-quality-gate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'cicd/**'
+      - 'pages/**'
+      - 'expertises/**'
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        description: check is read-only; apply can persist generated candidate EUs after hard gates pass
+        options: [check, apply]
+        default: check
+      expected_eu_count:
+        type: string
+        description: Selected homepage EvidenceUnit count invariant
+        default: '20'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evidence-unit-quality-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evidence-unit-quality-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      NEO4J_URI: ${{ secrets.NEO4J_URI }}
+      NEO4J_USERNAME: ${{ secrets.NEO4J_USERNAME }}
+      NEO4J_PASSWORD: ${{ secrets.NEO4J_PASSWORD }}
+      NEO4J_DATABASE: ${{ secrets.NEO4J_DATABASE }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      SOURCE_HTTP_TIMEOUT: '25'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run reusable EvidenceUnit gate
+        uses: ./cicd/evidence-unit-quality-gate
+        with:
+          mode: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'check' }}
+          page-url: https://mickael-umt.com/
+          expected-eu-count: ${{ github.event_name == 'workflow_dispatch' && inputs.expected_eu_count || '20' }}
+          model: gpt-5.6-sol
