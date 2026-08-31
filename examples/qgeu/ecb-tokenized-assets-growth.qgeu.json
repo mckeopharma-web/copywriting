@@ -132,10 +132,10 @@
       "qgeu:obs:ecb-tokenized-assets:2025Q1",
       "qgeu:obs:ecb-tokenized-assets:2026Q1"
     ],
-    "input_hash": "sha256:pending-source-snapshot-hash",
-    "derivation_hash": "sha256:pending-derivation-hash",
-    "graph_spec_hash": "sha256:pending-graph-spec-hash",
-    "output_hash": "sha256:pending-output-hash",
+    "input_hash": "sha256:db4bb99fb7c313771fb1d04a5b13a20927fe4da5bc08a5fb2e28539858f11b86",
+    "derivation_hash": "sha256:36ad7f96a4d24a7913ee13f533bc0abc0ba604a221e45f888587951ad3f0e462",
+    "graph_spec_hash": "sha256:2524ec7424b9e6fd82ab9b369634f83b1df17310b0b67146e525788dc23c3d18",
+    "output_hash": "sha256:2555c7d3cd259ede314e20e3f177d30ad8d8af9291cdf4416505c710d38142b0",
     "execution_ref": "neofort:ontology:qgeu-v2@2.0"
   },
   "quality_gate": {
