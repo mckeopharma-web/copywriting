@@ -15,5 +15,13 @@ Une substitution n’est publiable que si : x est complet, l’URL canonique a r
 
 ## Pages
 
-- [`homepage`](pages/homepage/evidence-selection-judge-v2.1.json) — 20 EU avant / 20 après, 4 nouvelles substitutions dominantes, run `homepage-eu-selection:2026-08-31:judge-v2.1`.
-- [`/expertises/blockchain/`](pages/expertises/blockchain.md) — 6 séquences, 30 candidats (5/XPath), 7 EU évaluées, 6 EvidencePlacement retenus. Run `EUP-XFY-GXY-2026-08-31`.
+### Homepage
+
+- [`Evidence selection — Judge v2.1`](pages/homepage/evidence-selection-judge-v2.1.json) — **20 EU avant / 20 après**, **4 substitutions dominantes**, run `homepage-eu-selection:2026-08-31:judge-v2.1`.
+
+### `/expertises/blockchain/`
+
+- [`Macro/Microeconomic EU Placement v2`](expertises/blockchain/macro-micro-economic-eu-placement-v2.md) — **17 EU macro/micro**, **10 séquences canoniques**, **5 candidats par XPath**, valeur propositionnelle et avatar ajustés au marché ; données techniques volontairement secondaires.
+- [`Technical EU Placement audit v1`](expertises/blockchain/eu-placement-audit-v1.md) — audit technique antérieur : throughput, latence, preuve, sécurité et cryptographie.
+
+Le v2 est le référentiel prioritaire pour le **sales copy** de la page Blockchain : il commence par le déplacement de valeur économique, puis contraint la promesse aux capacités démontrables. Le v1 reste exploitable comme couche de preuve technique en aval.
