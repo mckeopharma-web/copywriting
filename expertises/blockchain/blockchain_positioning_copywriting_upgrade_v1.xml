@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page_upgrade_specification version="1.0">
+  <metadata>
+    <concerned_page>https://mickael-umt.com/expertises/blockchain/</concerned_page>
+    <canonical_path>/expertises/blockchain/</canonical_path>
+    <repository>mckeopharma-web/copywriting</repository>
+    <generated_at>2026-09-01</generated_at>
+    <language>English</language>
+    <analysis_language_policy>English-first; the currently rendered French page was used only as the source structure where no directly addressable English route was exposed.</analysis_language_policy>
+    <change_mode>SUGGESTIONS_ONLY</change_mode>
+    <website_mutation>false</website_mutation>
+    <google_drive_mutation>false</google_drive_mutation>
+    <section_order_policy>PRESERVE_LIVE_PAGE_ORDER</section_order_policy>
+    <neofort_page_id>page:source:8.1</neofort_page_id>
+    <evidence_policy>Use only current factfulness-passing Evidence Units for new factual support. Retired Evidence Units may inform semantic history but must not be cited as current proof.</evidence_policy>
+  </metadata>
+
+  <executive_positioning>
+    <xyz_statement><![CDATA[I design blockchain and verifiable-computing systems for product, innovation and trust-architecture leaders who need a third party to verify a claim, decision or execution without receiving unnecessary underlying data, so they can move from trust-by-assertion to independently inspectable evidence through a bounded 3–12 month architecture, applied-R&amp;D and delivery mandate.]]></xyz_statement>
+    <problem><![CDATA[Verification currently depends on privileged access, organizational trust, excessive disclosure, or a platform selected before the property to be verified has been defined.]]></problem>
+    <product_service><![CDATA[Blockchain & Verifiable Computing: qualification, on-chain/off-chain boundary design, smart contracts, attestations, identity and key-governance design, independent verification tooling, and bounded ZK/ZKML research where justified.]]></product_service>
+    <ideal_buyer><![CDATA[Innovation lead, product/technical leader, or trust architect accountable for cross-organizational verification and the architecture decision behind it.]]></ideal_buyer>
+    <benefit><![CDATA[An explicit verification boundary: what must be independently verifiable, what must stay private, who has authority, how the result is reproduced, and when a conventional database or append-only system is the better answer.]]></benefit>
+    <delivery_method><![CDATA[3–12 months; architecture, applied R&amp;D and delivery; each phase ends with a usable decision artifact and may terminate with a justified no-blockchain recommendation.]]></delivery_method>
+    <elevator_pitch><![CDATA[I help product, innovation and trust-architecture leaders replace “trust our system” with a verification path a third party can inspect without receiving more data than necessary. We define the property first, choose the minimum mechanism that proves it, make authority and recovery explicit, and deliver the contracts, attestations or verification tooling required. The result may be blockchain, selective verification, or a documented decision not to use a chain.]]></elevator_pitch>
+  </executive_positioning>
+
+  <structured_affirmation_model>
+    <rule><![CDATA[Every important section should close the loop: CLAIM → MECHANISM → BUYER CONSEQUENCE → PROOF BOUNDARY → ACTION.]]></rule>
+    <claim>State what is true or what the mandate explicitly does.</claim>
+    <mechanism>Explain the technical or delivery mechanism that makes the claim operational.</mechanism>
+    <buyer_consequence>State what decision, risk, coordination burden or acceptance condition changes.</buyer_consequence>
+    <proof_boundary>Distinguish observed evidence, demonstrated capability, design recommendation and acceptance criterion.</proof_boundary>
+    <action>Give the buyer the next decision, not a generic invitation.</action>
+  </structured_affirmation_model>
+
+  <buyer_and_jtbd>
+    <buyer_role>Innovation lead / trust architect</buyer_role>
+    <before_state><![CDATA[A partner or reviewer must verify a claim, decision or execution without receiving underlying sensitive data, and the current answer still depends on privileged access or “trust us.”]]></before_state>
+    <after_state><![CDATA[Only the property that matters is exposed to verification through the minimum suitable mechanism, with explicit authority, disclosure and independent-verification rules.]]></after_state>
+    <jtbd><![CDATA[When a third party becomes accountable for relying on one of our claims, help me define exactly what they must be able to verify, choose the least costly architecture that makes that property independently inspectable, and leave the proof and authority model operable without the consultant.]]></jtbd>
+  </buyer_and_jtbd>
+
+  <current_page_assessment>
+    <strength><![CDATA[The current page already contains a differentiated architecture thesis: do not put information on-chain merely because it can be stored there; use verifiable mechanisms only where an external verifier needs a bounded property. It also contains strong qualification, reversibility, independent-verification and no-blockchain boundaries.]]></strength>
+    <primary_copy_gap><![CDATA[Several sections describe situations or cite research before stating the decision. This makes the buyer infer the commercial conclusion. Upgrade Level 1 into short decision-grade assertions and move study apparatus, populations and boundaries to the evidence layer.]]></primary_copy_gap>
+    <secondary_copy_gap><![CDATA[The page mixes market validation, technical benchmarks, capability proof and client acceptance criteria. These are different epistemic classes and should be labeled as such rather than sharing the same rhetorical weight.]]></secondary_copy_gap>
+    <evidence_freshness_issue><![CDATA[NeoFort currently marks multiple older EvidencePresentationDecision inputs as FAIL_RETIRED_REPLACED. They must not be reused as current factual support. Current factfulness-passing canonical evidence should replace them, or the Level-1 statement should remain a non-quantified architecture/acceptance assertion until a passing EU exists.]]></evidence_freshness_issue>
+  </current_page_assessment>
+
+  <sections count="23">
+    <chapter id="section_001" key="hero">
+      <current_role>Category positioning and first architecture decision.</current_role>
+      <preserve><![CDATA[Preserve the core idea that only properties requiring external verification justify verifiable infrastructure; preserve the 3–12 month architecture/applied-R&amp;D/delivery format and the Solidity/Rust/EVM/Solana stack as capability context.]]></preserve>
+      <problem><![CDATA[“Anchor on-chain what a third party must verify” is differentiated but still sounds chain-first. The page later makes the stronger claim that the correct answer can be no blockchain.]]></problem>
+      <recommended_copy>
+        <headline><![CDATA[Make the claims a third party must rely on independently verifiable — without putting the underlying system on-chain.]]></headline>
+        <subheadline><![CDATA[Define the property first. Then choose the minimum mechanism — database controls, append-only evidence, attestations, smart contracts or selective verification — that makes it inspectable without unnecessary disclosure.]]></subheadline>
+        <proof_line><![CDATA[Observed market context: ECB-reported tokenised traditional assets on public blockchains rose from €4.7bn in Q1 2025 to €23.3bn in Q1 2026. Use this as market context, not as proof that blockchain is the right architecture for a specific project.]]></proof_line>
+        <cta><![CDATA[Define what must become independently verifiable]]></cta>
+      </recommended_copy>
+      <affirmation>
+        <claim><![CDATA[Verification need comes before platform choice.]]></claim>
+        <mechanism><![CDATA[Property-first architecture selection.]]></mechanism>
+        <buyer_consequence><![CDATA[The buyer does not pay ledger overhead for a property nobody needs to verify.]]></buyer_consequence>
+        <proof_boundary><![CDATA[Market growth is contextual evidence only.]]></proof_boundary>
+        <action><![CDATA[Name the claim, decision or execution that an external party must verify.]]></action>
+      </affirmation>
+      <evidence_basis>EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026; EU-CANON-ECB-TOKENIZED-ASSETS-GROWTH-4.96X-2026</evidence_basis>
+    </chapter>
+
+    <chapter id="section_002" key="triggers">
+      <current_role>Problem recognition.</current_role>
+      <preserve>Preserve the four dated trigger situations and the explicit permission to stop reading if none applies.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[This becomes an architecture decision when verification crosses an organizational boundary.]]></headline>
+        <lead><![CDATA[You likely have a real mandate only when at least one of these events is now dated, owned and consequential.]]></lead>
+        <item><![CDATA[A partner must verify a claim but should not receive the data behind it.]]></item>
+        <item><![CDATA[An internal registry is authoritative, but the external party must still trust the operator who controls it.]]></item>
+        <item><![CDATA[A contract is ready for production, but sign, revoke, recover and departure authority is not yet explicit.]]></item>
+        <item><![CDATA[A reviewer repeatedly asks how historical state can be challenged or reconstructed after the fact.]]></item>
+        <close><![CDATA[If none of these events exists, do not buy the mandate yet.]]></close>
+      </recommended_copy>
+      <affirmation>
+        <claim><![CDATA[External accountability creates the verification problem.]]></claim>
+        <mechanism><![CDATA[Trigger-based qualification.]]></mechanism>
+        <buyer_consequence><![CDATA[The project begins only when a real decision owner and verification event exist.]]></buyer_consequence>
+        <proof_boundary><![CDATA[These are qualification conditions, not measured market outcomes.]]></proof_boundary>
+        <action><![CDATA[Identify the dated event that makes third-party verification necessary.]]></action>
+      </affirmation>
+    </chapter>
+
+    <chapter id="section_003" key="consequences">
+      <current_role>Cost of trust-by-assertion, platform-first architecture and undefined authority.</current_role>
+      <preserve><![CDATA[Preserve the three current consequence families: history continuity, platform-first cost, and key/authority governance.]]></preserve>
+      <recommended_copy>
+        <headline><![CDATA[The cost is not “using blockchain.” The cost is choosing the wrong trust boundary.]]></headline>
+        <block name="history">
+          <claim><![CDATA[A signed export authenticates that export; it does not by itself make the prior sequence of states independently reconstructable.]]></claim>
+          <decision><![CDATA[If historical continuity is the property under dispute, design the evidence history explicitly rather than adding another signature to the current file.]]></decision>
+          <evidence_status>CURRENT_PASSING_EU_REQUIRED_BEFORE_NUMERIC_COPY</evidence_status>
+        </block>
+        <block name="platform_first">
+          <claim><![CDATA[A database should win when the primary objective is controlled-state throughput. A programmable ledger should be considered only when shared verification or cross-institution coordination is worth its overhead.]]></claim>
+          <decision><![CDATA[Do not ask whether DLT is “faster.” Ask which coordination work disappears only when multiple parties can rely on shared programmable state.]]></decision>
+          <evidence_status>PASS</evidence_status>
+        </block>
+        <block name="authority">
+          <claim><![CDATA[A multisignature threshold is an authorization primitive, not a complete governance model.]]></claim>
+          <decision><![CDATA[Before deployment, name who can propose, approve, execute, revoke, recover and escalate — and under what timing and evidence rules.]]></decision>
+          <evidence_status>STRUCTURAL_ARCHITECTURE_CLAIM; CURRENT_PASSING_EU_REQUIRED_FOR_EXTERNAL_RISK_METRIC</evidence_status>
+        </block>
+      </recommended_copy>
+      <affirmation>
+        <claim><![CDATA[Architecture quality is determined by the trust boundary, not the presence of a ledger.]]></claim>
+        <mechanism><![CDATA[Compare local throughput, shared verification, coordination and authority as separate dimensions.]]></mechanism>
+        <buyer_consequence><![CDATA[The buyer can reject unnecessary ledger overhead without rejecting verifiability.]]></buyer_consequence>
+        <proof_boundary><![CDATA[The database-versus-ledger throughput comparison is bounded to one local two-organization SSO/TOTP prototype and must not be generalized.]]></proof_boundary>
+        <action><![CDATA[Write down the external verifier, the property, the authority model and the alternative database path before selecting infrastructure.]]></action>
+      </affirmation>
+      <evidence_basis>QGEU-CANON-DB-VS-DLT-THROUGHPUT-2026; QGEU-CANON-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026</evidence_basis>
+    </chapter>
+
+    <chapter id="section_004" key="buyer">
+      <current_role>Identify the accountable buyer and pressure.</current_role>
+      <preserve>Preserve Élodie Marchand as a model avatar, but keep the explicit statement that the avatar is a hypothesis to validate.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[For the person who must make trust inspectable, not merely promise it.]]></headline>
+        <role><![CDATA[Innovation lead / trust architect / technical decision owner]]></role>
+        <today><![CDATA[A partner is accountable for relying on your claim, but verification still requires privileged access, excessive disclosure or trust in your operator.]]></today>
+        <after><![CDATA[The partner can inspect the agreed property through a bounded verification path, while the data and authority they do not need remain outside that path.]]></after>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_005" key="qualification">
+      <current_role>Commercial fit discrimination before proposal.</current_role>
+      <preserve>Preserve strong negative qualification, especially the audited-database alternative.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Buy this mandate only if all four conditions are true.]]></headline>
+        <fit><![CDATA[1. A real production, audit, renewal, launch or system-replacement decision is at stake. 2. A named sponsor can arbitrate scope and sign acceptance. 3. Evidence, systems or documents can be accessed under NDA early in the mandate. 4. A third party must verify a property you cannot or should not disclose in full.]]></fit>
+        <no_fit_headline><![CDATA[Do not buy it if any of these conditions is true.]]></no_fit_headline>
+        <no_fit><![CDATA[You need trend scouting; the required statutory decision belongs to a regulated role I cannot replace; evidence access is unavailable; or the real problem is an internal shared registry better served by an audited database.]]></no_fit>
+        <close><![CDATA[A no-fit decision in qualification is a successful outcome when it prevents a quarter of unnecessary architecture work.]]></close>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_006" key="proposition">
+      <current_role>Explain the mechanism and offer thesis.</current_role>
+      <preserve><![CDATA[Preserve Claim-to-Proof Chain™ (Claim → Attestation → Execution → Verification), the valid no-blockchain outcome, and the distinction between capability proof and client outcome proof.]]></preserve>
+      <recommended_copy>
+        <headline><![CDATA[Start with the property. End with a proof path another party can execute.]]></headline>
+        <body><![CDATA[I map each material claim through four layers: Claim → Attestation → Execution → Verification. For each layer, we decide what must be public, what stays private, who has authority, what the verifier receives, and which mechanism is sufficient. The result may be a smart contract, an attestation, an append-only evidence structure, selective verification, a ZK research path — or a documented decision not to use blockchain.]]></body>
+        <commercial_statement><![CDATA[You are not buying “blockchain adoption.” You are buying a bounded architecture decision and the implementation required to make a named property independently inspectable.]]></commercial_statement>
+        <cta><![CDATA[Describe the property that must survive external challenge]]></cta>
+      </recommended_copy>
+      <evidence_basis>QGEU-CANON-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026; EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026</evidence_basis>
+    </chapter>
+
+    <chapter id="section_007" key="functional_attributes">
+      <current_role>Explain what the approach changes across functional, provenance, influence and transactional dimensions.</current_role>
+      <preserve>Preserve the four-attribute structure but convert each attribute into one claim and one proof class.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Four buyer questions. Four different proof classes.]]></headline>
+        <attribute name="functional"><![CDATA[What changes technically? A selected property becomes verifiable through contracts, attestations, identity/key controls or selective verification; unrelated confidential data stays outside the verifier path.]]></attribute>
+        <attribute name="provenance"><![CDATA[Why trust the capability claim? Public projects and certificates are shown with provenance levels and explicit limits; evidence removed by provenance audit stays removed.]]></attribute>
+        <attribute name="influence"><![CDATA[What demonstrates implementation ability? Solidity/EVM and Rust have the strongest public evidence; Solana and ZK/ZKML remain narrower and are presented at their verified evidence level.]]></attribute>
+        <attribute name="transactional"><![CDATA[How does engagement begin? With an on-chain/off-chain and mechanism decision before the implementation quote, not with a preselected protocol.]]></attribute>
+      </recommended_copy>
+      <proof_boundary><![CDATA[Do not use retired selective-disclosure performance metrics in Level 1. Treat ZK/ZKML as bounded research/certification capability unless a current passing evidence object supports the stronger claim.]]></proof_boundary>
+    </chapter>
+
+    <chapter id="section_008" key="offers">
+      <current_role>Explain purchase configuration and pricing architecture.</current_role>
+      <preserve>Preserve the existing solution-atlas mechanism and public derivation of configuration pricing.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Choose the smallest configuration that closes the verification gap.]]></headline>
+        <body><![CDATA[The seven configurations reuse the same capability blocks. Scope is determined by the property to verify, the number of trust boundaries, the required implementation depth and the handoff condition — not by adding blockchain components for breadth.]]></body>
+        <cta><![CDATA[Compare the configurations by verification outcome]]></cta>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_009" key="deliverables">
+      <current_role>Make the mandate tangible at handoff.</current_role>
+      <preserve>Preserve the opportunity note, contracts/verification scripts, key-governance procedure and client source-control ownership.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[At handoff, three things exist that did not exist before.]]></headline>
+        <deliverable name="decision"><![CDATA[1. Verification decision record — the property, external verifier, disclosure boundary, alternative database path, and written yes/no decision on whether a chain is justified.]]></deliverable>
+        <deliverable name="implementation"><![CDATA[2. Executable verification path — contracts, attestations, tests and/or scripts that a third party can run against the agreed inputs.]]></deliverable>
+        <deliverable name="authority"><![CDATA[3. Authority and recovery procedure — signers, thresholds, revocation, loss, departure, escalation timing and rehearsal evidence.]]></deliverable>
+        <handoff><![CDATA[All deliverables live in your repositories and remain operable without consultant-controlled infrastructure.]]></handoff>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_010" key="state_shift">
+      <current_role>Compress the transformation into one before/after statement.</current_role>
+      <recommended_copy>
+        <headline><![CDATA[From “trust our system” to “verify this property.”]]></headline>
+        <before><![CDATA[The relying party must trust the operator, request access, or accept a full-data disclosure.]]></before>
+        <after><![CDATA[The relying party can reproduce the agreed verification result from documented inputs without receiving more access than the verification requires.]]></after>
+        <proof_boundary><![CDATA[This is the intended acceptance state, not a universal claim that every implementation can hide all underlying data.]]></proof_boundary>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_011" key="before_after">
+      <current_role>Compare the same dimensions before and after.</current_role>
+      <preserve>Preserve same-axis comparison: third-party verification, confidentiality, key governance.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Compare the system on three dimensions that actually change.]]></headline>
+        <axis name="verification"><before>Verification depends on operator access or operator assertion.</before><after>The agreed property is reproducible through a documented independent-verification path.</after></axis>
+        <axis name="confidentiality"><before>Disclosure is broad because verification and data access are coupled.</before><after>Verification scope and disclosure scope are designed separately.</after></axis>
+        <axis name="authority"><before>Signing and recovery rules live in people, habit or undocumented operational knowledge.</before><after>Proposal, approval, execution, revocation, recovery and escalation rules are explicit and rehearsed.</after></axis>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_012" key="results">
+      <current_role>Define acceptance criteria rather than unverified client outcomes.</current_role>
+      <preserve>Preserve the explicit labels “acceptance criterion” versus “already built example.”</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Acceptance is not “the contract deployed.” Acceptance is the verification path working without privileged trust.]]></headline>
+        <criterion><![CDATA[Independent verification: an agreed third-party tool or separately operated verifier reproduces the expected result from documented inputs.]]></criterion>
+        <criterion><![CDATA[Authority rehearsal: loss, revocation and departure scenarios are executed against the written governance procedure before production handoff.]]></criterion>
+        <example><![CDATA[Capability example: public Solidity/EVM and tokenized-voting work demonstrates implementation experience; it is not presented as a measured client business outcome.]]></example>
+        <proof_boundary><![CDATA[Do not reuse the retired 76.78% detector-coverage EU as current proof. The acceptance criteria are contractual delivery conditions and should stand on their own.]]></proof_boundary>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_013" key="evidence">
+      <current_role>Prove capability proportionately to the commercial promise.</current_role>
+      <preserve><![CDATA[Preserve Lottery dApp, Tokenized Voting Backend, Rust Folder Mapper and Encode Club evidence with distinct provenance levels. Preserve all explicit uncertainty labels, including any award title still to confirm.]]></preserve>
+      <recommended_copy>
+        <headline><![CDATA[Evidence supports capability. It does not manufacture client outcomes.]]></headline>
+        <body><![CDATA[Show each proof object with four fields: what was built, what contribution is attributable, what capability it demonstrates, and what it does not prove. Keep Solidity/EVM and Rust as the strongest public implementation evidence. Keep Solana and ZK/ZKML at their verified certificate/R&amp;D evidence level until stronger public implementation proof is available.]]></body>
+      </recommended_copy>
+      <capability_basis><![CDATA[Solidity/EVM: strong public evidence, capability score 66. Rust: strong public evidence, score 65. Solana: evidence to confirm at certificate/public-repo level, score 42. ZK/ZKML: certificate + R&amp;D/private-work evidence, score 34.]]></capability_basis>
+    </chapter>
+
+    <chapter id="section_014" key="scope">
+      <current_role>Define responsibility boundaries and client dependencies.</current_role>
+      <preserve>Preserve the explicit exclusion of formal third-party smart-contract security audit, tokenomics and legal asset qualification.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[I own the verifiability architecture and delivery. I do not certify my own work as an independent authority.]]></headline>
+        <in_scope><![CDATA[Verification-need qualification, including a justified refusal; smart contracts, attestations, identity and multisignature/key-governance implementation; independent verification tooling and handoff.]]></in_scope>
+        <out_of_scope><![CDATA[Independent formal security audit of code I authored; tokenomics/business-model design; legal or regulatory qualification reserved to the appropriate authority.]]></out_of_scope>
+        <dependencies><![CDATA[Named sponsor, timely evidence access under NDA, and client-side people available for handoff. If those dependencies fail, scope or timing changes explicitly.]]></dependencies>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_015" key="process">
+      <current_role>Reduce commitment risk through phase exits.</current_role>
+      <preserve>Preserve four phases and the ability to stop after any phase with a usable artifact.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Four phases. Every phase ends in a decision artifact. Every phase can be the last.]]></headline>
+        <phase number="1" name="Qualification"><![CDATA[Output: verification decision note, including a justified no-chain decision.]]></phase>
+        <phase number="2" name="Design"><![CDATA[Output: public/private boundary, authority model and disclosure/verification design.]]></phase>
+        <phase number="3" name="Implementation"><![CDATA[Output: tested contracts, attestations and/or verification tooling against agreed acceptance criteria.]]></phase>
+        <phase number="4" name="Handoff"><![CDATA[Output: independent-verification rehearsal, authority/recovery procedure and client-controlled repositories.]]></phase>
+        <commercial_impact><![CDATA[This structure reduces buyer risk because each commitment buys a completed decision state rather than merely more elapsed consulting time.]]></commercial_impact>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_016" key="modules">
+      <current_role>Expose composable work blocks without forcing all modules into scope.</current_role>
+      <preserve>Preserve commitment, disclosure, identity/keys and third-party verification as modular blocks.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Four work blocks. Use only the blocks required by the verification property.]]></headline>
+        <module name="Commitment"><![CDATA[Define what external state or commitment must exist for later challenge without publishing the protected payload.]]></module>
+        <module name="Disclosure"><![CDATA[Define what evidence is revealed, to whom, and under which verification rule.]]></module>
+        <module name="Identity_and_keys"><![CDATA[Define proposal, approval, execution, revocation, recovery, departure and account-abstraction boundaries.]]></module>
+        <module name="Independent_verification"><![CDATA[Deliver a reproducible verification path that does not depend on consultant-held state or a single opaque operator.]]></module>
+        <close><![CDATA[If your team already owns a block at the required assurance level, remove it from scope and price.]]></close>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_017" key="capabilities">
+      <current_role>Connect page promises to verified competency evidence.</current_role>
+      <preserve>Preserve capability ranking and provenance links.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Use the strongest verified capability for the core; treat adjacent capability at its actual evidence level.]]></headline>
+        <body><![CDATA[Core public implementation evidence is strongest in Solidity/EVM and Rust. Solana and ZK/ZKML can be used when the problem requires them, but their public claim strength remains narrower. The page should show this asymmetry rather than flatten every technology into an equal “stack” claim.]]></body>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_018" key="intersection">
+      <current_role>Explain differentiation from cross-domain experience.</current_role>
+      <preserve>Preserve the claim that the value of the intersection is one fewer translation seam, not a vague “many skills” claim.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[The differentiator is one fewer translation between the business constraint and the proof mechanism.]]></headline>
+        <body><![CDATA[Regulated operations, AI/data engineering, assurance/governance and verifiable systems are useful together only when they reduce a handoff: the same architecture conversation can cover what must be proven, what must remain confidential, how evidence is operated, and when blockchain adds no value.]]></body>
+        <proof_boundary><![CDATA[Do not translate “one fewer seam” into an unmeasured cost, speed or error-reduction percentage. It is a mechanism-level positioning claim.]]></proof_boundary>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_019" key="market_reference">
+      <current_role>Provide market-rate context without anchoring the value proposition to day rate.</current_role>
+      <preserve>Preserve the disclaimer that a market reference is not a contract price.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Use the market rate as a reference, not as the value proposition.]]></headline>
+        <body><![CDATA[Keep the rate benchmark visually secondary. The commercial decision should be framed around the verification state delivered, phase boundaries, acceptance criteria and duration. Publish the market reference only while its source, sample and verification date remain current and reproducible.]]></body>
+      </recommended_copy>
+      <risk><![CDATA[Leading with day-rate benchmarking makes a specialized architecture mandate more elastic and easier to compare as staff augmentation.]]></risk>
+    </chapter>
+
+    <chapter id="section_020" key="commitments">
+      <current_role>Risk reversal and responsibility boundary.</current_role>
+      <preserve><![CDATA[Preserve written scope before billing, rework to pre-agreed acceptance criteria, reversibility/client ownership, confidentiality classification, human-decision boundaries and vendor neutrality.]]></preserve>
+      <recommended_copy>
+        <headline><![CDATA[Guarantee the work product and acceptance mechanism — never the verdict of an external authority.]]></headline>
+        <guaranteed><![CDATA[Before billing starts: scope, exclusions, dependencies and acceptance criteria are written. If a deliverable misses those criteria, it is reworked without additional billing until the agreed criterion is met. Code, schemas, evidence and decision records remain portable in client-controlled repositories.]]></guaranteed>
+        <not_guaranteed><![CDATA[Cryptographic proof is not a security audit. Tested code is not an independent audit opinion. Technical implementation is not legal qualification. No statement on this page should imply otherwise.]]></not_guaranteed>
+        <risk_reversal_type>CONDITIONAL_GUARANTEE_PLUS_ACCEPTANCE_CRITERIA_PLUS_REVERSIBILITY</risk_reversal_type>
+      </recommended_copy>
+      <evidence_status><![CDATA[Keep this section non-quantitative until current factfulness-passing security-boundary evidence is linked.]]></evidence_status>
+    </chapter>
+
+    <chapter id="section_021" key="questions">
+      <current_role>Resolve objections that materially change scope, responsibility or architecture.</current_role>
+      <preserve>Preserve the four current questions.</preserve>
+      <recommended_copy>
+        <faq q="We do not want to publish our data. Is this compatible?"><![CDATA[Yes, when the verification design can separate the property from the protected payload. The qualification phase defines exactly what, if anything, must become externally inspectable.]]></faq>
+        <faq q="Is this automatically zero-knowledge?"><![CDATA[No. ZK is one mechanism, not the default category. Use it only when the property, disclosure boundary and operational constraints justify it.]]></faq>
+        <faq q="What if the answer is that we should not use blockchain?"><![CDATA[That is a valid paid result. The decision note explains why and specifies the simpler architecture that should replace it.]]></faq>
+        <faq q="Who audits contracts you write?"><![CDATA[An independent third party. I deliver code, tests, documentation and verification artifacts designed for auditability; I do not present self-review as independent assurance.]]></faq>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_022" key="engagement">
+      <current_role>Convert interest into a bounded fit/no-fit decision.</current_role>
+      <preserve>Preserve the 20-minute fit/no-fit call and the fact that no-fit returns a reason rather than a sales push.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Use 20 minutes to decide whether a mandate exists.]]></headline>
+        <body><![CDATA[Bring the decision owner, the verification problem and the evidence you can access. We test the property, external verifier, disclosure boundary, timing and fit. If there is no mandate, you leave with the reason. If there is, you leave with the first-step scope and range.]]></body>
+        <cta><![CDATA[Evaluate the verification mandate]]></cta>
+      </recommended_copy>
+    </chapter>
+
+    <chapter id="section_023" key="embedded_qualifier">
+      <current_role>Self-qualification before human contact.</current_role>
+      <preserve>Preserve the existing multi-step qualifier rather than inventing a second funnel.</preserve>
+      <recommended_copy>
+        <headline><![CDATA[Describe the decision first. The intervention format comes second.]]></headline>
+        <prefill_recommendation><![CDATA[For this expertise, prefill the qualifier around: external verifier, property to verify, disclosure constraint, current architecture, named decision date, sponsor authority, accessible evidence, and whether a database/append-only alternative is still open.]]></prefill_recommendation>
+        <remove_or_deprioritize><![CDATA[Questions that do not change architecture, delivery mode, risk or qualification should not appear before the verification-property questions.]]></remove_or_deprioritize>
+      </recommended_copy>
+    </chapter>
+  </sections>
+
+  <delivery_performance_upgrade>
+    <purpose><![CDATA[Add the currently underdeveloped decision axis already represented in NeoFort as “Delivery performance — what programmability changes” without changing the public section order. Integrate it inside the existing consequences/proposition logic or as the already-modeled section between functional value and results when the site structure exposes it.]]></purpose>
+    <core_copy><![CDATA[Do not compare databases and programmable ledgers on one synthetic “performance” score. A database optimizes controlled-state throughput. Programmability can justify ledger overhead when it removes cross-institution messaging, reconciliation or manual intervention from a shared workflow. Those are different optimization targets.]]></core_copy>
+    <evidence_copy><![CDATA[In one bounded two-organization SSO/TOTP prototype, the database-backed endpoint delivered 924.79 tx/s versus 219.23 tx/s for the ledger-backed endpoint. Separately, the ECB describes programmable repo workflows in which smart contracts can automate collateral substitution, margin management and collateral return, reducing messaging, reconciliation and manual intervention across institutions. The evidence supports a decision boundary, not a universal DLT speed or cost advantage.]]></evidence_copy>
+    <decision_rule><![CDATA[If the buyer problem is local state and throughput, prefer the conventional database. If the buyer problem is shared execution, independent verification or cross-institution coordination, quantify the coordination burden first and then decide whether programmability is worth the overhead.]]></decision_rule>
+    <evidence_basis>QGEU-CANON-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026; EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026; EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026</evidence_basis>
+  </delivery_performance_upgrade>
+
+  <termsheet_opportunities>
+    <opportunity><![CDATA[Sell phase outcomes, not an undifferentiated day count: verification decision → architecture boundary → executable verification path → handoff/rehearsal.]]></opportunity>
+    <opportunity><![CDATA[Make the external verifier, protected data boundary, authority model and acceptance test mandatory scope fields before quoting implementation.]]></opportunity>
+    <opportunity><![CDATA[Price/remove modules independently so existing client capability reduces scope rather than forcing a full-stack package.]]></opportunity>
+    <opportunity><![CDATA[Require a named sponsor and evidence-access date as commercial dependencies, not soft onboarding requests.]]></opportunity>
+    <opportunity><![CDATA[Keep independent security audit as a separately budgeted third-party dependency where required.]]></opportunity>
+  </termsheet_opportunities>
+
+  <guarantee_and_risk_reversal>
+    <strong_guarantee>None proposed beyond controls fully within delivery authority.</strong_guarantee>
+    <conditional_guarantee><![CDATA[Rework deliverables until pre-agreed acceptance criteria are met, provided scope and dependencies remain unchanged.]]></conditional_guarantee>
+    <acceptance_criterion><![CDATA[Independent verification of the named property using the documented verification path.]]></acceptance_criterion>
+    <acceptance_criterion><![CDATA[Authority/recovery scenarios rehearsed where key governance is in scope.]]></acceptance_criterion>
+    <risk_reversal><![CDATA[Each phase produces a reusable artifact and can terminate without forcing the buyer into the next phase.]]></risk_reversal>
+    <reversibility><![CDATA[Client-controlled repositories and no consultant-hosted proprietary dependency.]]></reversibility>
+  </guarantee_and_risk_reversal>
+
+  <commercial_sharpe_ratio>
+    <increase_numerator><![CDATA[Concentrate the value proposition on a high-cost decision: whether and how a third party can independently verify a property across an organizational boundary. Sell the resulting verification state, not generic blockchain implementation breadth.]]></increase_numerator>
+    <reduce_denominator><![CDATA[Use negative qualification, phase exits, explicit dependencies, independent-audit boundaries, client ownership, and a legitimate no-blockchain result to reduce acquisition friction, buyer risk and delivery ambiguity.]]></reduce_denominator>
+    <avoid><![CDATA[Do not use generic adoption language, fake scarcity, unverifiable client outcome percentages, invented testimonials, or day-rate anchoring as the primary commercial frame.]]></avoid>
+  </commercial_sharpe_ratio>
+
+  <landing_page_recipe_coverage>
+    <command id="C1">Offer is expressed through the 3–12 month bounded verification mandate and phase outcomes.</command>
+    <command id="C2">Buyer is innovation/trust/technical decision owner accountable for cross-organizational verification.</command>
+    <command id="C3">Product is defined as qualification, boundary design, implementation, verification tooling and authority/handoff.</command>
+    <command id="C4">Desire is independently inspectable evidence without unnecessary disclosure or avoidable infrastructure overhead.</command>
+    <command id="C5">Delivery is four gated phases with usable artifacts and stop points.</command>
+    <command id="C6">Benefits are expressed as decision clarity, verification independence, disclosure control, explicit authority and portability; no unmeasured percentages.</command>
+    <command id="C7">Existing four work modules and seven configurations are retained; do not invent eight course modules because this is not a course.</command>
+    <command id="C8">Three outcomes are represented by decision record, executable verification path and authority/handoff procedure.</command>
+    <command id="C9">Problems remain in Triggers and Consequences in the current order.</command>
+    <command id="C10">Solutions are connected directly to each consequence through property-first architecture, verification design and authority rules.</command>
+    <command id="C11">No artificial scarcity. Capacity should be stated only if a verified operational capacity rule exists for this mandate.</command>
+    <command id="C12">Risk reversal is acceptance-based rework, phase exits and reversibility; no outcome guarantee outside delivery control.</command>
+    <command id="C13">Primary CTA becomes a decision CTA: evaluate/define the verification mandate.</command>
+    <command id="C14">REJECTED: no fabricated customer testimonial.</command>
+    <command id="C15">REJECTED: no fabricated positive review.</command>
+    <command id="C16">Existing FAQ is retained and made more direct.</command>
+    <command id="C17">Top problems are represented by the existing trigger/consequence taxonomy; do not inflate to ten low-signal problems merely to satisfy a count.</command>
+    <command id="C18">Offer is positioned as the solution only where verified capability and scope support the problem.</command>
+    <command id="C19">Hero/headline system is upgraded to property-first independent verification rather than generic blockchain adoption.</command>
+  </landing_page_recipe_coverage>
+
+  <evidence_status>
+    <current_pass id="EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026" use="hero market context"/>
+    <current_pass id="EU-CANON-ECB-TOKENIZED-ASSETS-GROWTH-4.96X-2026" use="hero market-context derivation"/>
+    <current_pass id="EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026" use="bounded database-versus-ledger throughput comparison"/>
+    <current_pass id="QGEU-CANON-DB-VS-DLT-THROUGHPUT-2026" use="decision-grade bounded comparator"/>
+    <current_pass id="EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026" use="programmability coordination mechanism"/>
+    <current_pass id="QGEU-CANON-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026" use="database versus programmable-ledger decision boundary"/>
+    <current_pass id="QGEU-CANON-BIS-AGORA-80S-2026" use="optional bounded institutional settlement example; not required in main copy"/>
+    <current_pass id="EU-CANON-NIST-PQC-TRANSITION-2035" use="optional cryptographic-lifecycle context; not required in main copy"/>
+    <retired_warning><![CDATA[Do not republish prior quantitative claims merely because they exist in older EvidencePresentationDecision records. NeoFort currently flags the older linked EUs for history integrity, key recovery, multisig risk, selective disclosure, security-boundary and several presentation claims as FAIL_RETIRED_REPLACED. Rebind those sequences to current passing EUs before showing Level-2 citations.]]></retired_warning>
+  </evidence_status>
+
+  <vsl_upgrade>
+    <current_role>Mechanism explanation and qualification bridge.</current_role>
+    <recommended_role><![CDATA[Reframe the category from “blockchain implementation” to “verification-boundary engineering,” then show that a database can win, a chain can win, or neither is required until the property and authority model are explicit.]]></recommended_role>
+    <hook><![CDATA[The expensive mistake is not choosing the wrong blockchain. It is building a verification system before deciding what anybody actually needs to verify.]]></hook>
+    <mechanism><![CDATA[Property → verifier → disclosure boundary → authority → minimum mechanism → independent acceptance.]]></mechanism>
+    <proof><![CDATA[Use the bounded DB-versus-ledger comparator and ECB programmability mechanism as contrasting evidence: raw local throughput and cross-institution coordination are different optimization targets.]]></proof>
+    <cta><![CDATA[Name the property that must survive external challenge.]]></cta>
+  </vsl_upgrade>
+
+  <cross_page_impacts>
+    <policy>NOT_ANALYZED_BY_REQUEST</policy>
+    <reason><![CDATA[The user explicitly constrained this task to the Blockchain expertise page. No other page is proposed for mutation or copy replacement.]]></reason>
+  </cross_page_impacts>
+
+  <missing_information>
+    <item><![CDATA[A directly addressable English rendering of the concerned page was not exposed through the current route; copy recommendations are therefore produced in English while preserving the structure observed on the current live page.]]></item>
+    <item><![CDATA[Several legacy sequence-to-EU bindings in NeoFort are retired and require current passing replacements before Level-2 evidence disclosure can be published.]]></item>
+    <item><![CDATA[Independent-verifier acceptance currently has an evidence gap in the older presentation graph; keep it as a delivery acceptance criterion until a current passing evidence unit is bound.]]></item>
+    <item><![CDATA[The EthCC Hacker House distinction remains “official title to confirm” on the current page and must not be strengthened until verified.]]></item>
+    <item><![CDATA[The external day-rate sample should remain secondary unless its source, sample and update cadence are revalidated under the same factfulness policy.]]></item>
+  </missing_information>
+
+  <validation_report>
+    <check name="page_order_preserved">PASS</check>
+    <check name="english_copy_only">PASS</check>
+    <check name="lossless_core_positioning">PASS</check>
+    <check name="no_invented_clients">PASS</check>
+    <check name="no_invented_testimonials">PASS</check>
+    <check name="no_fake_scarcity">PASS</check>
+    <check name="no_unconditional_external_outcome_guarantee">PASS</check>
+    <check name="database_alternative_preserved">PASS</check>
+    <check name="no_blockchain_as_valid_paid_result_preserved">PASS</check>
+    <check name="current_factfulness_pass_only_for_new_quantitative_support">PASS</check>
+    <check name="google_drive_mutation">NOT_PERFORMED</check>
+    <check name="website_mutation">NOT_PERFORMED</check>
+    <publication_status>RECOMMENDATION_ARTIFACT_CREATED; NOT_DEPLOYED</publication_status>
+  </validation_report>
+</page_upgrade_specification>
