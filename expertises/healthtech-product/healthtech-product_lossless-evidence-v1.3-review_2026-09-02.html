@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#060820">
+  <title>HealthTech & PharmaTech Product Engineering — evidence review preview</title>
+  <style>
+    :root{color-scheme:dark;--bg:#060820;--paper:#f1f5ff;--silver:#aab3cc;--cyan:#19d3e2;--line:rgba(170,179,204,.22)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .boot{min-height:100vh;display:grid;place-items:center;padding:32px}.boot-card{width:min(720px,100%);padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.035);box-shadow:0 24px 80px rgba(0,0,0,.35)}
+    .boot-kicker{margin:0 0 10px;color:var(--cyan);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}.boot h1{margin:0 0 10px;font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.08}.boot p{margin:0;color:var(--silver);line-height:1.65}.boot a{color:var(--cyan)}
+  </style>
+</head>
+<body>
+  <main class="boot" id="boot" aria-live="polite">
+    <div class="boot-card">
+      <p class="boot-kicker">Night-mode review renderer</p>
+      <h1>HealthTech &amp; PharmaTech Product Engineering</h1>
+      <p>Loading the complete lossless page snapshot and applying the accessible citation review layer.</p>
+    </div>
+  </main>
+<script>
+(() => {
+  'use strict';
+  const BASE = 'https://raw.githubusercontent.com/mckeopharma-web/copywriting/main/expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html';
+
+  const reviewCss = `
+    #evidence-review-status{position:fixed;z-index:99999;left:50%;bottom:14px;transform:translateX(-50%);max-width:min(760px,calc(100vw - 28px));padding:9px 13px;border:1px solid color-mix(in srgb,var(--warning,#f3b83f) 50%,transparent);border-radius:999px;background:color-mix(in srgb,var(--navy,#060820) 94%,transparent);box-shadow:0 12px 44px rgba(0,0,0,.32);color:var(--paper,#f1f5ff);font-size:.72rem;line-height:1.35;text-align:center;backdrop-filter:blur(12px)}
+    .evidence-cite{font-variant-numeric:tabular-nums;min-inline-size:1.7em;min-block-size:1.7em}
+    .evidence-cite[aria-expanded="true"]{color:var(--cyan,#19d3e2)}
+    .evidence-panel{scroll-margin-top:96px}
+    .evidence-panel:focus-visible{outline:2px solid var(--cyan,#19d3e2);outline-offset:3px}
+    @media(max-width:680px){#evidence-review-status{border-radius:14px;bottom:8px}}
+    @media print{#evidence-review-status{display:none!important}}
+  `;
+
+  const reviewJs = `
+  (()=>{
+    const status=document.createElement('div');
+    status.id='evidence-review-status';
+    status.setAttribute('role','note');
+    status.textContent='Evidence review preview — references are provisional until their source and placement validation is complete.';
+    document.body.appendChild(status);
+
+    document.querySelectorAll('.evidence-cite[data-evidence-trigger]').forEach((btn,index)=>{
+      const n=btn.dataset.evidenceTrigger || String(index+1);
+      btn.textContent='['+n+']';
+      if(!btn.id) btn.id='evidence-trigger-'+n;
+      btn.setAttribute('aria-label','Evidence source ['+n+']');
+      btn.setAttribute('aria-haspopup','true');
+      const panelId=btn.getAttribute('aria-controls');
+      const panel=panelId ? document.getElementById(panelId) : null;
+      if(!panel) return;
+      panel.setAttribute('aria-labelledby',btn.id);
+      panel.setAttribute('tabindex','-1');
+      let pinned=false;
+      const show=()=>{ panel.hidden=false; btn.setAttribute('aria-expanded','true'); };
+      const close=(restore=false)=>{ pinned=false; panel.hidden=true; btn.setAttribute('aria-expanded','false'); if(restore) btn.focus(); };
+      const maybeClose=()=>setTimeout(()=>{ if(!pinned && !panel.matches(':hover') && !panel.contains(document.activeElement) && document.activeElement!==btn) close(false); },90);
+      btn.addEventListener('mouseenter',show);
+      btn.addEventListener('focus',show);
+      btn.addEventListener('mouseleave',maybeClose);
+      btn.addEventListener('click',ev=>{ ev.preventDefault(); ev.stopPropagation(); if(pinned){ close(false); } else { pinned=true; show(); panel.focus({preventScroll:true}); } });
+      panel.addEventListener('mouseleave',maybeClose);
+      panel.addEventListener('focusout',maybeClose);
+      [btn,panel].forEach(el=>el.addEventListener('keydown',ev=>{ if(ev.key==='Escape'){ ev.preventDefault(); close(true); } }));
+    });
+
+    document.querySelectorAll('.lp-evidence-register__num').forEach(el=>{
+      const n=(el.textContent||'').match(/\\d+/);
+      if(n) el.textContent='['+n[0]+']';
+    });
+
+    document.querySelectorAll('.evidence-panel__meta span').forEach(el=>{
+      if(/Publication:/i.test(el.textContent||'')) el.textContent='Review status: provisional reference; validation pending.';
+    });
+    document.querySelectorAll('.lp-evidence-register__status').forEach(el=>{
+      el.textContent='Provisional reference — validation pending.';
+    });
+  })();`;
+
+  async function boot(){
+    try{
+      const response=await fetch(BASE,{cache:'no-store',mode:'cors'});
+      if(!response.ok) throw new Error('HTTP '+response.status);
+      let html=await response.text();
+      html=html.replace(/<html([^>]*)>/i,(m,a)=>{
+        const cleaned=a.replace(/\\sdata-theme=("[^"]*"|'[^']*')/i,'').replace(/\\slang=("[^"]*"|'[^']*')/i,'');
+        return '<html'+cleaned+' data-theme="dark" lang="en">';
+      });
+      html=html.replace('</head>', '<meta name="robots" content="noindex,nofollow"><style id="evidence-review-layer">'+reviewCss+'</style></head>');
+      html=html.replace('</body>', '<script id="evidence-review-runtime">'+reviewJs+'<\\/script></body>');
+      document.open();
+      document.write(html);
+      document.close();
+    }catch(err){
+      const boot=document.getElementById('boot');
+      boot.innerHTML='<div class="boot-card"><p class="boot-kicker">Preview unavailable</p><h1>The complete page snapshot could not be loaded.</h1><p>The source artifact remains available in the copywriting repository. <a href="https://github.com/mckeopharma-web/copywriting/blob/main/expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html">Open the complete HTML source</a>.</p></div>';
+      console.error(err);
+    }
+  }
+  boot();
+})();
+</script>
+</body>
+</html>
