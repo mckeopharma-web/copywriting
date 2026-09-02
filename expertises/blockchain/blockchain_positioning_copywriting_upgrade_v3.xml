@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page_upgrade_specification version="3.0">
+  <metadata>
+    <concerned_page>https://mickael-umt.com/expertises/blockchain/</concerned_page>
+    <canonical_path>/expertises/blockchain/</canonical_path>
+    <repository>mckeopharma-web/copywriting</repository>
+    <target_path>expertises/blockchain/blockchain_positioning_copywriting_upgrade_v3.xml</target_path>
+    <predecessor>expertises/blockchain/blockchain_positioning_copywriting_upgrade_v2.xml</predecessor>
+    <generated_at>2026-09-02</generated_at>
+    <language>English</language>
+    <change_mode>SUPERSESSION_PATCH_CREATE_ONLY</change_mode>
+    <website_mutation>false</website_mutation>
+    <google_drive_mutation>false</google_drive_mutation>
+    <neofort_mutation>false</neofort_mutation>
+    <structure_lock>true</structure_lock>
+    <section_count>23</section_count>
+    <section_delta_allowed>0</section_delta_allowed>
+    <section_reorder_allowed>false</section_reorder_allowed>
+    <raw_html_status>UNAVAILABLE_FROM_EXECUTION_RUNTIME_DNS</raw_html_status>
+    <live_rendered_snapshot_status>VERIFIED_PUBLIC_RENDER</live_rendered_snapshot_status>
+    <faithful_html_build_created>false</faithful_html_build_created>
+    <reason>No 100%-faithful raw HTML/CSS/JS build was retrievable from the execution runtime or the searched Google Drive artifacts; none is fabricated.</reason>
+  </metadata>
+
+  <policy_resolution canonical_source="@neofort" fail_mode="FAIL_CLOSED">
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true"/>
+    <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true"/>
+    <policy id="policy:evidence:canonical-epistemic-classification-v2" current="true"/>
+    <policy id="policy:blockchain:programmability-performance-evidence-v1" version="1.1" current="true"/>
+    <policy id="policy:evidence-judge-applicability:v2" current="true"/>
+    <policy id="policy:evidence-judge-verdict-normalization:v2" current="true"/>
+    <policy id="policy:llm-judge:deterministic-execution-v2" current="true" replicas="3" temperature="0" top_p="1" disagreement="BLOCK"/>
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2" current="true"/>
+    <policy id="evidence-placement-policy:site-v5" current="true"/>
+    <policy id="policy:qgeu:data-visualization-analyst-v1" current="true"/>
+    <coverage id="evidence-coverage:service" target_current_admitted_eu="10"/>
+    <judge id="judge:evidence:factfulness-epistemology-methodology-v2" pass_threshold="90"/>
+    <judge id="judge:evidence-unit:champion-v2" champion_threshold="85"/>
+    <judge id="judge:evidence-unit:programmability-decision-value-v1" pass_threshold="85" champion_threshold="95"/>
+    <judge id="judge:evidence-unit:programmability-performance-v1" pass_threshold="85" champion_threshold="95"/>
+    <judge id="judge:evidence-graphic:presentation-v1" pass_threshold="90"/>
+    <judge id="judge:evidence-placement:presentation-v1.2" pass_threshold="85" champion_threshold="95"/>
+  </policy_resolution>
+
+  <page_contract>
+    <category>Blockchain &amp; Verifiable Computing</category>
+    <buyer_role>Innovation lead / trust architect / technical decision owner</buyer_role>
+    <buyer_persona>Élodie Marchand</buyer_persona>
+    <canonical_job>Decide what another party must be able to verify, then choose the minimum defensible mechanism.</canonical_job>
+    <offer_boundary>Architecture, applied R&amp;D and delivery across smart contracts, attestations, identity, account abstraction, multisignature governance and ZK/ZKML research. A documented no-blockchain outcome remains valid.</offer_boundary>
+    <positioning_invariant>PROPERTY → VERIFIER → DISCLOSURE BOUNDARY → AUTHORITY → MINIMUM MECHANISM → INDEPENDENT ACCEPTANCE</positioning_invariant>
+  </page_contract>
+
+  <evidence_state>
+    <canonical_page_linked_factfulness_pass_eu count="9" required="10"/>
+    <current_eu_judge_state all_applicable_llm_judges_pass="false" all_judge_snapshots_current="false"/>
+    <publication_status>BLOCKED</publication_status>
+    <publication_reason>Current page-linked EU objects pass deterministic preflight and Factfulness, but the required applicable LLM-judge snapshots are not all current/PASS. The canonical service coverage target is 10 admitted EU and the page has nine canonical page-linked Factfulness-PASS EU. GitHub persistence must not be interpreted as evidence admission or publication authorization.</publication_reason>
+
+    <existing_eu id="EU-CANON-BIS-AGORA-SETTLEMENT-80S-2026" epistemic="DESCRIPTIVE" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-ECB-PONTES-AVAILABILITY-2028" epistemic="PLANNED" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-ECB-PONTES-PRICING-2026" epistemic="DESCRIPTIVE" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026" epistemic="DESCRIPTIVE_MECHANISM" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026" epistemic="COMPARATIVE" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-ECB-TOKENIZED-ASSETS-GROWTH-4.96X-2026" epistemic="DERIVED_DETERMINISTIC" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-NIST-PQC-TRANSITION-2035" epistemic="PLANNED" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-WILEY-DB-VS-DLT-RATIO-4.22X-2026" epistemic="DERIVED_DETERMINISTIC" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+    <existing_eu id="EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026" epistemic="COMPARATIVE" status="FACTFULNESS_PASS_JUDGES_STALE"/>
+  </evidence_state>
+
+  <candidate_evidence>
+    <evidence_unit id="EU-DRAFT-USENIX-EIP7702-AUTHORIZATION-RISK-2026-09-02" current="false" admission_status="BLOCKED_PRECHECK" agent_exploitable="false">
+      <source_document_id>src:usenix-sec26-eip7702</source_document_id>
+      <source_title>Revealing the Dark Side of Smart Accounts: An Empirical Study of EIP-7702 Incurred Risks in Blockchain Ecosystem</source_title>
+      <source_url>https://www.usenix.org/conference/usenixsecurity26/presentation/huang-mingyuan</source_url>
+      <source_class>PEER_REVIEWED_RESEARCH_PAPER</source_class>
+      <source_access>USENIX_OPEN_ACCESS</source_access>
+      <published_period>2026-08</published_period>
+      <method>Large-scale transaction analysis plus cross-contract static analysis across seven EIP-7702-supporting blockchains.</method>
+      <quant_variable>share_of_EIP7702_authorization_transactions_associated_with_malicious_EOA_targeted_attacks</quant_variable>
+      <quant_value>&gt;63</quant_value>
+      <quant_unit>percent</quant_unit>
+      <population>EIP-7702 authorization transactions analyzed across seven supported blockchains in the published study.</population>
+      <additional_observation>924 malicious contract accounts detected.</additional_observation>
+      <supported_claim>Account-abstraction convenience changes the trust boundary and makes authorization/revocation controls a first-class architecture decision.</supported_claim>
+      <boundary>This evidence is specific to the study dataset and EIP-7702 ecosystem. It does not establish a universal compromise probability for account abstraction or all smart-account designs.</boundary>
+      <blocker>The NeoFort source object is verified but lacks the proof-carrying materialized origin artifact/content hash required by the current deterministic preflight policy. Do not admit or publish until materialized and re-judged.</blocker>
+    </evidence_unit>
+
+    <question_driven_graph_evidence_unit id="QGEU-DRAFT-ECB-EUROPE-TOKENISATION-DECISION-CONTEXT-2026-09-02" current="false" admission_status="BLOCKED_PRECHECK" agent_exploitable="false">
+      <question>What measurable European market conditions justify architecture qualification before selecting a tokenisation or DLT mechanism?</question>
+      <chart_type>SMALL_MULTIPLES</chart_type>
+      <minimum_points_required>5</minimum_points_required>
+      <observed_points_count>9</observed_points_count>
+      <cross_panel_arithmetic>false</cross_panel_arithmetic>
+      <source_title>From vision to delivery: building Europe’s tokenised financial market</source_title>
+      <source_url>https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html</source_url>
+      <panel id="fragmentation_counts" unit="count" period="2026 speech context" population="European market infrastructure cited by the ECB">
+        <observation label="CSDs" value="31" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <observation label="CCPs" value="14" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <observation label="trading_venues" value="323" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <boundary>Counts describe current market structure; they do not prove DLT removes fragmentation.</boundary>
+      </panel>
+      <panel id="settlement_locality" unit="percent" period="2023" population="transactions by volume/value in the ECB-cited European CSD context">
+        <observation label="volume_settled_within_same_CSD" value="&gt;95" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <observation label="value_settled_within_same_CSD" value="&gt;95" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <boundary>Same-CSD settlement shares measure locality/fragmentation, not ledger performance.</boundary>
+      </panel>
+      <panel id="experimentation" unit="count" period="2024" population="Eurosystem exploratory DLT work cited by the ECB">
+        <observation label="market_participants" value="64" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <observation label="trials_and_experiments" value="&gt;50" epistemic="OBSERVED_SOURCE_STATEMENT"/>
+        <boundary>Participation and experiments show activity, not production adoption or economic benefit.</boundary>
+      </panel>
+      <panel id="tokenised_traditional_assets" unit="EUR_billion" period="2025-Q1_to_2026-Q1" population="tokenised traditional assets on public blockchains in the ECB source scope">
+        <observation label="2025-Q1" value="4.7" epistemic="OBSERVED"/>
+        <observation label="2026-Q1" value="23.3" epistemic="OBSERVED"/>
+        <boundary>Two market-value observations provide context only; no causal or forecast claim is permitted.</boundary>
+      </panel>
+      <graph_interpretation>The evidence supports a qualification thesis: Europe combines fragmented infrastructure, active experimentation and a rapidly larger but still bounded tokenised-asset base. These facts justify deciding the verifier, coordination problem and acceptance condition before choosing DLT. They do not prove that DLT is superior for a specific workload.</graph_interpretation>
+      <blocker>The current NeoFort ECB source record is verified but not proof-carrying/materialized with the source snapshot identity required for a new admitted QG-EU. Keep this graph as a proposed specification until materialization, observation-level provenance and all applicable judge snapshots pass.</blocker>
+    </question_driven_graph_evidence_unit>
+  </candidate_evidence>
+
+  <copy_patch count="10" citation_mode="SILENT_PROGRESSIVE_DISCLOSURE">
+    <replacement id="R01" section="hero" sequence="seq:blockchain:hero:h1" priority="P0">
+      <target_xpath>//main//h1[normalize-space(.)="Ancrez on-chain ce qu’un tiers doit vérifier, jamais ce qu’il suffit de stocker."]</target_xpath>
+      <before>Ancrez on-chain ce qu’un tiers doit vérifier, jamais ce qu’il suffit de stocker.</before>
+      <after>Make the property verifiable. Keep the system as simple as the property allows.</after>
+      <reason>Preserves the property-first category while removing an unnecessary presumption that the proof must be on-chain.</reason>
+    </replacement>
+
+    <replacement id="R02" section="hero" sequence="seq:blockchain:hero:subheadline" priority="P0">
+      <anchor>hero supporting paragraph</anchor>
+      <after>Define what a third party must verify before selecting the mechanism. Use controlled database evidence when one operator can legitimately own the state; add attestations, smart contracts or selective proofs only when independent verification or shared execution justifies the machinery.[1]</after>
+      <evidence_ref>QGEU-CANON-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026</evidence_ref>
+      <boundary>Database throughput and multi-party coordination are separate decision dimensions.</boundary>
+    </replacement>
+
+    <replacement id="R03" section="consequences" sequence="seq:blockchain:consequences:platform-first" priority="P0">
+      <target_xpath>//*[contains(normalize-space(.), "Le projet démarre par une plateforme")][not(.//*[contains(normalize-space(.), "Le projet démarre par une plateforme")])]</target_xpath>
+      <after>If an audited database satisfies the verifier, authority, integrity and disclosure requirements, stop there. Add ledger machinery only for a verification or coordination property that the simpler architecture cannot satisfy.[2]</after>
+      <evidence_ref>EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026</evidence_ref>
+      <boundary>Do not claim universal cost savings or universal database superiority.</boundary>
+    </replacement>
+
+    <replacement id="R04" section="consequences" sequence="seq:blockchain:consequence:key-governance" priority="P0">
+      <target_xpath>//main//*[self::p or self::div][contains(normalize-space(.),"Qui signe, qui révoque") and contains(normalize-space(.),"perte ou de départ")]</target_xpath>
+      <after>Define who can authorize, revoke, recover and escalate before deployment. Account abstraction can improve usability while changing the trust boundary; recent EIP-7702 evidence shows why authorization policy must be treated as an architecture control, not a wallet detail.[3]</after>
+      <candidate_evidence_ref>EU-DRAFT-USENIX-EIP7702-AUTHORIZATION-RISK-2026-09-02</candidate_evidence_ref>
+      <publication>BLOCKED_UNTIL_CANDIDATE_ADMITTED</publication>
+    </replacement>
+
+    <replacement id="R05" section="proposition" sequence="seq:blockchain:proposition:mechanism" priority="P0">
+      <target_xpath>//main//*[self::p or self::div][contains(normalize-space(.),"La plupart des projets blockchain paient pour stocker") and contains(normalize-space(.),"frontière claim/evidence")]</target_xpath>
+      <after>Start from the verifier, the property, the disclosure boundary and the authority model. Then choose the minimum mechanism that closes that verification gap: controlled evidence, append-only records, attestations, smart contracts, identity controls or selective/ZK proofs. A documented no-blockchain decision is a valid paid outcome.</after>
+      <reason>Removes the unsupported universal “most blockchain projects” claim while retaining the differentiated architecture method.</reason>
+    </replacement>
+
+    <replacement id="R06" section="functional_attributes" sequence="seq:blockchain:functional:selective-disclosure" priority="P1">
+      <target_xpath>//main//*[self::p or self::div][contains(normalize-space(.),"La preuve va on-chain") and contains(normalize-space(.),"donnée confidentielle reste off-chain")]</target_xpath>
+      <after>Separate what must be proven from what must be revealed. Keep protected inputs outside the verifier’s disclosure boundary whenever the acceptance condition can be established from a bounded commitment, attestation or proof.</after>
+      <boundary>This is an architecture rule, not a claim that every proof belongs on-chain.</boundary>
+    </replacement>
+
+    <replacement id="R07" section="proof" sequence="capability:lottery-dapp" priority="P0">
+      <anchor>Lottery dApp developed at 90%</anchor>
+      <after>Public contribution evidence: 26 of 29 repository commits are attributed to RickOwri for the Lottery dApp fork; this demonstrates substantial implementation work without claiming original authorship of the starter project.</after>
+      <capability_source>https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp/commits/main/</capability_source>
+      <reason>Commit attribution is evidence of contribution, not a defensible percentage of product development.</reason>
+    </replacement>
+
+    <replacement id="R08" section="results" sequence="seq:blockchain:resultats:independent-verifier" priority="P0">
+      <target_xpath>//*[contains(normalize-space(.), "Un tiers recalcule la preuve sans accès à vos systèmes")][not(.//*[contains(normalize-space(.), "Un tiers recalcule la preuve sans accès à vos systèmes")])]</target_xpath>
+      <after>Acceptance criterion: an independent verifier reproduces the agreed verification result from the delivered evidence interface, without receiving protected inputs beyond the defined disclosure boundary.</after>
+      <epistemic_class>ACCEPTANCE_CRITERION</epistemic_class>
+      <reason>Prevents an acceptance target from being misread as an observed client outcome.</reason>
+    </replacement>
+
+    <replacement id="R09" section="qualification_faq" sequence="no-blockchain-outcome" priority="P1">
+      <anchor>C’est un résultat fréquent.</anchor>
+      <after>If the correct answer is no blockchain, the decision record states why and specifies the simpler evidence architecture that meets the verifier, authority and acceptance requirements.</after>
+      <reason>Removes an unsupported frequency claim while preserving the commercially differentiating no-chain outcome.</reason>
+    </replacement>
+
+    <replacement id="R10" section="proof" sequence="unverified-distinction" priority="P0">
+      <anchor>EthCC distinction / official title to be confirmed before publication</anchor>
+      <after>REMOVE FROM PUBLIC CLAIM SPAN UNTIL PRIMARY EVIDENCE VERIFIES THE OFFICIAL TITLE, YEAR AND RECIPIENT.</after>
+      <publication>QUARANTINE</publication>
+      <reason>A self-declared “to confirm before publication” field cannot remain as public proof under fail-closed provenance rules.</reason>
+    </replacement>
+  </copy_patch>
+
+  <citation_registry>
+    <citation n="1" evidence_id="QGEU-CANON-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026" status="UPSTREAM_JUDGES_STALE"/>
+    <citation n="2" evidence_id="EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026" status="UPSTREAM_JUDGES_STALE"/>
+    <citation n="3" evidence_id="EU-DRAFT-USENIX-EIP7702-AUTHORIZATION-RISK-2026-09-02" status="BLOCKED_PRECHECK"/>
+    <rule>Numeric citation markers may be rendered only after the referenced EvidenceUnit is admitted, current, uniquely bound to the claim span, and its placement passes judge:evidence-placement:presentation-v1.2.</rule>
+  </citation_registry>
+
+  <validation>
+    <check id="scope_only_target_page" status="PASS"/>
+    <check id="language_english_only" status="PASS"/>
+    <check id="section_structure_locked_23" status="PASS_SPEC"/>
+    <check id="no_google_drive_write" status="PASS"/>
+    <check id="no_fabricated_raw_html" status="PASS"/>
+    <check id="current_neofort_policy_resolution" status="PASS"/>
+    <check id="canonical_service_eu_coverage_10" status="FAIL" observed="9" required="10"/>
+    <check id="candidate_10th_eu_source_quality" status="PASS_SOURCE"/>
+    <check id="candidate_10th_eu_proof_carrying_materialization" status="BLOCKED"/>
+    <check id="qgeu_minimum_5_points" status="PASS_SPEC" observed="9" required="5"/>
+    <check id="qgeu_origin_materialized_and_hash_verified" status="BLOCKED"/>
+    <check id="all_applicable_llm_judges_three_replicas" status="BLOCKED"/>
+    <check id="all_judge_snapshots_current" status="FAIL"/>
+    <check id="placement_xpath_match_count_equals_one" status="NOT_RUN_ON_MUTATED_LIVE_DOM"/>
+    <check id="github_persistence_proves_truth" status="NOT_APPLICABLE" note="Persistence is lineage only."/>
+    <final_pass>false</final_pass>
+    <final_decision>BLOCKED_PENDING_SOURCE_MATERIALIZATION_AND_CURRENT_DETERMINISTIC_JUDGE_RUNS</final_decision>
+  </validation>
+
+  <next_machine_actions>
+    <action order="1">Materialize and hash-pin the USENIX source in NeoFort; create a claim-level source extract.</action>
+    <action order="2">Run deterministic preflight for the new EU, then Factfulness, applicable specialist judges and three-replica conservative reduction.</action>
+    <action order="3">Materialize/hash-pin the ECB source and create observation-level provenance for all nine graph marks.</action>
+    <action order="4">Run graph-quality, Factfulness, graphic-presentation and placement judges on immutable snapshots.</action>
+    <action order="5">After all upstream PASS, bind exactly one EU to exactly one CopySequence/XPath and re-run the live DOM selector consensus.</action>
+    <action order="6">Only then generate/publish a page HTML mutation. Preserve all 23 sections and existing order.</action>
+  </next_machine_actions>
+</page_upgrade_specification>
