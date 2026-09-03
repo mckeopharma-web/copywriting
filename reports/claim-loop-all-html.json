@@ -1,10 +1,391 @@
 {
-  "loop": "loop:copy-claim:external-capability-v1",
-  "judge": "judge:copy-claim:external-capability-grounding-v1",
-  "capability_snapshot": "capability-invariant:cv-derived:2026-09-03",
-  "commercial_snapshot": "commercial-context:catalogue:2026-09-03",
+  "loop": "loop:copy-claim:external-capability-v1.1",
+  "judge": "judge:copy-claim:external-capability-grounding-v1.1",
   "html_total": 27,
-  "changed": 0,
-  "files": [],
+  "source_section_gate": {
+    "formula": "source_count / section_count",
+    "threshold": 0.72,
+    "comparator": "STRICT_GREATER_THAN",
+    "pass": true
+  },
+  "files": [
+    {
+      "path": "engagement/audiences/avatar-ai-security.html",
+      "source_count": 4,
+      "section_count": 2,
+      "sources_per_section_ratio": 2.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+        "https://www.cisa.gov/sbom",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "expertises/agentic-ai/agentic-ai.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "expertises/agentic-ai/agentic-ai_night_mode_evidence_grounded_reconstruction_v1.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "expertises/ai-security/ai-security.html",
+      "source_count": 4,
+      "section_count": 2,
+      "sources_per_section_ratio": 2.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+        "https://www.cisa.gov/sbom",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "expertises/blockchain/blockchain.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://eips.ethereum.org/EIPS/eip-4337",
+        "https://www.nist.gov/publications/blockchain-technology-overview",
+        "https://www.w3.org/TR/vc-data-model-2.0/"
+      ]
+    },
+    {
+      "path": "expertises/cdm-automation/cdm-automation.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "expertises/data-engineering/data-engineering.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.md",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "expertises/healthtech/healthtech.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product_lossless-evidence-v1.3-review_2026-09-02.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "expertises/it/it.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://opentelemetry.io/docs/specs/otel/",
+        "https://www.cisa.gov/sbom",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "expertises/it/it_night_mode_evidence_grounded_reconstruction_v1.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://opentelemetry.io/docs/specs/otel/",
+        "https://www.cisa.gov/sbom",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "expertises/marketing-engineering/marketing-engineering.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+        "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "expertises/pv-data-engineer/pv-data-engineer.html",
+      "source_count": 2,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance-post-authorisation/good-pharmacovigilance-practices-gvp",
+        "https://www.fda.gov/drugs/surveillance-post-drug-approval-activities/fda-adverse-event-monitoring-system-aems"
+      ]
+    },
+    {
+      "path": "expertises/reg-csv/reg-csv.html",
+      "source_count": 2,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "expertises/training/training.html",
+      "source_count": 2,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+      ]
+    },
+    {
+      "path": "pages/engagement/audiences/mickael-umt.com.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+        "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "pages/engagement/audiences.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+        "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "pages/mickael-umt.com.html",
+      "source_count": 4,
+      "section_count": 2,
+      "sources_per_section_ratio": 2.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.md",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "pages/programme/pharmaceutical-evidence-assurance.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software"
+      ]
+    },
+    {
+      "path": "pages/realisations/ia-agents.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20"
+      ]
+    },
+    {
+      "path": "publish/expertises/blockchain/index.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://eips.ethereum.org/EIPS/eip-4337",
+        "https://www.nist.gov/publications/blockchain-technology-overview",
+        "https://www.w3.org/TR/vc-data-model-2.0/"
+      ]
+    },
+    {
+      "path": "publish/expertises/growth/growth.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+        "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "publish/expertises/growth/index.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+        "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+        "https://www.w3.org/TR/prov-overview/"
+      ]
+    },
+    {
+      "path": "publish/expertises/pv-data-engineer/index.html",
+      "source_count": 2,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.0,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance-post-authorisation/good-pharmacovigilance-practices-gvp",
+        "https://www.fda.gov/drugs/surveillance-post-drug-approval-activities/fda-adverse-event-monitoring-system-aems"
+      ]
+    },
+    {
+      "path": "publish/realisations/blockchain/blockchain.html",
+      "source_count": 3,
+      "section_count": 2,
+      "sources_per_section_ratio": 1.5,
+      "threshold": 0.72,
+      "comparator": "STRICT_GREATER_THAN",
+      "gate": "PASS",
+      "sources": [
+        "https://eips.ethereum.org/EIPS/eip-4337",
+        "https://www.nist.gov/publications/blockchain-technology-overview",
+        "https://www.w3.org/TR/vc-data-model-2.0/"
+      ]
+    }
+  ],
   "status": "PENDING_FORMAL_LLM_JUDGE"
 }
