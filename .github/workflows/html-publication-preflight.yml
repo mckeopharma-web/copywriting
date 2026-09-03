@@ -1,0 +1,43 @@
+name: HTML publication preflight
+
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - 'src/html_judge/**'
+      - 'audits/html-llm-judge-*'
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'src/html_judge/**'
+
+permissions:
+  contents: read
+
+jobs:
+  fail-closed-html-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan all HTML publication states
+        run: python src/html_judge/preflight.py > html-preflight-report.json
+      - name: Show audit summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('html-preflight-report.json',encoding='utf-8'))
+          print('HTML:',d['html_count'])
+          print('Formal-PASS contradictions:',d['formal_pass_contradiction_count'])
+          for x in d['contradictions']:
+              print('-',x['path'],x['blocking_tokens'])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: html-publication-preflight
+          path: html-preflight-report.json
