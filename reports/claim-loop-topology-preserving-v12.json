@@ -339,9 +339,9 @@
     {
       "path": "expertises/it/it.html",
       "family": "it",
-      "source_count": 15,
+      "source_count": 11,
       "section_count": 3,
-      "sources_per_section_ratio": 5.0,
+      "sources_per_section_ratio": 3.666667,
       "gate": "PASS",
       "research_anchor_sections": [
         "it-hero",
