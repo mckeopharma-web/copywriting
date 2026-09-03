@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 41,
+  "html_total": 42,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -296,6 +296,32 @@
         "commitments",
         "questions",
         "engagement"
+      ]
+    },
+    {
+      "path": "expertises/blockchain/blockchain_avatar_copywriting_devicev_v1.html",
+      "family": "blockchain",
+      "source_count": 8,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003"
+      ],
+      "topology_sha256": "c14bea438f1f44b5f0038b324104e22413704dff1f38740c2ca6ecb2213ff480",
+      "section_ids": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003",
+        "__anonymous_section_004",
+        "__anonymous_section_005",
+        "__anonymous_section_006",
+        "__anonymous_section_007",
+        "__anonymous_section_008",
+        "__anonymous_section_009",
+        "__anonymous_section_010"
       ]
     },
     {
