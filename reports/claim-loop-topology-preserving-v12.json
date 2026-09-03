@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 36,
+  "html_total": 37,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -874,6 +874,25 @@
         "ia-agents-hero",
         "ia-agents-projects",
         "ia-agents-provenance"
+      ]
+    },
+    {
+      "path": "pages/ressources/produits/frameworks/pharmaceutical-evidence-scope-note.html",
+      "family": "homepage",
+      "source_count": 4,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "qualification"
+      ],
+      "topology_sha256": "fdb42f76a64568b293233f98732b71cfbdd2e72542c678b9ccd66f571ba734af",
+      "section_ids": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "qualification"
       ]
     },
     {
