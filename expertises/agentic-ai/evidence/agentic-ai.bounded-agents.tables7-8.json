@@ -1,0 +1,111 @@
+{
+  "artifact_title": "agentic-ai · Bounded Agents Tables 7–8 extract",
+  "boundary": "Open 2026 preprint benchmark-protocol results; not universal prompt-injection prevention, not a production security guarantee, and not a universal utility estimate.",
+  "canonical_source_uri": "https://arxiv.org/abs/2608.15888",
+  "captured_at": "2026-09-03T22:10:00+02:00",
+  "construction_use": [
+    "QGEU-AGENTIC-BOUNDED-COMPROMISED-12CAT-2026",
+    "QGEU-AGENTIC-BOUNDED-UTILITY-12PTS-2026"
+  ],
+  "epistemic_status": "OBSERVED_CONTROLLED_EVALUATION",
+  "mode": "EXTRACTED",
+  "period": "Preprint submitted 2026-08-16",
+  "provenance_note": "Deterministic transcription of source-table values already verified in NeoFort SourceEvidenceExtract objects.",
+  "schema_version": "origin-document-extract-v1",
+  "source_document_id": "src:agentic:bounded-agents-2608.15888",
+  "source_locator": [
+    "Table 7",
+    "Table 8"
+  ],
+  "source_uri": "https://arxiv.org/html/2608.15888",
+  "table_7_utility": {
+    "metric": "utility preservation rate",
+    "observations": [
+      {
+        "interactive_sd": 0.4,
+        "interactive_upr": 86.7,
+        "pairs": 560,
+        "strict_sd": 0.1,
+        "strict_upr": 81.5,
+        "suite": "Workspace"
+      },
+      {
+        "interactive_sd": 1.7,
+        "interactive_upr": 58.8,
+        "pairs": 144,
+        "strict_sd": 0.7,
+        "strict_upr": 50.0,
+        "suite": "Banking"
+      },
+      {
+        "interactive_sd": 1.4,
+        "interactive_upr": 60.0,
+        "pairs": 140,
+        "strict_sd": 0.7,
+        "strict_upr": 55.7,
+        "suite": "Travel"
+      },
+      {
+        "interactive_sd": 4.4,
+        "interactive_upr": 60.0,
+        "pairs": 105,
+        "strict_sd": 5.2,
+        "strict_upr": 56.5,
+        "suite": "Slack"
+      }
+    ],
+    "population": "Workspace 560 pairs; Banking 144; Travel 140; Slack 105; means of 3 runs",
+    "uncertainty": "± values are sample standard deviations across three runs, not confidence intervals.",
+    "unit": "percent"
+  },
+  "table_8_compromised": {
+    "metric": "attack-success rate",
+    "observations": [
+      {
+        "apc_pct": 0.0,
+        "attack": "Exfiltration",
+        "baseline_pct": 90.0,
+        "domain": "Workspace",
+        "pairs": 240
+      },
+      {
+        "apc_pct": 30.0,
+        "attack": "Manipulation",
+        "baseline_pct": 97.5,
+        "domain": "Workspace",
+        "pairs": 240
+      },
+      {
+        "apc_pct": 0.0,
+        "attack": "Financial exfiltration",
+        "baseline_pct": 75.0,
+        "domain": "Banking",
+        "pairs": 144
+      },
+      {
+        "apc_pct": 0.0,
+        "attack": "Account takeover",
+        "baseline_pct": 87.5,
+        "domain": "Banking",
+        "pairs": 144
+      },
+      {
+        "apc_pct": 0.0,
+        "attack": "Manipulation",
+        "baseline_pct": 86.7,
+        "domain": "Travel",
+        "pairs": 120
+      },
+      {
+        "apc_pct": 0.0,
+        "attack": "External exfiltration",
+        "baseline_pct": 100.0,
+        "domain": "Slack",
+        "pairs": 105
+      }
+    ],
+    "population": "609 unique pairs / 1,218 executions across Workspace, Banking, Travel and Slack suites",
+    "uncertainty": "No interval reported for the selected Table 8 marks; none is invented.",
+    "unit": "percent"
+  }
+}
