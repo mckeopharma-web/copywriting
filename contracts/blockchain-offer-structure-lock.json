@@ -1,0 +1,44 @@
+{
+  "contract_id": "rule:blockchain:offer-structure-lock:v1",
+  "version": "1.0.0",
+  "page": "expertises/blockchain/blockchain.html",
+  "section_count": 18,
+  "section_delta_allowed": 0,
+  "reorder_allowed": false,
+  "fail_closed": true,
+  "sections": [
+    {"order": 1, "id": "top", "kind": "offer_hero", "semantic_role": "promise_result_format_decision_maker_stack"},
+    {"order": 2, "id": "triggers", "kind": "purchase_triggers", "semantic_role": "purchase_trigger_conditions"},
+    {"order": 3, "id": "consequences", "kind": "problem_consequences", "semantic_role": "problem_cost_and_failed_workarounds"},
+    {"order": 4, "id": "for-whom", "kind": "buyer_fit", "semantic_role": "buyer_and_operational_pressure"},
+    {"order": 5, "id": "qualification", "kind": "qualification_gate", "semantic_role": "fit_and_unfit_conditions"},
+    {"order": 6, "id": "proposition", "kind": "value_mechanism", "semantic_role": "offer_mechanism_claim_to_proof"},
+    {"order": 7, "id": "offers", "kind": "buying_configurations", "semantic_role": "how_to_buy_and_offer_configurations"},
+    {"order": 8, "id": "deliverables", "kind": "deliverables", "semantic_role": "delivered_artifacts"},
+    {"order": 9, "id": "before-after", "kind": "state_transition", "semantic_role": "before_after_client_state"},
+    {"order": 10, "id": "results", "kind": "acceptance_results", "semantic_role": "target_results_and_acceptance_criteria"},
+    {"order": 11, "id": "proof", "kind": "execution_proof", "semantic_role": "technical_proof_and_provenance"},
+    {"order": 12, "id": "scope", "kind": "scope_boundary", "semantic_role": "included_and_excluded_scope"},
+    {"order": 13, "id": "process", "kind": "delivery_process", "semantic_role": "mission_delivery_flow"},
+    {"order": 14, "id": "modules", "kind": "delivery_modules", "semantic_role": "modular_delivery_bricks"},
+    {"order": 15, "id": "intersection", "kind": "differentiation", "semantic_role": "cross_skill_differentiation"},
+    {"order": 16, "id": "commitments", "kind": "controllable_commitments", "semantic_role": "guarantees_limits_and_responsibility"},
+    {"order": 17, "id": "questions", "kind": "objections_faq", "semantic_role": "purchase_objections_and_questions"},
+    {"order": 18, "id": "engagement", "kind": "next_step_cta", "semantic_role": "qualification_and_next_step"}
+  ],
+  "preserve": {
+    "evidence_claim_ids": [
+      "claim-tokenised-assets-observed",
+      "claim-tokenised-assets-derived",
+      "claim-pontes-fees",
+      "claim-pontes-hours",
+      "claim-agora-settlement",
+      "claim-programmability",
+      "claim-provenance-model",
+      "claim-lottery-commits",
+      "claim-pqc-transition"
+    ],
+    "required_cta_targets": ["#engagement", "https://mickael-umt.com/contact/"],
+    "devicev_contract_id": "devicev-evidence-contract"
+  }
+}
