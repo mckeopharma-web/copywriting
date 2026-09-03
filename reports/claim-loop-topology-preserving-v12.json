@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 32,
+  "html_total": 33,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -472,9 +472,9 @@
     {
       "path": "expertises/marketing-engineering/marketing-engineering.html",
       "family": "marketing",
-      "source_count": 7,
+      "source_count": 8,
       "section_count": 3,
-      "sources_per_section_ratio": 2.333333,
+      "sources_per_section_ratio": 2.666667,
       "gate": "PASS",
       "research_anchor_sections": [
         "triggers",
@@ -672,6 +672,39 @@
         "newsletter",
         "faq",
         "lead-form"
+      ]
+    },
+    {
+      "path": "pages/programme/ai-production-assurance.html",
+      "family": "homepage",
+      "source_count": 3,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "655d7f684eb6a7e626b352f409b1795a30421d344006670887b20175ea4fbd8e",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "for-whom",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "proof",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
       ]
     },
     {
