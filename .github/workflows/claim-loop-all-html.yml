@@ -1,0 +1,66 @@
+name: Claim loop — all HTML
+
+on:
+  push:
+    branches:
+      - claim-loop/all-html-2026-09-03
+    paths:
+      - 'tools/claim_loop_apply.py'
+      - '.github/workflows/claim-loop-all-html.yml'
+      - '**/*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: claim-loop-all-html-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  materialise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply external-evidence × capability copy layer
+        run: python tools/claim_loop_apply.py
+      - name: Verify every HTML was materialised
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('.')
+          files = sorted(root.rglob('*.html'))
+          missing=[]
+          for p in files:
+              s=p.read_text(encoding='utf-8')
+              if 'data-claim-loop-version="external-capability-v1"' not in s:
+                  missing.append(str(p))
+              if 'PENDING_FORMAL_LLM_JUDGE' not in s:
+                  missing.append(str(p)+':missing-fail-closed-status')
+              if 'claim-loop-seed-archive' not in s:
+                  missing.append(str(p)+':missing-seed-archive')
+          report=json.loads(Path('reports/claim-loop-all-html.json').read_text())
+          assert report['html_total']==len(files), (report['html_total'], len(files))
+          if missing:
+              raise SystemExit('Unmaterialised HTML:\n'+'\n'.join(missing))
+          print(f'PASS: {len(files)} HTML artifacts carry the claim-loop contract')
+          PY
+      - name: Commit generated HTML upgrades
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git config user.name 'claim-loop-bot'
+          git config user.email 'claim-loop-bot@users.noreply.github.com'
+          git add -- '*.html' 'reports/claim-loop-all-html.json'
+          git commit -m 'feat(copy): apply external-evidence capability loop to all HTML'
+          git push
