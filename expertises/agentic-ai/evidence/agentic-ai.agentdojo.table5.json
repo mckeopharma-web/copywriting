@@ -1,0 +1,43 @@
+{
+  "artifact_title": "agentic-ai · AgentDojo Table 5 extract",
+  "boundary": "Peer-reviewed benchmark results for one benchmark/model evaluation; not a production attack rate or universal defense ranking.",
+  "canonical_source_uri": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html",
+  "captured_at": "2026-09-03T22:10:00+02:00",
+  "construction_use": [
+    "QGEU-AGENTIC-AGENTDOJO-DEFENSES-2024"
+  ],
+  "epistemic_status": "OBSERVED_CONTROLLED_EVALUATION",
+  "metric": "targeted attack-success rate",
+  "mode": "EXTRACTED",
+  "observations": [
+    {
+      "defense": "No defense",
+      "targeted_asr_pct": 57.69
+    },
+    {
+      "defense": "Delimiting",
+      "targeted_asr_pct": 41.65
+    },
+    {
+      "defense": "PI detector",
+      "targeted_asr_pct": 7.95
+    },
+    {
+      "defense": "Repeat prompt",
+      "targeted_asr_pct": 27.82
+    },
+    {
+      "defense": "Tool filter",
+      "targeted_asr_pct": 6.84
+    }
+  ],
+  "period": "NeurIPS 2024",
+  "population": "AgentDojo GPT-4o defense evaluation",
+  "provenance_note": "Deterministic transcription of the source table values already verified in NeoFort SourceEvidenceExtract.",
+  "schema_version": "origin-document-extract-v1",
+  "source_document_id": "src:agentic:agentdojo-neurips-2024",
+  "source_locator": "Table 5",
+  "source_uri": "https://arxiv.org/html/2406.13352",
+  "uncertainty": "The source reports 95% confidence intervals; this extract preserves the point estimates used by the compact page graph and does not invent missing interval values.",
+  "unit": "percent"
+}
