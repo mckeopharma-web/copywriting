@@ -1,0 +1,787 @@
+{
+  "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
+  "judge": "judge:copy-claim:external-capability-grounding-v1.2",
+  "html_total": 27,
+  "topology_preserved": true,
+  "body_replacement_forbidden": true,
+  "visible_copy_wholesale_replacement_forbidden": true,
+  "source_section_gate": {
+    "formula": "distinct_external_research_sources / selected_research_anchor_sections",
+    "threshold": 0.72,
+    "comparator": "STRICT_GREATER_THAN",
+    "pass": true
+  },
+  "min_ratio": 1.0,
+  "max_ratio": 5.333333,
+  "failures": [],
+  "files": [
+    {
+      "path": "engagement/audiences/avatar-ai-security.html",
+      "family": "ai-security",
+      "source_count": 11,
+      "section_count": 3,
+      "sources_per_section_ratio": 3.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "7e76265d0745a98dbe28fa8aba38439c771f5c56147518833126d3e192be2bd9",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "buyer",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "evidence",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/agentic-ai/agentic-ai.html",
+      "family": "agentic",
+      "source_count": 16,
+      "section_count": 3,
+      "sources_per_section_ratio": 5.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "b1c02c15e0775c0b35404cbc1f173ee8fb0ab1cdd3f6c4f70572035ca23daabe",
+      "section_ids": [
+        "hero",
+        "triggers",
+        "consequences",
+        "audience",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "transformation",
+        "results",
+        "proofs",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "faq",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/agentic-ai/agentic-ai_night_mode_evidence_grounded_reconstruction_v1.html",
+      "family": "agentic",
+      "source_count": 5,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "decision",
+        "problem-evidence",
+        "triggers"
+      ],
+      "topology_sha256": "8a6b6c993c583fa9de97816bfc4e89282ccf9990e072a6fe121ac17a7ca95361",
+      "section_ids": [
+        "hero",
+        "decision",
+        "problem-evidence",
+        "triggers",
+        "mechanism-evidence",
+        "offer",
+        "method",
+        "benefits",
+        "problems",
+        "fit",
+        "risk-reversal",
+        "social-proof",
+        "faq",
+        "cta",
+        "evidence-disclosure"
+      ]
+    },
+    {
+      "path": "expertises/ai-security/ai-security.html",
+      "family": "ai-security",
+      "source_count": 14,
+      "section_count": 3,
+      "sources_per_section_ratio": 4.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "7e76265d0745a98dbe28fa8aba38439c771f5c56147518833126d3e192be2bd9",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "buyer",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "evidence",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/blockchain/blockchain.html",
+      "family": "blockchain",
+      "source_count": 6,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "f6a01a68d8d20e488419c50cd76f28fc584351663660c98c1e91c17a12aeec55",
+      "section_ids": [
+        "top",
+        "triggers",
+        "consequences",
+        "for-whom",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "proof",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/cdm-automation/cdm-automation.html",
+      "family": "clinical-data",
+      "source_count": 4,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "86670dc4b4d427b88030a7bb07ece9e49cc21fdb0dd5a23dc0b3d8e2a72e6807",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "audience",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "proofs",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/data-engineering/data-engineering.html",
+      "family": "data",
+      "source_count": 13,
+      "section_count": 3,
+      "sources_per_section_ratio": 4.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003"
+      ],
+      "topology_sha256": "5387519f11b77dd5d57c6e87b6aaf70f6cc65395de17977eecbc003ed5c5a44f",
+      "section_ids": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003",
+        "__anonymous_section_004",
+        "__anonymous_section_005",
+        "__anonymous_section_006",
+        "__anonymous_section_007",
+        "__anonymous_section_008",
+        "__anonymous_section_009",
+        "__anonymous_section_010",
+        "__anonymous_section_011",
+        "__anonymous_section_012",
+        "__anonymous_section_013",
+        "__anonymous_section_014",
+        "__anonymous_section_015",
+        "__anonymous_section_016",
+        "__anonymous_section_017"
+      ]
+    },
+    {
+      "path": "expertises/healthtech/healthtech.html",
+      "family": "healthtech",
+      "source_count": 10,
+      "section_count": 3,
+      "sources_per_section_ratio": 3.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "healthtech-hero",
+        "healthtech-offers",
+        "healthtech-capabilities"
+      ],
+      "topology_sha256": "ecd37399bafc4bc5cc666397a94bc3cf926c3c7c7ab575e78552787527fa745f",
+      "section_ids": [
+        "healthtech-hero",
+        "healthtech-offers",
+        "healthtech-capabilities",
+        "healthtech-next-step",
+        "healthtech-qualifier"
+      ]
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product.html",
+      "family": "healthtech",
+      "source_count": 3,
+      "section_count": 1,
+      "sources_per_section_ratio": 3.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__document_contract__"
+      ],
+      "topology_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "section_ids": []
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html",
+      "family": "healthtech",
+      "source_count": 12,
+      "section_count": 3,
+      "sources_per_section_ratio": 4.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "problems",
+        "proposition"
+      ],
+      "topology_sha256": "efb8dbda38f2b87ae102ad833c04bfbb1d122ccea8ce95a5e7140cc1a12a5e79",
+      "section_ids": [
+        "hero",
+        "triggers",
+        "problems",
+        "audience",
+        "qualification",
+        "__anonymous_section_006",
+        "proposition",
+        "value",
+        "offers",
+        "product",
+        "transformation",
+        "before_after",
+        "results",
+        "proof",
+        "scope",
+        "__anonymous_section_016",
+        "__anonymous_section_017",
+        "phases",
+        "modules",
+        "capabilities",
+        "intersection",
+        "benchmark",
+        "guarantee",
+        "faq",
+        "evidence-register",
+        "engagement",
+        "lead_form"
+      ]
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product_lossless-evidence-v1.3-review_2026-09-02.html",
+      "family": "healthtech",
+      "source_count": 3,
+      "section_count": 1,
+      "sources_per_section_ratio": 3.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__document_contract__"
+      ],
+      "topology_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "section_ids": []
+    },
+    {
+      "path": "expertises/it/it.html",
+      "family": "it",
+      "source_count": 15,
+      "section_count": 3,
+      "sources_per_section_ratio": 5.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "it-hero",
+        "capabilities",
+        "next-step"
+      ],
+      "topology_sha256": "948fbb42fa8ed9b123ed9017af69ac0d8d96d534d57adb445b2afee8cf9a69a1",
+      "section_ids": [
+        "it-hero",
+        "capabilities",
+        "next-step",
+        "qualifier"
+      ]
+    },
+    {
+      "path": "expertises/it/it_night_mode_evidence_grounded_reconstruction_v1.html",
+      "family": "it",
+      "source_count": 7,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "decision-rule",
+        "evidence-signal",
+        "outcomes"
+      ],
+      "topology_sha256": "2a4d3b59573daedb2c2801007b2eacda2301d1063759f0dcadcf5d3dba00242b",
+      "section_ids": [
+        "hero",
+        "decision-rule",
+        "evidence-signal",
+        "lanes",
+        "before-after",
+        "method",
+        "outcomes",
+        "capabilities",
+        "risk-reversal",
+        "faq",
+        "cta",
+        "evidence-disclosure"
+      ]
+    },
+    {
+      "path": "expertises/marketing-engineering/marketing-engineering.html",
+      "family": "marketing",
+      "source_count": 7,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "f92784c08377bb58cf9a2f1c0746be14d39070aad417a6747c7781f2022afb9d",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "for-whom",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "evidence",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/pv-data-engineer/pv-data-engineer.html",
+      "family": "pv",
+      "source_count": 3,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "declencheurs",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "60f3d20c8e3fc859a591dfd0756a30e90714bbe65ee350d5eadf990555fb01de",
+      "section_ids": [
+        "hero",
+        "declencheurs",
+        "consequences",
+        "pourqui",
+        "qualification",
+        "proposition",
+        "livrables",
+        "avantapres",
+        "preuves",
+        "perimetre",
+        "deroule",
+        "engagements",
+        "faq",
+        "mission",
+        "qualification-form"
+      ]
+    },
+    {
+      "path": "expertises/reg-csv/reg-csv.html",
+      "family": "reg-csv",
+      "source_count": 5,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "declencheurs",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "e1e9a52f0d7e17b6ec4526764c02d65d42af4990cf3271a59584881ec0e520a9",
+      "section_ids": [
+        "hero",
+        "mandat",
+        "declencheurs",
+        "consequences",
+        "pour-qui",
+        "qualification",
+        "proposition",
+        "attributs",
+        "offres",
+        "livrables",
+        "avant-apres",
+        "resultats",
+        "preuves",
+        "perimetre",
+        "deroule",
+        "modules",
+        "capacites",
+        "intersection",
+        "pricing",
+        "engagements",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/training/training.html",
+      "family": "training",
+      "source_count": 4,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003"
+      ],
+      "topology_sha256": "5387519f11b77dd5d57c6e87b6aaf70f6cc65395de17977eecbc003ed5c5a44f",
+      "section_ids": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003",
+        "__anonymous_section_004",
+        "__anonymous_section_005",
+        "__anonymous_section_006",
+        "__anonymous_section_007",
+        "__anonymous_section_008",
+        "__anonymous_section_009",
+        "__anonymous_section_010",
+        "__anonymous_section_011",
+        "__anonymous_section_012",
+        "__anonymous_section_013",
+        "__anonymous_section_014",
+        "__anonymous_section_015",
+        "__anonymous_section_016",
+        "__anonymous_section_017"
+      ]
+    },
+    {
+      "path": "pages/engagement/audiences/mickael-umt.com.html",
+      "family": "marketing",
+      "source_count": 14,
+      "section_count": 3,
+      "sources_per_section_ratio": 4.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "decision-profiles",
+        "problem-before-profile",
+        "audience-cards"
+      ],
+      "topology_sha256": "2e2481e109bad4e103e46a245ff791d3f33289f12263e8fbbf5c25f41868a13a",
+      "section_ids": [
+        "decision-profiles",
+        "audience-cards",
+        "problem-before-profile",
+        "qualifier"
+      ]
+    },
+    {
+      "path": "pages/engagement/audiences.html",
+      "family": "marketing",
+      "source_count": 11,
+      "section_count": 3,
+      "sources_per_section_ratio": 3.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "decision-unit",
+        "evidence",
+        "__anonymous_section_001"
+      ],
+      "topology_sha256": "2241d1b03eaae198b68983f840401a04f30b6f83981e5af0ba1e9d5ac1a28cdc",
+      "section_ids": [
+        "__anonymous_section_001",
+        "avatars",
+        "decision-unit",
+        "qualification",
+        "evidence"
+      ]
+    },
+    {
+      "path": "pages/mickael-umt.com.html",
+      "family": "homepage",
+      "source_count": 7,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "preuves",
+        "home-hero",
+        "situations"
+      ],
+      "topology_sha256": "892abac1496ea8109803d1dac644d47bad395d7d1c6f50dab911667f326e081e",
+      "section_ids": [
+        "home-hero",
+        "situations",
+        "route",
+        "consultant",
+        "preuves",
+        "expertises",
+        "positioning",
+        "engagement",
+        "current-work",
+        "ressources",
+        "newsletter",
+        "faq",
+        "lead-form"
+      ]
+    },
+    {
+      "path": "pages/programme/pharmaceutical-evidence-assurance.html",
+      "family": "healthtech",
+      "source_count": 10,
+      "section_count": 3,
+      "sources_per_section_ratio": 3.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "790b0e88dd04fec3d9304d9d5cca14851055db78cd08b698c6f4eb34a50934ce",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "for-whom",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "outcomes",
+        "evidence",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "pages/realisations/ia-agents.html",
+      "family": "agentic",
+      "source_count": 8,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "ia-agents-hero",
+        "ia-agents-projects",
+        "ia-agents-provenance"
+      ],
+      "topology_sha256": "f0659b4b9b67d9c2a28ee43df7fd0ca065b5ad9ea43dfd83600764de60783bf0",
+      "section_ids": [
+        "ia-agents-hero",
+        "ia-agents-projects",
+        "ia-agents-provenance"
+      ]
+    },
+    {
+      "path": "publish/expertises/blockchain/index.html",
+      "family": "blockchain",
+      "source_count": 3,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "ffd5bce5a254d3e8d34271688025203af5a2f49175e1c01be7703adebce4a124",
+      "section_ids": [
+        "hero",
+        "triggers",
+        "consequences",
+        "buyer",
+        "qualification",
+        "proposition",
+        "functional",
+        "offers",
+        "deliverables",
+        "state",
+        "before-after",
+        "results",
+        "evidence",
+        "scope",
+        "process",
+        "modules",
+        "capabilities",
+        "intersection",
+        "market",
+        "commitments",
+        "questions",
+        "engagement",
+        "qualifier",
+        "__anonymous_section_024"
+      ]
+    },
+    {
+      "path": "publish/expertises/growth/growth.html",
+      "family": "marketing",
+      "source_count": 8,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "growth:hero",
+        "offers",
+        "capabilities"
+      ],
+      "topology_sha256": "b4b241248d82215649efe982e618a9350383768dbcf32ba71c38242cb4d1f35b",
+      "section_ids": [
+        "growth:hero",
+        "offers",
+        "capabilities",
+        "growth:next-step",
+        "qualification"
+      ]
+    },
+    {
+      "path": "publish/expertises/growth/index.html",
+      "family": "marketing",
+      "source_count": 3,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "proof",
+        "growth:hero:category-promise",
+        "tracks"
+      ],
+      "topology_sha256": "8901cd69b0b8a1fbcb8881faef57867c805035a0cb07971c81bd15ee6c71f313",
+      "section_ids": [
+        "growth:hero:category-promise",
+        "tracks",
+        "system",
+        "__anonymous_section_004",
+        "__anonymous_section_005",
+        "__anonymous_section_006",
+        "__anonymous_section_007",
+        "proof",
+        "__anonymous_section_009",
+        "__anonymous_section_010",
+        "__anonymous_section_011",
+        "qualify"
+      ]
+    },
+    {
+      "path": "publish/expertises/pv-data-engineer/index.html",
+      "family": "pv",
+      "source_count": 7,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "declencheurs",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "a3495de6feb3e48df4d721b43e64459961e93d0dc5fc5c5e0050838eef31605f",
+      "section_ids": [
+        "__anonymous_section_001",
+        "declencheurs",
+        "consequences",
+        "pourqui",
+        "qualification",
+        "proposition",
+        "livrables",
+        "avantapres",
+        "preuves",
+        "perimetre",
+        "deroule",
+        "engagements",
+        "faq",
+        "mission",
+        "qualification-form"
+      ]
+    },
+    {
+      "path": "publish/realisations/blockchain/blockchain.html",
+      "family": "blockchain",
+      "source_count": 6,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "method-behind-proof",
+        "page-intro",
+        "lottery-dapp"
+      ],
+      "topology_sha256": "90df90ef852b59039bd25fae12e8b87cbbe098fd41de99f99c2a71050fcfd06a",
+      "section_ids": [
+        "page-intro",
+        "lottery-dapp",
+        "tokenized-voting-backend",
+        "provenance-policy",
+        "method-behind-proof"
+      ]
+    }
+  ],
+  "status": "PENDING_FORMAL_LLM_JUDGE"
+}
