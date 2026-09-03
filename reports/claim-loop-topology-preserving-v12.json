@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 38,
+  "html_total": 39,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -648,6 +648,29 @@
         "engagements",
         "questions",
         "engagement"
+      ]
+    },
+    {
+      "path": "expertises/reg-csv/reg-csv_DEVICEV_validation_2026-09-03.html",
+      "family": "reg-csv",
+      "source_count": 4,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003"
+      ],
+      "topology_sha256": "f897f7defea525702b94f528a9d601f8fbabc8b01b04b15f6582123acf86f9db",
+      "section_ids": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003",
+        "__anonymous_section_004",
+        "__anonymous_section_005",
+        "__anonymous_section_006",
+        "__anonymous_section_007"
       ]
     },
     {
