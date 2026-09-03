@@ -53,7 +53,7 @@ const WEB_CANDIDATES=[
 'https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices',
 'https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request',
 'https://www.fda.gov/medical-devices/digital-health-center-excellence/key-considerations-development-and-use-digitally-derived-measures-clinical-investigations-fda-paper',
-'https://www.fda.gov/medical-devices/digital-health-center-excellence/fda-virtual-workshop-digital-health-technologies-and-statistical-considerations-digitally-derived',
+'https://www.fda.gov/drugs/news-events-human-drugs/fda-virtual-workshop-digital-health-technologies-and-statistical-considerations-digitally-derived',
 'https://www.fda.gov/science-research/science-and-research-special-topics/digital-health-technologies-dhts-drug-development',
 'https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m11-clinical-electronic-structured-harmonised-protocol',
 'https://www.fda.gov/medical-devices/digital-health-center-excellence/guidances-digital-health-content',
@@ -140,7 +140,7 @@ function graphs(){
  const caps=sec('Les capacités engagées, et la mission où chacune a été exercée.');if(caps)after(caps.querySelector('h2'),intervalEug('QGEU-REGCSV-PUBLIC-ENGINEERING-PROJECTS-TIMELINE-2026','Public engineering implementation timeline','Which public projects provide dateable implementation evidence across software, data and automation?',PROJECTS,2023,2025,'Six public project periods. This proves implementation history only — not production deployment, regulatory-validation efficacy or HealthTech client outcomes. Existing NeoFort object: deterministic preflight PASS, Factfulness 100, review-only pending graphic-presentation judge.'));
 }
 function status(){const d=document.createElement('div');d.id='devicev-status';d.innerHTML='<span class="review">DEVICEV REVIEW</span> · 80 screened → 30 shortlisted · 12 EU placements · 4 EUG placements · base '+BASE_SHA.slice(0,10)+'…';document.body.appendChild(d)}
-function patch(){patchCopy();trace();proofGrid();place();graphs();bibliography();status();}
+function patch(){trace();proofGrid();place();graphs();patchCopy();bibliography();status();}
 async function boot(){try{const r=await fetch(BASE,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const html=await r.text();const parsed=new DOMParser().parseFromString(html,'text/html');const oldStyle=document.querySelector('head style')?.textContent||'';document.title='HealthTech & PharmaTech Product Engineering · evidence-grounded review';document.head.innerHTML=parsed.head.innerHTML+'<style>'+oldStyle+'</style>';document.body.innerHTML=parsed.body.innerHTML;patch();}catch(err){document.getElementById('boot').innerHTML='<div><h1>HealthTech &amp; PharmaTech Product Engineering</h1><p>The lossless base snapshot could not be loaded in this browser. The review artifact itself is valid HTML, but faithful page rendering requires access to the versioned base snapshot in GitHub.</p><p><code>'+String(err).replace(/[<>]/g,'')+'</code></p></div>';status()}}
 boot();
 })();
