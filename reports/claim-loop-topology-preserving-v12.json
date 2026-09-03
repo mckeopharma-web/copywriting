@@ -684,21 +684,30 @@
     {
       "path": "publish/expertises/growth/growth.html",
       "family": "marketing",
-      "source_count": 8,
+      "source_count": 7,
       "section_count": 3,
-      "sources_per_section_ratio": 2.666667,
+      "sources_per_section_ratio": 2.333333,
       "gate": "PASS",
       "research_anchor_sections": [
         "growth:hero",
         "offers",
-        "capabilities"
+        "__anonymous_section_003"
       ],
-      "topology_sha256": "b4b241248d82215649efe982e618a9350383768dbcf32ba71c38242cb4d1f35b",
+      "topology_sha256": "01453c18f10baf35289eaf85d2a26e71e2737414ae54265b791053895749b5f2",
       "section_ids": [
         "growth:hero",
         "offers",
+        "__anonymous_section_003",
+        "__anonymous_section_004",
+        "__anonymous_section_005",
+        "__anonymous_section_006",
+        "__anonymous_section_007",
+        "__anonymous_section_008",
+        "__anonymous_section_009",
+        "__anonymous_section_010",
+        "__anonymous_section_011",
         "capabilities",
-        "growth:next-step",
+        "next-step",
         "qualification"
       ]
     },
