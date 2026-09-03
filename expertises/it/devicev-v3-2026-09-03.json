@@ -1,0 +1,218 @@
+{
+  "artifact_id": "devicev:expertises-it:2026-09-03:v3",
+  "artifact_type": "evidence_grounded_copy_patch_and_validation_manifest",
+  "target_page": "https://mickael-umt.com/expertises/it/",
+  "scope_lock": {
+    "allowed": ["/expertises/it/"],
+    "forbidden": ["all_other_pages"],
+    "mutation_mode": "targeted_patch_only",
+    "wholesale_visible_copy_replacement": false
+  },
+  "source_page_snapshot": {
+    "retrieved_at": "2026-09-03T21:54:00+02:00",
+    "source_of_truth": "mickael-umt.com",
+    "live_structure_observed": [
+      "hero + IT category routing",
+      "four IT offer lanes: Agentic AI Engineering, Data Engineering & Evidence Architecture, AI Security/Assurance/DevSecOps, Blockchain & Verifiable Computing",
+      "CV capability proof matrix",
+      "next-step CTA",
+      "eight-screen mission qualifier"
+    ],
+    "full_dark_review_html": "expertises/it/it.html",
+    "full_dark_review_html_blob_sha_before_this_manifest": "53266b36712d8136d8df3b8f60c6dd6ba13da3db",
+    "manifest_before_this_change": "expertises/it/it.md",
+    "manifest_blob_sha_before_this_change": "802278d2f9aa3e0adb15a83ff31c5bf3ba3bb5e8"
+  },
+  "neofort_policy_resolution": {
+    "resolved_at": "2026-09-03T21:54:00+02:00",
+    "posture": "FAIL_CLOSED",
+    "legacy_requested_judge": "judge:eu:placementv1",
+    "legacy_resolution": "NO_CURRENT_OBJECT_WITH_THIS_ID; do not silently substitute without recording",
+    "current_applicable_objects": [
+      {"id":"judge:evidence-placement:presentation-v1.2","version":"1.2","replicas":3,"temperature":0,"top_p":1,"pass_threshold":85},
+      {"id":"judge:evidence-graphic:presentation-v3","version":"3.0","pass_threshold":90},
+      {"id":"policy:evidence-placement:claim-span-entailment-v2","version":"2.2"},
+      {"id":"policy:eug-placement:statistical-display-ordering-contract-v2","version":"2.0"},
+      {"id":"policy:evidence-agent-exploitability:deterministic-preflight-v2","version":"2.0"},
+      {"id":"policy:evidence-agent-exploitability:proof-carrying-v3","version":"3.0"},
+      {"id":"policy:evidence-judge-applicability:v2","version":"2.0"},
+      {"id":"policy:evidence-judge-verdict-normalization:v2","version":"2.0"},
+      {"id":"policy:llm-judge:deterministic-execution-v2","version":"2.0"},
+      {"id":"policy:evidence:canonical-epistemic-classification-v2","version":"2.0"}
+    ],
+    "important_delta_since_prior_it_html": [
+      "EUG placement now requires exactly one ordering contract and a passing ordering quality gate.",
+      "Graph-presentation v3 additionally requires source-closure/rerender provenance: construction sources preserved, material-source hashes verified, source extracts/input observations retained, metric/derivation/graph-spec hashes bound, and rerender from preserved snapshot rather than mutable live refetch."
+    ]
+  },
+  "customer_avatar_contract": {
+    "neofort_contract_id": "contract:customer-avatar:it:2026-09-03-v3",
+    "neofort_profile_id": "profile:customer-avatar:it-category-primary:2026-09-03-v3",
+    "buyer_role_id": "buyer-role:it-category-primary",
+    "schema": "customer-avatar-v3-evidence-aware",
+    "primary_avatar": "Role-first IT production buyer",
+    "demographics_interests": {
+      "age": {"value": null, "status": "NOT_EVIDENCED"},
+      "gender": {"value": null, "status": "NOT_EVIDENCED"},
+      "marital_status": {"value": null, "status": "NOT_EVIDENCED"},
+      "children": {"value": null, "status": "NOT_EVIDENCED"},
+      "location": {"value": null, "status": "TO_RESEARCH_IF_CAMPAIGN_RELEVANT"},
+      "occupation_job_title": {"value": "CTO / Head of AI Platform / Head of Data / AI Security or trust decision-maker", "status": "MODELED_FROM_SITE_POSITIONING_AND_NEOFORT"},
+      "income_or_budget": {"value": null, "status": "NOT_EVIDENCED"},
+      "education_expertise": {"value": null, "status": "NOT_EVIDENCED"},
+      "representative_quote": {"value": "I need to know what can go to production, under which controls, and how I will defend that decision.", "status": "SYNTHESIZED_NOT_VERBATIM"},
+      "brands_or_influencers": {"value": null, "status": "TO_RESEARCH_FROM_AUTHORIZED_CUSTOMER_DATA"},
+      "information_sources": {"value": null, "status": "TO_RESEARCH_FROM_AUTHORIZED_CUSTOMER_DATA"},
+      "events_conferences": {"value": null, "status": "TO_RESEARCH_FROM_AUTHORIZED_CUSTOMER_DATA"}
+    },
+    "frustrations_fears": [
+      {"value":"uncontrolled agent authority and memory","status":"MODELED_FROM_DECISION_CONTEXT"},
+      {"value":"conflicting data and hidden lineage","status":"MODELED_FROM_DECISION_CONTEXT"},
+      {"value":"security as late-stage paperwork","status":"MODELED_FROM_SITE_OFFER_POSITIONING"},
+      {"value":"trust-by-assertion across organizational boundaries","status":"MODELED_FROM_DECISION_CONTEXT"}
+    ],
+    "wants_aspirations": [
+      {"value":"observable bounded runtime","status":"MODELED_FROM_SITE_OFFER_POSITIONING"},
+      {"value":"traceable data and reusable evidence","status":"MODELED_FROM_SITE_OFFER_POSITIONING"},
+      {"value":"explicit promotion and rollback gates","status":"MODELED_FROM_SITE_OFFER_POSITIONING"},
+      {"value":"selective independent verification where required","status":"MODELED_FROM_SITE_OFFER_POSITIONING"}
+    ],
+    "key_purchase_drivers": {
+      "must_have_features": ["existing-stack fit","acceptance criteria","evidence and ownership","maintainability and transfer"],
+      "service_expectations": ["bounded scope","transparent estimation","knowledge transfer"],
+      "quality_expectations": ["traceable acceptance evidence","explicit release and rollback conditions"],
+      "price_purchase_considerations": {"value":null,"status":"TO_RESEARCH_FROM_CRM_OR_SALES_DATA"},
+      "deal_killers": ["technology-first recommendation","opaque data or authority","unsupported ROI/security guarantee","unnecessary platform replacement"],
+      "common_objections": {"value":null,"status":"TO_RESEARCH_FROM_CRM_OR_SALES_DATA"},
+      "additional_stakeholders": {"value":null,"status":"TO_RESEARCH_FROM_BUYING_COMMITTEE_DATA"},
+      "decision_role": {"value":"DECISION_MAKER or ADVOCATE depending organization","allowed_roles":["DECISION_MAKER","ADVOCATE","CHAMPION"],"status":"MODELED_ROLE_FIRST"}
+    },
+    "before_after": {
+      "HAVE": {"before":"prototype + scattered controls","after":"bounded architecture + evidence","status":"MODELED_FROM_POSITIONING"},
+      "FEEL": {"before":"decision ambiguity","after":"defensible bounded go/no-go","status":"MODELED_NOT_CUSTOMER_VERBATIM"},
+      "AVERAGE_DAY": {"before":"reconciliation and approval chasing","after":"explicit review/release gates","status":"MODELED_NOT_OBSERVED"},
+      "STATUS": {"before":"fragile prototype owner","after":"accountable production-state owner","status":"MODELED_NOT_OBSERVED"},
+      "EVIL_GOOD": {"before":"trust by assertion / hidden authority","after":"bounded authority / replayable evidence","status":"NARRATIVE_MODEL_NOT_FACT"}
+    }
+  },
+  "recent_primary_evidence_loop": [
+    {
+      "eu_id": "EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "source": "https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+      "source_date": "2026-08-07; updated 2026-08-14",
+      "neofort_admission": "ADMITTED",
+      "factfulness": "PASS 100",
+      "supported_use": "four-stage context-specific TEVV method; agentic systems explicitly in scope",
+      "boundary": "draft methodology; does not prove this consulting offer or a business outcome"
+    },
+    {
+      "eu_id": "EU-SG-001",
+      "source": "https://www.ncsc.gov.uk/news/ncsc-statement-in-response-to-recent-incidents-resulting-from-frontier-ai-evaluations",
+      "source_date": "2026-08-04",
+      "neofort_admission": "ADMITTED",
+      "factfulness": "PASS 100",
+      "supported_use": "safeguards, real-time oversight and response planning from the outset",
+      "boundary": "no quantified incident-reduction, ROI or release-performance effect"
+    },
+    {
+      "eu_id": "EU-SG-004",
+      "source": "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai",
+      "source_date": "2026-08-20",
+      "neofort_admission": "ADMITTED",
+      "factfulness": "PASS 100",
+      "supported_use": "agent traces/transcripts and sandbox logs for active oversight and later investigation",
+      "boundary": "operational guidance; no quantified audit-success or response-time effect"
+    },
+    {
+      "eu_id": "EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026",
+      "source": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260828~fe9afc86e8.en.html",
+      "source_date": "2026-08-28",
+      "neofort_admission": "CANONICAL_FACTFULNESS_PASS",
+      "factfulness": "PASS 100",
+      "supported_use": "bounded programmability/coordination rationale across multi-institution repo lifecycle processes",
+      "boundary": "financial-market context; does not prove general blockchain superiority or consulting ROI"
+    }
+  ],
+  "copy_sequences": [
+    {
+      "sequence_id":"seq:it:hero:tevv-v3",
+      "section_id":"it-hero",
+      "target_xpath":"//*[@id='claim-eu-agentic-tevv']",
+      "buyer_question":"How do we turn this prototype into a production decision we can defend?",
+      "nlp_role":"problem-reframe + mechanism boundary",
+      "commercial_role":"qualify production-readiness decision",
+      "eu_id":"EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "xpath_expected_matches":1
+    },
+    {
+      "sequence_id":"seq:it:security:safeguards-v3",
+      "section_id":"it-hero",
+      "target_xpath":"//*[@id='claim-eu-sg-001']",
+      "buyer_question":"Which controls must exist before release rather than after an incident?",
+      "nlp_role":"risk-to-control translation",
+      "commercial_role":"support AI Security/Assurance lane",
+      "eu_id":"EU-SG-001",
+      "xpath_expected_matches":1
+    },
+    {
+      "sequence_id":"seq:it:security:observability-v3",
+      "section_id":"it-hero",
+      "target_xpath":"//*[@id='claim-eu-sg-004']",
+      "buyer_question":"What telemetry is needed to oversee and investigate agentic execution?",
+      "nlp_role":"mechanism explanation",
+      "commercial_role":"make observability requirement concrete",
+      "eu_id":"EU-SG-004",
+      "xpath_expected_matches":1
+    },
+    {
+      "sequence_id":"seq:it:avatar:primary-v3",
+      "section_id":"it-hero",
+      "target_xpath":"//*[@id='customer-avatar-it-primary']",
+      "buyer_question":"Is this page speaking to my production decision role?",
+      "nlp_role":"self-recognition + qualification",
+      "commercial_role":"route the correct buyer without inventing demographics",
+      "eu_id":null,
+      "xpath_expected_matches":1
+    }
+  ],
+  "github_skill_and_capability_proof": {
+    "site_capability_registry": [
+      "Python and data processing — earliest defensible date 2021, 5+ documented years",
+      "web/product engineering — 2022, 4+ documented years",
+      "LLM/RAG applications — 2023, 3+ documented years",
+      "agentic systems — 2024 exploratory / 2025 structured, 2+ documented years",
+      "data architecture/DDD/events — 2024, 2+ documented years"
+    ],
+    "public_projects_used_as_proof_atoms": [
+      "Lottery dApp — 26/29 commits attributed to RickOwri; substantial fork contribution, not original scaffold authorship",
+      "Tokenized Voting Backend — 4 public commits attributed to RickOwri; training implementation on scaffold",
+      "Folder Mapper — non-fork, 7/7 commits attributed to RickOwri; Rust + SQLite",
+      "Streamlit LangChain Prototype — non-fork, 7/7 commits attributed to RickOwri; Python + Streamlit + Docker + GitLab CI",
+      "AI/RAG Experiment Portfolio — 28 RickOwri commits; Python + RAG + Chroma + LlamaIndex + LangChain + Scrapy"
+    ]
+  },
+  "validation": {
+    "deterministic_preflight_for_selected_text_eus": "PASS_FOR_REQUIRED_FIELDS_ALREADY_ADMITTED_IN_NEOFORT",
+    "customer_avatar_evidence_hygiene": "PASS",
+    "scope_lock": "PASS",
+    "source_recency_for_new_external_loop": "PASS_WITHIN_2026-08-04_TO_2026-08-28_WINDOW",
+    "formal_three_replica_presentation_judge": "NOT_EXECUTED_BY_AVAILABLE_CONNECTOR",
+    "eug_v3_ordering_and_source_closure": "BLOCKED_PENDING_MATERIALIZATION_AND_RERENDER_VALIDATION",
+    "final_publication": "BLOCKED_FAIL_CLOSED",
+    "reason": "Current NeoFort EUG/presentation policies were updated after the prior IT HTML commit. Formal 3-replica judge execution and v3 ordering/source-closure rerender checks are not represented as completed, so FINAL_PASS must not be fabricated."
+  },
+  "recommended_html_patch": {
+    "visible_positioning_change": "NONE_REQUIRED; current page positioning and four-lane architecture are preserved losslessly",
+    "machine_contract_changes": [
+      "upgrade embedded customer-avatar schema from v2 to v3-evidence-aware",
+      "add quality_expectations, price_purchase_considerations, common_objections and additional_stakeholders with evidence statuses",
+      "mark frustrations/wants/before-after items as MODELED when not customer-observed",
+      "replace legacy page policy snapshot with this current NeoFort resolution",
+      "do not authorize existing EUGs for publication until ordering/source-closure/rerender gates pass"
+    ]
+  },
+  "google_drive": {
+    "operation_performed": false,
+    "reason": "Explicit user approval required before any Google Drive read/create/update/delete operation."
+  }
+}
