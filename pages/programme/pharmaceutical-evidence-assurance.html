@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>pharmaceutical-evidence-assurance.html</title>
+<meta name="description" content="Pharmaceutical AI Decision Assurance — evidence-grounded six-week consulting sprint for a bounded GxP AI workflow.">
+<style>
+:root {
+  --bg:#070a0d; --panel:#0d1217; --panel2:#111820; --text:#f3f7f8; --muted:#9aa8b2;
+  --line:#23303a; --accent:#7de2c5; --accent2:#8bb8ff; --warn:#ffd479; --bad:#ff9d9d;
+  --shadow:0 18px 60px rgba(0,0,0,.34); --radius:18px; --max:1160px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth;background:var(--bg)} body{margin:0;background:
+radial-gradient(circle at 85% 0%,rgba(125,226,197,.07),transparent 28rem),
+radial-gradient(circle at 10% 14%,rgba(139,184,255,.06),transparent 34rem),var(--bg);
+color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit} .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.sitebar{position:sticky;top:0;z-index:40;background:rgba(7,10,13,.91);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.sitebar .inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:760;letter-spacing:-.02em;text-decoration:none}
+.brandmark{width:28px;height:28px;border:1px solid var(--accent);border-radius:8px;display:grid;place-items:center;color:var(--accent);font-size:12px}
+.nav-rail{position:sticky;top:64px;z-index:35;background:rgba(7,10,13,.9);border-bottom:1px solid var(--line);overflow:auto}
+.nav-rail .wrap{display:flex;gap:18px;padding:11px 0;white-space:nowrap}
+.nav-rail a{font-size:12px;text-decoration:none;color:var(--muted)} .nav-rail a:hover,.nav-rail a:focus{color:var(--accent)}
+.hero{padding:84px 0 68px;border-bottom:1px solid var(--line)} .eyebrow,.section-tag{font:700 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.14em;color:var(--accent)}
+h1{font-size:clamp(42px,6vw,80px);line-height:.99;letter-spacing:-.055em;max-width:1000px;margin:14px 0 24px}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-.04em;margin:8px 0 18px;max-width:920px}
+h3{font-size:20px;line-height:1.2;letter-spacing:-.02em;margin:0 0 10px} h4{margin:12px 0 8px}
+.lead{font-size:clamp(18px,2.2vw,25px);max-width:920px;color:#d7e0e4} .muted{color:var(--muted)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:28px;align-items:end}
+.hero-note{border:1px solid var(--line);background:linear-gradient(180deg,rgba(125,226,197,.05),rgba(255,255,255,.015));border-radius:var(--radius);padding:20px}
+.hero-note strong{display:block;font-size:30px} .chips{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.chip{border:1px solid var(--line);border-radius:999px;padding:7px 10px;color:#c4d0d5;font-size:12px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px} .btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:0 17px;border-radius:11px;border:1px solid var(--line);text-decoration:none;font-weight:700}
+.btn.primary{background:var(--text);color:#0a0d10;border-color:var(--text)} .btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
+section[data-section-id]{padding:72px 0;border-bottom:1px solid var(--line);scroll-margin-top:110px}
+.section-head{display:grid;grid-template-columns:.34fr 1fr;gap:28px;margin-bottom:34px} .section-head p{margin-top:4px;color:var(--muted);max-width:720px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px} .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px} .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{border:1px solid var(--line);background:rgba(13,18,23,.74);border-radius:var(--radius);padding:22px;box-shadow:0 1px 0 rgba(255,255,255,.02) inset}
+.card p:last-child{margin-bottom:0} .kicker{font:700 11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent2);text-transform:uppercase;letter-spacing:.1em}
+.num{font:800 30px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:#5d6b75;margin-bottom:15px} .good{color:var(--accent)} .bad{color:var(--bad)} .warn{color:var(--warn)}
+.split-list{display:grid;grid-template-columns:1fr 1fr;gap:14px} ul.clean{list-style:none;padding:0;margin:0} ul.clean li{padding:9px 0;border-bottom:1px solid var(--line)} ul.clean li:last-child{border:0}
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:24px 0} .chain div{border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;background:var(--panel)} .chain b{display:block;color:var(--accent);font-size:12px;margin-bottom:6px}
+.matrix{display:grid;grid-template-columns:180px 1fr 1fr;border:1px solid var(--line);border-radius:16px;overflow:hidden} .matrix > div{padding:16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)} .matrix > div:nth-child(3n){border-right:0} .matrix .head{background:var(--panel2);font-weight:750;color:#dfe7ea}
+.metric-row{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center} .metric-row:last-child{border:0}
+.status-pill{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:5px 8px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--muted)}
+.evidence-trigger{border:0;background:transparent;color:var(--accent);font-weight:850;font-size:.7em;vertical-align:super;cursor:pointer;padding:0 2px;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+.ev-wrap{position:relative;display:inline} .ev-dot{display:none}
+.lp-evidence-bubble-scroll{position:absolute;z-index:90;left:0;top:1.45em;width:min(440px,calc(100vw - 34px));max-height:420px;overflow:auto;background:#0b1116;border:1px solid #3b4c58;border-radius:14px;padding:16px;box-shadow:var(--shadow);font-size:13px;color:#dfe7ea;text-align:left}
+.lp-evidence-bubble-scroll[hidden]{display:none} .ev-head{display:flex;justify-content:space-between;gap:12px;align-items:center} .ev-close{background:transparent;color:var(--muted);border:0;font-size:22px;cursor:pointer}
+.ev-status{font:700 10px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);margin-top:5px} .lp-evidence-bubble-scroll dl{display:grid;grid-template-columns:88px 1fr;gap:6px 10px} .lp-evidence-bubble-scroll dt{color:var(--muted)} .lp-evidence-bubble-scroll dd{margin:0} .lp-evidence-bubble-scroll a{color:var(--accent)}
+.eug{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(139,184,255,.035),rgba(13,18,23,.7));padding:20px;margin:28px 0}
+.eug-head{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;margin-bottom:18px} .eug h3{max-width:760px} .eug-meta{font:700 10px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent)}
+.chart{display:grid;gap:9px} .chart-row{display:grid;grid-template-columns:minmax(130px,1.3fr) 3fr;gap:14px;align-items:center} .chart-label{font-size:12px;color:#d5dee2}
+.barset{display:grid;gap:4px} .barline{display:grid;grid-template-columns:72px 1fr 54px;gap:7px;align-items:center;font-size:10px;color:var(--muted)}
+.track{height:9px;background:#151e25;border-radius:999px;overflow:hidden;border:1px solid #1f2a32} .bar{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent2),var(--accent))} .bar.alt{background:linear-gradient(90deg,#9da8ff,#e4a9ff)} .bar.third{background:linear-gradient(90deg,#ffd479,#ff9d9d)}
+.eug-note{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)} .eug-note a{color:var(--accent)}
+.audit-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0} .audit-stat{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--panel)} .audit-stat strong{font-size:28px;display:block} .audit-stat span{color:var(--muted);font-size:12px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px} .proof-card{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)} .proof-card small{color:var(--accent);font:700 10px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace}
+.timeline{display:grid;gap:0;border-left:1px solid var(--line);margin-left:11px} .step{position:relative;padding:0 0 26px 28px} .step::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)} .step p{color:var(--muted);margin-top:6px}
+.faq details{border-top:1px solid var(--line);padding:18px 0} .faq details:last-child{border-bottom:1px solid var(--line)} .faq summary{cursor:pointer;font-weight:750;list-style:none} .faq summary::-webkit-details-marker{display:none} .faq p{color:var(--muted);max-width:850px}
+.final-cta{text-align:center;padding:110px 0} .final-cta h2{margin-left:auto;margin-right:auto;max-width:800px} .final-cta p{max-width:720px;margin:0 auto;color:var(--muted)}
+footer{padding:36px 0 60px;color:var(--muted);font-size:12px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:850px){.hero-grid,.section-head,.grid-3,.grid-4,.proof-grid,.audit-strip{grid-template-columns:1fr} .grid-2,.split-list{grid-template-columns:1fr} .chain{grid-template-columns:1fr} .matrix{grid-template-columns:1fr} .matrix > div{border-right:0} .hero{padding-top:52px} .section-head{gap:8px}}
+@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))} .sitebar .inner{min-height:56px} .nav-rail{top:56px} .chart-row{grid-template-columns:1fr} .barline{grid-template-columns:64px 1fr 48px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="sitebar">
+ <div class="wrap inner">
+  <a class="brand" href="https://mickael-umt.com/"><span class="brandmark">MR</span><span>Mickael Rutembya · AI · Data · Verifiable R&D</span></a>
+  <span class="status-pill">Night mode · evidence-first build</span>
+ </div>
+</header>
+<nav class="nav-rail" aria-label="Page sections"><div class="wrap">
+ <a href="#triggers">Triggers</a><a href="#consequences">Consequences</a><a href="#for-whom">For whom</a><a href="#qualification">Qualification</a><a href="#proposition">Proposition</a><a href="#offers">Offers</a><a href="#deliverables">Deliverables</a><a href="#before-after">Before / after</a><a href="#outcomes">Outcomes</a><a href="#evidence">Evidence</a><a href="#scope">Scope</a><a href="#process">Process</a><a href="#modules">Modules</a><a href="#intersection">Intersection</a><a href="#commitments">Commitments</a><a href="#questions">Questions</a><a href="#engagement">Engagement</a>
+</div></nav>
+
+<main>
+<article class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">PEA · regulated programme · bounded 6-week sprint</div>
+   <h1>Make one pharmaceutical AI decision reconstructable before it becomes an inspection problem.</h1>
+   <p class="lead">For Quality, Pharmaceutical Operations and technical co-owners introducing AI into a bounded GxP workflow: preserve source provenance, explicit decision rights and accountable human judgement from evidence to release decision.</p>
+   <p class="muted" id="claim-eu-ht-ema-fda">EMA and FDA’s 2026 good-AI principles explicitly call for risk-based validation and oversight, traceable data provenance and analytical decisions, assessment of the complete system including human–AI interactions, and lifecycle monitoring.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU1" data-evidence-trigger="evidence-EU1">[1]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU1" role="dialog" aria-label="Evidence 1" hidden>
+      <div class="ev-head"><strong>EU-HT-EMA-FDA-GOOD-AI-2026</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 94/100</div>
+      <h4>EMA/FDA — Guiding principles of good AI practice in drug development</h4>
+      <p><b>Supported proposition.</b> The joint principles call for risk-based validation and oversight, documented and traceable data provenance, processing and analytical decisions, assessment of the complete system including human–AI interactions, and lifecycle monitoring and re-evaluation.</p>
+      <dl><dt>Source</dt><dd>European Medicines Agency / U.S. FDA</dd><dt>Period</dt><dd>January 2026; EMA page updated 14 August 2026</dd><dt>Population / scope</dt><dd>AI technologies used to generate or analyse evidence across the drug / medicines product lifecycle.</dd><dt>Boundary</dt><dd>Normative good-practice principles. They do not prove clinical effectiveness, inspection outcomes, or that every pharmaceutical AI use is high-risk.</dd></dl>
+      <a href="https://www.ema.europa.eu/en/documents/other/guiding-principles-good-ai-practice-drug-development_en.pdf" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p>
+   <div class="chips"><span class="chip">GMP / GxP</span><span class="chip">eQMS · LIMS · MES</span><span class="chip">Evidence lineage</span><span class="chip">IAM / least privilege</span><span class="chip">AI evaluation</span><span class="chip">Human review</span></div>
+   <div class="actions"><a class="btn primary" href="#engagement">Evaluate the mission</a><a class="btn secondary" href="#offers">See the bounded formats</a></div>
+  </div>
+  <aside class="hero-note">
+    <span class="kicker">Decision boundary</span>
+    <strong>1 workflow</strong>
+    <p>One product, one material decision path, or one operational event. Six weeks. Viability gate at the end of week 2.</p>
+    <p class="muted">Technical consulting and assurance only. The programme never certifies or releases a batch and never replaces the Qualified Person, Pharmacien Responsable or another statutory pharmaceutical authority.</p>
+  </aside>
+ </div>
+</article>
+
+<section id="triggers" data-section-id="triggers"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Triggers</span></div><div><h2>Start from a dated decision event, not a generic “AI transformation”.</h2><p>The sprint is justified when a named decision is becoming hard to defend because evidence, controls or ownership are fragmented.</p></div></div>
+ <div class="grid-4">
+  <div class="card"><div class="num">01</div><h3>Inspection announced</h3><p>The date is fixed; the organisation cannot yet show which evidence chain supports the decision under review.</p></div>
+  <div class="card"><div class="num">02</div><h3>Batch review repeatedly delayed</h3><p>Reviewers keep reconstructing missing context instead of evaluating bounded exceptions.</p></div>
+  <div class="card"><div class="num">03</div><h3>Recurring deviation / CAPA pattern</h3><p>Closure status exists, but the connection from intervention to expected observable effect is weak.</p></div>
+  <div class="card"><div class="num">04</div><h3>Technology transfer</h3><p>The process moves between sites or partners and prior decision rationale is not portable.</p></div>
+  <div class="card"><div class="num">05</div><h3>Launch readiness</h3><p>The first commercial or critical milestone approaches while the evidence path still depends on tacit knowledge.</p></div>
+  <div class="card"><div class="num">06</div><h3>MAH–CDMO boundary</h3><p>Execution is externalised while pharmaceutical accountability remains internal.</p></div>
+  <div class="card"><div class="num">07</div><h3>OOS / OOT recurrence</h3><p>Similar events are treated as isolated cases because classification and context differ across teams.</p></div>
+  <div class="card"><div class="num">08</div><h3>AI-assisted workflow promotion</h3><p>Sources, model versions, permissions, evaluations or human approval points are not yet reconstructable.</p></div>
+ </div>
+</div></section>
+
+<section id="consequences" data-section-id="consequences"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Consequences</span></div><div><h2>The risk is not “using AI”. It is losing the ability to show why a material decision was acceptable.</h2><p>Separate pharmaceutical authority from technical automation. Design the evidence path so a reviewer can see the source, transformation, control, model/tool state, exception and human judgement that produced the result.</p></div></div>
+ <div class="grid-2">
+  <div class="card"><span class="kicker">Fragmented evidence</span><h3>eQMS, LIMS, batch records, spreadsheets and CDMO portals disagree on what is authoritative.</h3><p>Deliverable: a product-centred evidence map naming the source of truth, owner, version and known gap for each material decision.</p></div>
+  <div class="card"><span class="kicker">Plausible AI output</span><h3>The model sounds convincing, but the system cannot show which input boundary, permission or tool state produced it.</h3><p id="claim-eu-ncsc-threat">NCSC’s 2026 agentic-AI guidance explicitly puts pre-deployment threat modelling around the prompt and the networks/services reachable by the configured agent.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU3" data-evidence-trigger="evidence-EU3">[3]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU3" role="dialog" aria-label="Evidence 3" hidden>
+      <div class="ev-head"><strong>EU-SG-003</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 97/100</div>
+      <h4>NCSC — Managing the cyber risk of agentic AI</h4>
+      <p><b>Supported proposition.</b> The guidance calls for threat modelling before deployment and explicitly names the prompt plus networks and services reachable through the configured environment.</p>
+      <dl><dt>Source</dt><dd>UK National Cyber Security Centre</dd><dt>Period</dt><dd>20 August 2026</dd><dt>Population / scope</dt><dd>Agentic-AI system designers and operators.</dd><dt>Boundary</dt><dd>Operational security guidance; it does not quantify incident reduction from threat modelling.</dd></dl>
+      <a href="https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p></div>
+  <div class="card"><span class="kicker">Late reconstruction</span><h3>Evidence is assembled after the question is asked.</h3><p id="claim-eu-ncsc-logs">NCSC separately identifies agent traces/transcripts and wider sandbox logs as telemetry for active oversight and later investigation.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU4" data-evidence-trigger="evidence-EU4">[4]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU4" role="dialog" aria-label="Evidence 4" hidden>
+      <div class="ev-head"><strong>EU-SG-004</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 97/100</div>
+      <h4>NCSC — Agentic AI observability guidance</h4>
+      <p><b>Supported proposition.</b> The guidance names agent traces or transcripts and wider sandbox logs as telemetry classes, links them to active oversight and later investigation, and recommends protected logs.</p>
+      <dl><dt>Source</dt><dd>UK National Cyber Security Centre</dd><dt>Period</dt><dd>20 August 2026</dd><dt>Population / scope</dt><dd>Operating agentic-AI systems.</dd><dt>Boundary</dt><dd>Operational guidance, not a quantified audit-success or response-time effect.</dd></dl>
+      <a href="https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p></div>
+  <div class="card"><span class="kicker">Unbounded privilege</span><h3>A workflow can call more systems than the task actually needs.</h3><p id="claim-eu-ncsc-isolation">The same guidance gives a four-level network-isolation model, from unrestricted access to no external network access with local model hosting.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU5" data-evidence-trigger="evidence-EU5">[5]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU5" role="dialog" aria-label="Evidence 5" hidden>
+      <div class="ev-head"><strong>EU-SG-007</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 96/100</div>
+      <h4>NCSC — Agent network-isolation maturity model</h4>
+      <p><b>Supported proposition.</b> The guidance describes four network-isolation levels, from unrestricted access to no external network access with local model hosting.</p>
+      <dl><dt>Source</dt><dd>UK National Cyber Security Centre</dd><dt>Period</dt><dd>20 August 2026</dd><dt>Population / scope</dt><dd>Agentic-AI network sandboxing configurations described by NCSC.</dd><dt>Boundary</dt><dd>A maturity-model structure, not a quantified security-effect curve.</dd></dl>
+      <a href="https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p></div>
+ </div>
+ <figure class="eug" id="eug-framing-gap" data-eug-key="framing" aria-labelledby="eug-framing-title"></figure>
+</div></section>
+
+<section id="for-whom" data-section-id="for-whom"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">For whom</span></div><div><h2>A decision unit, not a fictional single buyer.</h2><p>The primary avatar is the Quality / CSV authority who must defend the decision. The technical co-owner makes the evidence executable; operations owns the workflow; adoption roles make the control durable.</p></div></div>
+ <div class="grid-3">
+  <div class="card"><span class="kicker">Primary authority</span><h3>Quality Director / CSV lead / QP-facing quality role</h3><p>Needs a bounded risk argument, named source owners, review criteria, residual-risk language and a defensible hand-off to statutory authority.</p></div>
+  <div class="card"><span class="kicker">Technical co-owner</span><h3>CTO / Enterprise Architecture / Data Platform</h3><p>Needs implementable boundaries: services, IAM, logs, data contracts, evaluation gates, observability and rollback.</p></div>
+  <div class="card"><span class="kicker">Workflow owner</span><h3>Pharmaceutical Operations / CMC / site quality</h3><p>Needs fewer context-reconstruction loops without transferring the final pharmaceutical decision to a model.</p></div>
+ </div>
+</div></section>
+
+<section id="qualification" data-section-id="qualification"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Qualification</span></div><div><h2>Decide fit before you share a single regulated record.</h2><p>A twenty-minute “no” is cheaper than a quarter spent forcing the wrong engagement.</p></div></div>
+ <div class="split-list">
+  <div class="card"><h3 class="good">Good fit</h3><ul class="clean"><li>A real production, audit, transfer, launch or replacement decision is in scope.</li><li>A named sponsor can arbitrate scope and acceptance.</li><li>Required systems or documents can be accessed under NDA.</li><li>AI touches a GxP workflow and the validation / assurance boundary is still open.</li><li>Quality can review deliverables during the sprint, not only at the end.</li></ul></div>
+  <div class="card"><h3 class="bad">No fit</h3><ul class="clean"><li>You want a trend report or generic AI workshop.</li><li>You need a statutory signature or batch-release decision from the consultant.</li><li>No evidence access or internal owner can be named.</li><li>You expect a guaranteed inspection outcome.</li><li>You want SOP templates without examining the decision process that they control.</li></ul></div>
+ </div>
+</div></section>
+
+<section id="proposition" data-section-id="proposition"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Proposition</span></div><div><h2>Make the evidence-to-decision chain explicit before selecting the AI mechanism.</h2><p>Source → Transformation → Control → Judgement → Decision. Each link gets an owner, a version boundary, an acceptance rule and an escalation path.</p></div></div>
+ <div class="chain"><div><b>01</b>Source</div><div><b>02</b>Transformation</div><div><b>03</b>Control</div><div><b>04</b>Judgement</div><div><b>05</b>Decision</div></div>
+ <div class="grid-2">
+  <div class="card"><h3>Pharmaceutical risk stays pharmaceutical.</h3><p>AI does not become an authority because it is accurate on a benchmark. Its function is bounded to collection, extraction, comparison, detection or synthesis; the human decision right remains explicit.</p></div>
+  <div class="card"><h3>Risk management stays iterative.</h3><p id="claim-eu-nist-rmf">NIST AI RMF organises AI risk work into Govern, Map, Measure and Manage, and explicitly says these functions are not a linear checklist.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU6" data-evidence-trigger="evidence-EU6">[6]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU6" role="dialog" aria-label="Evidence 6" hidden>
+      <div class="ev-head"><strong>EU-AGENTIC-NIST-AIRMF-4-FUNCTIONS</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 97/100</div>
+      <h4>NIST AI RMF 1.0</h4>
+      <p><b>Supported proposition.</b> NIST AI RMF organises AI risk management into four functions — Govern, Map, Measure and Manage — and states that they are not an ordered checklist.</p>
+      <dl><dt>Source</dt><dd>U.S. National Institute of Standards and Technology</dd><dt>Period</dt><dd>Published 26 January 2023; current at 3 September 2026 retrieval</dd><dt>Population / scope</dt><dd>NIST AI RMF 1.0 Core.</dd><dt>Boundary</dt><dd>Voluntary cross-sector guidance; it does not prescribe this consulting engagement or prove business outcomes.</dd></dl>
+      <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p></div>
+ </div>
+ <p class="muted" id="claim-eu-ai-act">Where EU AI Act classification is relevant, the European Commission’s current overview distinguishes four risk levels; requirements such as logging and human oversight are specifically linked to high-risk systems, not every AI use.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU2" data-evidence-trigger="evidence-EU2">[2]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU2" role="dialog" aria-label="Evidence 2" hidden>
+      <div class="ev-head"><strong>EU-SG-005</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 98/100</div>
+      <h4>European Commission — AI Act overview</h4>
+      <p><b>Supported proposition.</b> The Commission overview distinguishes four AI risk levels and lists logging, human oversight, robustness and cybersecurity among requirements for high-risk systems.</p>
+      <dl><dt>Source</dt><dd>European Commission</dd><dt>Period</dt><dd>Retrieved 3 September 2026</dd><dt>Population / scope</dt><dd>AI systems classified under the EU AI Act; the requirements clause is limited to high-risk systems.</dd><dt>Boundary</dt><dd>Risk taxonomy only. Legal obligations depend on classification, sectoral law and transition rules; this page is not legal advice.</dd></dl>
+      <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p>
+</div></section>
+
+<section id="offers" data-section-id="offers"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Offers</span></div><div><h2>Buy the mechanism that matches the immediate threat.</h2><p>Start with one controlled workflow. Expand only after the decision architecture and acceptance evidence survive review.</p></div></div>
+ <div class="grid-3">
+  <div class="card"><div class="num">01</div><span class="kicker">Recommended entry</span><h3>Defend the decision</h3><p>Map one high-risk workflow from authoritative evidence to accountable human decision. Identify provenance breaks, undocumented transformations, ambiguous responsibilities and weak escalation thresholds.</p><p><b>Buyer:</b> Quality, QP-facing role, CMC, Pharmaceutical Operations.</p></div>
+  <div class="card"><div class="num">02</div><h3>Control the AI system in production</h3><p>Review APIs, agent/tool permissions, IAM, governed memory, evaluation harnesses, logs, CI/CD promotion gates and rollback conditions against the selected pharmaceutical risk boundary.</p><p><b>Buyer:</b> CTO / platform / AI governance + Quality.</p></div>
+  <div class="card"><div class="num">03</div><h3>Transfer operational control</h3><p>Turn the accepted workflow into role-specific instructions, review criteria, examples, escalation rules and measurable 30/60/90-day transfer checks.</p><p><b>Buyer:</b> Transformation / L&D / Operations + Quality.</p></div>
+ </div>
+</div></section>
+
+<section id="deliverables" data-section-id="deliverables"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Deliverables</span></div><div><h2>Leave with control surfaces, not a slide deck.</h2><p>The output is designed to remain usable after the consultant leaves: evidence maps, decision rights, test contracts, technical controls and a bounded transition plan.</p></div></div>
+ <div class="grid-4">
+  <div class="card"><span class="kicker">01</span><h3>Decision architecture</h3><p>Risk boundary, named decision owners, escalation rights and acceptance criteria.</p></div>
+  <div class="card"><span class="kicker">02</span><h3>Evidence architecture</h3><p>Source-of-truth map, transformation lineage, known gaps and record-retention boundary.</p></div>
+  <div class="card"><span class="kicker">03</span><h3>AI / data control architecture</h3><p>Source permissions, model/tool versions, logs, tests, rollback, and human review points.</p></div>
+  <div class="card"><span class="kicker">04</span><h3>Transfer package</h3><p>Role instructions, example decision dossiers, 30/60/90-day controls and change-management ownership.</p></div>
+ </div>
+ <p class="muted" id="claim-eu-toolmin">For tool-using agents, minimisation can be implemented as a technical control rather than a policy slogan: one 2026 study reported a 79.0% reduction in its study-specific privacy-cost metric across 25 unannotated MCP schemas after schema-aware argument minimisation.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU9" data-evidence-trigger="evidence-EU9">[9]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU9" role="dialog" aria-label="Evidence 9" hidden>
+      <div class="ev-head"><strong>EU-AISEC-RUN-22</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 95/100</div>
+      <h4>ToolMinimize: Auditing and Rewriting LLM Agent Tool Calls to Minimize Privacy Exposure</h4>
+      <p><b>Supported proposition.</b> Across 25 unannotated MCP schemas, the paper reports a 79.0% reduction in its study-specific privacy-cost metric after schema-aware argument minimisation.</p>
+      <dl><dt>Source</dt><dd>Open-methods research preprint on arXiv</dd><dt>Period</dt><dd>25 August 2026</dd><dt>Population / scope</dt><dd>25 unannotated MCP schemas evaluated in the paper.</dd><dt>Boundary</dt><dd>Study-specific privacy-cost metric; not a universal privacy-risk, incident-rate or business-outcome reduction.</dd></dl>
+      <a href="https://arxiv.org/abs/2608.24957" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p>
+ <figure class="eug" id="eug-toolmin" data-eug-key="toolmin" aria-labelledby="eug-toolmin-title"></figure>
+</div></section>
+
+<section id="before-after" data-section-id="before-after"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Before / after</span></div><div><h2>Move the organisation from document accumulation to bounded decision reconstruction.</h2><p>No “100% auditable” promise. The target is narrower: for the selected workflow, a reviewer can identify what evidence was used, what changed it, what control ran, who judged it and what uncertainty remained.</p></div></div>
+ <div class="matrix">
+  <div class="head">Axis</div><div class="head">Today</div><div class="head">After the mandate</div>
+  <div>Evidence</div><div>Distributed across eQMS, LIMS, MES, batch records, portals, spreadsheets and messages.</div><div>Named authoritative sources, versions, owners and declared gaps per material decision.</div>
+  <div>Review</div><div>Context is reconstructed repeatedly.</div><div>Review starts from a bounded decision dossier and focuses on exceptions.</div>
+  <div>AI</div><div>Model/tool behaviour is evaluated abstractly.</div><div>Evaluation is attached to the actual workflow, authority boundary and failure classes.</div>
+  <div>Responsibility</div><div>Quality absorbs ambiguity late.</div><div>Decision rights and residual-risk acceptance are explicit earlier in the process.</div>
+ </div>
+</div></section>
+
+<section id="outcomes" data-section-id="outcomes"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Outcomes</span></div><div><h2>Use acceptance criteria, not invented client ROI.</h2><p>No client inspection outcome, time saving or batch-review reduction is asserted here unless measured on that mandate. The contract can, however, define what must exist and be testable at hand-off.</p></div></div>
+ <div class="card">
+  <div class="metric-row"><b>Risk → requirement traceability</b><span class="status-pill">Acceptance criterion</span><span>Every selected validation requirement links to a named product / process risk.</span></div>
+  <div class="metric-row"><b>Decision rights</b><span class="status-pill">Acceptance criterion</span><span>Owner, reviewer, escalation threshold and final authority are documented.</span></div>
+  <div class="metric-row"><b>Evidence reconstruction</b><span class="status-pill">Acceptance criterion</span><span>A representative decision can be replayed from its authorised source set.</span></div>
+  <div class="metric-row"><b>AI test contract</b><span class="status-pill">Acceptance criterion</span><span>Failure classes, pass/fail thresholds and human-review points are explicit before promotion.</span></div>
+ </div>
+ <p class="muted" id="claim-eu-nist-tevv">NIST’s 2026 TEVV-Athlon draft also treats evaluation as context-specific and describes a four-stage method for developing assessments, explicitly including agentic systems.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU7" data-evidence-trigger="evidence-EU7">[7]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU7" role="dialog" aria-label="Evidence 7" hidden>
+      <div class="ev-head"><strong>EU-AGENTIC-NIST-TEVV-4-STAGES-2026</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 96/100</div>
+      <h4>NIST TEVV-Athlon initial public draft</h4>
+      <p><b>Supported proposition.</b> NIST’s 2026 TEVV-Athlon draft describes a four-stage method for developing context-specific AI assessments and explicitly includes agentic systems in scope.</p>
+      <dl><dt>Source</dt><dd>U.S. National Institute of Standards and Technology</dd><dt>Period</dt><dd>Announced 7 August 2026; updated 14 August 2026</dd><dt>Population / scope</dt><dd>NIST TEVV-Athlon initial public draft framework.</dd><dt>Boundary</dt><dd>Official draft methodology; it does not prescribe this offer or prove a business outcome.</dd></dl>
+      <a href="https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p>
+</div></section>
+
+<section id="evidence" data-section-id="evidence"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Evidence</span></div><div><h2>Proof proportional to the promise — and publication blocked when the gate is incomplete.</h2><p>This build uses current NeoFort policy resolution, deterministic preflight, Factfulness, agent-exploitability and presentation status. Candidate evidence remains visible only in the audit metadata, never promoted as a fact in Level-1 copy.</p></div></div>
+ <div class="audit-strip">
+  <div class="audit-stat"><strong>80</strong><span>candidate-pool design: 31 existing + 49 newly considered in the referenced AI-security research run</span></div>
+  <div class="audit-stat"><strong>30</strong><span>target shortlist for this page: 29 run-selected candidates + 1 pharma-lifecycle regulator anchor</span></div>
+  <div class="audit-stat"><strong>10</strong><span>EvidenceUnits actually exposed in copy after current hard-gate checks</span></div>
+  <div class="audit-stat"><strong>4</strong><span>graph EvidenceUnits with Factfulness + graph quality + 3/3 presentation-judge PASS</span></div>
+ </div>
+ <div class="proof-grid">
+   <div class="proof-card"><small>PUBLIC PROFESSIONAL RECORD · BOUNDED</small><h3>Pharmacy operations · 2015–2023</h3><p>Preparation, dispensing, advice and prescription analysis under regulatory constraints. This supports regulated operational context; it does not prove CSV signatory responsibility or inspection outcomes.</p><a href="https://mickael-umt.com/parcours/pharmacy-operations/" target="_blank" rel="noopener">Open record ↗</a></div>
+   <div class="proof-card"><small>PUBLIC PROFESSIONAL RECORD · BOUNDED</small><h3>University hospital radiopharmacy · 2018–2019</h3><p>Radiochromatographic analysis and quality-control work within a hospital compliance framework. This supports quality-control experience, not consulting outcomes.</p><a href="https://mickael-umt.com/parcours/strasbourg-radiopharmacy/" target="_blank" rel="noopener">Open record ↗</a></div>
+   <div class="proof-card"><small>PUBLIC OFFER RECORD</small><h3>Regulatory Technology & CSV Engineering</h3><p>The current public offer binds pharmaceutical risk to validation requirements, acceptance tests, controlled sources/versions and audit-ready evidence.</p><a href="https://mickael-umt.com/expertises/reg-csv/" target="_blank" rel="noopener">Open offer ↗</a></div>
+ </div>
+ <div class="card" style="margin-top:14px"><h3>Selected source register</h3>
+  <ol>
+   <li>EMA/FDA, <i>Guiding principles of good AI practice in drug development</i>, January 2026.</li>
+   <li>European Commission, AI Act regulatory-framework overview, current retrieval 2026-09-03.</li>
+   <li>NCSC, <i>Managing the cyber risk of agentic AI</i>, 20 August 2026 — threat modelling.</li>
+   <li>NCSC, same guidance — observability / protected logging.</li>
+   <li>NCSC, same guidance — network-isolation maturity model.</li>
+   <li>NIST AI RMF 1.0 — Govern / Map / Measure / Manage.</li>
+   <li>NIST TEVV-Athlon initial public draft, August 2026.</li>
+   <li>Bounded Agents, arXiv:2608.15888.</li>
+   <li>ToolMinimize, arXiv:2608.24957.</li>
+   <li>User-authored permission policies, arXiv:2608.27443.</li>
+  </ol>
+ </div>
+</div></section>
+
+<section id="scope" data-section-id="scope"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Scope</span></div><div><h2>One decision boundary. Explicit exclusions.</h2><p>Engineering of evidence, structured analysis and technical support to the accountable pharmaceutical organisation — never delegated statutory authority.</p></div></div>
+ <div class="split-list">
+  <div class="card"><h3 class="good">In scope</h3><ul class="clean"><li>One product, site, MAH–CDMO relation, transfer programme, inspection perimeter or critical quality process.</li><li>Evidence lineage and source-of-truth designation.</li><li>AI/data permissions, logs, evaluation and rollback requirements.</li><li>Decision dossier, exception handling and transfer controls.</li></ul></div>
+  <div class="card"><h3 class="bad">Out of scope</h3><ul class="clean"><li>Batch certification or release.</li><li>Replacing the QP, Pharmacien Responsable, QA, QC, CMC, Regulatory Affairs or Pharmacovigilance.</li><li>Legal advice or guaranteed regulatory approval.</li><li>Guaranteed inspection outcome or absence of future deviation.</li><li>Autonomous pharmaceutical decision-making.</li></ul></div>
+ </div>
+</div></section>
+
+<section id="process" data-section-id="process"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Process</span></div><div><h2>Six weeks, with a stop point before implementation.</h2><p>If the decision boundary, evidence access or governance cannot support a defensible architecture by the end of week 2, stop rather than force the build.</p></div></div>
+ <div class="timeline">
+  <div class="step"><h3>Before · written qualification</h3><p>Product/workflow, trigger, decision, accountable roles, evidence systems, confidentiality constraints and intended AI use.</p></div>
+  <div class="step"><h3>Week 1 · decision and risk perimeter</h3><p>Included/excluded systems, access conditions, data classification, owners, deadlines, assumptions and acceptance criteria.</p></div>
+  <div class="step"><h3>Week 2 · evidence and responsibility map</h3><p>Requirement → control → evidence → decision owner. Viability gate before implementation.</p></div>
+  <div class="step"><h3>Week 3 · AI/data architecture and permissions</h3><p>Authorised sources, tool and network reach, retention, logs, validation points and escalation paths.</p></div>
+  <div class="step"><h3>Week 4 · evaluation and decision dossier</h3><p>Test scenarios, failure classes, acceptance thresholds, human review, exception handling and residual-risk language.</p></div>
+  <div class="step"><h3>Week 5 · controlled implementation / prototype</h3><p>Instrument the selected evidence workflow and generate proof from execution, not from a retrospective note.</p></div>
+  <div class="step"><h3>Week 6 · executive review + transfer</h3><p>Separate confirmed fact, observation, hypothesis, unresolved evidence gap, accepted residual risk and management decision.</p></div>
+ </div>
+</div></section>
+
+<section id="modules" data-section-id="modules"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Modules</span></div><div><h2>Use the minimum control mechanism that closes the decision gap.</h2><p>Modules can be removed from scope when the client already controls them. The architecture is not a pretext to sell every technical capability.</p></div></div>
+ <div class="grid-2">
+  <div class="card"><h3>Evidence integrity & source lineage</h3><p>Authoritative systems, version boundaries, inaccessible/contradictory evidence, transformations and reviewer trace.</p></div>
+  <div class="card"><h3>Product-centred risk governance</h3><p>Connect gaps to patient, product, batch, submission, supply and inspection consequences without inventing probabilities.</p></div>
+  <div class="card"><h3>AI controls, data and permissions</h3><p id="claim-eu-bounded">Externalised authorisation is a concrete control pattern, not a marketing abstraction: in one 2026 compromised-model benchmark, the reported AgentDojo exfiltration rows dropped from 75–100% without defence to 0% with the external APC authorisation layer.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU8" data-evidence-trigger="evidence-EU8">[8]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU8" role="dialog" aria-label="Evidence 8" hidden>
+      <div class="ev-head"><strong>EU-CANON-BOUNDED-AGENTS-EXFIL-2026</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 96/100</div>
+      <h4>Bounded Agents: Delegation Security for Multi-Agent AI Systems</h4>
+      <p><b>Supported proposition.</b> In the paper’s compromised-model evaluation, external authorisation reduced observed AgentDojo exfiltration to 0% across every reported exfiltration category; the paper also reports all 544 evaluated InjecAgent data-stealing cases blocked.</p>
+      <dl><dt>Source</dt><dd>Open research preprint on arXiv</dd><dt>Period</dt><dd>Submitted 16 August 2026</dd><dt>Population / scope</dt><dd>3,154 evaluation instances overall; cited result covers four AgentDojo domains and 544 InjecAgent data-stealing cases.</dd><dt>Boundary</dt><dd>Benchmark-protocol result. It does not establish universal prevention of prompt injection or security across arbitrary production systems.</dd></dl>
+      <a href="https://arxiv.org/abs/2608.15888" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p></div>
+  <div class="card"><h3>Evaluation & human validation</h3><p>Failure taxonomy, test scenarios, quality thresholds, review queues, escalation conditions and promotion blockers.</p></div>
+ </div>
+ <figure class="eug" id="eug-bounded-exfil" data-eug-key="bounded" aria-labelledby="eug-bounded-title"></figure>
+</div></section>
+
+<section id="intersection" data-section-id="intersection"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Intersection</span></div><div><h2>The differentiator is the seam between pharmaceutical judgement and information architecture.</h2><p>Regulated operations define what must remain defensible. Data and AI engineering define how the evidence, permissions, versions and tests can remain inspectable. Neither discipline should silently substitute for the other.</p></div></div>
+ <div class="grid-3">
+  <div class="card"><h3>Regulated pharmaceutical operations</h3><p>Community pharmacy 2015–2023 plus hospital radiopharmacy quality-control experience in 2018–2019, represented as bounded public professional evidence.</p></div>
+  <div class="card"><h3>AI & data engineering</h3><p>Python, SQL, service architecture, evidence stores, IAM/RBAC, evaluation harnesses and observable workflows.</p></div>
+  <div class="card"><h3>Assurance & verifiability</h3><p>Risk-to-requirement mapping, explicit source boundaries, protected logs, deterministic checks and reviewable promotion gates.</p></div>
+ </div>
+</div></section>
+
+<section id="commitments" data-section-id="commitments"><div class="wrap">
+ <div class="section-head"><div><span class="section-tag">Commitments</span></div><div><h2>Guarantee the work product and the stop condition — never an authority’s decision.</h2><p>By the end of week 2, the minimum preparation package is either reviewable or the implementation phase does not proceed.</p></div></div>
+ <div class="grid-2">
+  <div class="card"><h3>Guaranteed preparation gate</h3><p>Written decision perimeter, evidence/source map, material-gap register, responsibility matrix and viability recommendation — conditional on the agreed inputs being provided.</p></div>
+  <div class="card"><h3>Explicit non-guarantees</h3><p>No regulatory approval, inspection result, batch certification/release, future-deviation absence, or decision controlled by a regulator, CDMO, supplier or client statutory role.</p></div>
+ </div>
+ <p class="muted" id="claim-eu-permission">Human approval is necessary in many workflows, but “ask a human” is not by itself a complete control: in one controlled 2026 study, 133 of 148 executed overreach actions in the POLICY condition followed affirmative human approval.<span class="ev-wrap"><button class="evidence-trigger" type="button" aria-expanded="false" aria-controls="evidence-EU10" data-evidence-trigger="evidence-EU10">[10]</button><span class="ev-dot" aria-hidden="true"></span><div class="lp-evidence-bubble-scroll" id="evidence-EU10" role="dialog" aria-label="Evidence 10" hidden>
+      <div class="ev-head"><strong>EU-AISEC-RUN-34</strong><button class="ev-close" type="button" aria-label="Close evidence">×</button></div>
+      <div class="ev-status">ADMITTED · FACTFULNESS PASS · AGENT-EXPLOITABLE · champion 94/100</div>
+      <h4>Do User-Authored Permission Policies Improve Protection Against AI Agent Overreach?</h4>
+      <p><b>Supported proposition.</b> In the POLICY condition, 133 of 148 executed overreach actions followed affirmative human approval — 89.9%.</p>
+      <dl><dt>Source</dt><dd>Open-methods research preprint on arXiv</dd><dt>Period</dt><dd>27 August 2026</dd><dt>Population / scope</dt><dd>245 POLICY-condition overreach actions generated by 35 participants in an 18-action simulated-day study.</dd><dt>Boundary</dt><dd>Controlled user study. This does not estimate production incident rates or show that human review is generally unsafe.</dd></dl>
+      <a href="https://arxiv.org/abs/2608.27443" target="_blank" rel="noopener noreferrer">Open primary source ↗</a>
+    </div></span></p>
+ <figure class="eug" id="eug-permission-overreach" data-eug-key="permission" aria-labelledby="eug-permission-title"></figure>
+</div></section>
+
+<section id="questions" data-section-id="questions"><div class="wrap faq">
+ <div class="section-head"><div><span class="section-tag">Questions</span></div><div><h2>Resolve the objections before confidential evidence moves.</h2><p>Cost, governance, validation burden, black-box concerns, CDMO boundaries, confidentiality and statutory accountability should be explicit at qualification.</p></div></div>
+ <details open><summary>Why not give this to our Quality or Data team?</summary><p>The programme is useful only where the seam is the problem: Quality owns pharmaceutical acceptability; engineering owns system behaviour. The engagement creates a shared decision and evidence contract, then hands it back to both teams.</p></details>
+ <details><summary>Will governance slow innovation?</summary><p>Governance is not treated as a late approval layer. The work defines the authorised source, action, permission and evidence boundaries before implementation, so the team knows what can move quickly and what must stop for review.</p></details>
+ <details><summary>Can ChatGPT or another LLM be the system?</summary><p>No general-purpose model is assumed to be a qualified production system. The model is one component inside an architecture with source boundaries, permissions, logging, evaluation and accountable review.</p></details>
+ <details><summary>How do you defend a black-box model?</summary><p>You do not convert a model into a statutory authority. You defend the bounded use: authorised inputs, validated workflow, observed failure modes, protected logs, reviewer criteria and the human decision that remains accountable.</p></details>
+ <details><summary>Can the service work with our existing QMS and data platform?</summary><p>Yes, if the existing systems can expose the required evidence under controlled access. The default is integration with designated sources of truth, not wholesale replacement.</p></details>
+ <details><summary>How are confidential data protected?</summary><p id="claim-eu-minimisation">The engagement uses explicit source scope, data minimisation, least privilege and controlled disclosure. For the bounded research example on schema-aware minimisation, see <a href="#claim-eu-toolmin">evidence [9] in Deliverables</a>; it remains a study-specific metric, not a universal privacy guarantee.</p></details>
+</div></section>
+
+<section id="engagement" data-section-id="engagement"><div class="wrap final-cta">
+ <span class="section-tag">Engagement</span><h2>Start with the decision — not a sales call.</h2>
+ <p>Send a short brief containing the product or workflow, decision to be made, trigger, deadline, accountable pharmaceutical role, systems containing the evidence, intended AI use, and the cost of leaving the decision unresolved. Do not send batch records, deviation details or patient data at qualification.</p>
+ <div class="actions" style="justify-content:center"><a class="btn primary" href="https://mickael-umt.com/contact/">Evaluate the mission</a><a class="btn secondary" href="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/">Open current live page</a></div>
+ <p class="muted" style="margin-top:24px">Cross-sector engineering controls are used only as controls: NCSC, NIST and open research do not substitute for GxP, pharmaceutical law, company quality systems or statutory authority.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <p>Pharmaceutical AI Decision Assurance · evidence-grounded copy build · 2026-09-03.</p>
+ <p>Research-loop audit: NeoFort research run <code>research:ai-security:2026-09-03</code> requested an 80-candidate pool (31 existing + 49 new). This target-page build forms a 30-candidate shortlist by combining the run’s 29 selected candidates with the admitted pharmaceutical-lifecycle regulator anchor. Only current evidence that passes the applicable publication gates is exposed as Level-1 copy. Candidate-only evidence is not used to support a public factual claim.</p>
+</div></footer>
+
+<script id="qgeu-data" type="application/json">{"framing":{"id":"QGEU-AISEC-FRAMING-GAP-2026","title":"Model recognition is wording-sensitive in one controlled exfiltration lab","subtitle":"Fixed J0–J7 wordings; 20 matched trials per cell","source_title":"The Framing Gap","url":"https://arxiv.org/abs/2608.27092","status":"APPROVED · 3/3 REPLICA PASS · PRESENTATION 95/100","boundary":"Safe synthetic laboratory; descriptive fixed-wording rates. The graph does not estimate a universal production attack rate.","series":["gpt-4o","gpt-4o-mini"],"data":[["J0 baseline",0,0],["J1 auth-field",0,85],["J2 lookalike-host",40,100],["J3 schema-required",0,50],["J4 integrity-sig",100,100],["J5 subdomain-trust",70,100],["J6 piggyback-legit",10,65],["J7 config-block",100,0]],"unit":"% attack success rate"},"toolmin":{"id":"QGEU-AISEC-TOOLMIN-PCS-2026","title":"Tool-call privacy cost before vs after schema-aware minimisation","subtitle":"307 live tool calls; PCS is the paper’s study-specific metric","source_title":"ToolMinimize","url":"https://arxiv.org/abs/2608.24957","status":"APPROVED · 3/3 REPLICA PASS · PRESENTATION 95/100","boundary":"Paper-specific privacy-cost score. It is not a universal privacy-risk or end-to-end task-outcome metric.","series":["Before","After"],"data":[["GPT-4o",3.95,0.4],["Claude Sonnet",5.2,0.42],["Llama-3.3-70B",3.05,0.57],["Average",4.1,0.46]],"unit":"study-specific PCS","max":5.5},"permission":{"id":"QGEU-AISEC-PERMISSION-OVERREACH-2026","title":"Runtime approval of the same seven overreach actions","subtitle":"113-participant simulated-day study; POLICY prompts only ask-routed actions","source_title":"User-authored permission policies study","url":"https://arxiv.org/abs/2608.27443","status":"APPROVED · 3/3 REPLICA PASS · PRESENTATION 94/100","boundary":"Controlled user study with differing denominators under POLICY. Descriptive only; not a production incident-risk estimate.","series":["HITL","AUTO","POLICY"],"data":[["Confirm flight",88.2,84.1,100.0],["Add travel insurance",35.3,50.0,61.3],["Delete old timesheet",35.3,36.4,58.6],["Read bank transactions",35.3,40.9,65.2],["Post travel publicly",20.6,29.5,48.4],["Buy lounge pass",32.4,38.6,61.3],["Read private messages",35.3,43.2,73.9]],"unit":"% runtime prompts approved"},"bounded":{"id":"QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026","title":"External authorisation in the paper’s compromised-model exfiltration test","subtitle":"Five reported exfiltration categories across four AgentDojo suites","source_title":"Bounded Agents","url":"https://arxiv.org/abs/2608.15888","status":"APPROVED · 3/3 REPLICA PASS · PRESENTATION 96/100","boundary":"Compromised-model benchmark protocol. Results are bounded to the evaluated AgentDojo categories and do not prove universal production prevention.","series":["No defense","APC"],"data":[["Workspace",90,0],["Banking",75,0],["Travel",90,0],["Slack external",100,0],["Slack internal",100,0]],"unit":"% observed attack success rate"}}</script>
+<script>
+(() => {
+  "use strict";
+  const graphData = JSON.parse(document.getElementById("qgeu-data").textContent);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function renderGraph(fig) {
+    const key = fig.dataset.eugKey, g = graphData[key];
+    fig.setAttribute("aria-labelledby", `${fig.id}-title`);
+    const max = g.max || Math.max(...g.data.flatMap(r => r.slice(1).map(Number)), 100);
+    const rows = g.data.map(row => {
+      const label = row[0];
+      const bars = row.slice(1).map((v,i) => {
+        const pct = Math.max(0, Math.min(100, Number(v) / max * 100));
+        const cls = i===0 ? "bar" : i===1 ? "bar alt" : "bar third";
+        return `<div class="barline"><span>${esc(g.series[i])}</span><span class="track" aria-hidden="true"><span class="${cls}" style="display:block;width:${pct.toFixed(2)}%"></span></span><strong>${Number(v).toFixed(Number(v)%1?1:0)}</strong></div>`;
+      }).join("");
+      return `<div class="chart-row"><div class="chart-label">${esc(label)}</div><div class="barset">${bars}</div></div>`;
+    }).join("");
+    fig.innerHTML = `<div class="eug-head"><div><div class="eug-meta">${esc(g.id)} · ${esc(g.status)}</div><h3 id="${fig.id}-title">${esc(g.title)}</h3><div class="muted">${esc(g.subtitle)}</div></div><span class="status-pill">${esc(g.unit)}</span></div><div class="chart" role="img" aria-label="${esc(g.title)}">${rows}</div><figcaption class="eug-note"><b>Boundary.</b> ${esc(g.boundary)} <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Primary source ↗</a></figcaption>`;
+  }
+  document.querySelectorAll(".eug[data-eug-key]").forEach(renderGraph);
+
+  const triggers = [...document.querySelectorAll("[data-evidence-trigger]")];
+  function closeAll(except=null) {
+    triggers.forEach(t => {
+      if (t === except) return;
+      const p = document.getElementById(t.dataset.evidenceTrigger);
+      if (p) p.hidden = true;
+      t.setAttribute("aria-expanded","false");
+    });
+  }
+  triggers.forEach(t => {
+    const p = document.getElementById(t.dataset.evidenceTrigger);
+    if (!p) return;
+    t.addEventListener("click", e => {
+      e.stopPropagation();
+      const opening = p.hidden;
+      closeAll(t);
+      p.hidden = !opening;
+      t.setAttribute("aria-expanded", opening ? "true" : "false");
+    });
+    const close = p.querySelector(".ev-close");
+    if (close) close.addEventListener("click", e => {
+      e.stopPropagation(); p.hidden = true; t.setAttribute("aria-expanded","false"); t.focus();
+    });
+  });
+  document.addEventListener("click", () => closeAll());
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeAll();
+  });
+})();
+</script>
+</body></html>
