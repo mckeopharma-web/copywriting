@@ -1,0 +1,48 @@
+{
+  "artifact_title": "agentic-ai · AgentDojo Table 5 extract v2",
+  "boundary": "Peer-reviewed benchmark results for one benchmark/model evaluation; not a production attack rate or universal defense ranking.",
+  "canonical_source_uri": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html",
+  "captured_at": "2026-09-03T22:10:00+02:00",
+  "construction_use": [
+    "QGEU-AGENTIC-AGENTDOJO-DEFENSES-2024"
+  ],
+  "epistemic_status": "OBSERVED_CONTROLLED_EVALUATION",
+  "metric": "targeted attack-success rate",
+  "mode": "EXTRACTED",
+  "observations": [
+    {
+      "ci95_halfwidth_pct": 3.9,
+      "defense": "No defense",
+      "targeted_asr_pct": 57.69
+    },
+    {
+      "ci95_halfwidth_pct": 3.9,
+      "defense": "Delimiting",
+      "targeted_asr_pct": 41.65
+    },
+    {
+      "ci95_halfwidth_pct": 2.1,
+      "defense": "PI detector",
+      "targeted_asr_pct": 7.95
+    },
+    {
+      "ci95_halfwidth_pct": 3.5,
+      "defense": "Repeat prompt",
+      "targeted_asr_pct": 27.82
+    },
+    {
+      "ci95_halfwidth_pct": 2.0,
+      "defense": "Tool filter",
+      "targeted_asr_pct": 6.84
+    }
+  ],
+  "period": "NeurIPS 2024",
+  "population": "AgentDojo GPT-4o defense evaluation",
+  "provenance_note": "Deterministic transcription of AgentDojo Table 5 targeted-ASR point estimates and 95% confidence-interval half-widths verified against the open arXiv HTML table.",
+  "schema_version": "origin-document-extract-v1",
+  "source_document_id": "src:agentic:agentdojo-neurips-2024",
+  "source_locator": "Table 5",
+  "source_uri": "https://arxiv.org/html/2406.13352",
+  "uncertainty": "95% confidence-interval half-widths transcribed from Table 5 and rendered around the targeted-ASR point estimates.",
+  "unit": "percent"
+}
