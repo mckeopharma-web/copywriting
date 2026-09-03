@@ -459,9 +459,9 @@
     {
       "path": "expertises/healthtech/healthtech.html",
       "family": "healthtech",
-      "source_count": 4,
+      "source_count": 8,
       "section_count": 3,
-      "sources_per_section_ratio": 1.333333,
+      "sources_per_section_ratio": 2.666667,
       "gate": "PASS",
       "research_anchor_sections": [
         "healthtech-hero",
