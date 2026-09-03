@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 35,
+  "html_total": 36,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -660,6 +660,32 @@
         "__anonymous_section_015",
         "__anonymous_section_016",
         "__anonymous_section_017"
+      ]
+    },
+    {
+      "path": "pages/engagement/audiences/customer-avatar-review.html",
+      "family": "marketing",
+      "source_count": 9,
+      "section_count": 3,
+      "sources_per_section_ratio": 3.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "decision-profiles",
+        "problem-before-profile",
+        "audience-cards"
+      ],
+      "topology_sha256": "ffee0a55a575d9bed38ff9a4e9a9de97f2db828a9807ff5024841e8970f0e47b",
+      "section_ids": [
+        "decision-profiles",
+        "audience-cards",
+        "graphs",
+        "problem-before-profile",
+        "qualifier",
+        "__anonymous_section_006",
+        "__anonymous_section_007",
+        "__anonymous_section_008",
+        "__anonymous_section_009",
+        "__anonymous_section_010"
       ]
     },
     {
