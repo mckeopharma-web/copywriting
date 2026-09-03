@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 42,
+  "html_total": 43,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -330,6 +330,39 @@
       "source_count": 8,
       "section_count": 3,
       "sources_per_section_ratio": 2.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "86670dc4b4d427b88030a7bb07ece9e49cc21fdb0dd5a23dc0b3d8e2a72e6807",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "audience",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "proofs",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/cdm-automation/cdm-automation.customer-avatar-devicev-v3-review_2026-09-03.html",
+      "family": "clinical-data",
+      "source_count": 3,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.0,
       "gate": "PASS",
       "research_anchor_sections": [
         "triggers",
