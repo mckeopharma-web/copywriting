@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 29,
+  "html_total": 30,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -15,6 +15,32 @@
   "max_ratio": 5.333333,
   "failures": [],
   "files": [
+    {
+      "path": "engagement/audiences/avatar-agentic-ai.html",
+      "family": "agentic",
+      "source_count": 8,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.666667,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "evidence",
+        "__anonymous_section_001",
+        "identity"
+      ],
+      "topology_sha256": "93166d3adf239356bb2e94339ff6c2fff4f26c4b5227fe06bdf5fe3c68a1e6d4",
+      "section_ids": [
+        "__anonymous_section_001",
+        "identity",
+        "tensions",
+        "aspirations",
+        "drivers",
+        "before-after",
+        "evidence",
+        "capability",
+        "qualification",
+        "references"
+      ]
+    },
     {
       "path": "engagement/audiences/avatar-ai-security.html",
       "family": "ai-security",
