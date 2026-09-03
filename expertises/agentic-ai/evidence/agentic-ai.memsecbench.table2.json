@@ -1,0 +1,72 @@
+{
+  "artifact_title": "agentic-ai · MemSecBench Table 2 extract",
+  "boundary": "Open preprint benchmark; configuration-specific attack-success observations, not prevalence in deployed production agents.",
+  "canonical_source_uri": "https://arxiv.org/abs/2607.27080",
+  "captured_at": "2026-09-03T22:10:00+02:00",
+  "construction_use": [
+    "QGEU-AGENTIC-MEMSEC-E2E-24CFG-2026"
+  ],
+  "epistemic_status": "OBSERVED_CONTROLLED_EVALUATION",
+  "metric": "end-to-end attack success rate",
+  "mode": "EXTRACTED",
+  "observations": [
+    {
+      "e2e_asr_pct": 34.84,
+      "harness": "Hermes",
+      "memory": "Native",
+      "model": "MiniMax"
+    },
+    {
+      "e2e_asr_pct": 64.52,
+      "harness": "Hermes",
+      "memory": "Native",
+      "model": "DeepSeek"
+    },
+    {
+      "e2e_asr_pct": 33.87,
+      "harness": "OpenClaw",
+      "memory": "Mem0",
+      "model": "MiniMax"
+    },
+    {
+      "e2e_asr_pct": 61.61,
+      "harness": "Hermes",
+      "memory": "Mem0",
+      "model": "DeepSeek"
+    },
+    {
+      "e2e_asr_pct": 33.87,
+      "harness": "OpenClaw",
+      "memory": "Mem0-Graph",
+      "model": "MiniMax"
+    },
+    {
+      "e2e_asr_pct": 59.68,
+      "harness": "Hermes",
+      "memory": "Mem0-Graph",
+      "model": "DeepSeek"
+    },
+    {
+      "e2e_asr_pct": 39.35,
+      "harness": "OpenClaw",
+      "memory": "A-MEM",
+      "model": "MiniMax"
+    },
+    {
+      "e2e_asr_pct": 56.45,
+      "harness": "OpenClaw",
+      "memory": "A-MEM",
+      "model": "DeepSeek"
+    }
+  ],
+  "period": "Preprint submitted 2026-07-29",
+  "population": "310 MemSecBench cases across 24 agent configurations",
+  "provenance_note": "Deterministic transcription of the source table values already verified in NeoFort SourceEvidenceExtract.",
+  "schema_version": "origin-document-extract-v1",
+  "selection_rule": "Within each memory backend, select the minimum and maximum observed E2E-ASR across the six harness/model combinations; no arithmetic transformation.",
+  "source_document_id": "src:agentic:memsecbench-2607.27080",
+  "source_locator": "Table 2",
+  "source_uri": "https://arxiv.org/html/2607.27080",
+  "uncertainty": "No interval is preserved because none is reported in the transcribed table; none is invented.",
+  "unit": "percent"
+}
