@@ -1,0 +1,114 @@
+{
+  "artifact_id": "devicev:blockchain:avatar-copy:v1",
+  "version": "1.0.0",
+  "generated_at": "2026-09-03T22:18:00+02:00",
+  "scope": {
+    "page_url": "https://mickael-umt.com/expertises/blockchain/",
+    "repository": "mckeopharma-web/copywriting",
+    "source_html_path": "expertises/blockchain/blockchain.html",
+    "review_html_path": "expertises/blockchain/blockchain_avatar_copywriting_devicev_v1.html",
+    "scope_rule": "Only /expertises/blockchain/ may be edited by this artifact."
+  },
+  "customer_avatar": {
+    "id": "customer-avatar:expertise-blockchain:elodie-marchand:2026-09-03:v1",
+    "name": "Élodie Marchand",
+    "role": "Responsable innovation / architecte de confiance",
+    "publication_status": "REVIEW_ONLY",
+    "components": ["DEMOGRAPHICS_INTERESTS","FRUSTRATIONS_FEARS","WANTS_ASPIRATIONS","KEY_PURCHASE_DRIVERS","BEFORE_AFTER"],
+    "decision_role": "DECISION_MAKER__PAGE_CLASSIFICATION",
+    "budget_authority": "TO_RESEARCH",
+    "representative_quote": {"text":"Je dois prouver la propriété qui compte sans exposer tout le système.","status":"SYNTHESIS_NOT_CUSTOMER_VERBATIM"},
+    "unsupported_fields": ["age","gender","marital_status","children","personal_location","individual_income","education","personal_brands_influencers","observed_information_sources","event_attendance","price_sensitivity","procurement_route","verbatim_objections"]
+  },
+  "policy_resolution": {
+    "requested_judge": "judge:eu:placementv1",
+    "requested_judge_resolution": "NOT_FOUND_CURRENT_NEOFORT",
+    "applicable_current_placement_judge": {"id":"judge:evidence-placement:presentation-v1.2","version":"1.2","replicas":3,"temperature":0,"top_p":1,"pass_threshold":85,"fail_closed":true},
+    "deterministic_execution_policy": "policy:llm-judge:deterministic-execution-v2",
+    "placement_policy": "policy:evidence-placement:claim-span-entailment-v2",
+    "agent_exploitability_policy": "policy:evidence-agent-exploitability:proof-carrying-v3"
+  },
+  "evidence": [
+    {
+      "eu_id":"EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026",
+      "epistemic_class":"DESCRIPTIVE",
+      "observations":[
+        {"variable":"tokenised_traditional_asset_market_value","value":4.7,"unit":"EUR_billion","population":"tokenised traditional assets recorded on public blockchains in ECB source scope","period":"2025-Q1-end","geography":"worldwide/source scope","status":"OBSERVED"},
+        {"variable":"tokenised_traditional_asset_market_value","value":23.3,"unit":"EUR_billion","population":"tokenised traditional assets recorded on public blockchains in ECB source scope","period":"2026-Q1-end","geography":"worldwide/source scope","status":"OBSERVED"}
+      ],
+      "derived":{"variable":"value_ratio","value":4.9574468085,"unit":"ratio","formula":"23.3/4.7","status":"DERIVED_DETERMINISTIC"},
+      "source":"https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html",
+      "source_document_id":"src:ecb:2026-08-26-tokenised-market",
+      "source_sha256":"14b0b49eb9cbfd22d62092d7417f77f2836c956e20cd14c62d5b9a34ffa2bb9c",
+      "extract_id":"extract:ecb-tokenized-assets-2025-2026",
+      "extract_sha256":"439f9454ae36a480e2d96d5927627a3f4a43d03bac13600dddb4847adf28dd0a",
+      "preflight":"PASS","factfulness":"PASS","agent_exploitability":"ALLOWED","all_applicable_llm_judges_pass":false,
+      "placement_status":"CANDIDATE_ONLY__PLACEMENT_NOT_AUTHORIZED",
+      "boundary":"Market timing/context only; not proof of architecture superiority, consulting effect, buyer intent or causal outcome."
+    },
+    {
+      "eu_id":"EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026",
+      "epistemic_class":"DESCRIPTIVE_NORMATIVE_CONTEXT",
+      "variable":"cross-institution messaging, reconciliation and manual intervention in programmable repo lifecycle",
+      "population":"repo lifecycle processes across multiple institutions and financial infrastructures","period":"2026-08-28","status":"SOURCE_STATEMENT",
+      "source":"https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260828~fe9afc86e8.en.html",
+      "source_document_id":"src:ecb:2026-08-28-central-banks-on-chain","source_sha256":"66ead759e068d96680dd3e4f2c72a8d20a1dd47651b5d5264fda9514f234fc33",
+      "extract_id":"extract:ecb-programmability-coordination-mechanism-2026","extract_sha256":"5a2b6370fa3fe0d0e5ef8b7f839889e4ca11d4e8665d25a9a376862f68726af2",
+      "preflight":"PASS","factfulness":"PASS","agent_exploitability":"ALLOWED","all_applicable_llm_judges_pass":false,
+      "placement_status":"CANDIDATE_ONLY__PLACEMENT_NOT_AUTHORIZED",
+      "boundary":"Supports mechanism/trade-off context; does not prove that consulting or DLT will reduce cost, time or risk in another workload."
+    },
+    {
+      "eu_id":"EU-CAND-BIS-AGORA-PARTICIPANTS-2026","epistemic_class":"DESCRIPTIVE",
+      "x":{"variable":"real_value_testing_participants","value":28,"unit":"institutions_and_central_banks","population":"Project Agorá controlled real-value testing participants across Asia, Europe and North America","period":"2026-07","geography":"Asia, Europe, North America","status":"OBSERVED"},
+      "source":"https://www.bis.org/project/agora","source_document_id":"src:bis:project-agora-rvt-2026-07","source_sha256":"1ab7ed5ca78c26e65c294788acb6b777d0328b112ff32ba994d65575a73fd6a8",
+      "placement_status":"NOT_PLACED_REVIEW_ONLY","boundary":"Feasibility-test scope only; no general TCO, adoption or market-success inference."
+    },
+    {
+      "eu_id":"EU-CAND-BIS-AGORA-SCENARIOS-2026","epistemic_class":"DESCRIPTIVE",
+      "x":{"variable":"real_value_testing_transaction_scenarios","value":17,"unit":"scenarios","population":"Project Agorá real-value testing programme","period":"2026-07","geography":"multi-region","status":"OBSERVED"},
+      "source":"https://www.bis.org/project/agora","source_document_id":"src:bis:project-agora-rvt-2026-07","source_sha256":"1ab7ed5ca78c26e65c294788acb6b777d0328b112ff32ba994d65575a73fd6a8",
+      "placement_status":"NOT_PLACED_REVIEW_ONLY","boundary":"Scenario count only; no performance or causal inference."
+    },
+    {
+      "eu_id":"EU-CAND-BIS-AGORA-VALUE-2026","epistemic_class":"DESCRIPTIVE",
+      "x":{"variable":"real_value_testing_total_transaction_value","value":800000,"unit":"CHF_approximate","population":"transactions completed in Project Agorá real-value testing","period":"2026-07","geography":"multi-region","status":"OBSERVED"},
+      "source":"https://www.bis.org/project/agora","source_document_id":"src:bis:project-agora-rvt-2026-07","source_sha256":"1ab7ed5ca78c26e65c294788acb6b777d0328b112ff32ba994d65575a73fd6a8",
+      "placement_status":"NOT_PLACED_REVIEW_ONLY","boundary":"Approximate test value; no market-volume or commercial demand inference."
+    },
+    {
+      "eu_id":"EU-CAND-W3C-VC-SELECTIVE-DISCLOSURE-2025","epistemic_class":"DESCRIPTIVE_TECHNICAL_SPEC",
+      "variable":"selective disclosure capability in W3C Verifiable Credentials Data Model v2.0","population":"NOT_APPLICABLE_TECHNICAL_SPECIFICATION","period":"2025-05-15",
+      "source":"https://www.w3.org/TR/vc-data-model-2.0/","source_document_id":"source:w3c-vc-2","extract_id":"extract:w3c-vc2-selective-disclosure-definition-2025","extract_sha256":"883991809b5ffc3bcbda77f717edb3bf6655dfe6a003af94408e105ef83a57f3",
+      "preflight":"BLOCKED_SOURCE_ORIGIN_HASH_MISSING","factfulness":"NOT_RUN_BLOCKED_PRECHECK","agent_exploitability":"BLOCKED_PRECHECK","placement_status":"CANDIDATE_ONLY__BLOCKED_PRECHECK",
+      "boundary":"Technical-specification support only; does not establish buyer psychology, adoption or that ZK/blockchain is necessary."
+    },
+    {
+      "eu_id":"EU-CAND-USENIX-EIP7702-2026","epistemic_class":"DESCRIPTIVE_EMPIRICAL_RESEARCH",
+      "observations":[
+        {"variable":"supporting_blockchains_in_study","value":7,"unit":"blockchains","population":"EIP-7702-supporting blockchains analyzed","period":"USENIX Security 2026","status":"OBSERVED"},
+        {"variable":"malicious_contract_accounts_detected","value":924,"unit":"accounts","population":"study detections across seven analyzed blockchains","period":"USENIX Security 2026","status":"OBSERVED"},
+        {"variable":"authorization_transactions_associated_with_malicious_EOA_targeted_attacks","value":63,"operator":">","unit":"percent","population":"EIP-7702 authorization transactions in study scope","period":"USENIX Security 2026","status":"OBSERVED"}
+      ],
+      "source":"https://www.usenix.org/conference/usenixsecurity26/presentation/huang-mingyuan","neofort_source_document_id":"src:usenix-sec26-eip7702","neofort_current_eu_status":"NO_CURRENT_ADMITTED_EU; legacy EUs retired","preflight":"BLOCKED_SOURCE_MATERIALIZATION","placement_status":"WEB_RESEARCH_CANDIDATE_ONLY",
+      "boundary":"EIP-7702 study only; must not be generalized to all multisig, account abstraction or all blockchain systems."
+    }
+  ],
+  "copy_sequences": [
+    {"id":"seq:blockchain:hero:h1","buyer_question":"Dois-je réellement mettre cette propriété on-chain ?","action":"KEEP_H1","publication":"BLOCKED"},
+    {"id":"seq:blockchain:trigger:privacy","buyer_question":"Comment un tiers vérifie-t-il sans recevoir les données ?","action":"REWRITE_CANDIDATE","publication":"BLOCKED"},
+    {"id":"seq:blockchain:consequences:platform-first","buyer_question":"Quel risque ou coût justifie réellement un mécanisme vérifiable ?","action":"REWRITE_CANDIDATE","publication":"BLOCKED"},
+    {"id":"seq:blockchain:consequence:key-governance","buyer_question":"Qui signe, révoque et récupère ?","action":"REWRITE_CANDIDATE","publication":"BLOCKED"},
+    {"id":"seq:blockchain:proposition:mechanism","buyer_question":"Quel mécanisme minimal rend la propriété vérifiable ?","action":"REWRITE_CANDIDATE","publication":"BLOCKED"},
+    {"id":"seq:blockchain:resultats:independent-verifier","buyer_question":"Quel test d’acceptation un tiers peut-il reproduire ?","action":"REWRITE_CANDIDATE","publication":"BLOCKED"}
+  ],
+  "capability_evidence": [
+    {"project":"Lottery dApp","period":"2023-05_to_2023-06","provenance":"bootcamp fork with substantial Mickael contribution","commit_attribution":"26/29 RickOwri","stack":["Solidity","EVM","TypeScript"],"boundary":"Never claim initial repository authorship or institutional production impact."},
+    {"project":"Tokenized Voting Backend","period":"2023-05_to_2023-06","provenance":"training implementation on scaffold","commit_attribution":"4/4 RickOwri","stack":["NestJS","TypeScript","ethers.js","Sepolia"]},
+    {"project":"Folder Mapper","period":"2023-09_to_2023-10","provenance":"original non-fork repository","commit_attribution":"7/7 RickOwri","stack":["Rust","SQLite"]}
+  ],
+  "final_decision": {
+    "FINAL_PASS": false,"publication_allowed": false,"persistence_as_review_artifact": true,
+    "blocking_predicates": ["requested judge id absent; current judge v1.2 resolved instead","no formal three-replica judge execution results for the new copy snapshot","current canonical ECB evidence has all_applicable_llm_judges_pass=false","W3C and USENIX candidates do not yet satisfy origin/source materialization gates","new candidate DOM snapshot hash not bound to placement","XPath match_count==1 not asserted on the candidate rendered page"]
+  }
+}
