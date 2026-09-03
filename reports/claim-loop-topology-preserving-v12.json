@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 28,
+  "html_total": 29,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -282,6 +282,19 @@
     },
     {
       "path": "expertises/healthtech-product/healthtech-product_customer-avatar-v1.4-review_2026-09-03.html",
+      "family": "healthtech",
+      "source_count": 3,
+      "section_count": 1,
+      "sources_per_section_ratio": 3.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__document_contract__"
+      ],
+      "topology_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "section_ids": []
+    },
+    {
+      "path": "expertises/healthtech-product/healthtech-product_customer-avatar-v1.5-review_2026-09-03.html",
       "family": "healthtech",
       "source_count": 3,
       "section_count": 1,
