@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 37,
+  "html_total": 38,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -382,6 +382,27 @@
         "healthtech-capabilities",
         "healthtech-next-step",
         "healthtech-qualifier"
+      ]
+    },
+    {
+      "path": "expertises/healthtech/healthtech_customer-avatar-v2-review_2026-09-03.html",
+      "family": "healthtech",
+      "source_count": 3,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003"
+      ],
+      "topology_sha256": "87d92beb8d343d641201632d99c2be1f69ced76ed7002fe9b190d1472bccb52a",
+      "section_ids": [
+        "__anonymous_section_001",
+        "__anonymous_section_002",
+        "__anonymous_section_003",
+        "__anonymous_section_004",
+        "__anonymous_section_005"
       ]
     },
     {
