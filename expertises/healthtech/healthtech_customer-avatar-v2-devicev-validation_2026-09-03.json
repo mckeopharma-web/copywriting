@@ -1,0 +1,101 @@
+{
+  "artifact": {
+    "path": "expertises/healthtech/healthtech_customer-avatar-v2-review_2026-09-03.html",
+    "page_url": "https://mickael-umt.com/expertises/healthtech/",
+    "base_commit": "417d1cdf843bb8f445ef96e1a9b9093b63b8995c",
+    "base_blob_sha": "fdbebb06c4cbddd7ddbab1070c72dd9022ad4897",
+    "current_review_blob_sha_observed": "5bde6236860503f407f7399c80a652b24a446642",
+    "scope": "ONLY_/expertises/healthtech/",
+    "mode": "REVIEW_ONLY"
+  },
+  "customer_avatar_contract": {
+    "reuse_authority": "USER_EXPLICIT_SCOPE_REUSE_2026-09-03",
+    "components": [
+      "DEMOGRAPHICS_INTERESTS",
+      "FRUSTRATIONS_FEARS",
+      "WANTS_ASPIRATIONS",
+      "KEY_PURCHASE_DRIVERS",
+      "BEFORE_AFTER_STATE"
+    ],
+    "decision_roles": ["DECISION_MAKER", "ADVOCATE", "CHAMPION"],
+    "unknown_rule": "Unsupported demographic, psychographic, budget, channel, purchase-role and verbatim fields remain NOT_EVIDENCED / TO_RESEARCH; synthesized quotes are explicitly non-verbatim.",
+    "avatars": [
+      {"name": "Antoine Moreau", "role": "Directeur qualité / CSV", "decision_role": "UNKNOWN_NOT_INFERRED"},
+      {"name": "Sophie Lemercier", "role": "Data Manager / Chef de projet clinique", "decision_role": "UNKNOWN_NOT_INFERRED"},
+      {"name": "Karim Benali", "role": "Responsable pharmacovigilance", "decision_role": "UNKNOWN_NOT_INFERRED"},
+      {"name": "Isabelle Fontaine", "role": "Product Manager éditeur HealthTech", "decision_role": "UNKNOWN_NOT_INFERRED"}
+    ]
+  },
+  "capability_boundary": {
+    "regulated_operations": "7+ years documented in CV/site evidence; healthcare operations do not imply clinical validation of software",
+    "python_data": "professional use since 2021 / 5+ years",
+    "governed_data_ai": "structured work since 2024",
+    "ai_assurance": "structured work since 2025",
+    "public_engineering_examples": [
+      "Lottery dApp",
+      "Tokenized Voting Backend",
+      "Mistral Hackathon — Persona & Bias Evaluation",
+      "AI/RAG Experiment Portfolio",
+      "Folder Mapper",
+      "Streamlit LangChain Prototype"
+    ],
+    "confidential_engineering_example": "Governed AI Operations",
+    "boundary": "Public repositories demonstrate engineering practice, not clinical effectiveness, regulatory approval or validated HealthTech outcomes."
+  },
+  "neofort_current_policy_resolution": {
+    "canonical_copy_claim_judge": "judge:copy-claim:external-capability-grounding-v1.1",
+    "deterministic_preflight": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "factfulness": "judge:evidence:factfulness-epistemology-methodology-v2",
+    "agent_exploitability": "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "judge_applicability": "policy:evidence-judge-applicability:v2",
+    "verdict_normalization": "policy:evidence-judge-verdict-normalization:v2",
+    "llm_determinism": "policy:llm-judge:deterministic-execution-v2",
+    "placement_policy": "policy:evidence-placement:claim-span-entailment-v2@2.2",
+    "placement_judge": "judge:evidence-placement:presentation-v1.2"
+  },
+  "upstream_evidence_units": [
+    {"id": "EU-REGCSV-EC-ANNEX11-RISK-2026", "upstream_status": "PASS", "champion_score": 94, "agent_exploitability": "ALLOWED", "category_placement": "PENDING_EXTERNAL_3_REPLICA"},
+    {"id": "EU-REGCSV-FDA-CSA-RISK-2026", "upstream_status": "PASS", "champion_score": 92, "agent_exploitability": "ALLOWED", "category_placement": "PENDING_EXTERNAL_3_REPLICA"},
+    {"id": "EU-CANON-EHDS-EHR-TESTING-2026", "upstream_status": "PASS", "champion_score": 94, "agent_exploitability": "ALLOWED", "category_placement": "PENDING_EXTERNAL_3_REPLICA"},
+    {"id": "EU-HT-EMA-FDA-GOOD-AI-2026", "upstream_status": "PASS", "champion_score": 94, "agent_exploitability": "ALLOWED", "category_placement": "PENDING_EXTERNAL_3_REPLICA"}
+  ],
+  "repository_policy_materializer_observation": {
+    "commit": "f53caea4057896fed242240eda896a74f7c1a449",
+    "actor": "claim-loop-bot",
+    "materialized_judge": "judge:copy-claim:external-capability-grounding-v1.2",
+    "materialized_publication_status": "PENDING_FORMAL_LLM_JUDGE",
+    "canonical_neofort_judge": "judge:copy-claim:external-capability-grounding-v1.1",
+    "status": "POLICY_VERSION_MISMATCH",
+    "rule": "NeoFort current=true remains authoritative; GitHub materialization cannot override canonical policy."
+  },
+  "deterministic_review": {
+    "top_level_topology_mutation": false,
+    "existing_external_evidence_markers_replaced": false,
+    "unsupported_demographics_invented": false,
+    "synthesized_quotes_labeled_non_verbatim": true,
+    "decision_role_inferred_without_evidence": false,
+    "google_drive_write_performed": false,
+    "github_artifact_persisted": true
+  },
+  "final_gate": {
+    "deterministic_preflight": "PASS_FOR_AVATAR_OVERLAY_SCOPE",
+    "factfulness_of_new_avatar_facts": "PASS_BY_EXPLICIT_EPISTEMIC_LABELING_NO_NEW_EXTERNAL_EFFECT_CLAIM",
+    "category_evidence_placement": "PENDING_EXTERNAL_3_REPLICA",
+    "repository_policy_snapshot_coherence": "FAIL_POLICY_VERSION_MISMATCH",
+    "live_publication": false,
+    "final_pass": false,
+    "decision": "REVIEW_ONLY_BLOCKED",
+    "blockers": [
+      "Category EvidencePlacement/Presentation 3-replica execution is not available in this tool session.",
+      "GitHub claim-loop-bot materialized external-capability judge v1.2 while NeoFort current=true resolves v1.1."
+    ]
+  },
+  "google_drive": {
+    "read_context_used": true,
+    "write_performed": false,
+    "chapter_document_id": "1Xlk-s7lSYu4ilwn9S7PUa2KuHEVqxdKZ0bboeYVq4t8",
+    "chapter_folder_id": "1yStvb3NvilVtcIG4rctulTTwO-U9TACf",
+    "write_requires_explicit_user_validation": true
+  },
+  "generated_at": "2026-09-03T22:08:00+02:00"
+}
