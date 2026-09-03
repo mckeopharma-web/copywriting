@@ -29,11 +29,37 @@ jobs:
           python-version: '3.12'
       - name: Apply external-evidence × capability copy layer
         run: python tools/claim_loop_apply.py
+      - name: Normalize document contract
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          for p in sorted(Path('.').rglob('*.html')):
+              s = p.read_text(encoding='utf-8')
+              def html_open(m):
+                  tag = m.group(0)
+                  if re.search(r'\blang\s*=\s*(["\']).*?\1', tag, flags=re.I):
+                      tag = re.sub(r'\blang\s*=\s*(["\']).*?\1', 'lang="en"', tag, count=1, flags=re.I)
+                  elif re.search(r'\blang\s*=\s*[^\s>]+', tag, flags=re.I):
+                      tag = re.sub(r'\blang\s*=\s*[^\s>]+', 'lang="en"', tag, count=1, flags=re.I)
+                  else:
+                      tag = tag[:-1] + ' lang="en">'
+                  if re.search(r'\bdata-publication-status\s*=\s*(["\']).*?\1', tag, flags=re.I):
+                      tag = re.sub(r'\bdata-publication-status\s*=\s*(["\']).*?\1', 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"', tag, count=1, flags=re.I)
+                  else:
+                      tag = tag[:-1] + ' data-publication-status="PENDING_FORMAL_LLM_JUDGE">'
+                  return tag
+              s = re.sub(r'<html\b[^>]*>', html_open, s, count=1, flags=re.I)
+              s = re.sub(r'(<meta\b[^>]*\bname\s*=\s*(["\'])x-evidence-status\2[^>]*\bcontent\s*=\s*)(["\']).*?\3', r'\1"PENDING_FORMAL_LLM_JUDGE"', s, flags=re.I)
+              p.write_text(s, encoding='utf-8')
+          PY
       - name: Verify every HTML was materialised
         shell: bash
         run: |
           python - <<'PY'
           import json
+          import re
           from pathlib import Path
           root = Path('.')
           files = sorted(root.rglob('*.html'))
@@ -41,9 +67,11 @@ jobs:
           for p in files:
               s=p.read_text(encoding='utf-8')
               if 'data-claim-loop-version="external-capability-v1"' not in s:
-                  missing.append(str(p))
-              if 'PENDING_FORMAL_LLM_JUDGE' not in s:
-                  missing.append(str(p)+':missing-fail-closed-status')
+                  missing.append(str(p)+':missing-loop-version')
+              if 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"' not in s:
+                  missing.append(str(p)+':missing-fail-closed-document-status')
+              if not re.search(r'<html\b[^>]*\blang="en"', s, flags=re.I):
+                  missing.append(str(p)+':wrong-language-contract')
               if 'claim-loop-seed-archive' not in s:
                   missing.append(str(p)+':missing-seed-archive')
           report=json.loads(Path('reports/claim-loop-all-html.json').read_text())
