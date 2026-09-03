@@ -3,6 +3,7 @@ name: Claim loop v1.2 — topology preserving
 on:
   push:
     branches:
+      - main
       - recovery/topology-preserving-v1.2-2026-09-03
     paths:
       - 'tools/claim_loop_topology_preserving_v12.py'
