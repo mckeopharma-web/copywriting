@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html data-evidence-run="graph-research:realisations-blockchain:2026-09-03:v1" data-page="realisations/blockchain" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Blockchain &amp; Verifiability · Mickael Rutembya</title>
+<meta content="Public blockchain implementation evidence: audited contribution boundaries, commit-level provenance and bounded institutional context." name="description"/>
+<meta content="dark" name="color-scheme"/>
+<style>
+:root{
+  --bg:#07110f;--panel:#0e1d19;--panel2:#10261f;--line:#244138;
+  --text:#edf7f2;--muted:#9db7ad;--accent:#9af7c8;--accent2:#d9ff6a;
+  --warn:#ffd29b;--danger:#ffb7a6;--max:1120px;--shadow:0 24px 80px #0007
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(1000px 500px at 50% -10%,#153b2d55,transparent 60%),
+ var(--bg);color:var(--text);font:16px/1.58 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:40;background:#07110fe9;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.topin{max-width:var(--max);margin:auto;padding:13px 20px;display:flex;gap:18px;align-items:center}
+.brand{font-weight:880;text-decoration:none;letter-spacing:-.02em}
+.brand small{display:block;color:var(--muted);font-size:10px;font-weight:650;letter-spacing:.08em}
+.nav{margin-left:auto;display:flex;gap:14px;font-size:13px;color:var(--muted)}
+.nav a{text-decoration:none}
+.nav a:hover,.nav a:focus{color:var(--text)}
+.controls{display:flex;gap:7px}.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 9px;font-size:11px}
+.wrap{max-width:var(--max);margin:auto;padding:0 20px 80px}
+section{border-bottom:1px solid var(--line)}
+.hero{padding:76px 0 54px}
+.kicker{display:inline-flex;gap:8px;align-items:center;border:1px solid #39604f;background:#10261f;color:var(--accent);padding:7px 11px;border-radius:999px;font-size:12px;font-weight:780}
+.hero h1{font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.055em;margin:20px 0 18px;max-width:900px}
+.lead{max-width:840px;color:#c7dbd2;font-size:clamp(18px,2vw,25px)}
+.domain-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.domain-nav a{border:1px solid var(--line);background:var(--panel);padding:9px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:12px}
+.domain-nav a[aria-current="page"]{color:#06110d;background:var(--accent);border-color:var(--accent);font-weight:800}
+.context-note{margin-top:30px;max-width:880px;padding:15px 16px;border-left:3px solid var(--accent);background:#0c1b17;color:#c7dbd2;border-radius:0 12px 12px 0}
+.project,.provenance,.method{padding:64px 0}
+.grid2{display:grid;grid-template-columns:180px 1fr;gap:30px}
+.date{color:var(--accent);font-weight:850;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+h2{font-size:clamp(30px,4vw,52px);line-height:1.04;letter-spacing:-.045em;margin:0 0 12px}
+.status{display:inline-flex;border:1px solid #3a6453;background:#10261f;color:var(--accent);padding:6px 9px;border-radius:999px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.copy{max-width:840px;color:#c8dcd3;font-size:17px}
+.stack{color:var(--muted);font-size:13px;letter-spacing:.02em}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;text-decoration:none;border:1px solid #35594b;background:var(--panel);border-radius:11px;padding:10px 14px;font-weight:780;font-size:13px}
+.btn.primary{background:var(--accent);color:#06110d;border-color:var(--accent)}
+.media{margin-top:28px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.media img{width:100%;height:auto;display:block;opacity:.92}
+.media .cap{padding:10px 13px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}
+.lp-evidence-ref{vertical-align:super;border:0;background:transparent;color:var(--accent2);font-weight:900;font-size:.68em;padding:0 3px;cursor:pointer}
+.lp-evidence-ref:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:3px}
+.evidence-wrap{position:relative;display:inline}
+.lp-evidence-bubble-scroll{
+  position:fixed;z-index:90;left:50%;top:50%;transform:translate(-50%,-50%);width:min(520px,calc(100vw - 28px));max-height:min(72vh,520px);overflow:auto;
+  background:#0c1916;border:1px solid #3b6655;border-radius:15px;padding:14px 14px 13px;box-shadow:var(--shadow);
+  color:var(--text);font-size:13px;line-height:1.45
+}
+.lp-evidence-bubble-scroll[hidden]{display:none}
+.lp-evidence-bubble-scroll strong{display:block;font-size:13px;margin-bottom:4px}
+.lp-evidence-bubble-scroll .meta{color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:.09em}
+.lp-evidence-bubble-scroll .supported{margin:9px 0;color:#d9e8e1}
+.lp-evidence-bubble-scroll .boundary{border-left:2px solid var(--warn);padding-left:9px;color:#cebfae}
+.lp-evidence-bubble-scroll .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.lp-evidence-bubble-scroll a{border:1px solid var(--line);border-radius:8px;padding:6px 8px;text-decoration:none;color:var(--accent)}
+.lp-evidence-bubble-scroll .eu-fields{display:grid;gap:4px;margin:9px 0;padding:9px;border:1px solid #27483d;border-radius:10px;background:#0a1512;color:#aec5bb;font-size:11px}
+.lp-evidence-bubble-scroll .eu-fields span{display:block}
+.lp-evidence-bubble-scroll .ev-close{position:sticky;float:right;top:0;margin:-4px -4px 4px 8px;width:32px;height:32px;border:1px solid var(--line);border-radius:9px;background:#10221c;color:var(--text);font-size:18px;cursor:pointer}
+.lp-evidence-bubble-scroll .ev-close:focus-visible,.lp-evidence-ref:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+.eug{margin-top:26px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,#0f211b,#0b1714);padding:16px}
+.eug-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:13px}
+.eug-head b{font-size:14px}.eug-head span{color:var(--muted);font-size:11px;text-align:right}
+.small-multiples{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.metric{border:1px solid var(--line);background:#0b1714;border-radius:12px;padding:11px;min-width:0}
+.metric small{display:block;color:var(--muted);font-size:10px;min-height:29px}
+.metric strong{display:block;font-size:22px;letter-spacing:-.03em;margin:4px 0 8px}
+.axis{height:7px;background:#193129;border-radius:999px;overflow:hidden}
+.axis i{display:block;height:100%;width:var(--pct);background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px}
+.domain{display:block;color:#738b82;font-size:9px;margin-top:5px}
+.eug-foot{margin:11px 0 0;color:#849d93;font-size:10px}
+.epistemic{color:var(--accent2);font-weight:850}
+.provenance-card{border:1px solid var(--line);background:var(--panel);border-radius:17px;padding:18px;margin-top:24px}
+.provenance-card code{color:var(--accent);font-size:12px}
+.evidence-register{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
+.evidence-register details{border-bottom:1px solid var(--line);padding:11px 0}
+.evidence-register summary{cursor:pointer;font-weight:780}
+.evidence-register p{color:var(--muted);font-size:12px;margin:7px 0}
+.method-box{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:20px;max-width:900px}
+.method-box .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}
+.method-box .steps div{border:1px solid var(--line);background:#0b1714;border-radius:12px;padding:12px}
+.method-box .steps strong{display:block;color:var(--accent);font-size:12px;margin-bottom:4px}
+.method-box .steps span{color:var(--muted);font-size:11px}
+.fieldset{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:16px}
+.choice{border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--muted);font-size:12px}
+.choice input{accent-color:#9af7c8}
+.form-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+input[type="email"],input[type="text"]{background:#07110f;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px 12px;min-width:240px}
+.footer{max-width:var(--max);margin:auto;padding:38px 20px 60px;display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:22px;color:var(--muted)}
+.footer strong{color:var(--text);font-size:13px}.footer a{display:block;color:var(--muted);text-decoration:none;font-size:12px;margin:5px 0}
+.footer .brandline{font-weight:850;color:var(--text);font-size:16px}.footnote{font-size:11px}
+@media(max-width:850px){
+ .nav{display:none}.grid2{grid-template-columns:1fr;gap:10px}.small-multiples{grid-template-columns:repeat(2,1fr)}
+ .method-box .steps,.fieldset{grid-template-columns:1fr}.footer{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.small-multiples,.footer{grid-template-columns:1fr}.hero{padding-top:50px}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="topin">
+<a class="brand" href="https://mickael-umt.com/">Mickael Rutembya<small>AI · Data · verifiable R&amp;D</small></a>
+<nav aria-label="Primary" class="nav">
+<a href="https://mickael-umt.com/expertises/">Expertise</a>
+<a href="https://mickael-umt.com/realisations/">Evidence</a>
+<a href="https://mickael-umt.com/parcours/">Profile &amp; R&amp;D</a>
+<a href="https://mickael-umt.com/contact/">Contact</a>
+</nav>
+<div class="controls"><span class="chip">EN</span><span class="chip">☾</span></div>
+</div>
+</header>
+<main class="wrap">
+<section class="hero" data-original-slot="1" id="page-intro">
+<span class="kicker">Realizations · Blockchain &amp; verifiability</span>
+<h1>Blockchain &amp; verifiability</h1>
+<p class="lead">
+    Contracts, token logic and voting infrastructure with public contribution boundaries you can inspect rather than infer.
+    <span class="evidence-wrap"><button aria-controls="eu-1" aria-expanded="false" aria-label="Evidence source 1" class="lp-evidence-ref">[1]</button></span><div aria-label="Evidence 1" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-1" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-PAGE-SCOPE-001 · public portfolio evidence</span>
+<strong>Two public blockchain realization records</strong>
+<div class="supported">The live page exposes two public blockchain implementation records: Lottery dApp and Tokenized Voting Backend.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: public realization records</span><span>Population: blockchain realization records on this page</span><span>Period: current public page snapshot</span></div>
+<div class="boundary">This establishes portfolio scope only. It does not prove production deployment, commercial impact or blockchain superiority.</div>
+<div class="links"><a href="https://mickael-umt.com/realisations/blockchain/" rel="noopener" target="_blank">Live source</a></div>
+</div>
+</p>
+<div aria-label="Realization domains" class="domain-nav">
+<a href="https://mickael-umt.com/realisations/">All domains</a>
+<a href="https://mickael-umt.com/realisations/ai/">AI, agents &amp; evaluation · 4</a>
+<a aria-current="page" href="https://mickael-umt.com/realisations/blockchain/">Blockchain &amp; verifiability · 2</a>
+<a href="https://mickael-umt.com/realisations/data/">Data &amp; tooling · 1</a>
+</div>
+<div class="context-note">
+    External evidence is kept separate from personal proof. For example, BIS Project Agorá’s July 2026 real-value testing is useful as a bounded reference for what programmable shared infrastructure is being tested for—not as evidence that these portfolio projects achieved the same outcome.
+    <span class="evidence-wrap"><button aria-controls="eu-2" aria-expanded="false" aria-label="Evidence source 2" class="lp-evidence-ref">[2]</button></span><div aria-label="Evidence 2" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-2" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-CANON-BIS-AGORA-SETTLEMENT-80S-2026 · observed controlled test</span>
+<strong>Project Agorá real-value test boundary</strong>
+<div class="supported">BIS reports July 2026 RVT across 30 transactions, 17 scenarios, 28 financial institutions and central banks, six currencies, with an average of approximately 80 seconds from initiation to settlement.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: initiation-to-settlement time + test-set dimensions</span><span>Population: 30 RVT transactions · 17 scenarios · 28 institutions/central banks · 6 currencies</span><span>Period: July 2026</span></div>
+<div class="boundary">Controlled prototype testing. Not a universal settlement-latency benchmark and not personal project evidence.</div>
+<div class="links"><a href="https://www.bis.org/project/agora" rel="noopener" target="_blank">BIS primary source</a></div>
+</div>
+</div>
+<figure aria-labelledby="eug-agora-title" class="eug">
+<div class="eug-head"><b id="eug-agora-title">EUG 01 · Project Agorá test-set boundary</b><span>5 quantitative marks · BIS · July 2026</span></div>
+<div class="small-multiples">
+<div class="metric"><small>Avg. initiation → settlement</small><strong>≈80 s</strong><div class="axis"><i style="--pct:80%"></i></div><span class="domain">panel domain 0–100 s</span></div>
+<div class="metric"><small>Transactions</small><strong>30</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">panel domain 0–30</span></div>
+<div class="metric"><small>Scenarios</small><strong>17</strong><div class="axis"><i style="--pct:85%"></i></div><span class="domain">panel domain 0–20</span></div>
+<div class="metric"><small>Institutions + central banks</small><strong>28</strong><div class="axis"><i style="--pct:93.3%"></i></div><span class="domain">panel domain 0–30</span></div>
+<div class="metric"><small>Currencies</small><strong>6</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">panel domain 0–6</span></div>
+</div>
+<figcaption class="eug-foot"><span class="epistemic">OBSERVED / BOUNDED.</span> Each panel has its own labelled scale; no cross-panel magnitude comparison is intended. Source: BIS Project Agorá RVT.</figcaption>
+</figure>
+</section>
+<section class="project" data-original-slot="2" id="lottery-dapp">
+<div class="grid2">
+<div><div class="date">May–June 2023</div></div>
+<div>
+<h2>Lottery dApp</h2>
+<span class="status">Verified substantial contribution</span>
+<p class="copy">
+        A bootcamp fork that was substantially developed by Mickael across backend, contract logic, tokens, closing, withdrawals, prize logic and debugging.
+        <span class="evidence-wrap"><button aria-controls="eu-3" aria-expanded="false" aria-label="Evidence source 3" class="lp-evidence-ref">[3]</button></span><div aria-label="Evidence 3" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-3" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-LOTTERY-SCOPE-001 · implementation scope</span>
+<strong>Seven bounded implementation areas</strong>
+<div class="supported">The public realization record names backend, contract, tokens, closing, withdrawals, prize logic and debugging.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: named implementation areas</span><span>Population: Lottery dApp public realization record</span><span>Period: May–June 2023</span></div>
+<div class="boundary">Scope is descriptive. It does not claim sole authorship of the starter repository.</div>
+<div class="links"><a href="https://mickael-umt.com/realisations/blockchain/" rel="noopener" target="_blank">Public realization record</a></div>
+</div>
+</p>
+<p class="copy">
+        The audit attributes <strong>26 of 29 commits</strong> to RickOwri.
+        <span class="evidence-wrap"><button aria-controls="eu-4" aria-expanded="false" aria-label="Evidence source 4" class="lp-evidence-ref">[4]</button></span><div aria-label="Evidence 4" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-4" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-LOTTERY-AUDIT-001 · public GitHub provenance</span>
+<strong>26 / 29 commits attributed</strong>
+<div class="supported">Public portfolio audit: 26 of 29 repository commits are attributed to RickOwri.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: commits attributed to RickOwri / public commits</span><span>Population: 29 public commits in the audited repository history</span><span>Period: May–June 2023</span></div>
+<div class="boundary">Commit attribution demonstrates contribution, not initial repository authorship or production deployment.</div>
+<div class="links"><a href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp/commits/main/" rel="noopener" target="_blank">Verify history</a></div>
+</div>
+        The page therefore keeps the strongest defensible label—substantial contribution—while explicitly preserving the fact that the repository began as a bootcamp fork.
+        <span class="evidence-wrap"><button aria-controls="eu-5" aria-expanded="false" aria-label="Evidence source 5" class="lp-evidence-ref">[5]</button></span><div aria-label="Evidence 5" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-5" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-LOTTERY-BOUNDARY-001 · provenance boundary</span>
+<strong>Fork boundary preserved</strong>
+<div class="supported">The public evidence record explicitly says the project is never presented as initial creation.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: provenance classification</span><span>Population: Lottery dApp repository and training context</span><span>Period: May–June 2023</span></div>
+<div class="boundary">This boundary is part of the evidence, not a caveat hidden from the buyer.</div>
+<div class="links"><a href="https://mickael-umt.com/realisations/blockchain/" rel="noopener" target="_blank">Boundary source</a></div>
+</div>
+</p>
+<p class="stack">Solidity · EVM · TypeScript</p>
+<div class="actions">
+<a class="btn primary" href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp" rel="noopener" target="_blank">View repository ↗</a>
+<a class="btn" href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp/commits/main/" rel="noopener" target="_blank">Verify commits ↗</a>
+</div>
+<figure aria-labelledby="eug-lottery-title" class="eug">
+<div class="eug-head"><b id="eug-lottery-title">EUG 02 · Lottery public provenance profile</b><span>5 data-bound marks · deterministic derivations</span></div>
+<div class="small-multiples">
+<div class="metric"><small>Total public commits</small><strong>29</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–29 commits</span></div>
+<div class="metric"><small>Attributed to RickOwri</small><strong>26</strong><div class="axis"><i style="--pct:89.66%"></i></div><span class="domain">0–29 commits</span></div>
+<div class="metric"><small>Not attributed</small><strong>3</strong><div class="axis"><i style="--pct:10.34%"></i></div><span class="domain">0–29 commits</span></div>
+<div class="metric"><small>Attribution rate</small><strong>89.7%</strong><div class="axis"><i style="--pct:89.66%"></i></div><span class="domain">0–100%</span></div>
+<div class="metric"><small>Named implementation areas</small><strong>7</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–7 areas</span></div>
+</div>
+<figcaption class="eug-foot"><span class="epistemic">OBSERVED + DERIVED_DETERMINISTIC.</span> Attribution rate = 26 ÷ 29. Implementation-area count is a deterministic count of the seven areas named in the public realization record.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="project" data-original-slot="3" id="tokenized-voting-backend">
+<div class="grid2">
+<div><div class="date">May–June 2023</div></div>
+<div>
+<h2>Tokenized Voting Backend</h2>
+<span class="status">Verified training implementation</span>
+<p class="copy">
+        NestJS/ethers business logic built on a scaffold: supply, balances, receipts, minting, transfer, delegation, voting power and voting on Sepolia.
+        <span class="evidence-wrap"><button aria-controls="eu-6" aria-expanded="false" aria-label="Evidence source 6" class="lp-evidence-ref">[6]</button></span><div aria-label="Evidence 6" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-6" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-VOTING-SCOPE-001 · implementation scope</span>
+<strong>Eight named implementation areas</strong>
+<div class="supported">The public realization record names supply, balances, receipts, minting, transfer, delegation, voting power and Sepolia voting.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: named implementation areas</span><span>Population: Tokenized Voting Backend public realization record</span><span>Period: May–June 2023</span></div>
+<div class="boundary">Training implementation on a scaffold; this does not imply original authorship of the NestJS starter.</div>
+<div class="links"><a href="https://mickael-umt.com/realisations/blockchain/" rel="noopener" target="_blank">Public realization record</a></div>
+</div>
+</p>
+<p class="copy">
+        All <strong>four public commits</strong> are attributed to RickOwri.
+        <span class="evidence-wrap"><button aria-controls="eu-7" aria-expanded="false" aria-label="Evidence source 7" class="lp-evidence-ref">[7]</button></span><div aria-label="Evidence 7" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-7" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-VOTING-AUDIT-001 · public GitHub provenance</span>
+<strong>4 / 4 public commits attributed</strong>
+<div class="supported">The portfolio audit reports four public commits, all attributed to RickOwri.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: commits attributed to RickOwri / public commits</span><span>Population: 4 public commits in the audited repository history</span><span>Period: May–June 2023</span></div>
+<div class="boundary">Commit ownership does not convert the underlying scaffold into an original framework.</div>
+<div class="links"><a href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W4-VotingDapp-Backend/commits/main/" rel="noopener" target="_blank">Verify history</a></div>
+</div>
+        The business logic is therefore presented separately from the NestJS starter.
+        <span class="evidence-wrap"><button aria-controls="eu-8" aria-expanded="false" aria-label="Evidence source 8" class="lp-evidence-ref">[8]</button></span><div aria-label="Evidence 8" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-8" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-VOTING-BOUNDARY-001 · provenance boundary</span>
+<strong>Starter / contribution separation</strong>
+<div class="supported">The public realization record explicitly distinguishes business logic from the NestJS scaffold.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: provenance classification</span><span>Population: Tokenized Voting Backend scaffold + public business logic</span><span>Period: May–June 2023</span></div>
+<div class="boundary">This supports the training-implementation label, not a broader claim of framework authorship.</div>
+<div class="links"><a href="https://mickael-umt.com/realisations/blockchain/" rel="noopener" target="_blank">Boundary source</a></div>
+</div>
+</p>
+<p class="stack">NestJS · TypeScript · ethers.js · Sepolia</p>
+<div class="actions">
+<a class="btn primary" href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W4-VotingDapp-Backend" rel="noopener" target="_blank">View repository ↗</a>
+<a class="btn" href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W4-VotingDapp-Backend/commits/main/" rel="noopener" target="_blank">Verify commits ↗</a>
+</div>
+<figure aria-labelledby="eug-voting-title" class="eug">
+<div class="eug-head"><b id="eug-voting-title">EUG 03 · Voting backend public provenance profile</b><span>5 data-bound marks · deterministic derivations</span></div>
+<div class="small-multiples">
+<div class="metric"><small>Total public commits</small><strong>4</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–4 commits</span></div>
+<div class="metric"><small>Attributed to RickOwri</small><strong>4</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–4 commits</span></div>
+<div class="metric"><small>Not attributed</small><strong>0</strong><div class="axis"><i style="--pct:0%"></i></div><span class="domain">0–4 commits</span></div>
+<div class="metric"><small>Attribution rate</small><strong>100%</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–100%</span></div>
+<div class="metric"><small>Named implementation areas</small><strong>8</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–8 areas</span></div>
+</div>
+<figcaption class="eug-foot"><span class="epistemic">OBSERVED + DERIVED_DETERMINISTIC.</span> Attribution rate = 4 ÷ 4. Scope count comes directly from the eight named implementation areas.</figcaption>
+</figure>
+<div class="media">
+<img alt="Dark technical workspace visual used on the live Mickael UMT site." src="https://mickael-umt.com/static/img/global-signal.f2d33007d983.webp"/>
+<div class="cap">Visual asset retained from the live page family; it is decorative and is not an EvidenceUnit.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="provenance" data-original-slot="4" id="provenance-policy">
+<div class="grid2">
+<div><div class="date">Provenance policy</div></div>
+<div>
+<h2>Creation, contribution, proof and confidence level.</h2>
+<p class="copy">
+        Repository ownership is not treated as authorship evidence by itself. The public record combines commit attribution, code scope, project context and explicit provenance boundaries.
+        <span class="evidence-wrap"><button aria-controls="eu-9" aria-expanded="false" aria-label="Evidence source 9" class="lp-evidence-ref">[9]</button></span><div aria-label="Evidence 9" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-9" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-PROVENANCE-METHOD-001 · page methodology</span>
+<strong>Evidence is separated by provenance level</strong>
+<div class="supported">The live page states that repository ownership alone is insufficient and that the audit combines commits, diffs, code, training context and owner attestation.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: evidence-classification method</span><span>Population: public blockchain realization records on this page</span><span>Period: current public page snapshot</span></div>
+<div class="boundary">Owner attestation can supplement under-credited work but cannot erase the limits of public evidence.</div>
+<div class="links"><a href="https://mickael-umt.com/realisations/blockchain/" rel="noopener" target="_blank">Method source</a></div>
+</div>
+</p>
+<p class="copy">
+        Across the two public records, the portfolio exposes <strong>30 attributed commits out of 33 total</strong>—a deterministic aggregate of 26/29 and 4/4—not a claim of sole authorship.
+        <span class="evidence-wrap"><button aria-controls="eu-10" aria-expanded="false" aria-label="Evidence source 10" class="lp-evidence-ref">[10]</button></span><div aria-label="Evidence 10" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-10" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-PORTFOLIO-AGG-001 · DERIVED_DETERMINISTIC</span>
+<strong>30 / 33 attributed commits across two records</strong>
+<div class="supported">26 + 4 = 30 attributed commits; 29 + 4 = 33 total public commits; 30 ÷ 33 ≈ 90.9%.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: attributed public commits / total public commits</span><span>Population: 33 public commits across the two audited project records</span><span>Period: May–June 2023</span></div>
+<div class="boundary">Cross-project aggregation describes the two records on this page only. It is not a productivity or quality score.</div>
+<div class="links"><a href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp/commits/main/" rel="noopener" target="_blank">Lottery history</a><a href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W4-VotingDapp-Backend/commits/main/" rel="noopener" target="_blank">Voting history</a></div>
+</div>
+</p>
+<p class="copy">
+        The commercial implication is deliberately narrower: smart contracts are useful when shared rules, conditional execution or independent verification are part of the requirement. ECB’s August 2026 discussion of programmable repo workflows describes automation of collateral substitution, margin management and collateral return as a coordination mechanism across institutions—not as proof that every workflow needs DLT.
+        <span class="evidence-wrap"><button aria-controls="eu-11" aria-expanded="false" aria-label="Evidence source 11" class="lp-evidence-ref">[11]</button></span><div aria-label="Evidence 11" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-11" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026 · mechanism evidence</span>
+<strong>Programmability is a coordination mechanism</strong>
+<div class="supported">ECB states that programmable repo processes can largely automate collateral substitution, margin management and collateral return, reducing messaging, reconciliation and manual intervention across institutions.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: qualitative coordination mechanism</span><span>Population: repo lifecycle processes across multiple institutions and infrastructures</span><span>Period: 28 August 2026</span></div>
+<div class="boundary">Mechanism evidence only. No numeric cost, staffing or universal performance effect is inferred.</div>
+<div class="links"><a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260828~fe9afc86e8.en.html" rel="noopener" target="_blank">ECB primary source</a></div>
+</div>
+</p>
+<p class="copy">
+        The same ECB source frames an integrated tokenised ecosystem around five distinct capabilities—interoperable, transferable, portable, controllable and programmable—useful as a requirements checklist rather than a chain-selection slogan.
+        <span class="evidence-wrap"><button aria-controls="eu-12" aria-expanded="false" aria-label="Evidence source 12" class="lp-evidence-ref">[12]</button></span><div aria-label="Evidence 12" aria-modal="false" class="lp-evidence-bubble-scroll" hidden="" id="eu-12" role="dialog"><button aria-label="Close evidence" class="ev-close" type="button">×</button>
+<span class="meta">EU-RB-ECB-CAPABILITIES-001 · public institutional requirement context</span>
+<strong>Five capability categories</strong>
+<div class="supported">ECB enumerates interoperability, transferability, portability, controllability and programmability as five capabilities for an integrated tokenised ecosystem.</div><div aria-label="Evidence metric, population and period" class="eu-fields"><span>Metric: enumerated capability categories</span><span>Population: ECB-described integrated tokenised ecosystem requirements</span><span>Period: 26 August 2026</span></div>
+<div class="boundary">This is institutional architecture context, not evidence that the two portfolio projects implement all five capabilities.</div>
+<div class="links"><a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html" rel="noopener" target="_blank">ECB primary source</a></div>
+</div>
+</p>
+<figure aria-labelledby="eug-portfolio-title" class="eug">
+<div class="eug-head"><b id="eug-portfolio-title">EUG 04 · Public proof inventory on this page</b><span>5 data-bound marks · page-level deterministic aggregate</span></div>
+<div class="small-multiples">
+<div class="metric"><small>Total commits</small><strong>33</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–33 commits</span></div>
+<div class="metric"><small>Attributed commits</small><strong>30</strong><div class="axis"><i style="--pct:90.91%"></i></div><span class="domain">0–33 commits</span></div>
+<div class="metric"><small>Attribution rate</small><strong>90.9%</strong><div class="axis"><i style="--pct:90.91%"></i></div><span class="domain">0–100%</span></div>
+<div class="metric"><small>Public project records</small><strong>2</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–2 records</span></div>
+<div class="metric"><small>Named implementation areas</small><strong>15</strong><div class="axis"><i style="--pct:100%"></i></div><span class="domain">0–15 areas</span></div>
+</div>
+<figcaption class="eug-foot"><span class="epistemic">DERIVED_DETERMINISTIC.</span> Formulas: total = 29+4; attributed = 26+4; attribution = 30/33; scope count = 7+8. No quality or business-effect inference.</figcaption>
+</figure>
+<div class="provenance-card">
+<code>PUBLIC CLAIM → SOURCE LOCATOR → CONTRIBUTION BOUNDARY → CONFIDENCE → BUYER-READABLE COPY</code>
+<p class="copy" style="font-size:14px;margin-bottom:0">The evidence layer is designed so a recruiter, client or technical reviewer can independently inspect the claim without being asked to trust repository ownership or a self-description.</p>
+</div>
+<div class="media">
+<img alt="Verifiable systems visual from the live Mickael UMT site." src="https://mickael-umt.com/static/svg/verifiable_systems_cover.d57534df3bf0.svg"/>
+<div class="cap">Original page-family visual retained. Decorative only; it carries no evidentiary weight.</div>
+</div>
+<div aria-label="Evidence register" class="evidence-register">
+<details><summary>Research run · 80 candidates → 30 shortlisted</summary><p>Run: graph-research:realisations-blockchain:2026-09-03:v1. Candidate pool includes public GitHub history, current Neofort canonical EvidenceUnits, recent ECB/BIS public-institution sources and open-access arXiv candidates. Seven arXiv candidates were reviewed but excluded from final publication because they were older than the requested 30-day preference and unnecessary for the selected claims.</p></details>
+<details><summary>Publication rule</summary><p>Only source-verified or current canonical facts are rendered as claim evidence. Candidate commit-level observations without exact commit locators remain non-published research candidates.</p></details>
+<details><summary>Graph rule</summary><p>Every EUG on this page contains at least five data-bound marks. Heterogeneous metrics are rendered as small multiples with independent labelled scales. Derived arithmetic is marked DERIVED_DETERMINISTIC.</p></details>
+</div>
+<div class="actions"><a class="btn" href="https://mickael-umt.com/parcours/certificats/">View verifiable certificates ↗</a></div>
+</div>
+</div>
+</section>
+<section class="method" data-original-slot="5" id="method-behind-proof">
+<div class="grid2">
+<div><div class="date">The method behind these proofs</div></div>
+<div>
+<h2>The framework used on this work, published and free.</h2>
+<p class="copy">Tell me what you are working on. The response points to the framework for that decision instead of sending a generic catalogue.</p>
+<div class="method-box">
+<div class="steps">
+<div><strong>01 · Current work</strong><span>One decision domain, already pre-filled from this page.</span></div>
+<div><strong>02 · Intended use</strong><span>Solo framing, team handoff or a case review.</span></div>
+<div><strong>03 · Delivery</strong><span>Professional email; no advertising sequence.</span></div>
+</div>
+<form onsubmit="event.preventDefault();document.getElementById('form-msg').textContent='Static reconstruction: use the live site to submit.'">
+<div class="fieldset">
+<label class="choice"><input checked="" name="work" type="radio"/> AI system, agents or automation</label>
+<label class="choice"><input name="work" type="radio"/> Data platform or traceability</label>
+<label class="choice"><input name="work" type="radio"/> Regulated or inspected environment</label>
+<label class="choice"><input name="work" type="radio"/> Solution framing</label>
+<label class="choice"><input name="work" type="radio"/> Team capability transfer</label>
+<label class="choice"><input name="work" type="radio"/> Another decision</label>
+</div>
+<div class="form-row">
+<input aria-label="Professional email" placeholder="name@organisation.com" type="email"/>
+<input aria-label="Name" placeholder="Name · optional" type="text"/>
+<button class="btn primary" type="submit">Receive the framework →</button>
+</div>
+<p aria-live="polite" class="footnote" id="form-msg">Static page reconstruction: submission is intentionally disabled here. Use the live site for storage or delivery.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div><div class="brandline">Mickael Rutembya</div><p class="footnote">AI, data and evidence systems for teams building under real constraints.</p><p class="footnote">© 2026 Mickael Rutembya.</p></div>
+<div><strong>Explore</strong><a href="https://mickael-umt.com/expertises/">Expertise</a><a href="https://mickael-umt.com/realisations/">Projects</a><a href="https://mickael-umt.com/parcours/">Profile &amp; R&amp;D</a><a href="https://mickael-umt.com/contact/">Contact</a></div>
+<div><strong>IT &amp; data</strong><a href="https://mickael-umt.com/expertises/agentic-ai/">Agentic AI</a><a href="https://mickael-umt.com/expertises/data-engineering/">Data Engineering</a><a href="https://mickael-umt.com/expertises/ai-security/">AI Security</a><a href="https://mickael-umt.com/expertises/blockchain/">Blockchain &amp; Verifiable Computing</a></div>
+<div><strong>Interfaces</strong><a href="https://mickael-umt.com/llms.txt">llms.txt</a><a href="https://mickael-umt.com/openapi.json">OpenAPI</a><a href="https://mickael-umt.com/">Public site</a><p class="footnote">Local data · no advertising tracker</p></div>
+</footer>
+<script>(() => {
+  const refs=[...document.querySelectorAll('.lp-evidence-ref')];
+  let lastTrigger=null;
+  function closeAll(except=null, returnFocus=false){
+    let focusTarget=null;
+    refs.forEach(btn=>{
+      if(btn===except) return;
+      const id=btn.getAttribute('aria-controls'), box=document.getElementById(id);
+      if(btn.getAttribute('aria-expanded')==='true') focusTarget=btn;
+      btn.setAttribute('aria-expanded','false'); if(box) box.hidden=true;
+    });
+    if(returnFocus && (focusTarget||lastTrigger)) (focusTarget||lastTrigger).focus({preventScroll:true});
+  }
+  refs.forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      e.stopPropagation();
+      const box=document.getElementById(btn.getAttribute('aria-controls'));
+      const open=btn.getAttribute('aria-expanded')==='true';
+      closeAll(btn,false);
+      btn.setAttribute('aria-expanded',String(!open)); box.hidden=open; lastTrigger=btn;
+      if(!open) box.querySelector('a,button')?.focus({preventScroll:true});
+    });
+  });
+  document.querySelectorAll('.ev-close').forEach(close=>close.addEventListener('click',()=>closeAll(null,true)));
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.evidence-wrap') && !e.target.closest('.lp-evidence-bubble-scroll')) closeAll();
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') closeAll(null,true);
+  });
+})();</script>
+<script id="devicev-manifest" type="application/json">
+{
+  "page":"https://mickael-umt.com/realisations/blockchain/",
+  "language":"EN",
+  "theme":"night",
+  "structure_contract":{"content_sections_before":5,"content_sections_after":5,"section_reorder":false,"new_content_sections":0},
+  "research_run":"graph-research:realisations-blockchain:2026-09-03:v1",
+  "candidate_pool_count":80,
+  "shortlist_count":30,
+  "arxiv_candidates_reviewed":7,
+  "arxiv_candidates_published":0,
+  "distributed_eu_placements":12,
+  "eug_placements":4,
+  "min_marks_per_eug":5,
+  "citation_bubble_class":"lp-evidence-bubble-scroll",
+  "judge_policy":{"replicas":3,"temperature":0,"top_p":1,"disagreement":"BLOCK"},
+  "epistemic_posture":"FAIL_CLOSED",
+  "notes":[
+    "External institutional evidence is separated from personal implementation proof.",
+    "Candidate commit-level observations lacking exact locators are not published as claims.",
+    "Derived arithmetic is explicitly labelled DERIVED_DETERMINISTIC."
+  ]
+}
+</script>
+</body>
+</html>
