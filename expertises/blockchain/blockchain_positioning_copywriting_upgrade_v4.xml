@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page_upgrade_specification version="4.0" status="REVIEW_ONLY_FAIL_CLOSED">
+  <metadata>
+    <concerned_page>https://mickael-umt.com/expertises/blockchain/</concerned_page>
+    <canonical_path>/expertises/blockchain/</canonical_path>
+    <repository>mckeopharma-web/copywriting</repository>
+    <source_html_path>expertises/blockchain/blockchain.html</source_html_path>
+    <target_path>expertises/blockchain/blockchain_positioning_copywriting_upgrade_v4.xml</target_path>
+    <predecessor>expertises/blockchain/blockchain_positioning_copywriting_upgrade_v3.xml</predecessor>
+    <generated_at>2026-09-03</generated_at>
+    <language>English</language>
+    <scope>ONLY_BLOCKCHAIN_PAGE</scope>
+    <change_mode>SUPERSESSION_PATCH_CREATE_ONLY</change_mode>
+    <website_mutation>false</website_mutation>
+    <publish_tree_mutation>false</publish_tree_mutation>
+    <google_drive_mutation>false</google_drive_mutation>
+    <neofort_mutation>false</neofort_mutation>
+    <structure_lock>true</structure_lock>
+    <section_reorder_allowed>false</section_reorder_allowed>
+    <raw_html_status>VERIFIED_GITHUB_FULL_NIGHT_MODE_SOURCE</raw_html_status>
+    <raw_html_theme>night</raw_html_theme>
+    <source_publication_state>PENDING_FORMAL_LLM_JUDGE</source_publication_state>
+    <reason>The full renderable night-mode HTML already exists in the repository. This artifact specifies a topology-preserving avatar/copy upgrade but does not mutate the public/publish HTML because current NeoFort publication predicates are not all PASS.</reason>
+  </metadata>
+
+  <execution_trace>
+    <initialized order="1">@neofort</initialized>
+    <initialized order="2">@GitHub</initialized>
+    <read_only_source>@Google Drive</read_only_source>
+    <read_only_source>/site via mysite</read_only_source>
+    <external_verification recency_days="30">ECB, BIS and NIST primary institutional sources</external_verification>
+    <drive_write_status>NOT_PERFORMED_REQUIRES_EXPLICIT_USER_APPROVAL</drive_write_status>
+  </execution_trace>
+
+  <policy_resolution canonical_source="@neofort" fail_mode="FAIL_CLOSED">
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true"/>
+    <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true"/>
+    <policy id="policy:blockchain:programmability-performance-evidence-v1" version="1.1" current="true"/>
+    <policy id="policy:evidence-judge-applicability:v2" current="true"/>
+    <policy id="policy:evidence-judge-verdict-normalization:v2" current="true"/>
+    <policy id="policy:llm-judge:deterministic-execution-v2" current="true" replicas="3" temperature="0" top_p="1" boolean_reduce="AND" score_reduce="MIN" disagreement="BLOCK"/>
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2" current="true"/>
+    <policy id="evidence-placement-policy:site-v5" current="true"/>
+    <policy id="policy:qgeu:data-visualization-analyst-v1" current="true"/>
+    <judge id="judge:evidence:factfulness-epistemology-methodology-v2" pass_threshold="90"/>
+    <judge id="judge:evidence-unit:champion-v2" champion_threshold="85"/>
+    <judge id="judge:evidence-unit:programmability-decision-value-v1" pass_threshold="85" champion_threshold="95"/>
+    <judge id="judge:evidence-unit:programmability-performance-v1" pass_threshold="85" champion_threshold="95"/>
+    <judge id="judge:evidence-graphic:presentation-v1" pass_threshold="90"/>
+    <judge id="judge:evidence-placement:presentation-v1.2" pass_threshold="85" champion_threshold="95"/>
+    <requested_alias note="Requested placement-v1 intent is resolved against current=true policies; obsolete aliases do not override current policy.">graph judge:eu:placementv1</requested_alias>
+  </policy_resolution>
+
+  <page_contract>
+    <category>Blockchain &amp; Verifiable Computing</category>
+    <buyer_role>Innovation lead / trust architect / technical decision owner</buyer_role>
+    <buyer_persona>Élodie Marchand</buyer_persona>
+    <canonical_job>Decide what another party must be able to verify, then choose the minimum defensible mechanism.</canonical_job>
+    <positioning_invariant>PROPERTY → VERIFIER → DISCLOSURE BOUNDARY → AUTHORITY → MINIMUM MECHANISM → INDEPENDENT ACCEPTANCE</positioning_invariant>
+    <anti_maximalist_invariant>A documented no-blockchain outcome remains a valid paid outcome when a controlled database, signature or conventional audit trail satisfies the acceptance condition.</anti_maximalist_invariant>
+    <topology>Preserve every current section id, order, navigation anchor, offer family and CTA location. Copy changes are local replacements/additions only.</topology>
+  </page_contract>
+
+  <customer_avatar_contract version="1.0" public_use_rule="ONLY_EVIDENCED_OR_EXPLICITLY_MODELLED_FIELDS">
+    <demographics_interests>
+      <field>name</field><field>age</field><field>gender</field><field>marital_status</field><field>children</field><field>location</field><field>occupation_job_title</field><field>income_or_budget</field><field>education_level</field><field>representative_quote</field><field>brands_or_influencers</field><field>books_media_newsletters</field><field>blogs_forums_communities</field><field>events_conferences</field><field>social_platforms</field>
+    </demographics_interests>
+    <frustrations_fears>night_worries; annoyances; daily_challenges; blockers; failing_systems; difficult_required_interactions; recurrent_product_or_service_complaints</frustrations_fears>
+    <wants_aspirations>self_outcomes; team_outcomes; desired_role_state; goals; values; evidence_bounded_private_aspirations</wants_aspirations>
+    <key_purchase_drivers>must_have_features; service_expectations; quality_expectations; price_and_purchase_considerations; deal_killers; objections; stakeholders; decision_maker; advocate; champion</key_purchase_drivers>
+    <before_after>HAVE; FEEL; AVERAGE_DAY; STATUS; SYSTEMIC_FAILURE_MODE_TO_GOVERNANCE_PRINCIPLE</before_after>
+    <epistemic_rule>Unknown demographic or psychographic detail MUST remain MISSING_EVIDENCE. A synthesized phrase MUST NOT be presented as a customer verbatim.</epistemic_rule>
+  </customer_avatar_contract>
+
+  <primary_avatar id="avatar-09" name="Élodie Marchand" evidence_posture="ROLE_MODEL_CURRENT_NOT_LITERAL_BIOGRAPHY">
+    <identity>
+      <field name="name" status="SUPPORTED">Élodie Marchand</field>
+      <field name="occupation_job_title" status="SUPPORTED">Responsable innovation / architecte de confiance</field>
+      <field name="decision_role" status="SUPPORTED_BOUNDED">Technical decision owner / internal advocate across a cross-functional decision unit. Budget authority is not established.</field>
+      <field name="age" status="MISSING_EVIDENCE"/>
+      <field name="gender_as_purchase_variable" status="MISSING_EVIDENCE"/>
+      <field name="marital_status" status="MISSING_EVIDENCE"/>
+      <field name="children" status="MISSING_EVIDENCE"/>
+      <field name="exact_location" status="MISSING_EVIDENCE"/>
+      <field name="individual_income" status="MISSING_EVIDENCE"/>
+      <field name="controlled_budget" status="MISSING_EVIDENCE"/>
+      <field name="formal_education" status="MISSING_EVIDENCE"/>
+      <field name="brands_influencers" status="MISSING_EVIDENCE"/>
+      <field name="books_media_newsletters" status="MISSING_EVIDENCE"/>
+      <field name="blogs_forums_communities" status="MISSING_EVIDENCE"/>
+      <field name="events_conferences" status="MISSING_EVIDENCE"/>
+      <field name="social_platforms" status="MISSING_EVIDENCE"/>
+      <field name="representative_quote" status="SYNTHESIZED_ROLE_PAIN_LANGUAGE_NOT_CUSTOMER_VERBATIM">The answer cannot remain 'trust us' when the other party is accountable for the decision.</field>
+    </identity>
+
+    <frustrations_fears>
+      <pressure id="pressure:elodie:trust-by-assertion" validation="MEDIUM_HIGH">Cross-organizational assurance breaks when verification depends on privileged access or operator assertion. Business consequences modelled: longer assurance cycles, excessive disclosure and blocked collaboration.</pressure>
+      <pressure id="pressure:elodie:policy-to-architecture-gap" validation="HIGH">Trust commitments fail when policy is not encoded into enforceable, observable architecture. Consequences modelled: policy drift, inconsistent implementation, audit friction and residual risk.</pressure>
+      <pressure id="pressure:elodie:verification-operability" validation="HIGH">A proof mechanism that cannot fit production latency, tooling and operating procedures is likely to be bypassed or remain in pilot.</pressure>
+      <boundary>No claim is made about insomnia, personal fear intensity, emotional state or frequency in a real population. Those require interviews/CRM evidence.</boundary>
+    </frustrations_fears>
+
+    <wants_aspirations>
+      <objective id="objective:elodie:verification-with-minimal-disclosure" validation="MEDIUM_HIGH">Prove selected properties without disclosing more sensitive data than necessary. Candidate metrics: verification completion time, manual evidence requests, disclosure surface, verification failure rate and reusable proof coverage.</objective>
+      <objective id="objective:elodie:enforceable-trust-controls" validation="HIGH">Translate trust and policy commitments into enforceable technical controls. Candidate metrics: policy-control coverage, exception count, policy drift and owner coverage.</objective>
+      <objective id="objective:elodie:provenance-ownership-auditability" validation="HIGH">Make data flows, ownership and provenance explicit enough to audit and challenge. Candidate metrics: lineage coverage, ownership coverage, audit-evidence retrieval time, unmapped sensitive flows and exception ageing.</objective>
+      <objective id="objective:elodie:attested-sensitive-compute" validation="HIGH_WORKLOAD_SPECIFIC">Enable selected sensitive workloads only once integrity properties can be established. Candidate metrics: attestation pass rate, protected-workload coverage, failed integrity checks, key-release blocks and verification latency.</objective>
+      <values status="SUPPORTED_AS_ARCHITECTURE_PRINCIPLES">bounded disclosure; independent verification; enforceability; provenance; operability; reversible mechanism choice</values>
+      <secret_desires status="MISSING_EVIDENCE">Do not invent status or private psychological aspirations.</secret_desires>
+    </wants_aspirations>
+
+    <key_purchase_drivers evidence_type="OFFER_FIT_AND_ROLE_MODEL_NOT_BUYER_SURVEY">
+      <must_have>Exact property to verify and named verifier.</must_have>
+      <must_have>Least-complex sufficient mechanism; database/no-chain remains admissible.</must_have>
+      <must_have>Explicit private/public disclosure boundary.</must_have>
+      <must_have>Authority and key lifecycle: authorization, delegation, revocation, recovery and escalation.</must_have>
+      <must_have>Independent acceptance procedure and reusable evidence/provenance.</must_have>
+      <must_have>Operational fit: latency, tooling, incident and handoff constraints.</must_have>
+      <service_expectation>Architecture decision and implementation evidence must remain inspectable and transferable to another technical team.</service_expectation>
+      <quality_expectation>Claims are bounded to tested properties; no universal faster/cheaper/security claim.</quality_expectation>
+      <price_purchase_considerations status="MISSING_EVIDENCE">No numeric willingness-to-pay or budget authority is established for Élodie.</price_purchase_considerations>
+      <deal_killer>Internal-only shared register where an accountable database already satisfies the verifier and evidence requirement.</deal_killer>
+      <deal_killer>No sponsor, no authorized evidence access or no concrete verifier.</deal_killer>
+      <deal_killer>Purchase intent is primarily trend/buzzword/token-price driven rather than a bounded verification need.</deal_killer>
+      <deal_killer>Request requires legal/regulatory sign-off outside the contracted role.</deal_killer>
+      <objections status="TO_VALIDATE_WITH_INTERVIEWS">Do not convert qualification rules into alleged customer objections without CRM or interview evidence.</objections>
+      <decision_unit count="8" budget_authority="UNRESOLVED">
+        <stakeholder role="Security Architecture">Trust boundaries and control acceptance</stakeholder>
+        <stakeholder role="GRC / Assurance">Assurance framework, audit evidence and residual-risk decision</stakeholder>
+        <stakeholder role="Infrastructure / Confidential Compute">Hardware/software trust chain and protected execution</stakeholder>
+        <stakeholder role="Privacy / Legal">Permissible disclosure and accountability</stakeholder>
+        <stakeholder role="Data Platform">Storage, transformation, access and provenance metadata</stakeholder>
+        <stakeholder role="Product Engineering">Workflow, release usability and latency</stakeholder>
+        <stakeholder role="Customer / Partner Assurance">External acceptance, procurement/security challenge and trust decision</stakeholder>
+        <stakeholder role="Cryptography / Applied Research">Fitness of proof/attestation mechanism</stakeholder>
+      </decision_unit>
+    </key_purchase_drivers>
+
+    <before_after>
+      <dimension name="HAVE">
+        <before status="SUPPORTED_ROLE_MODEL">Trust-by-assertion, evidence reconstructed through access-heavy/manual paths, policy commitments that may not be technically enforceable.</before>
+        <after status="SUPPORTED_ROLE_MODEL">A bounded property is independently checkable; disclosure is limited; authority is explicit; evidence/provenance can be reused.</after>
+      </dimension>
+      <dimension name="FEEL" status="MISSING_EVIDENCE">Validate by interview; do not invent anxiety, confidence or relief.</dimension>
+      <dimension name="AVERAGE_DAY" status="MODELLED_WORKFLOW_ONLY">Candidate operational change: fewer manual evidence requests and shorter evidence-retrieval/verification loops. This is not an observed performance result until measured.</dimension>
+      <dimension name="STATUS" status="MISSING_EVIDENCE">Validate organizational/status change before marketing it.</dimension>
+      <dimension name="SYSTEMIC_FAILURE_MODE_TO_GOVERNANCE_PRINCIPLE">
+        <before>Trust-by-assertion, unnecessary disclosure and non-operational proof.</before>
+        <after>Independent verification, bounded disclosure and a mechanism that can be operated, challenged, revoked and handed off.</after>
+      </dimension>
+    </before_after>
+  </primary_avatar>
+
+  <public_copy_patch section="for-whom" status="CANDIDATE_NOT_PUBLICATION_AUTHORIZED">
+    <section_anchor>#for-whom</section_anchor>
+    <existing_h2>Élodie Marchand — innovation lead / trust architect.</existing_h2>
+    <replacement_h2>Élodie Marchand — innovation lead / trust architect.</replacement_h2>
+    <lead>Decision avatar, not biography. The useful signal is not her age or lifestyle; it is the moment a third party must verify a claim, decision or execution without receiving the sensitive source data underneath it.</lead>
+    <card id="avatar-escape" label="Move away from">Trust-by-assertion; evidence reconstructed manually; policy commitments that cannot be enforced or observed; proofs that cannot be operated in production.</card>
+    <card id="avatar-achieve" label="Move toward">A selected property that another party can check independently, with bounded disclosure, explicit authority, reusable provenance and an operational acceptance procedure.</card>
+    <card id="avatar-buy" label="What earns a yes">A mechanism-neutral decision, clear verifier, controlled disclosure boundary, key/recovery model, operability constraints and a transferable verification package. A database/no-chain outcome remains admissible.</card>
+    <decision_unit>Security Architecture · GRC/Assurance · Confidential Compute · Privacy/Legal · Data Platform · Product Engineering · Customer/Partner Assurance · Cryptography/Applied Research.</decision_unit>
+    <validation_note>Budget authority, demographics, exact information sources, emotional claims and actual buyer objections are not established by the current evidence set. Validate them through interviews, CRM and analytics before using them for targeting.</validation_note>
+    <quote_repair>Remove quotation marks from the current synthesized persona statement unless a real verbatim source is registered. Do not present generated role-language as a customer quote.</quote_repair>
+    <proposed_xpath>//*[@id='for-whom']</proposed_xpath>
+    <xpath_match_count>PENDING_AFTER_PATCH_APPLICATION</xpath_match_count>
+  </public_copy_patch>
+
+  <source_registry>
+    <source id="SRC-SITE-BLOCKCHAIN" authority="PRIMARY_PAGE_SOURCE">https://mickael-umt.com/expertises/blockchain/</source>
+    <source id="SRC-GH-BLOCKCHAIN-HTML" authority="FULL_NIGHT_BUILD">mckeopharma-web/copywriting:expertises/blockchain/blockchain.html</source>
+    <source id="SRC-DRIVE-CH8-RESEARCH" access="READ_ONLY">Google Drive document 1VBRLTa8ORXQDFz3B5Ppxqjb5eNNYty3M9KyjMk9nxRg — RESEARCH Chapter 8 — Prouver une propriété sans transformer tout le système en blockchain — 2026-08-17</source>
+    <source id="SRC-DRIVE-CH8-CANON" access="READ_ONLY">Google Drive document 1ZW12K_kE7kP92SaRcQKr4H0tqdU9_mufbGgHXKmLM-8 — Chapter 8.1 buyer/page context</source>
+    <source id="SRC-NEOFORT-BUYER" authority="CURRENT_ROLE_MODEL">buyer-role:blockchain / Élodie Marchand and linked current objectives, pressures and decision unit</source>
+    <source id="SRC-MYSITE-CAPABILITIES" authority="PUBLIC_CAPABILITY_CONTEXT">Solidity/EVM first public evidence 2023-05-30; Rust 2023-09-15; Solana 2023-10; ZK/ZKML exact certificate date still to confirm</source>
+    <source id="SRC-ECB-2026-08-26" verified_on="2026-09-03" recency_days="8">https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html</source>
+    <source id="SRC-ECB-APPIA-2026-08-19" verified_on="2026-09-03" recency_days="15">https://www.ecb.europa.eu/press/intro/news/html/ecb.mipnews260819.en.html</source>
+    <source id="SRC-BIS-AGORA" verified_on="2026-09-03">https://www.bis.org/project/agora</source>
+    <source id="SRC-NIST-PQC" verified_on="2026-09-03">https://www.nist.gov/pqc</source>
+    <exclusion id="SRC-WILEY-DB-DLT">NeoFort currently contains canonical Wiley DB-vs-DLT units, but this v4 public-research loop does not add new placement reliance on that source because the user's source policy excludes paywall/subscription-wall research. Existing page use remains subject to current NeoFort judge and publication state.</exclusion>
+  </source_registry>
+
+  <evidence_state>
+    <current_page_linked_eu count="9" deterministic_preflight="PASS" factfulness="PASS" agent_exploitability="ALLOWED" all_applicable_llm_judges_pass="false"/>
+    <publication_status>BLOCKED</publication_status>
+    <publication_reason>At least one mandatory predicate remains false/pending: all applicable LLM judge snapshots are not PASS/current, and the new avatar claim anchor has not yet been applied and verified to XPath match count = 1.</publication_reason>
+    <existing_eu id="EU-CANON-BIS-AGORA-SETTLEMENT-80S-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-ECB-PONTES-AVAILABILITY-2028" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-ECB-PONTES-PRICING-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-ECB-TOKENIZED-ASSETS-GROWTH-4.96X-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-NIST-PQC-TRANSITION-2035" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING"/>
+    <existing_eu id="EU-CANON-WILEY-DB-VS-DLT-RATIO-4.22X-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING_SOURCE_POLICY_NOT_SELECTED_FOR_NEW_V4_COPY"/>
+    <existing_eu id="EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026" status="FACTFULNESS_PASS_FORMAL_LLM_PENDING_SOURCE_POLICY_NOT_SELECTED_FOR_NEW_V4_COPY"/>
+  </evidence_state>
+
+  <source_to_nlp_to_evidence_placement>
+    <sequence id="SEQ-V4-01" section="hero/consequences" buyer_question="Is the market signal real enough to justify architecture qualification without treating market growth as proof of architecture superiority?">
+      <nlp_role>CONTEXT_NOT_CAUSAL_PROOF</nlp_role>
+      <evidence_ref>EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026</evidence_ref>
+      <claim>ECB-reported market value for tokenised traditional assets on public blockchains: €4.7bn end-Q1 2025 and €23.3bn end-Q1 2026.</claim>
+      <boundary>Two observed market-value points only. No future growth, causality or DLT-superiority inference.</boundary>
+      <placement>Existing consequences evidence panel; keep progressive disclosure.</placement>
+      <status>UPSTREAM_FACTFULNESS_PASS_PUBLICATION_PENDING</status>
+    </sequence>
+    <sequence id="SEQ-V4-02" section="consequences" buyer_question="What does published Eurosystem pricing actually tell a buyer?">
+      <nlp_role>BOUND_COST_CONTEXT</nlp_role>
+      <evidence_ref>EU-CANON-ECB-PONTES-PRICING-2026</evidence_ref>
+      <claim>Published initial-launch fee schedule: €2,500 participant connection, €15,000 Market DLT operator connection, €0 fixed monthly and €0 settlement fee.</claim>
+      <boundary>Schedule only; not implementation TCO, cost savings or future pricing.</boundary>
+      <status>UPSTREAM_FACTFULNESS_PASS_PUBLICATION_PENDING</status>
+    </sequence>
+    <sequence id="SEQ-V4-03" section="consequences" buyer_question="Is availability a roadmap property rather than an observed performance metric?">
+      <nlp_role>PREDICTION_HYGIENE</nlp_role>
+      <evidence_ref>EU-CANON-ECB-PONTES-AVAILABILITY-2028</evidence_ref>
+      <claim>22.5-hours-per-business-day enhancement milestone and 24-hours-per-day target by mid-2028.</claim>
+      <epistemic_status>PLANNED</epistemic_status>
+      <boundary>Not observed availability, throughput, settlement latency or a forecast model.</boundary>
+      <status>UPSTREAM_FACTFULNESS_PASS_PUBLICATION_PENDING</status>
+    </sequence>
+    <sequence id="SEQ-V4-04" section="proposition" buyer_question="Where can programmability plausibly reduce coordination work?">
+      <nlp_role>MECHANISM_SUPPORT</nlp_role>
+      <evidence_ref>EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026</evidence_ref>
+      <claim>ECB description supports a mechanism-level statement that programmable repo lifecycle logic can reduce messaging, reconciliation and manual intervention across institutions.</claim>
+      <boundary>Qualitative mechanism support only; no quantified benefit, ROI or universal efficiency claim.</boundary>
+      <status>UPSTREAM_FACTFULNESS_PASS_PUBLICATION_PENDING</status>
+    </sequence>
+    <sequence id="SEQ-V4-05" section="for-whom" buyer_question="Who owns the decision when independent verification and bounded disclosure become material?">
+      <nlp_role>BUYER_JTBD_ROLE_MODEL</nlp_role>
+      <evidence_object_ref>buyer-role:blockchain</evidence_object_ref>
+      <evidence_object_ref>pressure:elodie:trust-by-assertion</evidence_object_ref>
+      <evidence_object_ref>pressure:elodie:policy-to-architecture-gap</evidence_object_ref>
+      <evidence_object_ref>pressure:elodie:verification-operability</evidence_object_ref>
+      <claim>Élodie is a decision avatar for the innovation/trust-architecture role; the buying situation is triggered by a need for independent verification without excessive disclosure.</claim>
+      <boundary>Role model, not demographic survey. No age, income, emotional state, social-platform preference or actual objection is inferred.</boundary>
+      <status>ROLE_CONTEXT_SUPPORTED_NEW_XPATH_AND_PRESENTATION_JUDGE_PENDING</status>
+    </sequence>
+    <sequence id="SEQ-V4-06" section="proof" buyer_question="Can the consultant demonstrate implementation-level blockchain skills without converting portfolio evidence into client-outcome claims?">
+      <nlp_role>CAPABILITY_PROOF</nlp_role>
+      <proof>Lottery dApp — substantial verified contribution, 26/29 commits; Solidity/EVM training implementation.</proof>
+      <proof>Tokenized Voting Backend — 4/4 public commits in the public repository scope; NestJS/ethers/Sepolia.</proof>
+      <proof>Folder Mapper — original non-fork public project, 7/7 commits; Rust/SQLite systems tooling.</proof>
+      <boundary>Public repositories prove implementation activity within their scope; they do not prove unmeasured production/client outcomes. Exact ZK certificate dates remain to confirm.</boundary>
+      <status>CAPABILITY_GROUNDED_NO_CLIENT_EFFECT_CLAIM</status>
+    </sequence>
+  </source_to_nlp_to_evidence_placement>
+
+  <fresh_primary_source_check run_date="2026-09-03" user_recency_preference_days="30">
+    <check source="ECB" date="2026-08-26" result="PASS">Recent primary institutional source confirms €4.7bn to €23.3bn observations and Pontes roadmap language.</check>
+    <check source="ECB" date="2026-08-19" result="PASS">Recent primary institutional source confirms Appia contact group and Pontes/Appia context.</check>
+    <check source="BIS" test_period="2026-07" result="PASS">Primary project page reports real-value testing: 28 institutions/central banks, 17 scenarios, 30 transactions, six currencies, approximately CHF 800,000 total and approximately 80 seconds average initiation-to-settlement in the controlled test context.</check>
+    <check source="NIST" updated="2026-07-28" result="PASS_WITH_SCOPE">Current PQC page is valid standards-transition context; it is not evidence of blockchain business value.</check>
+  </fresh_primary_source_check>
+
+  <validation>
+    <gate id="full_night_html_available" result="PASS"/>
+    <gate id="single_page_scope" result="PASS"/>
+    <gate id="topology_preservation_specified" result="PASS"/>
+    <gate id="customer_avatar_schema_complete" result="PASS"/>
+    <gate id="no_invented_demographics" result="PASS"/>
+    <gate id="synthesized_quote_not_misrepresented" result="PASS_IN_SPEC_PENDING_HTML_PATCH"/>
+    <gate id="evidence_recommendation_separation" result="PASS_IN_SPEC"/>
+    <gate id="fresh_primary_source_verification" result="PASS"/>
+    <gate id="google_drive_write_authorized" result="NOT_APPLICABLE_NO_WRITE_PERFORMED"/>
+    <gate id="new_for_whom_xpath_match_count_equals_1" result="PENDING"/>
+    <gate id="three_replica_applicable_llm_judges" result="PENDING"/>
+    <gate id="all_applicable_llm_judges_pass" result="FAIL_CURRENT_STATE_FALSE"/>
+    <gate id="presentation_judge" result="PENDING"/>
+    <gate id="publication" result="BLOCKED"/>
+    <final_decision>REVIEW_ARTIFACT_CAN_BE_PERSISTED__PUBLIC_HTML_MUTATION_BLOCKED</final_decision>
+  </validation>
+
+  <next_action_graph>
+    <step order="1">Apply only the #for-whom candidate patch to a draft HTML snapshot; do not touch publish/expertises/blockchain/index.html.</step>
+    <step order="2">Materialize exact new claim anchors and verify each XPath match count equals 1.</step>
+    <step order="3">Run deterministic preflight, Factfulness, applicable specialist judges, agent exploitability and placement/presentation judges on one immutable snapshot.</step>
+    <step order="4">Aggregate three replicas conservatively: AND hard gates, MIN score, disagreement blocks.</step>
+    <step order="5">Only if every mandatory predicate passes, update the publish artifact; otherwise keep BLOCKED and preserve the review artifact.</step>
+  </next_action_graph>
+
+  <git_persistence>
+    <rule>A GitHub commit proves persistence only. It does not prove evidence validity or authorize publication.</rule>
+    <expected_branch>main</expected_branch>
+    <lineage>v3 → v4</lineage>
+  </git_persistence>
+</page_upgrade_specification>
