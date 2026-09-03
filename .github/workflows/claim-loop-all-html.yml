@@ -1,0 +1,118 @@
+name: Claim loop — all HTML
+
+on:
+  push:
+    branches:
+      - claim-loop/all-html-2026-09-03
+    paths:
+      - 'tools/claim_loop_apply.py'
+      - 'tools/claim_loop_density_v11.py'
+      - '.github/workflows/claim-loop-all-html.yml'
+      - '**/*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: claim-loop-all-html-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  materialise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply external-evidence × capability copy layer
+        run: python tools/claim_loop_apply.py
+      - name: Apply NeoFort v1.1 source-per-section pre-gate
+        run: python tools/claim_loop_density_v11.py
+      - name: Normalize document contract
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          for p in sorted(Path('.').rglob('*.html')):
+              s = p.read_text(encoding='utf-8')
+              def html_open(m):
+                  tag = m.group(0)
+                  if re.search(r'\blang\s*=\s*(["\']).*?\1', tag, flags=re.I):
+                      tag = re.sub(r'\blang\s*=\s*(["\']).*?\1', 'lang="en"', tag, count=1, flags=re.I)
+                  elif re.search(r'\blang\s*=\s*[^\s>]+', tag, flags=re.I):
+                      tag = re.sub(r'\blang\s*=\s*[^\s>]+', 'lang="en"', tag, count=1, flags=re.I)
+                  else:
+                      tag = tag[:-1] + ' lang="en">'
+                  if re.search(r'\bdata-publication-status\s*=\s*(["\']).*?\1', tag, flags=re.I):
+                      tag = re.sub(r'\bdata-publication-status\s*=\s*(["\']).*?\1', 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"', tag, count=1, flags=re.I)
+                  else:
+                      tag = tag[:-1] + ' data-publication-status="PENDING_FORMAL_LLM_JUDGE">'
+                  return tag
+              s = re.sub(r'<html\b[^>]*>', html_open, s, count=1, flags=re.I)
+              s = re.sub(r'(<meta\b[^>]*\bname\s*=\s*(["\'])x-evidence-status\2[^>]*\bcontent\s*=\s*)(["\']).*?\3', r'\1"PENDING_FORMAL_LLM_JUDGE"', s, flags=re.I)
+              p.write_text(s, encoding='utf-8')
+          PY
+      - name: Verify every HTML carries NeoFort v1.1 contract
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+          root = Path('.')
+          files = sorted(root.rglob('*.html'))
+          missing=[]
+          for p in files:
+              s=p.read_text(encoding='utf-8')
+              if 'data-claim-loop-version="external-capability-v1.1"' not in s:
+                  missing.append(str(p)+':missing-loop-version-v1.1')
+              if 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"' not in s:
+                  missing.append(str(p)+':missing-fail-closed-document-status')
+              if not re.search(r'<html\b[^>]*\blang="en"', s, flags=re.I):
+                  missing.append(str(p)+':wrong-language-contract')
+              if 'claim-loop-seed-archive' not in s:
+                  missing.append(str(p)+':missing-seed-archive')
+              main = re.search(r'<main\b[^>]*class=["\'][^"\']*\bclaim-loop-page\b[^"\']*["\'][^>]*>', s, flags=re.I|re.S)
+              if not main:
+                  missing.append(str(p)+':missing-claim-loop-main')
+                  continue
+              tag=main.group(0)
+              def attr(name):
+                  m=re.search(rf'\b{name}=["\']([^"\']+)["\']', tag, flags=re.I)
+                  return m.group(1) if m else None
+              if attr('data-source-section-gate') != 'PASS':
+                  missing.append(str(p)+':source-section-gate-not-pass')
+              try:
+                  src=int(attr('data-source-count') or 0)
+                  sec=int(attr('data-section-count') or 0)
+                  ratio=float(attr('data-sources-per-section-ratio') or 0)
+              except ValueError:
+                  src=sec=0; ratio=0
+              if not (src>0 and sec>0 and ratio>0.72 and abs(ratio-(src/sec))<1e-5):
+                  missing.append(str(p)+f':invalid-density:{src}/{sec}={ratio}')
+          report=json.loads(Path('reports/claim-loop-all-html.json').read_text())
+          assert report['html_total']==len(files), (report['html_total'], len(files))
+          assert report['source_section_gate']['pass'] is True
+          assert report['source_section_gate']['threshold']==0.72
+          assert report['source_section_gate']['comparator']=='STRICT_GREATER_THAN'
+          if missing:
+              raise SystemExit('Unmaterialised/failed HTML:\n'+'\n'.join(missing))
+          print(f'PASS: {len(files)} HTML artifacts carry NeoFort v1.1 and Sou/Sec > 0.72')
+          PY
+      - name: Commit generated HTML upgrades
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No generated changes.'
+            exit 0
+          fi
+          git config user.name 'claim-loop-bot'
+          git config user.email 'claim-loop-bot@users.noreply.github.com'
+          git add -- '*.html' 'reports/claim-loop-all-html.json'
+          git commit -m 'feat(copy): apply NeoFort v1.1 source-section gate to all HTML'
+          git push
