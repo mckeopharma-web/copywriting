@@ -15,10 +15,13 @@ class SectionParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.sections: list[dict[str, str]] = []
         self.nav_hrefs: list[str] = []
+        self.element_ids: list[str] = []
         self.in_localnav = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         d = {k: (v or "") for k, v in attrs}
+        if d.get("id"):
+            self.element_ids.append(d["id"])
         if tag == "nav" and d.get("class") == "localnav":
             self.in_localnav = True
         if tag == "section":
@@ -61,9 +64,9 @@ def main() -> None:
         fail(f"local navigation order mismatch: {parser.nav_hrefs} != {expected_nav}")
 
     for claim_id in contract["preserve"]["evidence_claim_ids"]:
-        count = len(re.findall(rf'\bid=["\']{re.escape(claim_id)}["\']', html))
+        count = parser.element_ids.count(claim_id)
         if count != 1:
-            fail(f"evidence claim anchor {claim_id} occurs {count} times")
+            fail(f"evidence claim anchor {claim_id} occurs {count} times as an element id")
 
     for target in contract["preserve"]["required_cta_targets"]:
         if f'href="{target}"' not in html:
