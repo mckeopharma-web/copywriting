@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-claim-loop-version="external-capability-v1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,85 +13,69 @@
     .boot-kicker{margin:0 0 10px;color:var(--cyan);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}.boot h1{margin:0 0 10px;font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.08}.boot p{margin:0;color:var(--silver);line-height:1.65}.boot a{color:var(--cyan)}
   </style>
 </head>
-<body>
-  <main class="boot" id="boot" aria-live="polite">
-    <div class="boot-card">
-      <p class="boot-kicker">Night-mode review renderer</p>
-      <h1>HealthTech &amp; PharmaTech Product Engineering</h1>
-      <p>Loading the complete lossless page snapshot and applying the accessible citation review layer.</p>
-    </div>
-  </main>
-<script>
-(() => {
-  'use strict';
-  const BASE = 'https://raw.githubusercontent.com/mckeopharma-web/copywriting/main/expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html';
+<body><!-- CLAIM_LOOP_UPGRADE_BEGIN -->
+<style>
+:root{--cl-bg:#060820;--cl-panel:#0d1230;--cl-text:#f5f7ff;--cl-muted:#a9b2d0;--cl-line:#29325c;--cl-accent:#8fa5ff;--cl-ok:#72e0b4}
+*{box-sizing:border-box}body{margin:0;background:var(--cl-bg);color:var(--cl-text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+.claim-loop-page{max-width:1120px;margin:0 auto;padding:64px 24px 96px}.cl-kicker{font:600 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.11em;text-transform:uppercase;color:var(--cl-accent)}
+h1{font-size:clamp(38px,6vw,76px);line-height:.98;letter-spacing:-.04em;max-width:1000px;margin:18px 0 22px}.cl-lead{font-size:clamp(19px,2.4vw,28px);max-width:900px;color:#dbe1ff}
+.cl-contract{margin:36px 0;padding:16px 18px;border:1px solid var(--cl-line);border-radius:16px;background:linear-gradient(180deg,#111735,#0a0e24);color:var(--cl-muted)}
+.cl-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:44px}.cl-claim{grid-column:span 6;background:var(--cl-panel);border:1px solid var(--cl-line);border-radius:20px;padding:24px}.cl-claim p{font-size:20px;margin:8px 0 18px}
+.cl-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--cl-ok)}.cl-sources{display:flex;flex-direction:column;gap:8px}.cl-ref,a{color:#b7c5ff;text-decoration-thickness:1px;text-underline-offset:3px}
+.cl-section{margin-top:56px;border-top:1px solid var(--cl-line);padding-top:28px}.cl-section h2{font-size:28px;letter-spacing:-.02em}.cl-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0;list-style:none}.cl-list li{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid var(--cl-line);border-radius:14px;background:#090d22}.cl-list small{color:var(--cl-muted)}
+.cl-boundary{border-left:3px solid var(--cl-accent);padding:3px 0 3px 18px;color:var(--cl-muted);max-width:900px}.cl-bib li{margin:.55em 0}.cl-meta{margin-top:60px;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#7f89ab;word-break:break-word}
+@media(max-width:760px){.cl-claim{grid-column:1/-1}.cl-list{grid-template-columns:1fr}.claim-loop-page{padding-top:42px}}
+</style>
+<main class="claim-loop-page" data-claim-loop="loop:copy-claim:external-capability-v1" data-judge="judge:copy-claim:external-capability-grounding-v1" data-capability-snapshot="capability-invariant:cv-derived:2026-09-03" data-commercial-snapshot="commercial-context:catalogue:2026-09-03" data-publication-status="PENDING_FORMAL_LLM_JUDGE">
+  <header>
+    <div class="cl-kicker">Evidence-led consulting · external research × proven capability</div>
+    <h1>HealthTech &amp; PharmaTech Product Engineering</h1>
+    <p class="cl-lead">Build health-data products around interoperability, traceable state changes, controlled evidence and accountable review — before adding automation.</p>
+    <div class="cl-contract"><strong>Copy contract.</strong> Existing page copy is retained only as an iteration-0 seed. Visible claims below are compressed from external sources and bounded by CV-derived capabilities. Products and configurations can specialise the offer, but cannot create evidence or expand the capability boundary. Formal publication remains fail-closed until the three-replica NeoFort judge passes.</div>
+  </header>
 
-  const reviewCss = `
-    #evidence-review-status{position:fixed;z-index:99999;left:50%;bottom:14px;transform:translateX(-50%);max-width:min(760px,calc(100vw - 28px));padding:9px 13px;border:1px solid color-mix(in srgb,var(--warning,#f3b83f) 50%,transparent);border-radius:999px;background:color-mix(in srgb,var(--navy,#060820) 94%,transparent);box-shadow:0 12px 44px rgba(0,0,0,.32);color:var(--paper,#f1f5ff);font-size:.72rem;line-height:1.35;text-align:center;backdrop-filter:blur(12px)}
-    .evidence-cite{font-variant-numeric:tabular-nums;min-inline-size:1.7em;min-block-size:1.7em}
-    .evidence-cite[aria-expanded="true"]{color:var(--cyan,#19d3e2)}
-    .evidence-panel{scroll-margin-top:96px}
-    .evidence-panel:focus-visible{outline:2px solid var(--cyan,#19d3e2);outline-offset:3px}
-    @media(max-width:680px){#evidence-review-status{border-radius:14px;bottom:8px}}
-    @media print{#evidence-review-status{display:none!important}}
-  `;
+  <section class="cl-grid" aria-label="Research-compressed claims"><article class="cl-claim" data-claim-index="1" data-claim-status="EXTERNAL_COMPRESSION_PENDING_FORMAL_JUDGE">
+              <div class="cl-eyebrow">Research-compressed claim 01</div>
+              <p>EHDS establishes common rules, infrastructure and governance for primary and secondary use of electronic health data and specifies interoperability and logging components for EHR systems.</p>
+              <div class="cl-sources"><a class="cl-ref" href="https://eur-lex.europa.eu/eli/reg/2025/327/oj/" target="_blank" rel="noopener noreferrer">[1] EUR-Lex — Regulation (EU) 2025/327, European Health Data Space</a> <a class="cl-ref" href="https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf" target="_blank" rel="noopener noreferrer">[2] ICH E6(R3) — Good Clinical Practice guideline</a></div>
+            </article><article class="cl-claim" data-claim-index="2" data-claim-status="EXTERNAL_COMPRESSION_PENDING_FORMAL_JUDGE">
+              <div class="cl-eyebrow">Research-compressed claim 02</div>
+              <p>Risk-based software assurance emphasises confidence in automation through appropriate testing and objective evidence rather than undifferentiated documentation volume.</p>
+              <div class="cl-sources"><a class="cl-ref" href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software" target="_blank" rel="noopener noreferrer">[1] FDA — Computer Software Assurance, final guidance (2026)</a> <a class="cl-ref" href="https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf" target="_blank" rel="noopener noreferrer">[2] ICH E6(R3) — Good Clinical Practice guideline</a></div>
+            </article></section>
 
-  const reviewJs = `
-  (()=>{
-    const status=document.createElement('div');
-    status.id='evidence-review-status';
-    status.setAttribute('role','note');
-    status.textContent='Evidence review preview — references are provisional until their source and placement validation is complete.';
-    document.body.appendChild(status);
+  <section class="cl-section">
+    <div class="cl-kicker">Invariant factor</div>
+    <h2>Capabilities this positioning is allowed to sell</h2>
+    <ul class="cl-list"><li><span>Opérations pharmaceutiques et réglementées</span><small>CV-derived capability · capability-invariant:cv-derived:2026-09-03</small></li><li><span>Ingénierie web et produit</span><small>CV-derived capability · capability-invariant:cv-derived:2026-09-03</small></li><li><span>Architecture data, DDD et événements</span><small>CV-derived capability · capability-invariant:cv-derived:2026-09-03</small></li><li><span>Gouvernance et assurance IA</span><small>CV-derived capability · capability-invariant:cv-derived:2026-09-03</small></li></ul>
+  </section>
 
-    document.querySelectorAll('.evidence-cite[data-evidence-trigger]').forEach((btn,index)=>{
-      const n=btn.dataset.evidenceTrigger || String(index+1);
-      btn.textContent='['+n+']';
-      if(!btn.id) btn.id='evidence-trigger-'+n;
-      btn.setAttribute('aria-label','Evidence source ['+n+']');
-      btn.setAttribute('aria-haspopup','true');
-      const panelId=btn.getAttribute('aria-controls');
-      const panel=panelId ? document.getElementById(panelId) : null;
-      if(!panel) return;
-      panel.setAttribute('aria-labelledby',btn.id);
-      panel.setAttribute('tabindex','-1');
-      let pinned=false;
-      const show=()=>{ panel.hidden=false; btn.setAttribute('aria-expanded','true'); };
-      const close=(restore=false)=>{ pinned=false; panel.hidden=true; btn.setAttribute('aria-expanded','false'); if(restore) btn.focus(); };
-      const maybeClose=()=>setTimeout(()=>{ if(!pinned && !panel.matches(':hover') && !panel.contains(document.activeElement) && document.activeElement!==btn) close(false); },90);
-      btn.addEventListener('mouseenter',show);
-      btn.addEventListener('focus',show);
-      btn.addEventListener('mouseleave',maybeClose);
-      btn.addEventListener('click',ev=>{ ev.preventDefault(); ev.stopPropagation(); if(pinned){ close(false); } else { pinned=true; show(); panel.focus({preventScroll:true}); } });
-      panel.addEventListener('mouseleave',maybeClose);
-      panel.addEventListener('focusout',maybeClose);
-      [btn,panel].forEach(el=>el.addEventListener('keydown',ev=>{ if(ev.key==='Escape'){ ev.preventDefault(); close(true); } }));
-    });
+  <section class="cl-section">
+    <div class="cl-kicker">Semi-mobile factor</div>
+    <h2>Current products and delivery configurations</h2>
+    <ul class="cl-list"><li><a href="https://mickael-umt.com/ressources/produits/?browse=all#catalogue">Framework Diagnostic IA</a><small>semi-mobile commercial context · not evidentiary proof</small></li><li><a href="https://mickael-umt.com/ressources/produits/?browse=all#catalogue">Office Hours</a><small>semi-mobile commercial context · not evidentiary proof</small></li><li><a href="https://mickael-umt.com/ressources/produits/?browse=all#catalogue">Pack Cadrage — Framework diagnostic &amp; séance collective</a><small>semi-mobile commercial context · not evidentiary proof</small></li><li><a href="https://mickael-umt.com/ressources/produits/?browse=all#catalogue">Note de périmètre — Assurance preuve-décision pharmaceutique</a><small>semi-mobile commercial context · not evidentiary proof</small></li></ul>
+  </section>
 
-    document.querySelectorAll('.lp-evidence-register__num').forEach(el=>{
-      const n=(el.textContent||'').match(/\\d+/);
-      if(n) el.textContent='['+n[0]+']';
-    });
+  <section class="cl-section">
+    <div class="cl-kicker">Boundary</div>
+    <h2>What the copy does not claim</h2>
+    <p class="cl-boundary">No guaranteed business, regulatory, safety or performance outcome is inferred from a publication, technology or capability. External sources establish the problem/mechanism boundary; CV-derived evidence establishes delivery capability; product context only determines how that capability can currently be packaged.</p>
+  </section>
 
-    document.querySelectorAll('.evidence-panel__meta span').forEach(el=>{
-      if(/Publication:/i.test(el.textContent||'')) el.textContent='Review status: provisional reference; validation pending.';
-    });
-    document.querySelectorAll('.lp-evidence-register__status').forEach(el=>{
-      el.textContent='Provisional reference — validation pending.';
-    });
-  })();`;
+  <section class="cl-section">
+    <div class="cl-kicker">External evidence</div>
+    <h2>Bibliography</h2>
+    <ol class="cl-bib"><li><a href="https://eur-lex.europa.eu/eli/reg/2025/327/oj/" target="_blank" rel="noopener noreferrer">EUR-Lex — Regulation (EU) 2025/327, European Health Data Space</a></li><li><a href="https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf" target="_blank" rel="noopener noreferrer">ICH E6(R3) — Good Clinical Practice guideline</a></li><li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software" target="_blank" rel="noopener noreferrer">FDA — Computer Software Assurance, final guidance (2026)</a></li></ol>
+  </section>
 
-  async function boot(){
-    try{
-      const response=await fetch(BASE,{cache:'no-store',mode:'cors'});
-      if(!response.ok) throw new Error('HTTP '+response.status);
-      let html=await response.text();
-      html=html.replace(/<html([^>]*)>/i,(m,a)=>{
-        const cleaned=a.replace(/\\sdata-theme=("[^"]*"|'[^']*')/i,'').replace(/\\slang=("[^"]*"|'[^']*')/i,'');
-        return '<html'+cleaned+' data-theme="dark" lang="en">';
-      });
-      html=html.replace('</head>', '<meta name="robots" content="noindex,nofollow"><style id="evidence-review-layer">'+reviewCss+'</style></head>');
-      html=html.replace('</body>', '<script id="evidence-review-runtime">'+reviewJs+'<\\/script></body>');
+  <section class="cl-section">
+    <a href="https://mickael-umt.com/ressources/produits/?browse=all#catalogue">Review current products and configurations →</a>
+  </section>
+
+  <div class="cl-meta">artifact=expertises/healthtech-product/healthtech-product_lossless-evidence-v1.3-review_2026-09-02.html · loop=loop:copy-claim:external-capability-v1 · judge=judge:copy-claim:external-capability-grounding-v1 · seed_sha256=31ebc2cb2fef07a97eb1e45ca2a5a9699e6c5d75b351cf3e0fad1c3c751ce951</div>
+</main>
+<script type="application/octet-stream" id="claim-loop-seed-archive" data-encoding="base64" data-sha256="31ebc2cb2fef07a97eb1e45ca2a5a9699e6c5d75b351cf3e0fad1c3c751ce951">CiAgPG1haW4gY2xhc3M9ImJvb3QiIGlkPSJib290IiBhcmlhLWxpdmU9InBvbGl0ZSI+CiAgICA8ZGl2IGNsYXNzPSJib290LWNhcmQiPgogICAgICA8cCBjbGFzcz0iYm9vdC1raWNrZXIiPk5pZ2h0LW1vZGUgcmV2aWV3IHJlbmRlcmVyPC9wPgogICAgICA8aDE+SGVhbHRoVGVjaCAmYW1wOyBQaGFybWFUZWNoIFByb2R1Y3QgRW5naW5lZXJpbmc8L2gxPgogICAgICA8cD5Mb2FkaW5nIHRoZSBjb21wbGV0ZSBsb3NzbGVzcyBwYWdlIHNuYXBzaG90IGFuZCBhcHBseWluZyB0aGUgYWNjZXNzaWJsZSBjaXRhdGlvbiByZXZpZXcgbGF5ZXIuPC9wPgogICAgPC9kaXY+CiAgPC9tYWluPgo8c2NyaXB0PgooKCkgPT4gewogICd1c2Ugc3RyaWN0JzsKICBjb25zdCBCQVNFID0gJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9tY2tlb3BoYXJtYS13ZWIvY29weXdyaXRpbmcvbWFpbi9leHBlcnRpc2VzL2hlYWx0aHRlY2gtcHJvZHVjdC9oZWFsdGh0ZWNoLXByb2R1Y3RfbG9zc2xlc3MtZXZpZGVuY2UtdjEuMl8yMDI2LTA5LTAyLmh0bWwnOwoKICBjb25zdCByZXZpZXdDc3MgPSBgCiAgICAjZXZpZGVuY2UtcmV2aWV3LXN0YXR1c3twb3NpdGlvbjpmaXhlZDt6LWluZGV4Ojk5OTk5O2xlZnQ6NTAlO2JvdHRvbToxNHB4O3RyYW5zZm9ybTp0cmFuc2xhdGVYKC01MCUpO21heC13aWR0aDptaW4oNzYwcHgsY2FsYygxMDB2dyAtIDI4cHgpKTtwYWRkaW5nOjlweCAxM3B4O2JvcmRlcjoxcHggc29saWQgY29sb3ItbWl4KGluIHNyZ2IsdmFyKC0td2FybmluZywjZjNiODNmKSA1MCUsdHJhbnNwYXJlbnQpO2JvcmRlci1yYWRpdXM6OTk5cHg7YmFja2dyb3VuZDpjb2xvci1taXgoaW4gc3JnYix2YXIoLS1uYXZ5LCMwNjA4MjApIDk0JSx0cmFuc3BhcmVudCk7Ym94LXNoYWRvdzowIDEycHggNDRweCByZ2JhKDAsMCwwLC4zMik7Y29sb3I6dmFyKC0tcGFwZXIsI2YxZjVmZik7Zm9udC1zaXplOi43MnJlbTtsaW5lLWhlaWdodDoxLjM1O3RleHQtYWxpZ246Y2VudGVyO2JhY2tkcm9wLWZpbHRlcjpibHVyKDEycHgpfQogICAgLmV2aWRlbmNlLWNpdGV7Zm9udC12YXJpYW50LW51bWVyaWM6dGFidWxhci1udW1zO21pbi1pbmxpbmUtc2l6ZToxLjdlbTttaW4tYmxvY2stc2l6ZToxLjdlbX0KICAgIC5ldmlkZW5jZS1jaXRlW2FyaWEtZXhwYW5kZWQ9InRydWUiXXtjb2xvcjp2YXIoLS1jeWFuLCMxOWQzZTIpfQogICAgLmV2aWRlbmNlLXBhbmVse3Njcm9sbC1tYXJnaW4tdG9wOjk2cHh9CiAgICAuZXZpZGVuY2UtcGFuZWw6Zm9jdXMtdmlzaWJsZXtvdXRsaW5lOjJweCBzb2xpZCB2YXIoLS1jeWFuLCMxOWQzZTIpO291dGxpbmUtb2Zmc2V0OjNweH0KICAgIEBtZWRpYShtYXgtd2lkdGg6NjgwcHgpeyNldmlkZW5jZS1yZXZpZXctc3RhdHVze2JvcmRlci1yYWRpdXM6MTRweDtib3R0b206OHB4fX0KICAgIEBtZWRpYSBwcmludHsjZXZpZGVuY2UtcmV2aWV3LXN0YXR1c3tkaXNwbGF5Om5vbmUhaW1wb3J0YW50fX0KICBgOwoKICBjb25zdCByZXZpZXdKcyA9IGAKICAoKCk9PnsKICAgIGNvbnN0IHN0YXR1cz1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKICAgIHN0YXR1cy5pZD0nZXZpZGVuY2UtcmV2aWV3LXN0YXR1cyc7CiAgICBzdGF0dXMuc2V0QXR0cmlidXRlKCdyb2xlJywnbm90ZScpOwogICAgc3RhdHVzLnRleHRDb250ZW50PSdFdmlkZW5jZSByZXZpZXcgcHJldmlldyDigJQgcmVmZXJlbmNlcyBhcmUgcHJvdmlzaW9uYWwgdW50aWwgdGhlaXIgc291cmNlIGFuZCBwbGFjZW1lbnQgdmFsaWRhdGlvbiBpcyBjb21wbGV0ZS4nOwogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChzdGF0dXMpOwoKICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5ldmlkZW5jZS1jaXRlW2RhdGEtZXZpZGVuY2UtdHJpZ2dlcl0nKS5mb3JFYWNoKChidG4saW5kZXgpPT57CiAgICAgIGNvbnN0IG49YnRuLmRhdGFzZXQuZXZpZGVuY2VUcmlnZ2VyIHx8IFN0cmluZyhpbmRleCsxKTsKICAgICAgYnRuLnRleHRDb250ZW50PSdbJytuKyddJzsKICAgICAgaWYoIWJ0bi5pZCkgYnRuLmlkPSdldmlkZW5jZS10cmlnZ2VyLScrbjsKICAgICAgYnRuLnNldEF0dHJpYnV0ZSgnYXJpYS1sYWJlbCcsJ0V2aWRlbmNlIHNvdXJjZSBbJytuKyddJyk7CiAgICAgIGJ0bi5zZXRBdHRyaWJ1dGUoJ2FyaWEtaGFzcG9wdXAnLCd0cnVlJyk7CiAgICAgIGNvbnN0IHBhbmVsSWQ9YnRuLmdldEF0dHJpYnV0ZSgnYXJpYS1jb250cm9scycpOwogICAgICBjb25zdCBwYW5lbD1wYW5lbElkID8gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQocGFuZWxJZCkgOiBudWxsOwogICAgICBpZighcGFuZWwpIHJldHVybjsKICAgICAgcGFuZWwuc2V0QXR0cmlidXRlKCdhcmlhLWxhYmVsbGVkYnknLGJ0bi5pZCk7CiAgICAgIHBhbmVsLnNldEF0dHJpYnV0ZSgndGFiaW5kZXgnLCctMScpOwogICAgICBsZXQgcGlubmVkPWZhbHNlOwogICAgICBjb25zdCBzaG93PSgpPT57IHBhbmVsLmhpZGRlbj1mYWxzZTsgYnRuLnNldEF0dHJpYnV0ZSgnYXJpYS1leHBhbmRlZCcsJ3RydWUnKTsgfTsKICAgICAgY29uc3QgY2xvc2U9KHJlc3RvcmU9ZmFsc2UpPT57IHBpbm5lZD1mYWxzZTsgcGFuZWwuaGlkZGVuPXRydWU7IGJ0bi5zZXRBdHRyaWJ1dGUoJ2FyaWEtZXhwYW5kZWQnLCdmYWxzZScpOyBpZihyZXN0b3JlKSBidG4uZm9jdXMoKTsgfTsKICAgICAgY29uc3QgbWF5YmVDbG9zZT0oKT0+c2V0VGltZW91dCgoKT0+eyBpZighcGlubmVkICYmICFwYW5lbC5tYXRjaGVzKCc6aG92ZXInKSAmJiAhcGFuZWwuY29udGFpbnMoZG9jdW1lbnQuYWN0aXZlRWxlbWVudCkgJiYgZG9jdW1lbnQuYWN0aXZlRWxlbWVudCE9PWJ0bikgY2xvc2UoZmFsc2UpOyB9LDkwKTsKICAgICAgYnRuLmFkZEV2ZW50TGlzdGVuZXIoJ21vdXNlZW50ZXInLHNob3cpOwogICAgICBidG4uYWRkRXZlbnRMaXN0ZW5lcignZm9jdXMnLHNob3cpOwogICAgICBidG4uYWRkRXZlbnRMaXN0ZW5lcignbW91c2VsZWF2ZScsbWF5YmVDbG9zZSk7CiAgICAgIGJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsZXY9PnsgZXYucHJldmVudERlZmF1bHQoKTsgZXYuc3RvcFByb3BhZ2F0aW9uKCk7IGlmKHBpbm5lZCl7IGNsb3NlKGZhbHNlKTsgfSBlbHNlIHsgcGlubmVkPXRydWU7IHNob3coKTsgcGFuZWwuZm9jdXMoe3ByZXZlbnRTY3JvbGw6dHJ1ZX0pOyB9IH0pOwogICAgICBwYW5lbC5hZGRFdmVudExpc3RlbmVyKCdtb3VzZWxlYXZlJyxtYXliZUNsb3NlKTsKICAgICAgcGFuZWwuYWRkRXZlbnRMaXN0ZW5lcignZm9jdXNvdXQnLG1heWJlQ2xvc2UpOwogICAgICBbYnRuLHBhbmVsXS5mb3JFYWNoKGVsPT5lbC5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJyxldj0+eyBpZihldi5rZXk9PT0nRXNjYXBlJyl7IGV2LnByZXZlbnREZWZhdWx0KCk7IGNsb3NlKHRydWUpOyB9IH0pKTsKICAgIH0pOwoKICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5scC1ldmlkZW5jZS1yZWdpc3Rlcl9fbnVtJykuZm9yRWFjaChlbD0+ewogICAgICBjb25zdCBuPShlbC50ZXh0Q29udGVudHx8JycpLm1hdGNoKC9cXGQrLyk7CiAgICAgIGlmKG4pIGVsLnRleHRDb250ZW50PSdbJytuWzBdKyddJzsKICAgIH0pOwoKICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5ldmlkZW5jZS1wYW5lbF9fbWV0YSBzcGFuJykuZm9yRWFjaChlbD0+ewogICAgICBpZigvUHVibGljYXRpb246L2kudGVzdChlbC50ZXh0Q29udGVudHx8JycpKSBlbC50ZXh0Q29udGVudD0nUmV2aWV3IHN0YXR1czogcHJvdmlzaW9uYWwgcmVmZXJlbmNlOyB2YWxpZGF0aW9uIHBlbmRpbmcuJzsKICAgIH0pOwogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLmxwLWV2aWRlbmNlLXJlZ2lzdGVyX19zdGF0dXMnKS5mb3JFYWNoKGVsPT57CiAgICAgIGVsLnRleHRDb250ZW50PSdQcm92aXNpb25hbCByZWZlcmVuY2Ug4oCUIHZhbGlkYXRpb24gcGVuZGluZy4nOwogICAgfSk7CiAgfSkoKTtgOwoKICBhc3luYyBmdW5jdGlvbiBib290KCl7CiAgICB0cnl7CiAgICAgIGNvbnN0IHJlc3BvbnNlPWF3YWl0IGZldGNoKEJBU0Use2NhY2hlOiduby1zdG9yZScsbW9kZTonY29ycyd9KTsKICAgICAgaWYoIXJlc3BvbnNlLm9rKSB0aHJvdyBuZXcgRXJyb3IoJ0hUVFAgJytyZXNwb25zZS5zdGF0dXMpOwogICAgICBsZXQgaHRtbD1hd2FpdCByZXNwb25zZS50ZXh0KCk7CiAgICAgIGh0bWw9aHRtbC5yZXBsYWNlKC88aHRtbChbXj5dKik+L2ksKG0sYSk9PnsKICAgICAgICBjb25zdCBjbGVhbmVkPWEucmVwbGFjZSgvXFxzZGF0YS10aGVtZT0oIlteIl0qInwnW14nXSonKS9pLCcnKS5yZXBsYWNlKC9cXHNsYW5nPSgiW14iXSoifCdbXiddKicpL2ksJycpOwogICAgICAgIHJldHVybiAnPGh0bWwnK2NsZWFuZWQrJyBkYXRhLXRoZW1lPSJkYXJrIiBsYW5nPSJlbiI+JzsKICAgICAgfSk7CiAgICAgIGh0bWw9aHRtbC5yZXBsYWNlKCc8L2hlYWQ+JywgJzxtZXRhIG5hbWU9InJvYm90cyIgY29udGVudD0ibm9pbmRleCxub2ZvbGxvdyI+PHN0eWxlIGlkPSJldmlkZW5jZS1yZXZpZXctbGF5ZXIiPicrcmV2aWV3Q3NzKyc8L3N0eWxlPjwvaGVhZD4nKTsKICAgICAgaHRtbD1odG1sLnJlcGxhY2UoJw==</script>
+<!-- CLAIM_LOOP_UPGRADE_END --></body>', '<script id="evidence-review-runtime">'+reviewJs+'<\\/script></body>');
       document.open();
       document.write(html);
       document.close();
