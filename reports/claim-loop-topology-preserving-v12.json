@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 34,
+  "html_total": 35,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -105,6 +105,31 @@
         "commitments",
         "questions",
         "engagement"
+      ]
+    },
+    {
+      "path": "engagement/audiences/avatar-training.html",
+      "family": "training",
+      "source_count": 6,
+      "section_count": 3,
+      "sources_per_section_ratio": 2.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "__anonymous_section_001",
+        "avatar",
+        "demographics"
+      ],
+      "topology_sha256": "59d163c33fc013480167bf5a427f3765baf14265b49b2637209aa40073f5eebc",
+      "section_ids": [
+        "__anonymous_section_001",
+        "avatar",
+        "demographics",
+        "frustrations",
+        "wants",
+        "drivers",
+        "transformation",
+        "offer",
+        "validation"
       ]
     },
     {
