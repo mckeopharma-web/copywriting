@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 33,
+  "html_total": 34,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -39,6 +39,39 @@
         "capability",
         "qualification",
         "references"
+      ]
+    },
+    {
+      "path": "engagement/audiences/avatar-ai-security-customer-avatar.html",
+      "family": "ai-security",
+      "source_count": 10,
+      "section_count": 3,
+      "sources_per_section_ratio": 3.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "7e76265d0745a98dbe28fa8aba38439c771f5c56147518833126d3e192be2bd9",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "buyer",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "before-after",
+        "results",
+        "evidence",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "questions",
+        "engagement"
       ]
     },
     {
