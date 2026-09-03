@@ -776,9 +776,9 @@
     {
       "path": "pages/realisations/ia-agents.html",
       "family": "agentic",
-      "source_count": 8,
+      "source_count": 6,
       "section_count": 3,
-      "sources_per_section_ratio": 2.666667,
+      "sources_per_section_ratio": 2.0,
       "gate": "PASS",
       "research_anchor_sections": [
         "ia-agents-hero",
