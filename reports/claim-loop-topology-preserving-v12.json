@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 39,
+  "html_total": 40,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -130,6 +130,40 @@
         "transformation",
         "offer",
         "validation"
+      ]
+    },
+    {
+      "path": "expertises/agentic-ai/agentic-ai-avatar-v2-devicev-review.html",
+      "family": "agentic",
+      "source_count": 12,
+      "section_count": 3,
+      "sources_per_section_ratio": 4.0,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "b1c02c15e0775c0b35404cbc1f173ee8fb0ab1cdd3f6c4f70572035ca23daabe",
+      "section_ids": [
+        "hero",
+        "triggers",
+        "consequences",
+        "audience",
+        "qualification",
+        "proposition",
+        "offers",
+        "deliverables",
+        "transformation",
+        "results",
+        "proofs",
+        "scope",
+        "process",
+        "modules",
+        "intersection",
+        "commitments",
+        "faq",
+        "engagement"
       ]
     },
     {
