@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pageContractAudit version="1.0" targetPage="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/" executionPosture="FAIL_CLOSED" decision="BLOCKED">
+  <scope>
+    <pageOnly>/programme/pharmaceutical-evidence-assurance/</pageOnly>
+    <otherPageCUD>FORBIDDEN</otherPageCUD>
+    <googleDriveWrite>NOT_PERFORMED_REQUIRES_EXPLICIT_APPROVAL</googleDriveWrite>
+  </scope>
+  <policyResolution authority="NeoFort" selector="current=true">
+    <deterministicPreflight>RESOLVED</deterministicPreflight>
+    <factfulness>RESOLVED</factfulness>
+    <judgeApplicability>RESOLVED</judgeApplicability>
+    <agentExploitability>RESOLVED</agentExploitability>
+    <evidencePlacement>RESOLVED</evidencePlacement>
+    <requestedJudgeAlias id="judge:eu:placementv1" currentResolution="NOT_FOUND_AS_CURRENT_JUDGE" />
+    <currentExternalCapabilityJudge id="judge:copy-claim:external-capability-grounding-v1.1" version="1.1.0" replicas="3" temperature="0" failClosed="true" />
+    <repositoryEmbeddedJudge id="judge:copy-claim:external-capability-grounding-v1.2" currentInNeoFort="false" />
+  </policyResolution>
+  <canonicalSectionContract source="source-first-atomic-design-v4" sequence="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8">
+    <slot position="0" id="0" name="hero" />
+    <slot position="1" id="11" name="triggers" />
+    <slot position="2" id="20" name="problems" />
+    <slot position="3" id="13" name="audience" />
+    <slot position="4" id="14" name="qualification" />
+    <slot position="5" id="1" name="proposition" />
+    <slot position="6" id="2" name="value" />
+    <slot position="7" id="10" name="offers" />
+    <slot position="8" id="15" name="product" />
+    <slot position="9" id="3" name="transformation" />
+    <slot position="10" id="12" name="before_after" />
+    <slot position="11" id="19" name="results" />
+    <slot position="12" id="4" name="proof" />
+    <slot position="13" id="16" name="scope" />
+    <slot position="14" id="17" name="phases" />
+    <slot position="15" id="18" name="modules" />
+    <slot position="16" id="5" name="capabilities" />
+    <slot position="17" id="21" name="intersection" />
+    <slot position="18" id="6" name="benchmark" />
+    <slot position="19" id="22" name="guarantee" />
+    <slot position="20" id="23" name="faq" />
+    <slot position="21" id="7" name="engagement" />
+    <slot position="22" id="8" name="lead_form" />
+  </canonicalSectionContract>
+  <representations>
+    <live href="pharmaceutical-evidence-assurance.live.xml" majorAnchors="17" leadForm="present" rawHtmlDownload="HTTP_403" />
+    <repository href="pharmaceutical-evidence-assurance.repo.xml" majorAnchors="17" leadForm="missing" blobSha="c4f36103f4ad7edb582502934952d11e4a84f245" language="en" theme="dark" />
+  </representations>
+  <contractDiff>
+    <match code="ANCHOR_ORDER" severity="INFO" result="PASS">The 17 named major anchors are aligned in order between the live page and the standalone repository HTML.</match>
+    <mismatch code="LIVE_FORM_MISSING_IN_REPO" severity="BLOCKING" result="FAIL">The live page contains a three-screen qualification lead form after engagement; the repository standalone HTML does not.</mismatch>
+    <mismatch code="VISIBLE_COPY_POSITIONING_DIVERGENCE" severity="HIGH" result="FAIL">The live source of truth is French and preserves the current commercial positioning; the repository fallback is substantially rewritten in English.</mismatch>
+    <mismatch code="STALE_JUDGE_REFERENCE" severity="BLOCKING" result="FAIL">The repository embeds external-capability-grounding-v1.2, while NeoFort current=true resolves v1.1 and not v1.2.</mismatch>
+    <boundary code="RAW_HTML_UNAVAILABLE" result="REVIEW">Direct origin download returned HTTP 403. The live XML is a structured rendered-page extraction, not byte-identical HTML.</boundary>
+  </contractDiff>
+  <devicevValidation>
+    <deterministicPreflight>PASS</deterministicPreflight>
+    <xpathMatchCount>1</xpathMatchCount>
+    <xpathUniqueness>PASS</xpathUniqueness>
+    <agentExploitability>PASS</agentExploitability>
+    <presentationJudge>PENDING_PRESENTATION_JUDGE</presentationJudge>
+    <publicationAllowed>false</publicationAllowed>
+    <finalPass>false</finalPass>
+  </devicevValidation>
+  <neoFortEvidenceState targetCount="10" resolvedCount="10">
+    <evidenceUnit id="eu:ht:ema-fda-good-ai-2026" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:ai-security:run:16" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:ai-security:run:20" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:ai-security:run:24" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:ai-security:run:27" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:agentic:hitl-support-not-guarantee" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:agentic:no-single-tech-control" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:agentic:bounded-agents-2tier" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:agentic:nis2-4d-pharma-impact" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+    <evidenceUnit id="eu:agentic:pharma:inspection-risk-2026" preflight="PASS" agentExploitable="true" presentationJudge="PENDING_PRESENTATION_JUDGE" publicationAllowed="false" />
+  </neoFortEvidenceState>
+  <githubActionValidation>
+    <targetPageTopology>PASS_ALREADY_MATERIALISED</targetPageTopology>
+    <sourceSectionGate>PASS</sourceSectionGate>
+    <topologySha256>790b0e88dd04fec3d9304d9d5cca14851055db78cd08b698c6f4eb34a50934ce</topologySha256>
+    <inspectedRepositoryRun>FAIL</inspectedRepositoryRun>
+    <failureScope>Unrelated generated agentic-ai HTML fragments lacked the topology-preserving attributes/contract; target page itself was reported as already materialised.</failureScope>
+    <gateInterpretation>A target-scoped topology PASS does not override the pending NeoFort presentation judge, stale judge reference, or live-form parity failure.</gateInterpretation>
+  </githubActionValidation>
+  <finalDecision status="BLOCKED">
+    <reason>PENDING_PRESENTATION_JUDGE + LIVE_FORM_PARITY_FAIL + STALE_JUDGE_REFERENCE</reason>
+    <allowedPersistence>Audit XML may be committed to GitHub; production HTML mutation/publication is not authorised under FAIL_CLOSED.</allowedPersistence>
+    <nextSafeMutation>After current NeoFort presentation judgement resolves and the live lead-form contract is materialised, patch only the scoped page while preserving all unrelated content.</nextSafeMutation>
+  </finalDecision>
+</pageContractAudit>
