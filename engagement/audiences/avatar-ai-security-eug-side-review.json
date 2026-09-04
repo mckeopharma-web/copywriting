@@ -1,0 +1,98 @@
+{
+  "target": "https://mickael-umt.com/engagement/audiences/#avatar-ai-security",
+  "base_artifact": "engagement/audiences/avatar-ai-security.html",
+  "review_stylesheet": "engagement/audiences/avatar-ai-security-eug-side-review.css",
+  "scope": "AI Security / Marc Lefèvre only",
+  "publication_posture": "REVIEW_ONLY_PENDING_TARGET_PLACEMENT_REPLICA_JUDGE",
+  "structure_lock": {
+    "section_count": 17,
+    "order": [
+      "triggers",
+      "consequences",
+      "buyer",
+      "qualification",
+      "proposition",
+      "offers",
+      "deliverables",
+      "before-after",
+      "results",
+      "evidence",
+      "scope",
+      "process",
+      "modules",
+      "intersection",
+      "commitments",
+      "questions",
+      "engagement"
+    ],
+    "other_pages_modified": false,
+    "other_avatars_modified": false,
+    "visible_copy_rewritten": false
+  },
+  "placement_contract": "Each admitted Evidence Graphic remains inside the pre-existing semantic section it illustrates and is rendered in the side column on desktop; responsive fallback restores source order.",
+  "placements": [
+    {
+      "qgeu": "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026",
+      "section": "consequences",
+      "role": "illustrates external authorization as an enforceable decision boundary",
+      "observed_marks": 10,
+      "source": "https://arxiv.org/abs/2608.15888"
+    },
+    {
+      "qgeu": "QGEU-AISEC-TOOLMIN-PCS-2026",
+      "section": "deliverables",
+      "role": "illustrates schema-aware argument minimization as a bounded deliverable-level control",
+      "observed_marks": 8,
+      "source": "https://arxiv.org/abs/2608.24957",
+      "supersedes_stale_artifact_reference": "QGEU-AISEC-TOOLMIN-LIVE-2026"
+    },
+    {
+      "qgeu": "QGEU-AISEC-FRAMING-GAP-2026",
+      "section": "intersection",
+      "role": "illustrates the seam between wording, runtime behavior and evidence",
+      "observed_marks": 16,
+      "source": "https://arxiv.org/abs/2608.27092"
+    },
+    {
+      "qgeu": "QGEU-AISEC-PERMISSION-OVERREACH-2026",
+      "section": "commitments",
+      "role": "illustrates why the human decision boundary must itself be engineered and evaluated",
+      "observed_marks": 21,
+      "source": "https://arxiv.org/abs/2608.27443"
+    }
+  ],
+  "neofort_current_policy_resolution": {
+    "policy_qgeu_data_visualization": "policy:qgeu:data-visualization-analyst-v2",
+    "judge_evidence_graphic_presentation": "judge:evidence-graphic:presentation-v3",
+    "policy_qgeu_ordering": "policy:qgeu:ordering-contract-v1",
+    "contract_place_eug": "contract:qgeu:place-eug-v4",
+    "factfulness_judge": "judge:evidence:factfulness-epistemology-methodology-v2",
+    "placement_judge": "judge:evidence-placement:presentation-v1.2",
+    "agent_exploitability_preflight": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "agent_exploitability_proof_carrying": "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "llm_judge_execution": "policy:llm-judge:deterministic-execution-v2"
+  },
+  "current_upstream_status": {
+    "graph_quality_gate": "PASS for all four QGEUs",
+    "ordering_quality_gate": "PASS for all four QGEUs",
+    "agent_exploitability": "ALLOWED for all four QGEUs"
+  },
+  "local_full_html_preflight": {
+    "status": "PASS",
+    "artifact": "avatar-ai-security-eug-side-review.html",
+    "section_order_preserved": true,
+    "target_avatar_unique": true,
+    "side_placement_count": 4,
+    "mark_counts": [10, 8, 16, 21],
+    "current_toolmin_qgeu_id_present": true,
+    "stale_toolmin_qgeu_id_absent": true,
+    "primary_graph_sources_present": true,
+    "accessible_graph_descriptions_present": true
+  },
+  "blocking_condition": "A DOM relocation creates a new target-placement snapshot. The current NeoFort placement policy requires a fresh three-replica deterministic target-placement judge before canonical/live publication. No GitHub commit is treated as evidence validity.",
+  "google_drive": {
+    "read_only_context_used": true,
+    "write_performed": false,
+    "write_requires_explicit_user_validation": true
+  }
+}
