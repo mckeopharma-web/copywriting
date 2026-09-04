@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<pageSnapshot source="live" url="https://mickael-umt.com/expertises/data-engineering/" observedAt="2026-09-04T02:04:00+02:00" language="fr" theme="live">
+  <positioning>
+    <eyebrow>DE Expertise · mandat de 3 mois et plus</eyebrow>
+    <headline>Rendez chaque décision data reconstructible, de la source jusqu’au tableau de bord.</headline>
+    <lead>Transformer des données dispersées en décisions traçables et réutilisables.</lead>
+    <format>3–9 mois</format>
+    <decisionRole>Head of Data / Lead Data Engineer</decisionRole>
+    <stack>Python · SQL · PostgreSQL · Pandas · PySpark · Airflow · Celery</stack>
+  </positioning>
+  <structuralForms count="18">
+    <form order="0" id="top"><title>Hero</title></form>
+    <form order="1" id="triggers"><title>Déclencheurs</title></form>
+    <form order="2" id="consequences"><title>Conséquences</title></form>
+    <form order="3" id="for-whom"><title>Pour qui</title></form>
+    <form order="4" id="qualification"><title>Qualification</title></form>
+    <form order="5" id="proposition"><title>Proposition + valeur</title></form>
+    <form order="6" id="offers"><title>Offres</title></form>
+    <form order="7" id="deliverables"><title>Livrables</title></form>
+    <form order="8" id="before-after"><title>Transformation + avant/après</title></form>
+    <form order="9" id="results"><title>Résultats</title></form>
+    <form order="10" id="proof"><title>Preuves</title></form>
+    <form order="11" id="scope"><title>Périmètre</title></form>
+    <form order="12" id="process"><title>Déroulé</title></form>
+    <form order="13" id="modules"><title>Modules + capacités</title></form>
+    <form order="14" id="intersection"><title>Intersection + benchmark</title></form>
+    <form order="15" id="commitments"><title>Engagements</title></form>
+    <form order="16" id="questions"><title>Questions</title></form>
+    <form order="17" id="engagement"><title>Engagement + qualification</title></form>
+  </structuralForms>
+  <semanticMapping count="23" canonicalOrder="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8">
+    <token ordinal="0" token="0" name="hero" hostForm="top"/>
+    <token ordinal="1" token="11" name="purchase_triggers" hostForm="triggers"/>
+    <token ordinal="2" token="20" name="problem_consequences" hostForm="consequences"/>
+    <token ordinal="3" token="13" name="buyer_fit" hostForm="for-whom"/>
+    <token ordinal="4" token="14" name="qualification_gate" hostForm="qualification"/>
+    <token ordinal="5" token="1" name="value_mechanism" hostForm="proposition"/>
+    <token ordinal="6" token="2" name="value" hostForm="proposition"/>
+    <token ordinal="7" token="10" name="buying_configurations" hostForm="offers"/>
+    <token ordinal="8" token="15" name="deliverables" hostForm="deliverables"/>
+    <token ordinal="9" token="3" name="transformation" hostForm="before-after"/>
+    <token ordinal="10" token="12" name="before_after" hostForm="before-after"/>
+    <token ordinal="11" token="19" name="acceptance_results" hostForm="results"/>
+    <token ordinal="12" token="4" name="execution_proof" hostForm="proof"/>
+    <token ordinal="13" token="16" name="scope_boundary" hostForm="scope"/>
+    <token ordinal="14" token="17" name="delivery_process" hostForm="process"/>
+    <token ordinal="15" token="18" name="delivery_modules" hostForm="modules"/>
+    <token ordinal="16" token="5" name="capabilities" hostForm="modules"/>
+    <token ordinal="17" token="21" name="differentiation" hostForm="intersection"/>
+    <token ordinal="18" token="6" name="benchmark" hostForm="intersection"/>
+    <token ordinal="19" token="22" name="controllable_commitments" hostForm="commitments"/>
+    <token ordinal="20" token="23" name="objections_faq" hostForm="questions"/>
+    <token ordinal="21" token="7" name="next_step_cta" hostForm="engagement"/>
+    <token ordinal="22" token="8" name="lead_form" hostForm="engagement"/>
+  </semanticMapping>
+  <inductiveAvatar status="HYPOTHESIS_TO_VALIDATE">
+    <workingName>Julien Rocher</workingName>
+    <role>Head of Data / Lead Data Engineer</role>
+    <notEvidenced>Age, gender, family status, individual income, brands followed</notEvidenced>
+  </inductiveAvatar>
+  <leadForm screens="8" storage="local" thirdPartyTracking="none observed in extracted structure">
+    <screen order="1" name="Sujet"/>
+    <screen order="2" name="Échéance + rôle"/>
+    <screen order="3" name="Mode d’intervention"/>
+    <screen order="4" name="Cadence"/>
+    <screen order="5" name="Taille organisation"/>
+    <screen order="6" name="Clarté périmètre"/>
+    <screen order="7" name="Déclencheur/inspection"/>
+    <screen order="8" name="Contact + consentement"/>
+  </leadForm>
+  <factfulnessGap section="questions" severity="hard-gate-risk">
+    <liveClaim>Le lignage ralentit-il… Marginalement… le coût est en stockage, pas en temps de traitement.</liveClaim>
+    <reason>Unbounded performance/cost generalization without matched workload, implementation granularity, stack, baseline or primary supporting evidence.</reason>
+    <remediation>Lineage/provenance can add compute, I/O and storage overhead depending on granularity and stack; measure on a representative workload; no universal percentage is claimed.</remediation>
+  </factfulnessGap>
+  <carriedMarketReference status="SOURCE_REVERIFY_BEFORE_PUBLICATION">
+    <value>650 EUR/day median; IQR 540–740; n=100; page states verified 2026-07-22; source tjmetre.fr</value>
+    <boundary>Market reference carried from live page; not contractual price and not evidence of consulting effect.</boundary>
+  </carriedMarketReference>
+</pageSnapshot>
