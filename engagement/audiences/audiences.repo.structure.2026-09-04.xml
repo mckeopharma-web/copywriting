@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PageStructureSnapshot version="1.0.0" pageFamily="engagement-audiences" scope="pages/engagement/audiences/mickael-umt.com.html" observedAt="2026-09-04">
+  <Source kind="GITHUB_HTML"><Locator>mckeopharma-web/copywriting:pages/engagement/audiences/mickael-umt.com.html</Locator><RepositoryHeadAtRead>cc21ea181748632de387a3b79e5cb534069b4131</RepositoryHeadAtRead><GitBlobSHA>4a024501932f4f3f11ee12429e5c0e13f80f85e3</GitBlobSHA><RawDocumentMaterialized status="true"/></Source>
+  <DeclaredStructureLock>hero &gt; 10 avatar cards &gt; problem-before-profile &gt; decision roles &gt; qualifier &gt; footer</DeclaredStructureLock>
+  <MainSections count="4"><Section position="1" id="decision-profiles" role="hero"/><Section position="2" id="audience-cards" role="ten_decision_profiles"/><Section position="3" id="problem-before-profile" role="problem_plus_three_decision_roles"/><Section position="4" id="qualifier" role="qualification"/></MainSections>
+  <AudienceCards count="10" preserveCount="true" preserveOrder="true">
+    <Avatar position="1" id="avatar-01" name="Claire Dumas"/>
+    <Avatar position="2" id="avatar-02" name="Marc Lefèvre"/>
+    <Avatar position="3" id="avatar-03" name="Nadia Benali" target="true">
+      <Role>Directrice transformation IA et formation · organisation régulée ou à fortes exigences de contrôle</Role>
+      <Before>L’usage de l’IA se diffuse, mais les rôles, compétences et limites d’escalade restent difficiles à démontrer.</Before>
+      <After>Une matrice rôles × tâches × preuves : responsabilités documentées et formation reliée aux devoirs de gestion du risque IA. La généralisation reste conditionnée à des résultats observables au poste.</After>
+      <EvidencePlacements count="2"><Placement id="claim-eu-aud-004" eu="EU-PV-NIST-GOVERN-2-1-ROLE-CLARITY"/><Placement id="claim-eu-aud-005" eu="EU-PV-NIST-GOVERN-2-2-TRAINING"/></EvidencePlacements>
+      <Offer href="https://mickael-umt.com/expertises/training/" stack="Python · AI adoption · cybersecurity · assessment · document control">AI Training &amp; Adoption Engineering</Offer>
+    </Avatar>
+    <Avatar position="4" id="avatar-04" name="Dr. Antoine Moreau"/><Avatar position="5" id="avatar-05" name="Sophie Lemercier"/><Avatar position="6" id="avatar-06" name="Karim Benali"/><Avatar position="7" id="avatar-07" name="Isabelle Fontaine"/><Avatar position="8" id="avatar-08" name="Julien Rocher"/><Avatar position="9" id="avatar-09" name="Élodie Marchand"/><Avatar position="10" id="avatar-10" name="Camille Ferrand"/>
+  </AudienceCards>
+  <StandaloneTargetArtifact path="engagement/audiences/avatar-training.html">
+    <Target>https://mickael-umt.com/engagement/audiences/#avatar-training</Target>
+    <DeclaredAvatarContract>contract:customer-avatar:growth:2026-09-03</DeclaredAvatarContract>
+    <ObservedSections>hero,avatar,demographics,frustrations,wants,drivers,transformation,offer,validation</ObservedSections>
+    <CompatibilityWithLivePageTopology>NON_COMPLIANT_AS_PUBLIC_PAGE_REPLACEMENT</CompatibilityWithLivePageTopology>
+    <Boundary>Useful as a review dossier only; it must not replace the live audience page because it changes section count, section nature, navigation and visible composition.</Boundary>
+  </StandaloneTargetArtifact>
+  <MismatchToLive count="5">
+    <Mismatch field="target_anchor" live="avatar-training" repository="avatar-03" severity="structural-selector"/>
+    <Mismatch field="target_before" severity="positioning"/>
+    <Mismatch field="target_after" severity="positioning"/>
+    <Mismatch field="target_stack" liveIncludes="blockchain" repositoryOmits="blockchain" severity="capability-copy"/>
+    <Mismatch field="target_evidence" repository="two NIST EvidenceUnits" state="JUDGE_SCORED_PENDING_ADMISSION" severity="publication-gate"/>
+  </MismatchToLive>
+  <Invariant>All non-target avatar cards, top-level main-section order, site navigation, three decision roles, qualifier and footer are outside mutation scope.</Invariant>
+</PageStructureSnapshot>

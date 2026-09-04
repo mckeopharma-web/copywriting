@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PageStructureContract version="1.0.0" pageFamily="engagement-audiences" scope="https://mickael-umt.com/engagement/audiences/#avatar-training" observedAt="2026-09-04" losslessPositioning="true" mutationScope="avatar-training-only">
+  <Source kind="LIVE_RENDERED_PAGE"><Locator>https://mickael-umt.com/engagement/audiences/</Locator><TargetFragment>#avatar-training</TargetFragment><ExtractionMethod>rendered_live_page_extraction</ExtractionMethod><RawDocumentMaterialized status="false" reason="rendered extraction used; exact byte/DOM identity not claimed"/></Source>
+  <TopLevelTopology count="6">
+    <Node position="1" kind="header" role="site_navigation" preserve="true"/>
+    <Node position="2" kind="section" id="decision-profiles" role="hero" preserve="true"/>
+    <Node position="3" kind="section" id="audience-cards" role="ten_decision_profiles" preserve="true"/>
+    <Node position="4" kind="section" id="problem-before-profile" role="problem_first_transition_plus_decision_roles" preserve="true"/>
+    <Node position="5" kind="section" id="qualifier" role="eight_screen_qualification_journey" preserve="true"/>
+    <Node position="6" kind="footer" role="site_footer" preserve="true"/>
+  </TopLevelTopology>
+  <AudienceCards count="10" preserveCount="true" preserveOrder="true">
+    <Avatar position="1" number="01" name="Claire Dumas" role="CTO / Head of AI Platform"/>
+    <Avatar position="2" number="02" name="Marc Lefèvre" role="Responsable gouvernance, risque ou sécurité IA"/>
+    <Avatar position="3" number="03" id="avatar-training" name="Nadia Benali" role="Directrice transformation IA et formation · organisation régulée ou à fortes exigences de contrôle" target="true">
+      <Before>L’usage de l’IA se diffuse déjà dans les équipes, mais elle ne peut ni démontrer les compétences acquises, ni prouver que les limites de confidentialité sont tenues.</Before>
+      <After>Une capacité où les équipes savent quoi automatiser, quoi vérifier et quand escalader — avec la preuve par équipe qui rend la généralisation défendable devant la direction.</After>
+      <Links count="2"><Link role="path" label="Voir le parcours adapté"/><Link role="proof" label="Voir la preuve utile à ce rôle"/></Links>
+    </Avatar>
+    <Avatar position="4" number="04" name="Dr. Antoine Moreau" role="Directeur qualité / CSV"/>
+    <Avatar position="5" number="05" name="Sophie Lemercier" role="Data Manager / Chef de projet clinique"/>
+    <Avatar position="6" number="06" name="Karim Benali" role="Responsable pharmacovigilance"/>
+    <Avatar position="7" number="07" name="Isabelle Fontaine" role="Product Manager éditeur HealthTech"/>
+    <Avatar position="8" number="08" name="Julien Rocher" role="Head of Data / Lead Data Engineer"/>
+    <Avatar position="9" number="09" name="Élodie Marchand" role="Responsable innovation / architecte de confiance"/>
+    <Avatar position="10" number="10" name="Camille Ferrand" role="Directrice marketing / revenue operations"/>
+  </AudienceCards>
+  <ProblemBeforeProfile>
+    <Heading>Je reconnais le problème, mais pas le rôle exact.</Heading>
+    <Principle>Le rôle affine la preuve ; il ne bloque jamais la recommandation.</Principle>
+    <DecisionRoles count="3"><Role id="DECISION_MAKER" label="Décideur"/><Role id="ADVOCATE" label="Advocate"/><Role id="CHAMPION" label="Champion"/></DecisionRoles>
+  </ProblemBeforeProfile>
+  <Qualifier screenCount="8" preserve="true">
+    <Screen index="1" semantic="decision_subject"/><Screen index="2" semantic="decision_timing_and_role"/><Screen index="3" semantic="intervention_mode"/><Screen index="4" semantic="weekly_cadence"/><Screen index="5" semantic="organisation_size"/><Screen index="6" semantic="scope_maturity"/><Screen index="7" semantic="inspection_or_regulatory_context"/><Screen index="8" semantic="contact_and_consent"/>
+  </Qualifier>
+  <TargetAvatarContract id="contract:customer-avatar:audiences:2026-09-03" current="true">
+    <Components>DEMOGRAPHICS_INTERESTS,FRUSTRATIONS_FEARS,WANTS_ASPIRATIONS,KEY_PURCHASE_DRIVERS,BEFORE_AFTER</Components>
+    <DecisionRoles>DECISION_MAKER,ADVOCATE,CHAMPION</DecisionRoles>
+    <EvidenceRule>Unsupported buyer facts remain NOT_EVIDENCED, HYPOTHESIS or TO_RESEARCH; synthesized language is never represented as verbatim.</EvidenceRule>
+  </TargetAvatarContract>
+  <PositioningLock><Rule>Keep Nadia Benali, her role, the live Before/After state, two-link card anatomy, card order, page topology and qualification journey. Do not expand avatar 03 into a separate landing-page section inside this public page.</Rule></PositioningLock>
+</PageStructureContract>
