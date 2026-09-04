@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page-structure id="realisations-blockchain-live-2026-09-04" status="OBSERVED" scope="STRUCTURE_ONLY">
+  <source kind="live-site" url="https://mickael-umt.com/realisations/blockchain/" captured-date="2026-09-04"/>
+  <positioning>
+    <page-family>realisations</page-family>
+    <role>public implementation evidence and provenance surface</role>
+    <headline>Blockchain &amp; vérifiabilité</headline>
+    <lead>Contrats, tokens, gouvernance de vote et preuves on-chain auditées commit par commit.</lead>
+    <domain-member-count>2</domain-member-count>
+  </positioning>
+  <structure section-count="5" topology-policy="PRESERVE_ORDER_NATURE_AND_FORM">
+    <section order="1" mapped-id="page-intro" kind="realisation-domain-hero" form="none">
+      <label>Réalisations · Blockchain &amp; vérifiabilité</label>
+      <heading>Blockchain &amp; vérifiabilité</heading>
+      <required-shape>domain heading + one-line proof proposition + domain tabs</required-shape>
+    </section>
+    <section order="2" mapped-id="lottery-dapp" kind="realisation-record" form="project-proof-card">
+      <heading>Lottery dApp</heading>
+      <period>Mai–juin 2023</period>
+      <status>Contribution substantielle vérifiée</status>
+      <stack>Solidity · EVM · TypeScript</stack>
+      <proof-boundary>26 of 29 commits attributed to RickOwri; bootcamp fork is not presented as initial creation.</proof-boundary>
+      <required-shape>period + title + provenance status + implementation summary + bounded proof + stack + repository/history links</required-shape>
+    </section>
+    <section order="3" mapped-id="tokenized-voting-backend" kind="realisation-record" form="project-proof-card">
+      <heading>Tokenized Voting Backend</heading>
+      <period>Mai–juin 2023</period>
+      <status>Implémentation de formation vérifiée</status>
+      <stack>NestJS · TypeScript · ethers.js · Sepolia</stack>
+      <proof-boundary>4 of 4 public commits attributed to RickOwri; business logic remains distinguished from the NestJS starter.</proof-boundary>
+      <required-shape>period + title + provenance status + implementation summary + bounded proof + stack + repository/history links + retained visual</required-shape>
+    </section>
+    <section order="4" mapped-id="provenance-policy" kind="provenance-policy" form="policy-explanation">
+      <label>Politique de provenance</label>
+      <heading>Création, contribution, preuve et niveau de confiance.</heading>
+      <required-shape>authorship/contribution boundary + verification method + certificate route + retained visual</required-shape>
+    </section>
+    <section order="5" mapped-id="method-behind-proof" kind="method-lead-capture" form="two-step-qualification-form">
+      <label>La méthode derrière ces preuves</label>
+      <heading>Le cadre utilisé sur ces travaux, publié et gratuit.</heading>
+      <required-shape>context prefill + six current-work choices + intended-use choices + professional email + optional name + explicit local-storage consent + back/next/receive controls + no-third-party-tracker statement</required-shape>
+      <form-contract screens="2" current-work-choices="6" intended-use-choices="3" email-required="true" name-optional="true" explicit-consent="true" third-party-tracking="false"/>
+    </section>
+  </structure>
+  <invariants>
+    <invariant id="L1">Exactly two blockchain realization records remain visible: Lottery dApp and Tokenized Voting Backend.</invariant>
+    <invariant id="L2">Realisation records remain proof surfaces, not offer-page sections.</invariant>
+    <invariant id="L3">Repository contribution is not converted into client outcome, production efficacy or sole-authorship claims.</invariant>
+    <invariant id="L4">The final method form remains present and structurally equivalent to the live two-screen qualification flow.</invariant>
+    <invariant id="L5">Commercial strengthening may route toward the expertise/programme decision model but must not replace the five-section realization topology.</invariant>
+  </invariants>
+  <provenance-note>The live renderer does not expose DOM ids in extracted text. mapped-id values are the one-to-one source-slot ids used by the corresponding copywriting HTML and are validated separately.</provenance-note>
+</page-structure>
