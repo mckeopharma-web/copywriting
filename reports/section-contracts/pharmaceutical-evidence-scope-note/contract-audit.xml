@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SectionContractAudit schemaVersion="1.0" targetUrl="https://mickael-umt.com/ressources/produits/frameworks/pharmaceutical-evidence-scope-note/" auditedAt="2026-09-04T02:45:00+02:00" executionPosture="FAIL_CLOSED">
+  <Summary>
+    <Decision structuralContract="PASS_WITH_RESERVATIONS" publication="BLOCKED" targetMutation="NOT_PERFORMED_IN_THIS_STEP" />
+    <Rationale>The target is a product/framework landing page, not an expertise or programme page. Its own hero + 3-section topology and 8-step qualification sequence should be preserved. Upstream evidence passes; external three-replica placement/presentation judgement remains pending.</Rationale>
+  </Summary>
+  <Checks>
+    <Check id="TARGET_PAGE_FAMILY" status="PASS">Product/framework landing page; do not force the expertise/programme 18-block contract onto this page.</Check>
+    <Check id="LIVE_SECTION_TOPOLOGY" status="PASS">Hero + scope/decision section + adjacent-help routes + qualification section.</Check>
+    <Check id="REPOSITORY_SECTION_TOPOLOGY" status="PASS">Hero outside &lt;section&gt;; three HTML &lt;section&gt; elements; qualification remains third.</Check>
+    <Check id="ROUTE_CARDINALITY_AND_NATURE" status="PASS">Four adjacent-help routes preserved: bounded question, capability transfer, bounded programme result, project execution.</Check>
+    <Check id="QUALIFICATION_STEP_COUNT" status="PASS">Eight ordered qualification steps in both live and repository representations.</Check>
+    <Check id="QUALIFICATION_FORM_FIDELITY" status="REVIEW">The GitHub review artifact uses non-submitting screen summaries rather than the live page's full input/control/consent form. Do not call this 100% form fidelity.</Check>
+    <Check id="POSITIONING_LOSSLESSNESS" status="PASS_WITH_BOUNDARY">Core pre-disclosure qualification, no-sprint/no-fit option, confidentiality boundary, quality/CSV audience and programme route remain consistent.</Check>
+    <Check id="EXPERTISE_CONTRACT_REFERENCE" status="PASS">18-block expertise archetype is a downstream page contract, not an inherited contract for this product page.</Check>
+    <Check id="PROGRAMME_CONTRACT_REFERENCE" status="PASS">Programme archetype contains 17 semantic sections after its hero; target links to the programme rather than duplicating its structure.</Check>
+    <Check id="UPSTREAM_EVIDENCE" status="PASS">EU-REGCSV-EC-ANNEX11-RISK-2026 is current, deterministic preflight PASS, Factfulness PASS, CHAMPION_PASS 94, agent-exploitable.</Check>
+    <Check id="PLACEMENT_XPATH" status="PASS">//*[@id="claim-annex11-scope"] resolves exactly once in the review artifact contract.</Check>
+    <Check id="PLACEMENT_PRESENTATION_JUDGE" status="BLOCKED">judge:evidence-placement:presentation-v1.2 is current and requires three replicas; target placement remains PENDING_EXTERNAL_3_REPLICA.</Check>
+    <Check id="LEGACY_REQUESTED_JUDGE_ALIAS" status="NOT_APPLICABLE">No current NeoFort judge named judge:eu:placementv1 was resolved. Current-only policy resolution selects judge:evidence-placement:presentation-v1.2.</Check>
+    <Check id="CLAIM_LOOP_FAMILY_CLASSIFICATION" status="WARN">Generic GitHub materializer classifies the target path as homepage. Correct semantic family is product_landing_page with pharmaceutical/reg-csv context.</Check>
+    <Check id="FINAL_PASS" status="FAIL_CLOSED">Publication cannot be authorized while the mandatory placement/presentation judgement is not materialized.</Check>
+  </Checks>
+  <ResolvedCurrentPolicy>
+    <PolicyRef id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true" />
+    <PolicyRef id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true" />
+    <PolicyRef id="policy:evidence-judge-applicability:v2" current="true" />
+    <PolicyRef id="policy:evidence-judge-verdict-normalization:v2" current="true" />
+    <PolicyRef id="policy:llm-judge:deterministic-execution-v2" current="true" />
+    <PolicyRef id="evidence-placement-policy:site-v5" current="true" />
+    <PolicyRef id="policy:evidence-placement:claim-span-entailment-v2" current="true" />
+    <PolicyRef id="policy:copy-claim:sources-per-section-v1" current="true" />
+    <PolicyRef id="policy:copy-claim:grounding-score-v1.1" current="true" />
+    <JudgeRef id="judge:evidence-placement:presentation-v1.2" current="true" replicas="3" temperature="0" topP="1" />
+    <JudgeRef id="judge:evidence:factfulness-epistemology-methodology-v2" current="true" replicas="3" temperature="0" topP="1" />
+  </ResolvedCurrentPolicy>
+  <GoogleDriveSource mode="READ_ONLY" writePerformed="false" fileId="1Ze00YGVVrmtmXBmv7MfOgo1Td0BxwgTOKdNspvhzcKw">
+    <Title>VSL ADS — 26.1 Pharmaceutical Evidence Scope Note</Title>
+    <PositioningAnchor>Avant d’ouvrir la preuve</PositioningAnchor>
+    <DecisionStates>GO | GO sous conditions | NO-GO temporaire | NO-SPRINT</DecisionStates>
+    <ConfidentialityRule>Qualification before sharing batch records or other sensitive content.</ConfidentialityRule>
+  </GoogleDriveSource>
+</SectionContractAudit>
