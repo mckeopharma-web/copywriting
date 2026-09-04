@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<page_contract id="page-contract:apa:live:2026-09-04" version="1.0.0" status="OBSERVED_RENDERED_STRUCTURE" publication_authority="NONE">
+  <source type="live_website_rendered_text" url="https://mickael-umt.com/programme/ai-production-assurance/" observed_date="2026-09-04" raw_dom_materialized="false" fidelity="semantic_and_section_form" exact_xpath_available="false" />
+  <root_contract_context>
+    <programme_root url="https://mickael-umt.com/programme/" headline="Un mandat, une décision, une échéance." shared_qualifier_screens="8" />
+    <expertises_root url="https://mickael-umt.com/expertises/" headline="Des spécialités distinctes, une seule chaîne de livraison." shared_qualifier_screens="8" />
+  </root_contract_context>
+  <hero form="HERO_PLUS_MANDATE_4_LINES">
+    <eyebrow>APA Programme · mandat borné de 12 semaines</eyebrow>
+    <h1>Transformez vos prototypes IA opaques en systèmes gouvernés, vérifiables et prêts pour la production.</h1>
+    <lead>Un cas d’usage IA critique. Douze semaines. Une décision de production que la direction, la DSI et la conformité peuvent défendre.</lead>
+    <mandate items="4">
+      <result>Un cas d’usage prioritaire porté jusqu’à un niveau de readiness convenu, avec les preuves qui justifient la décision.</result>
+      <format>Mission d’implémentation de douze semaines, hybride, en cinq phases : cadrer, concevoir, implémenter, éprouver, transférer.</format>
+      <decision_owner>CDO, Head of AI, CTO, VP Engineering, direction de la transformation ou responsable L&amp;D.</decision_owner>
+      <conditions>Un sponsor exécutif nommé, un responsable technique, un cas d’usage identifié et les accès nécessaires.</conditions>
+    </mandate>
+  </hero>
+  <topology section_count="17" order_locked="true">
+    <section index="1" id="triggers" nav_label="Déclencheurs" semantic_form="NUMBERED_TRIGGER_LIST_6" source_lines="85-111" source_line_precision="rendered_parser">
+      <headline>Vous reconnaissez l’un de ces moments, ou ce programme n’est pas encore pour vous.</headline>
+      <components><component>6 numbered production-decision triggers</component><component>closing urgency qualifier</component></components>
+    </section>
+    <section index="2" id="consequences" nav_label="Conséquences" semantic_form="PROBLEM_TO_CONTROL_PAIRS_10" source_lines="113-150" source_line_precision="rendered_parser">
+      <headline>Ce que ça coûte, question par question.</headline>
+      <components><component>10 concrete problem/control pairs</component><component>operational consequence framing</component></components>
+    </section>
+    <section index="3" id="for-whom" nav_label="Pour qui" semantic_form="DECISION_UNIT_WITH_STATE_SUMMARY" source_lines="152-165" source_line_precision="rendered_parser">
+      <headline>Une unité de décision, pas un acheteur isolé.</headline>
+      <components><component>decision-unit narrative</component><component>current/after state</component><component>avatar validation link</component></components>
+    </section>
+    <section index="4" id="qualification" nav_label="Qualification" semantic_form="FIT_NOFIT_TWO_SIDED_GATE" source_lines="167-183" source_line_precision="rendered_parser">
+      <headline>Les conditions, avant de réserver quoi que ce soit.</headline>
+      <components><component>fit criteria</component><component>no-fit criteria</component><component>cost-of-late-no qualifier</component></components>
+    </section>
+    <section index="5" id="proposition" nav_label="Proposition" semantic_form="MECHANISM_NARRATIVE_WITH_BOUNDARY" source_lines="185-191" source_line_precision="rendered_parser">
+      <headline>Un cas d’usage IA critique. Douze semaines. Une décision de production que la direction, la DSI et la conformité peuvent défendre.</headline>
+      <components><component>Production Readiness Evidence Loop</component><component>mechanism narrative</component><component>explicit non-meaning boundary</component></components>
+    </section>
+    <section index="6" id="offers" nav_label="Offres" semantic_form="CONFIGURATION_BRIDGE_TO_ATLAS" source_lines="219-223" source_line_precision="rendered_parser">
+      <headline>Quelle configuration, et combien.</headline>
+      <components><component>commercial configuration bridge</component><component>link to solution atlas/pricing</component></components>
+    </section>
+    <section index="7" id="deliverables" nav_label="Livrables" semantic_form="NUMBERED_DELIVERABLES_5" source_lines="225-258" source_line_precision="rendered_parser">
+      <headline>Ce qui existe à la fin et n’existait pas avant.</headline>
+      <components><component>5 numbered work products</component><component>handover-state statement</component></components>
+    </section>
+    <section index="8" id="before-after" nav_label="Avant / après" semantic_form="BEFORE_AFTER_STATE_MATRIX" source_lines="260-312" source_line_precision="rendered_parser">
+      <headline>Les mêmes axes, avant et après.</headline>
+      <components><component>decision-state transformation narrative</component><component>before/after matrix</component><component>responsibility/promotion/regression/handover axes</component></components>
+    </section>
+    <section index="9" id="results" nav_label="Résultats" semantic_form="ACCEPTANCE_STATUS_LIST" source_lines="314-336" source_line_precision="rendered_parser">
+      <headline>Ce qui est visé, et de quel type.</headline>
+      <components><component>acceptance criteria</component><component>already-built example</component><component>explicit non-client-metric boundary</component></components>
+    </section>
+    <section index="10" id="proof" nav_label="Preuves" semantic_form="PROVENANCE_PROOF_CARDS_4" source_lines="338-370" source_line_precision="rendered_parser">
+      <headline>Des preuves proportionnées à la promesse.</headline>
+      <components><component>NDA R&amp;D proof</component><component>Mistral collaborative contribution</component><component>Streamlit-LangChain original repo</component><component>AI/RAG portfolio</component><component>proof boundary</component></components>
+    </section>
+    <section index="11" id="scope" nav_label="Périmètre" semantic_form="THREE_WAY_SCOPE_BOUNDARY" source_lines="372-390" source_line_precision="rendered_parser">
+      <headline>Le périmètre, ses exclusions et ses dépendances.</headline>
+      <components><component>in scope</component><component>out of scope</component><component>client dependencies</component></components>
+    </section>
+    <section index="12" id="process" nav_label="Déroulé" semantic_form="NUMBERED_PHASES_5_WITH_EXIT_OUTPUTS" source_lines="392-430" source_line_precision="rendered_parser">
+      <headline>Le déroulé, et où l’on peut s’arrêter.</headline>
+      <components><component>5 chronological phases</component><component>phase output for each</component><component>explicit stop/review points</component></components>
+    </section>
+    <section index="13" id="modules" nav_label="Modules" semantic_form="MODULE_CATALOG_8" source_lines="432-465" source_line_precision="rendered_parser">
+      <headline>Les blocs de travail, sans ordre imposé.</headline>
+      <components><component>8 selectable work modules</component><component>scope-removal rule</component></components>
+    </section>
+    <section index="14" id="intersection" nav_label="Intersection" semantic_form="CAPABILITY_PROOF_PLUS_INTERSECTION" source_lines="467-494" source_line_precision="rendered_parser">
+      <headline>Le différenciateur est le croisement, pas l’addition de deux CV.</headline>
+      <components><component>CV capability proof atoms</component><component>four-domain intersection</component><component>three seam-removal mechanisms</component><component>market-reference boundary</component></components>
+    </section>
+    <section index="15" id="commitments" nav_label="Engagements" semantic_form="WORK_PRODUCT_GUARANTEES_WITH_NONCLAIMS" source_lines="496-525" source_line_precision="rendered_parser">
+      <headline>Ce qui est garanti est le produit de travail, jamais le résultat d’une autorité.</headline>
+      <components><component>6 controllable commitments</component><component>3 explicit non-guarantees</component><component>contract terms link</component></components>
+    </section>
+    <section index="16" id="questions" nav_label="Questions" semantic_form="FAQ_10" source_lines="527-565" source_line_precision="rendered_parser">
+      <headline>Les objections à lever avant de nous engager.</headline>
+      <components><component>10 numbered objections/answers</component><component>internal team/governance/model API/cost/ROI/training/compliance/handover/scope/NDA</component></components>
+    </section>
+    <section index="17" id="engagement" nav_label="Engagement" semantic_form="CTA_PLUS_CALL_PROTOCOL_PLUS_SHARED_FORM_8" source_lines="566-651" source_line_precision="rendered_parser">
+      <headline>Le bon format d’intervention, avant le premier rendez-vous.</headline>
+      <components><component>qualification CTA</component><component>4-step call protocol</component><component>shared 8-screen qualifier</component><component>local-data/no-ad-tracker footer</component></components>
+    </section>
+  </topology>
+  <shared_qualification_form id="shared-qualifier-v1" present="true" screen_count="8" shared_with_programme_root="true" shared_with_expertises_root="true" source_lines="580-651">
+    <screen index="1" key="topic"><question>Qu’est-ce qui doit avancer ?</question><options><option>Système IA, agents ou automatisation</option><option>Plateforme data ou traçabilité</option><option>Environnement régulé ou inspecté</option><option>Cadrage d’une solution</option><option>Montée en compétence d’une équipe</option><option>Autre décision à instruire</option></options></screen>
+    <screen index="2" key="decision_context"><question>Dans quel cadre ?</question><options><option>Sous 30 jours</option><option>Ce trimestre</option><option>Ce semestre</option><option>Pas encore de date</option><option>Je décide</option><option>Je recommande</option><option>J’instruis le dossier</option></options></screen>
+    <screen index="3" key="engagement_mode"><question>Comment souhaitez-vous avancer ?</question><options><option>Une mission accompagnée</option><option>Un sprint court et daté</option><option>Faire monter mon équipe</option><option>Cadrer par moi-même d’abord</option></options></screen>
+    <screen index="4" key="cadence"><question>À quel rythme, si l’on s’engage ?</question><options><option>Un jour par semaine</option><option>Deux jours par semaine</option><option>Trois jours par semaine</option><option>Quatre à cinq jours par semaine</option></options></screen>
+    <screen index="5" key="organisation_size"><question>Combien de personnes doivent monter ?</question><options><option>Jusqu’à dix personnes</option><option>Onze à cinquante</option><option>Cinquante et un à deux cent cinquante</option><option>Deux cent cinquante et un à mille</option><option>Plus de mille</option></options></screen>
+    <screen index="6" key="scope_state"><question>Où en est le périmètre aujourd’hui ?</question><options><option>Brief, équipe et résultat attendu sont prêts</option><option>Le résultat est clair, le périmètre reste à cadrer</option><option>Le problème est identifié, la solution reste ouverte</option><option>C’est encore une idée à explorer</option></options></screen>
+    <screen index="7" key="trigger_event"><question>Ce qui vous amène aujourd’hui</question><options><option>Une inspection prévue</option><option>Des déviations qui reviennent</option><option>Une validation à défendre</option><option>Aucun événement, je prends de l’avance</option></options></screen>
+    <screen index="8" key="contact"><question>Où envoyer la réponse ?</question><options><option>Email professionnel</option><option>Nom facultatif</option><option>Organisation facultative</option><option>Résultat recherché facultatif</option><option>Consentement stockage local</option></options></screen>
+    <storage_boundary>Vos réponses sont enregistrées sur l’infrastructure du site. Aucun service tiers, aucun traceur publicitaire.</storage_boundary>
+  </shared_qualification_form>
+  <materialization_limits>
+    <limit>The live site was available through a rendered-page reader, not as raw HTML bytes; therefore exact DOM nodes, CSS classes and XPaths are intentionally NOT asserted.</limit>
+    <limit>Section order, labels, headings, semantic forms and shared qualifier content are grounded in the rendered live page.</limit>
+  </materialization_limits>
+</page_contract>

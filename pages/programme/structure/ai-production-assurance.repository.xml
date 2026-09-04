@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<page_contract id="page-contract:apa:repository:2026-09-04" version="1.0.0" status="EXACT_GITHUB_SOURCE_DERIVED" publication_authority="NONE">
+  <source type="github_blob" repository="mckeopharma-web/copywriting" branch="main" path="pages/programme/ai-production-assurance.html" blob_sha="f9dc9ec5e0de0de245014847fbbf3833f51eb46b" observed_date="2026-09-04" />
+  <html_contract>
+    <attribute name="lang" value="en" />
+    <attribute name="theme" value="dark" />
+    <attribute name="page" value="ai-production-assurance" />
+    <attribute name="topology" value="17-sections-locked" />
+    <attribute name="publication_status" value="PENDING_FORMAL_LLM_JUDGE" />
+    <attribute name="claim_loop_version" value="external-capability-v1.2-topology-preserving" />
+    <attribute name="claim_loop" value="loop:copy-claim:external-capability-v1.2-topology-preserving" />
+    <attribute name="judge" value="judge:copy-claim:external-capability-grounding-v1.2" />
+  </html_contract>
+  <topology section_count="17" order_locked="true">
+    <section index="1" id="triggers" nav_label="Triggers" semantic_form="GRID_3_WITH_6_CARDS"><headline>Recognise one of these moments — or the programme is premature.</headline><components><component>6 cards</component></components></section>
+    <section index="2" id="consequences" nav_label="Consequences" semantic_form="GRID_2_WITH_2_CARDS"><headline>A successful prompt is not a production acceptance test.</headline><components><component>benchmark card</component><component>architecture questions card</component></components></section>
+    <section index="3" id="for-whom" nav_label="Customer Avatar" semantic_form="AUDIT_STRIP_PLUS_AVATAR_GRID_4_PLUS_DECISION_UNIT"><headline>Claire Dumas — the inductive decision avatar, not a fictional demographic profile.</headline><components><component>4 audit stats</component><component>4 avatar cards</component><component>decision-unit card</component></components></section>
+    <section index="4" id="qualification" nav_label="Qualification" semantic_form="GRID_2_FIT_NOFIT"><headline>The mandate only works when the evidence can actually be reached.</headline><components><component>fit list</component><component>no-fit list</component></components></section>
+    <section index="5" id="proposition" nav_label="Proposition" semantic_form="SINGLE_MECHANISM_CARD"><headline>Build the decision system before asking the committee for a decision.</headline><components><component>mechanism paragraph</component><component>NCSC evidence card</component></components></section>
+    <section index="6" id="offers" nav_label="Offers" semantic_form="GRID_3_OFFER_CARDS"><headline>Choose the smallest intervention that can close the decision gap.</headline><components><component>core</component><component>smaller</component><component>extension</component></components></section>
+    <section index="7" id="deliverables" nav_label="Deliverables" semantic_form="GRID_3_6_CARDS"><headline>Five work products — each bounded by an acceptance criterion.</headline><components><component>5 deliverables</component><component>1 evidence card</component></components></section>
+    <section index="8" id="before-after" nav_label="Before / after" semantic_form="STATE_GRID_5_AXES_PLUS_EVIDENCE_CARD"><headline>The Customer Avatar transformation — HAVE, FEEL, AVERAGE DAY, STATUS, EVIL → GOOD.</headline><components><component>5-axis state grid</component><component>permission-study evidence</component></components></section>
+    <section index="9" id="results" nav_label="Results" semantic_form="GRID_2_ACCEPTANCE_AND_NONCLAIMS"><headline>What success means — and what is not claimed.</headline><components><component>acceptance outcomes</component><component>explicit non-claims</component></components></section>
+    <section index="10" id="proof" nav_label="Proof" semantic_form="PROOF_GRID_3"><headline>Public implementation proof where available; NDA boundaries where not.</headline><components><component>NDA R&amp;D</component><component>Streamlit-LangChain</component><component>AI/RAG portfolio</component></components></section>
+    <section index="11" id="scope" nav_label="Scope" semantic_form="GRID_3_SCOPE"><headline>The boundary is part of the product.</headline><components><component>in scope</component><component>out of scope</component><component>client dependencies</component></components></section>
+    <section index="12" id="process" nav_label="Process" semantic_form="TIMELINE_5"><headline>Five phases. Each phase produces something reviewable.</headline><components><component>5 phases</component></components></section>
+    <section index="13" id="modules" nav_label="Modules" semantic_form="GRID_2_8_MODULES"><headline>Eight modules — selected by the use case.</headline><components><component>8 modules</component></components></section>
+    <section index="14" id="intersection" nav_label="Intersection" semantic_form="GRID_3_INTERSECTION"><headline>The differentiator is the intersection — engineering × assurance × regulated operating discipline.</headline><components><component>3 intersection cards</component><component>continuity note</component></components></section>
+    <section index="15" id="commitments" nav_label="Commitments" semantic_form="GRID_2_COMMITMENT_AND_EVIDENCE"><headline>Guarantee the work product — never an authority’s decision.</headline><components><component>controllable commitments</component><component>authorization study evidence</component></components></section>
+    <section index="16" id="questions" nav_label="Questions" semantic_form="FAQ_6"><headline>Objections are design inputs.</headline><components><component>6 details</component></components></section>
+    <section index="17" id="engagement" nav_label="Engagement" semantic_form="CTA_ONLY_NO_SHARED_FORM"><headline>Describe the AI use case that has to cross a production boundary.</headline><components><component>2 CTA buttons</component><component>avatar validation gap note</component></components></section>
+  </topology>
+  <shared_qualification_form id="shared-qualifier-v1" present="false" screen_count="0" expected_from_live="8" contract_status="MISMATCH" />
+  <evidence_placements count="10" progressive_disclosure="true">
+    <placement claim_id="claim-eu-apa-001" section_id="triggers" evidence_unit_id="EU-SG-001" />
+    <placement claim_id="claim-eu-apa-002" section_id="consequences" evidence_unit_id="EU-AGENTIC-AGENTDOJO-629-2024" />
+    <placement claim_id="claim-eu-apa-003" section_id="for-whom" evidence_unit_id="EU-SG-005" />
+    <placement claim_id="claim-eu-apa-004" section_id="proposition" evidence_unit_id="EU-SG-002" />
+    <placement claim_id="claim-eu-apa-005" section_id="deliverables" evidence_unit_id="EU-AISEC-RUN-22" />
+    <placement claim_id="claim-eu-apa-006" section_id="before-after" evidence_unit_id="EU-AISEC-RUN-34" />
+    <placement claim_id="claim-eu-apa-007" section_id="process" evidence_unit_id="EU-AGENTIC-NIST-TEVV-4-STAGES-2026" />
+    <placement claim_id="claim-eu-apa-008" section_id="modules" evidence_unit_id="EU-SG-003" />
+    <placement claim_id="claim-eu-apa-009" section_id="modules" evidence_unit_id="EU-SG-004" />
+    <placement claim_id="claim-eu-apa-010" section_id="commitments" evidence_unit_id="EU-CANON-BOUNDED-AGENTS-EXFIL-2026" />
+  </evidence_placements>
+  <embedded_neofort_contract>
+    <declared_family>homepage</declared_family><source_count>3</source_count><section_count>3</section_count><sources_per_section_ratio>1.0</sources_per_section_ratio><source_section_gate>PASS</source_section_gate><publication_status>PENDING_FORMAL_LLM_JUDGE</publication_status>
+  </embedded_neofort_contract>
+</page_contract>
