@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEVICEVValidation version="1.0.0" page="https://mickael-umt.com/engagement/audiences/#avatar-training" observedAt="2026-09-04" executionPosture="FAIL_CLOSED" finalDecision="STRUCTURE_SYNC_ALLOWED_EXTERNAL_EVIDENCE_PUBLICATION_BLOCKED">
+  <Scope>
+    <MutationScope>avatar-training card only inside pages/engagement/audiences/mickael-umt.com.html; contract/audit/CI files scoped to this task</MutationScope>
+    <OtherAudienceCards>IMMUTABLE</OtherAudienceCards><OtherPages>NO_CUD</OtherPages>
+    <GoogleDriveRead>PERFORMED</GoogleDriveRead><GoogleDriveMutation>NOT_PERFORMED</GoogleDriveMutation><Reason>Explicit user approval is required before any Google Drive create, update or delete operation.</Reason>
+  </Scope>
+  <PolicyResolution source="NeoFort" currentTrueOnly="true">
+    <Policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true" role="deterministic_preflight"/>
+    <Policy id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true" role="proof_carrying_agent_exploitability"/>
+    <Policy id="policy:evidence-judge-applicability:v2" current="true" role="judge_applicability"/>
+    <Policy id="policy:evidence-judge-verdict-normalization:v2" current="true" role="verdict_normalization"/>
+    <Policy id="policy:evidence-placement:claim-span-entailment-v2" current="true" version="2.2" role="atomic_claim_span_placement"/>
+    <Policy id="evidence-placement-policy:site-v5" current="true" role="site_placement"/>
+    <Policy id="policy:llm-judge:deterministic-execution-v2" current="true" role="replicas_3_temperature_0_top_p_1_AND_MIN_unanimity"/>
+    <Judge id="judge:evidence:factfulness-epistemology-methodology-v2" current="true" replicas="3" temperature="0" topP="1" passThreshold="90" failClosed="true"/>
+    <Judge id="judge:evidence-unit:champion-v2" current="true" version="2.0" replicas="3" temperature="0" topP="1" failClosed="true"/>
+    <Judge id="judge:evidence-placement:presentation-v1.2" current="true" replicas="3" temperature="0" topP="1" passThreshold="85" failClosed="true"/>
+    <ResolutionNote>Requested judge:eu:placementv1 was not resolved as a current policy object. The current applicable placement judge is judge:evidence-placement:presentation-v1.2; it cannot be silently downgraded.</ResolutionNote>
+  </PolicyResolution>
+  <SectionContract>
+    <ExpertiseProgrammeOwnerContract>v4 Source-First + Atomic Design</ExpertiseProgrammeOwnerContract>
+    <CanonicalSemanticOrder>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</CanonicalSemanticOrder>
+    <ObservedExpertiseTrainingAnchorCount>17</ObservedExpertiseTrainingAnchorCount>
+    <ObservedProgrammeAPAAnchorCount>17</ObservedProgrammeAPAAnchorCount>
+    <ObservedSharedDetailAnchorOrder>declencheurs,consequences,pour-qui,qualification,proposition,offres,livrables,avant-apres,resultats,preuves,perimetre,deroule,modules,intersection,engagements,questions,engagement</ObservedSharedDetailAnchorOrder>
+    <AudiencePageTopology>header &gt; hero &gt; 10 avatar cards &gt; problem-before-profile plus 3 decision roles &gt; 8-screen qualifier &gt; footer</AudiencePageTopology>
+    <DeterministicStatus>PASS_FOR_EXTRACTED_CONTRACT</DeterministicStatus>
+    <RawLiveDomParity>NOT_CLAIMED</RawLiveDomParity>
+  </SectionContract>
+  <TargetAvatar>
+    <Contract id="contract:customer-avatar:audiences:2026-09-03" current="true"/>
+    <Name>Nadia Benali</Name><Role>Directrice transformation IA et formation · organisation régulée ou à fortes exigences de contrôle</Role>
+    <LiveBefore>L’usage de l’IA se diffuse déjà dans les équipes, mais elle ne peut ni démontrer les compétences acquises, ni prouver que les limites de confidentialité sont tenues.</LiveBefore>
+    <LiveAfter>Une capacité où les équipes savent quoi automatiser, quoi vérifier et quand escalader — avec la preuve par équipe qui rend la généralisation défendable devant la direction.</LiveAfter>
+    <PublicCardRule>Do not invent age, gender, family, income, education, brands, channels, emotions, objections or purchase behaviour. Unsupported avatar fields remain NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH.</PublicCardRule>
+  </TargetAvatar>
+  <RepositoryAudit>
+    <FullPageArtifact path="pages/engagement/audiences/mickael-umt.com.html" blobShaAtRead="4a024501932f4f3f11ee12429e5c0e13f80f85e3" topology="MATCHES_PAGE_LEVEL_FORM" targetCard="DRIFTED_FROM_LIVE"/>
+    <StandaloneArtifact path="engagement/audiences/avatar-training.html" declaredContract="contract:customer-avatar:growth:2026-09-03" verdict="REVIEW_DOSSIER_ONLY_NOT_LIVE_PAGE_REPLACEMENT"/>
+    <Reason>The standalone artifact expands avatar 03 into additional sections and therefore cannot replace the live audience page without violating section-count, section-form, navigation and visible-composition invariants.</Reason>
+  </RepositoryAudit>
+  <EvidenceGate>
+    <EvidenceUnit id="EU-PV-NIST-GOVERN-2-1-ROLE-CLARITY" admissionStatus="JUDGE_SCORED_PENDING_ADMISSION" publish="false"/>
+    <EvidenceUnit id="EU-PV-NIST-GOVERN-2-2-TRAINING" admissionStatus="JUDGE_SCORED_PENDING_ADMISSION" publish="false"/>
+    <EvidenceUnit id="EU-TRAIN-EC-ART4-TAILORING-2026" admissionStatus="DRAFT_PENDING_FORMAL_JUDGES" publish="false"/>
+    <EvidenceUnit id="EU-TRAIN-EC-ART4-RECORDS-2026" admissionStatus="DRAFT_PENDING_FORMAL_JUDGES" publish="false"/>
+    <EvidenceUnit id="EU-TRAIN-OECD-SKILLS-BARRIER-2026" admissionStatus="DRAFT_PENDING_FORMAL_JUDGES" publish="false"/>
+    <CurrentAdmittedTrainingEvidenceCount>0</CurrentAdmittedTrainingEvidenceCount>
+    <Action>REMOVE_PENDING_EU_BINDINGS_FROM_VISIBLE_TARGET_CARD_AND_KEEP_EXTERNAL_EVIDENCE_OUT_OF_PUBLIC_COPY_UNTIL_FORMAL_ADMISSION_AND_PLACEMENT_PASS</Action>
+  </EvidenceGate>
+  <GitHubAction workflow=".github/workflows/audiences-avatar-training-section-contract.yml" status="PENDING_RUN_CAPTURE">
+    <DeterministicIntent>Apply exact first-party live target card, preserve all non-target card bytes and main-section topology, enforce 10-card order, enforce target anchor exactly once, and reject visible draft EvidenceUnit bindings.</DeterministicIntent>
+  </GitHubAction>
+  <FinalDecision>
+    <FirstPartyPositioningSync>ALLOWED</FirstPartyPositioningSync>
+    <NewExternalEvidencePublication>BLOCKED_PENDING_FORMAL_JUDGES</NewExternalEvidencePublication>
+    <SemanticJudgeExecution>NOT_MATERIALIZED_IN_CONNECTED_NEOFORT_TOOL_SURFACE</SemanticJudgeExecution>
+    <Reason>Lossless synchronization to the current first-party live page does not strengthen an external-effect claim. External evidence candidates remain non-publishable until the exact immutable target snapshot passes all current DEVICEV gates.</Reason>
+  </FinalDecision>
+</DEVICEVValidation>
