@@ -1,35 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<devicev_copy_evidence schema_version="1.0" target_page="https://mickael-umt.com/parcours/" execution_posture="FAIL_CLOSED" publication_allowed="false">
+<devicev_copy_evidence schema_version="1.1" target_page="https://mickael-umt.com/parcours/" execution_posture="FAIL_CLOSED" publication_allowed="false" updated_at="2026-09-04T05:33:00+02:00">
   <policy_resolution authority="@neofort" selector="current=true">
     <requested_alias id="judge:eu:placementv1" resolution="NOT_FOUND_AS_CURRENT_JUDGE"/>
-    <placement_policy id="evidence-placement-policy:site-v5"/>
+    <placement_policy id="evidence-placement-policy:site-v5" version="5.0"/>
     <claim_span_policy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2"/>
-    <presentation_judge id="judge:evidence-placement:presentation-v1.2" replicas="3" temperature="0" top_p="1" threshold="85"/>
+    <presentation_judge id="judge:evidence-placement:presentation-v1.2" replicas="3" temperature="0" top_p="1" threshold="85" champion_threshold="95"/>
     <factfulness_judge id="judge:evidence:factfulness-epistemology-methodology-v2" replicas="3" temperature="0" top_p="1" threshold="90"/>
+    <evidence_unit_judge id="judge:evidence-unit:champion-v2" replicas="3" temperature="0" top_p="1"/>
+    <copy_grounding_judge id="judge:copy-claim:external-capability-grounding-v1.1" threshold="92"/>
     <determinism_policy id="policy:llm-judge:deterministic-execution-v2"/>
     <agent_exploitability_policy id="policy:evidence-agent-exploitability:proof-carrying-v3"/>
+    <deterministic_preflight_policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2"/>
+    <judge_applicability_policy id="policy:evidence-judge-applicability:v2"/>
     <verdict_normalization id="policy:evidence-judge-verdict-normalization:v2"/>
   </policy_resolution>
-  <buyer_model primary_avatar="CTO / Head of AI Platform" secondary_avatar="Responsable gouvernance, risque ou sécurité IA" basis="@neofort current CustomerAvatarProfile">
+
+  <scope_model page_role="cross_domain_proof_and_navigation" no_single_primary_avatar="true" basis="NeoFort page:source:24.1">
+    <commercial_reader primary="CTO / Head of AI Platform" secondary="Responsable gouvernance, risque ou sécurité IA" status="reader-priority-not-exclusive-avatar"/>
     <decision_question>Ce parcours apporte-t-il suffisamment de preuve de profondeur technique, de contexte régulé et de capacité R&amp;D pour justifier une mission, un renfort ou une évaluation technique ?</decision_question>
-  </buyer_model>
+  </scope_model>
+
+  <source_inputs>
+    <source id="SRC-SITE-PROFILE" type="first_party_public" url="https://mickael-umt.com/parcours/" use="live structure and public positioning"/>
+    <source id="SRC-SITE-CAPABILITIES" type="first_party_public_registry" url="https://mickael-umt.com/parcours/#capacites" use="capability dates, confidence and proof routes"/>
+    <source id="SRC-SITE-PROJECTS" type="first_party_public_registry" url="https://mickael-umt.com/realisations/" use="public project provenance"/>
+    <source id="SRC-GITHUB" type="public_repository_provenance" url="https://github.com/RickOwri" use="repository inspection and contribution history"/>
+    <source id="SRC-CERT" type="first_party_public_registry" url="https://mickael-umt.com/parcours/certificats/" use="credential registry"/>
+    <source id="SRC-DRIVE-24-1" type="google_drive_read_only" google_drive_id="18yyyznrR6RJz0TQHX_T0194R2HVyC8Q6epI3tigB5vY" title="24.1 Chapter 24: La trajectoire qui relie pharma, software, data, agents et systèmes vérifiables" mutation="NONE" use="positioning spine and scope boundary"/>
+  </source_inputs>
+
+  <landing_page_adaptation framework="XYZ+C1-C19">
+    <map id="XYZ" status="APPLIED">What: AI/data/verifiable engineering and applied R&amp;D; reader: technical decision-makers; benefit: inspect fit and proof before engagement; delivery: consulting, applied R&amp;D, team reinforcement or capability transfer.</map>
+    <map id="C1-C10" status="ADAPTED">Offer, reader, product/capability, need, delivery, benefits, modules/outcomes and problem-solution logic are expressed through the existing 11-section profile topology.</map>
+    <map id="C11" status="NOT_APPLICABLE">No artificial scarcity is introduced.</map>
+    <map id="C12" status="NOT_APPLICABLE">No unsupported result guarantee is introduced.</map>
+    <map id="C13" status="APPLIED">Qualification, contact and GitHub inspection CTAs.</map>
+    <map id="C14-C15" status="REJECTED_BY_EVIDENCE_POLICY">No synthetic testimonial or review is fabricated.</map>
+    <map id="C16" status="APPLIED">Three evidence-bounded FAQs are embedded in the engagement section.</map>
+    <map id="C17-C19" status="ADAPTED">Recurring decision problems are compressed into buyer-fit sections and commercial headlines rather than expanded as a long problem list.</map>
+  </landing_page_adaptation>
+
   <evidence_units>
-    <evidence_unit eu_id="EU-PARCOURS-01" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>pharmacy_curriculum_duration</metric><value>6</value><unit>years</unit><population>Mickael Rutembya university pharmacy curriculum</population><period>2014–2020</period><source>mysite.list_experience / pharmacy-studies-strasbourg</source><boundary>Curriculum duration; not six years of software engineering.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-02" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>regulated_health_operations_documented_minimum</metric><value>7+</value><unit>years</unit><population>pharmaceutical and regulated operational practice</population><period>2015–2023</period><source>mysite.list_capabilities / pharmaceutical-operations</source><boundary>Regulated-health practice, not healthcare-software tenure.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-03" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>python_professional_use_documented_minimum</metric><value>5+</value><unit>years</unit><population>professional Python and applied data work</population><period>2021–2026</period><source>mysite.list_capabilities / python</source><boundary>Earlier unverified exposure is not used to increase the count.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-04" observation_status="DERIVED_DETERMINISTIC" claim_level="descriptive" agent_exploitable="true"><metric>addressable_capability_count</metric><value>16</value><unit>capabilities</unit><population>public capability registry</population><period>2026-09-04 snapshot</period><source>mysite.list_capabilities</source><formula>count(capabilities)</formula><boundary>Registry count, not comparative market ranking.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-05" observation_status="DERIVED_DETERMINISTIC" claim_level="descriptive" agent_exploitable="true"><metric>structured_experience_count</metric><value>7</value><unit>experience records</unit><population>public structured CV registry</population><period>2026-09-04 snapshot</period><source>mysite.list_experience</source><formula>count(experience)</formula><boundary>Seven structured records, not seven distinct employers.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-06" observation_status="DERIVED_DETERMINISTIC" claim_level="descriptive" agent_exploitable="true"><metric>certificate_registry_count</metric><value>6</value><unit>certificates</unit><population>public certificate registry</population><period>2026-09-04 snapshot</period><source>mysite.list_certificates</source><formula>count(certificates)</formula><boundary>Five Encode Club records expose token identifiers; Token Engineering uses issuer evidence.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-07" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>governed_ai_operations_period</metric><value>2025–present</value><unit>period</unit><population>confidential R&amp;D responsibility record</population><period>2025–present</period><source>mysite.list_experience / governed-ai-operations-rd</source><boundary>NDA evidence supports responsibility categories, not undisclosed production outcomes.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-08" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>privacy_preserving_ml_period</metric><value>2024–present</value><unit>period</unit><population>applied research responsibility record</population><period>2024–present</period><source>mysite.list_experience / privacy-preserving-ml-research</source><boundary>No external efficacy or superiority claim is inferred.</boundary></evidence_unit>
-    <evidence_unit eu_id="EU-PARCOURS-09" observation_status="DERIVED_DETERMINISTIC" claim_level="implementation" agent_exploitable="true"><metric>project_registry_count</metric><value>7</value><unit>projects</unit><population>public project registry snapshot</population><period>2023–present</period><source>mysite.list_projects + GitHub histories</source><formula>count(projects)</formula><boundary>Includes public projects and one NDA R&amp;D record; fork origin and contribution scope remain explicit.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-01" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>pharmacy_curriculum_duration</metric><value>6</value><unit>years</unit><population>Mickael Rutembya university pharmacy curriculum</population><period>2014–2020</period><source_url>https://mickael-umt.com/parcours/pharmacy-studies-strasbourg/#proof-pharmacy-studies-strasbourg--pharmaceutical-science-foundation</source_url><boundary>Curriculum duration; not six years of software engineering.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-02" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>regulated_health_operations_documented_minimum</metric><value>7+</value><unit>years</unit><population>pharmaceutical and regulated operational practice</population><period>2015–2023</period><source_url>https://mickael-umt.com/expertises/pharmaceutical-operations/</source_url><boundary>Regulated-health practice, not healthcare-software tenure.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-03" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>python_professional_use_documented_minimum</metric><value>5+</value><unit>years</unit><population>professional Python and applied data work</population><period>2021–2026</period><source_url>https://mickael-umt.com/expertises/python/</source_url><boundary>Earlier unverified exposure is not used to increase the count.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-04" observation_status="DERIVED_DETERMINISTIC" claim_level="descriptive" agent_exploitable="true"><metric>addressable_capability_count</metric><value>16</value><unit>capabilities</unit><population>public capability registry</population><period>2026-09-04 snapshot</period><source_url>https://mickael-umt.com/parcours/#capacites</source_url><formula>count(capabilities)</formula><boundary>Registry count, not comparative market ranking.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-05" observation_status="DERIVED_DETERMINISTIC" claim_level="descriptive" agent_exploitable="true"><metric>structured_experience_count</metric><value>7</value><unit>experience records</unit><population>public structured CV registry</population><period>2026-09-04 snapshot</period><source_url>https://mickael-umt.com/parcours/#experience</source_url><formula>count(experience)</formula><boundary>Seven structured records, not seven distinct employers.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-06" observation_status="DERIVED_DETERMINISTIC" claim_level="descriptive" agent_exploitable="true"><metric>certificate_registry_count</metric><value>6</value><unit>certificates</unit><population>public certificate registry</population><period>2026-09-04 snapshot</period><source_url>https://mickael-umt.com/parcours/certificats/</source_url><formula>count(certificates)</formula><boundary>Five Encode Club records expose token identifiers; Token Engineering uses issuer evidence.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-07" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>governed_ai_operations_period</metric><value>2025–present</value><unit>period</unit><population>confidential R&amp;D responsibility record</population><period>2025–present</period><source_url>https://mickael-umt.com/parcours/governed-ai-operations-rd/</source_url><boundary>NDA evidence supports responsibility categories, not undisclosed production outcomes.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-08" observation_status="OBSERVED" claim_level="descriptive" agent_exploitable="true"><metric>privacy_preserving_ml_period</metric><value>2024–present</value><unit>period</unit><population>applied research responsibility record</population><period>2024–present</period><source_url>https://mickael-umt.com/parcours/privacy-preserving-ml-research/</source_url><boundary>No external efficacy or superiority claim is inferred.</boundary></evidence_unit>
+    <evidence_unit eu_id="EU-PARCOURS-09" observation_status="DERIVED_DETERMINISTIC" claim_level="implementation" agent_exploitable="true"><metric>project_registry_count</metric><value>7</value><unit>projects</unit><population>public project registry snapshot</population><period>2023–present</period><source_url>https://mickael-umt.com/realisations/</source_url><formula>count(projects)</formula><boundary>Includes public projects and one NDA R&amp;D record; fork origin and contribution scope remain explicit.</boundary></evidence_unit>
   </evidence_units>
-  <copy_sequences>
-    <copy_sequence id="CS-HERO-FOUNDATION" xpath="//*[@id='claim-hero-foundation']" eu_ids="EU-PARCOURS-01,EU-PARCOURS-02,EU-PARCOURS-03" buyer_question="Quelle profondeur est documentée ?" nlp_role="credibility-compression" commercial_role="qualification"/>
-    <copy_sequence id="CS-CAPABILITY-COUNT" xpath="//*[@id='claim-capability-count']" eu_ids="EU-PARCOURS-04" buyer_question="Le portefeuille de compétences est-il interrogeable ?" nlp_role="proof-ledger" commercial_role="technical-screening"/>
-    <copy_sequence id="CS-EXPERIENCE-COUNT" xpath="//*[@id='claim-experience-count']" eu_ids="EU-PARCOURS-05" buyer_question="Quel parcours soutient ces compétences ?" nlp_role="timeline-proof" commercial_role="technical-screening"/>
-    <copy_sequence id="CS-CERTIFICATE-COUNT" xpath="//*[@id='claim-certificate-count']" eu_ids="EU-PARCOURS-06" buyer_question="Les formations avancées sont-elles vérifiables ?" nlp_role="credential-proof" commercial_role="trust"/>
-    <copy_sequence id="CS-RD-SIGNALS" xpath="//*[@id='claim-rd-signals']" eu_ids="EU-PARCOURS-08" buyer_question="La R&amp;D est-elle bornée par des preuves de travail ?" nlp_role="method-boundary" commercial_role="differentiation"/>
+
+  <copy_sequences citation_mode="SILENT_ATOMIC_MARKER_WITH_LEVEL2_DISCLOSURE">
+    <copy_sequence id="CS-PHARMA-CURRICULUM" xpath="//*[@id='claim-pharma-curriculum']" xpath_match_count="1" eu_ids="EU-PARCOURS-01" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="Quelle profondeur scientifique est documentée ?" nlp_role="credibility-compression" commercial_role="qualification"/>
+    <copy_sequence id="CS-REGULATED-OPS" xpath="//*[@id='claim-regulated-operations']" xpath_match_count="1" eu_ids="EU-PARCOURS-02" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="Le contexte régulé vient-il du terrain ?" nlp_role="credibility-compression" commercial_role="qualification"/>
+    <copy_sequence id="CS-PYTHON-YEARS" xpath="//*[@id='claim-python-years']" xpath_match_count="1" eu_ids="EU-PARCOURS-03" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="Quelle ancienneté Python est défendable ?" nlp_role="credibility-compression" commercial_role="technical-screening"/>
+    <copy_sequence id="CS-CAPABILITY-COUNT" xpath="//*[@id='claim-capability-count']" xpath_match_count="1" eu_ids="EU-PARCOURS-04" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="Le portefeuille est-il interrogeable ?" nlp_role="proof-ledger" commercial_role="technical-screening"/>
+    <copy_sequence id="CS-EXPERIENCE-COUNT" xpath="//*[@id='claim-experience-count']" xpath_match_count="1" eu_ids="EU-PARCOURS-05" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="Quel parcours soutient ces capacités ?" nlp_role="timeline-proof" commercial_role="technical-screening"/>
+    <copy_sequence id="CS-RD-PERIOD" xpath="//*[@id='claim-rd-period']" xpath_match_count="1" eu_ids="EU-PARCOURS-08" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="La R&amp;D est-elle bornée dans le temps ?" nlp_role="method-boundary" commercial_role="differentiation"/>
+    <copy_sequence id="CS-CERTIFICATE-COUNT" xpath="//*[@id='claim-certificate-count']" xpath_match_count="1" eu_ids="EU-PARCOURS-06" support_classification="EXACT_ENTAILMENT_LOCAL" buyer_question="Les credentials sont-ils vérifiables ?" nlp_role="credential-proof" commercial_role="trust"/>
   </copy_sequences>
-  <judge_execution_status><deterministic_preflight>PASS_LOCAL</deterministic_preflight><factfulness_replicas>NOT_EXECUTED_AS_LLM_JUDGE</factfulness_replicas><presentation_replicas>NOT_EXECUTED_AS_LLM_JUDGE</presentation_replicas><reason>The connected NeoFort surface resolves current policies but exposes no immutable three-replica LLM-judge execution endpoint. FAIL_CLOSED keeps publication_allowed=false.</reason></judge_execution_status>
+
+  <section_support_assessment claim_bearing_sections="10" distinct_support_sources="9" source_section_ratio="0.9" threshold="strictly_greater_than_0.72" ratio_status="PASS_LOCAL">
+    <section id="hero" source_refs="SRC-SITE-PROFILE,SRC-SITE-CAPABILITIES"/>
+    <section id="intersection-profile" source_refs="SRC-DRIVE-24-1,SRC-SITE-PROFILE"/>
+    <section id="domains" source_refs="SRC-SITE-CAPABILITIES"/>
+    <section id="capability-summary" source_refs="SRC-SITE-CAPABILITIES"/>
+    <section id="capability-ranking" source_refs="SRC-SITE-CAPABILITIES,SRC-SITE-PROJECTS,SRC-GITHUB"/>
+    <section id="experience" source_refs="SRC-SITE-PROFILE,SRC-SITE-CAPABILITIES"/>
+    <section id="research-development" source_refs="SRC-DRIVE-24-1,SRC-SITE-CAPABILITIES"/>
+    <section id="advanced-programmes" source_refs="SRC-CERT,SRC-GITHUB"/>
+    <section id="certificates" source_refs="SRC-CERT"/>
+    <section id="engagement" source_refs="SRC-SITE-PROFILE"/>
+    <section id="qualification-form" source_refs="SRC-SITE-PROFILE" citation_required="false" reason="form options are not external factual claims"/>
+  </section_support_assessment>
+
+  <judge_execution_status>
+    <deterministic_preflight>PASS_LOCAL</deterministic_preflight>
+    <static_xpath_unique>PASS</static_xpath_unique>
+    <claim_marker_granularity>PASS_LOCAL</claim_marker_granularity>
+    <google_drive_read_only>PASS</google_drive_read_only>
+    <factfulness_replicas>NOT_EXECUTED_AS_LLM_JUDGE</factfulness_replicas>
+    <presentation_replicas>NOT_EXECUTED_AS_LLM_JUDGE</presentation_replicas>
+    <reason>The connected NeoFort surface resolves current policies but exposes no immutable three-replica LLM-judge execution endpoint. Local structural and source-bound checks cannot substitute for the mandated replicas. FAIL_CLOSED keeps publication_allowed=false.</reason>
+  </judge_execution_status>
 </devicev_copy_evidence>
