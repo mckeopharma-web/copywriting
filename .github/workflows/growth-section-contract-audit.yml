@@ -1,0 +1,26 @@
+name: Growth section contract audit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'expertises/growth/structure/*.xml'
+      - 'reports/growth-contract-audit-*.xml'
+      - 'scripts/validate_growth_section_contract.py'
+      - '.github/workflows/growth-section-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-growth-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Growth section and evidence audit contract
+        run: python scripts/validate_growth_section_contract.py
