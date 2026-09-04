@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository_html_snapshot schema_version="1.0" repository="mckeopharma-web/copywriting" branch="main" path="pages/parcours/parcours.html" blob_sha="3b3c0d08d9febf1ef2fbced13a5873e7707f0d80" source_page="https://mickael-umt.com/parcours/" artifact_type="faithful-night-mode-reconstruction" raw_live_html_copy="false" candidate_publication_allowed="false" section_count="11" topology_sha256="b3f19c47e1e711088752c6dabeb67f2b42a11e0f9fb679c29c5cf0b8470e2d2a">
+<repository_html_snapshot schema_version="1.1" repository="mckeopharma-web/copywriting" branch="main" path="pages/parcours/parcours.html" blob_sha="a9919b34d75658b9fbc8ccebbb8e46ddec5a03bb" source_page="https://mickael-umt.com/parcours/" artifact_type="faithful-night-mode-commercial-reconstruction" raw_live_html_copy="false" candidate_publication_allowed="false" section_count="11" topology_sha256="b3f19c47e1e711088752c6dabeb67f2b42a11e0f9fb679c29c5cf0b8470e2d2a">
   <topology>
-    <section order="1" section_id="hero" anchor="top" form="profile-hero"><heading>Ingénierie IA/data et R&amp;D appliquée, ancrées dans six années de sciences pharmaceutiques.</heading></section>
-    <section order="2" section_id="intersection-profile" anchor="profil" form="intersection-proof"><heading>Un profil d’intersection : terrain régulé, ingénierie et R&amp;D appliquée.</heading></section>
-    <section order="3" section_id="domains" anchor="domaines" form="four-domain-cards"><heading>Des compétences structurées pour des environnements complexes</heading></section>
-    <section order="4" section_id="capability-summary" anchor="competences" form="four-family-summary"><heading>4 domaines, 16 compétences structurantes</heading></section>
-    <section order="5" section_id="capability-ranking" anchor="capacites" form="ranked-capability-ledger"><heading>Les 16 capacités du CV, classées et accessibles par URL.</heading></section>
-    <section order="6" section_id="experience" anchor="experience" form="filterable-timeline"><heading>Chronologie pensée pour l’interface humaine</heading></section>
-    <section order="7" section_id="research-development" anchor="rd" form="two-rd-capabilities"><heading>Une capacité de R&amp;D, au service de l’état de l’art</heading></section>
-    <section order="8" section_id="advanced-programmes" anchor="specialisations" form="programme-to-rd-axis"><heading>Des programmes avancés convertis en axes de R&amp;D</heading></section>
-    <section order="9" section_id="certificates" anchor="certificats" form="verifiable-certificate-registry"><heading>Six certificats, avec statut de preuve explicite.</heading></section>
-    <section order="10" section_id="engagement" anchor="prochaine-etape" form="two-cta-next-step"><heading>Discutons de votre prochain système.</heading></section>
+    <section order="1" section_id="hero" anchor="top" form="profile-hero"><heading>Un profil d’ingénierie pour les systèmes IA/data qui doivent fonctionner, rester traçables et pouvoir être défendus.</heading></section>
+    <section order="2" section_id="intersection-profile" anchor="profil" form="intersection-proof"><heading>Quand la mission traverse plusieurs couches, l’enjeu est de les relier sans perdre la preuve.</heading></section>
+    <section order="3" section_id="domains" anchor="domaines" form="four-domain-cards"><heading>Quatre zones où le parcours devient livrable.</heading></section>
+    <section order="4" section_id="capability-summary" anchor="competences" form="four-family-summary"><heading>Un profil à lire par résultat, pas par accumulation de technologies.</heading></section>
+    <section order="5" section_id="capability-ranking" anchor="capacites" form="ranked-capability-ledger"><heading>Commencez par les preuves qui comptent pour votre décision.</heading></section>
+    <section order="6" section_id="experience" anchor="experience" form="filterable-timeline"><heading>Quatre phases expliquent comment le terrain, l’ingénierie et la R&amp;D se sont reliés.</heading></section>
+    <section order="7" section_id="research-development" anchor="rd" form="two-rd-capabilities"><heading>La R&amp;D est utile quand elle réduit l’incertitude avant qu’elle devienne dette de production.</heading></section>
+    <section order="8" section_id="advanced-programmes" anchor="specialisations" form="programme-to-rd-axis"><heading>Les formations ne sont pas l’argument. Ce qu’elles permettent de construire l’est.</heading></section>
+    <section order="9" section_id="certificates" anchor="certificats" form="verifiable-certificate-registry"><heading>Les certificats restent vérifiables sans transformer la page en registre.</heading></section>
+    <section order="10" section_id="engagement" anchor="prochaine-etape" form="two-cta-next-step"><heading>Si le profil est pertinent, reste à savoir où l’insérer.</heading></section>
     <section order="11" section_id="qualification-form" anchor="qualifier" form="eight-screen-qualification"><heading>Le bon format d’intervention, avant le premier rendez-vous.</heading></section>
   </topology>
+  <commercial_compression visible_dense_ledgers="collapsed_progressive_disclosure" inline_citation_mode="quiet_atomic_markers" synthetic_testimonials="excluded" artificial_scarcity="excluded" unsupported_guarantees="excluded"/>
   <parity live_section_count="11" repo_section_count="11" live_qualification_screens="8" repo_qualification_screens="8" order_match="true" section_form_match="true"/>
-  <source_boundary>Reconstruction from rendered live structure and structured public profile sources. It is not a byte-for-byte copy of the production bundle.</source_boundary>
+  <source_boundary>Reconstruction from rendered live structure, current public profile sources, Google Drive Chapter 24 source material and GitHub provenance. It is not a byte-for-byte copy of the production bundle.</source_boundary>
 </repository_html_snapshot>
