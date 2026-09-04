@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webpage-structure version="1.0" source="https://mickael-umt.com/expertises/training/" extracted-on="2026-09-04" status="SEMANTIC_RENDER_CAPTURE">
+  <capture>
+    <raw-origin-html materialised="false"/>
+    <rendered-content materialised="true"/>
+    <claim>Lossless for observed section positioning, semantic order and section forms; no byte/DOM identity claim.</claim>
+  </capture>
+  <page-positioning>
+    <offer>AI Training &amp; Adoption Engineering — transfert de capacité gouverné</offer>
+    <hero-claim>Une formation réussie se prouve par une tâche réelle exécutée, vérifiée et défendue.</hero-claim>
+    <buyer-outcome>Rendre la capacité observable sur des tâches nommées, avec vérification, règles de données, responsabilité humaine, critères de transfert et remise d'actifs.</buyer-outcome>
+    <engagement>Mandat de formation/adoption gouvernée avec qualification de mission.</engagement>
+    <operating-format>cadrage → pilote contrôlé ≤12 → 3–6 mois → transfert/handover</operating-format>
+  </page-positioning>
+  <avatar id="nadia-benali" epistemic-status="HYPOTHESIS_TO_VALIDATE">
+    <name>Nadia Benali</name>
+    <role>Directrice transformation IA et formation</role>
+    <organisation-context>organisation réglementée ou à fort contrôle</organisation-context>
+    <buyer-question>Comment démontrer ce qui a changé dans le travail, où commence la responsabilité humaine et si le pilote mérite d'être étendu ?</buyer-question>
+    <unsupported-fields>âge, genre, statut familial, enfants, revenu individuel, médias, marques, influenceurs et événements non observés</unsupported-fields>
+  </avatar>
+  <sections semantic-slot-count="22" nav-anchor-count="17">
+    <section ordinal="0" id="hero" token="0" role="hero" nav="false" form="split-hero-blueprint">
+      <heading>Une formation réussie se prouve par une tâche réelle exécutée, vérifiée et défendue.</heading>
+      <content-shape>headline + outcome + four-line mandate + CTA</content-shape>
+    </section>
+    <section ordinal="1" id="triggers" token="11" role="triggers" nav="true" form="signal-card-grid">
+      <heading>Reconnaître quand la formation cesse d'être un problème de contenu.</heading>
+      <content-shape>operational triggers that make capability evidence necessary</content-shape>
+    </section>
+    <section ordinal="2" id="consequences" token="20" role="problems" nav="true" form="problem-and-operating-gap">
+      <heading>Le mode d'échec est un écart opérationnel non mesuré.</heading>
+      <content-shape>problem framing + limits of attendance/quiz/policy proxies</content-shape>
+    </section>
+    <section ordinal="3" id="for-whom" token="13" role="audience" nav="true" form="inductive-customer-avatar">
+      <heading>Nadia Benali — Directrice transformation IA et formation sous pression de preuve.</heading>
+      <content-shape>demographics/interests boundaries + frustrations + aspirations + purchase drivers + decision unit + before/after state</content-shape>
+    </section>
+    <section ordinal="4" id="qualification" token="14" role="qualification" nav="true" form="fit-no-fit-gates">
+      <heading>Conditions avant réservation.</heading>
+      <content-shape>fit conditions + no-fit conditions</content-shape>
+    </section>
+    <section ordinal="5" id="proposition" token="1" role="proposition" nav="true" form="mechanism-statement">
+      <heading>Acheter une capacité contrôlée, pas des heures de formation.</heading>
+      <content-shape>Task → Practice → Verification → Evidence → Autonomy</content-shape>
+    </section>
+    <section ordinal="6" id="value" token="2" role="value" nav="false" form="four-attribute-value-questions">
+      <heading>Ce que ça change, et sur quelle dimension.</heading>
+      <content-shape>four attributes / four buyer questions; value is separated from mechanism and proof</content-shape>
+    </section>
+    <section ordinal="7" id="offers" token="10" role="offers" nav="true" form="three-entry-route-cards">
+      <heading>Trois portes d'entrée.</heading>
+      <content-shape>adoption diagnostic + controlled pilot ≤12 + capability transfer</content-shape>
+    </section>
+    <section ordinal="8" id="deliverables" token="15" role="product" nav="true" form="artifact-card-grid">
+      <heading>Ce qui existe à la remise.</heading>
+      <content-shape>competency/task matrix + exercise bank/rubrics + data classification + human/AI matrix + transfer protocol + trainer handover</content-shape>
+    </section>
+    <section ordinal="9" id="transformation" token="3" role="transformation" nav="false" form="arrival-state-morph">
+      <heading>L'état d'arrivée.</heading>
+      <content-shape>state change from training activity to controlled organisational capability</content-shape>
+    </section>
+    <section ordinal="10" id="before-after" token="12" role="before_after" nav="true" form="same-axis-comparison">
+      <heading>Comparer sur le même axe.</heading>
+      <content-shape>measurement + boundary + ownership + committee + continuity</content-shape>
+    </section>
+    <section ordinal="11" id="results" token="19" role="results" nav="true" form="acceptance-ledger">
+      <heading>Des critères d'acceptation, pas des résultats client inventés.</heading>
+      <content-shape>design acceptance + controlled evaluation + transfer review; no public ROI/transfer-rate claim</content-shape>
+    </section>
+    <section ordinal="12" id="proof" token="4" role="proof" nav="true" form="evidence-card-ledger">
+      <heading>Une preuve proportionnée à la promesse.</heading>
+      <content-shape>training/consulting history + public engineering artefacts + evaluation work + regulated-domain foundation</content-shape>
+    </section>
+    <section ordinal="13" id="scope" token="16" role="scope" nav="true" form="in-out-dependencies">
+      <heading>Dans le périmètre, hors périmètre et dépendances.</heading>
+      <content-shape>In + Out + client dependencies</content-shape>
+    </section>
+    <section ordinal="14" id="process" token="17" role="phases" nav="true" form="five-phase-decision-sequence">
+      <heading>Cinq phases, cinq décisions.</heading>
+      <content-shape>baseline → design → pilot → controlled evaluation → transfer review</content-shape>
+    </section>
+    <section ordinal="15" id="modules" token="18" role="modules" nav="true" form="task-practice-verification-evidence-autonomy">
+      <heading>Tâche · Pratique · Vérification · Preuve · Autonomie.</heading>
+      <content-shape>inspectable capability blocks with scope exit for already-owned capabilities</content-shape>
+    </section>
+    <section ordinal="16" id="capabilities" token="5" role="capabilities" nav="false" form="cv-derived-ranked-capability">
+      <heading>Capacités extraites du CV.</heading>
+      <content-shape>only causally linked CV capability; technical training ranked #3 with 82/100 on current public capability model</content-shape>
+    </section>
+    <section ordinal="17" id="intersection" token="21" role="intersection" nav="true" form="skill-braid">
+      <heading>Moins de coutures de traduction.</heading>
+      <content-shape>regulated operations × AI/data engineering × assurance/governance × verifiable systems</content-shape>
+    </section>
+    <section ordinal="18" id="benchmark" token="6" role="benchmark" nav="false" form="market-reference-with-boundary">
+      <heading>Repère marché — pas un prix contractuel.</heading>
+      <content-shape>market reference displayed separately from mission quote; must not be treated as admitted evidence without current gates</content-shape>
+    </section>
+    <section ordinal="19" id="commitments" token="22" role="guarantee" nav="true" form="bounded-work-product-commitments">
+      <heading>Garantir le produit de travail, pas un résultat d'autorité.</heading>
+      <content-shape>scope before billing + rework criteria + reversibility + confidentiality + human boundary + vendor-neutral core</content-shape>
+    </section>
+    <section ordinal="20" id="questions" token="23" role="faq" nav="true" form="objection-details">
+      <heading>Ce qui change le périmètre ou la responsabilité.</heading>
+      <content-shape>FAQ / objections / boundary clarifications</content-shape>
+    </section>
+    <section ordinal="21" id="engagement" token="7" role="engagement" nav="true" form="qualification-cta-and-evidence-register">
+      <heading>Évaluer le mandat en 20 minutes.</heading>
+      <content-shape>mission qualification CTA + evidence status/disclosure</content-shape>
+    </section>
+  </sections>
+  <navigation>triggers consequences for-whom qualification proposition offers deliverables before-after results proof scope process modules intersection commitments questions engagement</navigation>
+  <omissions>
+    <canonical-token id="8" name="lead_form" reason="not observed on current live expertise detail page"/>
+  </omissions>
+</webpage-structure>
