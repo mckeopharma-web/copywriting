@@ -1,32 +1,533 @@
 <!doctype html>
-<html lang="en" data-publication-status="BLOCKED_PRECHECK_AND_FORMAL_JUDGES" data-devicev-version="1.0.0" data-evidence-run="graph-research:data-engineering:2026-09-03:v4">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="robots" content="noindex,nofollow"><title>data-engineering.html</title>
+<html lang="fr" data-publication-status="BLOCKED_PRECHECK_AND_FORMAL_JUDGES" data-devicev-version="1.0.0" data-evidence-run="data-engineering:commercial-compression:2026-09-04:v5">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex,nofollow">
+<title>Data Engineering & Evidence Architecture — Commercial Review Build</title>
 <style>
-:root{--b:#071018;--p:#0d1822;--p2:#10202b;--t:#f2f6f8;--m:#a8b7c3;--l:#263b48;--a:#5eead4;--x:#93c5fd;--w:#fbbf24;--g:#86efac;--r:#fca5a5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% -10%,#143241 0,transparent 34%),var(--b);color:var(--t);font:15px/1.55 Inter,system-ui,sans-serif}a{color:var(--x)}a:focus-visible,summary:focus-visible{outline:3px solid var(--w);outline-offset:3px}.w{width:min(1120px,calc(100% - 32px));margin:auto}.flag{position:sticky;top:0;z-index:30;background:#2b1c08;color:#ffe7a3;border-bottom:1px solid #6a4b16;padding:8px 16px;text-align:center;font-size:12px}.hero{padding:66px 0 42px}.ey{color:var(--a);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.12em}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.96;letter-spacing:-.055em;margin:14px 0 20px;max-width:1050px}.lead{font-size:clamp(19px,2.4vw,26px);max-width:900px;color:#dce7ed}.muted{color:var(--m)}.small{font-size:12px}.cta{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.btn{padding:11px 15px;border:1px solid var(--l);border-radius:9px;text-decoration:none;font-weight:800}.btn.pri{background:var(--t);color:#071018}.facts,.g,.g2,.avatar{display:grid;gap:12px}.facts{grid-template-columns:repeat(4,1fr);margin-top:30px}.facts div,.card,.avatar>div{border:1px solid var(--l);background:linear-gradient(180deg,var(--p2),var(--p));border-radius:12px;padding:16px}.facts b{display:block;color:var(--a);font-size:10px;text-transform:uppercase}.nav{position:sticky;top:35px;z-index:20;background:#071018ef;border-block:1px solid var(--l);overflow:auto;white-space:nowrap}.nav .w{display:flex;gap:16px;padding:9px 0}.nav a{color:var(--m);font-size:12px;text-decoration:none}section{padding:56px 0;border-bottom:1px solid var(--l);scroll-margin-top:72px}h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.035em;line-height:1.05;margin:5px 0 12px}.intro{font-size:17px;color:#cbd8df;max-width:900px}.g{grid-template-columns:repeat(3,1fr);margin-top:22px}.g2{grid-template-columns:repeat(2,1fr);margin-top:22px}.card h3{margin:0 0 6px}.tag{display:inline-block;border:1px solid var(--l);border-radius:999px;padding:3px 8px;margin:3px;font-size:11px;color:#c9d5dc}.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:22px 0}.node{border:1px solid #2f6570;background:#0a2028;border-radius:10px;padding:14px;text-align:center;font-weight:800}.table{width:100%;border-collapse:collapse;margin-top:20px}.table th,.table td{padding:10px;border-bottom:1px solid var(--l);text-align:left;vertical-align:top}.table th{color:var(--a);font-size:11px;text-transform:uppercase}.unknown{color:#ddcca1}.e{display:inline}.e summary{display:inline-block;list-style:none;cursor:pointer;color:var(--x);font:850 10px ui-monospace,monospace;vertical-align:super;border:1px solid #3c5966;border-radius:999px;padding:2px 6px;margin-left:3px}.e summary::-webkit-details-marker{display:none}.lp-evidence-bubble-scroll{margin:8px 0 14px;padding:12px;border:1px solid #38515d;background:#09151d;border-radius:9px;color:#c5d3da;max-width:760px}.lp-evidence-bubble-scroll small{color:var(--m)}.status{display:inline-block;background:#3a2c0b;color:#ffe39a;border-radius:999px;padding:2px 7px;font-size:10px;font-weight:800}.eug{margin:22px 0;border:1px solid var(--l);border-radius:14px;background:linear-gradient(#0f211b,#0b1714);padding:14px}.gh{display:flex;justify-content:space-between;gap:12px}.gh span,.eug figcaption{color:var(--m);font-size:10px}.marks{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:11px 0}.m{border:1px solid var(--l);border-radius:9px;padding:9px}.m span{display:block;color:var(--m);font-size:9px;min-height:28px}.m b{font-size:19px}.m i{display:block;height:6px;width:var(--p);background:linear-gradient(90deg,var(--a),var(--x));border-radius:999px;margin-top:6px}.avatar{grid-template-columns:1.25fr 1fr;margin-top:20px}.avatar dt{color:var(--a);font-weight:800;margin-top:10px}.avatar dd{margin:2px 0}details.faq{border-top:1px solid var(--l);padding:13px 0}details.faq summary{cursor:pointer;font-weight:800}.decision{border-left:3px solid var(--a);background:#0a1821;padding:15px 17px;border-radius:0 9px 9px 0;margin-top:20px}.refs{padding:35px 0 70px;color:#b8c6ce}.manifest{border:1px solid var(--l);background:#0a151c;border-radius:12px;padding:14px}code{color:#c5e8ff}@media(max-width:820px){.facts,.g,.g2,.avatar,.chain{grid-template-columns:1fr}.marks{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.marks{grid-template-columns:1fr}}
-</style></head><body data-artifact="REVIEW_ARTIFACT_NOT_LIVE">
-<div class="flag">DEVICEV REVIEW — topology preserved. Publication blocked: current NeoFort requires immutable source closure plus formal 3-replica semantic / placement judges; those formal runners are not exposed in this connected NeoFort interface.</div>
-<header class="hero"><div class="w"><div class="ey">Data Engineering & Evidence Architecture · 3–9 month mandate</div><h1>Make the decision path reconstructible — source, rule, version, owner.</h1><p class="lead">For Heads of Data who already have data, but still lose time reconciling which source is authoritative, which transformation produced the metric, and who can defend the answer.</p><p class="muted">Current offer contract preserved: data models, ETL/ELT, events, quality controls, lineage, evidence stores and auditable APIs; Python · SQL · PostgreSQL · Pandas · PySpark · Airflow · Celery.</p><div class="cta"><a class="btn pri" href="#engagement">Assess one decision path</a><a class="btn" href="#proofs">Inspect proof boundaries</a></div><div class="facts"><div><b>Result</b>Traceable, reusable decision paths</div><div><b>Format</b>3–9 months</div><div><b>Decision role</b>Head of Data / Lead Data Engineer</div><div><b>Evidence loop</b>80 → 30 → 14 EU · 4 EUG</div></div></div></header>
-<nav class="nav" aria-label="Page sections"><div class="w"><a href="#triggers">Triggers</a><a href="#consequences">Consequences</a><a href="#audience">Audience</a><a href="#qualification">Fit</a><a href="#proposition">Proposition</a><a href="#offers">Configurations</a><a href="#deliverables">Deliverables</a><a href="#before-after">Before/after</a><a href="#results">Acceptance</a><a href="#proofs">Proof</a><a href="#scope">Scope</a><a href="#process">Process</a><a href="#modules">Modules</a><a href="#intersection">Intersection</a><a href="#commitments">Commitments</a><a href="#questions">Questions</a><a href="#engagement">Engagement</a></div></nav>
+:root{
+  --b:#071018;--p:#0d1822;--p2:#10202b;--t:#f2f6f8;--m:#a8b7c3;--l:#263b48;
+  --a:#5eead4;--x:#93c5fd;--w:#fbbf24;--g:#86efac;--r:#fca5a5;--max:1120px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:radial-gradient(circle at 80% -10%,#143241 0,transparent 34%),var(--b);
+  color:var(--t);font:15px/1.58 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+a{color:var(--x)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--w);outline-offset:3px}
+.w{width:min(var(--max),calc(100% - 32px));margin:auto}
+.flag{
+  position:sticky;top:0;z-index:50;background:#2b1c08;color:#ffe7a3;border-bottom:1px solid #6a4b16;
+  padding:8px 16px;text-align:center;font-size:12px
+}
+.hero{padding:68px 0 48px}
+.ey{color:var(--a);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.12em}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:.96;letter-spacing:-.055em;margin:14px 0 20px;max-width:1080px}
+.lead{font-size:clamp(19px,2.4vw,26px);max-width:930px;color:#dce7ed}
+.muted{color:var(--m)}
+.small{font-size:12px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}
+.btn{padding:11px 15px;border:1px solid var(--l);border-radius:9px;text-decoration:none;font-weight:800}
+.btn.pri{background:var(--t);color:#071018}
+.facts,.g,.g2,.g4,.modules,.avatar{display:grid;gap:12px}
+.facts{grid-template-columns:repeat(4,1fr);margin-top:30px}
+.facts div,.card,.avatar>div,.module{
+  border:1px solid var(--l);background:linear-gradient(180deg,var(--p2),var(--p));border-radius:12px;padding:16px
+}
+.facts b{display:block;color:var(--a);font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+.nav{position:sticky;top:35px;z-index:40;background:#071018ef;border-block:1px solid var(--l);overflow:auto;white-space:nowrap}
+.nav .w{display:flex;gap:16px;padding:9px 0}
+.nav a{color:var(--m);font-size:12px;text-decoration:none}
+section{padding:56px 0;border-bottom:1px solid var(--l);scroll-margin-top:72px}
+h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.035em;line-height:1.05;margin:5px 0 12px}
+h3{margin:0 0 7px}
+.intro{font-size:18px;color:#cbd8df;max-width:930px}
+.g{grid-template-columns:repeat(3,1fr);margin-top:22px}
+.g2{grid-template-columns:repeat(2,1fr);margin-top:22px}
+.g4{grid-template-columns:repeat(4,1fr);margin-top:22px}
+.modules{grid-template-columns:repeat(4,1fr);margin-top:22px}
+.module strong{display:block;color:var(--a);font-size:12px;margin-bottom:4px}
+.tag{display:inline-block;border:1px solid var(--l);border-radius:999px;padding:3px 8px;margin:3px;font-size:11px;color:#c9d5dc}
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:22px 0}
+.node{border:1px solid #2f6570;background:#0a2028;border-radius:10px;padding:14px;text-align:center;font-weight:800}
+.table{width:100%;border-collapse:collapse;margin-top:20px}
+.table th,.table td{padding:10px;border-bottom:1px solid var(--l);text-align:left;vertical-align:top}
+.table th{color:var(--a);font-size:11px;text-transform:uppercase}
+.unknown{color:#ddcca1}
+.cite{
+  display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;margin-left:5px;
+  border:1px solid #3c5966;border-radius:999px;color:var(--x);font:850 10px ui-monospace,monospace;
+  text-decoration:none;vertical-align:middle;background:#09151d
+}
+.evidence-panel{
+  margin:13px 0 0;max-width:820px;border:1px solid #38515d;background:#09151d;border-radius:10px
+}
+.evidence-panel>summary{cursor:pointer;padding:10px 12px;font-weight:800;color:#c9d5dc}
+.evidence-body{padding:0 12px 12px;color:#c5d3da}
+.evidence-body p{margin:7px 0}
+.evidence-body small{color:var(--m)}
+.status{display:inline-block;background:#3a2c0b;color:#ffe39a;border-radius:999px;padding:2px 7px;font-size:10px;font-weight:800}
+.avatar{grid-template-columns:1.25fr 1fr;margin-top:20px}
+.avatar dt{color:var(--a);font-weight:800;margin-top:10px}
+.avatar dd{margin:2px 0}
+details.faq{border-top:1px solid var(--l);padding:13px 0}
+details.faq summary{cursor:pointer;font-weight:800}
+.decision{border-left:3px solid var(--a);background:#0a1821;padding:15px 17px;border-radius:0 9px 9px 0;margin-top:20px}
+.proof-policy{border-left:3px solid var(--w);background:#17150b;padding:14px 16px;border-radius:0 9px 9px 0;margin-top:18px}
+.refs{padding:35px 0 70px;color:#b8c6ce}
+.manifest{border:1px solid var(--l);background:#0a151c;border-radius:12px;padding:14px}
+code{color:#c5e8ff}
+@media(max-width:900px){.facts,.g,.g2,.g4,.modules,.avatar,.chain{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.facts,.g,.g2,.g4,.modules,.avatar,.chain{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-artifact="REVIEW_ARTIFACT_NOT_LIVE">
+<div class="flag">DEVICEV REVIEW — copy commercially compressed; citations retained through progressive disclosure. Publication remains blocked until current NeoFort formal 3-replica admission and placement judges pass.</div>
+
+<header class="hero">
+  <div class="w">
+    <div class="ey">Data Engineering & Evidence Architecture · mandat 3–9 mois</div>
+    <h1>Arrêtez de réconcilier le même chiffre deux fois.</h1>
+    <p class="lead">Je transforme des pipelines existants en chaînes de décision reconstructibles — source, transformation, règle, contrôle et propriétaire — pour les Heads of Data qui doivent pouvoir défendre un chiffre sans lancer une enquête.</p>
+    <p class="muted">Data models · ETL/ELT · events · quality controls · lineage · evidence stores · auditable APIs · Python · SQL · PostgreSQL · Pandas · PySpark · Airflow · Celery.</p>
+    <div class="cta">
+      <a class="btn pri" href="#engagement">Évaluer un chemin de décision</a>
+      <a class="btn" href="#proofs">Voir les preuves publiques</a>
+    </div>
+    <div class="facts">
+      <div><b>Pour qui</b>Head of Data / Lead Data Engineer</div>
+      <div><b>Problème</b>Source, règle ou version disputée</div>
+      <div><b>Résultat visé</b>Décision reconstructible</div>
+      <div><b>Format</b>Architecture + implémentation · 3–9 mois</div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Sections de la page">
+  <div class="w">
+    <a href="#triggers">Problèmes</a><a href="#consequences">Coût opérationnel</a><a href="#audience">Pour qui</a>
+    <a href="#qualification">Fit</a><a href="#proposition">Mécanisme</a><a href="#offers">Configurations</a>
+    <a href="#deliverables">Livrables</a><a href="#before-after">Avant / après</a><a href="#results">Acceptation</a>
+    <a href="#proofs">Preuves</a><a href="#scope">Périmètre</a><a href="#process">Processus</a><a href="#modules">Modules</a>
+    <a href="#intersection">Différence</a><a href="#commitments">Engagements</a><a href="#questions">FAQ</a><a href="#engagement">Décision</a>
+  </div>
+</nav>
+
 <main>
-<section id="triggers"><div class="w"><div class="ey">Trigger moments</div><h2>You do not need another data project. You need a reason to stop reconciling the same decision twice.</h2><p id="claim-cloud-context" class="intro">52.7% of EU enterprises in Eurostat’s survey scope used paid cloud services in 2025. <details class="e"><summary aria-label="Evidence source 1">[1]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-EUROSTAT-CLOUD-527-2025"><b>EU-DE-EUROSTAT-CLOUD-527-2025</b><p><b>52.7 percent</b> · EU enterprises with at least 10 employees/self-employed persons in covered NACE Rev. 2 sections · 2025</p><p>Eurostat — 53% EU enterprises used paid cloud services in 2025</p><small>Locator: headline/methodological notes<br>Boundary: Market context only; does not prove a pain point or consulting outcome.</small><br><a href="https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260203-1">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> This is market context—not proof of architecture quality. It is a reason to make source, storage and transformation boundaries explicit.</p><figure class="eug" data-eug-id="EUG-DE-EUROSTAT-CLOUD-SERVICE-MIX-2025" data-input-snapshot-sha256="0353e508d05a965f188124af08fc93cb1390f0c0a803c66c4c02940ebdf26720"><div class="gh"><b>Paid-cloud service mix among EU enterprises using paid cloud</b><span>Eurostat · 2025 · 10 marks · OBSERVED</span></div><div class="marks"><div class="m"><span>E-mail</span><b>85.15%</b><i style="--p:85.15%"></i></div><div class="m"><span>Office software</span><b>71.69%</b><i style="--p:71.69%"></i></div><div class="m"><span>File storage</span><b>71.53%</b><i style="--p:71.53%"></i></div><div class="m"><span>Security software applications</span><b>65.49%</b><i style="--p:65.49%"></i></div><div class="m"><span>Finance/accounting software</span><b>58.16%</b><i style="--p:58.16%"></i></div><div class="m"><span>Database hosting</span><b>45.52%</b><i style="--p:45.52%"></i></div><div class="m"><span>ERP software</span><b>30.12%</b><i style="--p:30.12%"></i></div><div class="m"><span>Computing power for own software</span><b>28.18%</b><i style="--p:28.18%"></i></div><div class="m"><span>CRM software</span><b>27.91%</b><i style="--p:27.91%"></i></div><div class="m"><span>Application development/testing/deployment platform</span><b>26.08%</b><i style="--p:26.08%"></i></div></div><figcaption><b>MetricContract.</b> EU enterprises using paid cloud computing services · 2025 · percent · linear 0–100%. Denominator is enterprises using paid cloud services. It describes service mix, not architecture quality or buyer pain. <a href="https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/37043.pdf">Source ↗</a></figcaption></figure><div class="g"><div class="card"><h3>Two dashboards, one question</h3><p>The meeting shifts from the decision to deciding which metric definition is authoritative.</p></div><div class="card"><h3>A correction with no durable explanation</h3><p>The fix exists; the who / why / rule version does not.</p></div><div class="card"><h3>Every workload creates another exception</h3><p>A new source or consumer adds another bespoke path instead of a reusable contract.</p></div></div></div></section>
-<section id="consequences"><div class="w"><div class="ey">Operational consequence</div><h2>Pipeline quality is wider than a final-table test.</h2><p id="claim-foidl-datatype" class="intro">In a bounded open-source study, incorrect data types were the largest explicitly reported root-cause category at 33% of 100 manually analysed data-related GitHub issues. <details class="e"><summary aria-label="Evidence source 2">[2]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-FOIDL-DATATYPE-33-2023-CAND"><b>EU-DE-FOIDL-DATATYPE-33-2023-CAND</b><p><b>33 percent</b> · 100 manually analysed data-related GitHub issues from 11 selected open-source projects · 2023</p><p>Foidl et al. — Data Pipeline Quality</p><small>Locator: abstract + paper root-cause analysis / Figure 8<br>Boundary: Exploratory selected-project sample; not prevalence across all pipelines.</small><br><a href="https://arxiv.org/abs/2309.07067">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> This is not a universal failure rate.</p><figure class="eug" data-eug-id="EUG-DE-FOIDL-ROOT-CAUSES-2023" data-input-snapshot-sha256="da4f0970937685b58f1892292e6e3e8ea9babe3e102c792aab10ad3351059e10"><div class="gh"><b>Explicitly quantified root-cause shares in the analysed issue set</b><span>Foidl et al. · 2023 · 6 marks · OBSERVED</span></div><div class="marks"><div class="m"><span>Data type</span><b>33%</b><i style="--p:94.29%"></i></div><div class="m"><span>Symbols / chars</span><b>17%</b><i style="--p:48.57%"></i></div><div class="m"><span>Function</span><b>13%</b><i style="--p:37.14%"></i></div><div class="m"><span>Data frame</span><b>11%</b><i style="--p:31.43%"></i></div><div class="m"><span>Input set size</span><b>7%</b><i style="--p:20.00%"></i></div><div class="m"><span>Logical errors</span><b>2%</b><i style="--p:5.71%"></i></div></div><figcaption><b>MetricContract.</b> 100 manually analysed data-related GitHub issues from 11 selected open-source projects · 2023 · percent of analysed issues · linear 0–35%. Selected explicitly quantified categories; raw-data category omitted because exact percentage is not used here; no universal prevalence inference. <a href="https://arxiv.org/abs/2309.07067">Source ↗</a></figcaption></figure><div class="g"><div class="card"><h3>Decision delay</h3><p>Time moves into reconciling definitions, source authority and transformations.</p></div><div class="card"><h3>Operational fragility</h3><p>Corrections become person-dependent when ownership and version state are absent.</p></div><div class="card"><h3>Audit friction</h3><p>A value may be correct while the chain needed to explain it remains incomplete.</p></div></div></div></section>
-<section id="audience"><div class="w"><div class="ey">Customer Avatar · evidence bounded</div><h2>Julien Rocher — owner of the decision path, not a fictional biography.</h2><p id="claim-large-analytics" class="intro">Role: Head of Data / Lead Data Engineer. Eurostat reports 78.84% of large EU enterprises in its 2025 survey scope performed data analytics with their own employees. <details class="e"><summary aria-label="Evidence source 3">[3]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-EUROSTAT-LARGE-ANALYTICS-7884-2025"><b>EU-DE-EUROSTAT-LARGE-ANALYTICS-7884-2025</b><p><b>78.84 percent</b> · large EU enterprises in Eurostat ICT/e-commerce survey scope · 2025</p><p>Eurostat — Digitalisation in Europe 2026, data analytics</p><small>Locator: Data analytics section<br>Boundary: Role/market context only; not evidence of buyer psychology or budget authority.</small><br><a href="https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/33473.pdf">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> This is market-role context only; it does not prove buyer psychology, company size or budget authority.</p><figure class="eug" data-eug-id="EUG-DE-EUROSTAT-EBUSINESS-SIZE-2025" data-input-snapshot-sha256="dcd0fee50e708a56fe7e31c3d96a217d5a4c90b08cb0c42859ad6576c217498f"><div class="gh"><b>E-business application use by small vs large EU enterprises</b><span>Eurostat · 2025 · 6 marks · OBSERVED</span></div><div class="marks"><div class="m"><span>ERP · small</span><b>41%</b><i style="--p:41.00%"></i></div><div class="m"><span>ERP · large</span><b>89%</b><i style="--p:89.00%"></i></div><div class="m"><span>BI · small</span><b>11%</b><i style="--p:11.00%"></i></div><div class="m"><span>BI · large</span><b>69%</b><i style="--p:69.00%"></i></div><div class="m"><span>CRM · small</span><b>25%</b><i style="--p:25.00%"></i></div><div class="m"><span>CRM · large</span><b>65%</b><i style="--p:65.00%"></i></div></div><figcaption><b>MetricContract.</b> EU small and large enterprises under Eurostat size-class definitions · 2025 · percent · linear 0–100%. Descriptive size-class comparison; no causal inference and no assumption that the target buyer works in a large enterprise. <a href="https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260520-1">Source ↗</a></figcaption></figure><div class="avatar"><div><h3>Identity boundary</h3><dl><dt>Age / gender / family</dt><dd class="unknown">NOT_EVIDENCED — not used.</dd><dt>Location</dt><dd class="unknown">TO_RESEARCH only when campaign targeting requires it.</dd><dt>Occupation</dt><dd>Head of Data / Lead Data Engineer.</dd><dt>Budget</dt><dd class="unknown">TO_VALIDATE per opportunity.</dd><dt>Representative quote</dt><dd>“I need the answer to survive the person who built the pipeline.” <span class="unknown">Synthesis, not customer verbatim.</span></dd></dl></div><div><h3>Frustrations</h3><span class="tag">bespoke ingestion</span><span class="tag">duplicated definitions</span><span class="tag">conflicting truth</span><span class="tag">unclear ownership</span><h3>Desired state</h3><span class="tag">reusable tooling</span><span class="tag">visible ownership</span><span class="tag">lineage</span><span class="tag">defensible source</span><p><b>Observed objections / price thresholds:</b> <span class="unknown">TO_RESEARCH; not fabricated.</span></p></div></div></div></section>
-<section id="qualification"><div class="w"><div class="ey">Qualification</div><h2>Use the engagement when the boundary can be inspected.</h2><p id="claim-representative-workload" class="intro">A 2024 Airflow case study manually analysed 1,000 sampled posts from 9,591 Airflow-related Stack Overflow questions. <details class="e"><summary aria-label="Evidence source 4">[4]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-AIRFLOW-SAMPLE-1000-2024"><b>EU-DE-AIRFLOW-SAMPLE-1000-2024</b><p><b>1000 posts</b> · sample from 9,591 Apache Airflow-related Stack Overflow questions · 2024</p><p>Yasmin et al. — Developers' Challenges in Workflows as Code</p><small>Locator: abstract<br>Boundary: Airflow case study; used to justify explicit workload/configuration boundaries, not universal incidence.</small><br><a href="https://arxiv.org/abs/2406.00180">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> It supports explicit workload/configuration boundaries—not a universal incidence claim.</p><figure class="eug" data-eug-id="EUG-DE-EUROSTAT-CLOUD-COUNTRY-EXTREMES-2025" data-input-snapshot-sha256="c6717495c9e0506acb4a9b22f10048a761b22785b0285834515531b8f0e2416b"><div class="gh"><b>Paid-cloud adoption: six reported country observations</b><span>Eurostat · 2025 · 6 marks · OBSERVED</span></div><div class="marks"><div class="m"><span>Finland</span><b>79.2%</b><i style="--p:79.20%"></i></div><div class="m"><span>Italy</span><b>75.6%</b><i style="--p:75.60%"></i></div><div class="m"><span>Malta</span><b>74.9%</b><i style="--p:74.90%"></i></div><div class="m"><span>Romania</span><b>24.9%</b><i style="--p:24.90%"></i></div><div class="m"><span>Greece</span><b>24.3%</b><i style="--p:24.30%"></i></div><div class="m"><span>Bulgaria</span><b>17.8%</b><i style="--p:17.80%"></i></div></div><figcaption><b>MetricContract.</b> Enterprises within each country under Eurostat ICT/e-commerce survey scope · 2025 · percent · linear 0–100%. Selected reported extrema for context; not a ranking of data maturity or consulting demand. <a href="https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260203-1">Source ↗</a></figcaption></figure><div class="g2"><div class="card"><h3>Fit</h3><p>One consequential path; mutable sources; explicit owner; representative workload; current rules and stack accessible; acceptance criteria can be stated.</p></div><div class="card"><h3>No-fit</h3><p>Generic migration; no source access; no owner; no acceptance criteria; guaranteed ROI or universal performance requested before measurement.</p></div></div></div></section>
-<section id="proposition"><div class="w"><div class="ey">Mechanism</div><h2>Evidence Architecture Chain</h2><div class="chain"><div class="node">SOURCE</div><div class="node">TRANSFORMATION</div><div class="node">PROVENANCE</div><div class="node">CONTROL</div><div class="node">DECISION</div></div><p id="claim-w3c-prov" class="intro">W3C PROV defines provenance around entities, activities and people involved in producing data or a thing, with an interoperable model for provenance exchange. <details class="e"><summary aria-label="Evidence source 5">[5]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-W3C-PROV-CORE-2013-CAND"><b>EU-DE-W3C-PROV-CORE-2013-CAND</b><p>PROV family of technical specifications · 2013</p><p>W3C — PROV-Overview</p><small>Locator: Abstract + Introduction<br>Boundary: Technical definition/interchange model; no lower-cost, faster-delivery or ROI claim.</small><br><a href="https://www.w3.org/TR/prov-overview/">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> This chain uses provenance as one technical layer; it is conceptual, not an EUG.</p></div></section>
-<section id="offers"><div class="w"><div class="ey">Configurations</div><h2>Three depths, one invariant: the decision path remains explainable.</h2><p id="claim-offer-contract" class="intro">The public offer is scoped around data models, ETL/ELT, events, quality controls, lineage, evidence stores and auditable APIs over a 3–9 month mandate. <details class="e"><summary aria-label="Evidence source 6">[6]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-FIRSTPARTY-OFFER-CONTRACT-2026"><b>EU-DE-FIRSTPARTY-OFFER-CONTRACT-2026</b><p>Data Engineering & Evidence Architecture offer · 2026</p><p>mickael-umt.com — Data Engineering & Evidence Architecture</p><small>Locator: current public offer<br>Boundary: First-party delivery terms; not external outcome evidence.</small><br><a href="https://mickael-umt.com/expertises/data-engineering/">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details></p><div class="g"><div class="card"><h3>Traceability slice</h3><p>Map one decision path; locate the first broken identity, rule, control or ownership link.</p></div><div class="card"><h3>Evidence-grade data product</h3><p>Contracts, transformations, tests, ownership and evidence records for one bounded workload.</p></div><div class="card"><h3>Platform pattern</h3><p>Reusable lineage/evidence schema, replay conventions and change governance.</p></div></div></div></section>
-<section id="deliverables"><div class="w"><div class="ey">Deliverables</div><h2>Inspectable, runnable, transferable.</h2><div class="g"><div class="card"><h3>Models and contracts</h3><p>Grain, keys, schemas, invariants, source authority and evolution rules.</p></div><div class="card"><h3>Transformations and controls</h3><p>Versioned ETL/ELT, idempotency, retries, checkpoints, boundary tests and failure states.</p></div><div class="card"><h3>Lineage and handoff</h3><p id="claim-openlineage-runevent">OpenLineage 2.0.2 shows a machine-readable lineage event contract with event time, producer, schema identity, run/job state and optional input/output datasets. <details class="e"><summary aria-label="Evidence source 7">[7]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-OPENLINEAGE-RUNEVENT-2026-CAND"><b>EU-DE-OPENLINEAGE-RUNEVENT-2026-CAND</b><p>OpenLineage API 2.0.2 · retrieved 2026-09-03</p><p>OpenLineage — API Docs 2.0.2</p><small>Locator: RunEvent request body schema<br>Boundary: Open implementation example; not a mandatory choice or outcome proof.</small><br><a href="https://openlineage.io/apidocs/openapi/">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details></p></div></div></div></section>
-<section id="before-after"><div class="w"><div class="ey">Before / after</div><h2>From “the pipeline ran” to “the decision can be reconstructed”.</h2><p id="claim-replay-mechanism" class="intro">W3C provenance recommendations include reproducibility, versioning, procedures and derivation. <details class="e"><summary aria-label="Evidence source 8">[8]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-W3C-PROV-REPRODUCIBILITY-2013"><b>EU-DE-W3C-PROV-REPRODUCIBILITY-2013</b><p>W3C provenance framework recommendations · 2013</p><p>W3C — PROV-Overview</p><small>Locator: Introduction, eight broad recommendations<br>Boundary: Supports the capability to represent derivation/versioning/reproducibility; does not prove measured confidence.</small><br><a href="https://www.w3.org/TR/prov-overview/">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> They support a reconstruction mechanism; measured confidence, speed or cost still require client baselines.</p><table class="table"><tr><th>Dimension</th><th>Before</th><th>After</th></tr><tr><td>HAVE</td><td>Dispersed rules and versions.</td><td>Owned contracts, lineage, control evidence, replay.</td></tr><tr><td>FEEL</td><td class="unknown">Hypothesis: confidence may depend on memory.</td><td class="unknown">Target, not measured: confidence grounded in records.</td></tr><tr><td>AVERAGE DAY</td><td>Reconcile and trace manually.</td><td>Query provenance, inspect controls, replay.</td></tr><tr><td>STATUS</td><td>Human resolver of “which number is right”.</td><td>Provider of a reconstructible mechanism.</td></tr></table></div></section>
-<section id="results"><div class="w"><div class="ey">Acceptance, not invented KPI</div><h2>Define success before the build.</h2><div class="facts"><div><b>Path</b>One traversable source→decision chain</div><div><b>Replay</b>One documented replay procedure</div><div><b>Ownership</b>Zero intentionally unowned critical rules</div><div><b>Boundary</b>Explicit failure / uncertainty state</div></div><p class="muted small">These are engagement acceptance criteria, not external performance benchmarks. ROI, time and defect-rate effects require baseline + comparator + observation window.</p></div></section>
-<section id="proofs"><div class="w"><div class="ey">Proof boundaries</div><h2>Show what the artefact proves — and stop there.</h2><div class="g"><div class="card"><h3>Folder Mapper · Rust + SQLite</h3><p id="claim-folder-mapper">Public capability evidence records a non-forked repository with 7/7 public commits attributed to RickOwri. <details class="e"><summary aria-label="Evidence source 9">[9]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-FOLDER-MAPPER-7COMMITS-PUBLIC"><b>EU-DE-FOLDER-MAPPER-7COMMITS-PUBLIC</b><p><b>7 commits</b> · RickOwri/folder_mapper public repository history · Sep–Oct 2023</p><p>RickOwri/folder_mapper</p><small>Locator: public repository/commit history; capability registry audit<br>Boundary: Original public CLI proof; does not prove enterprise lineage deployment.</small><br><a href="https://github.com/RickOwri/folder_mapper">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> It proves filesystem traversal, mapping and local persistence—not enterprise lineage.</p><a href="https://github.com/RickOwri/folder_mapper">Repository ↗</a></div><div class="card"><h3>Python / data processing</h3><p>Professional use documented since 2021; five-plus documented years.</p></div><div class="card"><h3>NDA data architecture</h3><p>Data architecture, DDD and evidence-store work documented from 2024 at capability level only.</p></div></div></div></section>
-<section id="scope"><div class="w"><div class="ey">Scope boundary</div><h2>Data engineering first. Adjacent mechanisms only when the decision requires them.</h2><p id="claim-processing-scope" class="intro">Foidl et al. report data integration and ingestion accounted for 47% of the developer questions in their study sample. <details class="e"><summary aria-label="Evidence source 10">[10]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-FOIDL-INTEGRATION-INGESTION-47-2023"><b>EU-DE-FOIDL-INTEGRATION-INGESTION-47-2023</b><p><b>47 percent</b> · study-defined Stack Overflow question sample · 2023</p><p>Foidl et al. — Data Pipeline Quality</p><small>Locator: abstract<br>Boundary: Study sample only; supports relevance of ingestion/integration as engineering surfaces, not service efficacy.</small><br><a href="https://arxiv.org/abs/2309.07067">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> That supports relevance as engineering surfaces, not service efficacy.</p><div class="g2"><div class="card"><h3>In</h3><p>Modelling, ingestion, ETL/ELT, quality gates, lineage, provenance, evidence stores, auditable APIs, replay, handoff.</p></div><div class="card"><h3>Out by default</h3><p>Wholesale migration, semantic arbitration without owner, blockchain as decoration, certification, guaranteed ROI, unsupported faster/cheaper claims.</p></div></div></div></section>
-<section id="process"><div class="w"><div class="ey">Process</div><h2>Inventory → foundation → controls → handoff.</h2><p id="claim-airflow-boundaries" class="intro">The Airflow study produced seven high-level challenge categories from its sampled posts. <details class="e"><summary aria-label="Evidence source 11">[11]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-AIRFLOW-CATEGORIES-7-2024"><b>EU-DE-AIRFLOW-CATEGORIES-7-2024</b><p><b>7 categories</b> · 1,000 sampled Airflow-related Stack Overflow posts · 2024</p><p>Yasmin et al. — Developers' Challenges in Workflows as Code</p><small>Locator: abstract<br>Boundary: Taxonomy from one orchestration ecosystem; not all data platforms.</small><br><a href="https://arxiv.org/abs/2406.00180">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> Configuration, environment and external-system assumptions belong in the engineering record—not operator memory.</p><div class="g"><div class="card"><h3>1. Inventory</h3><p>Choose the decision, sources, rules, owners and baseline.</p></div><div class="card"><h3>2. Foundation + controls</h3><p>Define contracts, transformations, lineage/quality instrumentation and failure tests.</p></div><div class="card"><h3>3. Handoff</h3><p>Document replay, runbook, ownership and change process.</p></div></div></div></section>
-<section id="modules"><div class="w"><div class="ey">Technical modules</div><h2>Concrete engineering surfaces.</h2><p id="claim-de-task-groups" class="intro">Nazabal et al. classify data-engineering work for analytics into three high-level groups: data organization, data quality and feature engineering. <details class="e"><summary aria-label="Evidence source 12">[12]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-NAZABAL-GROUPS-3-2020"><b>EU-DE-NAZABAL-GROUPS-3-2020</b><p><b>3 groups</b> · paper classification plus four case-study datasets · 2020</p><p>Nazabal et al. — Data Engineering for Data Analytics</p><small>Locator: abstract<br>Boundary: Research classification, not a required architecture taxonomy.</small><br><a href="https://arxiv.org/abs/2004.12929">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> It is a research reference, not a mandatory taxonomy.</p><div class="g"><div class="card"><h3>Modelling</h3><p>PostgreSQL / SQL contracts, keys, constraints, schemas, bounded contexts, versioned definitions.</p></div><div class="card"><h3>Processing</h3><p>Python, Pandas, PySpark, Airflow/Celery, ETL/ELT, retries, checkpoints, idempotency.</p></div><div class="card"><h3>Evidence</h3><p>Lineage events, provenance metadata, source identities, evidence queries and replay.</p></div></div></div></section>
-<section id="intersection"><div class="w"><div class="ey">Differentiation</div><h2>Data architecture shaped by traceability constraints.</h2><p id="claim-dq-ml" class="intro">Mohammed et al. examined six data-quality dimensions across 19 machine-learning algorithms spanning classification, regression and clustering. <details class="e"><summary aria-label="Evidence source 13">[13]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-MOHAMMED-ALGORITHMS-19-2022"><b>EU-DE-MOHAMMED-ALGORITHMS-19-2022</b><p><b>19 algorithms</b> · experimental study across classification, regression and clustering · 2022</p><p>Mohammed et al. — Effects of Data Quality on ML Performance</p><small>Locator: abstract<br>Boundary: Study-specific experiments; no universal effect magnitude claimed.</small><br><a href="https://arxiv.org/abs/2207.14529">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> This supports treating data quality as upstream engineering context for ML—not a universal effect size.</p><div class="g"><div class="card"><h3>Regulated operations</h3><p>7+ years of healthcare/pharmaceutical operations support traceability discipline—not a certification claim.</p></div><div class="card"><h3>AI / data systems</h3><p>Python, data architecture, RAG/governed knowledge and agentic runtime work increase the need for explicit source boundaries.</p></div><div class="card"><h3>Verifiable systems</h3><p>Evidence/provenance patterns are used when justified; blockchain or ZK is not inserted by default.</p></div></div></div></section>
-<section id="commitments"><div class="w"><div class="ey">Delivery commitments</div><h2>Operational commitments are first-party terms, not scientific claims.</h2><p id="claim-transfer-doc" class="intro">Datasheets for Datasets proposes documenting motivation, composition, collection process and recommended uses. <details class="e"><summary aria-label="Evidence source 14">[14]</summary><div class="lp-evidence-bubble-scroll" data-eu-id="EU-DE-DATASHEETS-DOCUMENTATION-2018"><b>EU-DE-DATASHEETS-DOCUMENTATION-2018</b><p>Datasheets for Datasets proposal · 2018</p><p>Gebru et al. — Datasheets for Datasets</p><small>Locator: abstract<br>Boundary: Documentation recommendation; not proof of a quantified business outcome.</small><br><a href="https://arxiv.org/abs/1803.09010">Primary / canonical source ↗</a><br><span class="status">REVIEW ONLY · formal judges pending</span></div></details> This engagement borrows the explicit-handoff principle without claiming a datasheet guarantees quality.</p><div class="g"><div class="card"><h3>Written scope before billing</h3><p>Path, acceptance criteria, dependencies and exclusions stated before implementation.</p></div><div class="card"><h3>Reversibility</h3><p>Core artefacts remain readable, documented and transferable.</p></div><div class="card"><h3>No silent overclaim</h3><p>Unsupported outcome claims are weakened, marked as hypotheses or removed.</p></div></div></div></section>
-<section id="questions"><div class="w"><div class="ey">Purchase questions</div><h2>Resolve objections by boundary and evidence, not slogans.</h2><details class="faq"><summary>Replace our warehouse, orchestration or BI stack?</summary><p>No by default. First test reconstructibility in the existing stack.</p></details><details class="faq"><summary>Business rules are undocumented?</summary><p>Treat them as unresolved requirements; identify owners and representative cases.</p></details><details class="faq"><summary>Will lineage slow processing?</summary><p>It can add overhead depending on granularity and stack. Measure representative workloads; no universal percentage is claimed.</p></details><details class="faq"><summary>Start with one metric?</summary><p>Yes. A small consequential path can expose semantics, ownership, failure handling and replay.</p></details></div></section>
-<section id="engagement"><div class="w"><div class="ey">Next decision</div><h2>Bring one consequential metric or decision path.</h2><p class="intro">Map source → transformation → control → owner → decision, identify where reconstruction fails, then decide whether this is the right scope.</p><div class="decision"><b>Decision graph</b><p>Reconstructible? → yes: harden existing pattern. → no: identify first broken identity / rule / ownership / evidence link. → outside data engineering: route to the correct scope.</p></div><div class="cta"><a class="btn pri" href="https://mickael-umt.com/expertises/data-engineering/">Evaluate the mission on the live page</a><a class="btn" href="https://github.com/RickOwri/folder_mapper">Inspect public proof</a></div></div></section>
+<section id="triggers">
+  <div class="w">
+    <div class="ey">Problème · C9 / C17</div>
+    <h2>Vos données peuvent être correctes et votre décision rester indéfendable.</h2>
+    <p id="claim-cloud-context" class="intro">En 2025, 52,7 % des entreprises de l’UE dans le périmètre Eurostat utilisaient des services cloud payants.<a class="cite" href="#eu-1" aria-label="Preuve source 1">1</a> Le point commercial n’est pas « le cloud est meilleur » : plus les sources et services se multiplient, plus l’identité de la source, de la transformation et de la version doit être explicite.</p>
+    <details id="eu-1" class="evidence-panel">
+      <summary>Preuve 1 · contexte de fragmentation numérique</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-EUROSTAT-CLOUD-527-2025">
+        <p><b>52,7 %</b> · entreprises de l’UE de 10 personnes ou plus, sections NACE couvertes · 2025.</p>
+        <p>Eurostat — paid cloud services.</p>
+        <small>Boundary : contexte de marché uniquement ; ne prouve ni douleur client ni résultat de conseil.</small><br>
+        <a href="https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260203-1">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="g">
+      <div class="card"><h3>Deux dashboards, une question</h3><p>La réunion bascule du « que décidons-nous ? » vers « quel chiffre est le bon ? ».</p></div>
+      <div class="card"><h3>Une correction sans mémoire</h3><p>Le fix existe, mais pas le propriétaire, la raison, la règle ni la version qui l’expliquent.</p></div>
+      <div class="card"><h3>Une exception par nouvelle source</h3><p>Chaque flux ajoute une convention locale au lieu d’un contrat réutilisable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="consequences">
+  <div class="w">
+    <div class="ey">Pourquoi maintenant · C4</div>
+    <h2>Le coût réel apparaît quand il faut expliquer, rejouer ou corriger.</h2>
+    <p id="claim-foidl-datatype" class="intro">Dans un échantillon exploratoire de 100 issues data analysées manuellement, les erreurs de type représentaient la plus grande catégorie explicitement quantifiée, à 33 %.<a class="cite" href="#eu-2" aria-label="Preuve source 2">2</a> Ce n’est pas un taux universel : c’est un rappel qu’un contrôle final ne couvre pas à lui seul la chaîne de production.</p>
+    <details id="eu-2" class="evidence-panel">
+      <summary>Preuve 2 · exemple borné de causes de défauts data</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-FOIDL-DATATYPE-33-2023-CAND">
+        <p><b>33 %</b> · 100 issues GitHub liées aux données analysées manuellement · 11 projets open source sélectionnés · 2023.</p>
+        <p>Foidl et al. — Data Pipeline Quality.</p>
+        <small>Boundary : échantillon exploratoire de projets sélectionnés ; aucune généralisation à tous les pipelines.</small><br>
+        <a href="https://arxiv.org/abs/2309.07067">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · external replicas pending</span></p>
+      </div>
+    </details>
+    <div class="g">
+      <div class="card"><h3>Décision ralentie</h3><p>Le temps part dans la réconciliation des définitions et de l’autorité de source.</p></div>
+      <div class="card"><h3>Correction fragile</h3><p>Le savoir reste attaché à la personne qui sait « comment ça marche ».</p></div>
+      <div class="card"><h3>Audit coûteux en attention</h3><p>Le chiffre peut être juste alors que la chaîne pour l’expliquer reste incomplète.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="audience">
+  <div class="w">
+    <div class="ey">Pour qui · C2</div>
+    <h2>Julien Rocher — Head of Data / Lead Data Engineer.</h2>
+    <p id="claim-large-analytics" class="intro">Dans le périmètre Eurostat 2025, 78,84 % des grandes entreprises de l’UE réalisaient de l’analytics avec leurs propres employés.<a class="cite" href="#eu-3" aria-label="Preuve source 3">3</a> Cette donnée situe le contexte d’équipes data internes ; elle ne prouve ni psychologie, ni budget, ni taille d’entreprise de l’acheteur visé.</p>
+    <details id="eu-3" class="evidence-panel">
+      <summary>Preuve 3 · contexte d’équipes data internes</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-EUROSTAT-LARGE-ANALYTICS-7884-2025">
+        <p><b>78,84 %</b> · grandes entreprises de l’UE dans le périmètre ICT/e-commerce Eurostat · 2025.</p>
+        <small>Boundary : contexte de rôle et de marché uniquement.</small><br>
+        <a href="https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/33473.pdf">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="avatar">
+      <div>
+        <h3>Situation d’achat</h3>
+        <dl>
+          <dt>Avant</dt><dd>Sources, règles de transformation et versions dispersées ; réponses contradictoires entre équipes.</dd>
+          <dt>Déclencheur</dt><dd>Un KPI est contesté, une transformation change, un audit remonte la chaîne ou un flux critique dépend d’une seule personne.</dd>
+          <dt>Après recherché</dt><dd>Lineage, contrôles qualité et evidence records intégrés au data backbone pour reconstruire une décision conséquente.</dd>
+          <dt>Budget</dt><dd class="unknown">TO_VALIDATE par opportunité.</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>Ce qu’il veut éviter</h3>
+        <span class="tag">définitions dupliquées</span><span class="tag">ownership flou</span><span class="tag">replay artisanal</span><span class="tag">vérité par mémoire</span>
+        <h3>Ce qu’il veut obtenir</h3>
+        <span class="tag">source autoritative</span><span class="tag">lineage</span><span class="tag">contrats réutilisables</span><span class="tag">handoff</span>
+        <p class="small unknown">Citation synthétique : « Je veux que la réponse survive à la personne qui a construit le pipeline. » Non verbatim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qualification">
+  <div class="w">
+    <div class="ey">Qualification</div>
+    <h2>Le bon point de départ est un chemin de décision que l’on peut réellement inspecter.</h2>
+    <p id="claim-representative-workload" class="intro">Une étude Airflow de 2024 a analysé manuellement 1 000 posts échantillonnés parmi 9 591 questions Stack Overflow liées à Airflow.<a class="cite" href="#eu-4" aria-label="Preuve source 4">4</a> Cela justifie de borner le diagnostic par workload et configuration, pas de prétendre à une incidence universelle.</p>
+    <details id="eu-4" class="evidence-panel">
+      <summary>Preuve 4 · pourquoi borner le workload</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-AIRFLOW-SAMPLE-1000-2024">
+        <p><b>1 000 posts</b> analysés · échantillon de 9 591 questions Apache Airflow · 2024.</p>
+        <p>Yasmin et al. — Developers' Challenges in Workflows as Code.</p>
+        <small>Boundary : cas Airflow ; ne décrit pas tous les systèmes data.</small><br>
+        <a href="https://arxiv.org/abs/2406.00180">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="g2">
+      <div class="card"><h3>Fit</h3><p>Une décision conséquente, des sources accessibles, un owner identifiable, un workload représentatif et des critères d’acceptation formulables.</p></div>
+      <div class="card"><h3>No-fit</h3><p>Migration générique, aucune autorité de source, aucun propriétaire, ROI garanti demandé avant baseline, ou absence d’accès aux règles actuelles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="proposition">
+  <div class="w">
+    <div class="ey">L’offre · C1 / C3 / C5</div>
+    <h2>Une Evidence Architecture Chain pour relier la donnée à la décision.</h2>
+    <div class="chain" aria-label="Evidence Architecture Chain">
+      <div class="node">SOURCE</div><div class="node">TRANSFORMATION</div><div class="node">PROVENANCE</div><div class="node">CONTRÔLE</div><div class="node">DÉCISION</div>
+    </div>
+    <p id="claim-w3c-prov" class="intro">W3C PROV formalise la provenance autour des entités, activités et agents impliqués dans la production d’une donnée, avec un modèle interopérable d’échange de provenance.<a class="cite" href="#eu-5" aria-label="Preuve source 5">5</a> J’utilise cette logique comme couche de traçabilité, pas comme promesse de ROI.</p>
+    <details id="eu-5" class="evidence-panel">
+      <summary>Preuve 5 · fondation sémantique de provenance</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-W3C-PROV-CORE-2013-CAND">
+        <p>W3C PROV family of technical specifications · 2013.</p>
+        <small>Boundary : définition et interchange de provenance ; aucun effet coût, délai ou performance n’est inféré.</small><br>
+        <a href="https://www.w3.org/TR/prov-overview/">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · external replicas pending</span></p>
+      </div>
+    </details>
+    <div class="decision"><b>XYZ statement</b><p>Je construis des architectures data traçables pour les responsables data dont les pipelines produisent des chiffres difficiles à défendre, afin qu’une décision puisse être reliée à sa source, à ses transformations, à ses contrôles et à son propriétaire.</p></div>
+  </div>
+</section>
+
+<section id="offers">
+  <div class="w">
+    <div class="ey">Configurations</div>
+    <h2>Trois profondeurs. Une seule règle : ne pas reconstruire la preuve après coup.</h2>
+    <p id="claim-offer-contract" class="intro">L’offre publique couvre data models, ETL/ELT, events, contrôles qualité, lineage, evidence stores et APIs auditables sur un mandat de 3 à 9 mois.<a class="cite" href="#eu-6" aria-label="Preuve source 6">6</a></p>
+    <details id="eu-6" class="evidence-panel">
+      <summary>Preuve 6 · contrat d’offre first-party</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-FIRSTPARTY-OFFER-CONTRACT-2026">
+        <p>Data Engineering & Evidence Architecture · 2026.</p>
+        <small>Boundary : termes de livraison first-party ; ce n’est pas une preuve externe d’effet.</small><br>
+        <a href="https://mickael-umt.com/expertises/data-engineering/">Source de vérité ↗</a>
+        <p><span class="status">FIRST-PARTY CONTRACT · REVIEW BUILD</span></p>
+      </div>
+    </details>
+    <div class="g">
+      <div class="card"><h3>1 · Traceability slice</h3><p>Cartographier un chemin de décision et trouver le premier lien cassé : identité, règle, contrôle, version ou ownership.</p></div>
+      <div class="card"><h3>2 · Evidence-grade data product</h3><p>Contrats, transformations, tests, ownership et evidence records pour un workload borné.</p></div>
+      <div class="card"><h3>3 · Platform pattern</h3><p>Schéma réutilisable de lineage/evidence, conventions de replay et gouvernance du changement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="deliverables">
+  <div class="w">
+    <div class="ey">Bénéfices & livrables · C6</div>
+    <h2>Des artefacts inspectables, exécutables et transférables.</h2>
+    <div class="g">
+      <div class="card"><h3>Contrats explicites</h3><p>Grain, clés, schemas, invariants, source authority et règles d’évolution.</p></div>
+      <div class="card"><h3>Transformations contrôlées</h3><p>ETL/ELT versionné, idempotency, retries, checkpoints, tests de frontière et états d’échec.</p></div>
+      <div class="card"><h3>Lineage exploitable</h3><p id="claim-openlineage-runevent">OpenLineage 2.0.2 documente un contrat machine-readable incluant notamment l’heure d’événement, le producteur, l’identité de schéma et l’état run/job.<a class="cite" href="#eu-7" aria-label="Preuve source 7">7</a></p></div>
+    </div>
+    <details id="eu-7" class="evidence-panel">
+      <summary>Preuve 7 · exemple ouvert de contrat de lineage</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-OPENLINEAGE-RUNEVENT-2026-CAND">
+        <p>OpenLineage API 2.0.2 · RunEvent schema · consulté 2026-09-03.</p>
+        <small>Boundary : exemple d’implémentation ouverte ; ni choix obligatoire ni preuve d’effet client.</small><br>
+        <a href="https://openlineage.io/apidocs/openapi/">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · external replicas pending</span></p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="before-after">
+  <div class="w">
+    <div class="ey">Résultats · C8</div>
+    <h2>Trois résultats : reconstruire, rejouer, transférer.</h2>
+    <p id="claim-replay-mechanism" class="intro">Les recommandations W3C sur la provenance incluent notamment reproductibilité, versioning, procédures et dérivation.<a class="cite" href="#eu-8" aria-label="Preuve source 8">8</a> Cela soutient le mécanisme de reconstruction ; tout gain de délai ou de coût doit encore être mesuré sur votre baseline.</p>
+    <details id="eu-8" class="evidence-panel">
+      <summary>Preuve 8 · mécanisme de reconstruction</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-W3C-PROV-REPRODUCIBILITY-2013">
+        <p>W3C PROV Overview · 2013.</p>
+        <small>Boundary : supporte les concepts de version, dérivation et reproductibilité ; aucun gain business chiffré n’est revendiqué.</small><br>
+        <a href="https://www.w3.org/TR/prov-overview/">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <table class="table">
+      <tr><th>Dimension</th><th>Avant</th><th>Après visé</th></tr>
+      <tr><td>Reconstruire</td><td>Règles et versions dispersées.</td><td>Chaîne source → transformation → contrôle → décision traversable.</td></tr>
+      <tr><td>Rejouer</td><td>Correction dépendante de la mémoire.</td><td>Procédure de replay documentée et bornée.</td></tr>
+      <tr><td>Transférer</td><td>La connaissance reste chez l’auteur du pipeline.</td><td>Ownership, contrats et runbook transmissibles.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="results">
+  <div class="w">
+    <div class="ey">Acceptation</div>
+    <h2>Le succès est défini avant le build — sans KPI inventé.</h2>
+    <div class="facts">
+      <div><b>Path</b>1 chaîne source→décision traversable</div>
+      <div><b>Replay</b>1 procédure documentée</div>
+      <div><b>Ownership</b>0 règle critique intentionnellement sans owner</div>
+      <div><b>Boundary</b>État d’échec / incertitude explicite</div>
+    </div>
+    <p class="muted small">Ce sont des critères d’acceptation de mission, pas des benchmarks externes. ROI, temps économisé et baisse de défauts exigent baseline, comparateur et fenêtre d’observation.</p>
+  </div>
+</section>
+
+<section id="proofs">
+  <div class="w">
+    <div class="ey">Preuves · pas de témoignage fabriqué</div>
+    <h2>La preuve publique reste proportionnelle à ce qu’elle démontre.</h2>
+    <div class="g">
+      <div class="card">
+        <h3>Folder Mapper · Rust + SQLite</h3>
+        <p id="claim-folder-mapper">Le dépôt public non-fork documente 7/7 commits attribués à RickOwri.<a class="cite" href="#eu-9" aria-label="Preuve source 9">9</a> Il démontre parcours filesystem, mapping structuré et persistance locale — pas une plateforme de lineage entreprise.</p>
+        <a href="https://github.com/RickOwri/folder_mapper">Repository ↗</a>
+      </div>
+      <div class="card"><h3>Python & data processing</h3><p>Usage professionnel documenté depuis 2021 ; data architecture / DDD / evidence-store documentés depuis 2024, en partie sous NDA.</p></div>
+      <div class="card"><h3>7+ ans d’opérations régulées</h3><p>Utilisés comme preuve de discipline de traçabilité, contrôle et validation humaine — jamais comme certification de l’offre.</p></div>
+    </div>
+    <details id="eu-9" class="evidence-panel">
+      <summary>Preuve 9 · dépôt public Folder Mapper</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-FOLDER-MAPPER-7COMMITS-PUBLIC">
+        <p><b>7 commits</b> · historique public RickOwri/folder_mapper · septembre–octobre 2023.</p>
+        <small>Boundary : preuve de CLI Rust/SQLite et de mapping local ; ne prouve pas un déploiement enterprise lineage.</small><br>
+        <a href="https://github.com/RickOwri/folder_mapper">Source primaire ↗</a>
+        <p><span class="status">CAPABILITY PROOF · BOUNDED</span></p>
+      </div>
+    </details>
+    <div class="proof-policy"><b>C14 / C15 — Témoignage et review.</b> Aucun verbatim client n’est inventé. Tant qu’un témoignage autorisé, daté et sourcé n’est pas versé au registre, la page utilise uniquement des preuves techniques et de capacité.</div>
+  </div>
+</section>
+
+<section id="scope">
+  <div class="w">
+    <div class="ey">Périmètre</div>
+    <h2>Data engineering d’abord. Les mécanismes adjacents seulement s’ils servent la décision.</h2>
+    <p id="claim-processing-scope" class="intro">Dans l’étude de Foidl et al., l’intégration et l’ingestion représentaient 47 % des questions développeur de l’échantillon étudié.<a class="cite" href="#eu-10" aria-label="Preuve source 10">10</a> Cela soutient leur pertinence comme surfaces d’ingénierie, pas l’efficacité de cette offre.</p>
+    <details id="eu-10" class="evidence-panel">
+      <summary>Preuve 10 · surfaces ingestion / intégration</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-FOIDL-INTEGRATION-INGESTION-47-2023">
+        <p><b>47 %</b> · échantillon défini par l’étude · 2023.</p>
+        <small>Boundary : échantillon de l’étude uniquement ; aucune inférence d’efficacité de service.</small><br>
+        <a href="https://arxiv.org/abs/2309.07067">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="g2">
+      <div class="card"><h3>Dans le périmètre</h3><p>Modélisation, ingestion, ETL/ELT, quality gates, lineage, provenance, evidence stores, APIs auditables, replay et handoff.</p></div>
+      <div class="card"><h3>Hors périmètre par défaut</h3><p>Migration globale sans décision cible, arbitrage sémantique sans owner, certification, ROI garanti, promesses « plus rapide / moins cher » sans mesure.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="w">
+    <div class="ey">Delivery · C5</div>
+    <h2>Inventorier → contracter → instrumenter → transférer.</h2>
+    <p id="claim-airflow-boundaries" class="intro">L’étude Airflow de 2024 a regroupé les difficultés observées en sept catégories de haut niveau.<a class="cite" href="#eu-11" aria-label="Preuve source 11">11</a> Configuration, environnement et systèmes externes doivent donc rester dans le dossier d’ingénierie plutôt que dans la mémoire d’un opérateur.</p>
+    <details id="eu-11" class="evidence-panel">
+      <summary>Preuve 11 · catégories de difficultés d’orchestration</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-AIRFLOW-CATEGORIES-7-2024">
+        <p><b>7 catégories</b> · 1 000 posts Airflow échantillonnés · 2024.</p>
+        <small>Boundary : taxonomie d’un écosystème d’orchestration ; pas de généralisation à toutes les plateformes data.</small><br>
+        <a href="https://arxiv.org/abs/2406.00180">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="g4">
+      <div class="card"><h3>1 · Inventory</h3><p>Décision, sources, règles, owners, workload et baseline.</p></div>
+      <div class="card"><h3>2 · Contracts</h3><p>Grain, schemas, transformations et règles d’évolution.</p></div>
+      <div class="card"><h3>3 · Controls</h3><p>Quality, lineage, failure states, replay et observabilité.</p></div>
+      <div class="card"><h3>4 · Handoff</h3><p>Runbook, ownership, change process et critères d’acceptation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="w">
+    <div class="ey">8 modules · C7</div>
+    <h2>Huit briques techniques, activées selon le chemin de décision.</h2>
+    <p id="claim-de-task-groups" class="intro">Nazabal et al. regroupent le data engineering pour l’analytics en trois familles de haut niveau : organisation des données, qualité des données et feature engineering.<a class="cite" href="#eu-12" aria-label="Preuve source 12">12</a> Cette taxonomie est une référence de recherche, pas l’architecture obligatoire de la mission.</p>
+    <details id="eu-12" class="evidence-panel">
+      <summary>Preuve 12 · taxonomie de recherche</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-NAZABAL-GROUPS-3-2020">
+        <p><b>3 groupes</b> · classification de papier + quatre jeux de données de cas · 2020.</p>
+        <small>Boundary : classification de recherche ; aucune obligation d’architecture.</small><br>
+        <a href="https://arxiv.org/abs/2004.12929">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="modules">
+      <div class="module"><strong>01 · Source contract</strong>Autorité, identité, fréquence, owner, périmètre.</div>
+      <div class="module"><strong>02 · Data model</strong>Grain, clés, constraints, schemas, bounded contexts.</div>
+      <div class="module"><strong>03 · Ingestion</strong>Connecteurs, batch/stream, idempotency, retries.</div>
+      <div class="module"><strong>04 · Transformations</strong>ETL/ELT versionné, règles, checkpoints.</div>
+      <div class="module"><strong>05 · Quality controls</strong>Tests, invariants, failure states, exceptions.</div>
+      <div class="module"><strong>06 · Lineage / provenance</strong>Inputs, transformations, versions, owners.</div>
+      <div class="module"><strong>07 · Evidence / API</strong>Evidence store, queryability, APIs auditables.</div>
+      <div class="module"><strong>08 · Replay / handoff</strong>Runbook, reproduction, change governance.</div>
+    </div>
+  </div>
+</section>
+
+<section id="intersection">
+  <div class="w">
+    <div class="ey">Pourquoi cette approche</div>
+    <h2>Une architecture data pensée pour les contraintes de traçabilité.</h2>
+    <p id="claim-dq-ml" class="intro">Mohammed et al. ont examiné six dimensions de qualité des données sur 19 algorithmes de machine learning couvrant classification, régression et clustering.<a class="cite" href="#eu-13" aria-label="Preuve source 13">13</a> Cela soutient l’idée que la qualité des données est une contrainte amont de l’analytics et du ML, sans imposer un effet universel.</p>
+    <details id="eu-13" class="evidence-panel">
+      <summary>Preuve 13 · qualité des données comme contexte amont</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-MOHAMMED-ALGORITHMS-19-2022">
+        <p><b>19 algorithmes</b> · classification, régression, clustering · étude 2022.</p>
+        <small>Boundary : expérimentation propre à l’étude ; aucune taille d’effet universelle n’est revendiquée.</small><br>
+        <a href="https://arxiv.org/abs/2207.14529">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="g">
+      <div class="card"><h3>Regulated operations</h3><p>7+ ans d’expérience opérationnelle en santé/pharma pour la discipline de traçabilité et de validation humaine.</p></div>
+      <div class="card"><h3>AI / data systems</h3><p>Python, data architecture, RAG et systèmes agentiques renforcent le besoin de sources, versions et boundaries explicites.</p></div>
+      <div class="card"><h3>Verifiable systems</h3><p>Provenance et evidence patterns sont utilisés quand le besoin le justifie ; aucun substrat particulier n’est ajouté comme décoration.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="commitments">
+  <div class="w">
+    <div class="ey">Garantie & risque · C11 / C12</div>
+    <h2>Pas de rareté artificielle. Le risque est borné par le scope et l’acceptation.</h2>
+    <p id="claim-transfer-doc" class="intro">Datasheets for Datasets propose de documenter motivation, composition, processus de collecte et usages recommandés.<a class="cite" href="#eu-14" aria-label="Preuve source 14">14</a> La mission reprend ce principe d’explicitation sans prétendre qu’une fiche documentaire garantit la qualité.</p>
+    <details id="eu-14" class="evidence-panel">
+      <summary>Preuve 14 · principe d’explicitation pour le handoff</summary>
+      <div class="evidence-body" data-eu-id="EU-DE-DATASHEETS-DOCUMENTATION-2018">
+        <p>Gebru et al. — Datasheets for Datasets · 2018.</p>
+        <small>Boundary : recommandation documentaire ; aucune garantie de résultat business.</small><br>
+        <a href="https://arxiv.org/abs/1803.09010">Source primaire ↗</a>
+        <p><span class="status">REVIEW ONLY · formal judges pending</span></p>
+      </div>
+    </details>
+    <div class="g">
+      <div class="card"><h3>Scope écrit avant facturation</h3><p>Chemin cible, dépendances, critères d’acceptation et exclusions sont explicités.</p></div>
+      <div class="card"><h3>Rework du livrable</h3><p>Un livrable qui ne satisfait pas ses critères d’acceptation définis est retravaillé dans le périmètre convenu ; cela ne garantit pas un résultat externe.</p></div>
+      <div class="card"><h3>Réversibilité</h3><p>Les artefacts cœur restent lisibles, documentés et transférables ; l’architecture évite de confondre savoir métier et outil.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="w">
+    <div class="ey">FAQ · C16</div>
+    <h2>Les objections utiles sont des questions de frontière.</h2>
+    <details class="faq"><summary>Faut-il remplacer le warehouse, l’orchestrateur ou la BI ?</summary><p>Non par défaut. On teste d’abord la reconstructibilité dans la stack existante.</p></details>
+    <details class="faq"><summary>Nos règles métier ne sont pas documentées.</summary><p>Elles deviennent des exigences non résolues : owner, cas représentatifs et conditions d’acceptation doivent être identifiés avant d’être automatisés.</p></details>
+    <details class="faq"><summary>Le lineage va-t-il ralentir les traitements ?</summary><p>Il peut ajouter un overhead selon la granularité et la stack. On mesure sur workload représentatif ; aucune valeur universelle n’est promise.</p></details>
+    <details class="faq"><summary>Peut-on commencer par un seul KPI ?</summary><p>Oui. Un chemin conséquent mais borné expose déjà sémantique, ownership, failure handling, contrôle et replay.</p></details>
+    <details class="faq"><summary>Vous garantissez le ROI ?</summary><p>Non. Les livrables peuvent être acceptés selon des critères contractuels ; un ROI exige baseline, comparateur, fenêtre d’observation et facteurs externes explicites.</p></details>
+  </div>
+</section>
+
+<section id="engagement">
+  <div class="w">
+    <div class="ey">CTA · C13 / C19</div>
+    <h2>Apportez un KPI contesté, un schéma ou un flux actuel.</h2>
+    <p class="intro">Nous cartographions source → transformation → contrôle → owner → décision. Si la chaîne est reconstructible, on durcit le pattern existant. Sinon, on localise le premier lien cassé et on décide si le problème mérite une mission Data Engineering & Evidence Architecture.</p>
+    <div class="decision"><b>Decision graph</b><p>Reconstructible ? → oui : renforcer le pattern. → non : identifier le premier défaut d’identité, règle, ownership ou evidence. → hors data engineering : router vers le bon périmètre.</p></div>
+    <div class="cta">
+      <a class="btn pri" href="https://mickael-umt.com/expertises/data-engineering/">Évaluer la mission</a>
+      <a class="btn" href="https://github.com/RickOwri/folder_mapper">Inspecter la preuve publique</a>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="refs"><div class="w"><h2>Evidence register · review artifact</h2><div class="manifest"><b>Deterministic page checks</b><p>17/17 section IDs preserved · 14/17 source-bearing sections = 0.824 (>0.72) · 80 candidate EUs → 30 shortlist → 14 placed EUs · 4 EUGs · ≥5 marks/EUG. Current placement judge resolved to <code>judge:evidence-placement:presentation-v1.2</code> (the stale v1 alias is not used).</p></div><p class="small">Graph rerender inputs, MetricContracts, source URLs/locators and observation snapshot hashes are embedded below. Current source-closure policy additionally requires immutable origin-artifact hashes in NeoFort; those were not materialized here. Formal 3-replica LLM admission was not executable through the connected NeoFort interface, so the artifact remains REVIEW ONLY. No Google Drive C/R/U/D operation was performed.</p></div></footer>
-<script type="application/json" id="devicev-manifest">{"page":"/expertises/data-engineering/","run":"graph-research:data-engineering:2026-09-03:v4","candidate_pool_count":80,"shortlist_count":30,"distributed_eu_placements":14,"eug_placements":4,"min_marks_per_eug":5,"candidate_source_mix":{"official_open_data":"Eurostat","open_research":"arXiv","open_specs":"W3C PROV + OpenLineage","first_party_capability":"mickael-umt.com + RickOwri public GitHub"},"selection_rule":"primary/open/official evidence; arXiv/public open data; vendor-promotional primary evidence excluded","section_ids":["triggers","consequences","audience","qualification","proposition","offers","deliverables","before-after","results","proofs","scope","process","modules","intersection","commitments","questions","engagement"],"section_delta":0,"source_bearing_sections":["triggers","consequences","audience","qualification","proposition","offers","deliverables","before-after","proofs","scope","process","modules","intersection","commitments"],"source_section_ratio":0.823529,"ordering_contract_sha256":"70aeced8db5ea56f1899888453e572a4befa184f893d496060d172c878e1e24f","current_policy_snapshot":{"factfulness":"judge:evidence:factfulness-epistemology-methodology-v2","eu":"judge:evidence-unit:champion-v2","placement":"judge:evidence-placement:presentation-v1.2","eug":"judge:evidence-graphic:presentation-v3","dataviz":"policy:qgeu:data-visualization-analyst-v2","source_closure":"policy:qgeu:origin-document-materialization-v2","judge_determinism":"policy:llm-judge:deterministic-execution-v2"},"publication_allowed":false,"blockers":["formal_3_replica_judges_not_executed","immutable_origin_artifact_hashes_not_materialized_in_neofort"]}</script>
-<script type="application/json" id="eug-rerender-contracts">[{"id":"EUG-DE-FOIDL-ROOT-CAUSES-2023","section":"consequences","question":"Which root-cause categories were explicitly quantified in the analysed 100 data-related GitHub issues?","population":"100 manually analysed data-related GitHub issues from 11 selected open-source projects","period":"2023","unit":"percent of analysed issues","scale":"linear 0–35%","source_url":"https://arxiv.org/abs/2309.07067","source_locator":"paper root-cause analysis / Figure 8","boundary":"Selected explicitly quantified categories; raw-data category omitted because exact percentage is not used here; no universal prevalence inference.","marks":[["Data type",33],["Symbols / chars",17],["Function",13],["Data frame",11],["Input set size",7],["Logical errors",2]],"input_snapshot_sha256":"da4f0970937685b58f1892292e6e3e8ea9babe3e102c792aab10ad3351059e10"},{"id":"EUG-DE-EUROSTAT-CLOUD-SERVICE-MIX-2025","section":"triggers","question":"Which paid cloud service types were used by EU enterprises that used paid cloud services in 2025?","population":"EU enterprises using paid cloud computing services","period":"2025","unit":"percent","scale":"linear 0–100%","source_url":"https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/37043.pdf","source_locator":"Cloud computing in enterprises, 2025 · EU row","boundary":"Denominator is enterprises using paid cloud services. It describes service mix, not architecture quality or buyer pain.","marks":[["E-mail",85.15],["Office software",71.69],["File storage",71.53],["Security software applications",65.49],["Finance/accounting software",58.16],["Database hosting",45.52],["ERP software",30.12],["Computing power for own software",28.18],["CRM software",27.91],["Application development/testing/deployment platform",26.08]],"input_snapshot_sha256":"0353e508d05a965f188124af08fc93cb1390f0c0a803c66c4c02940ebdf26720"},{"id":"EUG-DE-EUROSTAT-EBUSINESS-SIZE-2025","section":"audience","question":"How did ERP, BI and CRM use differ between small and large EU enterprises in 2025?","population":"EU small and large enterprises under Eurostat size-class definitions","period":"2025","unit":"percent","scale":"linear 0–100%","source_url":"https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260520-1","source_locator":"news article, 20 May 2026; dataset isoc_eb_iip","boundary":"Descriptive size-class comparison; no causal inference and no assumption that the target buyer works in a large enterprise.","marks":[["ERP · small",41],["ERP · large",89],["BI · small",11],["BI · large",69],["CRM · small",25],["CRM · large",65]],"input_snapshot_sha256":"dcd0fee50e708a56fe7e31c3d96a217d5a4c90b08cb0c42859ad6576c217498f"},{"id":"EUG-DE-EUROSTAT-CLOUD-COUNTRY-EXTREMES-2025","section":"qualification","question":"What shares did Eurostat report for the three highest and three lowest listed EU country observations in 2025?","population":"Enterprises within each country under Eurostat ICT/e-commerce survey scope","period":"2025","unit":"percent","scale":"linear 0–100%","source_url":"https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260203-1","source_locator":"country comparison paragraph","boundary":"Selected reported extrema for context; not a ranking of data maturity or consulting demand.","marks":[["Finland",79.2],["Italy",75.6],["Malta",74.9],["Romania",24.9],["Greece",24.3],["Bulgaria",17.8]],"input_snapshot_sha256":"c6717495c9e0506acb4a9b22f10048a761b22785b0285834515531b8f0e2416b"}]</script>
-</body></html>
+
+<footer class="refs">
+  <div class="w">
+    <h2>Evidence register · review artifact</h2>
+    <div class="manifest">
+      <b>Contrôles déterministes du build</b>
+      <p>17/17 section IDs préservés · 14/17 sections avec source = 0,824 (&gt; 0,72) · 14 citations conservées · divulgation Level-2 en <code>&lt;details&gt;</code> natif · aucun témoignage client fabriqué · aucun KPI de résultat inventé.</p>
+      <p>Judge courant résolu : <code>judge:evidence-placement:presentation-v1.2</code>. Les citations sont adjacentes au claim atomique et les détails méthodologiques sont retirés du niveau commercial par défaut.</p>
+    </div>
+    <p class="small">Publication status : <b>BLOCKED</b>. Les runners externes des juges LLM en 3 replicas ne sont pas exposés par le connecteur NeoFort courant ; aucune majorité ni score local ne peut les remplacer. Aucun write Google Drive n’a été exécuté.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="devicev-manifest">
+{
+  "page":"/expertises/data-engineering/",
+  "run":"data-engineering:commercial-compression:2026-09-04:v5",
+  "commercial_framework":"XYZ+C1-C19_evidence_bounded",
+  "avatar":"Julien Rocher — Head of Data / Lead Data Engineer",
+  "section_ids":["triggers","consequences","audience","qualification","proposition","offers","deliverables","before-after","results","proofs","scope","process","modules","intersection","commitments","questions","engagement"],
+  "section_count":17,
+  "source_bearing_sections":["triggers","consequences","audience","qualification","proposition","offers","deliverables","before-after","proofs","scope","process","modules","intersection","commitments"],
+  "source_section_ratio":0.823529,
+  "citation_count":14,
+  "l1_copy_mode":"commercial_semantic_compression",
+  "l2_evidence_mode":"native_details_progressive_disclosure",
+  "testimonial_policy":"NO_FABRICATION",
+  "scarcity_policy":"NO_ARTIFICIAL_SCARCITY",
+  "publication_allowed":false,
+  "current_policy_snapshot":{
+    "factfulness":"judge:evidence:factfulness-epistemology-methodology-v2",
+    "eu":"judge:evidence-unit:champion-v2",
+    "placement":"judge:evidence-placement:presentation-v1.2",
+    "claim_span":"policy:evidence-placement:claim-span-entailment-v2",
+    "preflight":"policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "agent_exploitability":"policy:evidence-agent-exploitability:proof-carrying-v3",
+    "judge_determinism":"policy:llm-judge:deterministic-execution-v2"
+  },
+  "blockers":["formal_3_replica_judges_not_executed"]
+}
+</script>
+</body>
+</html>
