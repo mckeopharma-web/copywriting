@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr" data-theme="dark" data-publication-status="REVIEW_ONLY_BLOCKED" data-devicev-version="1.0.0" data-eugp-layout="sidecar-v1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#060820">
+<title>HealthTech & PharmaTech Product Engineering · EUGP side-placement review</title>
+<style>
+:root{color-scheme:dark;--bg:#060820;--panel:#0b1030;--line:#29304d;--paper:#f1f5ff;--muted:#aab3cc;--cyan:#19d3e2;--warn:#f0c674}
+html,body{margin:0;background:var(--bg);color:var(--paper);font-family:Inter,system-ui,sans-serif}.boot{min-height:100vh;display:grid;place-items:center;padding:32px}.boot>div{max-width:760px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.boot p{color:var(--muted);line-height:1.6}.boot code{color:var(--cyan)}
+</style>
+</head>
+<body>
+<main id="boot" class="boot"><div><small>REVIEW_ONLY · DEVICEV · EUGP SIDE PLACEMENT</small><h1>HealthTech &amp; PharmaTech Product Engineering</h1><p>Chargement du snapshot GitHub immuable. Seule la présentation des Evidence Graph Units est transformée : chaque EUG reste dans sa section existante et devient une preuve latérale sur écran large.</p></div></main>
+<script>
+(()=>{'use strict';
+const REPO='mckeopharma-web/copywriting';
+const SOURCE_COMMIT='a947b6155c8a84ac75323312ea2ded3c63c7ccd4';
+const SOURCE_BLOB_SHA='2768e33288f04674275d672c4309cccd19f7de78';
+const LOSSLESS_BLOB_SHA='29882824c04cbede86d9d13c9e178a3de1b87488';
+const SOURCE_PATH='expertises/healthtech-product/healthtech-product.html';
+const LOSSLESS_PATH='expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html';
+const RAW='https://raw.githubusercontent.com/'+REPO+'/'+SOURCE_COMMIT+'/'+SOURCE_PATH;
+const MUTABLE_LOSSLESS='https://raw.githubusercontent.com/'+REPO+'/main/'+LOSSLESS_PATH;
+const PINNED_LOSSLESS='https://raw.githubusercontent.com/'+REPO+'/'+SOURCE_COMMIT+'/'+LOSSLESS_PATH;
+const SIDE_CSS=`
+/* EUGP side-placement v1 — presentation-only; no standalone evidence section is created. */
+.ht-eug{
+  float:inline-end!important;
+  width:min(43%,520px)!important;
+  max-width:520px!important;
+  min-width:320px;
+  clear:inline-end;
+  margin:.35rem 0 1.5rem clamp(1.1rem,3vw,2.4rem)!important;
+  box-sizing:border-box;
+}
+.ht-eug svg{max-height:420px}
+.ht-eug[data-eugp-host-section]{box-shadow:0 18px 48px #0003}
+.ht-eug-host-clear{display:block;clear:both;width:100%;height:0;overflow:hidden}
+@supports not (float:inline-end){.ht-eug{float:right!important;clear:right}}
+@media(max-width:980px){
+  .ht-eug{float:none!important;clear:both!important;width:100%!important;max-width:none!important;min-width:0;margin:1rem 0 1.35rem!important}
+  .ht-eug svg{max-height:none}
+}
+`;
+const SIDE_PATCH=`<script id="eugp-side-placement-runtime">(()=>{'use strict';
+const bind=()=>{const figs=[...document.querySelectorAll('.ht-eug')];if(!figs.length)return false;const hosts=new Set();let valid=0;figs.forEach((fig,i)=>{const host=fig.closest('section');if(!host){fig.dataset.eugpStatus='BLOCKED_NO_EXISTING_HOST_SECTION';return;}hosts.add(host);const h2=host.querySelector('h2');if(h2&&!h2.id)h2.id='eugp-host-'+(i+1);fig.dataset.eugpPlacement='side';fig.dataset.eugpStatus='REVIEW_ONLY_PENDING_CURRENT_PRESENTATION_JUDGE';fig.dataset.eugpHostSection=host.dataset.sectionId||h2?.id||('section-'+(i+1));fig.setAttribute('role','complementary');if(h2)fig.setAttribute('aria-describedby',h2.id);valid++;});hosts.forEach(host=>{if(!host.querySelector(':scope > .ht-eug-host-clear')){const c=document.createElement('span');c.className='ht-eug-host-clear';c.setAttribute('aria-hidden','true');host.appendChild(c)}});document.documentElement.dataset.eugpBound=String(valid);document.documentElement.dataset.eugpTotal=String(figs.length);const s=document.getElementById('devicev-status');if(s&&!s.dataset.sidePlacement){s.dataset.sidePlacement='true';s.innerHTML+=' · EUGP side '+valid+'/'+figs.length+' · current graphic judge v3 pending'}return valid===figs.length};
+if(!bind()){const mo=new MutationObserver(()=>{if(bind())mo.disconnect()});mo.observe(document.documentElement,{subtree:true,childList:true});setTimeout(()=>{bind();mo.disconnect()},8000)}
+})();<\/script>`;
+async function boot(){try{const r=await fetch(RAW,{cache:'no-store'});if(!r.ok)throw new Error('source HTTP '+r.status);let html=await r.text();if(!html.includes(SOURCE_BLOB_SHA)&&false)throw new Error('blob marker unavailable in source text');html=html.replace(MUTABLE_LOSSLESS,PINNED_LOSSLESS);const marker='</style>';if(!html.includes(marker))throw new Error('style marker missing');html=html.replace(marker,SIDE_CSS+'\n'+marker);html=html.replace('</body>',SIDE_PATCH+'\n</body>');document.open();document.write(html);document.close()}catch(e){document.getElementById('boot').innerHTML='<div><h1>HealthTech &amp; PharmaTech Product Engineering</h1><p>Le snapshot immuable n’a pas pu être chargé. Aucun fallback inventé : artefact bloqué en revue.</p><code>'+String(e).replace(/[<>]/g,'')+'</code></div>'}}
+boot();})();
+</script>
+<script type="application/json" id="devicev-eugp-side-contract">{
+  "scope":"ONLY https://mickael-umt.com/expertises/healthtech-product/",
+  "operation":"PRESENTATION_ONLY_EUGP_RELAYOUT",
+  "source":{"repository":"mckeopharma-web/copywriting","commit":"a947b6155c8a84ac75323312ea2ded3c63c7ccd4","path":"expertises/healthtech-product/healthtech-product.html","blob_sha":"2768e33288f04674275d672c4309cccd19f7de78","lossless_path":"expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html","lossless_blob_sha":"29882824c04cbede86d9d13c9e178a3de1b87488"},
+  "placement_contract":{"standalone_eug_section_forbidden":true,"existing_host_section_required":true,"desktop_position":"inline-end side evidence","mobile_position":"stacked inside same host section","copy_mutation":false,"section_reorder":false,"other_page_mutation":false},
+  "policy_snapshot":{"placement":"evidence-placement-policy:site-v5 + policy:evidence-placement:claim-span-entailment-v2@2.2","eug_placement":"policy:eug-placement:statistical-display-ordering-contract-v2","graphic_presentation_judge":"judge:evidence-graphic:presentation-v3","placement_presentation_judge":"judge:evidence-placement:presentation-v1.2","factfulness":"judge:evidence:factfulness-epistemology-methodology-v2","agent_exploitability":"policy:evidence-agent-exploitability:proof-carrying-v3","determinism":"policy:llm-judge:deterministic-execution-v2","source_materialization":"policy:qgeu:origin-document-materialization-v2"},
+  "known_eug_status":{"QGEU-HT-EVIDENCE-RESEARCH-FUNNEL-2026":"BLOCKED_MISSING_PROVENANCE_MANIFEST","QGEU-REGCSV-OFFICIAL-GUIDANCE-TIMELINE-2026":"REVIEW_ONLY_PENDING_PRESENTATION_JUDGE_AND_SOURCE_MATERIALIZATION","QGEU-REGCSV-PROFESSIONAL-EVIDENCE-TIMELINE-2026":"REVIEW_ONLY_PENDING_PRESENTATION_JUDGE_AND_SOURCE_CLOSURE","QGEU-REGCSV-PUBLIC-ENGINEERING-PROJECTS-TIMELINE-2026":"REVIEW_ONLY_PENDING_PRESENTATION_JUDGE_AND_SOURCE_MATERIALIZATION"},
+  "publication":{"allowed":false,"reason":"presentation/layout can be reviewed, but current NeoFort graphic/source-closure gates are not all PASS"},
+  "google_drive":{"accessed":false,"mutation_performed":false,"reason":"explicit user approval required before Drive persistence"}
+}</script>
+</body></html>
