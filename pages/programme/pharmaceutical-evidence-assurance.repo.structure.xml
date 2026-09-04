@@ -1,69 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageSnapshot schemaVersion="1.0"
+<pageSnapshot schemaVersion="1.1"
               kind="REPOSITORY_HTML_STRUCTURE"
               repository="mckeopharma-web/copywriting"
               branch="main"
               path="pages/programme/pharmaceutical-evidence-assurance.html"
               sourceBlobSha="c4f36103f4ad7edb582502934952d11e4a84f245"
               topologySha256="790b0e88dd04fec3d9304d9d5cca14851055db78cd08b698c6f4eb34a50934ce">
-  <rootContract theme="dark"
-                claimLoopVersion="external-capability-v1.2-topology-preserving"
-                claimLoop="loop:copy-claim:external-capability-v1.2-topology-preserving"
-                claimJudge="judge:copy-claim:external-capability-grounding-v1.2"
-                publicationStatus="PENDING_FORMAL_LLM_JUDGE"
-                robots="noindex,nofollow"/>
-  <structureLock heroRequired="true"
-                 anchoredSectionCount="17"
-                 topologyPreserved="true"
-                 bodyReplacementForbidden="true">
-    <sections>
-      <section order="01" canonicalToken="11" id="triggers" semanticRole="dated-decision-trigger"/>
-      <section order="02" canonicalToken="20" id="consequences" semanticRole="decision-risk-consequences"/>
-      <section order="03" canonicalToken="13" id="for-whom" semanticRole="decision-unit-audience"/>
-      <section order="04" canonicalToken="14" id="qualification" semanticRole="fit-and-exclusion-gates"/>
-      <section order="05" canonicalToken="01" id="proposition" semanticRole="bounded-programme-mechanism"/>
-      <section order="06" canonicalToken="10" id="offers" semanticRole="bounded-route-selector"/>
-      <section order="07" canonicalToken="15" id="deliverables" semanticRole="artifact-and-control-deliverables"/>
-      <section order="08" canonicalToken="12" id="before-after" semanticRole="decision-state-comparison"/>
-      <section order="09" canonicalToken="19" id="outcomes" semanticRole="acceptance-oriented-outcomes"/>
-      <section order="10" canonicalToken="04" id="evidence" semanticRole="evidence-and-capability-ledger"/>
-      <section order="11" canonicalToken="16" id="scope" semanticRole="in-out-authority-boundary"/>
-      <section order="12" canonicalToken="17" id="process" semanticRole="six-week-phases"/>
-      <section order="13" canonicalToken="18" id="modules" semanticRole="programme-module-lattice"/>
-      <section order="14" canonicalToken="21" id="intersection" semanticRole="cross-functional-capability-intersection"/>
-      <section order="15" canonicalToken="22" id="commitments" semanticRole="control-boundary-and-no-guarantee"/>
-      <section order="16" canonicalToken="23" id="questions" semanticRole="objection-and-faq-resolution"/>
-      <section order="17" canonicalToken="07" id="engagement" semanticRole="next-step-and-qualification"/>
-    </sections>
-  </structureLock>
-  <researchAnchorGate threshold="0.72"
-                      comparator="STRICT_GREATER_THAN"
-                      sourceCount="10"
-                      selectedResearchAnchorCount="3"
-                      sourcesPerSectionRatio="3.333333"
-                      status="PASS">
-    <anchor id="triggers"/>
-    <anchor id="consequences"/>
-    <anchor id="proposition"/>
+  <rootContract theme="dark" claimLoopVersion="external-capability-v1.2-topology-preserving" publicationStatus="PENDING_FORMAL_LLM_JUDGE" robots="noindex,nofollow"/>
+  <legacyStructure status="PASS_OWN_LEGACY_CONTRACT" heroOutsideSectionFlow="true" anchoredSectionCount="17">
+    <section order="01" token="11" dataSectionId="triggers"/>
+    <section order="02" token="20" dataSectionId="consequences"/>
+    <section order="03" token="13" dataSectionId="for-whom"/>
+    <section order="04" token="14" dataSectionId="qualification"/>
+    <section order="05" token="1" dataSectionId="proposition"/>
+    <section order="06" token="10" dataSectionId="offers"/>
+    <section order="07" token="15" dataSectionId="deliverables"/>
+    <section order="08" token="12" dataSectionId="before-after"/>
+    <section order="09" token="19" dataSectionId="outcomes"/>
+    <section order="10" token="4" dataSectionId="evidence"/>
+    <section order="11" token="16" dataSectionId="scope"/>
+    <section order="12" token="17" dataSectionId="process"/>
+    <section order="13" token="18" dataSectionId="modules"/>
+    <section order="14" token="21" dataSectionId="intersection"/>
+    <section order="15" token="22" dataSectionId="commitments"/>
+    <section order="16" token="23" dataSectionId="questions"/>
+    <section order="17" token="7" dataSectionId="engagement"/>
+  </legacyStructure>
+  <comparisonToLive status="FAIL_STRUCTURAL_SUBSET" liveTopLevelSectionCount="23" missingCanonicalSectionCount="5">
+    <missing token="2" anchorId="valeur" dataSectionId="value"/>
+    <missing token="3" anchorId="transformation" dataSectionId="transformation"/>
+    <missing token="5" anchorId="capacites" dataSectionId="capabilities"/>
+    <missing token="6" anchorId="benchmark" dataSectionId="benchmark"/>
+    <missing token="8" anchorId="demande" dataSectionId="lead_form"/>
+  </comparisonToLive>
+  <researchAnchorGate threshold="0.72" comparator="STRICT_GREATER_THAN" sourceCount="10" selectedResearchAnchorCount="3" sourcesPerSectionRatio="3.333333" status="PASS">
+    <anchor id="triggers"/><anchor id="consequences"/><anchor id="proposition"/>
   </researchAnchorGate>
-  <comparisonToLive status="MATCH"
-                    hero="MATCH"
-                    sectionCount="MATCH"
-                    sectionOrder="MATCH"
-                    sectionIdentifiers="MATCH"/>
-  <evidencePublicationState finalPass="false">
-    <reason>Current page-level evidence placement/presentation execution is pending. Repository persistence is not evidence validity.</reason>
-    <currentPlacementJudge id="judge:evidence-placement:presentation-v1.2"
-                           replicas="3"
-                           temperature="0"
-                           topP="1"/>
-  </evidencePublicationState>
+  <publication finalPass="false" reason="TARGET_PAGE_PRESENTATION_JUDGE_PENDING_AND_REPO_LIVE_PARITY_FAIL"/>
   <provenance>
-    <source type="repository-file"
-            url="https://github.com/mckeopharma-web/copywriting/blob/main/pages/programme/pharmaceutical-evidence-assurance.html"
-            blobSha="c4f36103f4ad7edb582502934952d11e4a84f245"/>
-    <source type="topology-report"
-            path="reports/claim-loop-topology-preserving-v12.json"
-            reportBlobSha="3a7f87d266ab35ad62cb1fd758c2efdf7600f2e8"/>
+    <source type="repository-file" url="https://github.com/mckeopharma-web/copywriting/blob/main/pages/programme/pharmaceutical-evidence-assurance.html" blobSha="c4f36103f4ad7edb582502934952d11e4a84f245"/>
+    <source type="topology-report" path="reports/claim-loop-topology-preserving-v12.json" reportBlobSha="3a7f87d266ab35ad62cb1fd758c2efdf7600f2e8"/>
+    <source type="live-audit" actionRun="33821804825" liveHtmlSha256="2f14c44a665e69288ffc4f0a5fe937e58bcdf908d71bc2510bcf5666133cdaa0"/>
   </provenance>
 </pageSnapshot>
