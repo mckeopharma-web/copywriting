@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sectionContractAudit schemaVersion="1.0" target="https://mickael-umt.com/expertises/cdm-automation/" date="2026-09-04" posture="FAIL_CLOSED">
+  <contractResolution>
+    <liveExpertiseContract>17 ordered anchors/sections</liveExpertiseContract>
+    <liveProgrammeReference>AI Production Assurance exposes the same 17 ordered anchors/sections</liveProgrammeReference>
+    <governingRule>Live website structure is source of truth for this page; no older incompatible section-count assumption overrides it.</governingRule>
+  </contractResolution>
+  <checks>
+    <check id="top_level_section_count" status="PASS" severity="HARD">Live=17; repository main=17.</check>
+    <check id="section_id_order" status="PASS" severity="HARD">All 17 IDs match in exact order: triggers,consequences,audience,qualification,proposition,offers,deliverables,before-after,results,proofs,scope,process,modules,intersection,commitments,questions,engagement.</check>
+    <check id="navigation_topology" status="PASS" severity="HARD">Repository anchor navigation maps to the same 17 section IDs.</check>
+    <check id="language_fidelity" status="FAIL" severity="SOFT">Live content is French; repository main reconstruction is English.</check>
+    <check id="offers_composition" status="FAIL" severity="HARD">Live section presents seven configurations via the solutions atlas; repository main reduces the section to a public calculator link.</check>
+    <check id="intersection_composition" status="FAIL" severity="HARD">Live section includes ranked CV capabilities, mission proof links, intersection seams and a market benchmark; repository main contains EMA context plus four capability cards only.</check>
+    <check id="engagement_form_contract" status="FAIL" severity="HARD">Live page exposes an 8-screen qualifier with consent/storage disclosure; repository main exposes a single-page 5-field form redirecting to contact.</check>
+    <check id="evidence_publication" status="BLOCKED" severity="HARD">Two canonical EMA EvidenceUnits pass deterministic/canonical Factfulness admission, but their placements remain READY_FOR_PRESENTATION_JUDGE; candidate CDM EUs remain PENDING_JUDGE/PENDING_FORMAL_PREFLIGHT.</check>
+  </checks>
+  <policyResolution>
+    <requestedLegacyJudge status="NOT_CURRENT">judge:eu:placementv1</requestedLegacyJudge>
+    <currentPlacementJudge status="CURRENT_TRUE" replicas="3" temperature="0" top_p="1" passThreshold="85">judge:evidence-placement:presentation-v1.2</currentPlacementJudge>
+    <deterministicExecution>AND hard-gate reduction; MIN score; disagreement blocks.</deterministicExecution>
+  </policyResolution>
+  <finalDecision>
+    <topLevelStructure>PASS</topLevelStructure>
+    <sectionFormComposition>FAIL</sectionFormComposition>
+    <evidencePublication>BLOCKED</evidencePublication>
+    <FINAL_PASS>false</FINAL_PASS>
+    <mainPublicationAllowed>false</mainPublicationAllowed>
+  </finalDecision>
+</sectionContractAudit>
