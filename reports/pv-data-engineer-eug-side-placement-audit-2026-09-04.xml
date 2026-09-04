@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eug_side_placement_audit schema_version="1.0"
+  scope="ONLY /expertises/pv-data-engineer/"
+  page_url="https://mickael-umt.com/expertises/pv-data-engineer/"
+  execution_posture="FAIL_CLOSED"
+  audit_date="2026-09-04"
+  requested_layout="EUG_INSIDE_PREEXISTING_SECTION_AS_SIDE_ILLUSTRATION"
+  standalone_eug_sections_allowed="false"
+  html_mutation_allowed="false"
+  github_audit_commit_allowed="true">
+
+  <source_state>
+    <live_snapshot path="expertises/pv-data-engineer/structure/live-page.xml"
+      semantic_section_count="23"
+      canonical_order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"
+      raw_html_materialized="false"
+      role="SOURCE_OF_TRUTH_STRUCTURE_ONLY"/>
+    <repo_preview path="expertises/pv-data-engineer/pv-data-engineer.html"
+      current_blob_sha="a86c3af79b5fb1d7a736d4f2fe181e284159015e"
+      theme="dark"
+      top_level_section_count="15"
+      live_topology_equivalent="false"/>
+    <avatar id="customer-avatar-profile:pv-data-engineer:karim-benali:2026-09-03:v1"
+      name="Karim Benali"
+      role="Responsable pharmacovigilance"
+      status="INDUCTIVE_WORKING_AVATAR"
+      boundary="Decision-role archetype; unsupported demographics, psychographics, brands, media, events and budgets remain NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH."/>
+  </source_state>
+
+  <policy_resolution current_true_only="true">
+    <policy role="deterministic_preflight" id="policy:evidence-agent-exploitability:deterministic-preflight-v2" version="2.0"/>
+    <policy role="factfulness" id="judge:evidence:factfulness-epistemology-methodology-v2" version="2.0"/>
+    <policy role="judge_applicability" id="policy:evidence-judge-applicability:v2" version="2.0"/>
+    <policy role="agent_exploitability" id="policy:evidence-agent-exploitability:proof-carrying-v3" version="3.0"/>
+    <policy role="graph_display" id="policy:qgeu:data-visualization-analyst-v2" version="2.0"/>
+    <policy role="graph_placement" id="policy:eug-placement:statistical-display-ordering-contract-v2" version="2.0"/>
+    <policy role="graph_presentation_judge" id="judge:evidence-graphic:presentation-v3" version="3.0"/>
+    <policy role="claim_placement" id="policy:evidence-placement:claim-span-entailment-v2" version="2.2"/>
+    <policy role="claim_placement_judge" id="judge:evidence-placement:presentation-v1.2" version="1.2" replicas="3" temperature="0" top_p="1"/>
+    <resolution_note>The requested historical judge:eu:placementv1 is not authoritative under CURRENT_TRUE_ONLY. Current claim placement resolves to judge:evidence-placement:presentation-v1.2; current EUG presentation resolves to judge:evidence-graphic:presentation-v3.</resolution_note>
+  </policy_resolution>
+
+  <requested_layout_contract>
+    <invariant>No new semantic section is created for a graph. Each EUG remains a child of an already existing S-series section and functions as a side illustration of that section.</invariant>
+    <invariant>Section IDs, canonical relative order, headings, visible copy, citations, CTA routes, qualification controls and graph data remain unchanged.</invariant>
+    <invariant>Desktop layout uses a right-side evidence rail; narrow layouts stack the EUG after the section content without changing semantic order.</invariant>
+    <invariant>No EUG may become a decorative diagram; all current marks, values, units, labels, source links and boundaries remain bound to the QGEU.</invariant>
+    <css_target><![CDATA[
+.eug-section-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,420px);gap:24px;align-items:start}
+.eug-section-main{min-width:0}
+.eug-aside{margin:0;position:sticky;top:96px;align-self:start}
+@media(max-width:980px){.eug-section-layout{grid-template-columns:1fr}.eug-aside{position:static}}
+    ]]></css_target>
+    <dom_pattern><![CDATA[
+<div class="eug-section-layout">
+  <div class="eug-section-main">[EXISTING SECTION CONTENT, UNCHANGED]</div>
+  <aside class="eug eug-aside" data-g="..." aria-label="Evidence graph"></aside>
+</div>
+    ]]></dom_pattern>
+  </requested_layout_contract>
+
+  <placement_plan count="4">
+    <placement qgeu_id="QGEU-PV-EMA-SOURCE-MIX-2025"
+      target_section_id="declencheurs"
+      section_semantic="triggers"
+      current_repo_selector="section#declencheurs .eug[data-g='mix']"
+      proposed_target_xpath="//section[@id='declencheurs']/div[contains(concat(' ',normalize-space(@class),' '),' wrap ')]//aside[@data-g='mix']"
+      side="right"
+      semantic_fit="Illustrates that reviewed potential signals originate from multiple source families; it remains contextual evidence, not detection-quality proof."/>
+    <placement qgeu_id="QGEU-PV-EMA-ACTION-DISPOSITION-2025"
+      target_section_id="consequences"
+      section_semantic="problems"
+      current_repo_selector="section#consequences .eug[data-g='disp']"
+      proposed_target_xpath="//section[@id='consequences']/div[contains(concat(' ',normalize-space(@class),' '),' wrap ')]//aside[@data-g='disp']"
+      side="right"
+      semantic_fit="Illustrates the operational distinction between reviewed potential signals and their dispositions; it must not be interpreted as a causal funnel or client benchmark."/>
+    <placement qgeu_id="QGEU-PV-EMA-DATA-QUALITY-2025"
+      target_section_id="livrables"
+      section_semantic="product"
+      current_repo_selector="section#livrables .eug[data-g='dq']"
+      proposed_target_xpath="//section[@id='livrables']/div[contains(concat(' ',normalize-space(@class),' '),' wrap ')]//aside[@data-g='dq']"
+      side="right"
+      semantic_fit="Illustrates why a safety-source pipeline includes explicit data-quality work; row-specific scales remain mandatory and cross-row bar lengths are not comparable."/>
+    <placement qgeu_id="QGEU-PV-JMIR-ADE-F1-PANEL-2026"
+      target_section_id="preuves"
+      section_semantic="proof"
+      current_repo_selector="section#preuves .eug[data-g='jm']"
+      proposed_target_xpath="//section[@id='preuves']/div[contains(concat(' ',normalize-space(@class),' '),' wrap ')]//aside[@data-g='jm']"
+      side="right"
+      semantic_fit="Illustrates a bounded research benchmark while keeping the cohort and non-production boundary adjacent to the evidence section."/>
+  </placement_plan>
+
+  <web_verification>
+    <source id="EMA-EUDRAVIGILANCE-2025" url="https://www.ema.europa.eu/en/documents/report/2025-annual-report-eudravigilance-european-parliament-council-commission_en.pdf" status="WEB_VERIFIED"/>
+    <source id="JMIR-E86467-2026" url="https://www.jmir.org/2026/1/e86467" status="WEB_VERIFIED"/>
+    <boundary>Web verification confirms addressability and source content only. It does not satisfy the current hash-materialized source-closure requirement.</boundary>
+  </web_verification>
+
+  <current_qgeu_gate_state>
+    <qgeu id="QGEU-PV-EMA-SOURCE-MIX-2025" graph_spec_count="1" graph_quality_gate_count="1" statistics_display_metadata_count="0" ordering_contract_count="0" ordering_quality_gate_count="0" origin_document_artifact_count="0" factfulness="PENDING_CANONICAL_JUDGE" agent_exploitability="BLOCKED_PENDING_CANONICAL_JUDGES" presentation="PENDING_CANONICAL_JUDGE"/>
+    <qgeu id="QGEU-PV-EMA-ACTION-DISPOSITION-2025" graph_spec_count="1" graph_quality_gate_count="1" statistics_display_metadata_count="0" ordering_contract_count="0" ordering_quality_gate_count="0" origin_document_artifact_count="0" factfulness="PENDING_CANONICAL_JUDGE" agent_exploitability="BLOCKED_PENDING_CANONICAL_JUDGES" presentation="PENDING_CANONICAL_JUDGE"/>
+    <qgeu id="QGEU-PV-EMA-DATA-QUALITY-2025" graph_spec_count="1" graph_quality_gate_count="1" statistics_display_metadata_count="0" ordering_contract_count="0" ordering_quality_gate_count="0" origin_document_artifact_count="0" factfulness="PENDING_CANONICAL_JUDGE" agent_exploitability="BLOCKED_PENDING_CANONICAL_JUDGES" presentation="PENDING_CANONICAL_JUDGE"/>
+    <qgeu id="QGEU-PV-JMIR-ADE-F1-PANEL-2026" graph_spec_count="1" graph_quality_gate_count="1" statistics_display_metadata_count="0" ordering_contract_count="0" ordering_quality_gate_count="0" origin_document_artifact_count="0" factfulness="PENDING_CANONICAL_JUDGE" agent_exploitability="BLOCKED_PENDING_CANONICAL_JUDGES" presentation="PENDING_CANONICAL_JUDGE"/>
+  </current_qgeu_gate_state>
+
+  <deterministic_decision>
+    <gate name="layout_semantics" status="PASS_PROPOSED">Every graph is mapped to an existing section and no standalone EUG section is introduced.</gate>
+    <gate name="lossless_section_topology" status="PASS_PROPOSED">The change requires only wrappers/aside placement inside four existing sections; no section order or content mutation is required.</gate>
+    <gate name="raw_live_html_fidelity" status="BLOCKED">Origin HTML/CSS/JS bytes are not materialized; 100% visual-fidelity mutation cannot be proven.</gate>
+    <gate name="repo_live_topology_equivalence" status="FAIL">The dark repository preview has 15 top-level sections while the live source-of-truth snapshot has 23 semantic surfaces.</gate>
+    <gate name="current_eug_statistical_display_contract" status="FAIL">All four QGEUs have zero current StatisticsDisplayMetadata objects.</gate>
+    <gate name="current_eug_ordering_contract" status="FAIL">All four QGEUs have zero current OrderingContract and zero current OrderingQualityGate objects.</gate>
+    <gate name="source_materialization" status="FAIL">All four QGEUs have zero current READY hash-verified OriginDocumentArtifact objects.</gate>
+    <gate name="factfulness_agent_exploitability" status="BLOCKED">Current QGEUs remain pending canonical Factfulness and blocked for agent exploitation.</gate>
+    <gate name="current_graph_presentation_judge" status="BLOCKED">No current judge:evidence-graphic:presentation-v3 PASS exists for the immutable target snapshot.</gate>
+    <gate name="current_claim_placement_judge" status="BLOCKED">No unanimous three-replica judge:evidence-placement:presentation-v1.2 PASS exists for a rebinding against the current page snapshot.</gate>
+  </deterministic_decision>
+
+  <mutation_decision>
+    <target_html>expertises/pv-data-engineer/pv-data-engineer.html</target_html>
+    <decision>DO_NOT_MUTATE_HTML</decision>
+    <reason>DEVICEV CURRENT_TRUE_ONLY and fail-closed rules prohibit modified EUG placement until source closure, statistical display metadata, deterministic ordering, Factfulness/agent-exploitability and current presentation judges pass. The existing dark preview is also not topologically equivalent to the 23-surface live source.</reason>
+    <allowed_next_action>Materialize the exact current page source and QGEU source artifacts; complete v2 display/order contracts; bind the immutable snapshot; run the applicable current judges; then apply the four side-rail placements as one topology-preserving HTML patch.</allowed_next_action>
+  </mutation_decision>
+
+  <google_drive status="NOT_READ_NOT_WRITTEN_NOT_CREATED_NOT_DELETED">
+    <rule>Wait for explicit user validation before any Google Drive operation.</rule>
+  </google_drive>
+
+  <final_decision final_pass="false" status="BLOCKED_HTML_MUTATION_AUDIT_PERSISTED"/>
+</eug_side_placement_audit>
