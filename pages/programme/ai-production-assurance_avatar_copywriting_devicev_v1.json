@@ -1,0 +1,265 @@
+{
+  "artifact": "devicev:ai-production-assurance-avatar-copywriting-v1",
+  "version": "1.0.0",
+  "generated_at": "2026-09-04T15:36:00+02:00",
+  "scope": {
+    "url": "https://mickael-umt.com/programme/ai-production-assurance/",
+    "page_id": "page:source:15.1",
+    "repo": "mckeopharma-web/copywriting",
+    "html": "pages/programme/ai-production-assurance.html",
+    "html_blob_sha": "02627482d766f47f0e8e876bbde12ea543267039",
+    "theme": "dark",
+    "topology": "17-sections-locked",
+    "structure_lock": true,
+    "section_delta_allowed": 0,
+    "other_pages_mutated": false,
+    "google_drive_touched": false
+  },
+  "policy": {
+    "source": "@neofort current=true",
+    "execution": "FAIL_CLOSED",
+    "legacy_requested_placement_judge": "judge:eu:placementv1",
+    "legacy_resolution": "NOT_FOUND",
+    "current_placement_judge": "judge:evidence-placement:presentation-v1.2",
+    "copy_claim_judge": "judge:copy-claim:external-capability-grounding-v1.1",
+    "evidence_unit_judge": "judge:evidence-unit:champion-v2",
+    "replicas": 3,
+    "temperature": 0,
+    "top_p": 1,
+    "hard_gate_reducer": "AND",
+    "score_reducer": "MIN",
+    "categorical_reducer": "UNANIMOUS_NO_MAJORITY_VOTE"
+  },
+  "page": {
+    "offer": "AI Production Assurance",
+    "positioning": "A bounded 12-week production-assurance mandate for one critical AI use case. It builds the architecture boundary, controls, evaluation and runtime evidence, and internal ownership needed to support a defendable go / limited-go / no-go decision; the client retains decision authority.",
+    "mechanism": ["Frame", "Design", "Control", "Test", "Transfer"],
+    "section_order": ["triggers", "consequences", "for-whom", "qualification", "proposition", "offers", "deliverables", "before-after", "results", "proof", "scope", "process", "modules", "intersection", "commitments", "questions", "engagement"]
+  },
+  "avatar": {
+    "buyer_role_id": "buyer-role:agentic-ai",
+    "persona": "Claire Dumas",
+    "persona_status": "MODELLED_SYNTHESIS_NOT_REAL_PERSON",
+    "role": "CTO / Head of AI Platform",
+    "before": "Agents work in demos but ownership, permissions, memory, evaluation and production behaviour are not yet controllable.",
+    "after": "An observable bounded runtime with explicit human authority and reusable execution evidence.",
+    "synthesized_quote": "I need to know what this agent can do, what it can reach, how we stop it, and how I defend the production decision.",
+    "quote_status": "SYNTHESIZED_NOT_VERBATIM",
+    "decision_unit": {
+      "decision_maker": "CTO / CDO / CIO / COO / transformation executive",
+      "advocate": "CTO / Head of AI Platform",
+      "champion": "Workflow owner",
+      "risk_approvers": ["Enterprise Architecture", "CISO / AI Security", "DPO / Privacy", "Legal / Compliance"],
+      "commercial_approver": "Procurement / finance according to client policy",
+      "supporting_buyer_role_id": "buyer-role:ai-security"
+    }
+  },
+  "copy": {
+    "hero": {
+      "eyebrow": "AI Production Assurance · one critical use case · 12 weeks",
+      "headline": "Make the production decision defensible before release—not reconstructable after it.",
+      "body": "For CTOs and Heads of AI moving a critical AI or agentic use case beyond demo. In twelve weeks, build the architecture boundary, evaluation gates, runtime evidence and internal ownership needed to support a go, limited-go or no-go decision. The mandate produces the decision system and evidence package; accountable client owners keep the decision authority.",
+      "points": ["One critical use case", "Frame → Design → Control → Test → Transfer", "Architecture + gates + governance + runtime evidence + handover"],
+      "cta": "Assess the mandate",
+      "mode": "BOUNDED_VALUE_PROPOSITION"
+    },
+    "sections": [
+      {
+        "id": "triggers",
+        "seq": {"id": "copyseq:apa:triggers:primary", "buyer": "Is this an active production-decision problem now?", "nlp": "problem activation without fabricated urgency", "anchor": "prototype-to-production trigger"},
+        "headline": "Recognise one of these production-boundary moments.",
+        "body": "The mandate starts when an AI system has to cross a real boundary—production, audit, renewal, launch or replacement—and the team needs more than demo performance to justify the move.",
+        "points": ["The agent works in demos, but ownership, permissions or shutdown conditions are still implicit.", "Security, privacy or compliance review is arriving after architecture choices have already hardened.", "The decision group is asking for evidence it can review, not another feature list.", "A named owner must decide whether the use case is ready, limited, or not ready."],
+        "mode": "BOUNDED_PROBLEM_ACTIVATION",
+        "eu": ["EU-SG-001"],
+        "cta": "Assess whether the mandate fits"
+      },
+      {
+        "id": "consequences",
+        "seq": {"id": "copyseq:apa:consequences:primary", "buyer": "Why is the demo not enough to justify release?", "nlp": "evidence-backed problem mechanism", "anchor": "runtime assurance gap"},
+        "headline": "A successful prompt is not a production acceptance test.",
+        "body": "Tool-using AI can fail through the model, the harness, permissions, retrieved context or the runtime environment. Public cybersecurity guidance therefore emphasises safeguards, oversight, observability and response procedures rather than prompting alone. AgentDojo contains 629 security test cases for realistic tool-using tasks; that is benchmark breadth, not a production incident-rate estimate.",
+        "mode": "EXTERNAL_RESEARCH_COMPRESSION",
+        "eu": ["EU-SG-001", "EU-AGENTIC-AGENTDOJO-629-2024"]
+      },
+      {
+        "id": "for-whom",
+        "seq": {"id": "copyseq:apa:for-whom:primary", "buyer": "Which roles must jointly accept the production boundary?", "nlp": "buyer-role identification", "anchor": "CTO AI security business decision unit"},
+        "headline": "A decision unit—not an isolated buyer.",
+        "body": "The primary buyer is a CTO or Head of AI Platform who owns the production boundary but cannot accept it alone. Security, architecture, workflow ownership, privacy/legal and procurement each need a different part of the same decision package.",
+        "items": ["CTO / Head of AI Platform — bounded runtime, release criteria, named ownership and a reviewable decision package.", "CISO / AI governance / privacy — permissions, data boundaries, logs, shutdown, exceptions and escalation.", "Workflow owner / business sponsor — service fit, acceptance criteria, operational ownership and usable handover.", "Enterprise Architecture / Legal / Procurement — integration, contractual, regulatory and purchasing constraints made explicit before release."],
+        "mode": "MODELLED_AVATAR_AND_DECISION_UNIT",
+        "eu": ["buyer-role:agentic-ai", "buyer-role:ai-security"]
+      },
+      {
+        "id": "qualification",
+        "seq": {"id": "copyseq:apa:qualification:primary", "buyer": "Do we have the mandate, access and ownership needed?", "nlp": "qualification and exclusion", "anchor": "access sponsor use-case boundary"},
+        "headline": "The mandate only works when the evidence can actually be reached.",
+        "body": "This is a fit when one production decision is real, a sponsor can arbitrate scope, and the team can provide controlled access to the relevant systems, logs, data or documents under the agreed confidentiality boundary.",
+        "items": ["FIT — one concrete production or promotion decision is in scope.", "FIT — a named sponsor can resolve ownership and scope conflicts.", "FIT — relevant evidence can be accessed under an agreed security and confidentiality boundary during the first phase.", "FIT — a technical owner and workflow owner can participate in acceptance and transfer.", "NO FIT — trend scan, generic prompt training or broad enterprise transformation without a sponsor.", "NO FIT — a statutory approval, legal opinion, certification or regulatory signature the mandate cannot issue.", "NO FIT — the team cannot provide access to the evidence needed to test the production boundary."],
+        "mode": "NONASSERTIVE_COMMERCIAL_QUALIFICATION",
+        "cta": "Check fit in 20 minutes"
+      },
+      {
+        "id": "proposition",
+        "seq": {"id": "copyseq:apa:proposition:primary", "buyer": "What exactly is the mechanism being bought?", "nlp": "offer mechanism explanation", "anchor": "Production Readiness Evidence Loop"},
+        "headline": "Build the decision system before asking the committee for a decision.",
+        "body": "AI Production Assurance is a bounded architecture, assurance and transfer mandate for one critical AI use case. The Production Readiness Evidence Loop turns the use case into five reviewable states: Frame the decision, Design the boundary, Control the runtime, Test the acceptance criteria, then Transfer the operating model. NIST's TEVV-Athlon likewise treats AI evaluation as a structured measurement process; this mandate adapts that discipline to the client's production boundary and does not claim a generic 'safe' system.",
+        "mode": "CAPABILITY_LED_EXTERNAL_SYNTHESIS",
+        "eu": ["EU-AGENTIC-NIST-TEVV-4-STAGES-2026"],
+        "cta": "Assess the mandate"
+      },
+      {
+        "id": "offers",
+        "seq": {"id": "copyseq:apa:offers:primary", "buyer": "Which engagement format matches the maturity of the decision?", "nlp": "offer ladder", "anchor": "bounded mandate format"},
+        "headline": "Choose the smallest intervention that can close the decision gap.",
+        "body": "Do not buy a twelve-week mandate if a shorter diagnostic can close the problem. Use the core mandate when architecture, controls, evaluation evidence and handover all need to be built around one production decision.",
+        "items": ["Decision clinic — use when the decision, evidence gap or intervention size is not yet clear; output: fit/no-fit rationale and bounded next step.", "Assurance sprint — use when a narrow architecture, control, evaluation or evidence gap is already isolated; output: scoped work product with explicit acceptance criteria.", "AI Production Assurance · 12 weeks — use when architecture, authority, evaluation, runtime evidence and transfer must be integrated for one critical use case; output: production-decision evidence package and internal handover."],
+        "mode": "NONASSERTIVE_PRODUCT_CONTEXT",
+        "cta": "Choose the configuration that matches the gap"
+      },
+      {
+        "id": "deliverables",
+        "seq": {"id": "copyseq:apa:deliverables:primary", "buyer": "What tangible assets exist at the end?", "nlp": "deliverable specification", "anchor": "architecture gates governance evidence handover"},
+        "headline": "Five work products—each bounded by an acceptance criterion.",
+        "body": "The mandate is sold as reviewable work products, not as a promise that the model, regulator or production environment will behave in a predetermined way.",
+        "items": ["Architecture & boundary map — models, tools, data flows, dependencies and trust boundaries; acceptance: named systems, owners, interfaces, unresolved risks and exclusions are explicit.", "Versioned quality gates — functional, regression, security and policy checks tied to promotion criteria; acceptance: each gate has an owner, version, evidence output and exception path.", "Governance & authority model — agent/user identities, permitted actions, credentials, human approvals, shutdown and rollback; acceptance: authority, escalation and stop conditions are explicit and testable.", "Execution evidence package — model/configuration versions, tool calls, relevant sources, telemetry, exceptions and human decisions; acceptance: agreed scenarios can be reviewed from retained evidence.", "Handover pack — runbooks, ownership matrix, open-risk backlog and supervised transfer; acceptance: the internal team runs the agreed readiness loop once without external execution."],
+        "mode": "BOUNDED_DELIVERABLE_SPECIFICATION",
+        "eu": ["EU-SG-003", "EU-SG-004", "EU-AISEC-RUN-22"]
+      },
+      {
+        "id": "before-after",
+        "seq": {"id": "copyseq:apa:before-after:primary", "buyer": "What operational state changes if the mandate succeeds?", "nlp": "bounded before-after transformation", "anchor": "decision state transition"},
+        "headline": "The programme changes decision state—not the laws of the model.",
+        "body": "The before/after is defined as an operational state transition that the mandate can directly produce. It is not presented as a measured client business outcome.",
+        "items": ["Ownership implicit or diffuse → named decision owner and escalation path recorded.", "Tools, permissions, memory and data boundaries partly implicit → in-scope runtime boundary documented and reviewed.", "Promotion criteria formed late or inside the committee → versioned evidence packet evaluated against pre-agreed acceptance criteria.", "Regression discovered ad hoc → agreed evaluation suite runs before promotion decisions.", "Operational knowledge depends on individuals → runbooks, registers and stop/rollback procedures transferred and exercised."],
+        "mode": "BOUNDED_STATE_TRANSFORMATION"
+      },
+      {
+        "id": "results",
+        "seq": {"id": "copyseq:apa:results:primary", "buyer": "What can be measured and accepted without pretending to know client effects?", "nlp": "target outcome classification", "anchor": "acceptance criteria not outcome claims"},
+        "headline": "What success means—and what is not claimed.",
+        "body": "Success is defined by acceptance criteria agreed in phase 1, not by a promised release outcome. The evidence can support a go, limited-go or no-go decision; accountable client owners retain the decision authority.",
+        "items": ["TARGET — the use case reaches the agreed readiness threshold, or the evidence explains why it does not.", "TARGET — the internal team executes the readiness loop once during transfer.", "TARGET — open risks, exceptions and decision ownership are explicit at handover.", "NOT GUARANTEED — promotion to production.", "NOT GUARANTEED — foundation-model behaviour.", "NOT GUARANTEED — regulatory approval, certification or inspection outcome."],
+        "mode": "ACCEPTANCE_OUTCOME_BOUNDARY",
+        "eu": ["EU-AGENTIC-NIST-TEVV-4-STAGES-2026", "EU-SG-005"]
+      },
+      {
+        "id": "proof",
+        "seq": {"id": "copyseq:apa:proof:primary", "buyer": "What proves the consultant can implement the mechanism?", "nlp": "provenance-qualified capability proof", "anchor": "GitHub implementation evidence NDA boundary"},
+        "headline": "Public implementation proof where available; NDA boundaries where necessary.",
+        "body": "Public engineering artifacts are used to demonstrate implementation capability, not to imply customer outcomes. Confidential R&D is described only at architecture and responsibility level.",
+        "items": ["Mistral hackathon repository — IPIP/Big Five data, bias-generation notebooks and LangChain experiments; capability artifact only.", "Streamlit/LangChain repository — Dockerfile and GitLab CI configuration; capability artifact only.", "Governed AI operations architecture — agent registration, permissions, memory lineage, evidence review and staged rollout represented as NDA-limited R&D capabilities; no client outcome claim."],
+        "mode": "CAPABILITY_PROOF",
+        "cta": "Review public engineering evidence"
+      },
+      {
+        "id": "scope",
+        "seq": {"id": "copyseq:apa:scope:primary", "buyer": "What is explicitly in and out?", "nlp": "scope and dependency contract", "anchor": "one use case explicit exclusions"},
+        "headline": "The boundary is part of the product.",
+        "body": "The core mandate is intentionally narrower than an enterprise AI transformation. It covers one critical use case and the decision system needed to assess that use case.",
+        "items": ["IN — one critical AI or agentic use case.", "IN — architecture, permissions, memory/context, evaluations, observability, rollback and handover inside the agreed boundary.", "IN — promotion-decision evidence packet and ownership transfer.", "OUT — enterprise-wide AI transformation.", "OUT — permanent production operations or on-call support after handover unless separately contracted.", "OUT — the legal, regulatory, certification or promotion decision itself.", "DEPENDENCY — named sponsor, controlled evidence access and internal owners available for acceptance and transfer."],
+        "mode": "NONASSERTIVE_SCOPE_CONTRACT"
+      },
+      {
+        "id": "process",
+        "seq": {"id": "copyseq:apa:process:primary", "buyer": "How does the twelve-week mandate progress and where can it stop?", "nlp": "delivery sequence", "anchor": "frame design control test transfer"},
+        "headline": "Five phases. Each phase produces something reviewable.",
+        "body": "The sequence is designed so the mandate can expose a blocked assumption before the final week. Each phase has an output and an exit condition rather than relying on a single final presentation.",
+        "items": ["Weeks 1–2 · Frame — use-case boundary, baseline, risk/ownership map and acceptance criteria; exit when decision, scope, evidence access and owners are explicit enough to design.", "Weeks 3–4 · Design — target architecture, data/tool boundaries, permissions, instrumentation and evaluation strategy; exit when boundary and promotion criteria are reviewable.", "Weeks 5–9 · Control — quality gates, security controls, observability, execution evidence and review integration; exit when agreed controls run in the target staging or test context.", "Weeks 10–11 · Test — functional/regression tests, security scenarios, exceptions and readiness packet; exit when evidence is sufficient to state ready, limited or not ready against agreed criteria.", "Week 12 · Transfer — runbooks, ownership matrix, training, open-risk backlog and handover record; exit when internal owners execute the agreed readiness loop once."],
+        "mode": "BOUNDED_DELIVERY_PROCESS",
+        "eu": ["EU-AGENTIC-NIST-TEVV-4-STAGES-2026"]
+      },
+      {
+        "id": "modules",
+        "seq": {"id": "copyseq:apa:modules:primary", "buyer": "Which technical assurance blocks are engaged?", "nlp": "technical decomposition", "anchor": "AI assurance modules"},
+        "headline": "Eight modules—selected by the use case.",
+        "body": "Modules are composed according to the production boundary. A module already controlled by the client should leave scope rather than be sold twice.",
+        "items": ["Mandate & baseline — decision owner, use-case boundary, current state and acceptance criteria.", "Architecture & data boundaries — models, tools, data flows, interfaces and trust boundaries.", "Identity, ownership & permissions — capabilities, credentials, human authority, escalation and shutdown.", "Evaluation harness — functional, regression, adversarial and policy scenarios with versioned criteria.", "AI security & quality gates — threat-modelled controls and release-blocking conditions for the agreed risk boundary.", "Observability & execution evidence — traces, logs, version context, exceptions and reviewable decision evidence.", "Operations & resilience — rollback, fail-safe behaviour, incident/exception handling and operating ownership.", "Adoption & transfer — runbooks, internal capability transfer and backlog ownership."],
+        "mode": "BOUNDED_TECHNICAL_DECOMPOSITION",
+        "eu": ["EU-SG-002", "EU-SG-003", "EU-SG-004", "EU-CANON-BOUNDED-AGENTS-EXFIL-2026"]
+      },
+      {
+        "id": "intersection",
+        "seq": {"id": "copyseq:apa:intersection:primary", "buyer": "Why this profile rather than a generic developer or auditor?", "nlp": "profile-market intersection", "anchor": "regulated ops AI data assurance verifiable systems"},
+        "headline": "The differentiator is the intersection—not a longer list of skills.",
+        "body": "The mandate combines regulated-operations discipline, AI/data engineering, assurance/governance and verifiable-system design. Architecture and evidence are designed together, so ownership, data boundaries, evaluation and handover are not reconstructed as a separate audit at the end.",
+        "points": ["Regulated operational discipline — traceability, controlled processes and accountable human validation.", "AI/data engineering — Python, LLM applications, data architecture, APIs, evaluation and runtime instrumentation.", "Assurance/governance — permissions, review gates, evidence lineage, risk boundaries and handover.", "Verifiable systems — smart-contract, zero-knowledge and provenance-oriented engineering experience."],
+        "mode": "CAPABILITY_LED_POSITIONING",
+        "eu": ["https://github.com/RickOwri/mistral-hackaton", "https://github.com/RickOwri/streamlit-lang", "CV_ESN"]
+      },
+      {
+        "id": "commitments",
+        "seq": {"id": "copyseq:apa:commitments:primary", "buyer": "What can be guaranteed honestly and what cannot?", "nlp": "commitment boundary", "anchor": "acceptance rework reversibility human boundary"},
+        "headline": "Guarantee the work product—not an authority's outcome.",
+        "body": "Commercial commitments are restricted to work the mandate can control: scope, acceptance, rework, evidence ownership, confidentiality handling, reversibility and explicit human decision boundaries.",
+        "items": ["Scope, exclusions, dependencies and acceptance criteria are written before billable implementation work.", "A deliverable that misses its agreed acceptance criterion is reworked under the agreed commercial terms; this does not guarantee an external outcome.", "Client-owned code, data, schemas, decision records and runbooks remain transferable; any proprietary dependency must be explicitly approved.", "Client information is classified before use; the agreed confidentiality boundary governs handling.", "Human decision authority, escalation and shutdown are explicit for consequential actions.", "NOT GUARANTEED — production approval, regulator/certifier/inspector decisions, foundation-model behaviour or a predetermined business result."],
+        "mode": "COMMERCIAL_COMMITMENT_BOUNDARY",
+        "eu": ["EU-AISEC-RUN-34"]
+      },
+      {
+        "id": "questions",
+        "seq": {"id": "copyseq:apa:questions:primary", "buyer": "What would block purchase or implementation?", "nlp": "evidence-bounded FAQ", "anchor": "team governance cost delay dependency"},
+        "headline": "Objections are design inputs.",
+        "body": "The FAQ is intentionally bounded: where the programme cannot guarantee an effect or authority decision, the answer says so.",
+        "items": ["Why not use our internal team? — Keep it internal if it already owns architecture boundary, evaluation harness, permissions, observability, incident/rollback path and the decision packet. The mandate is useful when those responsibilities cross teams and no one owns the complete acceptance system.", "Does governance slow innovation? — It can when controls are bolted on late. Here controls are versioned inside the delivery path and their operational cost is measured. No generic acceleration claim is made.", "We already use ChatGPT. Is that enough? — A model interface can be part of the system; it does not by itself define data boundaries, tool authority, identity, logs, evaluation criteria, rollback or accountable ownership for a production use case.", "Why not hire a developer instead? — Compare the work package, not the job title. If you only need implementation against an already-owned specification and acceptance system, a standard engineering engagement is the better fit.", "How is ROI measured? — Baseline before implementation, then track client-agreed operational metrics such as engineering/review time, gate failures, remediation work, runtime cost/latency, exceptions and adoption. No improvement is assumed in advance.", "Do you train end users? — Only the in-scope owners and operators, on the actual system, risk boundaries, review/stop procedures and runbooks required for handover.", "Do you guarantee compliance? — No. The mandate can create controls and evidence that support governance or compliance work; legal opinions, certification and regulatory decisions remain with competent professionals and authorities.", "What remains after you leave? — Versioned architecture, control and evaluation definitions, retained evidence, runbooks, ownership matrix, open-risk backlog and handover record.", "How many use cases are included? — One priority use case in the core mandate. Subsequent use cases are separately qualified extensions or replications.", "Can the work stay under NDA? — Yes where agreed. Public evidence and NDA-bound client details remain separated, and public proof never substitutes for confidential client evidence."],
+        "mode": "EVIDENCE_BOUNDED_FAQ",
+        "eu": ["EU-SG-001", "EU-SG-002", "EU-AISEC-RUN-34"]
+      },
+      {
+        "id": "engagement",
+        "seq": {"id": "copyseq:apa:engagement:primary", "buyer": "What information is needed to qualify the next step?", "nlp": "conversion qualification", "anchor": "assess mandate"},
+        "headline": "Describe the AI use case that has to cross a production boundary.",
+        "body": "Bring the sponsor if possible. In the qualification call, map the decision, current system, evidence access, risk boundary and internal owners. The output is a fit/no-fit rationale and, if fit, the smallest first-step scope that can close the evidence gap.",
+        "points": ["20-minute qualification", "Sponsor welcome", "Fit/no-fit rationale", "Bounded first-step scope if fit"],
+        "mode": "NONASSERTIVE_CONVERSION",
+        "cta": "Assess the mandate"
+      }
+    ]
+  },
+  "evidence": {
+    "EU-SG-001": {"url": "https://www.ncsc.gov.uk/news/ncsc-statement-in-response-to-recent-incidents-resulting-from-frontier-ai-evaluations", "boundary": "Government cybersecurity statement; no quantified incident-reduction, ROI or release-performance effect.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:001", "claim": "claim-eu-apa-001", "xpath": "//*[@id='claim-eu-apa-001']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-AGENTIC-AGENTDOJO-629-2024": {"url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html", "boundary": "Benchmark breadth only; not a production incident-rate estimate.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:002", "claim": "claim-eu-apa-002", "xpath": "//*[@id='claim-eu-apa-002']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-SG-005": {"url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "boundary": "Risk-level taxonomy only; this page is not legal advice.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:003", "claim": "claim-eu-apa-003", "xpath": "//*[@id='claim-eu-apa-003']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-SG-002": {"url": "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai", "boundary": "Interim practical guidance; formal guidance was still being developed at publication.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:004", "claim": "claim-eu-apa-004", "xpath": "//*[@id='claim-eu-apa-004']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-AISEC-RUN-22": {"url": "https://arxiv.org/abs/2608.24957", "boundary": "Study-specific privacy-cost metric; not universal privacy-risk reduction, production incident reduction or business outcome.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:005", "claim": "claim-eu-apa-005", "xpath": "//*[@id='claim-eu-apa-005']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-AISEC-RUN-34": {"url": "https://arxiv.org/abs/2608.27443", "boundary": "Controlled simulated-day study; not a production incident rate and not proof that human approval is generally unsafe.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:006", "claim": "claim-eu-apa-006", "xpath": "//*[@id='claim-eu-apa-006']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-AGENTIC-NIST-TEVV-4-STAGES-2026": {"url": "https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems", "boundary": "Method-structure support only; NIST does not endorse this consulting programme or claim it improves organisational outcomes.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:007", "claim": "claim-eu-apa-007", "xpath": "//*[@id='claim-eu-apa-007']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-SG-003": {"url": "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai", "boundary": "Guidance does not quantify incident reduction from threat modelling.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:008", "claim": "claim-eu-apa-008", "xpath": "//*[@id='claim-eu-apa-008']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-SG-004": {"url": "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai", "boundary": "Operational guidance, not a quantified audit-success or response-time effect.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:009", "claim": "claim-eu-apa-009", "xpath": "//*[@id='claim-eu-apa-009']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"},
+    "EU-CANON-BOUNDED-AGENTS-EXFIL-2026": {"url": "https://arxiv.org/abs/2608.15888", "boundary": "Paper-specific controlled benchmark with utility/policy-completeness trade-offs; no universal production-security claim.", "upstream": "PASS/ADMITTED/ALLOWED", "placement": "placement:apa:avatar-v1:010", "claim": "claim-eu-apa-010", "xpath": "//*[@id='claim-eu-apa-010']", "xpath_count": 1, "page_judges": "NOT_EXECUTED", "publication": "DRAFT_NOT_AUTHORIZED"}
+  },
+  "graphs": [
+    {"id": "QGEU-AISEC-FRAMING-GAP-2026", "section": "consequences", "quality": "PASS", "page": "DRAFT_NOT_AUTHORIZED", "xpath": "//*[@id='eug-framing-gap']", "boundary": "Safe synthetic laboratory; wording-sensitive descriptive rates; not a universal production attack rate."},
+    {"id": "QGEU-AISEC-TOOLMIN-PCS-2026", "section": "deliverables", "quality": "PASS", "page": "DRAFT_NOT_AUTHORIZED", "xpath": "//*[@id='eug-toolmin']", "boundary": "Paper-specific privacy-cost score over 307 tool calls; not a universal privacy-risk or business-outcome measure."},
+    {"id": "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026", "section": "modules", "quality": "PASS", "page": "DRAFT_NOT_AUTHORIZED", "xpath": "//*[@id='eug-bounded-exfil']", "boundary": "Compromised-model benchmark with explicit utility/policy-completeness trade-offs; not a universal production claim."},
+    {"id": "QGEU-AISEC-PERMISSION-OVERREACH-2026", "section": "commitments", "quality": "PASS", "page": "DRAFT_NOT_AUTHORIZED", "xpath": "//*[@id='eug-permission-overreach']", "boundary": "Controlled simulated-day study; not a production incident-risk estimate or proof that human approval is generally unsafe."}
+  ],
+  "proof": [
+    {"url": "https://github.com/RickOwri/mistral-hackaton", "verified": "2026-09-04", "observed": "IPIP/Big Five data, bias-generation and LangChain notebooks", "boundary": "capability only"},
+    {"url": "https://github.com/RickOwri/streamlit-lang", "verified": "2026-09-04", "observed": "Dockerfile, gitlab-ci.yml, requirements and Streamlit/LangChain files", "boundary": "capability only"},
+    {"reference": "CV ESN", "status": "NDA_BOUND", "boundary": "capability/responsibility only; no stealth product/client/topology disclosure"}
+  ],
+  "validation": {
+    "json": "PASS",
+    "scope": "PASS",
+    "sections": "17/17 UNIQUE ENGLISH",
+    "eu_upstream": "PASS/ADMITTED/ALLOWED",
+    "existing_xpath": "10/10 count=1",
+    "new_copy_judge": "NOT_EXECUTED",
+    "new_placement_judge": "NOT_EXECUTED",
+    "new_presentation_judge": "NOT_EXECUTED",
+    "publication": "DRAFT_NOT_AUTHORIZED",
+    "final_pass": false,
+    "reason": "New copy is not yet materialized as claim-level XPath spans and has not run through current three-replica copy, placement and presentation judges."
+  },
+  "github": {
+    "path": "pages/programme/ai-production-assurance_avatar_copywriting_devicev_v1.json",
+    "preexisting": "NOT_FOUND",
+    "commit_sha": "RECORDED_OUT_OF_BAND_AFTER_COMMIT"
+  },
+  "google_drive": {
+    "status": "AWAITING_EXPLICIT_USER_APPROVAL",
+    "read_or_mutation_performed": false
+  }
+}
