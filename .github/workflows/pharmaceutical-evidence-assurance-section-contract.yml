@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: pea-section-contract-${{ github.ref }}
@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate live ↔ repo section contract
+    name: Validate live contract and snapshot
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,7 +39,20 @@ jobs:
             --repo-root . \
             --check-live \
             --save-live-html reports/pea-live-current.html \
+            --save-sanitized-html pages/programme/pharmaceutical-evidence-assurance.live.sanitized.html \
             --report reports/pea-section-contract-ci.json
+      - name: Persist sanitized live HTML snapshot
+        if: success() && github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/programme/pharmaceutical-evidence-assurance.live.sanitized.html
+          if git diff --cached --quiet; then
+            echo "Sanitized live snapshot unchanged."
+          else
+            git commit -m "chore(pea): refresh sanitized live HTML snapshot [skip ci]"
+            git push
+          fi
       - name: Upload immutable audit output
         if: always()
         uses: actions/upload-artifact@v4
