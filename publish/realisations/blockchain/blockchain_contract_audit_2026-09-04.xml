@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<contract-audit id="audit:realisations-blockchain:2026-09-04:v1" devicev-version="1.0.0" execution-posture="FAIL_CLOSED">
+<contract-audit id="audit:realisations-blockchain:2026-09-04:v2" devicev-version="1.0.0" execution-posture="FAIL_CLOSED">
   <target>
     <url>https://mickael-umt.com/realisations/blockchain/</url>
     <repository>mckeopharma-web/copywriting</repository>
@@ -47,7 +47,7 @@
     <check id="C1" name="live-vs-source-section-count" result="PASS">5 = 5</check>
     <check id="C2" name="live-vs-source-section-order" result="PASS">page-intro → lottery-dapp → tokenized-voting-backend → provenance-policy → method-behind-proof</check>
     <check id="C3" name="project-member-count" result="PASS">2 implementation records retained</check>
-    <check id="C4" name="final-form-preservation" result="PASS">two-step method qualification remains in slot 5</check>
+    <check id="C4" name="final-form-preservation" result="FAIL">Live form is two-screen and contains six current-work choices, three intended-use choices, professional email, optional name, explicit local-storage consent, navigation controls and a no-third-party-tracker statement. The repository review HTML collapses this to six work choices + email/name + submit and therefore is not lossless.</check>
     <check id="C5" name="expertise-topology-transplant" result="PASS">FORBIDDEN: 18-section offer topology is a reference, not the target topology</check>
     <check id="C6" name="programme-topology-transplant" result="PASS">FORBIDDEN: programme page remains a commercial-reference contract only</check>
   </comparison>
@@ -56,11 +56,12 @@
     <requested-judge id="judge:eu:placementv1" current-object-found="false" result="BLOCKED_POLICY_RESOLUTION">No current NeoFort object with this exact id or a proven alias was found.</requested-judge>
     <current-placement-judge id="judge:evidence-placement:presentation-v1.2" version="1.2" status="CURRENT" note="Observed as current and superseding v1, but not silently substituted for the unresolved requested id."/>
     <selected-evidence id="EU-CANON-BIS-AGORA-SETTLEMENT-80S-2026" deterministic-preflight="PASS" factfulness="PASS" agent-exploitability="ALLOWED" all-applicable-publication-judges-pass="false" all-judge-snapshots-current="false"/>
-    <final-publication result="BLOCKED">The audit may be persisted for review; the page must not be declared FINAL_PASS or merged as publication-approved until policy resolution and all applicable publication/placement replicas pass.</final-publication>
+    <final-publication result="BLOCKED">The audit may be persisted for review; the page must not be declared FINAL_PASS or merged as publication-approved until form fidelity is restored, requested policy resolution is complete, and all applicable publication/placement replicas pass.</final-publication>
   </devicev-gates>
   <mutation-decision>
-    <visible-copy-mutation>NO_CHANGE_AUTHORIZED_IN_THIS_AUDIT</visible-copy-mutation>
-    <reason>Current source already preserves live topology and explicitly carries PENDING_FORMAL_LLM_JUDGE. With the requested placement judge unresolved and specialist publication gates incomplete, changing evidence-bearing visible copy would violate fail-closed execution.</reason>
+    <visible-copy-mutation>QUARANTINED_PENDING_FORM_REPAIR_AND_JUDGE_RESOLUTION</visible-copy-mutation>
+    <required-repair>Restore the live slot-5 two-screen qualification form without altering the five section ids/order, the two project records, the provenance boundary or evidence semantics.</required-repair>
+    <reason>Evidence-bearing source copy is already publication-pending and the requested placement judge remains unresolved. A canonical overwrite would violate fail-closed execution until both the deterministic form contract and semantic publication gates pass.</reason>
   </mutation-decision>
   <google-drive>
     <read-status>READ_ONLY_USED</read-status>
