@@ -1,0 +1,46 @@
+name: AI security avatar section contract
+
+on:
+  push:
+    branches:
+      - review/ai-security-customer-avatar-current-policy-2026-09-03
+    paths:
+      - 'engagement/audiences/avatar-ai-security.html'
+      - 'engagement/audiences/avatar-ai-security-customer-avatar.html'
+      - 'engagement/audiences/structure/avatar-ai-security-*.xml'
+      - 'scripts/validate_ai_security_avatar_contract.py'
+      - '.github/workflows/ai-security-avatar-contract.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-security-avatar-contract-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize only after topology equality
+        run: python scripts/validate_ai_security_avatar_contract.py --apply
+      - name: Re-run deterministic contract check
+        run: python scripts/validate_ai_security_avatar_contract.py
+      - name: Commit scoped target and deterministic report
+        shell: bash
+        run: |
+          if git diff --quiet -- engagement/audiences/avatar-ai-security.html reports/ai-security-avatar-contract-validation.xml; then
+            echo 'No target/report changes.'
+            exit 0
+          fi
+          git config user.name 'ai-security-avatar-contract-bot'
+          git config user.email 'ai-security-avatar-contract-bot@users.noreply.github.com'
+          git add engagement/audiences/avatar-ai-security.html reports/ai-security-avatar-contract-validation.xml
+          git commit -m 'feat(audiences): materialize AI security customer-avatar copy under locked topology'
+          git push
