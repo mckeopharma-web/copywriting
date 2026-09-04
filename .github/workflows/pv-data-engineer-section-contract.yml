@@ -1,0 +1,38 @@
+name: PV Data Engineer — live section contract
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'expertises/pv-data-engineer/pv-data-engineer.html'
+      - 'expertises/pv-data-engineer/structure/**'
+      - 'reports/pv-data-engineer-contract-audit-2026-09-04.xml'
+      - 'scripts/validate_pv_data_engineer_section_contract.py'
+      - '.github/workflows/pv-data-engineer-section-contract.yml'
+      - '.skills/source-first-atomic-design-v4/SKILL.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pv-data-engineer-section-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate PV live/repository section contract
+        run: python scripts/validate_pv_data_engineer_section_contract.py
+      - name: State publication posture
+        run: |
+          echo 'Contract integrity may PASS while publication remains BLOCKED.'
+          echo 'DEVICEV requires all current NeoFort publication predicates to pass before HTML mutation/publication.'
