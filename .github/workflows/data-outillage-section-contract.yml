@@ -1,0 +1,37 @@
+name: Data outillage — section contract
+
+on:
+  push:
+    branches:
+      - 'audit/data-outillage-*'
+    paths:
+      - 'pages/realisations/data-outillage.html'
+      - 'pages/realisations/data-outillage.live.xml'
+      - 'pages/realisations/data-outillage.repo.xml'
+      - 'pages/realisations/data-outillage.contract-audit.xml'
+      - 'tools/validate_data_outillage_contract.py'
+      - '.github/workflows/data-outillage-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: data-outillage-contract-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deterministic-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate target-only live topology and DEVICEV deterministic preflight
+        run: python tools/validate_data_outillage_contract.py
+      - name: Upload deterministic report
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-outillage-section-contract
+          path: reports/data-outillage-section-contract.json
