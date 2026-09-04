@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - main
+      - growth/live-contract-fix-2026-09-04
     paths:
       - 'expertises/growth/structure/*.xml'
       - 'reports/growth-contract-audit-*.xml'
+      - 'publish/expertises/growth/growth.live-contract-candidate.html'
       - 'scripts/validate_growth_section_contract.py'
+      - 'scripts/validate_growth_live_candidate.py'
       - '.github/workflows/growth-section-contract-audit.yml'
   workflow_dispatch:
 
@@ -24,3 +27,6 @@ jobs:
           python-version: '3.12'
       - name: Validate Growth section and evidence audit contract
         run: python scripts/validate_growth_section_contract.py
+      - name: Validate live-faithful Growth HTML candidate
+        if: github.ref_name == 'growth/live-contract-fix-2026-09-04'
+        run: python scripts/validate_growth_live_candidate.py
