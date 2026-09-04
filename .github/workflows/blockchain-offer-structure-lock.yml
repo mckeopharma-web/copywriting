@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'expertises/blockchain/blockchain.html'
+      - 'expertises/blockchain/*.xml'
       - 'contracts/blockchain-offer-structure-lock.json'
       - 'scripts/upgrade_blockchain_commercial_copy.py'
       - 'scripts/validate_blockchain_offer_structure.py'
@@ -30,6 +31,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Validate blockchain XML audit artifacts
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          paths = sorted(Path("expertises/blockchain").glob("*.xml"))
+          if not paths:
+              raise SystemExit("No blockchain XML artifacts found.")
+          for path in paths:
+              ET.parse(path)
+              print(f"XML PASS: {path}")
+          PY
 
       - name: Materialize commercial copy without topology drift
         run: python3 scripts/upgrade_blockchain_commercial_copy.py
