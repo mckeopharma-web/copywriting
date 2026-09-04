@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section_contract_audit schema_version="1.0"
+  scope="ONLY /expertises/pv-data-engineer/"
+  audit_date="2026-09-04"
+  execution_posture="FAIL_CLOSED"
+  publication_allowed="false"
+  html_mutation_allowed="false">
+
+  <v4_contract>
+    <canonical_full_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical_full_order>
+    <expertise_detail_required_when_data_exists>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</expertise_detail_required_when_data_exists>
+    <programme_hub_reference_subset>0,11,20,13,14,10,7,8</programme_hub_reference_subset>
+    <programme_detail_reference_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</programme_detail_reference_order>
+    <source_owner_inheritance>Expertise=S-series; programme=P-series; regulated programme=R-series; COMMON hero/proof/engagement inheritance.</source_owner_inheritance>
+    <hard_dna>D0–D3 structure_family, topology, content_anatomy and primary_interaction_model cannot drift without source-owner change.</hard_dna>
+    <scope_note>Programme contracts were checked as reference only. No programme page was read for mutation and no programme page was changed.</scope_note>
+  </v4_contract>
+
+  <neofort_current_policy_resolution>
+    <policy role="deterministic_preflight" id="policy:evidence-agent-exploitability:deterministic-preflight-v2" version="2.0" current="true"/>
+    <policy role="agent_exploitability" id="policy:evidence-agent-exploitability:proof-carrying-v3" version="3.0" current="true"/>
+    <policy role="judge_applicability" id="policy:evidence-judge-applicability:v2" version="2.0" current="true"/>
+    <policy role="verdict_normalization" id="policy:evidence-judge-verdict-normalization:v2" version="2.0" current="true"/>
+    <policy role="llm_determinism" id="policy:llm-judge:deterministic-execution-v2" version="2.0" current="true" replicas="3" temperature="0" top_p="1"/>
+    <policy role="factfulness" id="judge:evidence:factfulness-epistemology-methodology-v2" version="2.0" current="true"/>
+    <policy role="evidence_unit_judge" id="judge:evidence-unit:champion-v2" current="true" champion_threshold="85"/>
+    <policy role="copy_claim_loop" id="loop:copy-claim:external-capability-v1.1" version="1.1.0" current="true"/>
+    <policy role="copy_claim_judge" id="judge:copy-claim:external-capability-grounding-v1.1" version="1.1.0" current="true"/>
+    <policy role="source_density" id="policy:copy-claim:sources-per-section-v1" version="1.0.0" current="true"/>
+    <policy role="placement_policy" id="policy:evidence-placement:claim-span-entailment-v2" version="2.2" current="true"/>
+    <policy role="placement_judge" id="judge:evidence-placement:presentation-v1.2" version="1.2" current="true" replicas="3" temperature="0" top_p="1"/>
+    <resolution_note>The requested historical label judge:eu:placementv1 is not treated as authoritative because CURRENT_TRUE_ONLY resolves the current presentation judge to judge:evidence-placement:presentation-v1.2.</resolution_note>
+  </neofort_current_policy_resolution>
+
+  <structure_gates>
+    <gate name="live_full_canonical_order" status="PASS">
+      <detail>The current live PV page contains all 23 canonical semantic surfaces in canonical relative order: 0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8.</detail>
+    </gate>
+    <gate name="live_section_forms_preserved_in_xml" status="PASS">
+      <detail>The live lead-form surface is captured as eight screens with field/control meaning retained, including the combined timeline+buying-role screen and the inspection/validation trigger screen.</detail>
+    </gate>
+    <gate name="repo_dark_theme" status="PASS">
+      <detail>The repository preview is explicitly data-theme=dark and is suitable as a night-mode review artifact.</detail>
+    </gate>
+    <gate name="repo_topology_relative_order" status="PASS_WITH_MISSING_SURFACES">
+      <detail>The 15 repository top-level sections preserve canonical relative order but omit tokens 2,10,3,19,18,5,21,6 that are now present live.</detail>
+    </gate>
+    <gate name="repo_live_topology_equivalence" status="FAIL">
+      <detail>Live has 23 canonical semantic surfaces. The repository preview has 15 top-level surfaces. Missing: value, offers, transformation, results, modules, capabilities, intersection and benchmark.</detail>
+    </gate>
+    <gate name="qualification_screen_count" status="PASS">
+      <detail>Live and repository preview both expose eight qualification screens.</detail>
+    </gate>
+    <gate name="qualification_semantic_fidelity" status="FAIL">
+      <detail>The live form is the site-wide decision qualifier: screen 2 combines timeline and buying role; screens 3–6 cover engagement mode, cadence, organisation size and scope maturity; screen 7 is the inspection/validation trigger; screen 8 includes contact fields and explicit consent. The repository preview instead uses PV-specific source/workload/evidence questions and an email-only final screen.</detail>
+    </gate>
+    <gate name="qualification_control_fidelity" status="FAIL">
+      <detail>Although both flows contain controls, their control grouping and field semantics differ materially; preserving only screen count is insufficient.</detail>
+    </gate>
+    <gate name="raw_live_html_materialization" status="BLOCKED">
+      <detail>The available site interface exposed rendered semantic DOM content but not origin HTML/CSS/JS bytes. Therefore no 100% byte-level or visual-asset fidelity claim is made.</detail>
+    </gate>
+  </structure_gates>
+
+  <copy_and_avatar_gates>
+    <gate name="neofort_current_copy_contract" status="FAIL_STALE_REPO_METADATA">
+      <detail>The repository HTML embeds copy-claim v1.2 topology-preserving identifiers, while NeoFort current=true resolves the copy loop/judge to v1.1. No repository metadata is silently rewritten during this audit.</detail>
+    </gate>
+    <gate name="avatar_contract" status="PASS_BOUNDED">
+      <detail>Karim Benali is retained only as an inductive working avatar for the Responsable pharmacovigilance decision role. Role, operating pressures and purchase fit are bounded; unsupported demographics, psychographics, brands and personal-source preferences remain NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH.</detail>
+    </gate>
+    <gate name="seller_capability_boundary" status="PASS_BOUNDED">
+      <detail>The live site/CV evidence supports regulated pharmaceutical operations, a six-year pharmacy curriculum, radiopharmacy quality-control experience and Python/data work since 2021. These capabilities support offer fit; they do not prove client PV performance outcomes.</detail>
+    </gate>
+    <gate name="public_faers_biolearn_repo_resolution" status="NOT_INDEPENDENTLY_RESOLVED">
+      <detail>A scoped GitHub code search for FAERS Biolearn returned no public code hit in this execution. The live-site statement remains a site/offer proof claim and is not elevated to independently verified repository provenance here.</detail>
+    </gate>
+  </copy_and_avatar_gates>
+
+  <evidence_gates>
+    <gate name="current_evidence_deterministic_preflight" status="PASS_FOR_LISTED_EUS">
+      <detail>NeoFort records deterministic preflight PASS for EU-CANON-EMA-PRAC-GOVERNANCE-2026, EU-CANON-EMA-AI-GUIDANCE-PV-2028, EU-PV-JMIR-ADE-F1-2026 and EU-PV-UCSF-ADE-PRECISION-2026.</detail>
+    </gate>
+    <gate name="current_evidence_factfulness" status="PASS_FOR_LISTED_EUS">
+      <detail>The listed EUs have current Factfulness status PASS and explicit boundaries preventing unsupported causality, generalization or autonomous-safety-decision claims.</detail>
+    </gate>
+    <gate name="evidence_agent_exploitability" status="PASS_AT_EU_LEVEL_ONLY">
+      <detail>The listed EUs are marked ALLOWED for proof-carrying exploitation at EU level. This does not authorize page publication or placement.</detail>
+    </gate>
+    <gate name="current_evidence_unit_publication_admission" status="BLOCKED_OR_PENDING">
+      <detail>The canonical EMA EUs report all_applicable_llm_judges_pass=false/current judge snapshots incomplete; JMIR and UCSF are JUDGE_SCORED_PENDING_ADMISSION despite champion scores 99 and 97. High scores do not override admission state.</detail>
+    </gate>
+    <gate name="source_section_density" status="PASS_SUPPLEMENTAL_ONLY">
+      <detail>The existing repository claim-loop declares 3 external research sources across 3 research anchor sections, ratio 1.0, above the strict &gt;0.72 density threshold. This is not a publication authorization.</detail>
+    </gate>
+    <gate name="placement_current_judge_version" status="FAIL_STALE">
+      <detail>Current target EvidencePlacement records reference judge:evidence-placement:presentation-v1 and remain PENDING_DETERMINISTIC_REPLICA_JUDGE, while NeoFort current=true requires judge:evidence-placement:presentation-v1.2.</detail>
+    </gate>
+    <gate name="xpath_unique_claim_binding" status="BLOCKED_LIVE_REBIND_REQUIRED">
+      <detail>Older placement objects report anchor_match_count=1 on the previous copy snapshot, but the live page now has additional semantic sections and a different form. XPath/selector uniqueness must be re-resolved against the current live/repository structure before publication.</detail>
+    </gate>
+    <gate name="formal_three_replica_current_presentation_judge" status="BLOCKED">
+      <detail>No current immutable PV placement snapshot with unanimous three-replica judge:evidence-placement:presentation-v1.2 PASS was resolved. No majority vote or inferred PASS is fabricated.</detail>
+    </gate>
+  </evidence_gates>
+
+  <current_evidence_register publication_state="NOT_NEW_PLACEMENT_AUTHORIZED">
+    <evidence_unit id="EU-CANON-EMA-PRAC-GOVERNANCE-2026" status="CANONICAL_FACTFULNESS_PASS" epistemic_status="DESCRIPTIVE" source_independence="PUBLIC_REGULATOR">
+      <bounded_claim>EMA publishes PRAC recommendations on safety signals and routes recommendations for regulatory action through accountable governance paths.</bounded_claim>
+      <boundary>Governance/process evidence; no signal-detection accuracy, speed or treatment-outcome metric.</boundary>
+      <source_url>https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance-post-authorisation/signal-management/prac-recommendations-safety-signals</source_url>
+      <placement_status>NOT_AUTHORIZED_UNTIL_CURRENT_EU_AND_PLACEMENT_JUDGES_PASS</placement_status>
+    </evidence_unit>
+    <evidence_unit id="EU-CANON-EMA-AI-GUIDANCE-PV-2028" status="CANONICAL_FACTFULNESS_PASS" epistemic_status="PLANNED" source_independence="PUBLIC_REGULATOR">
+      <bounded_claim>The HMA–EMA NDSG 2026–2028 workplan plans AI guidance for clinical development and pharmacovigilance.</bounded_claim>
+      <boundary>Official planned guidance work; not proof that any specific system is compliant or clinically effective.</boundary>
+      <source_url>https://www.ema.europa.eu/en/about-us/how-we-work/data-regulation-big-data-other-sources/network-data-steering-group-ndsg</source_url>
+      <placement_status>NOT_AUTHORIZED_UNTIL_CURRENT_EU_AND_PLACEMENT_JUDGES_PASS</placement_status>
+    </evidence_unit>
+    <evidence_unit id="EU-PV-JMIR-ADE-F1-2026" status="JUDGE_SCORED_PENDING_ADMISSION" epistemic_status="OBSERVED_VALIDATION_RESULT" champion_score="99">
+      <bounded_claim>In a 2026 validation study of 1,085 annotated primary-care encounter notes, the best mean ADE-detection F1 was 72.53% with study-specific confidence bounds.</bounded_claim>
+      <boundary>Study-specific primary-care validation; not a production PV SLA, universal performance rate or autonomous safety decision.</boundary>
+      <source_url>https://www.jmir.org/2026/1/e86467</source_url>
+      <placement_status>NOT_AUTHORIZED_PENDING_ADMISSION</placement_status>
+    </evidence_unit>
+    <evidence_unit id="EU-PV-UCSF-ADE-PRECISION-2026" status="JUDGE_SCORED_PENDING_ADMISSION" epistemic_status="OBSERVED_VALIDATION_RESULT" champion_score="97">
+      <bounded_claim>In a 2026 single-center UCSF study of 372 clinical notes, a two-pass LLM pipeline reported 94.2% ADE-extraction precision with expert validation.</bounded_claim>
+      <boundary>Single-center study using one proprietary model; not production performance, universal LLM capability, autonomous signal confirmation or proof of improved outcomes.</boundary>
+      <source_url>https://link.springer.com/article/10.1007/s40264-026-01682-6</source_url>
+      <placement_status>NOT_AUTHORIZED_PENDING_ADMISSION</placement_status>
+    </evidence_unit>
+  </current_evidence_register>
+
+  <mutation_decision>
+    <target_html>expertises/pv-data-engineer/pv-data-engineer.html</target_html>
+    <current_blob_sha>a86c3af79b5fb1d7a736d4f2fe181e284159015e</current_blob_sha>
+    <decision>DO_NOT_MUTATE_HTML_IN_THIS_RUN</decision>
+    <reason>The live page is structurally richer than the repository preview and the form semantics differ. Raw origin HTML/assets are not materialized, current copy-contract metadata is stale, and current placement/presentation judges are unresolved. A 100%-faithful HTML claim would therefore be false. DEVICEV requires preserving the live source and failing closed rather than manufacturing fidelity.</reason>
+    <permitted_output>Persist live/repo XML snapshots, audit, deterministic validator and CI contract only.</permitted_output>
+  </mutation_decision>
+
+  <final_decision final_pass="false" status="BLOCKED">
+    <reason>FINAL_PASS is blocked by repo/live topology mismatch, qualification semantic/control mismatch, unavailable raw-live HTML fidelity, stale copy-contract metadata, stale placement judge identifiers, unresolved current EU admissions and missing unanimous current presentation-judge runs.</reason>
+    <next_release_condition>Materialize or export the actual current page source; update the repository preview without changing live section order/forms; resolve NeoFort current copy-contract metadata; admit EUs; rebind every claim XPath against the new immutable snapshot; run three replicas of every applicable current judge; then rerun this contract workflow.</next_release_condition>
+  </final_decision>
+</section_contract_audit>
