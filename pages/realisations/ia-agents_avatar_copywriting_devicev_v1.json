@@ -1,0 +1,383 @@
+{
+  "artifact_id": "devicev:realisations:ia-agents:avatar-copy:v1",
+  "version": "1.0.0",
+  "generated_at": "2026-09-04T15:41:00+02:00",
+  "status": "REVIEW_ONLY_FAIL_CLOSED",
+  "scope": {
+    "page": "https://mickael-umt.com/realisations/ia-agents/",
+    "only_page": true,
+    "repo": "mckeopharma-web/copywriting",
+    "branch": "main",
+    "source_html": "pages/realisations/ia-agents.html",
+    "source_html_blob_sha": "e8432f8b491e1d68a25c5006d2fa550111d16d95",
+    "output": "pages/realisations/ia-agents_avatar_copywriting_devicev_v1.json",
+    "forbidden_public_terms": [
+      "PrivyPulse"
+    ]
+  },
+  "devicev": {
+    "policy_source": "@neofort current=true",
+    "posture": "FAIL_CLOSED",
+    "skill": ".skills/devicev-evidence-copywriting/SKILL.md",
+    "judge_execution": {
+      "replicas": 3,
+      "temperature": 0,
+      "top_p": 1,
+      "hard_gates": "AND",
+      "score": "MIN",
+      "categorical": "UNANIMOUS_ELSE_BLOCK"
+    },
+    "current": {
+      "copy_claim_judge": "judge:copy-claim:external-capability-grounding-v1.1",
+      "placement_judge": "judge:evidence-placement:presentation-v1.2",
+      "factfulness_judge": "judge:evidence:factfulness-epistemology-methodology-v2",
+      "deterministic_preflight": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+      "agent_exploitability": "policy:evidence-agent-exploitability:proof-carrying-v3",
+      "placement": "policy:evidence-placement:claim-span-entailment-v2"
+    },
+    "requested_judge": {
+      "id": "judge:eu:placementv1",
+      "resolution": "NOT_FOUND_CURRENT_NEOFORT"
+    },
+    "policy_mismatch": {
+      "github_html": "judge:copy-claim:external-capability-grounding-v1.2",
+      "neofort_current": "judge:copy-claim:external-capability-grounding-v1.1",
+      "effect": "BLOCK_PUBLICATION"
+    }
+  },
+  "positioning": {
+    "page_type": "PROOF_LED_IMPLEMENTATION_PORTFOLIO",
+    "buyer": "Claire Dumas — CTO / Head of AI Platform",
+    "decision": "Distinguish what was built, what is publicly inspectable, what is contribution-level, and what remains NDA-bound before an agentic-AI engagement.",
+    "must_have": [
+      "existing-stack fit",
+      "explicit authority/permissions",
+      "evaluation gates",
+      "runtime traces",
+      "rollback/shutdown",
+      "governed memory/lineage",
+      "handoff"
+    ],
+    "deal_killers": [
+      "opaque authority/data flow",
+      "unsupported ROI/security guarantees",
+      "platform replacement without need",
+      "no owner/rollback/handoff",
+      "uncontrolled egress/connector permissions"
+    ],
+    "offer": "Agentic AI Engineering",
+    "offer_url": "https://mickael-umt.com/expertises/agentic-ai/",
+    "preserve": [
+      "4 implementation records",
+      "creation vs contribution",
+      "Git-history limits",
+      "stack per record",
+      "NDA boundary",
+      "provenance",
+      "free framework CTA"
+    ]
+  },
+  "context": {
+    "live_page": {
+      "observed_at": "2026-09-04",
+      "source_of_truth": true
+    },
+    "drive": {
+      "mode": "READ_ONLY",
+      "folder_id": "1TpWwjA18dxU1Zz3zYqr_MEscpO0sCfR2",
+      "mutation": false,
+      "write_requires_explicit_user_validation": true
+    },
+    "capability_boundary": {
+      "agentic": "2024 exploratory / 2025 structured",
+      "llm_rag": "public prototypes since 2023",
+      "ai_evaluation": "structured since 2025",
+      "ai_security": "structured since 2025"
+    }
+  },
+  "copy_sequences": [
+    {
+      "id": "seq:ia-agents:hero:h1",
+      "section": "hero",
+      "buyer_question": "What am I being asked to believe about this portfolio?",
+      "nlp_role": "CATEGORY_ORIENTATION",
+      "commercial_role": "POSITIONING_ANCHOR",
+      "assertion_class": "LABEL",
+      "copy": "AI, agents & evaluation",
+      "action": "KEEP_SEMANTIC_CATEGORY_TRANSLATE",
+      "publication": "REVIEW_ONLY"
+    },
+    {
+      "id": "seq:ia-agents:hero:lead",
+      "section": "hero",
+      "buyer_question": "What can I verify here before considering an engagement?",
+      "nlp_role": "PROOF_SCOPE",
+      "commercial_role": "HIRING_DECISION_BRIDGE",
+      "assertion_class": "CLAIM",
+      "copy": "Four bounded implementation records answer the production-side hiring question: what has been built, what can be inspected publicly, and where the strongest governed-agent work remains NDA-bound.",
+      "action": "REWRITE_TO_DECISION_UTILITY",
+      "publication": "BLOCKED_PENDING_COPY_SNAPSHOT_AND_PLACEMENT_VALIDATION",
+      "support": {
+        "type": "FIRST_PARTY_PAGE_INVENTORY",
+        "source": "https://mickael-umt.com/realisations/ia-agents/",
+        "boundary": "Count and scope of records only; no external outcome inference."
+      }
+    },
+    {
+      "id": "seq:ia-agents:hero:avatar-fit",
+      "section": "hero",
+      "buyer_question": "Is this proof relevant to my production problem?",
+      "nlp_role": "SELF_IDENTIFICATION",
+      "commercial_role": "AVATAR_QUALIFICATION",
+      "assertion_class": "RECOMMENDATION_CONTEXT",
+      "copy": "Relevant when a CTO / Head of AI Platform needs existing-stack fit, explicit tool and data authority, evaluation gates, governed memory, runtime traces and a handoff path before expanding an agentic system.",
+      "action": "ADD_AVATAR_DECISION_CONTEXT",
+      "publication": "REVIEW_ONLY_AVATAR_MODEL_NOT_CUSTOMER_VERBATIM",
+      "support": {
+        "type": "NEOFORT_CUSTOMER_AVATAR_PROFILE",
+        "id": "customer-avatar:realisations:ia-agents:claire-dumas:v1"
+      }
+    },
+    {
+      "id": "seq:ia-agents:project:mistral",
+      "section": "projects",
+      "buyer_question": "What did Mickael contribute, and what must not be over-attributed?",
+      "nlp_role": "ATTRIBUTION_BOUNDARY",
+      "commercial_role": "PUBLIC_PROOF",
+      "assertion_class": "CLAIM",
+      "copy": "The record attributes Mickael's contribution at artifact level rather than claiming the whole collaborative repository. Big Five/IPIP, JSON, Mistral and LangChain were used to test persona consistency, constrained responses and bias.",
+      "action": "PRESERVE_PROJECT_SCOPE_STRENGTHEN_ATTRIBUTION",
+      "publication": "REVIEW_ONLY_PENDING_EXACT_ARTIFACT_SELECTOR",
+      "support": {
+        "type": "PUBLIC_REPOSITORY_PLUS_FIRST_PARTY_PROVENANCE",
+        "repository": "https://github.com/RickOwri/mistral-hackaton",
+        "boundary": "Repository ownership is not whole-project authorship; attribution remains contribution-level."
+      }
+    },
+    {
+      "id": "seq:ia-agents:project:rag",
+      "section": "projects",
+      "buyer_question": "Which RAG/tooling components were implemented, and what does that evidence not prove?",
+      "nlp_role": "IMPLEMENTATION_SCOPE_WITH_NEGATIVE_BOUNDARY",
+      "commercial_role": "CAPABILITY_PROOF",
+      "assertion_class": "CLAIM_AND_BOUNDARY",
+      "copy": "The public registry covers a Solidity Code Tutor RAG prototype, a LangChain router and a Scrapy crawler, with flattened-history limits preserved. Implementation scope includes retrieval, routing and crawling; no public production Recall@K, latency or ROI claim is made.",
+      "action": "PRESERVE_PROJECT_ADD_EPISTEMIC_BOUNDARY",
+      "publication": "REVIEW_ONLY_PENDING_EXACT_SELECTOR",
+      "support": {
+        "type": "PUBLIC_REPOSITORY_PLUS_SITE_REGISTRY",
+        "repository": "https://github.com/RickOwri/projects-cv",
+        "boundary": "Some imported private history is flattened; commit history is not a proxy for production quality."
+      }
+    },
+    {
+      "id": "seq:ia-agents:project:streamlit",
+      "section": "projects",
+      "buyer_question": "Is there a small original LLM application with delivery tooling I can inspect?",
+      "nlp_role": "ORIGINAL_IMPLEMENTATION_PROOF",
+      "commercial_role": "CAPABILITY_PROOF",
+      "assertion_class": "CLAIM_AND_BOUNDARY",
+      "copy": "This non-fork prototype demonstrates a bounded LLM interface, Docker packaging and GitLab CI; it is not presented as production reliability or ROI evidence.",
+      "action": "PRESERVE_PROJECT_COMPRESS_WITH_BOUNDARY",
+      "publication": "REVIEW_ONLY_PENDING_EXACT_SELECTOR",
+      "support": {
+        "type": "PUBLIC_REPOSITORY_PLUS_SITE_REGISTRY",
+        "repository": "https://github.com/RickOwri/streamlit-lang",
+        "boundary": "Prototype proof is not production reliability, security or ROI evidence."
+      }
+    },
+    {
+      "id": "seq:ia-agents:project:governed-capability",
+      "section": "governed",
+      "buyer_question": "What governed-agent work can be described without breaching NDA?",
+      "nlp_role": "NDA_CAPABILITY_BOUNDARY",
+      "commercial_role": "HIGH_VALUE_CAPABILITY_PROOF",
+      "assertion_class": "CLAIM",
+      "copy": "The public capability boundary covers agent registries, permissions, governed memory, human review, evaluation and execution observability. The strongest governed-operations work remains NDA-bound; no private production metric is exposed here.",
+      "action": "PRESERVE_NDA_SCOPE_TRANSLATE_TO_BUYER_DECISION",
+      "publication": "REVIEW_ONLY_FIRST_PARTY_CAPABILITY",
+      "support": {
+        "type": "CV_AND_PUBLIC_CAPABILITY_REGISTRY",
+        "source": "https://mickael-umt.com/expertises/agentic-ai/",
+        "boundary": "Responsibilities and architecture only; no private code, client, production metric or deployment topology."
+      }
+    },
+    {
+      "id": "seq:ia-agents:governed:nist-tevv",
+      "section": "governed",
+      "buyer_question": "Should evaluation be designed around the context of the actual agentic system?",
+      "nlp_role": "EXTERNAL_METHOD_CONTEXT",
+      "commercial_role": "DECISION_EVIDENCE",
+      "assertion_class": "CLAIM",
+      "copy": "NIST's current public TEVV-Athlon draft uses a four-stage method for context-specific AI assessments and explicitly includes agentic systems in scope.",
+      "action": "ADD_EXTERNAL_SEMANTIC_COMPRESSION",
+      "publication": "BLOCKED_PENDING_NEW_COPY_PLACEMENT_JUDGE",
+      "eu_id": "EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "boundary": "Official draft methodology; it does not prescribe this consulting offer or prove a business outcome."
+    },
+    {
+      "id": "seq:ia-agents:governed:ncsc-controls",
+      "section": "governed",
+      "buyer_question": "Which operational controls become relevant as agent autonomy increases?",
+      "nlp_role": "EXTERNAL_NORMATIVE_CONTEXT",
+      "commercial_role": "RISK_CONTROL_CONTEXT",
+      "assertion_class": "CLAIM",
+      "copy": "NCSC's 20 August 2026 interim agentic-AI guidance is organized around seven operational considerations, including threat modelling, oversight, sandboxing, observability, attribution and emergency shutdown.",
+      "action": "ADD_EXTERNAL_SEMANTIC_COMPRESSION",
+      "publication": "BLOCKED_PENDING_NEW_COPY_PLACEMENT_JUDGE",
+      "eu_id": "EU-SG-002",
+      "boundary": "Interim NCSC practical guidance; formal guidance is still being developed."
+    },
+    {
+      "id": "seq:ia-agents:governed:bounded-authorization",
+      "section": "governed",
+      "buyer_question": "Is there controlled evidence that moving authorization outside the model can materially change an exfiltration result?",
+      "nlp_role": "CONTROLLED_COMPARATIVE_EVIDENCE",
+      "commercial_role": "MECHANISM_EVIDENCE_NOT_IMPLEMENTATION_PROOF",
+      "assertion_class": "COMPARATIVE_CLAIM",
+      "copy": "In the paper's compromised-model evaluation, external authorization reduced observed AgentDojo exfiltration to 0% across every reported exfiltration category.",
+      "action": "ADD_PROTOCOL_BOUNDED_EVIDENCE",
+      "publication": "BLOCKED_PENDING_PAGE_SPECIFIC_PLACEMENT_JUDGE",
+      "eu_id": "EU-CANON-BOUNDED-AGENTS-EXFIL-2026",
+      "qgeu_id": "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026",
+      "boundary": "Preprint/benchmark-protocol result; not universal prevention of prompt injection, not evidence of Mickael's NDA implementation, and not a production security guarantee."
+    },
+    {
+      "id": "seq:ia-agents:provenance",
+      "section": "provenance",
+      "buyer_question": "How do I know repository ownership is not being used as a proxy for authorship?",
+      "nlp_role": "TRUST_METHOD",
+      "commercial_role": "OBJECTION_HANDLING",
+      "assertion_class": "PROCESS_CLAIM",
+      "copy": "Repository ownership is not authorship. The proof layer separates creation, substantial contribution, artifact-level attribution and NDA-bounded capability, while preserving known gaps in commit history.",
+      "action": "COMPRESS_PROVENANCE_POLICY",
+      "publication": "REVIEW_ONLY_FIRST_PARTY_METHOD",
+      "support": {
+        "type": "FIRST_PARTY_PROVENANCE_METHOD",
+        "source": "https://mickael-umt.com/realisations/ia-agents/",
+        "boundary": "Method description; not independent certification."
+      }
+    },
+    {
+      "id": "seq:ia-agents:method:cta",
+      "section": "method",
+      "buyer_question": "Can I apply the same framing to my own system before a commercial call?",
+      "nlp_role": "LOW_RISK_NEXT_ACTION",
+      "commercial_role": "CONVERSION",
+      "assertion_class": "CTA",
+      "copy": "Use the same proof-first frame on your own system. The framework is published and free; choose the problem you are working on and receive the relevant version rather than a generic catalogue.",
+      "action": "PRESERVE_FREE_FRAMEWORK_CONVERSION",
+      "publication": "BLOCKED_UNTIL_FORM_ROUTE_AND_COPY_SNAPSHOT_ARE_DETERMINISTICALLY_REVERIFIED",
+      "support": {
+        "type": "FIRST_PARTY_ROUTE_AND_OFFER_FACT",
+        "route": "EXISTING_PAGE_FORM",
+        "price": 0,
+        "unit": "EUR"
+      }
+    }
+  ],
+  "evidence": {
+    "EU-AGENTIC-NIST-TEVV-4-STAGES-2026": {
+      "status": "ADMITTED",
+      "preflight": "PASS",
+      "factfulness": 100,
+      "champion": 96,
+      "agent_exploitability": "ALLOWED",
+      "source": "https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+      "metric": "4 stages",
+      "period": "2026-08-07/14",
+      "boundary": "Official draft method; not consulting-effect evidence."
+    },
+    "EU-SG-002": {
+      "status": "ADMITTED",
+      "preflight": "PASS",
+      "factfulness": 100,
+      "champion": 96,
+      "agent_exploitability": "ALLOWED",
+      "source": "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai",
+      "metric": "7 operational considerations",
+      "period": "2026-08-20",
+      "boundary": "Interim public-authority guidance."
+    },
+    "EU-CANON-BOUNDED-AGENTS-EXFIL-2026": {
+      "status": "ADMITTED",
+      "preflight": "PASS",
+      "factfulness": 100,
+      "champion": 96,
+      "agent_exploitability": "ALLOWED",
+      "source": "https://arxiv.org/abs/2608.15888",
+      "effect": "AgentDojo exfiltration 75–100% without defense to 0% with external authorization in reported categories",
+      "period": "2026-08-16 preprint",
+      "boundary": "Protocol-bounded benchmark; no universal production-security claim."
+    }
+  },
+  "qgeu": {
+    "id": "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026",
+    "upstream": "APPROVED",
+    "score": 96,
+    "layout": "SIDE_OF_EXISTING_SECTION",
+    "host": "governed",
+    "claim_xpath": "//*[@id='claim-bounded-auth']",
+    "graph_xpath": "//*[@id='eug-bounded-exfil']",
+    "snapshot": "e8432f8b491e1d68a25c5006d2fa550111d16d95",
+    "placement_judge": "PENDING_3_REPLICA_JUDGEMENT",
+    "publication": "BLOCKED_PENDING_PAGE_SPECIFIC_PLACEMENT_JUDGE"
+  },
+  "proof_registry": [
+    {
+      "project": "Mistral Hackathon — Persona & Bias Evaluation",
+      "period": "2024",
+      "repo": "https://github.com/RickOwri/mistral-hackaton",
+      "provenance": "collaborative contribution",
+      "stack": "Python · Pandas · Mistral · LangChain · JSON"
+    },
+    {
+      "project": "AI/RAG Experiment Portfolio",
+      "period": "2023–2024",
+      "repo": "https://github.com/RickOwri/projects-cv",
+      "provenance": "original artifacts; private history flattened",
+      "stack": "Python · RAG · Chroma · LlamaIndex · LangChain · Scrapy"
+    },
+    {
+      "project": "Streamlit LangChain Prototype",
+      "period": "Apr–Oct 2023",
+      "repo": "https://github.com/RickOwri/streamlit-lang",
+      "provenance": "original non-fork; 7/7 public commits attributed",
+      "stack": "Python · Streamlit · Docker · GitLab CI"
+    },
+    {
+      "project": "Governed AI Operations",
+      "period": "2025–present",
+      "repo": null,
+      "provenance": "NDA R&D",
+      "stack": "Python · FastAPI · PostgreSQL · MCP · IAM"
+    }
+  ],
+  "validation": {
+    "scope": "PASS",
+    "drive_mutation": "NONE",
+    "forbidden_term_in_copy": 0,
+    "unsupported_roi": 0,
+    "unsupported_security_guarantee": 0,
+    "source_html_fetched": true,
+    "live_selector_consensus": "NOT_RUN",
+    "new_copy_judges": "NOT_RUN"
+  },
+  "final_decision": {
+    "FINAL_PASS": false,
+    "publication_allowed": false,
+    "persistence_as_review_artifact": true,
+    "blockers": [
+      "GitHub HTML judge-id mismatch with NeoFort current=true",
+      "new copy 3-replica judgement not run",
+      "live selector/XPath consensus not run",
+      "QGEU page-specific placement judgement pending"
+    ]
+  },
+  "github_persistence": {
+    "status": "PENDING_COMMIT",
+    "path": "pages/realisations/ia-agents_avatar_copywriting_devicev_v1.json",
+    "commit_sha": null
+  },
+  "artifact_snapshot_sha256": "297f1e145b10d6187dc0991e2c6325dcbfd468a165f36697be1276b8abe9618f"
+}
