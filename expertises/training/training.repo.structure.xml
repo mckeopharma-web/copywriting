@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository-html-structure version="1.0" repository="mckeopharma-web/copywriting" branch="recovery/topology-preserving-v1.2-2026-09-03" path="expertises/training/training.html" source-blob-sha="cc3804c9e8df028cfb7728da5de79b10fe5b5448" extracted-on="2026-09-04">
+  <document-contract>
+    <html-claim-loop-version>external-capability-v1.2-topology-preserving</html-claim-loop-version>
+    <publication-status>PENDING_FORMAL_LLM_JUDGE</publication-status>
+    <evidence-status>BLOCKED_REVIEW</evidence-status>
+    <body-replacement-forbidden>true</body-replacement-forbidden>
+    <visible-copy-wholesale-replacement-forbidden>true</visible-copy-wholesale-replacement-forbidden>
+  </document-contract>
+  <hero id="hero" present="true">
+    <heading>Prove capability on a real task—not attendance.</heading>
+    <form>split hero + result/format/stack aside + mission CTA</form>
+  </hero>
+  <sections observed-count="17">
+    <section ordinal="1" id="triggers" role="triggers" form="signal-card-grid"/>
+    <section ordinal="2" id="consequences" role="problems" form="problem-and-operating-gap"/>
+    <section ordinal="3" id="for-whom" role="audience" form="customer-avatar-card-grid-and-before-after-table"/>
+    <section ordinal="4" id="qualification" role="qualification" form="fit-no-fit-gates"/>
+    <section ordinal="5" id="proposition" role="proposition" form="mechanism-statement-plus-chart"/>
+    <section ordinal="6" id="offers" role="offers" form="three-entry-route-cards"/>
+    <section ordinal="7" id="deliverables" role="product" form="artifact-card-grid"/>
+    <section ordinal="8" id="before-after" role="before_after" form="same-axis-table"/>
+    <section ordinal="9" id="results" role="results" form="acceptance-card-grid"/>
+    <section ordinal="10" id="proof" role="proof" form="evidence-card-grid"/>
+    <section ordinal="11" id="scope" role="scope" form="in-out-dependencies"/>
+    <section ordinal="12" id="process" role="phases" form="ordered-five-phase-sequence"/>
+    <section ordinal="13" id="modules" role="modules" form="compact-module-statement"/>
+    <section ordinal="14" id="intersection" role="intersection" form="skill-braid-plus-chart"/>
+    <section ordinal="15" id="commitments" role="guarantee" form="bounded-commitment-card-grid"/>
+    <section ordinal="16" id="questions" role="faq" form="details-elements"/>
+    <section ordinal="17" id="engagement" role="engagement" form="qualification-cta-evidence-method-bibliography"/>
+  </sections>
+  <navigation observed-count="17">triggers consequences for-whom qualification proposition offers deliverables before-after results proof scope process modules intersection commitments questions engagement</navigation>
+  <delta-against-live contract-slot-count="22" repository-slot-count="18" missing-semantic-slots="4">
+    <missing id="value" token="2" expected-after="proposition" expected-before="offers" live-nav="false"/>
+    <missing id="transformation" token="3" expected-after="deliverables" expected-before="before-after" live-nav="false"/>
+    <missing id="capabilities" token="5" expected-after="modules" expected-before="intersection" live-nav="false"/>
+    <missing id="benchmark" token="6" expected-after="intersection" expected-before="commitments" live-nav="false"/>
+  </delta-against-live>
+  <preserved-live-subset status="PASS">
+    <assertion>The 17 repository section IDs match the 17 live navigation anchors in the same order.</assertion>
+    <assertion>Adding the four missing semantic sections must not change those 17 navigation anchors.</assertion>
+  </preserved-live-subset>
+  <publication-decision final-pass="false">Repository HTML is structurally incomplete relative to the current rendered live detail-page contract and remains BLOCKED_REVIEW for evidence publication.</publication-decision>
+</repository-html-structure>
