@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page_snapshot schema_version="1.0"
+  page_id="page:target:diagnostic-framework"
+  source_url="https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/"
+  scope="ONLY /ressources/produits/frameworks/diagnostic-framework/"
+  captured_at="2026-09-04"
+  capture_mode="SOURCE_DERIVED_SEMANTIC_RECONSTRUCTION"
+  raw_html_materialized="false"
+  asset_fidelity_claim="false"
+  exact_live_section_count_known="false"
+  publication_allowed="false">
+
+  <request_contract>
+    <structure_lock>true</structure_lock>
+    <section_delta_allowed>0</section_delta_allowed>
+    <section_reorder_allowed>false</section_reorder_allowed>
+    <other_page_cud>FORBIDDEN</other_page_cud>
+    <google_drive_write>NOT_PERFORMED_REQUIRES_EXPLICIT_USER_APPROVAL</google_drive_write>
+  </request_contract>
+
+  <reference_contracts>
+    <expertises family="S-series" applicability="REFERENCE_ONLY"
+      canonical_full_order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8" />
+    <programmes family="P-series" applicability="REFERENCE_ONLY"
+      canonical_full_order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8" />
+    <target family="PRODUCT_FRAMEWORK_DETAIL" forced_s_or_p_topology="false">
+      <reason>The target is a narrow paid framework/product detail page. Current first-party implementation guidance explicitly requires a compact product-specific content adapter and rejects turning the generic product template into a 23-section monolith.</reason>
+    </target>
+  </reference_contracts>
+
+  <live_dom_state>
+    <status>BLOCKED_EXACT_PARITY</status>
+    <reason>Exact target raw HTML/CSS/JS could not be materialized in this execution; no byte-level or exact-section-count claim is made.</reason>
+    <invariant>No section count, section ID, DOM class, XPath, form action, asset URL or visual-fidelity property is invented as an observed live fact.</invariant>
+  </live_dom_state>
+
+  <known_product_contract evidence_class="FIRST_PARTY_SOURCE_DERIVED">
+    <identity>
+      <name>Framework Diagnostic IA</name>
+      <slug>diagnostic-framework</slug>
+      <product_type>framework_pdf</product_type>
+      <price amount="49" currency="EUR" tax_display="HT">49 € HT</price>
+      <billing>one_time</billing>
+      <access>permanent</access>
+    </identity>
+    <purpose>Diagnostiquer et cadrer un projet IA/data avant un engagement plus large.</purpose>
+    <framework_stages count="4">
+      <stage index="1" key="maturity">
+        <label>Maturité</label>
+        <contents>Accès et cadre juridique des données; qualité des données; data owner; référent métier; compétences IA/data; implication utilisateur final; contexte conformité; environnement de test isolé; supervision après livraison.</contents>
+      </stage>
+      <stage index="2" key="impact">
+        <label>Impact</label>
+        <contents>Grille pondérée couvrant valeur business, faisabilité technique, qualité des données, adoption utilisateur, effort d’implémentation et risque réglementaire.</contents>
+        <boundary>Les poids et seuils constituent une heuristique interne; ils ne sont pas un instrument prédictif validé.</boundary>
+      </stage>
+      <stage index="3" key="use_case_scope">
+        <label>Périmètre du cas d’usage</label>
+        <contents>Problème; résultat mesurable; limite du premier incrément; décision assistée ou automatisée et contrôle humain; preuve de succès.</contents>
+      </stage>
+      <stage index="4" key="proposal">
+        <label>Proposition</label>
+        <contents>Contexte/problème; objectif mesurable; approche; données/prérequis; plan/jalons; investissement/valeur; risques/guardrails.</contents>
+      </stage>
+    </framework_stages>
+    <claim_boundaries>
+      <prohibited>Guaranteed ROI</prohibited>
+      <prohibited>Validated predictive score</prohibited>
+      <prohibited>Automatic ISO or NIST compliance</prohibited>
+      <prohibited>Guaranteed project-risk reduction</prohibited>
+      <prohibited>Guaranteed time saving or conversion uplift</prohibited>
+    </claim_boundaries>
+  </known_product_contract>
+
+  <known_transaction_semantics evidence_class="FIRST_PARTY_SOURCE_DERIVED" exact_dom_fidelity="false">
+    <pre_purchase_state>
+      <rule>When an active payable price exists, the primary pre-purchase path is checkout, not a direct PDF-download action.</rule>
+      <known_defect_to_avoid>A generated-PDF link can redirect to the same paid product page, creating a pre-purchase self-loop.</known_defect_to_avoid>
+    </pre_purchase_state>
+    <checkout_form>
+      <field key="email" requirement="required" />
+      <field key="name" requirement="optional" />
+      <field key="organisation" requirement="optional" />
+      <field key="terms_acceptance" requirement="required" />
+      <amount_authority>SERVER_SIDE_PRODUCT_PRICE</amount_authority>
+      <payment_processor>Stripe hosted checkout</payment_processor>
+      <post_payment>Payment confirmation → entitlement → signed access/download path.</post_payment>
+    </checkout_form>
+  </known_transaction_semantics>
+
+  <inductive_avatar status="MODELED_NOT_CUSTOMER_VERBATIM" source="current @neofort role-first IT production buyer">
+    <role>CTO / Head of AI Platform / Head of Data / AI security or trust decision owner</role>
+    <decision_need>Make the intended use, scope, constraints, ownership, evidence and acceptance conditions explicit before committing to a larger delivery.</decision_need>
+    <must_haves>Existing-stack fit; explicit acceptance criteria; evidence and ownership; maintainability and transfer.</must_haves>
+    <deal_killers>Technology-first recommendation; opaque data or authority; unsupported ROI/security guarantees; unnecessary platform replacement.</deal_killers>
+    <boundary>Role-first synthesis only. Demographics, budget authority, media habits and objections are not asserted as observed customer facts.</boundary>
+  </inductive_avatar>
+
+  <evidence_placement_state>
+    <current_judge>judge:evidence-placement:presentation-v1.2</current_judge>
+    <current_policy>policy:evidence-placement:claim-span-entailment-v2</current_policy>
+    <target_page_registered_current_in_neofort>false</target_page_registered_current_in_neofort>
+    <current_target_placement_available>false</current_target_placement_available>
+    <public_external_citations_authorized>false</public_external_citations_authorized>
+    <decision>BLOCKED_NO_CURRENT_TARGET_PAGE_SNAPSHOT_AND_PLACEMENT</decision>
+  </evidence_placement_state>
+
+  <provenance>
+    <source id="site-target" type="PUBLIC_PAGE" status="NOT_MATERIALIZED">https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/</source>
+    <source id="drive-spec-25.1" type="GOOGLE_DOC_READ_ONLY" status="READ_ONLY_USED">1lURGfe44s5nxIMnUt2lRyibY-B0n37hzuPtBjwuykuk</source>
+    <source id="drive-review-25.1" type="GOOGLE_DOC_READ_ONLY" status="READ_ONLY_USED">13CD3XGVizs5S1ksJO_Q9wek7sUqzLmC_fp_gJiyOf5s</source>
+    <source id="vsl-chapter-25.1" type="GITHUB_FIRST_PARTY" status="USED">mckeopharma-web/VSL/generated/vsl-batch-2026-08-27/chapters/25.1.md</source>
+    <source id="v4-contract" type="GITHUB_FIRST_PARTY" status="USED">mckeopharma-web/copywriting/.skills/source-first-atomic-design-v4/SKILL.md</source>
+    <source id="landing-structure-lock" type="GITHUB_FIRST_PARTY" status="USED">mckeopharma-web/copywriting/.skills/landingpage.md</source>
+  </provenance>
+</page_snapshot>
