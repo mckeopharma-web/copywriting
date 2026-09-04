@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pageStructure schemaVersion="1.0" sourceKind="LIVE_WEB_RENDERED_VISIBLE_STRUCTURE" captureDate="2026-09-04" sourceUrl="https://mickael-umt.com/expertises/cdm-automation/" sourceOfTruth="true" rawDomMaterialized="false" fidelity="visible-structure-lossless-at-section-contract-level">
+  <metadata>
+    <limitation>The available web connector exposed rendered textual structure, not byte-for-byte raw DOM. This XML therefore records the live visible section/form contract and must not be represented as a raw HTML archive.</limitation>
+    <pageFamily>expertise</pageFamily>
+    <sectionContract>LIVE_SHARED_17_SECTION_CONTRACT</sectionContract>
+    <sectionCount>17</sectionCount>
+  </metadata>
+  <navigation count="17">
+    <anchor order="1" href="#triggers" label="Déclencheurs" />
+    <anchor order="2" href="#consequences" label="Conséquences" />
+    <anchor order="3" href="#audience" label="Pour qui" />
+    <anchor order="4" href="#qualification" label="Qualification" />
+    <anchor order="5" href="#proposition" label="Proposition" />
+    <anchor order="6" href="#offers" label="Offres" />
+    <anchor order="7" href="#deliverables" label="Livrables" />
+    <anchor order="8" href="#before-after" label="Avant / après" />
+    <anchor order="9" href="#results" label="Résultats" />
+    <anchor order="10" href="#proofs" label="Preuves" />
+    <anchor order="11" href="#scope" label="Périmètre" />
+    <anchor order="12" href="#process" label="Déroulé" />
+    <anchor order="13" href="#modules" label="Modules" />
+    <anchor order="14" href="#intersection" label="Intersection" />
+    <anchor order="15" href="#commitments" label="Engagements" />
+    <anchor order="16" href="#questions" label="Questions" />
+    <anchor order="17" href="#engagement" label="Engagement" />
+  </navigation>
+  <sections count="17">
+    <section order="1" id="triggers" anchorLabel="Déclencheurs" semanticRole="trigger-diagnosis">
+      <heading>Vous reconnaissez l’un de ces moments, ou ce n’est pas encore le sujet.</heading>
+      <componentContract><component type="cards" cardinality="4" /></componentContract>
+    </section>
+    <section order="2" id="consequences" anchorLabel="Conséquences" semanticRole="consequence-objection">
+      <heading>Ce que ça coûte, et pourquoi le contournement évident ne tient pas.</heading>
+      <componentContract><component type="risk-blocks" cardinality="3" /></componentContract>
+    </section>
+    <section order="3" id="audience" anchorLabel="Pour qui" semanticRole="buyer-identification">
+      <heading>Le décideur qui achète ce mandat, et ce qui pèse sur lui.</heading>
+      <componentContract><component type="decision-avatar" cardinality="Sophie Lemercier" /><component type="before-after" cardinality="1" /></componentContract>
+    </section>
+    <section order="4" id="qualification" anchorLabel="Qualification" semanticRole="fit-gate">
+      <heading>Les conditions, avant de réserver quoi que ce soit.</heading>
+      <componentContract><component type="good-fit" cardinality="4" /><component type="not-fit" cardinality="4" /></componentContract>
+    </section>
+    <section order="5" id="proposition" anchorLabel="Proposition" semanticRole="mechanism-value-proposition">
+      <heading>Réduire le time-to-lock sans rendre opaque la chaîne de preuve entre données cliniques, règles automatisées, exceptions et validation humaine.</heading>
+      <componentContract><component type="pipeline" cardinality="Source&gt;Transformation&gt;QC&gt;Exception&gt;Approval&gt;Lock" /><component type="attributes" cardinality="4" /></componentContract>
+    </section>
+    <section order="6" id="offers" anchorLabel="Offres" semanticRole="transaction-configuration">
+      <heading>Quelle configuration, et combien.</heading>
+      <componentContract><component type="solution-configurations" cardinality="7" /><component type="public-pricing-link" cardinality="1" /></componentContract>
+    </section>
+    <section order="7" id="deliverables" anchorLabel="Livrables" semanticRole="deliverable-definition">
+      <heading>Ce qui existe à la fin et n’existait pas avant.</heading>
+      <componentContract><component type="deliverables" cardinality="3" /><component type="handover-state" cardinality="1" /></componentContract>
+    </section>
+    <section order="8" id="before-after" anchorLabel="Avant / après" semanticRole="transformation-comparison">
+      <heading>Les mêmes axes, avant et après.</heading>
+      <componentContract><component type="axes" cardinality="3" /></componentContract>
+    </section>
+    <section order="9" id="results" anchorLabel="Résultats" semanticRole="acceptance-state">
+      <heading>Ce qui est visé, et de quel type.</heading>
+      <componentContract><component type="targets" cardinality="2" /><component type="capability-example" cardinality="1" /></componentContract>
+    </section>
+    <section order="10" id="proofs" anchorLabel="Preuves" semanticRole="proof-boundary">
+      <heading>Des preuves proportionnées à la promesse.</heading>
+      <componentContract><component type="proof-types" cardinality="technical,credential,career,missing-metric" /></componentContract>
+    </section>
+    <section order="11" id="scope" anchorLabel="Périmètre" semanticRole="scope-boundary">
+      <heading>Le périmètre, ses exclusions et ses dépendances.</heading>
+      <componentContract><component type="in-scope" cardinality="3" /><component type="out-of-scope" cardinality="3" /><component type="dependencies" cardinality="3" /></componentContract>
+    </section>
+    <section order="12" id="process" anchorLabel="Déroulé" semanticRole="delivery-process">
+      <heading>Quatre phases, quatre sorties possibles.</heading>
+      <componentContract><component type="phases" cardinality="4" /></componentContract>
+    </section>
+    <section order="13" id="modules" anchorLabel="Modules" semanticRole="work-modules">
+      <heading>Les blocs de travail, sans ordre imposé.</heading>
+      <componentContract><component type="modules" cardinality="4" /></componentContract>
+    </section>
+    <section order="14" id="intersection" anchorLabel="Intersection" semanticRole="profile-market-intersection">
+      <heading>Le différenciateur est le croisement, pas l’addition.</heading>
+      <componentContract><component type="capability-ranking" cardinality="2" /><component type="mission-proof-links" cardinality="6" /><component type="seams" cardinality="3" /><component type="market-benchmark" cardinality="1" /></componentContract>
+    </section>
+    <section order="15" id="commitments" anchorLabel="Engagements" semanticRole="commercial-assurance">
+      <heading>Ce qui est garanti est le produit de travail, jamais le résultat d’une autorité.</heading>
+      <componentContract><component type="commitments" cardinality="6" /><component type="non-guarantees" cardinality="2" /></componentContract>
+    </section>
+    <section order="16" id="questions" anchorLabel="Questions" semanticRole="faq-objection-resolution">
+      <heading>Ce qui reste à lever.</heading>
+      <componentContract><component type="faq" cardinality="4" /></componentContract>
+    </section>
+    <section order="17" id="engagement" anchorLabel="Engagement" semanticRole="conversion-qualification">
+      <heading>Évaluer la mission en 20 minutes</heading>
+      <componentContract><component type="fit-call" cardinality="4" /><component type="qualifier-screens" cardinality="8" /><component type="consent" cardinality="1" /><component type="storage-disclosure" cardinality="1" /></componentContract>
+      <formContract type="multi-step-qualifier" screenCount="8" persistence="site-infrastructure" thirdPartyTracking="none">
+        <screen order="1" key="decision-subject" title="Qu’est-ce qui doit avancer ?" fieldType="multi-select+optional-subject" options="6 option families" />
+        <screen order="2" key="decision-frame" title="Dans quel cadre ?" fieldType="timing+decision-role" options="timing:4;role:3" />
+        <screen order="3" key="intervention-mode" title="Comment souhaitez-vous avancer ?" fieldType="single-select" options="4" />
+        <screen order="4" key="weekly-cadence" title="À quel rythme, si l’on s’engage ?" fieldType="single-select" options="4" />
+        <screen order="5" key="organisation-size" title="Combien de personnes doivent monter ?" fieldType="single-select" options="5" />
+        <screen order="6" key="scope-maturity" title="Où en est le périmètre aujourd’hui ?" fieldType="single-select" options="4" />
+        <screen order="7" key="regulated-trigger" title="Ce que l’inspection devra pouvoir suivre" fieldType="single-select" options="4" />
+        <screen order="8" key="contact" title="Où envoyer la réponse ?" fieldType="contact+consent" options="email required; name/org/outcome optional; consent required" />
+        <storageDisclosure>Vos réponses sont enregistrées sur l’infrastructure du site. Aucun service tiers, aucun traceur publicitaire.</storageDisclosure>
+      </formContract>
+    </section>
+  </sections>
+</pageStructure>
