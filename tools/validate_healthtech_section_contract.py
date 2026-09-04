@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import hashlib, json, re, sys
+import hashlib, json, re
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -18,18 +18,23 @@ def need(cond,msg):
 
 s=HTML.read_text(encoding='utf-8')
 section_ids=re.findall(r'<section\b[^>]*\bid="([^"]+)"',s,re.I)
+section_tag_count=s.count('<section')
+offer_route_count=s.count('<article class="card">')
+evidence_trigger_count=s.count('data-evidence-trigger=')
+eug_count=s.count('data-qgeu-id=')
+
 need(section_ids==EXPECTED,f'section-order:{section_ids!r}')
-need(s.count('<section')==5,f'top-level-section-count-or-nested-section-drift:{s.count("<section")}')
+need(section_tag_count==5,f'top-level-section-count-or-nested-section-drift:{section_tag_count}')
 need('<link rel="canonical" href="https://mickael-umt.com/expertises/healthtech/">' in s,'canonical-url-drift')
 need('data-theme="dark"' in s,'dark-theme-contract-missing')
-need(s.count('<article class="card">')==4,f'offer-route-count:{s.count("<article class=\"card\">")}')
+need(offer_route_count==4,f'offer-route-count:{offer_route_count}')
 need([int(x) for x in re.findall(r'data-screen="(\d+)"',s)]==EXPECTED_SCREENS,'qualifier-screen-order')
 need(s.count('id="healthtech-form"')==1,'healthtech-form-id-count')
-need(s.count('data-evidence-trigger=')==12,f'evidence-trigger-count:{s.count("data-evidence-trigger=")}')
+need(evidence_trigger_count==12,f'evidence-trigger-count:{evidence_trigger_count}')
 eu_ids=set(re.findall(r'data-evidence-id="([^"]+)"',s))
 expected_eu={'EU-REGCSV-EC-ANNEX11-RISK-2026','EU-REGCSV-FDA-CSA-RISK-2026','EU-CANON-EHDS-EHR-TESTING-2026','EU-HT-EMA-FDA-GOOD-AI-2026'}
 need(eu_ids==expected_eu,f'evidence-id-set:{sorted(eu_ids)}')
-need(s.count('data-qgeu-id=')==4,f'eug-candidate-count:{s.count("data-qgeu-id=")}')
+need(eug_count==4,f'eug-candidate-count:{eug_count}')
 need(s.count('data-eug-status="BLOCKED_PENDING_CURRENT_JUDGES"')==4,'eug-review-only-status-drift')
 
 root=ET.parse(XML).getroot()
@@ -46,8 +51,8 @@ need(st.find('./document/main').attrib.get('sectionCount')=='5','structure-xml-c
 
 r=REVIEW.read_text(encoding='utf-8')
 need("const EXPECTED=['healthtech-hero','healthtech-offers','healthtech-capabilities','healthtech-next-step','healthtech-qualifier']" in r,'review-expected-sequence-drift')
-need("new_external_effect_claims\":0" in r,'review-new-effect-claim-contract')
-need("new_evidence_placements\":0" in r,'review-new-evidence-placement-contract')
+need('"new_external_effect_claims":0' in r,'review-new-effect-claim-contract')
+need('"new_evidence_placements":0' in r,'review-new-evidence-placement-contract')
 need('<section class="sec"' not in r,'review-must-not-duplicate-base-topology')
 need('REVIEW_ONLY_BLOCKED' in r,'review-publication-status')
 
@@ -58,11 +63,11 @@ report={
  'status':'FAIL' if fail else 'PASS',
  'section_ids':section_ids,
  'section_count':len(section_ids),
- 'offer_routes':s.count('<article class="card">'),
+ 'offer_routes':offer_route_count,
  'qualifier_screens':EXPECTED_SCREENS,
- 'evidence_trigger_occurrences':s.count('data-evidence-trigger='),
+ 'evidence_trigger_occurrences':evidence_trigger_count,
  'unique_evidence_units':sorted(eu_ids),
- 'eug_candidates':s.count('data-qgeu-id='),
+ 'eug_candidates':eug_count,
  'contract_sha256':contract_sha,
  'failures':fail,
 }
