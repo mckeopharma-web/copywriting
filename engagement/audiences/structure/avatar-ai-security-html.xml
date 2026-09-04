@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<htmlSnapshot repository="mckeopharma-web/copywriting" branch="main" path="engagement/audiences/avatar-ai-security.html" blobSha="45b5e5ba5c7e25220db43d121005b2d961145d81" captured="2026-09-04">
+  <document lang="en" theme="dark" publicationStatus="PENDING_FORMAL_LLM_JUDGE">
+    <fragment id="avatar-ai-security" persona="Marc Lefèvre" role="AI governance / risk / security" />
+    <anchors count="17">triggers consequences buyer qualification proposition offers deliverables before-after results evidence scope process modules intersection commitments questions engagement</anchors>
+    <sections count="18">
+      <hero order="0" />
+      <section order="1" id="triggers"/><section order="2" id="consequences"/><section order="3" id="buyer"/><section order="4" id="qualification"/><section order="5" id="proposition"/><section order="6" id="offers"/><section order="7" id="deliverables"/><section order="8" id="before-after"/><section order="9" id="results"/><section order="10" id="evidence"/><section order="11" id="scope"/><section order="12" id="process"/><section order="13" id="modules"/><section order="14" id="intersection"/><section order="15" id="commitments"/><section order="16" id="questions"/><section order="17" id="engagement"/>
+    </sections>
+  </document>
+  <comparison liveFragment="avatar_card_only" sourceArtifact="standalone_18_section_decision_page" topologyCompatibleWithExpertiseProgrammeContract="true" />
+</htmlSnapshot>
