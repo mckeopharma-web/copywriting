@@ -31,7 +31,7 @@ EXPECTED_LIVE_BEFORE = "L’usage de l’IA se diffuse déjà dans les équipes,
 EXPECTED_LIVE_AFTER = "Une capacité où les équipes savent quoi automatiser, quoi vérifier et quand escalader — avec la preuve par équipe qui rend la généralisation défendable devant la direction."
 TARGET_CONTRACT = "contract:customer-avatar:audiences:2026-09-03"
 
-CARD_RE = re.compile(r'<article class="card" id="([^"]+)">(.*?)</article>', re.S)
+CARD_RE = re.compile(r'<article class="card" id="([^"]+)"(?:\s+[^>]*)?>(.*?)</article>', re.S)
 SECTION_RE = re.compile(r'<section\b[^>]*\bid="([^"]+)"[^>]*>', re.I)
 
 
@@ -147,7 +147,8 @@ def validate_html(original: str, updated: str) -> None:
     target_body = after_cards["avatar-training"]
     if EXPECTED_LIVE_BEFORE not in target_body or EXPECTED_LIVE_AFTER not in target_body:
         fail("target visible Before/After is not lossless with the live source")
-    if TARGET_CONTRACT not in target_body:
+    target_start = re.search(r'<article class="card" id="avatar-training"[^>]*>', updated)
+    if target_start is None or TARGET_CONTRACT not in target_start.group(0):
         fail("target card does not carry current audiences Customer Avatar contract")
     if "data-eu=" in target_body or "popovertarget=" in target_body or "claim-eu-aud-004" in target_body or "claim-eu-aud-005" in target_body:
         fail("pending EvidenceUnit binding remains in target visible copy")
