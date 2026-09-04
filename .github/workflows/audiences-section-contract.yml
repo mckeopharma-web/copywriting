@@ -1,0 +1,37 @@
+name: Audiences section contract audit
+
+on:
+  push:
+    branches:
+      - main
+      - 'audit/**'
+    paths:
+      - 'pages/engagement/audiences/mickael-umt.com.html'
+      - 'pages/engagement/audiences/structure/*.xml'
+      - 'reports/audiences-section-contract-audit-*.xml'
+      - 'scripts/validate_audiences_section_contract.py'
+      - '.github/workflows/audiences-section-contract.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'pages/engagement/audiences/mickael-umt.com.html'
+      - 'pages/engagement/audiences/structure/*.xml'
+      - 'reports/audiences-section-contract-audit-*.xml'
+      - 'scripts/validate_audiences_section_contract.py'
+      - '.github/workflows/audiences-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-audiences-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate audiences live/repo section contract and DEVICEV gate state
+        run: python scripts/validate_audiences_section_contract.py
