@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page_snapshot schema_version="1.0"
+  page_id="page:source:pv-data-engineer:live:2026-09-04"
+  source_url="https://mickael-umt.com/expertises/pv-data-engineer/"
+  scope="ONLY /expertises/pv-data-engineer/"
+  captured_at="2026-09-04"
+  capture_mode="crawler_rendered_dom_semantic_extraction+mysite_structured_offer"
+  raw_html_materialized="false"
+  asset_fidelity_claim="false"
+  publication_role="SOURCE_OF_TRUTH_STRUCTURE_ONLY">
+
+  <section_contract
+    family="S-series"
+    canonical_full_order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"
+    selected_live_order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"
+    live_matches_full_canon="true"
+    hard_tokens_preserved="D0-D3">
+    <justification>The current live PV detail page exposes every semantic surface required by the v4 S-series buyer journey. No absent canonical section is inferred: the live page itself contains value, offers, transformation, results, modules, capabilities, intersection, benchmark, guarantee, FAQ, engagement and the eight-screen lead-form flow in addition to the earlier core sections.</justification>
+  </section_contract>
+
+  <offer_identity>
+    <title>Pharmacovigilance Data Engineering</title>
+    <promise>Accélérer la détection et le traitement des signaux sans transférer le jugement de sécurité à un modèle ou à un dashboard.</promise>
+    <result>Pipelines FAERS/openFDA, NLP E2B(R3), sources et versions traçables, seuils d’escalade, files de revue humaine et décisions de signal défendables.</result>
+    <format>3–6 mois · salarié · PV operations</format>
+    <decision_role>Responsable pharmacovigilance</decision_role>
+    <stack>Python · NLP · FAERS/openFDA · E2B(R3) · Biolearn · safety signal algorithms</stack>
+  </offer_identity>
+
+  <sections count="23">
+    <section order="1" token="0" semantic="hero" observed_anchor="page-top">
+      <eyebrow>PV Expertise · mandat de 3 mois et plus</eyebrow>
+      <heading>Un signal automatisé n’est pas une décision de sécurité, seulement son point de départ.</heading>
+      <primary_cta>Évaluer la mission</primary_cta>
+      <proof_boundary>Les preuves affichent leur niveau de provenance et leurs limites.</proof_boundary>
+    </section>
+
+    <section order="2" token="11" semantic="triggers" observed_nav_label="Déclencheurs">
+      <heading>Vous reconnaissez l’un de ces moments, ou ce n’est pas encore le sujet.</heading>
+      <cardinality>4</cardinality>
+      <trigger>Un signal est confirmé par un tiers avant de l’être en interne.</trigger>
+      <trigger>Les cas E2B(R3) sont ressaisis à la main.</trigger>
+      <trigger>Le seuil qui déclenche une escalade n’est écrit nulle part.</trigger>
+      <trigger>Un dashboard de sécurité affiche une tendance que personne ne sait justifier.</trigger>
+    </section>
+
+    <section order="3" token="20" semantic="problems" observed_nav_label="Conséquences">
+      <heading>Ce que ça coûte, et pourquoi le contournement évident ne tient pas.</heading>
+      <problem>La détection dépend du temps disponible.</problem>
+      <problem>Le seuil d’escalade est implicite.</problem>
+      <problem>Le jugement de sécurité glisse vers l’outil.</problem>
+    </section>
+
+    <section order="4" token="13" semantic="audience" observed_nav_label="Pour qui">
+      <heading>Le décideur qui achète ce mandat, et ce qui pèse sur lui.</heading>
+      <avatar name="Karim Benali" role="Responsable pharmacovigilance" status="INDUCTIVE_WORKING_AVATAR">
+        <before>Des signaux détectés trop tard, des cas E2B(R3) saisis à la main et une surveillance qui absorbe le temps de l’équipe.</before>
+        <after>Une détection de signaux automatisée, des cas traités par NLP et un dashboard que l’équipe supervise.</after>
+        <boundary>Decision-role archetype to validate against interviews and observed behaviour; not a real client or testimonial.</boundary>
+      </avatar>
+    </section>
+
+    <section order="5" token="14" semantic="qualification" observed_nav_label="Qualification">
+      <heading>Les conditions, avant de réserver quoi que ce soit.</heading>
+      <fit_gate>Une décision réelle est en jeu.</fit_gate>
+      <fit_gate>Un sponsor nommé peut arbitrer le périmètre et signer la recette.</fit_gate>
+      <fit_gate>L’accès aux systèmes, données ou documents est possible sous NDA dans les premières semaines.</fit_gate>
+      <fit_gate>Un flux de cas ou de données de sécurité existe déjà avec un volume justifiant l’industrialisation.</fit_gate>
+      <no_fit>Externalisation du jugement de sécurité, absence de preuves accessibles, veille générale ou résultat dépendant d’une signature statutaire externe.</no_fit>
+    </section>
+
+    <section order="6" token="1" semantic="proposition" observed_nav_label="Proposition">
+      <heading>Accélérer la détection et le traitement des signaux sans transférer le jugement de sécurité à un modèle ou à un dashboard.</heading>
+      <mechanism>Signal-to-Judgment Chain™: Signal → Contexte → Priorisation → Revue humaine → Action</mechanism>
+      <decision_boundary>La responsabilité clinique et la validation du signal restent humaines.</decision_boundary>
+    </section>
+
+    <section order="7" token="2" semantic="value">
+      <heading>Quatre attributs, quatre questions d’achat.</heading>
+      <attribute type="functional">Du cas source à une décision de signal défendable.</attribute>
+      <attribute type="brand">La pharmacovigilance vue par un pharmacien.</attribute>
+      <attribute type="influence">Preuve : template public de détection de signaux FAERS.</attribute>
+      <attribute type="transactional">Qualifier le signal, les sources et l’escalade.</attribute>
+      <boundary>Aucun pourcentage client n’est revendiqué dans cette section.</boundary>
+    </section>
+
+    <section order="8" token="10" semantic="offers" observed_nav_label="Offres">
+      <heading>Quelle configuration, et combien.</heading>
+      <configuration_count>7</configuration_count>
+      <commercial_rule>Les configurations assemblent les mêmes briques; le prix se dérive publiquement et les codes promotionnels restent privés.</commercial_rule>
+      <route>Atlas des solutions</route>
+    </section>
+
+    <section order="9" token="15" semantic="product" observed_nav_label="Livrables">
+      <heading>Ce qui existe à la fin et n’existait pas avant.</heading>
+      <deliverable>Pipeline de sources de sécurité.</deliverable>
+      <deliverable>File de revue priorisée.</deliverable>
+      <deliverable>Journal de décision de signal.</deliverable>
+      <handover_state>Tout est sous contrôle de source, dans les dépôts du client, exploitable sans dépendance au consultant.</handover_state>
+    </section>
+
+    <section order="10" token="3" semantic="transformation">
+      <heading>Ce que le mandat déplace.</heading>
+      <before>Une détection qui dépend du temps qu’il reste.</before>
+      <after>Une détection continue, avec des seuils écrits et une revue humaine sur ce qui compte.</after>
+    </section>
+
+    <section order="11" token="12" semantic="before_after" observed_nav_label="Avant / après">
+      <heading>Les mêmes axes, avant et après.</heading>
+      <axis name="Détection" before="Périodique, selon la charge de l’équipe" after="Continue, priorisée, avec seuil écrit"/>
+      <axis name="Traitement des cas" before="Ressaisie manuelle" after="Extraction assistée, revue humaine sur l’exception"/>
+      <axis name="Décision de signal" before="Justifiée après coup" after="Tracée : sources, version, seuil, évaluateur"/>
+    </section>
+
+    <section order="12" token="19" semantic="results" observed_nav_label="Résultats">
+      <heading>Ce qui est visé, et de quel type.</heading>
+      <result status="TARGET_ACCEPTANCE_CRITERION">Chaque décision de signal porte ses sources, sa version et son évaluateur.</result>
+      <result status="TARGET_ACCEPTANCE_CRITERION">Les seuils d’escalade sont écrits et calculés par le système.</result>
+      <result status="BUILT_EXAMPLE">Template de détection de signal FAERS et intégration Biolearn pour la RWE.</result>
+      <boundary>Ces résultats ne sont pas présentés comme des mesures client publiées.</boundary>
+    </section>
+
+    <section order="13" token="4" semantic="proof" observed_nav_label="Preuves">
+      <heading>Des preuves proportionnées à la promesse.</heading>
+      <proof type="technical">Template FAERS — détection de signaux senolytiques; pipelines automatisés; intégration Biolearn.</proof>
+      <proof type="credential">Cursus pharmacie de six ans: pharmacologie, toxicologie, pharmacocinétique.</proof>
+      <proof type="experience">Python et NLP appliqués depuis 2021.</proof>
+      <missing_public_evidence>Taux de détection par domaine thérapeutique.</missing_public_evidence>
+    </section>
+
+    <section order="14" token="16" semantic="scope" observed_nav_label="Périmètre">
+      <heading>Le périmètre, ses exclusions et ses dépendances.</heading>
+      <in_scope>Pipelines FAERS/openFDA et sources internes; extraction assistée E2B(R3); files de revue humaine; seuils d’escalade; journal de décision.</in_scope>
+      <out_of_scope>Évaluation médicale et causalité; PSUR/PBRER; rôle de pharmacien responsable ou QPPV.</out_of_scope>
+      <client_dependency>Sponsor joignable; accès aux systèmes/journaux/documents sous NDA; disponibilité d’une ou deux personnes pour la passation.</client_dependency>
+    </section>
+
+    <section order="15" token="17" semantic="phases" observed_nav_label="Déroulé">
+      <heading>Quatre phases, quatre sorties possibles.</heading>
+      <phase index="1" name="Charge réelle">Carte de charge et angles morts.</phase>
+      <phase index="2" name="Seuils">Seuils écrits et validés.</phase>
+      <phase index="3" name="Industrialisation">Pipeline et file en service.</phase>
+      <phase index="4" name="Passation">Runbook et procédure d’escalade.</phase>
+    </section>
+
+    <section order="16" token="18" semantic="modules" observed_nav_label="Modules">
+      <heading>Les blocs de travail, sans ordre imposé.</heading>
+      <module>Sources</module>
+      <module>Extraction</module>
+      <module>Seuils</module>
+      <module>Revue humaine</module>
+      <commercial_rule>Un bloc déjà maîtrisé par le client sort du périmètre et du devis.</commercial_rule>
+    </section>
+
+    <section order="17" token="5" semantic="capabilities">
+      <heading>Les capacités engagées, et la mission où chacune a été exercée.</heading>
+      <capability rank="1" score="98/100">Opérations pharmaceutiques et réglementées.</capability>
+      <capability rank="2" score="82/100">Python et traitement de données.</capability>
+      <capability rank="7" score="63/100">Data science et machine learning.</capability>
+      <proof_periods>Pharmacie 2015–2023; CHU radiopharmacie 2018–2019; cursus pharmacie 2014–2020; consulting et formation Python 2021–présent.</proof_periods>
+    </section>
+
+    <section order="18" token="21" semantic="intersection" observed_nav_label="Intersection">
+      <heading>Le différenciateur est le croisement, pas l’addition.</heading>
+      <intersection>Opérations pharmaceutiques régulées + ingénierie IA/data + assurance/gouvernance + systèmes vérifiables.</intersection>
+      <boundary>Les coutures supprimées sont présentées comme mécanismes, pas comme effets client mesurés.</boundary>
+    </section>
+
+    <section order="19" token="6" semantic="benchmark">
+      <heading>Où se situe le marché, et ce que ce repère ne dit pas.</heading>
+      <observed_median unit="EUR_HT_per_day">420</observed_median>
+      <interquartile_range unit="EUR_HT_per_day">340–500</interquartile_range>
+      <sample_size>7</sample_size>
+      <verified_on>2026-07-22</verified_on>
+      <boundary>Proxy dérivé de fourchettes salariales; non comparable en l’état à un TJM freelance et non contractuel.</boundary>
+    </section>
+
+    <section order="20" token="22" semantic="guarantee" observed_nav_label="Engagements">
+      <heading>Ce qui est garanti est le produit de travail, jamais le résultat d’une autorité.</heading>
+      <guarantee>Périmètre écrit avant facturation.</guarantee>
+      <guarantee>Livrables complets ou repris selon critères de recette écrits.</guarantee>
+      <guarantee>Réversibilité à la sortie.</guarantee>
+      <guarantee>Frontière de confidentialité.</guarantee>
+      <guarantee>Frontière de décision humaine.</guarantee>
+      <guarantee>Noyau neutre vis-à-vis des outils.</guarantee>
+      <not_guaranteed>Détection exhaustive; évaluation médicale; causalité.</not_guaranteed>
+    </section>
+
+    <section order="21" token="23" semantic="faq" observed_nav_label="Questions">
+      <heading>Ce qui reste à lever.</heading>
+      <question>Un modèle peut-il décider qu’un signal est confirmé ?</question>
+      <question>Nos données de sécurité peuvent-elles rester chez nous ?</question>
+      <question>Comment justifier un seuil devant une autorité ?</question>
+      <question>Faut-il changer de base de sécurité ?</question>
+    </section>
+
+    <section order="22" token="7" semantic="engagement" observed_nav_label="Engagement">
+      <heading>Évaluer la mission en 20 minutes.</heading>
+      <interaction>Premier échange destiné à statuer fit/no-fit et à borner une première étape, pas à vendre une promesse non qualifiée.</interaction>
+      <cta>Passer par le qualifieur complet.</cta>
+    </section>
+
+    <section order="23" token="8" semantic="lead_form">
+      <heading>Le bon format d’intervention, avant le premier rendez-vous.</heading>
+      <qualification_form screen_count="8" semantics_source="live_rendered_DOM" controls_normalized_not_byte_exact="true">
+        <screen index="1" control_type="multi_choice+optional_subject">
+          <question>Qu’est-ce qui doit avancer ?</question>
+          <options_or_fields>Système IA/agents; plateforme data/traçabilité; environnement régulé/inspecté; cadrage d’une solution; montée en compétence; autre décision.</options_or_fields>
+        </screen>
+        <screen index="2" control_type="timeline_choice+buying_role_choice">
+          <question>Dans quel cadre ?</question>
+          <options_or_fields>timeline: sous 30 jours; trimestre; semestre; pas de date | role: je décide; je recommande; j’instruis le dossier</options_or_fields>
+        </screen>
+        <screen index="3" control_type="engagement_mode_choice">
+          <question>Comment souhaitez-vous avancer ?</question>
+          <options_or_fields>mission accompagnée; sprint court et daté; faire monter mon équipe; cadrer par moi-même d’abord</options_or_fields>
+        </screen>
+        <screen index="4" control_type="weekly_commitment_choice">
+          <question>À quel rythme, si l’on s’engage ?</question>
+          <options_or_fields>1; 2; 3; 4–5 jours/semaine</options_or_fields>
+        </screen>
+        <screen index="5" control_type="organisation_size_choice">
+          <question>Combien de personnes doivent monter ?</question>
+          <options_or_fields>≤10; 11–50; 51–250; 251–1000; &gt;1000</options_or_fields>
+        </screen>
+        <screen index="6" control_type="scope_maturity_choice">
+          <question>Où en est le périmètre aujourd’hui ?</question>
+          <options_or_fields>brief prêt; résultat clair/périmètre à cadrer; problème identifié/solution ouverte; idée à explorer</options_or_fields>
+        </screen>
+        <screen index="7" control_type="inspection_trigger_choice">
+          <question>Ce que l’inspection devra pouvoir suivre</question>
+          <options_or_fields>inspection prévue; déviations récurrentes; validation à défendre; aucun événement</options_or_fields>
+        </screen>
+        <screen index="8" control_type="contact_fields+explicit_consent">
+          <question>Où envoyer la réponse ?</question>
+          <options_or_fields>email professionnel; nom facultatif; organisation facultative; résultat recherché facultatif; consentement explicite</options_or_fields>
+        </screen>
+        <privacy_note>Les réponses sont enregistrées sur l’infrastructure du site; aucun service tiers ni traceur publicitaire n’est déclaré dans la copie observée.</privacy_note>
+      </qualification_form>
+    </section>
+  </sections>
+
+  <contract_references>
+    <expertise_detail family="S-series">Full 23-section canonical order when source data exists.</expertise_detail>
+    <programme_hub family="P-series" reference_only="true">0,11,20,13,14,10,7,8</programme_hub>
+    <programme_detail family="P/R-series" reference_only="true">0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</programme_detail>
+    <scope_note>No /programme/ page is mutated by this scoped PV task.</scope_note>
+  </contract_references>
+
+  <provenance>
+    <source>https://mickael-umt.com/expertises/pv-data-engineer/</source>
+    <structured_offer_source>mysite.list_offers(slug=pv-data-engineer semantics)</structured_offer_source>
+    <boundary>Raw origin HTML/CSS/JS bytes were not materialized through the available site interface. This XML preserves observed live semantic topology, section meaning, cardinalities and form semantics; it does not claim byte-for-byte or visual asset fidelity.</boundary>
+  </provenance>
+</page_snapshot>
