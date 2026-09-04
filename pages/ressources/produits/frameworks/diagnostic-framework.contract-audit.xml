@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<section_contract_audit version="1.0"
+<section_contract_audit version="1.1"
   targetPage="https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/"
   executionPosture="FAIL_CLOSED"
   copyReviewDecision="PASS"
@@ -35,25 +35,28 @@
   </section_contract_review>
 
   <policy_resolution authority="@neofort" currentTrueOnly="true">
-    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" status="CURRENT" failClosed="true" />
     <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" status="CURRENT" failClosed="true" />
-    <policy id="policy:evidence-judge-applicability:v2" status="CURRENT" failClosed="true" />
-    <policy id="policy:evidence-judge-verdict-normalization:v2" status="CURRENT" failClosed="true" />
     <policy id="policy:llm-judge:deterministic-execution-v2" status="CURRENT" temperature="0" topP="1" replicas="3" disagreement="BLOCK" />
     <policy id="policy:evidence-placement:claim-span-entailment-v2" status="CURRENT" failClosed="true" />
     <policy id="evidence-placement-policy:site-v5" status="CURRENT" />
     <judge requestedLegacyAlias="judge:eu:placementv1" resolvedCurrent="judge:evidence-placement:presentation-v1.2" passThreshold="85" temperature="0" topP="1" replicas="3" failClosed="true" />
+    <judge id="judge:evidence-unit:champion-v2" status="CURRENT" temperature="0" topP="1" replicas="3" failClosed="true" />
+    <judge id="judge:evidence:factfulness-epistemology-methodology-v2" status="CURRENT" temperature="0" topP="1" replicas="3" failClosed="true" />
+    <judgeExecutionStatus>NOT_RUN_FOR_TARGET_PLACEMENT_BECAUSE_DETERMINISTIC_TARGET_SNAPSHOT_PRECHECK_FAILS</judgeExecutionStatus>
   </policy_resolution>
 
   <deterministic_preflight>
     <check id="scope-only-target-page" status="PASS" />
-    <check id="github-target-file-fetched-before-write" status="PASS" detail="404 confirmed file absent; create operation used, not overwrite" />
+    <check id="github-target-file-fetched-before-write" status="PASS" detail="Existing HTML fetched with blob SHA 295f5afdca0390c615e2219a01bd5daff80ad0d9 before update." />
     <check id="first-party-product-contract-materialized" status="PASS" />
-    <check id="repo-review-html-structure-extracted" status="PASS" sourceBlobSha="295f5afdca0390c615e2219a01bd5daff80ad0d9" />
+    <check id="repo-review-html-structure-extracted" status="PASS" sourceBlobSha="ce0465a2f168793215d707e2a4e50077bde436e1" />
+    <check id="landing-page-recipe-c1-c19-resolved" status="PASS_WITH_BOUNDED_REJECTIONS" detail="C7 kept the implemented 4-stage product; C11/C12/C14/C15 were not fabricated; C17/C18 compressed to evidenced or conditional problems." />
+    <check id="inductive-avatar-role-first" status="PASS" detail="customer-avatar:realisations:ia-agents:claire-dumas:v1 used only for role/decision framing; synthesized quote and unsupported demographics excluded." />
     <check id="paid-product-download-self-loop-removed-from-review-copy" status="PASS" />
     <check id="heuristic-boundary-visible" status="PASS" />
     <check id="unsupported-causal-commercial-claims-absent" status="PASS" />
     <check id="external-public-citations-count" status="PASS" value="0" />
+    <check id="review-only-external-source-register" status="PASS" value="2" />
     <check id="google-drive-no-write" status="PASS" />
     <check id="exact-live-raw-html-materialized" status="FAIL" blocker="LIVE_RAW_HTML_NOT_MATERIALIZED" />
     <check id="exact-live-section-count-known" status="FAIL" blocker="EXACT_LIVE_SECTION_COUNT_UNKNOWN" />
@@ -63,14 +66,21 @@
 
   <copy_review>
     <status>PASS_BOUNDED_REVIEW_ARTIFACT</status>
-    <commercial_positioning>Small, bounded first decision: a paid autonomous framework for making an AI/data scope explicit before larger commitment.</commercial_positioning>
-    <inductiveAvatar>Role-first IT production buyer: CTO / Head of AI Platform / Head of Data / AI security or trust decision owner.</inductiveAvatar>
-    <avatarEpistemicBoundary>Role-first modeled synthesis; no demographic, budget, channel or verbatim claims are treated as observed customer facts.</avatarEpistemicBoundary>
-    <copySequences count="4">
+    <commercial_positioning>Paid autonomous 49 € HT framework that structures the first AI/data decision before a larger engagement.</commercial_positioning>
+    <inductiveAvatar id="customer-avatar:realisations:ia-agents:claire-dumas:v1">Role-first decision owner: CTO / Head of AI Platform, generalized on-page to CTO / Head of AI/Data / transformation / security or trust role.</inductiveAvatar>
+    <avatarEpistemicBoundary>Role-first modeled synthesis only; no demographic, budget, channel, testimonial or synthesized quote is presented as observed customer fact.</avatarEpistemicBoundary>
+    <semanticCompression>9 maturity checks → 6 impact dimensions → 5 scope prompts → 7 proposal fields.</semanticCompression>
+    <copySequences count="10">
       <sequence id="seq-hero">Problem reframing + offer comprehension</sequence>
-      <sequence id="seq-mechanism">Four-stage mechanism explanation</sequence>
+      <sequence id="seq-problem">Conditional problem recognition</sequence>
+      <sequence id="seq-mechanism">Four-stage mechanism + numeric compression</sequence>
+      <sequence id="seq-outcomes">Three bounded outputs</sequence>
+      <sequence id="seq-problem-solution">Problem-to-stage mapping</sequence>
+      <sequence id="seq-author-proof">First-party capability proof with progressive disclosure</sequence>
       <sequence id="seq-fit-boundary">Qualification + epistemic risk reversal</sequence>
+      <sequence id="seq-faq">Objection handling</sequence>
       <sequence id="seq-checkout">Transaction comprehension</sequence>
+      <sequence id="seq-evidence-review">Review-only evidence disclosure</sequence>
     </copySequences>
   </copy_review>
 
@@ -81,6 +91,7 @@
       <fact>one-time purchase</fact>
       <fact>permanent PDF access after payment confirmation</fact>
       <fact>four stages: maturity, impact, use-case scope, proposal</fact>
+      <fact>9 maturity checks, 6 impact dimensions, 5 scope prompts, 7 proposal fields</fact>
       <fact>impact weights and thresholds are internal heuristics</fact>
     </firstPartyProductFacts>
     <externalEvidenceCandidate id="EU-PV-NIST-MAP-3-3-SCOPE-DOCUMENTED">
@@ -89,9 +100,17 @@
       <agentExploitability>ALLOWED</agentExploitability>
       <championScore>91</championScore>
       <targetPlacement>REJECTED_AS_IS</targetPlacement>
-      <reason>The EU is bound to the PV Data Engineering page/section; exact target-page claim span and current placement do not exist. Reusing it would violate the placement policy.</reason>
+      <reason>The EU is bound to another page/section; exact target-page claim span and current placement do not exist. Reusing it as a public citation would violate current placement policy.</reason>
     </externalEvidenceCandidate>
-    <publicCitationDecision>NONE_INSERTED</publicCitationDecision>
+    <externalEvidenceCandidate id="EU-DIAG-NAPIRE-228-COMPANIES">
+      <source>https://arxiv.org/abs/1611.10288</source>
+      <deterministicPreflight>PASS</deterministicPreflight>
+      <admissionStatus>PENDING_ADMISSION_REVIEW</admissionStatus>
+      <agentExploitability>QUARANTINED_PENDING_SPECIALIST_JUDGES</agentExploitability>
+      <targetPlacement>NOT_ATTEMPTED</targetPlacement>
+      <reason>Source extract is materialized and bounded, but specialist judge replicas and target placement cannot be represented as PASS while the target snapshot precheck is blocked.</reason>
+    </externalEvidenceCandidate>
+    <publicCitationDecision>NONE_INSERTED_LEVEL1; SOURCES_RETAINED_IN_REVIEW_ONLY_DISCLOSURE</publicCitationDecision>
   </evidence_review>
 
   <claim_boundaries>
@@ -101,6 +120,8 @@
     <forbidden>validated predictive score</forbidden>
     <forbidden>ISO or NIST compliant/certified</forbidden>
     <forbidden>guaranteed ROI or conversion uplift</forbidden>
+    <forbidden>fabricated scarcity</forbidden>
+    <forbidden>fabricated testimonial or review</forbidden>
   </claim_boundaries>
 
   <publication_gate>
@@ -122,7 +143,11 @@
   <github_lineage>
     <repository>mckeopharma-web/copywriting</repository>
     <branch>main</branch>
-    <preMutationTreeSha>912c97ea36d9f410a5a0d705f268cde2db116531</preMutationTreeSha>
-    <reviewHtmlBlobSha>295f5afdca0390c615e2219a01bd5daff80ad0d9</reviewHtmlBlobSha>
+    <preMutationHtmlBlobSha>295f5afdca0390c615e2219a01bd5daff80ad0d9</preMutationHtmlBlobSha>
+    <reviewHtmlCommitSha>92f59f441ff33462ae1a040e0df33d16464a017e</reviewHtmlCommitSha>
+    <reviewHtmlBlobSha>ce0465a2f168793215d707e2a4e50077bde436e1</reviewHtmlBlobSha>
+    <repoSnapshotCommitSha>bfe144971e031875aa059d6e1b360c7eb0eafea4</repoSnapshotCommitSha>
+    <repoSnapshotBlobSha>32fe4f468b75cb6ebfee834b2db980231d8cf5ec</repoSnapshotBlobSha>
+    <treeAfterSnapshot>1dd801c6dc6a126004805693c3211790ef7b40a9</treeAfterSnapshot>
   </github_lineage>
 </section_contract_audit>
