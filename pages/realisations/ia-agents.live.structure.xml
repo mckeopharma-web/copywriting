@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageStructure version="1.0"
+  id="realisations-ia-agents-live"
+  source="https://mickael-umt.com/realisations/ia-agents/"
+  captureDate="2026-09-04"
+  captureMode="rendered-live-crawl"
+  fidelity="semantic-order-and-form-fields"
+  pixelFidelity="NOT_ASSERTED">
+  <contractReferences>
+    <reference family="S-series" scope="/expertises/, /expertises/&lt;category&gt;/" canonicalOrder="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"/>
+    <reference family="P-series" scope="/programme/, /programme/&lt;slug&gt;/" canonicalOrder="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"/>
+    <inheritance targetFamily="proof-realisation" mode="REFERENCE_ONLY_DO_NOT_FORCE_23_SECTIONS">
+      <reason>The target is a proof/realisation page, not an offer/programme owner page. Its live topology is authoritative.</reason>
+    </inheritance>
+  </contractReferences>
+  <main order="strict">
+    <section order="1" normalizedId="ia-agents-hero" semanticRole="HERO" liveDomId="NOT_OBSERVED_FROM_RENDERED_CRAWL">
+      <heading level="1">IA, agents &amp; évaluation</heading>
+      <lead>Prototypes RAG, orchestration d’agents, évaluation de biais et opérations gouvernées.</lead>
+      <domainFilter count="4"/>
+    </section>
+    <section order="2" normalizedId="ia-agents-projects" semanticRole="PROJECT_PROOF_LEDGER" liveDomId="NOT_OBSERVED_FROM_RENDERED_CRAWL">
+      <article order="1" normalizedId="mistral" period="2024" title="Mistral Hackathon — Persona &amp; Bias Evaluation" provenance="Contribution collaborative attestée"/>
+      <article order="2" normalizedId="rag" period="2023–2024" title="AI/RAG Experiment Portfolio" provenance="Artefacts originaux attestés · historique privé aplati"/>
+      <article order="3" normalizedId="streamlit" period="Avril–octobre 2023" title="Streamlit LangChain Prototype" provenance="Création originale vérifiée"/>
+      <article order="4" normalizedId="governed" period="2025–présent" title="Governed AI Operations" provenance="R&amp;D confidentielle"/>
+    </section>
+    <section order="3" normalizedId="ia-agents-provenance" semanticRole="PROVENANCE_POLICY" liveDomId="NOT_OBSERVED_FROM_RENDERED_CRAWL">
+      <heading level="2">Création, contribution, preuve et niveau de confiance.</heading>
+      <rule>La propriété du dépôt ne suffit pas. L’audit combine commits, diffs, code, contexte de formation et attestation du propriétaire.</rule>
+    </section>
+    <section order="4" normalizedId="ia-agents-method-form" semanticRole="FRAMEWORK_LEAD_FORM" liveDomId="NOT_OBSERVED_FROM_RENDERED_CRAWL">
+      <heading level="2">Le cadre utilisé sur ces travaux, publié et gratuit.</heading>
+      <form screens="2">
+        <screen order="1" label="Sur quoi travaillez-vous en ce moment ?">
+          <field name="work_topic" type="radio" required="false" options="6"/>
+          <field name="intended_use" type="radio" required="false" options="3"/>
+        </screen>
+        <screen order="2" label="Où envoyer la réponse ?">
+          <field name="email" type="email" required="true"/>
+          <field name="name" type="text" required="false"/>
+          <field name="consent" type="checkbox" required="true"/>
+        </screen>
+        <privacy>Vos réponses sont enregistrées sur l’infrastructure du site. Aucun service tiers, aucun traceur publicitaire.</privacy>
+      </form>
+    </section>
+  </main>
+  <liveTopologyCheck sectionCount="4" projectCount="4" formScreens="2" status="PASS_RENDERED_SOURCE"/>
+</pageStructure>
