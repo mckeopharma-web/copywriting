@@ -1,0 +1,32 @@
+name: AI Production Assurance contract audit
+
+on:
+  push:
+    branches:
+      - audit/ai-production-assurance-contract-20260904
+    paths:
+      - 'pages/programme/structure/ai-production-assurance.*.xml'
+      - 'reports/ai-production-assurance.contract-audit.xml'
+      - 'scripts/validate_ai_production_assurance_contract.py'
+      - '.github/workflows/ai-production-assurance-contract-audit.yml'
+  pull_request:
+    paths:
+      - 'pages/programme/structure/ai-production-assurance.*.xml'
+      - 'reports/ai-production-assurance.contract-audit.xml'
+      - 'scripts/validate_ai_production_assurance_contract.py'
+      - '.github/workflows/ai-production-assurance-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate live topology, section forms, shared qualifier and NeoFort policy snapshot
+        run: python scripts/validate_ai_production_assurance_contract.py
