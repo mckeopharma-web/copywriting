@@ -1,0 +1,45 @@
+name: AI Security EUG sidecar one-shot
+
+on:
+  push:
+    branches:
+      - review/ai-security-eug-sidecar-v3-20260904
+    paths:
+      - tools/upgrade_ai_security_eug_sidecar_20260904.py
+      - .github/workflows/ai-security-eug-sidecar-one-shot.yml
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply deterministic DEVICEV-scoped upgrade
+        run: python3 tools/upgrade_ai_security_eug_sidecar_20260904.py
+
+      - name: Validate clean patch
+        run: |
+          git diff --check
+          git diff --exit-code -- . ':!expertises/ai-security/ai-security.html' || {
+            echo 'Unexpected mutation outside the scoped HTML file.' >&2
+            exit 1
+          }
+
+      - name: Commit reviewed artifact
+        run: |
+          if git diff --quiet -- expertises/ai-security/ai-security.html; then
+            echo 'No target change produced.' >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add expertises/ai-security/ai-security.html
+          git commit -m 'feat(ai-security): integrate EUG sidecars and visual-policy-v3 plot'
+          git push origin HEAD:review/ai-security-eug-sidecar-v3-20260904
