@@ -1,0 +1,38 @@
+name: IA agents — live section contract audit
+
+on:
+  push:
+    branches:
+      - review/ia-agents-live-contract-2026-09-04
+    paths:
+      - 'pages/realisations/ia-agents.html'
+      - 'pages/realisations/ia-agents.live.structure.xml'
+      - 'pages/realisations/ia-agents.repo.structure.xml'
+      - 'contracts/realisations-ia-agents.section-contract.xml'
+      - 'tools/ia_agents_section_contract_audit.py'
+      - '.github/workflows/ia-agents-section-contract-audit.yml'
+  pull_request:
+    paths:
+      - 'pages/realisations/ia-agents.html'
+      - 'pages/realisations/ia-agents.live.structure.xml'
+      - 'pages/realisations/ia-agents.repo.structure.xml'
+      - 'contracts/realisations-ia-agents.section-contract.xml'
+      - 'tools/ia_agents_section_contract_audit.py'
+      - '.github/workflows/ia-agents-section-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deterministic parser
+        run: python -m pip install --disable-pip-version-check lxml==5.3.0
+      - name: Validate only /realisations/ia-agents/
+        run: python tools/ia_agents_section_contract_audit.py
