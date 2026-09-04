@@ -1,0 +1,72 @@
+name: Audiences avatar-training section contract
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'pages/engagement/audiences/mickael-umt.com.html'
+      - 'engagement/audiences/audiences.live.structure.2026-09-04.xml'
+      - 'engagement/audiences/audiences.repo.structure.2026-09-04.xml'
+      - 'engagement/audiences/avatar-training.patch.2026-09-04.xml'
+      - 'engagement/audiences/avatar-training_DEVICEV_validation_2026-09-04.xml'
+      - 'contracts/expertises-programmes-section-contract-check-2026-09-04.xml'
+      - 'scripts/apply_validate_audiences_avatar_training_contract.py'
+      - '.github/workflows/audiences-avatar-training-section-contract.yml'
+  push:
+    branches:
+      - main
+      - audit/audiences-avatar-training-contract-2026-09-04
+    paths:
+      - 'pages/engagement/audiences/mickael-umt.com.html'
+      - 'engagement/audiences/audiences.live.structure.2026-09-04.xml'
+      - 'engagement/audiences/audiences.repo.structure.2026-09-04.xml'
+      - 'engagement/audiences/avatar-training.patch.2026-09-04.xml'
+      - 'engagement/audiences/avatar-training_DEVICEV_validation_2026-09-04.xml'
+      - 'contracts/expertises-programmes-section-contract-check-2026-09-04.xml'
+      - 'scripts/apply_validate_audiences_avatar_training_contract.py'
+      - '.github/workflows/audiences-avatar-training-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audiences-avatar-training-contract-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-and-materialise-target-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply first-party lossless sync and validate contract
+        run: python scripts/apply_validate_audiences_avatar_training_contract.py --apply
+      - name: Prove generated mutation scope
+        shell: bash
+        run: |
+          changed="$(git diff --name-only)"
+          if [ -n "$changed" ] && [ "$changed" != "pages/engagement/audiences/mickael-umt.com.html" ]; then
+            echo "FAIL: generated mutation escaped target page:"
+            echo "$changed"
+            exit 1
+          fi
+          git diff --check
+      - name: Commit validated target sync on audit branch only
+        if: github.event_name == 'push' && github.ref == 'refs/heads/audit/audiences-avatar-training-contract-2026-09-04'
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No generated target-page change.'
+            exit 0
+          fi
+          git config user.name 'audiences-contract-bot'
+          git config user.email 'audiences-contract-bot@users.noreply.github.com'
+          git add pages/engagement/audiences/mickael-umt.com.html
+          git commit -m 'fix(audiences): sync avatar-training to live positioning contract'
+          git push
