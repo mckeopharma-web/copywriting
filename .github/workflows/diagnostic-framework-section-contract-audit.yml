@@ -1,0 +1,28 @@
+name: Diagnostic framework section contract audit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'pages/ressources/produits/frameworks/diagnostic-framework.html'
+      - 'pages/ressources/produits/frameworks/diagnostic-framework.live.xml'
+      - 'pages/ressources/produits/frameworks/diagnostic-framework.repo-html.xml'
+      - 'pages/ressources/produits/frameworks/diagnostic-framework.contract-audit.xml'
+      - 'scripts/validate_diagnostic_framework_section_contract.py'
+      - '.github/workflows/diagnostic-framework-section-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-diagnostic-framework-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate target-page structure, copy and fail-closed publication gate
+        run: python scripts/validate_diagnostic_framework_section_contract.py
