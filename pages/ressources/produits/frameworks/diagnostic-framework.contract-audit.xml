@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section_contract_audit version="1.0"
+  targetPage="https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/"
+  executionPosture="FAIL_CLOSED"
+  copyReviewDecision="PASS"
+  publicationDecision="BLOCKED"
+  publicationAllowed="false"
+  auditDate="2026-09-04">
+
+  <scope>
+    <pageOnly>/ressources/produits/frameworks/diagnostic-framework/</pageOnly>
+    <otherPageCUD>FORBIDDEN</otherPageCUD>
+    <googleDriveRead>PERFORMED_READ_ONLY</googleDriveRead>
+    <googleDriveCUD>NOT_PERFORMED_REQUIRES_EXPLICIT_USER_APPROVAL</googleDriveCUD>
+  </scope>
+
+  <section_contract_review>
+    <expertises family="S-series" source=".skills/source-first-atomic-design-v4/SKILL.md">
+      <canonicalFullOrder>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonicalFullOrder>
+      <rule>Complete 23-section journey when the page can bear it; a justified subset is valid.</rule>
+      <targetApplicability>REFERENCE_ONLY</targetApplicability>
+    </expertises>
+    <programmes family="P-series" canonicalRoute="/programme/" source=".skills/source-first-atomic-design-v4/SKILL.md">
+      <canonicalFullOrder>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonicalFullOrder>
+      <rule>Programme hub/detail surfaces use P-series/R-series semantics, with justified subsets where applicable.</rule>
+      <pluralRouteNote>/programmes/ is not the canonical route in the current source-first contract; /programme/ is.</pluralRouteNote>
+      <targetApplicability>REFERENCE_ONLY</targetApplicability>
+    </programmes>
+    <target family="PRODUCT_FRAMEWORK_DETAIL">
+      <forcedCanonical23Sections>false</forcedCanonical23Sections>
+      <reason>First-party SPEC-25.1 explicitly says not to turn the generic product template into a 23-section monolith; use a compact product-specific content adapter.</reason>
+      <structureLock>true</structureLock>
+      <requiredInvariant>Preserve exact live section count/order/form once materialized; until then, publication remains blocked.</requiredInvariant>
+    </target>
+  </section_contract_review>
+
+  <policy_resolution authority="@neofort" currentTrueOnly="true">
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" status="CURRENT" failClosed="true" />
+    <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" status="CURRENT" failClosed="true" />
+    <policy id="policy:evidence-judge-applicability:v2" status="CURRENT" failClosed="true" />
+    <policy id="policy:evidence-judge-verdict-normalization:v2" status="CURRENT" failClosed="true" />
+    <policy id="policy:llm-judge:deterministic-execution-v2" status="CURRENT" temperature="0" topP="1" replicas="3" disagreement="BLOCK" />
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" status="CURRENT" failClosed="true" />
+    <policy id="evidence-placement-policy:site-v5" status="CURRENT" />
+    <judge requestedLegacyAlias="judge:eu:placementv1" resolvedCurrent="judge:evidence-placement:presentation-v1.2" passThreshold="85" temperature="0" topP="1" replicas="3" failClosed="true" />
+  </policy_resolution>
+
+  <deterministic_preflight>
+    <check id="scope-only-target-page" status="PASS" />
+    <check id="github-target-file-fetched-before-write" status="PASS" detail="404 confirmed file absent; create operation used, not overwrite" />
+    <check id="first-party-product-contract-materialized" status="PASS" />
+    <check id="repo-review-html-structure-extracted" status="PASS" sourceBlobSha="295f5afdca0390c615e2219a01bd5daff80ad0d9" />
+    <check id="paid-product-download-self-loop-removed-from-review-copy" status="PASS" />
+    <check id="heuristic-boundary-visible" status="PASS" />
+    <check id="unsupported-causal-commercial-claims-absent" status="PASS" />
+    <check id="external-public-citations-count" status="PASS" value="0" />
+    <check id="google-drive-no-write" status="PASS" />
+    <check id="exact-live-raw-html-materialized" status="FAIL" blocker="LIVE_RAW_HTML_NOT_MATERIALIZED" />
+    <check id="exact-live-section-count-known" status="FAIL" blocker="EXACT_LIVE_SECTION_COUNT_UNKNOWN" />
+    <check id="exact-target-webpage-current-in-neofort" status="FAIL" blocker="TARGET_WEBPAGE_NOT_REGISTERED_CURRENT_IN_NEOFORT" />
+    <check id="exact-target-current-evidence-placement" status="FAIL" blocker="NO_CURRENT_TARGET_EVIDENCE_PLACEMENT" />
+  </deterministic_preflight>
+
+  <copy_review>
+    <status>PASS_BOUNDED_REVIEW_ARTIFACT</status>
+    <commercial_positioning>Small, bounded first decision: a paid autonomous framework for making an AI/data scope explicit before larger commitment.</commercial_positioning>
+    <inductiveAvatar>Role-first IT production buyer: CTO / Head of AI Platform / Head of Data / AI security or trust decision owner.</inductiveAvatar>
+    <avatarEpistemicBoundary>Role-first modeled synthesis; no demographic, budget, channel or verbatim claims are treated as observed customer facts.</avatarEpistemicBoundary>
+    <copySequences count="4">
+      <sequence id="seq-hero">Problem reframing + offer comprehension</sequence>
+      <sequence id="seq-mechanism">Four-stage mechanism explanation</sequence>
+      <sequence id="seq-fit-boundary">Qualification + epistemic risk reversal</sequence>
+      <sequence id="seq-checkout">Transaction comprehension</sequence>
+    </copySequences>
+  </copy_review>
+
+  <evidence_review>
+    <firstPartyProductFacts status="ADMISSIBLE_FOR_REVIEW_COPY">
+      <fact>Framework Diagnostic IA</fact>
+      <fact>49 € HT</fact>
+      <fact>one-time purchase</fact>
+      <fact>permanent PDF access after payment confirmation</fact>
+      <fact>four stages: maturity, impact, use-case scope, proposal</fact>
+      <fact>impact weights and thresholds are internal heuristics</fact>
+    </firstPartyProductFacts>
+    <externalEvidenceCandidate id="EU-PV-NIST-MAP-3-3-SCOPE-DOCUMENTED">
+      <deterministicPreflight>PASS</deterministicPreflight>
+      <factfulness>PASS</factfulness>
+      <agentExploitability>ALLOWED</agentExploitability>
+      <championScore>91</championScore>
+      <targetPlacement>REJECTED_AS_IS</targetPlacement>
+      <reason>The EU is bound to the PV Data Engineering page/section; exact target-page claim span and current placement do not exist. Reusing it would violate the placement policy.</reason>
+    </externalEvidenceCandidate>
+    <publicCitationDecision>NONE_INSERTED</publicCitationDecision>
+  </evidence_review>
+
+  <claim_boundaries>
+    <forbidden>49 € reduces project risk</forbidden>
+    <forbidden>saves half a day</forbidden>
+    <forbidden>avoids procurement approval</forbidden>
+    <forbidden>validated predictive score</forbidden>
+    <forbidden>ISO or NIST compliant/certified</forbidden>
+    <forbidden>guaranteed ROI or conversion uplift</forbidden>
+  </claim_boundaries>
+
+  <publication_gate>
+    <copyReviewReady>true</copyReviewReady>
+    <githubPersistenceReady>true</githubPersistenceReady>
+    <liveParityReady>false</liveParityReady>
+    <evidencePlacementReady>false</evidencePlacementReady>
+    <xpathLiveMatchCount>UNKNOWN</xpathLiveMatchCount>
+    <publicationAllowed>false</publicationAllowed>
+    <blockers>
+      <blocker>LIVE_RAW_HTML_NOT_MATERIALIZED</blocker>
+      <blocker>EXACT_LIVE_SECTION_COUNT_UNKNOWN</blocker>
+      <blocker>TARGET_WEBPAGE_NOT_REGISTERED_CURRENT_IN_NEOFORT</blocker>
+      <blocker>NO_CURRENT_TARGET_EVIDENCE_PLACEMENT</blocker>
+    </blockers>
+    <decision>BLOCKED</decision>
+  </publication_gate>
+
+  <github_lineage>
+    <repository>mckeopharma-web/copywriting</repository>
+    <branch>main</branch>
+    <preMutationTreeSha>912c97ea36d9f410a5a0d705f268cde2db116531</preMutationTreeSha>
+    <reviewHtmlBlobSha>295f5afdca0390c615e2219a01bd5daff80ad0d9</reviewHtmlBlobSha>
+  </github_lineage>
+</section_contract_audit>
