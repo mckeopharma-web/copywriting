@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repositoryPageSnapshot version="1.0"
+  repository="mckeopharma-web/copywriting"
+  branch="audit/data-outillage-contract-2026-09-04"
+  path="pages/realisations/data-outillage.html"
+  priorState="ABSENT_ON_MAIN"
+  theme="dark"
+  language="fr"
+  publicationStatus="PENDING_FORMAL_LLM_JUDGE">
+  <policySnapshot>
+    <judge id="judge:copy-claim:external-capability-grounding-v1.1" current="true"/>
+    <judge id="judge:evidence:factfulness-epistemology-methodology-v2" current="true"/>
+    <judge id="judge:evidence-placement:presentation-v1.2" current="true"/>
+    <policy id="policy:llm-judge:deterministic-execution-v2" replicas="3" temperature="0" topP="1" booleanReducer="AND" scoreReducer="MIN"/>
+  </policySnapshot>
+  <avatar id="buyer-role:data-engineering" role="Head of Data / Lead Data Engineer" status="ROLE_FIRST_TO_VALIDATE"/>
+  <majorSections count="4">
+    <section order="1" id="data-outillage-hero" kind="domain_hero" xpath="//section[@id='data-outillage-hero']">
+      <h1>Data &amp; outillage</h1>
+      <liveTopologyMatch>true</liveTopologyMatch>
+    </section>
+    <section order="2" id="data-outillage-projects" kind="project_evidence" xpath="//section[@id='data-outillage-projects']">
+      <h2>Folder Mapper</h2>
+      <liveTopologyMatch>true</liveTopologyMatch>
+      <claimAnchor id="claim-folder-mapper-behavior" xpath="//*[@id='claim-folder-mapper-behavior']" eu="EU-DO-01"/>
+      <claimAnchor id="claim-folder-mapper-provenance" xpath="//*[@id='claim-folder-mapper-provenance']" eu="EU-DO-02"/>
+      <claimAnchor id="claim-folder-mapper-boundary" xpath="//*[@id='claim-folder-mapper-boundary']" eu="EU-DO-03"/>
+    </section>
+    <section order="3" id="data-outillage-provenance" kind="provenance_policy" xpath="//section[@id='data-outillage-provenance']">
+      <h2>Création, contribution, preuve et niveau de confiance.</h2>
+      <liveTopologyMatch>true</liveTopologyMatch>
+    </section>
+    <section order="4" id="data-outillage-method" kind="method_and_lead_form" xpath="//section[@id='data-outillage-method']">
+      <h2>Le cadre utilisé sur ces travaux, publié et gratuit.</h2>
+      <liveTopologyMatch>true</liveTopologyMatch>
+      <form id="data-outillage-framework-form" xpath="//form[@id='data-outillage-framework-form']" screenCount="2" runtime="DISABLED_IN_RECONSTRUCTION"/>
+    </section>
+  </majorSections>
+  <evidenceUnits>
+    <EvidenceUnit id="EU-DO-01" observationStatus="OBSERVED_CODE" agentExploitability="PENDING_FORMAL_JUDGES">
+      <metric>implemented CLI behavior</metric>
+      <source>https://github.com/RickOwri/folder_mapper/blob/master/src/main.rs</source>
+      <sourceLocator>blob_sha:5ef97790ed55d658ac8ef16325f31ddf77b7d508</sourceLocator>
+      <population>public Folder Mapper source file at cited blob</population>
+      <period>repository snapshot</period>
+      <boundary>No production performance, reliability or business-outcome inference.</boundary>
+    </EvidenceUnit>
+    <EvidenceUnit id="EU-DO-02" observationStatus="OBSERVED_PUBLIC_RECORD" agentExploitability="PENDING_FORMAL_JUDGES">
+      <metric>commit attribution count</metric>
+      <value>7</value><unit>commits</unit>
+      <population>public repository history visible for Folder Mapper</population>
+      <period>2023-09-15 to 2023-10-16</period>
+      <source>https://github.com/RickOwri/folder_mapper/commits/master/</source>
+      <boundary>Commit attribution does not prove software maturity or production quality.</boundary>
+    </EvidenceUnit>
+    <EvidenceUnit id="EU-DO-03" observationStatus="DERIVED_DETERMINISTIC" agentExploitability="PENDING_FORMAL_JUDGES">
+      <metric>unsupported-capability exclusion by source inspection</metric>
+      <source>https://github.com/RickOwri/folder_mapper/blob/master/src/main.rs</source>
+      <sourceLocator>blob_sha:5ef97790ed55d658ac8ef16325f31ddf77b7d508</sourceLocator>
+      <derivation>literal source inspection for CREATE INDEX, UNIQUE, upsert and explicit sort constructs</derivation>
+      <boundary>Bound to the cited source blob; absence in this file is not a statement about unpublished code.</boundary>
+    </EvidenceUnit>
+  </evidenceUnits>
+</repositoryPageSnapshot>
