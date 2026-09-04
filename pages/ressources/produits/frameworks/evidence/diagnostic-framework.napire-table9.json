@@ -1,0 +1,66 @@
+{
+  "schema_version": "origin-document-extract-v1",
+  "source": {
+    "title": "Naming the Pain in Requirements Engineering: Contemporary Problems, Causes, and Effects in Practice",
+    "canonical_url": "https://arxiv.org/abs/1611.10288",
+    "open_access_url": "https://arxiv.org/abs/1611.10288",
+    "peer_reviewed_doi": "10.1007/s10664-016-9451-7",
+    "publication": "Empirical Software Engineering 22(5), 2298–2338 (2017)",
+    "source_locator": "Table 9 — Most cited top 10 RE problems",
+    "capture_date": "2026-09-04"
+  },
+  "metric_contract": {
+    "subject": "Most cited requirements-engineering problems in the NaPiRE survey",
+    "population": "228 completed company datasets from 10 countries",
+    "period": "2014/15 NaPiRE survey run; article published 2017",
+    "geography": "10 countries",
+    "variable": "respondents citing each RE problem among their five most critical problems",
+    "unit": "percent of 228 respondents",
+    "status": "OBSERVED",
+    "missing_data_policy": "No imputation or interpolation",
+    "uncertainty": "No confidence interval reported for these Table 9 percentages; none is invented",
+    "boundary": "Cross-domain practitioner survey. The values describe problem citations in this sample and do not prove efficacy, ROI, compliance, causal project-failure effects, or outcomes of Framework Diagnostic IA."
+  },
+  "observations": [
+    {
+      "order": 1,
+      "label": "Incomplete / hidden requirements",
+      "count": 109,
+      "percent": 48,
+      "status": "OBSERVED"
+    },
+    {
+      "order": 2,
+      "label": "Communication flaws: project team ↔ customer",
+      "count": 93,
+      "percent": 41,
+      "status": "OBSERVED"
+    },
+    {
+      "order": 3,
+      "label": "Moving targets",
+      "count": 76,
+      "percent": 33,
+      "status": "OBSERVED"
+    },
+    {
+      "order": 4,
+      "label": "Requirements too abstract / underspecified",
+      "count": 76,
+      "percent": 33,
+      "status": "OBSERVED"
+    },
+    {
+      "order": 5,
+      "label": "Time boxing / not enough time",
+      "count": 72,
+      "percent": 32,
+      "status": "OBSERVED"
+    }
+  ],
+  "recommendation_source_separation": {
+    "evidence_source_role": "The NaPiRE paper supplies the observed frequencies only.",
+    "recommendation_source": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+    "recommendation_source_role": "NIST AI RMF MAP supplies normative guidance to establish context, business use/value, requirements and targeted application scope. It is not used to prove the NaPiRE frequencies or the product's effect."
+  }
+}
