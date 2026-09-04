@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section_contract_audit schema_version="2.1"
+  scope="ONLY https://mickael-umt.com/engagement/audiences/#avatar-agentic-ai"
+  audit_date="2026-09-04"
+  execution_posture="FAIL_CLOSED"
+  publication_allowed="false"
+  html_mutation_allowed="false">
+  <request_basis>
+    <target_url>https://mickael-umt.com/engagement/audiences/#avatar-agentic-ai</target_url>
+    <target_repository>mckeopharma-web/copywriting</target_repository>
+    <target_html_path>engagement/audiences/avatar-agentic-ai.html</target_html_path>
+    <target_html_blob_sha>6321d873f79f9483e143d03c79f4c44707e86ae8</target_html_blob_sha>
+    <google_drive_policy>NO_CREATE_UPDATE_DELETE_BEFORE_EXPLICIT_USER_APPROVAL</google_drive_policy>
+    <raw_live_html_materialized>false</raw_live_html_materialized>
+    <live_extraction_mode>RENDERED_SEMANTIC_DOM</live_extraction_mode>
+    <dark_html_fallback>pages/engagement/audiences/mickael-umt.com.html</dark_html_fallback>
+  </request_basis>
+
+  <v4_reference_contract source=".skills/source-first-atomic-design-v4/SKILL.md">
+    <canonical_full_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical_full_order>
+    <section token="0" key="hero"/><section token="11" key="triggers"/><section token="20" key="problems"/><section token="13" key="audience"/><section token="14" key="qualification"/><section token="1" key="proposition"/><section token="2" key="value"/><section token="10" key="offers"/><section token="15" key="product"/><section token="3" key="transformation"/><section token="12" key="before_after"/><section token="19" key="results"/><section token="4" key="proof"/><section token="16" key="scope"/><section token="17" key="phases"/><section token="18" key="modules"/><section token="5" key="capabilities"/><section token="21" key="intersection"/><section token="6" key="benchmark"/><section token="22" key="guarantee"/><section token="23" key="faq"/><section token="7" key="engagement"/><section token="8" key="lead_form"/>
+    <source_owner expertise="S-series" programme="P-series" regulated_programme="R-series"/>
+    <hard_dna>D0-D3 structure_family, topology, content_anatomy, primary_interaction_model</hard_dna>
+    <subset_rule>Complete 23-section buyer journey OR justified subset. Current rendered live structure outranks stale planning assumptions.</subset_rule>
+  </v4_reference_contract>
+
+  <live_reference_surfaces>
+    <surface path="/expertises/" url="https://mickael-umt.com/expertises/" type="HUB" justified_subset="true">
+      <section order="1" token="0" key="hero" form="headline + positioning"/>
+      <section order="2" token="10" key="offers" form="10 expertise route cards + 3 category switches"/>
+      <section order="3" token="5" key="capabilities" form="16-capability ranked/filterable CV evidence matrix"/>
+      <section order="4" token="6" key="benchmark" form="2026 compensation benchmark + sourced boxplots"/>
+      <section order="5" token="14" key="qualification" form="expertise matching intro"/>
+      <section order="6" token="8" key="lead_form" form="8-screen site qualifier"/>
+      <interaction_contract id="site-qualifier-8-screen-v1" screens="8"/>
+    </surface>
+    <surface path="/programme/" url="https://mickael-umt.com/programme/" type="HUB" justified_subset="true">
+      <path_note>/programmes/ was requested; current canonical live path is singular /programme/.</path_note>
+      <section order="1" token="0" key="hero" form="bounded-mandate positioning"/>
+      <section order="2" token="10" key="offers" form="APA + PEA programme cards"/>
+      <section order="3" token="7" key="engagement" form="fallback mission route + next step"/>
+      <section order="4" token="14" key="qualification" form="programme-vs-mission decision framing"/>
+      <section order="5" token="8" key="lead_form" form="8-screen site qualifier"/>
+      <interaction_contract id="site-qualifier-8-screen-v1" screens="8"/>
+    </surface>
+  </live_reference_surfaces>
+
+  <live_page_xml source_kind="RENDERED_SEMANTIC_DOM" url="https://mickael-umt.com/engagement/audiences/" target_fragment="avatar-agentic-ai" raw_origin_html_materialized="false">
+    <section order="1" key="decision-profiles" form="audience hero"><heading>Dix profils pour lesquels la combinaison de compétences crée le plus de levier.</heading></section>
+    <section order="2" key="audience-cards" form="10 avatar cards">
+      <avatar order="1" fragment="avatar-agentic-ai" name="Claire Dumas" role="CTO / Head of AI Platform"><before>Des agents expérimentaux, une architecture non documentée et des dépendances que personne ne maîtrise vraiment.</before><after>Une architecture documentée, une responsabilité explicite et des évaluations reproductibles que votre équipe peut réellement maintenir.</after><route>Agentic AI Engineering</route></avatar>
+    </section>
+    <section order="3" key="problem-before-profile" form="problem-first bridge + 3 decision roles"><decision_role>Décideur</decision_role><decision_role>Advocate</decision_role><decision_role>Champion</decision_role></section>
+    <section order="4" key="qualifier" form="8-screen site qualifier" screens="8"><screen order="1" role="need_scope"/><screen order="2" role="timing_and_decision_role"/><screen order="3" role="engagement_mode"/><screen order="4" role="weekly_cadence"/><screen order="5" role="organisation_size"/><screen order="6" role="scope_maturity"/><screen order="7" role="inspection_validation_trigger"/><screen order="8" role="contact_and_consent"/></section>
+    <footer form="site footer"/>
+  </live_page_xml>
+
+  <repository_html_xml source_kind="GITHUB_HTML" path="engagement/audiences/avatar-agentic-ai.html" blob_sha="6321d873f79f9483e143d03c79f4c44707e86ae8" topology_sha256="93166d3adf239356bb2e94339ff6c2fff4f26c4b5227fe06bdf5fe3c68a1e6d4" theme="dark" customer_avatar_schema="2.0" publication_status="PENDING_FORMAL_LLM_JUDGE">
+    <main id="avatar-agentic-ai">
+      <section order="1" id="__anonymous_section_001" semantic="hero" mapped_token="0" form="role-first hero + synthetic quote + status"/>
+      <section order="2" id="identity" semantic="demographics_interests" mapped_token="13" form="evidence-aware identity grid"/>
+      <section order="3" id="tensions" semantic="frustrations_fears" mapped_token="20" form="tension cards"/>
+      <section order="4" id="aspirations" semantic="wants_aspirations" mapped_token="2,3" form="desired-state cards"/>
+      <section order="5" id="drivers" semantic="key_purchase_drivers" mapped_token="14" form="must-haves + service quality + purchase conditions"/>
+      <section order="6" id="before-after" semantic="before_after" mapped_token="12" form="same-axis transformation"/>
+      <section order="7" id="evidence" semantic="proof" mapped_token="4" form="EU/EUG evidence + bounded disclosures"/>
+      <section order="8" id="capability" semantic="capabilities" mapped_token="5" form="public + confidential implementation proof"/>
+      <section order="9" id="qualification" semantic="decision_unit_and_fit" mapped_token="14,7" form="fit/role/next-step"/>
+      <section order="10" id="references" semantic="level_2_evidence" mapped_token="4" form="source register"/>
+    </main>
+    <form_inheritance><rule>Do not duplicate the parent 8-screen form inside the avatar review artifact; preserve the live parent-page interaction and CTA route.</rule><parent_url>https://mickael-umt.com/engagement/audiences/</parent_url><cta_url>https://mickael-umt.com/qualification/</cta_url></form_inheritance>
+  </repository_html_xml>
+
+  <positioning_lock>
+    <avatar name="Claire Dumas" role="CTO / Head of AI Platform" epistemic_status="ROLE_FIRST_PARTIAL_EVIDENCE"/>
+    <offer name="Agentic AI Engineering"><promise>Transformer des agents prometteurs en services observables, contrôlables et exploitables.</promise><result>Une architecture d’agents avec permissions explicites, mémoire gouvernée, évaluations, supervision humaine et preuves d’exécution.</result><stack>Python · FastAPI · MCP · RAG · evaluation harnesses · PostgreSQL</stack></offer>
+    <programme name="AI Production Assurance" relation="ALTERNATIVE_BOUNDED_MANDATE"/>
+    <public_implementation_proof><project name="AI/RAG Experiment Portfolio" provenance="28 RickOwri commits" stack="Python · RAG · Chroma · LlamaIndex · LangChain · Scrapy"/><project name="Streamlit LangChain Prototype" provenance="7/7 RickOwri commits" stack="Python · Streamlit · Docker · GitLab CI"/><project name="Governed AI Operations" provenance="confidential R&amp;D" stack="Python · FastAPI · PostgreSQL · MCP · IAM"/></public_implementation_proof>
+  </positioning_lock>
+
+  <evidence_selection policy="CLAIM_DRIVEN_NO_SECTION_QUOTA">
+    <candidate id="EU-CANON-BOUNDED-AGENTS-EXFIL-2026" status="ADMITTED_ALLOWED" champion_score="96" use="external_authorization benchmark evidence"><boundary>Preprint and benchmark-protocol result; not a universal production-security guarantee.</boundary></candidate>
+    <candidate id="EU-AGENTIC-NIST-TEVV-4-STAGES-2026" status="ADMITTED_ALLOWED" champion_score="96" use="context-specific agentic assessment method"><boundary>Official draft methodology; not proof of consulting outcome.</boundary></candidate>
+    <candidate id="EU-AGENTIC-AGENTDOJO-629-2024" status="ADMITTED_ALLOWED" champion_score="97" use="tool-using agent security evaluation scale"><boundary>Peer-reviewed benchmark scope; not a production incident rate.</boundary></candidate>
+    <candidate id="EU-SG-004" status="ADMITTED_ALLOWED" champion_score="97" use="traces + sandbox logs observability guidance"><boundary>Operational guidance; not a quantified audit-success or response-time effect.</boundary></candidate>
+  </evidence_selection>
+
+  <policy_resolution current_true_only="true">
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" version="2.0"/><policy id="policy:evidence-agent-exploitability:proof-carrying-v3" version="3.0"/><policy id="policy:evidence-judge-applicability:v2" version="2.0"/><policy id="policy:evidence-judge-verdict-normalization:v2" version="2.0"/><policy id="policy:llm-judge:deterministic-execution-v2" version="2.0" replicas="3" temperature="0" top_p="1"/><policy id="evidence-placement-policy:site-v5" version="5.0"/><policy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2"/>
+    <judge requested_id="judge:eu:placementv1" current="false_or_absent" resolution="SUPERSEDED_OR_NOT_CURRENT"/>
+    <judge id="judge:evidence-placement:presentation-v1.2" version="1.2" current="true" replicas="3" temperature="0" top_p="1"/>
+  </policy_resolution>
+
+  <validation><deterministic_structure status="PASS"/><target_scope status="PASS"/><canonical_reference_contract status="PASS"/><live_parent_form_preservation status="PASS"/><repository_topology_preservation status="PASS"/><formal_placement_judge status="PENDING_NOT_FABRICATED"/><publication status="BLOCKED_PENDING_3_REPLICA_PLACEMENT_JUDGE"/></validation>
+</section_contract_audit>
