@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validationReport id="ai-security-avatar-contract" status="PASS" scope="deterministic-structure-and-manifest">
+  <target path="engagement/audiences/avatar-ai-security.html" sha256="b2d51d42db635e1e20aed4af8d86126b1258322dfe88fe019d99295c47924d5f" sectionCount="18" anchorCount="17" xpathUniqueness="PASS" />
+  <candidate path="engagement/audiences/avatar-ai-security-customer-avatar.html" sha256="95a1f24feba0c16a07cb1d2aa0401e56ea81aef43f760883f1216972dcbc5b9e" />
+  <customerAvatar contract="contract:customer-avatar:audiences:2026-09-03" status="PASS" />
+  <evidence units="9" graphs="3" upstreamAdmission="REUSED_CURRENT_ADMITTED" />
+  <publication deterministicPreflight="PASS" semanticPlacementReplicas="REQUIRED" finalPass="false" state="REVIEW_ONLY" />
+  <boundary>This CI validates deterministic topology, manifests and XPath-equivalent uniqueness. It does not fabricate the required three independent semantic placement-judge replicas.</boundary>
+</validationReport>
