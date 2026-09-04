@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page-structure-snapshot
+  schema-version="1.0"
+  page-family="S-series"
+  source-kind="LIVE_SITE"
+  source-authority="mickael-umt.com"
+  url="https://mickael-umt.com/expertises/ai-security/"
+  captured-date="2026-09-04"
+  extraction-method="live-crawl-visible-structure"
+  raw-html-byte-snapshot="UNAVAILABLE_IN_CURRENT_CONNECTOR"
+  semantic-contract-status="PASS_23_OF_23">
+
+  <scope>
+    <only-page>/expertises/ai-security/</only-page>
+    <mutation>NONE</mutation>
+    <note>This snapshot records the current live page structure only. It does not authorize changes to any other expertise or programme page.</note>
+  </scope>
+
+  <offer-source code="SG">
+    <title>AI Security, Assurance &amp; DevSecOps</title>
+    <promise>Faire de la sécurité une condition de promotion, pas un rapport tardif.</promise>
+    <result>Quality gates couvrant code, agents, MCP, connecteurs, infrastructure, dépendances et smart contracts.</result>
+    <format>3–6 mois · 2–4 jours/semaine · assurance et industrialisation</format>
+    <decision-role>Responsable gouvernance, risque ou sécurité IA</decision-role>
+    <stack>Jenkins · Terraform · Docker · Trivy · SBOM · policy gates · threat modelling</stack>
+  </offer-source>
+
+  <local-anchor-topology count="17" preservation="REQUIRED">
+    <anchor order="1" label="Déclencheurs" semantic-token="11"/>
+    <anchor order="2" label="Conséquences" semantic-token="20"/>
+    <anchor order="3" label="Pour qui" semantic-token="13"/>
+    <anchor order="4" label="Qualification" semantic-token="14"/>
+    <anchor order="5" label="Proposition" semantic-token="01"/>
+    <anchor order="6" label="Offres" semantic-token="10"/>
+    <anchor order="7" label="Livrables" semantic-token="15"/>
+    <anchor order="8" label="Avant / après" semantic-token="12"/>
+    <anchor order="9" label="Résultats" semantic-token="19"/>
+    <anchor order="10" label="Preuves" semantic-token="04"/>
+    <anchor order="11" label="Périmètre" semantic-token="16"/>
+    <anchor order="12" label="Déroulé" semantic-token="17"/>
+    <anchor order="13" label="Modules" semantic-token="18"/>
+    <anchor order="14" label="Intersection" semantic-token="21"/>
+    <anchor order="15" label="Engagements" semantic-token="22"/>
+    <anchor order="16" label="Questions" semantic-token="23"/>
+    <anchor order="17" label="Engagement" semantic-token="07"/>
+  </local-anchor-topology>
+
+  <canonical-semantic-sequence expected-count="23" observed-count="23" order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8">
+    <section order="1" token="00" canonical="hero" presence="DIRECT" live-lines="60-82">
+      <form>hero + mandate-summary</form>
+      <heading>La sécurité post-déploiement est une autopsie. Faites-en une condition de release.</heading>
+    </section>
+    <section order="2" token="11" canonical="triggers" presence="DIRECT" live-lines="83-103">
+      <form>four dated trigger cards</form>
+      <heading>Vous reconnaissez l’un de ces moments, ou ce n’est pas encore le sujet.</heading>
+    </section>
+    <section order="3" token="20" canonical="problems" presence="DIRECT_ALIAS" live-lines="105-129" live-label="Conséquences">
+      <form>problem + workaround-limit pairs</form>
+      <heading>Ce que ça coûte, et pourquoi le contournement évident ne tient pas.</heading>
+    </section>
+    <section order="4" token="13" canonical="audience" presence="DIRECT_ALIAS" live-lines="131-145" live-label="Pour qui">
+      <form>decision-avatar before/after card</form>
+      <heading>Le décideur qui achète ce mandat, et ce qui pèse sur lui.</heading>
+    </section>
+    <section order="5" token="14" canonical="qualification" presence="DIRECT" live-lines="147-162">
+      <form>good-fit / no-fit gates</form>
+      <heading>Les conditions, avant de réserver quoi que ce soit.</heading>
+    </section>
+    <section order="6" token="01" canonical="proposition" presence="DIRECT" live-lines="164-171">
+      <form>mechanism statement</form>
+      <heading>Faire de la sécurité une condition de promotion, pas un rapport tardif.</heading>
+    </section>
+    <section order="7" token="02" canonical="value" presence="DIRECT_NESTED_AFTER_PROPOSITION" live-lines="173-196">
+      <form>four purchase attributes: functional, brand, influence, transactional</form>
+      <heading>Quatre attributs, quatre questions d’achat.</heading>
+    </section>
+    <section order="8" token="10" canonical="offers" presence="DIRECT" live-lines="198-203">
+      <form>configuration selector / pricing route</form>
+      <heading>Quelle configuration, et combien.</heading>
+    </section>
+    <section order="9" token="15" canonical="product" presence="DIRECT_ALIAS" live-lines="205-227" live-label="Livrables">
+      <form>three handoff artifacts</form>
+      <heading>Ce qui existe à la fin et n’existait pas avant.</heading>
+    </section>
+    <section order="10" token="03" canonical="transformation" presence="DIRECT" live-lines="229-238">
+      <form>state-shift arrow</form>
+      <heading>Ce que le mandat déplace.</heading>
+    </section>
+    <section order="11" token="12" canonical="before_after" presence="DIRECT" live-lines="240-274">
+      <form>same-axis comparison table</form>
+      <heading>Les mêmes axes, avant et après.</heading>
+    </section>
+    <section order="12" token="19" canonical="results" presence="DIRECT" live-lines="276-298">
+      <form>acceptance criteria + implemented example</form>
+      <heading>Ce qui est visé, et de quel type.</heading>
+    </section>
+    <section order="13" token="04" canonical="proof" presence="DIRECT_ALIAS" live-lines="300-330" live-label="Preuves">
+      <form>public project + certificate + confidential R&amp;D + explicit proof gap</form>
+      <heading>Des preuves proportionnées à la promesse.</heading>
+    </section>
+    <section order="14" token="16" canonical="scope" presence="DIRECT" live-lines="332-352">
+      <form>in / out / client-dependency boundary</form>
+      <heading>Le périmètre, ses exclusions et ses dépendances.</heading>
+    </section>
+    <section order="15" token="17" canonical="phases" presence="DIRECT_ALIAS" live-lines="354-388" live-label="Déroulé">
+      <form>four stoppable phases with artifacts</form>
+      <heading>Quatre phases, quatre sorties possibles.</heading>
+    </section>
+    <section order="16" token="18" canonical="modules" presence="DIRECT" live-lines="390-409">
+      <form>risk-selected work blocks</form>
+      <heading>Les blocs de travail, sans ordre imposé.</heading>
+    </section>
+    <section order="17" token="05" canonical="capabilities" presence="DIRECT" live-lines="411-423">
+      <form>CV-ranked capability proof</form>
+      <heading>Les capacités engagées, et la mission où chacune a été exercée.</heading>
+    </section>
+    <section order="18" token="21" canonical="intersection" presence="DIRECT" live-lines="425-437">
+      <form>skill-braid / seam-removal explanation</form>
+      <heading>Le différenciateur est le croisement, pas l’addition.</heading>
+    </section>
+    <section order="19" token="06" canonical="benchmark" presence="DIRECT" live-lines="439-455" evidence-use="OBSERVED_LIVE_COPY_NOT_REENDORSED">
+      <form>market reference card</form>
+      <heading>Où se situe le marché, et ce que ce repère ne dit pas.</heading>
+      <boundary>The live page reports 750 EUR HT/day median, IQR 630–880, n=86, verified 2026-07-22. This snapshot records the live structure and does not independently re-admit that benchmark as current EvidenceUnit proof.</boundary>
+    </section>
+    <section order="20" token="22" canonical="guarantee" presence="DIRECT_ALIAS" live-lines="459-487" live-label="Engagements">
+      <form>work-product guarantees + explicit non-guarantees</form>
+      <heading>Ce qui est garanti est le produit de travail, jamais le résultat d’une autorité.</heading>
+    </section>
+    <section order="21" token="23" canonical="faq" presence="DIRECT_ALIAS" live-lines="489-506" live-label="Questions">
+      <form>four objection questions</form>
+      <heading>Ce qui reste à lever.</heading>
+    </section>
+    <section order="22" token="07" canonical="engagement" presence="DIRECT" live-lines="508-521">
+      <form>20-minute fit/no-fit next step</form>
+      <heading>Évaluer la mission en 20 minutes</heading>
+    </section>
+    <section order="23" token="08" canonical="lead_form" presence="DIRECT_AFTER_ENGAGEMENT" live-lines="522-647">
+      <form>eight-screen qualification flow</form>
+      <heading>Le bon format d’intervention, avant le premier rendez-vous.</heading>
+    </section>
+  </canonical-semantic-sequence>
+
+  <structure-verdict>
+    <anchor-topology>PASS_17_OF_17</anchor-topology>
+    <semantic-canon>PASS_23_OF_23</semantic-canon>
+    <positioning-loss>NONE_DETECTED_AT_SEMANTIC_SECTION_LEVEL</positioning-loss>
+    <publication-authority>LIVE_SITE_IS_REFERENCE_FOR_STRUCTURE_AND_SECTION_FORMS</publication-authority>
+  </structure-verdict>
+</page-structure-snapshot>
