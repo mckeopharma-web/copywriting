@@ -1,0 +1,602 @@
+{
+  "artifact_type": "CopywritingPageSpecification",
+  "schema_id": "devicev-copywriting-page-v1",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-04T15:37:00+02:00",
+  "target": {
+    "page_url": "https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/",
+    "page_path": "/programme/pharmaceutical-evidence-assurance/",
+    "page_id": "page:source:16.1",
+    "scope": "PROGRAMME",
+    "scope_lock": "THIS_PAGE_ONLY",
+    "other_page_cud": "FORBIDDEN",
+    "language": "fr",
+    "language_resolution": "Le français est conservé car la page live est la source de vérité. Le fallback GitHub anglais n'est pas utilisé comme autorité de copy car l'audit courant signale une divergence de positionnement.",
+    "theme_reference": "dark/night",
+    "raw_live_html": {
+      "status": "UNAVAILABLE_HTTP_403",
+      "fallback": "structured rendered-page extraction + current repository topology contract",
+      "byte_identical_claim": false
+    }
+  },
+  "source_of_truth": {
+    "site": "mickael-umt.com",
+    "github": {
+      "repository": "mckeopharma-web/copywriting",
+      "branch": "pea-section-contract-20260904",
+      "html_reference_path": "pages/programme/pharmaceutical-evidence-assurance.html",
+      "html_reference_blob_sha": "37e1bee277de8969b3935cfcd721819b468f3fa7",
+      "contract_audit_path": "pages/programme/pharmaceutical-evidence-assurance.contract-audit.xml",
+      "contract_audit_blob_sha": "1c37ed831fec5a3ab1269c368d8c81f8cafbd826"
+    },
+    "neofort": {
+      "page_node": "page:source:16.1",
+      "inductive_avatar": {
+        "id": "avatar:healthtech:reg-csv:v1",
+        "working_name": "Dr. Antoine Moreau",
+        "public_role": "Directeur qualité / CSV",
+        "trigger": "Inspection, deviation or validation pressure",
+        "decision_role_classification": "UNKNOWN_NOT_INFERRED",
+        "demographics_status": "MISSING_NOT_INFERRED",
+        "public_copy_rule": "Utiliser rôle + déclencheur + responsabilité; ne pas publier un nom de travail ou des données démographiques non observées comme des faits."
+      }
+    }
+  },
+  "positioning": {
+    "category": "Pharmaceutical AI Decision Assurance",
+    "offer_type": "sprint borné de conseil et d'assurance technique sur six semaines",
+    "primary_buyer_system": "Quality / CSV / rôle en interface avec le QP + co-propriétaire technique + propriétaire du workflow pharmaceutique + rôle d'adoption",
+    "jtbd": "Rendre une décision pharmaceutique matérielle reconstructible à travers les preuves, transformations, contrôles, état IA/outils, exceptions et jugement humain responsable avant de promouvoir davantage l'automatisation.",
+    "desired_state": "Une chaîne preuve-vers-décision révisable avec droits de décision explicites, contrôles IA/data bornés, critères d'acceptation, exceptions et passation.",
+    "non_negotiable_boundary": "Le programme ne certifie ni ne libère un lot, ne remplace aucune autorité pharmaceutique statutaire, ne fournit pas d'avis juridique et ne garantit aucun résultat réglementaire ou business.",
+    "differentiation": "Traiter dans le même engagement l'architecture de décision pharmaceutique, l'ingénierie data/preuve, l'assurance IA et le transfert opérationnel.",
+    "forbidden_claim_patterns": [
+      "100% auditable",
+      "rejouable instantanément",
+      "détection avant l'inspecteur",
+      "conformité garantie",
+      "inspection garantie",
+      "ROI déterministe sans baseline",
+      "l'IA réduit automatiquement le temps ou le coût de revue",
+      "le modèle décide",
+      "tout usage IA pharmaceutique est high-risk au sens de l'AI Act"
+    ]
+  },
+  "policy_resolution": {
+    "authority": "@neofort",
+    "selector": "current=true",
+    "execution_posture": "FAIL_CLOSED",
+    "resolved": [
+      {"id":"policy:evidence-agent-exploitability:deterministic-preflight-v2","version":"2.0"},
+      {"id":"policy:evidence-agent-exploitability:proof-carrying-v3","version":"3.0"},
+      {"id":"policy:evidence-judge-applicability:v2","version":"2.0"},
+      {"id":"policy:evidence-judge-verdict-normalization:v2","version":"2.0"},
+      {"id":"policy:evidence-placement:claim-span-entailment-v2","version":"2.2"},
+      {"id":"evidence-placement-policy:site-v5","version":"5.0"},
+      {"id":"policy:llm-judge:deterministic-execution-v2","version":"2.0"},
+      {"id":"judge:evidence:factfulness-epistemology-methodology-v2","version":"2.0","pass_threshold":90},
+      {"id":"judge:evidence-unit:champion-v2","version":"2.0","champion_threshold":85},
+      {"id":"judge:evidence-placement:presentation-v1.2","version":"1.2","pass_threshold":85,"champion_threshold":95}
+    ],
+    "judge_execution": {"replicas":3,"temperature":0,"top_p":1,"boolean_reducer":"AND","score_reducer":"MIN","categorical_disagreement":"BLOCK","majority_vote":"FORBIDDEN"},
+    "requested_alias": {"id":"judge:eu:placementv1","resolution":"NOT_FOUND_AS_CURRENT_JUDGE","effective_current_judge":"judge:evidence-placement:presentation-v1.2"}
+  },
+  "landing_page_skill": {
+    "repository_skill": ".skills/landingpage.md",
+    "devicev_skill": ".skills/devicev-evidence-copywriting/SKILL.md",
+    "structure_lock": true,
+    "section_delta_allowed": 0,
+    "section_reorder_allowed": false,
+    "generic_19_section_template_forbidden": true,
+    "copy_operations": "C1-C19 adapted to the existing semantic slots",
+    "evidence_first": true,
+    "copy_strength_must_not_exceed_evidence_strength": true
+  },
+  "structure_contract": {
+    "section_count": 23,
+    "order": [0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8],
+    "slots": ["hero","triggers","problems","audience","qualification","proposition","value","offers","product","transformation","before_after","results","proof","scope","phases","modules","capabilities","intersection","benchmark","guarantee","faq","engagement","lead_form"],
+    "source": "current GitHub contract audit / source-first-atomic-design-v4",
+    "live_form_requirement": "PRESENT_AND_MUST_BE_PRESERVED"
+  },
+  "evidence_catalog": [
+    {
+      "eu_id":"EU-HT-EMA-FDA-GOOD-AI-2026",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":94,"placement":"PENDING"},
+      "epistemic_status":"NORMATIVE",
+      "source":"EMA + FDA — Guiding principles of good AI practice in drug development",
+      "period":"January 2026; EMA AI page updated 2026-08-14",
+      "population":"AI technologies used to generate or analyse evidence across the medicines product lifecycle",
+      "source_url":"https://www.ema.europa.eu/system/files/documents/other/2026-01-13_ai-guiding-principles_ema-fda_en.pdf",
+      "supported_proposition":"Risk-based validation/oversight, traceable provenance and analytical decisions, complete-system assessment including human-AI interaction, and lifecycle monitoring/re-evaluation.",
+      "boundary":"Normative principles; no clinical, commercial or universal legal-classification outcome.",
+      "page_use":["hero_support","proposition","modules","faq"]
+    },
+    {
+      "eu_id":"EU-REGCSV-EC-ANNEX11-RISK-2026",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"CHAMPION_PASS","champion_score":94,"placement":"PENDING"},
+      "epistemic_status":"NORMATIVE",
+      "source":"European Commission — EudraLex Volume 4 Annex 11",
+      "period":"Current status verified 2026-09-03; revision 2011",
+      "population":"Computerised systems used as part of GMP-regulated activities",
+      "source_url":"https://health.ec.europa.eu/document/download/8d305550-dd22-4dad-8463-2ddb4a1345f1_en",
+      "supported_proposition":"Lifecycle risk management; validation and data-integrity controls based on justified documented risk assessment; lifecycle traceability of user requirements; defined responsibilities.",
+      "boundary":"GMP computerised-system scope only.",
+      "page_use":["proposition","audience","scope","phases","faq"]
+    },
+    {
+      "eu_id":"EU-SG-003",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":97,"placement":"PENDING"},
+      "epistemic_status":"NORMATIVE",
+      "source":"UK NCSC — Managing the cyber risk of agentic AI",
+      "period":"2026-08-20",
+      "population":"Agentic-AI system designers and operators",
+      "source_url":"https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai",
+      "supported_proposition":"Threat modelling before deployment should consider the prompt and reachable networks/services.",
+      "boundary":"No quantified incident-reduction effect.",
+      "page_use":["offers_control_production","modules_ai_controls"]
+    },
+    {
+      "eu_id":"EU-SG-004",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":97,"placement":"PENDING"},
+      "epistemic_status":"NORMATIVE",
+      "source":"UK NCSC — agentic-AI observability guidance",
+      "period":"2026-08-20",
+      "population":"Operating agentic-AI systems",
+      "source_url":"https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai",
+      "supported_proposition":"Agent traces/transcripts and sandbox logs support active oversight and later investigation; logs should be protected.",
+      "boundary":"Operational guidance, not quantified audit or response-time evidence.",
+      "page_use":["offers_control_production","modules_ai_controls","product"]
+    },
+    {
+      "eu_id":"EU-SG-007",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":96,"placement":"PENDING"},
+      "epistemic_status":"NORMATIVE",
+      "source":"UK NCSC — network-isolation maturity model",
+      "period":"2026-08-20",
+      "population":"Agentic-AI network sandboxing configurations described by NCSC",
+      "source_url":"https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai",
+      "supported_proposition":"Four isolation levels range from unrestricted access to no external network access with local model hosting.",
+      "boundary":"Maturity-model structure, not a quantified security-effect curve.",
+      "page_use":["offers_control_production","modules_ai_controls"]
+    },
+    {
+      "eu_id":"EU-SG-005",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":98,"placement":"PENDING"},
+      "epistemic_status":"NORMATIVE",
+      "source":"European Commission — AI Act overview",
+      "period":"Retrieved 2026-09-03",
+      "population":"AI systems classified under the EU AI Act; cited requirements limited to high-risk systems",
+      "source_url":"https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "supported_proposition":"The Commission distinguishes four risk levels and lists logging, human oversight, robustness and cybersecurity among high-risk requirements.",
+      "boundary":"Classification and transition rules determine obligations; no legal advice.",
+      "page_use":["faq_ai_act"]
+    },
+    {
+      "eu_id":"EU-AGENTIC-NIST-AIRMF-4-FUNCTIONS",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":97,"placement":"PENDING"},
+      "epistemic_status":"OBSERVED",
+      "source":"NIST — AI RMF 1.0",
+      "period":"Published 2023-01-26; current at 2026-09-03 retrieval",
+      "population":"NIST AI RMF 1.0 Core",
+      "source_url":"https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "supported_proposition":"AI risk management is organised into Govern, Map, Measure and Manage and is not an ordered checklist.",
+      "boundary":"Voluntary cross-sector guidance; no business-outcome proof.",
+      "page_use":["proposition","modules_ai_governance"]
+    },
+    {
+      "eu_id":"EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":96,"placement":"PENDING"},
+      "epistemic_status":"OBSERVED",
+      "source":"NIST — TEVV-Athlon framework",
+      "period":"2026-08-07; page updated 2026-08-14",
+      "population":"NIST TEVV-Athlon initial public draft",
+      "source_url":"https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+      "supported_proposition":"A four-stage method is described for context-specific AI assessment, including agentic systems in scope.",
+      "boundary":"Draft methodology; does not prescribe this six-week offer or prove outcomes.",
+      "page_use":["modules_evaluation","phases"]
+    },
+    {
+      "eu_id":"EU-CANON-BOUNDED-AGENTS-EXFIL-2026",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":96,"placement":"PENDING"},
+      "epistemic_status":"COMPARATIVE",
+      "source":"Open research — external-authorization evaluation",
+      "period":"Preprint submitted 2026-08-16",
+      "source_url":"https://arxiv.org/abs/2608.15888",
+      "boundary":"Benchmark/protocol-bounded preprint; no universal production-security inference.",
+      "page_use":[],
+      "placement_decision":"NOT_SELECTED_FOR_PUBLIC_PEA_COPY_DOMAIN_MISMATCH"
+    },
+    {
+      "eu_id":"EU-AISEC-RUN-22",
+      "status":{"current":true,"preflight":"PASS","factfulness":"PASS","factfulness_score":100,"agent_exploitability":"ALLOWED","admission":"ADMITTED","champion_score":95,"placement":"PENDING"},
+      "epistemic_status":"OBSERVED_SOURCE_REPORTED",
+      "source":"Open research — schema-aware argument minimisation for MCP",
+      "period":"2026-08-25",
+      "population":"25 unannotated MCP schemas in the study",
+      "source_url":"https://arxiv.org/abs/2608.24957",
+      "boundary":"Study-specific privacy-cost metric; no universal privacy, incident or business outcome.",
+      "page_use":[],
+      "placement_decision":"NOT_SELECTED_FOR_PUBLIC_PEA_COPY_DOMAIN_MISMATCH_AND_NUMERIC_OVERREACH_RISK"
+    }
+  ],
+  "sections": [
+    {
+      "position":0,"canonical_id":0,"slot":"hero",
+      "buyer_question":"Que fait ce programme pour une décision pharmaceutique assistée par l'IA, et où s'arrête-t-il ?",
+      "nlp_role":"problem_reframe+offer_definition+boundary+cta",
+      "commercial_role":"establish_fit_and_safe_value",
+      "copy":{
+        "eyebrow":"PEA · Programme régulé · sprint borné de 6 semaines",
+        "product_name":"Pharmaceutical AI Decision Assurance",
+        "headline":"Intégrez l’IA à un workflow pharmaceutique borné sans perdre la chaîne de preuve ni l’autorité de décision humaine.",
+        "lead":"En six semaines, cartographiez une décision critique, ses sources, transformations, contrôles, permissions, exceptions et validations, puis définissez ce qui peut être automatisé — et ce qui doit rester sous autorité pharmaceutique.",
+        "boundary":"Mission de conseil et d’assurance technique. Elle ne certifie ni ne libère un lot, ne remplace pas le QP ou le pharmacien responsable et ne garantit aucun résultat d’inspection, d’autorisation ou de performance.",
+        "primary_cta":"Évaluer la mission",
+        "secondary_cta":"Voir le périmètre et les livrables",
+        "tertiary_cta":"Télécharger la note de périmètre",
+        "mandate":"Un sprint porte sur une décision, un produit, un workflow ou un événement critique clairement borné. La viabilité et le périmètre sont revus à la fin de la semaine 2 avant de poursuivre les phases d’implémentation."
+      },
+      "evidence_bindings":["EU-HT-EMA-FDA-GOOD-AI-2026"],
+      "claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":1,"canonical_id":11,"slot":"triggers",
+      "buyer_question":"Dans quelles situations le sprint mérite-t-il d'être évalué ?",
+      "nlp_role":"trigger_recognition","commercial_role":"self_qualification",
+      "copy":{
+        "heading":"Considérez le sprint lorsqu’une décision critique devient difficile à reconstruire ou à contrôler.",
+        "intro":"Ces scénarios sont des portes d’entrée de qualification, pas des fréquences de marché ni des preuves qu’un audit échouera.",
+        "items":[
+          ["Inspection annoncée","Montrer rapidement quelles preuves, décisions et responsabilités sont réellement reconstructibles."],
+          ["Revue ou disposition de lot ralentie","Le contexte existe mais reste dispersé entre systèmes, documents ou responsables."],
+          ["Déviation ou CAPA récurrente","Relier événement, action, effet attendu et décision reste difficile."],
+          ["Transfert technologique","Le processus change de site ou de partenaire et le raisonnement doit rester portable."],
+          ["Préparation d’un lancement","Une étape critique approche alors que le chemin de preuve dépend encore de connaissances tacites."],
+          ["Frontière MAH–CDMO","L’exécution est partagée ou externalisée et les responsabilités, sources et escalades doivent être explicites."],
+          ["OOS / OOT répétés","Des événements comparables sont traités avec des classifications ou contextes différents."],
+          ["Promotion d’un workflow assisté par l’IA","Sources, versions, permissions, évaluations ou approbations humaines ne sont pas encore suffisamment reconstructibles."]
+        ]
+      },
+      "evidence_bindings":[],"claim_status":"DESCRIPTIVE_PROGRAMME_SCOPE"
+    },
+    {
+      "position":2,"canonical_id":20,"slot":"problems",
+      "buyer_question":"Quel problème de décision le programme traite-t-il ?",
+      "nlp_role":"problem_decomposition","commercial_role":"make_pain_concrete_without_fear",
+      "copy":{
+        "heading":"Une décision devient difficile à défendre lorsque preuve, transformation, contrôle et responsabilité ne restent plus reliés.",
+        "intro":"Le programme ne suppose pas que l’IA est le problème. Il cherche les ruptures qui empêchent de reconstruire qui a utilisé quelle source, sous quelle règle, avec quelle exception et sous quelle autorité.",
+        "items":[
+          "Sources concurrentes entre eQMS, LIMS, MES, dossiers de lot, feuilles de calcul, e-mails ou portails partenaires.",
+          "Transformations ou règles de calcul insuffisamment versionnées.",
+          "Critères d’acceptation ou d’escalade non reliés au risque produit.",
+          "Responsabilités MAH, site, CDMO, Quality, IT et QP insuffisamment explicites pour le workflow étudié.",
+          "Sortie IA plausible mais source, modèle, outil, permission ou validation humaine difficile à reconstruire.",
+          "Évaluation technique détachée de la criticité pharmaceutique.",
+          "Preuve assemblée tardivement au lieu d’être conçue comme partie du workflow.",
+          "Décisions répétées dont le contexte n’est pas suffisamment réutilisable.",
+          "Transfert opérationnel dépendant d’une personne plutôt que d’un dossier contrôlé.",
+          "Risque résiduel accepté sans propriétaire, justification ou condition de réévaluation explicitée."
+        ]
+      },
+      "evidence_bindings":["EU-REGCSV-EC-ANNEX11-RISK-2026","EU-HT-EMA-FDA-GOOD-AI-2026"],
+      "claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":3,"canonical_id":13,"slot":"audience",
+      "buyer_question":"Qui porte la décision et qui doit co-construire le contrôle ?",
+      "nlp_role":"decision_unit_definition","commercial_role":"multi_stakeholder_targeting",
+      "copy":{
+        "heading":"Une unité de décision, pas un acheteur isolé.",
+        "intro":"Le programme équipe l’autorité pharmaceutique, le co-propriétaire technique et le propriétaire du workflow sans les fusionner en un rôle fictif.",
+        "roles":[
+          ["Autorité qualité / CSV / rôle en interface avec le QP","Périmètre GxP borné, risque justifié, critères de revue et risque résiduel explicite."],
+          ["CTO / Enterprise Architecture / Data Platform","Frontières implémentables : données, IAM, logs, outils, évaluations, observabilité, promotion et rollback."],
+          ["Pharmaceutical Operations / CMC / site quality","Chemin de preuve utilisable dans l’opération, avec exceptions et escalades explicites."],
+          ["Champion adoption / formation","Responsabilités, compétences, contrôles humains et règles de passation adaptés aux tâches."]
+        ],
+        "avatar_internal_reference":"avatar:healthtech:reg-csv:v1",
+        "avatar_public_name_policy":"Ne pas afficher le nom fictif de travail; utiliser les rôles et déclencheurs vérifiés."
+      },
+      "evidence_bindings":["EU-REGCSV-EC-ANNEX11-RISK-2026"],"claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":4,"canonical_id":14,"slot":"qualification",
+      "buyer_question":"Dans quels cas la mission est-elle faisable et utile ?",
+      "nlp_role":"fit_gate","commercial_role":"disqualify_early",
+      "copy":{
+        "heading":"Décidez du fit avant de partager un enregistrement régulé.",
+        "good_fit":["Décision réelle de production, audit, transfert, lancement, remplacement ou promotion d’un workflow.","Sponsor nommé capable d’arbitrer le périmètre et les critères d’acceptation.","Systèmes et documents nécessaires consultables selon les règles d’accès convenues.","Usage assisté par l’IA touchant un workflow GxP avec frontière de validation ou d’assurance encore ouverte.","Quality disponible pour relire les livrables pendant le sprint."],
+        "no_fit":["Veille ou atelier générique sur l’IA.","Signature statutaire, certification ou décision de libération attendue du consultant.","Aucun propriétaire de preuve ni accès utile.","Résultat d’inspection ou d’autorisation garanti attendu.","Modèles de SOP demandés sans examen du produit, du risque et du processus de décision."],
+        "decision_rule":"Aucun seuil numérique arbitraire. Le fit dépend du périmètre, de l’autorité disponible, de l’accès aux preuves, du calendrier et de la capacité de revue."
+      },
+      "evidence_bindings":[],"claim_status":"CONTROLLABLE_OFFER_POLICY"
+    },
+    {
+      "position":5,"canonical_id":1,"slot":"proposition",
+      "buyer_question":"Quel mécanisme relie le risque pharmaceutique à l'architecture IA/data ?",
+      "nlp_role":"mechanism_explanation","commercial_role":"differentiate_by_decision_architecture",
+      "copy":{
+        "heading":"Rendez explicite la chaîne preuve → décision avant de choisir le mécanisme d’IA.",
+        "lead":"Source → Transformation → Contrôle → Jugement → Décision. Pour chaque lien : propriétaire, version, règle d’acceptation, exception et voie d’escalade.",
+        "evidence_statement_1":"Dans son périmètre GMP, l’Annex 11 relie l’étendue de la validation et des contrôles d’intégrité à une évaluation de risque justifiée et documentée, et demande que les exigences utilisateur restent traçables au cours du cycle de vie.",
+        "evidence_statement_2":"Les principes EMA/FDA publiés en 2026 pour l’IA dans le cycle de vie du médicament mettent l’accent sur une validation et une supervision proportionnées au risque, une provenance traçable, l’évaluation du système complet — y compris l’interaction humain‑IA — et le suivi dans le temps.",
+        "programme_translation":"Le sprint transforme ces contraintes en objets de travail : carte de preuve, droits de décision, contrats de données, contrôles techniques, évaluations, exceptions et dossier de revue."
+      },
+      "evidence_bindings":["EU-REGCSV-EC-ANNEX11-RISK-2026","EU-HT-EMA-FDA-GOOD-AI-2026"],
+      "claim_status":"EVIDENCE_BEARING_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":6,"canonical_id":2,"slot":"value",
+      "buyer_question":"Qu'est-ce qui devient contrôlable à la fin du sprint ?",
+      "nlp_role":"deliverable_value","commercial_role":"replace_outcome_promises_with_acceptance_artifacts",
+      "copy":{
+        "heading":"Ce que le sprint rend contrôlable.",
+        "items":[
+          ["Registre de provenance","Sources, versions, transformations et propriétaires retenus identifiés pour la décision étudiée."],
+          ["Matrice des droits de décision","Rôles qui proposent, vérifient, approuvent, escaladent ou signent explicités."],
+          ["Frontière IA / humain","Tâches assistées, actions interdites, permissions, validations humaines et conditions d’arrêt documentées."],
+          ["Dossier de revue","Critères d’acceptation, exceptions, limites connues et décisions de revue regroupés."],
+          ["Plan de contrôle à 90 jours","Vérifications, propriétaires, déclencheurs de réévaluation et éléments de transfert remis."]
+        ]
+      },
+      "evidence_bindings":[],"claim_status":"CONTROLLABLE_DELIVERABLE_COPY"
+    },
+    {
+      "position":7,"canonical_id":10,"slot":"offers",
+      "buyer_question":"Quel niveau d'intervention correspond à la menace immédiate ?",
+      "nlp_role":"offer_architecture","commercial_role":"match_offer_to_job",
+      "copy":{
+        "heading":"Choisissez le mécanisme qui correspond au risque immédiat.",
+        "offers":[
+          {"name":"Défendre la décision","recommended_entry":true,"buyer":"Quality / rôle en interface avec le QP / CMC / Pharmaceutical Operations / site quality","job":"Cartographier un workflow critique des sources autoritatives jusqu’à la décision humaine responsable.","deliverables":["carte de preuve","matrice des droits de décision","registre des gaps","roadmap de remédiation"]},
+          {"name":"Maîtriser le système en production","buyer":"CTO / plateforme / architecture / AI governance + Quality","job":"Relier données, IAM, outils ou agents, mémoire, évaluations, observabilité, promotion et rollback à la frontière de risque pharmaceutique.","deliverables":["architecture de contrôle","contrats de permission","plan d’évaluation","gates de promotion","plan de rollback"]},
+          {"name":"Transférer le contrôle opérationnel","buyer":"AI transformation / L&D / opérations + propriétaires métier","job":"Transformer les contrôles retenus en responsabilités, exercices, critères de compétence, procédures d’escalade et preuves de passation.","deliverables":["matrice rôles-compétences","exercices","grilles de revue","protocole de transfert"]}
+        ],
+        "primary_cta":"Évaluer la mission"
+      },
+      "evidence_bindings":["EU-SG-003","EU-SG-004","EU-SG-007"],
+      "citation_policy":"Les preuves NCSC ne sont éligibles que lorsque des outils agentic/autonomes sont réellement dans le périmètre; elles ne prouvent aucun résultat pharmaceutique.",
+      "claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":8,"canonical_id":15,"slot":"product",
+      "buyer_question":"Quels artefacts sont remis ?",
+      "nlp_role":"deliverable_inventory","commercial_role":"make_delivery_tangible",
+      "copy":{
+        "heading":"Ce qui existe à la fin du sprint.",
+        "groups":[
+          ["Architecture de décision pharmaceutique",["decision scope","decision-rights matrix","escalation rules","residual-risk register"]],
+          ["Ingénierie des données et de la preuve",["source-of-truth map","lineage contract","data/interface inventory","exception register"]],
+          ["Gouvernance IA et assurance technique",["AI/tool boundary","permission model","evaluation plan","observability and rollback requirements"]],
+          ["Adoption contrôlée",["role-to-control matrix","review checklist","handover pack","90-day control plan"]]
+        ],
+        "handover":"Les livrables sont remis sous contrôle de source dans les dépôts convenus, avec les règles de passation et de revue nécessaires à leur utilisation sans dépendance implicite au consultant."
+      },
+      "evidence_bindings":["EU-SG-004"],"claim_status":"CONTROLLABLE_DELIVERABLE_COPY"
+    },
+    {
+      "position":9,"canonical_id":3,"slot":"transformation",
+      "buyer_question":"Quel changement d'état le programme vise-t-il ?",
+      "nlp_role":"target_state","commercial_role":"show_before_to_target_without_guarantee",
+      "copy":{
+        "heading":"Passer d’une preuve reconstruite après coup à un dossier de décision conçu avec le workflow.",
+        "lead":"L’état cible n’est pas plus d’automatisation. C’est une décision matérielle dont les sources, règles, responsabilités, exceptions et validations peuvent être revues avant de promouvoir davantage le système.",
+        "target_state":["Périmètre du risque explicite","Sources et transformations identifiées","Droits de décision séparés des capacités techniques","Contrôles et évaluations reliés à l’usage réel","Exceptions et escalades documentées","Réévaluation planifiée quand système, risque ou sources changent"],
+        "status_label":"ÉTAT_CIBLE_DU_SPRINT_NOT_GUARANTEED_ORG_OUTCOME"
+      },
+      "evidence_bindings":["EU-HT-EMA-FDA-GOOD-AI-2026"],"claim_status":"TARGET_STATE_NOT_OUTCOME_CLAIM"
+    },
+    {
+      "position":10,"canonical_id":12,"slot":"before_after",
+      "buyer_question":"À quoi ressemble concrètement l'état initial et l'état de recette ?",
+      "nlp_role":"contrast","commercial_role":"operationalize_transformation",
+      "copy":{
+        "heading":"Avant / état cible de recette.",
+        "before":["Preuve dispersée entre plusieurs systèmes ou documents.","Transformations ou versions difficiles à reconstruire.","Responsabilités ou escalades implicites.","Évaluation IA détachée de la décision pharmaceutique.","Dossier de revue assemblé au moment de la question."],
+        "after_target":["Source de vérité et gaps nommés pour le périmètre étudié.","Transformations et versions retenues explicitement documentées.","Droits de décision, revues et escalades écrits.","Contrôles et évaluations reliés à la criticité et à l’usage.","Dossier de revue maintenu comme artefact du workflow."],
+        "boundary":"La colonne après décrit le critère de recette du sprint, pas un effet organisationnel garanti."
+      },
+      "evidence_bindings":[],"claim_status":"TARGET_STATE_NOT_EMPIRICAL_RESULT"
+    },
+    {
+      "position":11,"canonical_id":19,"slot":"results",
+      "buyer_question":"Comment sait-on que le sprint a livré ce qui était promis ?",
+      "nlp_role":"acceptance_criteria","commercial_role":"define_success_without_roi_claim",
+      "copy":{
+        "heading":"Des critères de recette, pas des promesses de résultat réglementaire.",
+        "acceptance_criteria":["Chaque exigence de validation retenue est reliée à un risque produit ou à une justification de périmètre.","Droits de décision et seuils d’escalade écrits et soumis à l’acceptation du référent Quality.","Sources, transformations, contrôles et exceptions nécessaires au dossier étudié identifiables.","Plan d’évaluation décrivant contexte d’usage, scénarios, critères d’acceptation, limites et revue humaine.","Plan de transfert nommant propriétaires, déclencheurs de réévaluation et éléments à maintenir."],
+        "public_proof_boundary":"Aucune métrique de production client n’est revendiquée publiquement sans source autorisée. Les travaux publics prouvent une capacité technique, pas un effet client."
+      },
+      "evidence_bindings":["EU-REGCSV-EC-ANNEX11-RISK-2026","EU-AGENTIC-NIST-TEVV-4-STAGES-2026"],"claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":12,"canonical_id":4,"slot":"proof",
+      "buyer_question":"Pourquoi cette personne peut-elle intervenir à l'intersection pharma + data/AI ?",
+      "nlp_role":"capability_proof","commercial_role":"establish_credibility_without_testimonial_fabrication",
+      "copy":{
+        "heading":"Des preuves proportionnées à la promesse.",
+        "proof_atoms":[
+          ["Formation pharmaceutique sur six années à l’Université de Strasbourg.","Formation et socle scientifique; pas une certification CSV."],
+          ["Expérience documentée en opérations pharmaceutiques et environnements de santé régulés, incluant pharmacie et contrôle qualité hospitalier.","Expérience opérationnelle; pas une responsabilité statutaire de QP."],
+          ["Python, traitement de données, conseil technique et formation utilisés professionnellement depuis 2021.","Capacité technique; pas une métrique de résultat client."],
+          ["Travaux publics en data/ML, smart contracts, Rust/Solana, LLM applications et systèmes de preuve; travaux stratégiques supplémentaires sous NDA.","Preuve de construction et recherche, pas preuve d’efficacité réglementaire."]
+        ],
+        "testimonial_policy":"Aucun témoignage pharma n’est fabriqué. Sans témoignage public attribuable et autorisé, utiliser des preuves de capacité et des critères de recette."
+      },
+      "evidence_bindings":[],"claim_status":"CAPABILITY_PROOF_WITH_BOUNDARIES"
+    },
+    {
+      "position":13,"canonical_id":16,"slot":"scope",
+      "buyer_question":"Qu'est-ce qui est dans et hors périmètre ?",
+      "nlp_role":"scope_boundary","commercial_role":"reduce_legal_and_delivery_ambiguity",
+      "copy":{
+        "heading":"Un périmètre borné pour une responsabilité qui reste chez le client.",
+        "in_scope":["Evidence engineering et cartographie de provenance.","Analyse structurée d’un workflow pharmaceutique critique.","Infrastructure de décision et de revue.","Contrôles data/IA, permissions, évaluations et observabilité pour le périmètre convenu.","Documentation de passation et critères d’acceptation."],
+        "out_of_scope":["Certifier ou libérer un lot.","Remplacer le QP, pharmacien responsable ou autre autorité statutaire.","Fournir un avis juridique.","Garantir une autorisation, une inspection sans observation ou l’absence de déviation.","Valider l’ensemble d’un processus ou d’une organisation au-delà du périmètre convenu.","Prendre une décision pharmaceutique autonome à la place du client."],
+        "dependencies":["Référent Quality disponible pendant le sprint.","Accès convenu aux sources et systèmes nécessaires.","Analyse de risque, procédures et décisions existantes disponibles lorsque pertinentes.","Décision finale et signature conservées par les rôles qualifiés du client."]
+      },
+      "evidence_bindings":["EU-REGCSV-EC-ANNEX11-RISK-2026"],"claim_status":"BOUNDARY_COPY"
+    },
+    {
+      "position":14,"canonical_id":17,"slot":"phases",
+      "buyer_question":"Comment les six semaines se déroulent-elles ?",
+      "nlp_role":"delivery_sequence","commercial_role":"make_process_predictable",
+      "copy":{
+        "heading":"Six semaines, avec une décision de viabilité avant d’industrialiser.",
+        "steps":[["S1","Décision et risque","Périmètre, déclencheur, décision matérielle, acteurs, risque et critères de réussite."],["S2","Preuve et responsabilités","Carte des sources, gaps, transformations, droits de décision et go / limited-go / stop."],["S3","Architecture IA / data / permissions","Données, outils, accès, mémoire, logs, interfaces et actions autorisées."],["S4","Évaluation et dossier de décision","Scénarios, critères d’acceptation, exceptions, revue humaine et structure du dossier."],["S5","Implémentation contrôlée ou prototype","Implémentation bornée des éléments retenus, avec contrôles et preuves de test convenus."],["S6","Revue, transfert et plan de contrôle","Revue exécutive, écarts résiduels, recommandation, propriétaires et plan de contrôle à 90 jours."]]
+      },
+      "evidence_bindings":["EU-AGENTIC-NIST-TEVV-4-STAGES-2026"],
+      "citation_policy":"TEVV peut soutenir la logique d'évaluation contextuelle, pas la durée de six semaines.",
+      "claim_status":"CONTROLLABLE_PROCESS_COPY"
+    },
+    {
+      "position":15,"canonical_id":18,"slot":"modules",
+      "buyer_question":"Quels objets de contrôle sont effectivement travaillés ?",
+      "nlp_role":"module_inventory","commercial_role":"show_technical_depth",
+      "copy":{
+        "heading":"Huit modules reliés au même dossier de décision.",
+        "modules":[["01 · Decision scope & trigger","Décision, contexte, acteurs, criticité et red lines."],["02 · Evidence integrity & source lineage","Sources de vérité, transformations, versions, gaps et réconciliation."],["03 · Product-centred risk governance","Exigences et contrôles reliés au risque produit et à l’usage."],["04 · Responsibility & decision rights","Recommandation, revue, approbation, signature, escalade et propriété séparées."],["05 · AI, data & permission controls","Données, outils, accès, réseau, mémoire, secrets, logs et actions à conséquence bornés."],["06 · Evaluation & human validation","Cas, critères, erreurs critiques, revue humaine et conditions de promotion."],["07 · Decision record & implementation","Décisions, exceptions, preuves de test et état d’implémentation versionnés."],["08 · Transfer, adoption & 90-day control","Contrôles transférés aux rôles responsables et réévaluation planifiée."]]
+      },
+      "evidence_bindings":["EU-HT-EMA-FDA-GOOD-AI-2026","EU-SG-003","EU-SG-004","EU-AGENTIC-NIST-AIRMF-4-FUNCTIONS","EU-AGENTIC-NIST-TEVV-4-STAGES-2026"],
+      "citation_policy":"Pas de quota; une citation seulement si elle soutient exactement la proposition adjacente.",
+      "claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":16,"canonical_id":5,"slot":"capabilities",
+      "buyer_question":"Quelles compétences démontrées soutiennent la livraison ?",
+      "nlp_role":"capability_map","commercial_role":"skills_to_delivery_fit",
+      "copy":{
+        "heading":"Une intersection de compétences, avec les limites visibles.",
+        "items":[["Pharmacie et opérations régulées","Expérience documentée en pharmacie et environnement hospitalier régulé.","Ne confère pas une autorité statutaire de QP."],["Python, data engineering et architecture de preuve","Usage professionnel depuis 2021 et projets publics / internes traçables.","Les résultats client restent distincts de la capacité technique."],["ML et systèmes IA","Projets et enseignement appliqués, puis architectures de gouvernance et d’évaluation.","Pas de garantie de performance hors contexte d’évaluation."],["AI assurance, sécurité et gouvernance","Permissions, évaluations, logs, gates de promotion, provenance et revue humaine.","L’assurance technique ne remplace pas la décision réglementaire ou pharmaceutique."]],
+        "score_policy":"Ne pas publier de score synthétique de compétence sans exposer son calcul et sa provenance; préférer des preuves datées."
+      },
+      "evidence_bindings":[],"claim_status":"CAPABILITY_PROOF_WITH_BOUNDARIES"
+    },
+    {
+      "position":17,"canonical_id":21,"slot":"intersection",
+      "buyer_question":"Quel delta de positionnement justifie ce programme face à un audit générique ou un projet IA isolé ?",
+      "nlp_role":"positioning_delta","commercial_role":"differentiate_mechanism",
+      "copy":{
+        "heading":"Le delta : traiter la décision pharmaceutique et l’architecture de preuve dans le même système de travail.",
+        "lead":"Le programme relie quatre disciplines habituellement traitées séparément : opérations pharmaceutiques régulées, data engineering, contrôles IA et gouvernance de décision.",
+        "mechanism_chain":["Risque pharmaceutique","Source et donnée","Contrôle technique","Validation humaine","Dossier de décision"],
+        "boundary":"Différence de mécanisme et de périmètre de travail, pas preuve d’un gain chiffré de performance ou de conformité."
+      },
+      "evidence_bindings":[],"claim_status":"POSITIONING_THESIS_NOT_EFFECT_CLAIM"
+    },
+    {
+      "position":18,"canonical_id":6,"slot":"benchmark",
+      "buyer_question":"Comment cadrer le format commercial sans transformer un benchmark en preuve de valeur ?",
+      "nlp_role":"commercial_model","commercial_role":"price_logic",
+      "copy":{
+        "heading":"Un périmètre fixe après qualification, pas un chiffre de marché présenté comme preuve de valeur.",
+        "lead":"Le programme est cadré autour d’une décision et de livrables de recette. Une éventuelle référence de taux journalier sert à la cohérence économique interne, pas à prouver l’impact du programme.",
+        "pricing_disclosure":"Fourchette et modalités communiquées après qualification du périmètre, des dépendances et du niveau d’intervention."
+      },
+      "evidence_bindings":[],"claim_status":"COMMERCIAL_POLICY"
+    },
+    {
+      "position":19,"canonical_id":22,"slot":"guarantee",
+      "buyer_question":"Qu'est-ce qui peut réellement être garanti ?",
+      "nlp_role":"risk_reversal","commercial_role":"guarantee_controllables_only",
+      "copy":{
+        "heading":"Garantir le processus et les livrables contrôlables — jamais le verdict du régulateur.",
+        "commitments":["À la fin de S2, fournir périmètre de décision, carte initiale de preuve, responsabilités et recommandation documentée de poursuite, réduction ou arrêt si les intrants convenus sont disponibles.","Corriger sans coût additionnel les erreurs factuelles ou incohérences identifiées dans les livrables pendant la période de correction convenue.","Tracer limites, dépendances, exceptions et éléments non vérifiés plutôt que les masquer."],
+        "not_guaranteed":["Autorisation réglementaire","Inspection sans observation","Certification ou libération de lot","Absence de déviation ou d’incident","ROI, gain de temps ou réduction de coût non mesuré","Résultat contrôlé par régulateur, fournisseur, CDMO ou rôle statutaire"],
+        "scarcity":"Capacité limitée par la disponibilité réelle du consultant; aucun compte à rebours artificiel."
+      },
+      "evidence_bindings":[],"claim_status":"CONTROLLABLE_GUARANTEE"
+    },
+    {
+      "position":20,"canonical_id":23,"slot":"faq",
+      "buyer_question":"Quelles objections, limites et dépendances clarifier avant achat ?",
+      "nlp_role":"objection_handling","commercial_role":"reduce_uncertainty_without_overclaim",
+      "copy":{
+        "heading":"Questions avant de qualifier le sprint.",
+        "items":[
+          ["Travaillez-vous avec nos équipes Quality, IT, Data et métier existantes ?","Oui. Le programme cartographie rôles, responsabilités et points de décision pour travailler avec les propriétaires existants; il ne les remplace pas."],
+          ["Un système GxP doit-il tout valider avec le même niveau d’effort ?","Non. Dans le périmètre des systèmes informatisés GMP, l’Annex 11 demande que l’étendue de la validation et des contrôles d’intégrité soit fondée sur une évaluation de risque justifiée et documentée."],
+          ["L’usage d’un LLM générique est-il automatiquement interdit ?","Le programme ne part pas d’une interdiction générique. Il documente contexte d’usage, données, provenance, outils, permissions, évaluations et validations humaines nécessaires au périmètre retenu."],
+          ["Que livrez-vous en semaine 2 ?","Périmètre de décision, première carte de preuve et de responsabilités, gaps critiques et recommandation documentée de poursuite, réduction ou arrêt — pas des certitudes réglementaires."],
+          ["Quel ROI garantissez-vous ?","Aucun ROI fixe sans baseline et méthode. Le sprint peut définir des métriques à suivre — temps de revue, boucles de reprise, âge des exceptions, temps de récupération d’une preuve — sans annoncer d’effet avant observation."],
+          ["Quel effort est demandé à Quality ?","Quality intervient sur périmètre, risques, critères d’acceptation et revue. La charge dépend du workflow, du nombre de systèmes et de la qualité des preuves disponibles."],
+          ["Et si le modèle est une boîte noire ?","Le programme peut borner le modèle à des tâches de soutien et rendre explicites contrôles, permissions, évaluations et droits de décision. Le modèle ne devient pas une autorité pharmaceutique statutaire."],
+          ["Garantissez-vous une inspection réussie ?","Non. Seuls des engagements de processus et de livrables convenus sont garantis; le verdict réglementaire reste hors contrôle du consultant."],
+          ["Comment traitez-vous une frontière MAH–CDMO ?","Contrats, quality agreements, systèmes, sources et responsabilités existants deviennent des intrants à cartographier. Le programme ne remplace pas l’analyse juridique ou réglementaire compétente."],
+          ["Pouvez-vous travailler avec notre eQMS, LIMS, MES ou data platform ?","Oui si accès, interfaces et propriétaires nécessaires sont disponibles. Le sprint privilégie l’intégration au système existant avant d’ajouter une nouvelle couche technique."],
+          ["Comment protégez-vous les données sensibles ?","Le périmètre d’accès, la minimisation, le moindre privilège, les dépôts autorisés et la conservation sont convenus avant accès. Aucun contrôle n’est présumé tant qu’il n’est pas vérifié."],
+          ["Le programme suppose-t-il que tout usage IA pharmaceutique est high-risk au sens de l’AI Act ?","Non. La Commission distingue plusieurs niveaux de risque; les obligations dépendent de la classification et du contexte. Le programme ne fournit pas d’avis juridique et ne classe pas automatiquement un usage."],
+          ["Par où commencer ?","Par un brief écrit décrivant workflow, décision, déclencheur, échéance, rôle pharmaceutique responsable, systèmes concernés et usage IA envisagé — sans envoyer de donnée régulée dans le formulaire de qualification."]
+        ]
+      },
+      "evidence_bindings":["EU-REGCSV-EC-ANNEX11-RISK-2026","EU-SG-005","EU-HT-EMA-FDA-GOOD-AI-2026"],
+      "citation_policy":"Citer uniquement la clause réglementaire ou de guidance explicitement énoncée dans la réponse; aucun emprunt de preuve entre FAQ.",
+      "claim_status":"DRAFT_COPY_PENDING_PLACEMENT_JUDGE"
+    },
+    {
+      "position":21,"canonical_id":7,"slot":"engagement",
+      "buyer_question":"Quelle est la prochaine action à faible risque ?",
+      "nlp_role":"primary_conversion","commercial_role":"convert_to_qualified_mission",
+      "copy":{
+        "heading":"Commencez par la décision — pas par un appel commercial.",
+        "lead":"Envoyez un brief court : workflow, décision à défendre, déclencheur, échéance, rôle pharmaceutique responsable, systèmes concernés, usage IA envisagé et conséquence si la décision reste non résolue.",
+        "primary_cta":"Évaluer la mission",
+        "secondary_cta":"Préparer le brief",
+        "qualification_call":"Si le périmètre semble pertinent, un échange de 20 minutes vérifie contexte, risque, accès aux preuves et autorité de décision, puis donne un fit / no-fit motivé et, en cas de fit, un périmètre proposé."
+      },
+      "evidence_bindings":[],"claim_status":"CONTROLLABLE_CONVERSION_COPY"
+    },
+    {
+      "position":22,"canonical_id":8,"slot":"lead_form",
+      "buyer_question":"Puis-je qualifier le besoin sans transmettre de donnée régulée ?",
+      "nlp_role":"form_conversion+privacy_minimization","commercial_role":"reduce_contact_friction",
+      "copy":{
+        "heading":"Savoir si un sprint d’assurance se justifie, sans partager un enregistrement régulé.",
+        "lead":"Le formulaire de qualification demande le contexte de décision, pas le contenu d’un dossier de lot, un nom de produit ou une donnée patient.",
+        "fields":[
+          {"id":"trigger","label":"Quel événement déclenche la demande ?","options":["inspection / audit","lot / déviation / CAPA","transfert / lancement","promotion d’un workflow IA","autre"]},
+          {"id":"evidence_state","label":"Dans quel état est la preuve aujourd’hui ?","options":["dispersée","partiellement traçable","traçable mais lente à reconstruire","déjà consolidée"]},
+          {"id":"contact","label":"Coordonnées professionnelles","fields":["nom","e-mail professionnel","organisation facultative"]},
+          {"id":"consent","label":"Consentement au traitement du brief de qualification","requires_runtime_verification":true}
+        ],
+        "privacy_boundary":"Aucune donnée régulée n’est requise pour la qualification initiale. Les modalités exactes de stockage, conservation et suppression doivent correspondre à l’implémentation du site et être vérifiées avant publication."
+      },
+      "evidence_bindings":[],"claim_status":"COPY_READY_RUNTIME_PRIVACY_ASSERTIONS_REQUIRE_VERIFICATION"
+    }
+  ],
+  "evidence_placement": {
+    "policy":"NO_SECTION_QUOTA",
+    "rule":"Seuls les claim spans explicitement factuels reçoivent une citation; descriptions de programme, livrables, qualification et engagements de scope ne sont pas pseudo-cités.",
+    "target_evidence_unit_count":10,
+    "catalog_count":10,
+    "selected_for_copy_count":8,
+    "current_page_presentation_judge_run":"NOT_FOUND",
+    "publication_status":"BLOCKED_PENDING_TARGET_PAGE_PRESENTATION_JUDGE",
+    "live_xpath_policy":{"required_match_count":1,"status":"MUST_BE_RECOMPUTED_AGAINST_CURRENT_RENDERED_FRENCH_PAGE_BEFORE_PUBLICATION","do_not_reuse_repository_avatar_v2_selectors_as_live_truth":true}
+  },
+  "copy_repair_register": [
+    {"old_pattern":"100% auditable","replacement":"bounded deliverable / acceptance criterion","status":"REPAIRED_IN_JSON"},
+    {"old_pattern":"rejouable instantanément","replacement":"reconstructible / reviewable decision record","status":"REPAIRED_IN_JSON"},
+    {"old_pattern":"détection avant l'inspecteur","replacement":"remove timing/inspection implication","status":"REPAIRED_IN_JSON"},
+    {"old_pattern":"certitudes","replacement":"week-2 viability recommendation with explicit gaps","status":"REPAIRED_IN_JSON"},
+    {"old_pattern":"ROI or review-time reduction without baseline","replacement":"define metrics to measure; no effect before observation","status":"REPAIRED_IN_JSON"},
+    {"old_pattern":"all pharmaceutical AI is high-risk","replacement":"case-specific classification; no legal advice","status":"REPAIRED_IN_JSON"}
+  ],
+  "validation": {
+    "deterministic_artifact_checks":{"json_parse":"PASS_BY_CONSTRUCTION","section_count_equals_23":"PASS","canonical_order_exact":"PASS","scope_only_target_page":"PASS","google_drive_mutation":"NOT_PERFORMED","production_html_mutation":"NOT_PERFORMED","other_page_mutation":"NOT_PERFORMED"},
+    "upstream_page_audit":{"deterministic_preflight":"PASS","agent_exploitability":"PASS","live_contract_status":"PASS","live_repository_parity":"FAIL","blocking_reasons":["PENDING_TARGET_PAGE_PRESENTATION_JUDGE","LIVE_FORM_PARITY_FAIL","STALE_JUDGE_REFERENCE_IN_REPOSITORY_HTML"]},
+    "final_publication_decision":"BLOCKED",
+    "final_pass":false,
+    "reason":"Ce JSON est un artefact de copywriting/revue scoped. Publication fail-closed jusqu'au PASS des sélecteurs live exacts, des 3 répliques du current placement judge, de la parité du lead form et des références de judge courantes."
+  },
+  "persistence": {
+    "github_write_authorized_by_user":true,
+    "target_repository":"mckeopharma-web/copywriting",
+    "target_branch":"pea-section-contract-20260904",
+    "target_path":"pages/programme/pharmaceutical-evidence-assurance.copy.json",
+    "google_drive_write_authorized":false,
+    "google_drive_action":"DO_NOT_WRITE_UNTIL_EXPLICIT_USER_APPROVAL"
+  }
+}
