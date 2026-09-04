@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sectionContract version="1.0" id="contract:realisations:ia-agents:live-topology-v1" failClosed="true">
+  <target url="https://mickael-umt.com/realisations/ia-agents/" repository="mckeopharma-web/copywriting" path="pages/realisations/ia-agents.html"/>
+  <ownerPolicy>
+    <targetFamily>proof-realisation</targetFamily>
+    <liveWebsiteStructureAuthoritative>true</liveWebsiteStructureAuthoritative>
+    <offerProgrammeCanonReferenceOnly>true</offerProgrammeCanonReferenceOnly>
+    <canonicalOfferProgrammeOrder>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonicalOfferProgrammeOrder>
+  </ownerPolicy>
+  <requiredTopology sectionCount="4">
+    <section order="1" id="ia-agents-hero" semanticRole="HERO"/>
+    <section order="2" id="ia-agents-projects" semanticRole="PROJECT_PROOF_LEDGER" projectCardCount="4"/>
+    <section order="3" id="ia-agents-provenance" semanticRole="PROVENANCE_POLICY"/>
+    <section order="4" id="ia-agents-method-form" semanticRole="FRAMEWORK_LEAD_FORM" formScreens="2"/>
+  </requiredTopology>
+  <requiredProjects>
+    <project id="mistral"/>
+    <project id="rag"/>
+    <project id="streamlit"/>
+    <project id="governed"/>
+  </requiredProjects>
+  <requiredForm id="framework-form">
+    <required name="email" type="email"/>
+    <required name="consent" type="checkbox"/>
+    <optional name="work_topic" type="radio"/>
+    <optional name="intended_use" type="radio"/>
+    <optional name="name" type="text"/>
+    <reviewMode networkSubmit="disabled"/>
+  </requiredForm>
+  <avatarContract name="Claire Dumas" role="CTO / Head of AI Platform" evidenceStatus="ROLE_FIRST_MODEL_WITH_EXPLICIT_GAPS" synthesizedQuoteMustBeMarked="true"/>
+  <evidenceContract sourceCount="3" sectionCount="4" ratio="0.75" strictThreshold="0.72" densityGate="PASS">
+    <placementJudge id="judge:evidence-placement:presentation-v1.2" replicas="3" temperature="0" topP="1" categoricalDisagreementBlocks="true"/>
+    <claim id="claim-nist-tevv" eu="EU-AGENTIC-NIST-TEVV-4-STAGES-2026" xpath="//*[@id='claim-nist-tevv']"/>
+    <claim id="claim-ncsc-controls" eu="EU-SG-002" xpath="//*[@id='claim-ncsc-controls']"/>
+    <claim id="claim-bounded-auth" eu="EU-CANON-BOUNDED-AGENTS-EXFIL-2026" xpath="//*[@id='claim-bounded-auth']"/>
+  </evidenceContract>
+  <publicationRule>FINAL_PASS requires deterministic preflight, factfulness, all applicable specialist judges, provenance, agent exploitability, placement, presentation and xpath_match_count=1. Pending 3-replica placement judgement blocks publication.</publicationRule>
+</sectionContract>
