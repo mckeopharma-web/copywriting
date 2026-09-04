@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html-source-structure
+  schema-version="1.0"
+  page-family="S-series"
+  repository="mckeopharma-web/copywriting"
+  branch="main"
+  path="expertises/ai-security/ai-security.html"
+  source-blob-sha="d93066839986e5f66be4e1f714a0416d307b56a9"
+  source-page-record-commit="76a474a3718d4e227f700df4f268f57d5bdb48d5"
+  extraction-date="2026-09-04"
+  mutation="NONE">
+
+  <document-contract>
+    <language>en</language>
+    <theme>dark</theme>
+    <claim-loop-version>external-capability-v1.2-topology-preserving</claim-loop-version>
+    <declared-judge>judge:copy-claim:external-capability-grounding-v1.1</declared-judge>
+    <declared-publication-status>PASS_CURRENT_TRUE_ONLY</declared-publication-status>
+    <title>AI Security, Assurance &amp; DevSecOps · Mickael Rutembya</title>
+  </document-contract>
+
+  <local-anchor-topology count="17" status="MATCHES_LIVE_ANCHOR_TOPOLOGY">
+    <anchor order="1" href="#triggers" id="triggers" semantic-token="11"/>
+    <anchor order="2" href="#consequences" id="consequences" semantic-token="20"/>
+    <anchor order="3" href="#buyer" id="buyer" semantic-token="13"/>
+    <anchor order="4" href="#qualification" id="qualification" semantic-token="14"/>
+    <anchor order="5" href="#proposition" id="proposition" semantic-token="01"/>
+    <anchor order="6" href="#offers" id="offers" semantic-token="10"/>
+    <anchor order="7" href="#deliverables" id="deliverables" semantic-token="15"/>
+    <anchor order="8" href="#before-after" id="before-after" semantic-token="12"/>
+    <anchor order="9" href="#results" id="results" semantic-token="19"/>
+    <anchor order="10" href="#evidence" id="evidence" semantic-token="04"/>
+    <anchor order="11" href="#scope" id="scope" semantic-token="16"/>
+    <anchor order="12" href="#process" id="process" semantic-token="17"/>
+    <anchor order="13" href="#modules" id="modules" semantic-token="18"/>
+    <anchor order="14" href="#intersection" id="intersection" semantic-token="21"/>
+    <anchor order="15" href="#commitments" id="commitments" semantic-token="22"/>
+    <anchor order="16" href="#questions" id="questions" semantic-token="23"/>
+    <anchor order="17" href="#engagement" id="engagement" semantic-token="07"/>
+  </local-anchor-topology>
+
+  <canonical-semantic-sequence expected-count="23" exact-or-nested-count="19" drift-count="4" order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8">
+    <section order="1" token="00" canonical="hero" presence="DIRECT" locator="//header[contains(@class,'hero')]"/>
+    <section order="2" token="11" canonical="triggers" presence="DIRECT" locator="//*[@id='triggers']"/>
+    <section order="3" token="20" canonical="problems" presence="DIRECT_ALIAS" source-id="consequences" locator="//*[@id='consequences']"/>
+    <section order="4" token="13" canonical="audience" presence="DIRECT_ALIAS" source-id="buyer" locator="//*[@id='buyer']"/>
+    <section order="5" token="14" canonical="qualification" presence="DIRECT" locator="//*[@id='qualification']"/>
+    <section order="6" token="01" canonical="proposition" presence="DIRECT" locator="//*[@id='proposition']"/>
+    <section order="7" token="02" canonical="value" presence="NESTED" parent-id="proposition" locator="//*[@id='proposition']//*[contains(@class,'grid4')]"/>
+    <section order="8" token="10" canonical="offers" presence="DIRECT" locator="//*[@id='offers']"/>
+    <section order="9" token="15" canonical="product" presence="DIRECT_ALIAS" source-id="deliverables" locator="//*[@id='deliverables']"/>
+    <section order="10" token="03" canonical="transformation" presence="MERGED_DRIFT" parent-id="before-after" contract-state="MISSING_DISTINCT_LIVE_FORM">
+      <reason>The source HTML mentions transformation inside the before/after section, but the live source of truth contains a distinct transformation state-shift before the before/after comparison.</reason>
+    </section>
+    <section order="11" token="12" canonical="before_after" presence="DIRECT" source-id="before-after" locator="//*[@id='before-after']"/>
+    <section order="12" token="19" canonical="results" presence="DIRECT" locator="//*[@id='results']"/>
+    <section order="13" token="04" canonical="proof" presence="DIRECT_ALIAS" source-id="evidence" locator="//*[@id='evidence']"/>
+    <section order="14" token="16" canonical="scope" presence="DIRECT" locator="//*[@id='scope']"/>
+    <section order="15" token="17" canonical="phases" presence="DIRECT_ALIAS" source-id="process" locator="//*[@id='process']"/>
+    <section order="16" token="18" canonical="modules" presence="DIRECT" locator="//*[@id='modules']"/>
+    <section order="17" token="05" canonical="capabilities" presence="MISSING" contract-state="REFERENCE_DRIFT">
+      <live-reference>Capacités extraites du CV · Les capacités engagées, et la mission où chacune a été exercée.</live-reference>
+    </section>
+    <section order="18" token="21" canonical="intersection" presence="DIRECT" locator="//*[@id='intersection']"/>
+    <section order="19" token="06" canonical="benchmark" presence="MISSING" contract-state="REFERENCE_DRIFT">
+      <live-reference>Repère marché — pas un prix contractuel.</live-reference>
+      <evidence-boundary>The live benchmark is recorded as structure only; it is not re-admitted here as current EvidenceUnit proof.</evidence-boundary>
+    </section>
+    <section order="20" token="22" canonical="guarantee" presence="DIRECT_ALIAS" source-id="commitments" locator="//*[@id='commitments']"/>
+    <section order="21" token="23" canonical="faq" presence="DIRECT_ALIAS" source-id="questions" locator="//*[@id='questions']"/>
+    <section order="22" token="07" canonical="engagement" presence="DIRECT" locator="//*[@id='engagement']"/>
+    <section order="23" token="08" canonical="lead_form" presence="MISSING" contract-state="REFERENCE_DRIFT">
+      <live-reference>Cette compétence, appliquée à votre cas · eight-screen qualification flow.</live-reference>
+    </section>
+  </canonical-semantic-sequence>
+
+  <evidence-placement-resolution current-policy-only="true">
+    <legacy-requested-judge id="judge:evidence-placement:presentation-v1" current="false" action="NOT_EXECUTED" superseded-by="judge:evidence-placement:presentation-v1.2"/>
+    <active-judge id="judge:evidence-placement:presentation-v1.2" current="true" version="1.2" replicas="3" temperature="0" top-p="1"/>
+    <active-policy id="policy:evidence-placement:claim-span-entailment-v2" current="true" version="2.2"/>
+    <summary evidence-units="10" graph-evidence-units="4" current-placement-count="14" placement-judge="PASS" presentation-judge="PASS" xpath-cardinality="ALL_1"/>
+    <placement evidence-id="EU-SG-001" xpath="//*[@id='claim-eu-sg-001']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-SG-002" xpath="//*[@id='claim-eu-sg-002']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-SG-003" xpath="//*[@id='claim-eu-sg-003']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-SG-004" xpath="//*[@id='claim-eu-sg-004']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-SG-005" xpath="//*[@id='claim-eu-sg-005']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-SG-006" xpath="//*[@id='claim-eu-sg-006']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-SG-007" xpath="//*[@id='claim-eu-sg-007']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-CANON-BOUNDED-AGENTS-EXFIL-2026" xpath="//*[@id='claim-eu-sg-008']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-AISEC-RUN-22" xpath="//*[@id='claim-eu-sg-009']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="EU-AISEC-RUN-34" xpath="//*[@id='claim-eu-sg-010']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="QGEU-AISEC-FRAMING-GAP-2026" xpath="//*[@id='eug-framing-gap']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="QGEU-AISEC-TOOLMIN-PCS-2026" xpath="//*[@id='eug-toolmin']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026" xpath="//*[@id='eug-bounded-exfil']" xpath-match-count="1" status="PASS"/>
+    <placement evidence-id="QGEU-AISEC-PERMISSION-OVERREACH-2026" xpath="//*[@id='eug-permission-overreach']" xpath-match-count="1" status="PASS"/>
+    <placement-state-note>Current placement records are judged PASS with exact XPath cardinality 1. Their record-level publication status is JUDGED_PASS_PENDING_PAGE_COVERAGE; this snapshot does not silently coerce that state to FINAL_PASS.</placement-state-note>
+  </evidence-placement-resolution>
+
+  <structure-verdict status="BLOCKED_REFERENCE_DRIFT">
+    <preserved>17-of-17 live navigation anchors are represented in the same functional order.</preserved>
+    <missing-canonical-tokens>03,05,06,08</missing-canonical-tokens>
+    <missing-forms>distinct transformation, capabilities, benchmark, embedded lead form</missing-forms>
+    <publication-rule>Do not claim the GitHub HTML is lossless against the current live page until the four live forms are represented or explicitly accepted as a justified subset by the source owner.</publication-rule>
+  </structure-verdict>
+</html-source-structure>
