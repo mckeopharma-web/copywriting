@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<training-section-contract version="1.0" page="https://mickael-umt.com/expertises/training/" family="S-series" status="REVIEW_CANDIDATE">
+  <provenance>
+    <source-of-truth>current rendered mickael-umt.com training page</source-of-truth>
+    <canonical-owner>.skills/source-first-atomic-design-v4/SKILL.md</canonical-owner>
+    <canonical-order>[0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8]</canonical-order>
+    <capture-mode>rendered-page semantic extraction; raw origin DOM was not materialised</capture-mode>
+    <fidelity-claim>section order, semantic role, navigation exposure and section form; not byte-identical HTML</fidelity-claim>
+    <drive-mutation>false</drive-mutation>
+  </provenance>
+  <policy-resolution authority="NeoFort" posture="FAIL_CLOSED">
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true"/>
+    <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true"/>
+    <judge id="judge:evidence:factfulness-epistemology-methodology-v2" current="true" replicas="3" temperature="0" top_p="1" boolean_reducer="AND" score_reducer="MIN"/>
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2" current="true"/>
+    <policy id="evidence-placement-policy:site-v5" current="true"/>
+    <judge id="judge:evidence-placement:presentation-v1.2" current="true" replicas="3" temperature="0" top_p="1" boolean_reducer="AND" score_reducer="MIN"/>
+    <policy id="policy:evidence-judge-applicability:v2" current="true"/>
+    <policy id="policy:evidence-judge-verdict-normalization:v2" current="true"/>
+    <policy id="policy:llm-judge:deterministic-execution-v2" current="true" replicas="3" temperature="0" top_p="1"/>
+    <legacy-resolution requested="judge:eu:placementv1" resolved-to="judge:evidence-placement:presentation-v1.2" reason="CURRENT_TRUE_ONLY"/>
+  </policy-resolution>
+  <slots expected-count="22" canonical-token-count="23" omitted-token="8" omission-reason="live detail page has no inline lead form">
+    <slot ordinal="0" token="0" id="hero" semantic-role="hero" form="split-hero-blueprint" nav="false"/>
+    <slot ordinal="1" token="11" id="triggers" semantic-role="triggers" form="signal-card-grid" nav="true"/>
+    <slot ordinal="2" token="20" id="consequences" semantic-role="problems" form="problem-and-operating-gap" nav="true"/>
+    <slot ordinal="3" token="13" id="for-whom" semantic-role="audience" form="inductive-customer-avatar" nav="true"/>
+    <slot ordinal="4" token="14" id="qualification" semantic-role="qualification" form="fit-no-fit-gates" nav="true"/>
+    <slot ordinal="5" token="1" id="proposition" semantic-role="proposition" form="mechanism-statement" nav="true"/>
+    <slot ordinal="6" token="2" id="value" semantic-role="value" form="four-attribute-value-questions" nav="false"/>
+    <slot ordinal="7" token="10" id="offers" semantic-role="offers" form="three-entry-route-cards" nav="true"/>
+    <slot ordinal="8" token="15" id="deliverables" semantic-role="product" form="artifact-card-grid" nav="true"/>
+    <slot ordinal="9" token="3" id="transformation" semantic-role="transformation" form="arrival-state-morph" nav="false"/>
+    <slot ordinal="10" token="12" id="before-after" semantic-role="before_after" form="same-axis-comparison" nav="true"/>
+    <slot ordinal="11" token="19" id="results" semantic-role="results" form="acceptance-ledger" nav="true"/>
+    <slot ordinal="12" token="4" id="proof" semantic-role="proof" form="evidence-card-ledger" nav="true"/>
+    <slot ordinal="13" token="16" id="scope" semantic-role="scope" form="in-out-dependencies" nav="true"/>
+    <slot ordinal="14" token="17" id="process" semantic-role="phases" form="five-phase-decision-sequence" nav="true"/>
+    <slot ordinal="15" token="18" id="modules" semantic-role="modules" form="task-practice-verification-evidence-autonomy" nav="true"/>
+    <slot ordinal="16" token="5" id="capabilities" semantic-role="capabilities" form="cv-derived-ranked-capability" nav="false"/>
+    <slot ordinal="17" token="21" id="intersection" semantic-role="intersection" form="skill-braid" nav="true"/>
+    <slot ordinal="18" token="6" id="benchmark" semantic-role="benchmark" form="market-reference-with-boundary" nav="false"/>
+    <slot ordinal="19" token="22" id="commitments" semantic-role="guarantee" form="bounded-work-product-commitments" nav="true"/>
+    <slot ordinal="20" token="23" id="questions" semantic-role="faq" form="objection-details" nav="true"/>
+    <slot ordinal="21" token="7" id="engagement" semantic-role="engagement" form="qualification-cta-and-evidence-register" nav="true"/>
+  </slots>
+  <navigation expected-count="17">triggers consequences for-whom qualification proposition offers deliverables before-after results proof scope process modules intersection commitments questions engagement</navigation>
+  <hard-invariants>
+    <invariant>D0-D3 source-owner topology and content anatomy remain stable.</invariant>
+    <invariant>Navigation remains the 17-anchor live subset; value, transformation, capabilities and benchmark remain non-nav semantic sections.</invariant>
+    <invariant>CTA role remains mission qualification/evaluation.</invariant>
+    <invariant>Evidence publication remains BLOCKED unless deterministic preflight, all applicable judges, agent exploitability, placement, presentation and unique XPath gates pass.</invariant>
+  </hard-invariants>
+</training-section-contract>
