@@ -37,10 +37,10 @@ EXPECTED_REPO_SECTIONS = EXPECTED_NAV.copy()
 EXPECTED_MISSING_FROM_REPO = ["value", "transformation", "capabilities", "benchmark"]
 EXPECTED_TOKENS = [0, 11, 20, 13, 14, 1, 2, 10, 15, 3, 12, 19, 4, 16, 17, 18, 5, 21, 6, 22, 23, 7]
 
-SECTION_RE = re.compile(r"<section\b[^>]*\bid=[\"']([^\"']+)[\"'][^>]*>", re.I)
+SECTION_TAG_RE = re.compile(r"<section\b([^>]*)>", re.I)
 NAV_BLOCK_RE = re.compile(r"<nav\b[^>]*>(.*?)</nav\s*>", re.I | re.S)
-HREF_RE = re.compile(r"href=[\"']#([^\"']+)[\"']", re.I)
-TOKEN_RE = re.compile(r"<section\b[^>]*\bdata-section-token=[\"'](\d+)[\"'][^>]*\bid=[\"']([^\"']+)[\"']|<section\b[^>]*\bid=[\"']([^\"']+)[\"'][^>]*\bdata-section-token=[\"'](\d+)[\"']", re.I)
+HREF_RE = re.compile(r"href\s*=\s*(?:[\"']#([^\"']+)[\"']|#([^\s>]+))", re.I)
+ATTR_RE = re.compile(r"\b([:\w-]+)\s*=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s>]+))", re.I)
 
 
 def read(path: Path) -> str:
@@ -49,24 +49,38 @@ def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def attrs(fragment: str) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for m in ATTR_RE.finditer(fragment):
+        out[m.group(1).lower()] = next(x for x in m.groups()[1:] if x is not None)
+    return out
+
+
 def section_ids(html: str) -> list[str]:
-    return SECTION_RE.findall(html)
+    ids: list[str] = []
+    for m in SECTION_TAG_RE.finditer(html):
+        sid = attrs(m.group(1)).get("id")
+        if sid:
+            ids.append(sid)
+    return ids
 
 
 def nav_ids(html: str) -> list[str]:
     m = NAV_BLOCK_RE.search(html)
     if not m:
         return []
-    return HREF_RE.findall(m.group(1))
+    out: list[str] = []
+    for x in HREF_RE.finditer(m.group(1)):
+        out.append(x.group(1) or x.group(2))
+    return out
 
 
 def section_tokens(html: str) -> list[tuple[int, str]]:
     out: list[tuple[int, str]] = []
-    for m in TOKEN_RE.finditer(html):
-        if m.group(1) is not None:
-            out.append((int(m.group(1)), m.group(2)))
-        else:
-            out.append((int(m.group(4)), m.group(3)))
+    for m in SECTION_TAG_RE.finditer(html):
+        a = attrs(m.group(1))
+        if "id" in a and "data-section-token" in a:
+            out.append((int(a["data-section-token"]), a["id"]))
     return out
 
 
