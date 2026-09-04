@@ -1,0 +1,403 @@
+{
+  "artifact_id": "devicev:audiences:avatar-agentic-ai:copywriting:v1",
+  "artifact_type": "LANDING_PAGE_COPYWRITING_JSON",
+  "version": "1.0.0",
+  "generated_at": "2026-09-04T15:37:00+02:00",
+  "execution_posture": "FAIL_CLOSED",
+  "scope": {
+    "page_url": "https://mickael-umt.com/engagement/audiences/#avatar-agentic-ai",
+    "page_id": "page:source:17.1",
+    "chapter_id": "chapter-17.1",
+    "chapter_title": "Ce que le CTO doit exiger avant de laisser un agent devenir un service",
+    "repository": "mckeopharma-web/copywriting",
+    "branch": "main",
+    "source_html_path": "pages/engagement/audiences/mickael-umt.com.html",
+    "source_html_sha": "421e93e22fe562fc0dd27ca21bf95135d733437e",
+    "dedicated_review_html_path": "engagement/audiences/avatar-agentic-ai.html",
+    "dedicated_review_html_sha": "9334f3721b1ed26eb2e7287fea5039ca00f8bcd6",
+    "target_json_path": "engagement/audiences/avatar-agentic-ai_copywriting_devicev_v1.json",
+    "scope_rule": "Only #avatar-agentic-ai. No mutation of any other avatar, page, route or HTML."
+  },
+  "avatar": {
+    "id": "customer-avatar:realisations:ia-agents:claire-dumas:v1",
+    "buyer_role_id": "buyer-role:agentic-ai",
+    "name": "Claire Dumas",
+    "role": "CTO / Head of AI Platform",
+    "status": "ROLE_FIRST_MODEL_WITH_EXPLICIT_GAPS",
+    "representative_quote": {
+      "text": "I need to know what this agent can do, what it can reach, how we stop it, and how I defend the production decision.",
+      "status": "SYNTHESIZED_NOT_VERBATIM"
+    },
+    "before": "Agents work in demos but ownership, permissions, memory, evaluation and production behaviour are not yet controllable.",
+    "after": "An observable bounded runtime with explicit human authority and reusable execution evidence.",
+    "must_have": [
+      "existing-stack fit",
+      "explicit authority and permission boundaries",
+      "evaluation harnesses and acceptance criteria",
+      "runtime observability and traces",
+      "rollback and shutdown criteria",
+      "governed context/memory and data lineage",
+      "maintainability and handoff"
+    ],
+    "deal_killers": [
+      "opaque authority or data flow",
+      "unsupported ROI or security guarantees",
+      "unnecessary platform replacement",
+      "no owner, rollback or handoff path",
+      "uncontrolled data egress or connector permissions"
+    ],
+    "decision_unit": {
+      "decision_maker": "CTO / CDO / CIO / COO / transformation executive",
+      "advocate": "CTO / Head of AI Platform / AI Platform Owner",
+      "champion": "Business or workflow owner",
+      "approvers": [
+        "Enterprise Architecture",
+        "CISO/RSSI",
+        "DPO",
+        "Legal/Compliance"
+      ],
+      "procurement": "Procurement / vendor-risk stakeholder"
+    },
+    "unknown_fields": [
+      "age",
+      "gender",
+      "marital_status",
+      "children",
+      "individual_income",
+      "education",
+      "observed_media_habits",
+      "event_attendance",
+      "brand_affinity",
+      "customer_verbatim",
+      "validated_budget_range"
+    ]
+  },
+  "offer": {
+    "slug": "agentic-ai",
+    "title": "Agentic AI Engineering",
+    "promise": "Transformer des agents prometteurs en services observables, contrôlables et exploitables.",
+    "deliverable_state": "Une architecture d’agents avec permissions explicites, mémoire gouvernée, évaluations, supervision humaine et preuves d’exécution.",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "MCP",
+      "RAG",
+      "evaluation harnesses",
+      "PostgreSQL"
+    ],
+    "url": "https://mickael-umt.com/expertises/agentic-ai/",
+    "boundary": "First-party deliverable description, not an externally proven outcome guarantee."
+  },
+  "policy_resolution": {
+    "source": "@neofort",
+    "resolution": "CURRENT_TRUE_ONLY",
+    "requested_judge": "judge:eu:placementv1",
+    "requested_judge_resolution": "NOT_FOUND_CURRENT_NEOFORT",
+    "current_placement_judge": {
+      "id": "judge:evidence-placement:presentation-v1.2",
+      "version": "1.2",
+      "replicas": 3,
+      "temperature": 0,
+      "top_p": 1,
+      "pass_threshold": 85,
+      "fail_closed": true
+    },
+    "judge_applicability": "policy:evidence-judge-applicability:v2",
+    "deterministic_preflight": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "factfulness": "policy:evidence-judge:factfulness-semantic-100-v2",
+    "eu_score": "policy:evidence-unit-judge:champion-100-v2",
+    "agent_exploitability": "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "llm_determinism": "policy:llm-judge:deterministic-execution-v2",
+    "verdict_normalization": "policy:evidence-judge-verdict-normalization:v2",
+    "claim_span_placement": "policy:evidence-placement:claim-span-entailment-v2",
+    "site_placement": "evidence-placement-policy:site-v5",
+    "external_source": "policy:copy-claim:external-semantic-compression-v1",
+    "copy_grounding": "policy:copy-claim:grounding-score-v1.1",
+    "eug_placement": "policy:eug-placement:statistical-display-ordering-contract-v2"
+  },
+  "evidence": [
+    {
+      "eu_id": "EU-CANON-BOUNDED-AGENTS-EXFIL-2026",
+      "use": "PRIMARY_ATOMIC_PROOF",
+      "source_fact": "In the paper's compromised-model evaluation, AgentDojo exfiltration fell from 75–100% to 0% across all four domains when APC authorization was enforced outside the model; APC also blocked all 544 InjecAgent data-stealing cases.",
+      "population": "3,154 evaluation instances overall; cited result covers four AgentDojo domains and 544 InjecAgent data-stealing cases",
+      "period": "Preprint submitted 2026-08-16",
+      "source_url": "https://arxiv.org/abs/2608.15888",
+      "source_sha256": "db4adb8c3a8af14237ce54d0f7a7659cacb8f7710c6d1012b5566b03b496cda6",
+      "preflight": "PASS",
+      "factfulness": {
+        "status": "PASS",
+        "score": 100,
+        "snapshot_current": true
+      },
+      "agent_exploitability": "ALLOWED",
+      "champion_score": 96,
+      "boundary": "Controlled benchmark/preprint only; no universal production-security, incident-reduction, ROI or consulting-effect claim."
+    },
+    {
+      "eu_id": "EU-AISEC-RUN-22",
+      "use": "SECONDARY_ATOMIC_PROOF",
+      "variable": "privacy_cost_reduction_unannotated_mcp",
+      "value": 79.0,
+      "unit": "percent",
+      "population": "25 unannotated MCP schemas evaluated in the paper",
+      "period": "2026-08-25",
+      "source_fact": "Across 25 unannotated Model Context Protocol (MCP) schemas, the paper reports a 79.0% reduction in its privacy-cost metric without minimum_necessary metadata.",
+      "source_url": "https://arxiv.org/abs/2608.24957",
+      "source_locator": "arXiv 2608.24957 Table/abstract: 25 unannotated MCP schemas, 79.0% privacy-cost reduction",
+      "source_sha256": "1fc85b84b9ada5b5403cb23ad7ec4507a5a0d414bb78b29b9cd79c3df5552f04",
+      "preflight": "PASS",
+      "factfulness": {
+        "status": "PASS",
+        "score": 100,
+        "snapshot_current": true
+      },
+      "agent_exploitability": "ALLOWED",
+      "champion_score": 95,
+      "boundary": "Study-specific privacy-cost metric; not universal privacy-risk, incident or business-outcome reduction."
+    },
+    {
+      "eu_id": "EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "use": "METHOD_SUPPORT_NOT_PLACED",
+      "value": 4,
+      "unit": "stages",
+      "population": "NIST TEVV-Athlon initial public draft framework",
+      "period": "2026-08-07; page updated 2026-08-14",
+      "source_fact": "NIST's 2026 TEVV-Athlon draft describes a four-stage method for developing context-specific AI assessments and explicitly includes agentic systems in scope.",
+      "source_url": "https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+      "preflight": "PASS",
+      "factfulness": {
+        "status": "PASS",
+        "score": 100,
+        "snapshot_current": true
+      },
+      "agent_exploitability": "ALLOWED",
+      "champion_score": 96,
+      "boundary": "Method support only; no consulting-effect claim."
+    }
+  ],
+  "landing_page_copy": {
+    "language": "fr",
+    "page_role": "B2B_DECISION_PROFILE",
+    "buyer_question": "Puis-je transformer des agents qui fonctionnent en démo en une capacité de production dont l’autorité, les accès, la mémoire, l’évaluation et le rollback sont explicitement maîtrisables ?",
+    "sequences": [
+      {
+        "id": "seq:audiences:avatar-agentic-ai:self-recognition:v1",
+        "section": "identity",
+        "buyer_question": "Est-ce bien mon rôle et ma décision ?",
+        "nlp_role": "SELF_RECOGNITION_WITHOUT_INVENTED_BIOGRAPHY",
+        "commercial_role": "QUALIFICATION",
+        "copy": {
+          "name": "Claire Dumas",
+          "role": "CTO / Head of AI Platform"
+        },
+        "epistemic_status": "ROLE_MODEL",
+        "evidence_required": false,
+        "publication": "REVIEW_ONLY"
+      },
+      {
+        "id": "seq:audiences:avatar-agentic-ai:problem:v1",
+        "section": "before",
+        "buyer_question": "Qu’est-ce qui reste non maîtrisable quand les agents quittent la démo ?",
+        "nlp_role": "PROBLEM_REFRAME",
+        "commercial_role": "PROBLEM_RECOGNITION",
+        "current_copy": "Des agents expérimentaux, une architecture non documentée et des dépendances que personne ne maîtrise vraiment.",
+        "target_copy": "Des agents qui fonctionnent en démo, mais dont l’autorité, la mémoire, les accès, l’évaluation et le rollback ne forment pas encore une frontière de production maîtrisable.",
+        "epistemic_status": "MODELLED_ROLE_STATE",
+        "evidence_required": false,
+        "publication": "REVIEW_ONLY"
+      },
+      {
+        "id": "seq:audiences:avatar-agentic-ai:desired-state:v1",
+        "section": "after",
+        "buyer_question": "Quel état opérationnel rend la décision de production défendable ?",
+        "nlp_role": "DESIRED_OPERATIONAL_STATE",
+        "commercial_role": "VALUE_PROPOSITION",
+        "current_copy": "Une architecture documentée, une responsabilité explicite et des évaluations reproductibles que votre équipe peut réellement maintenir.",
+        "target_copy": "Un runtime agentique borné et observable : propriétaire nommé, permissions explicites, mémoire gouvernée, évaluations versionnées, traces exploitables et critères de rollback — assez précis pour instruire un go / no-go sans s’appuyer sur un simple « trust us ».",
+        "epistemic_status": "DESIRED_DELIVERABLE_STATE",
+        "boundary": "Target operational state, not guaranteed external effect.",
+        "publication": "REVIEW_ONLY"
+      },
+      {
+        "id": "copyseq:audiences:eu:001:20260903",
+        "section": "primary-proof",
+        "buyer_question": "Pourquoi l’autorisation doit-elle pouvoir être appliquée hors du modèle ?",
+        "nlp_role": "MECHANISM_PROOF",
+        "commercial_role": "RISK_CONTROL_EVIDENCE",
+        "target_copy": "Dans l’évaluation compromised-model de Bounded Agents, l’autorisation APC appliquée hors du modèle ramène l’exfiltration AgentDojo observée de 75–100 % à 0 % sur les quatre domaines évalués.",
+        "eu_id": "EU-CANON-BOUNDED-AGENTS-EXFIL-2026",
+        "support_classification_candidate": "EXACT_ENTAILMENT",
+        "citation_mode": "SILENT_ATOMIC_MARKER_WITH_LEVEL2_DISCLOSURE",
+        "target_xpath_candidate": "//*[@id='claim-eu-aud-001']",
+        "xpath_match_count": null,
+        "selector_status": "PENDING_CURRENT_RENDER_VALIDATION",
+        "publication": "BLOCKED_PENDING_PRESENTATION_JUDGE"
+      },
+      {
+        "id": "copyseq:audiences:eu:002:20260903",
+        "section": "secondary-proof",
+        "buyer_question": "Pourquoi minimiser ce qu’un outil reçoit ?",
+        "nlp_role": "DATA_MINIMIZATION_PROOF",
+        "commercial_role": "DESIGN_CONTROL_EVIDENCE",
+        "target_copy": "Sur 25 schémas MCP non annotés, ToolMinimize rapporte une réduction de 79,0 % de sa métrique propre de coût de confidentialité après minimisation des arguments.",
+        "eu_id": "EU-AISEC-RUN-22",
+        "support_classification_candidate": "EXACT_ENTAILMENT",
+        "citation_mode": "SILENT_ATOMIC_MARKER_WITH_LEVEL2_DISCLOSURE",
+        "target_xpath_candidate": "//*[@id='claim-eu-aud-002']",
+        "xpath_match_count": null,
+        "selector_status": "PENDING_CURRENT_RENDER_VALIDATION",
+        "publication": "BLOCKED_PENDING_PRESENTATION_JUDGE"
+      },
+      {
+        "id": "seq:audiences:avatar-agentic-ai:purchase-drivers:v1",
+        "section": "purchase-drivers",
+        "buyer_question": "Qu’est-ce qui doit être vrai avant que ce rôle dise oui ?",
+        "nlp_role": "DECISION_CRITERIA",
+        "commercial_role": "PURCHASE_DRIVER_AND_OBJECTION",
+        "target_copy": {
+          "must_have": [
+            "existing-stack fit",
+            "explicit authority",
+            "evaluation harness",
+            "runtime traces",
+            "rollback / shutdown",
+            "governed memory + lineage",
+            "handoff"
+          ],
+          "deal_killers": [
+            "opaque authority/data flow",
+            "unsupported guarantees",
+            "unnecessary platform replacement",
+            "no owner/rollback",
+            "uncontrolled egress"
+          ]
+        },
+        "epistemic_status": "ROLE_MODEL_WITH_EXPLICIT_GAPS",
+        "publication": "REVIEW_ONLY"
+      },
+      {
+        "id": "seq:audiences:avatar-agentic-ai:capability:v1",
+        "section": "offer",
+        "buyer_question": "Pourquoi cette intervention est-elle techniquement plausible ?",
+        "nlp_role": "CAPABILITY_BINDING",
+        "commercial_role": "TRUST",
+        "target_copy": {
+          "offer": "Agentic AI Engineering",
+          "stack": "Python · FastAPI · MCP · RAG · evaluation harnesses · PostgreSQL"
+        },
+        "evidence_requirement": "FIRST_PARTY_PUBLIC_AND_NDA_BOUNDARY",
+        "publication": "REVIEW_ONLY"
+      },
+      {
+        "id": "seq:audiences:avatar-agentic-ai:cta:v1",
+        "section": "cta",
+        "buyer_question": "Quelle est la prochaine étape sans promettre un résultat non prouvé ?",
+        "nlp_role": "ROUTE_ONLY_CTA",
+        "commercial_role": "CONVERSION",
+        "target_copy": "Examiner l’approche Agentic AI Engineering",
+        "target_url": "https://mickael-umt.com/expertises/agentic-ai/",
+        "outcome_promise": null,
+        "publication": "REVIEW_ONLY"
+      }
+    ]
+  },
+  "capability_proof": [
+    {
+      "id": "capability:agentic-ai",
+      "title": "Systèmes agentiques",
+      "earliest_defensible_date": "2024 / 2025 structuré",
+      "minimum_documented_years": 2,
+      "confidence": "high",
+      "skills": [
+        "Agent orchestration",
+        "MCP",
+        "Tool routing",
+        "Governed memory",
+        "Human review",
+        "Observability"
+      ],
+      "boundary": "Structured runtime proof primarily NDA."
+    },
+    {
+      "project": "AI/RAG Experiment Portfolio",
+      "period": "2023–2024",
+      "provenance": "Public portfolio; 28 RickOwri commits in site evidence registry.",
+      "stack": [
+        "Python",
+        "RAG",
+        "Chroma",
+        "LlamaIndex",
+        "LangChain",
+        "Scrapy"
+      ],
+      "boundary": "Adjacent capability proof only."
+    },
+    {
+      "project": "Streamlit LangChain Prototype",
+      "period": "April–October 2023",
+      "provenance": "Non-fork; 7/7 commits attributed to RickOwri in site evidence registry.",
+      "stack": [
+        "Python",
+        "Streamlit",
+        "Docker",
+        "GitLab CI"
+      ],
+      "boundary": "Prototype/deployment proof only."
+    },
+    {
+      "project": "Governed AI Operations",
+      "period": "2025–present",
+      "provenance": "Confidential R&D",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "MCP",
+        "IAM"
+      ],
+      "boundary": "Responsibilities/architecture may be described; code, datasets and client topology remain non-public."
+    }
+  ],
+  "gates": {
+    "formal_3_replica_placement_judge": {
+      "required": true,
+      "executed_for_this_json_snapshot": false,
+      "status": "BLOCKED_PENDING_FORMAL_3_REPLICA_EXECUTION"
+    },
+    "current_rendered_page_snapshot": "PENDING_HASH_BINDING",
+    "textquote_textposition_dom_consensus": "PENDING",
+    "xpath_match_count_equals_one": false,
+    "accessibility_disclosure_validation": "PENDING",
+    "publication": "BLOCKED"
+  },
+  "google_drive": {
+    "read_performed": false,
+    "create_performed": false,
+    "update_performed": false,
+    "delete_performed": false,
+    "status": "AWAITING_EXPLICIT_USER_VALIDATION"
+  },
+  "github_persistence": {
+    "repository": "mckeopharma-web/copywriting",
+    "branch": "main",
+    "path": "engagement/audiences/avatar-agentic-ai_copywriting_devicev_v1.json",
+    "prewrite_lookup": "NOT_FOUND",
+    "source_html_fetched_before_write": true,
+    "status": "REVIEW_ARTIFACT",
+    "persistence_authorized_by_user_request": true,
+    "creation_commit_sha": null
+  },
+  "final_decision": {
+    "FINAL_PASS": false,
+    "publication_allowed": false,
+    "persistence_as_review_artifact": true,
+    "blocking_predicates": [
+      "judge:eu:placementv1 not found current; resolved judge:evidence-placement:presentation-v1.2",
+      "no formal 3-replica placement-judge run for exact new copy snapshot",
+      "current rendered target snapshot not hash-bound to selectors",
+      "TextQuote + TextPosition + DOM selector consensus pending",
+      "target XPath match_count==1 pending"
+    ]
+  }
+}
