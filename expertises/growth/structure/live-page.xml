@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page_snapshot schema_version="1.0" page_id="page:source:4.1" source_url="https://mickael-umt.com/expertises/growth/" scope="ONLY /expertises/growth/" captured_at="2026-09-04" capture_mode="crawler_rendered_dom_semantic_extraction" raw_html_materialized="false" asset_fidelity_claim="false" publication_role="SOURCE_OF_TRUTH_STRUCTURE_ONLY">
+  <section_contract family="S-series" canonical_full_order="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8" selected_justified_subset="0,10,5,7,8" subset_preserves_canonical_relative_order="true" hard_tokens_preserved="D0-D3">
+    <justification>The live Growth category is a routing/category page. Its observed top-level topology is preserved losslessly at the semantic level; absent canonical sections are omitted rather than invented.</justification>
+  </section_contract>
+  <sections count="5">
+    <section order="1" token="0" semantic="hero" observed_id="growth:hero">
+      <eyebrow>Expertise · Adoption &amp; croissance</eyebrow>
+      <heading>Adoption &amp; croissance</heading>
+      <promise>De la compétence ou du contexte dispersé à un usage mesurable et réutilisable.</promise>
+    </section>
+    <section order="2" token="10" semantic="offers" observed_id="growth:offers" cardinality="2">
+      <offers>
+        <offer index="1" slug="training">
+          <title>AI Training &amp; Adoption Engineering — transfert de capacité gouverné</title>
+          <promise>Des équipes capables d’utiliser l’IA, d’en vérifier les résultats et de savoir quand escalader vers une validation humaine.</promise>
+          <stack>Python · AI adoption · cybersecurity · blockchain · assessment · document control</stack>
+        </offer>
+        <offer index="2" slug="marketing-engineering">
+          <title>Marketing Engineering &amp; Context Systems</title>
+          <promise>Transformer le contexte commercial en système mesurable, versionné et réutilisable.</promise>
+          <stack>Research · structured context · automation · analytics · prompt systems</stack>
+        </offer>
+      </offers>
+    </section>
+    <section order="3" token="5" semantic="capabilities" observed_id="growth:capabilities" cardinality="3">
+      <capabilities>
+        <capability index="1" rank="3" score="82/100"><title>Formation technique &amp; ingénierie pédagogique</title></capability>
+        <capability index="2" rank="4" score="67/100"><title>Web &amp; product engineering</title></capability>
+        <capability index="3" rank="8" score="55/100"><title>Applications LLM &amp; RAG</title></capability>
+      </capabilities>
+    </section>
+    <section order="4" token="7" semantic="engagement" observed_id="growth:next-step">
+      <heading>Situer le besoin avant de choisir l’offre</heading>
+      <cta_primary>Qualification</cta_primary>
+      <cta_secondary>Diagnostic</cta_secondary>
+    </section>
+    <section order="5" token="8" semantic="lead_form" observed_id="growth:qualification" screens="8">
+      <heading>Le bon format d’intervention, avant le premier rendez-vous</heading>
+      <qualification_form screen_count="8" semantics_source="live_rendered_DOM" controls_normalized_not_byte_exact="true">
+        <screen index="1" control_type="multi_choice + optional_subject"><question>Qu’est-ce qui doit avancer?</question><options_or_fields>AI/agents; data platform/traceability; regulated/inspection; solution framing; team upskilling; other</options_or_fields></screen>
+        <screen index="2" control_type="timeline_choice + buying_role_choice"><question>Dans quel cadre?</question><options_or_fields>timeline: &lt;30 days; quarter; semester; no date | role: decide; recommend; instruct</options_or_fields></screen>
+        <screen index="3" control_type="engagement_mode_choice"><question>Comment souhaitez-vous avancer?</question><options_or_fields>mission accompanied; dated sprint; upskill team; frame first</options_or_fields></screen>
+        <screen index="4" control_type="weekly_commitment_choice"><question>À quel rythme hebdomadaire?</question><options_or_fields>1; 2; 3; 4–5 days/week</options_or_fields></screen>
+        <screen index="5" control_type="organisation_size_choice"><question>Quelle taille d’organisation?</question><options_or_fields>≤10; 11–50; 51–250; 251–1,000; &gt;1,000</options_or_fields></screen>
+        <screen index="6" control_type="scope_maturity_choice"><question>Quel est le niveau de maturité du scope?</question><options_or_fields>brief ready; outcome clear/scope to frame; problem known/solution open; idea</options_or_fields></screen>
+        <screen index="7" control_type="inspection_trigger_choice"><question>Quel événement de contrôle ou d’inspection déclenche le besoin?</question><options_or_fields>inspection planned; recurring deviations; validation to defend; no event</options_or_fields></screen>
+        <screen index="8" control_type="contact_fields + explicit_consent"><question>Où envoyer la réponse?</question><options_or_fields>professional email; optional name; organisation; desired result; consent</options_or_fields></screen>
+        <privacy_note>Responses are stored on the site infrastructure; no third-party advertising tracker is declared in the observed qualification copy.</privacy_note>
+      </qualification_form>
+    </section>
+  </sections>
+  <provenance>
+    <source>https://mickael-umt.com/expertises/growth/</source>
+    <boundary>Raw HTML/CSS/JS could not be materialized in this execution. This XML preserves observed semantic structure and form meaning, not byte-level assets.</boundary>
+  </provenance>
+</page_snapshot>
