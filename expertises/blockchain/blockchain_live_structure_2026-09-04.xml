@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webpage_structure_snapshot version="1.0" snapshot_kind="LIVE_RENDERED_STRUCTURE" status="STRUCTURE_EXTRACTED_RAW_HTML_NOT_MATERIALIZED" fail_mode="FAIL_CLOSED">
+  <metadata>
+    <url>https://mickael-umt.com/expertises/blockchain/</url>
+    <captured_at>2026-09-04T02:05:00+02:00</captured_at>
+    <source_authority>LIVE_SITE</source_authority>
+    <page_scope>ONLY_BLOCKCHAIN_PAGE</page_scope>
+    <raw_html_materialization>NOT_AVAILABLE_FROM_CURRENT_RENDER_CONNECTOR</raw_html_materialization>
+    <fallback_full_html_source>mckeopharma-web/copywriting:expertises/blockchain/blockchain.html</fallback_full_html_source>
+    <note>This XML is a structured representation of the rendered live page, not a byte-for-byte HTML archive.</note>
+  </metadata>
+  <top_level_section_contract section_count="18" reorder_allowed="false" structure_lock="HARD_LOCK_BLOCKCHAIN_OFFER_STRUCTURE_V1">
+    <section order="1" id="top" kind="offer_hero" semantic_role="promise_result_format_decision_maker_stack"><live_heading>Ancrez on-chain ce qu’un tiers doit vérifier, jamais ce qu’il suffit de stocker.</live_heading></section>
+    <section order="2" id="triggers" kind="purchase_triggers" semantic_role="purchase_trigger_conditions"><live_heading>Vous reconnaissez l’un de ces moments, ou ce n’est pas encore le sujet.</live_heading></section>
+    <section order="3" id="consequences" kind="problem_consequences" semantic_role="problem_cost_and_failed_workarounds"><live_heading>Ce que ça coûte, et pourquoi le contournement évident ne tient pas.</live_heading></section>
+    <section order="4" id="for-whom" kind="buyer_fit" semantic_role="buyer_and_operational_pressure"><live_heading>Le décideur qui achète ce mandat, et ce qui pèse sur lui.</live_heading></section>
+    <section order="5" id="qualification" kind="qualification_gate" semantic_role="fit_and_unfit_conditions"><live_heading>Les conditions, avant de réserver quoi que ce soit.</live_heading></section>
+    <section order="6" id="proposition" kind="value_mechanism" semantic_role="offer_mechanism_claim_to_proof"><live_heading>Relier les affirmations, décisions et exécutions à des preuves vérifiables.</live_heading></section>
+    <section order="7" id="offers" kind="buying_configurations" semantic_role="how_to_buy_and_offer_configurations"><live_heading>Quelle configuration, et combien.</live_heading></section>
+    <section order="8" id="deliverables" kind="deliverables" semantic_role="delivered_artifacts"><live_heading>Ce qui existe à la fin et n’existait pas avant.</live_heading></section>
+    <section order="9" id="before-after" kind="state_transition" semantic_role="before_after_client_state"><live_heading>Ce que le mandat déplace.</live_heading></section>
+    <section order="10" id="results" kind="acceptance_results" semantic_role="target_results_and_acceptance_criteria"><live_heading>Ce qui est visé, et de quel type.</live_heading></section>
+    <section order="11" id="proof" kind="execution_proof" semantic_role="technical_proof_and_provenance"><live_heading>Des preuves proportionnées à la promesse.</live_heading></section>
+    <section order="12" id="scope" kind="scope_boundary" semantic_role="included_and_excluded_scope"><live_heading>Le périmètre, ses exclusions et ses dépendances.</live_heading></section>
+    <section order="13" id="process" kind="delivery_process" semantic_role="mission_delivery_flow"><live_heading>Quatre phases, quatre sorties possibles.</live_heading></section>
+    <section order="14" id="modules" kind="delivery_modules" semantic_role="modular_delivery_bricks"><live_heading>Les blocs de travail, sans ordre imposé.</live_heading></section>
+    <section order="15" id="intersection" kind="differentiation" semantic_role="cross_skill_differentiation"><live_heading>Le différenciateur est le croisement, pas l’addition.</live_heading></section>
+    <section order="16" id="commitments" kind="controllable_commitments" semantic_role="guarantees_limits_and_responsibility"><live_heading>Ce qui est garanti est le produit de travail, jamais le résultat d’une autorité.</live_heading></section>
+    <section order="17" id="questions" kind="objections_faq" semantic_role="purchase_objections_and_questions"><live_heading>Ce qui reste à lever.</live_heading></section>
+    <section order="18" id="engagement" kind="next_step_cta" semantic_role="qualification_and_next_step"><live_heading>Évaluer la mission en 20 minutes</live_heading></section>
+  </top_level_section_contract>
+  <live_section_forms>
+    <offers declared_configuration_count="7" detail_location="external_solution_atlas" status="LIVE_DECLARATION_OBSERVED">The live section states seven assemblies of the same bricks and links to the solution atlas.</offers>
+    <deliverables work_products="4" status="OBSERVED"/>
+    <before_after comparison_axes="3" status="OBSERVED">Third-party verification; confidentiality; key governance.</before_after>
+    <results acceptance_rows="3" status="OBSERVED"/>
+    <proof proof_entries="5" status="OBSERVED">Lottery dApp; Tokenized Voting Backend; Encode Club certificates; EthCC distinction with wording-to-confirm; NDA use case.</proof>
+    <process phase_count="4" status="OBSERVED">Qualification; Conception; Implémentation; Passation.</process>
+    <modules module_count="4" status="OBSERVED">Engagement; Divulgation; Identité et clés; Vérification tierce.</modules>
+    <commitments guaranteed_work_product_controls="6" explicit_non_guarantees="2" status="OBSERVED"/>
+    <questions question_count="4" status="OBSERVED"/>
+  </live_section_forms>
+  <shared_qualifier_form attached_after="engagement" screen_count="8" status="OBSERVED_ON_LIVE_PAGE" preservation_requirement="MUST_NOT_BE_SILENTLY_DROPPED_BY_A_FAITHFUL_CLONE">
+    <screen order="1" semantic_form="subject_and_cross_expertise_selection"/>
+    <screen order="2" semantic_form="decision_timing_and_role"/>
+    <screen order="3" semantic_form="intervention_mode"/>
+    <screen order="4" semantic_form="weekly_cadence"/>
+    <screen order="5" semantic_form="organization_size"/>
+    <screen order="6" semantic_form="scope_maturity"/>
+    <screen order="7" semantic_form="inspection_or_validation_trigger"/>
+    <screen order="8" semantic_form="professional_contact_and_consent"/>
+  </shared_qualifier_form>
+  <inductive_avatar id="avatar-09" name="Élodie Marchand" status="ROLE_MODEL_NOT_LITERAL_BIOGRAPHY">
+    <role>Responsable innovation / architecte de confiance</role>
+    <evidence_rule>Demographics, budget authority, emotional states, media habits and objections remain MISSING_EVIDENCE unless supported by interviews/CRM/analytics.</evidence_rule>
+  </inductive_avatar>
+  <live_evidence_state status="MIXED_LEGACY_AND_CURRENT">
+    <evidence_ref id="EU-ECB-TOKENIZED-ASSETS-2025-2026"/>
+    <evidence_ref id="EU-ZKSA-VERIFY-2021"/>
+    <evidence_ref id="EU-BC-MERKLE-LOG-VERIFY-2026"/>
+    <evidence_ref id="QGEU-DB-VS-DLT-THROUGHPUT-2026"/>
+    <evidence_ref id="EU-ECB-PROGRAMMABILITY-COORDINATION-MECHANISM-2026"/>
+    <evidence_ref id="EU-AFT-KEY-RECOVERY-CORPUS-2026"/>
+    <evidence_ref id="EU-BC-EIP7702-MALICIOUS-AUTH-2026"/>
+    <evidence_ref id="EU-JISA-BBS-VERIFY-2024"/>
+    <evidence_ref id="EU-BC-SOLIDITY-TOOLS-COVERAGE-2026"/>
+    <evidence_ref id="EU-BC-IRONDICT-VERIFY-2026"/>
+    <evidence_ref id="EU-BC-SC-SLR-TAXONOMY-2026"/>
+    <boundary>Live evidence is recorded as observed on the page; current NeoFort admission/placement status must be re-resolved before any claim is republished.</boundary>
+  </live_evidence_state>
+</webpage_structure_snapshot>
