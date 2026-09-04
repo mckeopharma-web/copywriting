@@ -42,19 +42,38 @@ if section_ids != expected_ids:
 
 if len(re.findall(r'data-seq-id="growth:offer:', html)) != 2:
     fail("offer cardinality != 2")
+if html.count("Voir l’offre") != 2:
+    fail("offer card anatomy drift: expected two 'Voir l’offre' links")
+if "beforeafter" in html or "<b>Livrables :</b>" in html:
+    fail("offer cards contain non-live content-anatomy expansion")
 if len(re.findall(r'data-seq-id="growth:capability:', html)) != 3:
     fail("capability cardinality != 3")
 if sorted(int(x) for x in re.findall(r'data-screen="([1-8])"', html)) != list(range(1,9)):
     fail("qualification screen set != 1..8")
 
+exact_live_copy = [
+    "Expertise · Adoption & croissance",
+    "De la compétence ou du contexte dispersé à un usage mesurable et réutilisable.",
+    "AI Training &amp; Adoption Engineering — transfert de capacité gouverné",
+    "Des équipes capables d’utiliser l’IA, d’en vérifier les résultats et de savoir quand escalader vers une validation humaine.",
+    "Marketing Engineering &amp; Context Systems",
+    "Transformer le contexte commercial en système mesurable, versionné et réutilisable.",
+    "Le filtre Adoption & croissance relié à la matrice de preuve.",
+    "Situer le besoin avant de choisir l’offre.",
+    "Le bon format d’intervention, avant le premier rendez-vous.",
+]
+for text in exact_live_copy:
+    if text not in html:
+        fail(f"missing live content-anatomy anchor: {text}")
+
 questions = [
     "Qu’est-ce qui doit avancer ?",
     "Dans quel cadre ?",
     "Comment souhaitez-vous avancer ?",
-    "À quel rythme hebdomadaire ?",
-    "Quelle est la taille de l’organisation ?",
-    "Où en est le scope ?",
-    "Y a-t-il un déclencheur d’inspection ou de contrôle ?",
+    "À quel rythme, si l’on s’engage ?",
+    "Combien de personnes doivent monter ?",
+    "Où en est le périmètre aujourd’hui ?",
+    "Ce que l’inspection devra pouvoir suivre",
     "Où envoyer la réponse ?",
 ]
 for q in questions:
@@ -66,6 +85,10 @@ for field in ["need","timeline","role","mode","cadence","org_size","maturity","i
         fail(f"missing interactive field group: {field}")
 if 'type="email"' not in html:
     fail("professional email control missing")
+if "Une réponse écrite vous parvient sous 48 heures ouvrées" not in html:
+    fail("screen-8 response-timing copy missing")
+if "Vos réponses sont enregistrées sur l’infrastructure du site. Aucun service tiers, aucun traceur publicitaire." not in html:
+    fail("live privacy/storage copy missing")
 
 required_current = [
     'data-neofort-copy-loop="loop:copy-claim:external-capability-v1.1"',
@@ -92,8 +115,8 @@ for external in ["arxiv.org", "frontiersin.org", "digital-strategy.ec.europa.eu"
         fail(f"unadmitted external evidence leaked into visitor copy: {external}")
 
 print("PASS: Growth HTML candidate preserves section tokens [0,10,5,7,8].")
-print("PASS: cardinality = 2 offers + 3 capability cards + 8 qualification screens.")
-print("PASS: qualification questions and interactive control groups match the live semantic contract.")
+print("PASS: live content anatomy = hero + category switch + 2 offer cards + 3 capability cards + CTA + 8-screen qualification.")
+print("PASS: qualification wording and interactive control groups match the live semantic contract.")
 print("PASS: copy-claim policy markers resolve to NeoFort current=true v1.1; placement judge remains v1.2.")
 print("PASS: external research remains metadata-only and NOT_AUTHORIZED for visitor placement.")
 print("PUBLICATION: BLOCKED until EU admission, immutable snapshot, unique XPath and 3-replica judges PASS.")
