@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<contract_audit id="audit:apa:section-form-policy:2026-09-04" version="1.0.0" execution_posture="FAIL_CLOSED" decision="BLOCKED">
+  <inputs>
+    <live file="ai-production-assurance.live.xml" />
+    <repository file="ai-production-assurance.repository.xml" blob_sha="f9dc9ec5e0de0de245014847fbbf3833f51eb46b" />
+    <neofort policy_resolution="current=true" />
+  </inputs>
+  <summary>
+    <check id="section_count" result="17 vs 17" status="PASS" />
+    <check id="section_order" result="exact ID order match" status="PASS" />
+    <check id="live_language_vs_repository" result="fr vs en" status="FAIL_FIDELITY" />
+    <check id="section_form_parity" result="multiple semantic-form divergences" status="FAIL" />
+    <check id="shared_qualifier" result="live 8 screens vs repository 0" status="FAIL" />
+    <check id="exact_live_xpath" result="raw live DOM not materialized" status="BLOCKED_PRECHECK" />
+    <check id="repo_policy_reference" result="v1.2 IDs declared but no current=true NeoFort v1.2 objects resolved" status="FAIL" />
+    <check id="formal_placement_presentation_judge" result="NOT_EXECUTED" status="FAIL" />
+    <check id="publication" result="mandatory predicates incomplete" status="BLOCKED" />
+  </summary>
+  <section_form_deltas>
+    <delta section_id="consequences" live_form="PROBLEM_TO_CONTROL_PAIRS_10" repository_form="GRID_2_WITH_2_CARDS" severity="HIGH" />
+    <delta section_id="for-whom" live_form="DECISION_UNIT_WITH_STATE_SUMMARY" repository_form="AUDIT_STRIP_PLUS_AVATAR_GRID_4_PLUS_DECISION_UNIT" severity="MEDIUM" />
+    <delta section_id="offers" live_form="CONFIGURATION_BRIDGE_TO_ATLAS" repository_form="GRID_3_OFFER_CARDS" severity="HIGH" />
+    <delta section_id="proof" live_form="PROVENANCE_PROOF_CARDS_4" repository_form="PROOF_GRID_3" severity="MEDIUM" />
+    <delta section_id="questions" live_form="FAQ_10" repository_form="FAQ_6" severity="HIGH" />
+    <delta section_id="engagement" live_form="CTA_PLUS_CALL_PROTOCOL_PLUS_SHARED_FORM_8" repository_form="CTA_ONLY_NO_SHARED_FORM" severity="CRITICAL" />
+  </section_form_deltas>
+  <policy_resolution>
+    <policy id="judge:evidence:factfulness-epistemology-methodology-v2" state="current" />
+    <policy id="judge:evidence-unit:champion-v2" state="current" />
+    <policy id="policy:evidence-judge-applicability:v2" state="current" />
+    <policy id="policy:evidence-judge-verdict-normalization:v2" state="current" />
+    <policy id="policy:llm-judge:deterministic-execution-v2" state="current" />
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" state="current" />
+    <policy id="judge:evidence-placement:presentation-v1.2" state="current" />
+    <policy id="judge:copy-claim:external-capability-grounding-v1.1" state="current" />
+    <policy id="loop:copy-claim:external-capability-v1.1" state="current" />
+    <repository_declared_refs>
+      <ref id="judge:copy-claim:external-capability-grounding-v1.2" resolution="NO_CURRENT_TRUE_MATCH" />
+      <ref id="loop:copy-claim:external-capability-v1.2-topology-preserving" resolution="NO_CURRENT_TRUE_MATCH" />
+    </repository_declared_refs>
+  </policy_resolution>
+  <placement_state>
+    <status factfulness="PASS_for_avatar-v1 placements" agent_exploitability="ALLOWED_for_avatar-v1 placements" xpath_match_count="1" placement_judge_status="NOT_EXECUTED" publication_status="DRAFT_NOT_AUTHORIZED" />
+  </placement_state>
+  <blocking_reasons>
+    <blocker id="B01" code="RAW_LIVE_DOM_UNAVAILABLE" hard_gate="true">Exact DOM/XPath contract cannot be certified from rendered text alone.</blocker>
+    <blocker id="B02" code="SECTION_FORM_PARITY_FAILED" hard_gate="true">Repository preserves 17 IDs/order but not all live section forms.</blocker>
+    <blocker id="B03" code="SHARED_FORM_MISSING" hard_gate="true">Repository engagement section omits the live 8-screen shared qualifier.</blocker>
+    <blocker id="B04" code="POLICY_REFERENCE_DRIFT" hard_gate="true">Repository/workflow declares NeoFort v1.2 copy-claim IDs while current NeoFort resolves v1.1.</blocker>
+    <blocker id="B05" code="PLACEMENT_PRESENTATION_JUDGE_NOT_EXECUTED" hard_gate="true">Current target-page placement/presentation judge remains NOT_EXECUTED.</blocker>
+  </blocking_reasons>
+  <final_decision status="BLOCKED" merge_to_publication="false">
+    <reason>The artifact may be committed as an audit/draft package, but must not be treated as publication-authorized until all hard gates pass.</reason>
+  </final_decision>
+</contract_audit>
