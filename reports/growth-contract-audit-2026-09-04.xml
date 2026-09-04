@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section_contract_audit schema_version="1.0" scope="ONLY /expertises/growth/" audit_date="2026-09-04" execution_posture="FAIL_CLOSED" publication_allowed="false">
+  <v4_contract>
+    <canonical_full_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical_full_order>
+    <growth_justified_subset>0,10,5,7,8</growth_justified_subset>
+    <programme_hub_reference_subset>0,11,20,13,14,10,7,8</programme_hub_reference_subset>
+    <programme_detail_reference_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</programme_detail_reference_order>
+    <scope_note>Programme contracts were checked as reference only. No programme page was mutated.</scope_note>
+  </v4_contract>
+  <neofort_current_policy_resolution>
+    <policy role="deterministic_preflight" id="policy:evidence-agent-exploitability:deterministic-preflight-v2" version="2.0" current="true"/>
+    <policy role="agent_exploitability" id="policy:evidence-agent-exploitability:proof-carrying-v3" version="3.0" current="true"/>
+    <policy role="judge_applicability" id="policy:evidence-judge-applicability:v2" version="2.0" current="true"/>
+    <policy role="verdict_normalization" id="policy:evidence-judge-verdict-normalization:v2" version="2.0" current="true"/>
+    <policy role="llm_determinism" id="policy:llm-judge:deterministic-execution-v2" version="2.0" current="true"/>
+    <policy role="factfulness" id="judge:evidence:factfulness-epistemology-methodology-v2" version="2.0" current="true"/>
+    <policy role="copy_claim_loop" id="loop:copy-claim:external-capability-v1.1" version="1.1.0" current="true"/>
+    <policy role="copy_claim_judge" id="judge:copy-claim:external-capability-grounding-v1.1" version="1.1.0" current="true"/>
+    <policy role="source_density" id="policy:copy-claim:sources-per-section-v1" version="1.0.0" current="true"/>
+    <policy role="placement_policy" id="policy:evidence-placement:claim-span-entailment-v2" version="2.2" current="true"/>
+    <policy role="placement_judge" id="judge:evidence-placement:presentation-v1.2" version="1.2" current="true"/>
+  </neofort_current_policy_resolution>
+  <growth_gates>
+    <gate name="live_topology_cardinality" status="PASS"><detail>Live: hero + 2 offers + 3 capability cards + CTA + 8-screen qualification.</detail></gate>
+    <gate name="repo_topology_cardinality" status="PASS"><detail>publish/expertises/growth/growth.html has the same five top-level semantic surfaces and cardinalities.</detail></gate>
+    <gate name="canonical_relative_order" status="PASS"><detail>Selected tokens 0,10,5,7,8 form an order-preserving subsequence of the 23-section canon.</detail></gate>
+    <gate name="live_structure_preservation" status="PASS"><detail>No new top-level section is required for this scoped edit; omissions are treated as a justified S-series subset.</detail></gate>
+    <gate name="qualification_screen_count" status="PASS"><detail>Live and repo preview both expose 8 screens.</detail></gate>
+    <gate name="qualification_semantic_fidelity" status="FAIL"><detail>Screens 2–7 in the repo preview do not preserve the live screen questions/field grouping.</detail></gate>
+    <gate name="qualification_control_fidelity" status="FAIL"><detail>Repo preview renders most early screens as descriptive text, while the live page exposes actual choice controls.</detail></gate>
+    <gate name="neofort_current_copy_contract" status="FAIL"><detail>Repo HTML embeds copy-claim v1.2 identifiers, while NeoFort current=true resolves the copy loop/judge to v1.1.</detail></gate>
+    <gate name="neofort_page_section_graph" status="BLOCKED"><detail>WebPage exists, but no PageSection graph is materialized for Growth.</detail></gate>
+    <gate name="neofort_evidence_unit_graph" status="BLOCKED"><detail>No current Growth EvidenceUnit/selected EvidencePlacement was found.</detail></gate>
+    <gate name="xpath_unique_claim_binding" status="BLOCKED"><detail>No deployed CopySequence/XPath evidence-placement graph exists for the candidate external claims.</detail></gate>
+    <gate name="formal_three_replica_judges" status="BLOCKED"><detail>No immutable Growth EU snapshot + current JudgeRun set was found; no judge verdict is fabricated.</detail></gate>
+    <gate name="publication" status="BLOCKED"><detail>FINAL_PASS cannot be issued while any mandatory predicate is false or missing.</detail></gate>
+  </growth_gates>
+  <qualification_diff>
+    <screen index="1" status="PASS_CLOSE"><live>What must advance?</live><repo_preview>What must move?</repo_preview></screen>
+    <screen index="2" status="FAIL"><live>Context = timeline + buying role</live><repo_preview>Trigger event + deadline</repo_preview></screen>
+    <screen index="3" status="FAIL"><live>Desired engagement mode</live><repo_preview>Buying-decision role</repo_preview></screen>
+    <screen index="4" status="FAIL"><live>Weekly cadence</live><repo_preview>Engagement mode</repo_preview></screen>
+    <screen index="5" status="FAIL"><live>Organisation size</live><repo_preview>Weekly cadence</repo_preview></screen>
+    <screen index="6" status="FAIL"><live>Scope maturity</live><repo_preview>People/teams affected</repo_preview></screen>
+    <screen index="7" status="FAIL"><live>Inspection/control trigger</live><repo_preview>Evidence vs hypothesis textarea</repo_preview></screen>
+    <screen index="8" status="FAIL_PARTIAL"><live>Contact + consent</live><repo_preview>Email only in preview</repo_preview></screen>
+  </qualification_diff>
+  <candidate_evidence publication_state="NOT_PLACEMENT_AUTHORIZED" declared_source_count="6" claim_bearing_anchor_sections="3" sources_per_section_ratio="2.0" density_threshold="strictly &gt; 0.72" density_gate="PASS_ONLY_SUPPLEMENTAL">
+    <candidate id="CAND-GR-INCREMENTALITY-2608.10182" source_url="https://arxiv.org/abs/2608.10182" epistemic_class="OBSERVED_RESEARCH" deterministic_preflight="BLOCKED_MISSING_IMMUTABLE_SOURCE_SNAPSHOT_AND_FORMAL_EU"><bounded_claim>Predictive scoring and incremental treatment-effect optimization answer different decision questions.</bounded_claim><boundary>Platform-specific experiment; cannot prove Growth service ROI or conversion effect.</boundary><source_hash>MISSING_NOT_MATERIALIZED</source_hash><placement_status>NOT_AUTHORIZED</placement_status></candidate>
+    <candidate id="CAND-GR-EU-AI-LITERACY-2026" source_url="https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers" epistemic_class="NORMATIVE_GUIDANCE" deterministic_preflight="BLOCKED_MISSING_IMMUTABLE_SOURCE_SNAPSHOT_AND_FORMAL_EU"><bounded_claim>AI-literacy measures should account for technical knowledge, experience, education/training and use context.</bounded_claim><boundary>Normative implementation guidance, not evidence of service effectiveness.</boundary><source_hash>MISSING_NOT_MATERIALIZED</source_hash><placement_status>NOT_AUTHORIZED</placement_status></candidate>
+    <candidate id="CAND-GR-ADAPTIVE-TRAINING-2026" source_url="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1944626/abstract" epistemic_class="OBSERVED_RESEARCH" deterministic_preflight="BLOCKED_MISSING_IMMUTABLE_SOURCE_SNAPSHOT_AND_FORMAL_EU"><bounded_claim>A bundled adaptive training intervention was evaluated with measurable outcomes in a cluster-randomized field design.</bounded_claim><boundary>Chinese utility context + composite intervention; no transfer to this offer's effect.</boundary><source_hash>MISSING_NOT_MATERIALIZED</source_hash><placement_status>NOT_AUTHORIZED</placement_status></candidate>
+    <candidate id="CAND-GR-GOVUK-METRICS" source_url="https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service" epistemic_class="NORMATIVE_METHOD" deterministic_preflight="BLOCKED_FORMAL_EU_NOT_MATERIALIZED"><bounded_claim>Performance metrics should follow service purpose, hypotheses, data sources and baselines.</bounded_claim><boundary>Public-service methodology; not proof of commercial outcome.</boundary><source_hash>MISSING_NOT_MATERIALIZED</source_hash><placement_status>NOT_AUTHORIZED</placement_status></candidate>
+    <candidate id="CAND-GR-GOVUK-SUCCESS" source_url="https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service" epistemic_class="NORMATIVE_METHOD" deterministic_preflight="BLOCKED_FORMAL_EU_NOT_MATERIALIZED"><bounded_claim>Success measurement should be explicit and iterated against evidence.</bounded_claim><boundary>Public-service methodology; not proof of commercial outcome.</boundary><source_hash>MISSING_NOT_MATERIALIZED</source_hash><placement_status>NOT_AUTHORIZED</placement_status></candidate>
+    <candidate id="CAND-GR-W3C-PROV" source_url="https://www.w3.org/TR/prov-overview/" epistemic_class="STANDARD_METHOD" deterministic_preflight="BLOCKED_FORMAL_EU_NOT_MATERIALIZED"><bounded_claim>Provenance can be represented as entities, activities and agents with traceable relationships.</bounded_claim><boundary>Provenance standard; not evidence of growth/adoption outcome.</boundary><source_hash>MISSING_NOT_MATERIALIZED</source_hash><placement_status>NOT_AUTHORIZED</placement_status></candidate>
+  </candidate_evidence>
+  <github_execution_safety>
+    <existing_html_workflow>.github/workflows/claim-loop-topology-preserving-v12.yml</existing_html_workflow>
+    <existing_workflow_risk>The current HTML workflow enforces v1.2 copy-contract identifiers and can auto-commit generated changes across HTML files. Triggering it from a Growth HTML edit would violate current NeoFort authority and the user's single-page mutation scope.</existing_workflow_risk>
+    <safe_action>Do not mutate Growth HTML on main in this execution. Persist the Growth contract/audit and a non-writing, Growth-scoped CI validator first.</safe_action>
+    <html_edit_status>BLOCKED_PENDING_WORKFLOW_POLICY_RECONCILIATION</html_edit_status>
+  </github_execution_safety>
+  <final_decision status="BLOCKED" final_pass="false"><reason>Topology is structurally admissible, but form fidelity, current-policy identity, formal evidence admission, exact selector/XPath binding and three-replica judge predicates are not all PASS.</reason></final_decision>
+</section_contract_audit>
