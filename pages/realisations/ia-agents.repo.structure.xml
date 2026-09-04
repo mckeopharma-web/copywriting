@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageStructure version="1.0"
+  id="realisations-ia-agents-repo-candidate"
+  source="pages/realisations/ia-agents.html"
+  branch="review/ia-agents-live-contract-2026-09-04"
+  captureDate="2026-09-04"
+  fidelity="dom-contract">
+  <main order="strict">
+    <section order="1" id="ia-agents-hero" xpath="//*[@id='ia-agents-hero']" xpathMatchCount="1" semanticRole="HERO"/>
+    <section order="2" id="ia-agents-projects" xpath="//*[@id='ia-agents-projects']" xpathMatchCount="1" semanticRole="PROJECT_PROOF_LEDGER">
+      <article order="1" id="mistral" xpath="//*[@id='mistral']" xpathMatchCount="1"/>
+      <article order="2" id="rag" xpath="//*[@id='rag']" xpathMatchCount="1"/>
+      <article order="3" id="streamlit" xpath="//*[@id='streamlit']" xpathMatchCount="1"/>
+      <article order="4" id="governed" xpath="//*[@id='governed']" xpathMatchCount="1"/>
+    </section>
+    <section order="3" id="ia-agents-provenance" xpath="//*[@id='ia-agents-provenance']" xpathMatchCount="1" semanticRole="PROVENANCE_POLICY"/>
+    <section order="4" id="ia-agents-method-form" xpath="//*[@id='ia-agents-method-form']" xpathMatchCount="1" semanticRole="FRAMEWORK_LEAD_FORM">
+      <form id="framework-form" xpath="//*[@id='framework-form']" xpathMatchCount="1" screens="2" networkSubmit="DISABLED_IN_REVIEW_ARTIFACT">
+        <requiredField name="email" selector="input[name='email']"/>
+        <requiredField name="consent" selector="input[name='consent']"/>
+        <optionalField name="work_topic" selector="input[name='work_topic']"/>
+        <optionalField name="intended_use" selector="input[name='intended_use']"/>
+        <optionalField name="name" selector="input[name='name']"/>
+      </form>
+    </section>
+  </main>
+  <evidencePlacement>
+    <claim id="claim-nist-tevv" eu="EU-AGENTIC-NIST-TEVV-4-STAGES-2026" xpath="//*[@id='claim-nist-tevv']" xpathMatchCount="1" judge="judge:evidence-placement:presentation-v1.2" judgeStatus="PENDING_3_REPLICA_JUDGEMENT"/>
+    <claim id="claim-ncsc-controls" eu="EU-SG-002" xpath="//*[@id='claim-ncsc-controls']" xpathMatchCount="1" judge="judge:evidence-placement:presentation-v1.2" judgeStatus="PENDING_3_REPLICA_JUDGEMENT"/>
+    <claim id="claim-bounded-auth" eu="EU-CANON-BOUNDED-AGENTS-EXFIL-2026" xpath="//*[@id='claim-bounded-auth']" xpathMatchCount="1" judge="judge:evidence-placement:presentation-v1.2" judgeStatus="PENDING_3_REPLICA_JUDGEMENT"/>
+  </evidencePlacement>
+  <publication deterministicContract="PASS_EXPECTED" formalPlacementJudge="PENDING" finalPass="false"/>
+</pageStructure>
