@@ -1,0 +1,473 @@
+{
+  "schema_version": "DEVICEV-COPY-1.0.0",
+  "artifact_type": "landing_page_copywriting",
+  "scope": {
+    "page_url": "https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/",
+    "page_path": "/ressources/produits/frameworks/diagnostic-framework/",
+    "only_target_page": true,
+    "other_page_cud": "FORBIDDEN",
+    "google_drive_crd_performed": false,
+    "google_drive_requires_explicit_approval": true
+  },
+  "page": {
+    "neofort_id": "page:source:25.1",
+    "structure_family": "PRODUCT_FRAMEWORK_DETAIL",
+    "audience_scope": "cross_avatar",
+    "live_raw_html_materialized": false,
+    "live_observed_copy": {
+      "eyebrow": "Framework PDF",
+      "headline": "Framework Diagnostic IA",
+      "lead": "Un framework structuré pour diagnostiquer et cadrer un projet IA ou data. Inclut les checklists de maturité, les grilles d'évaluation de l'impact et les templates de proposition.",
+      "price": {
+        "value": 49,
+        "currency": "EUR",
+        "tax_note": "Hors taxes"
+      },
+      "payment_note": "Aucun paiement n’est encaissé sur ce site.",
+      "format": "Framework PDF",
+      "profile": "Tous les profils",
+      "cta": "Télécharger le framework PDF"
+    }
+  },
+  "audience": {
+    "scope": "cross_avatar",
+    "inductive_avatar": {
+      "id": "customer-avatar:realisations:ia-agents:claire-dumas:v1",
+      "usage": "INDUCTIVE_ROLE_MODEL_NOT_PRIMARY_TARGET",
+      "avatar_name": "Claire Dumas",
+      "role": "CTO / Head of AI Platform",
+      "decision_need": "Rendre explicites usage, périmètre, contraintes, ownership, preuves et critères d’acceptation avant un engagement plus large.",
+      "boundary": "Role-first synthesis only; target page remains cross-avatar. No demographics, budget authority, media habits or unsupported purchase psychology are asserted as observed facts."
+    },
+    "role_set_for_copy": [
+      "CTO",
+      "Head of AI/Data",
+      "responsable transformation",
+      "responsable sécurité",
+      "responsable trust"
+    ]
+  },
+  "offer": {
+    "name": "Framework Diagnostic IA",
+    "product_type": "framework_pdf",
+    "purpose": "Diagnostiquer et cadrer un projet IA/data avant un engagement plus large.",
+    "price": {
+      "value": 49,
+      "currency": "EUR",
+      "tax_display": "HT"
+    },
+    "billing": "one_time",
+    "access": "permanent",
+    "claim_boundaries": [
+      "no_guaranteed_roi",
+      "no_validated_predictive_score_claim",
+      "no_automatic_iso_nist_or_regulatory_compliance",
+      "no_guaranteed_project_risk_reduction",
+      "no_guaranteed_time_saving",
+      "no_guaranteed_conversion_uplift",
+      "no_unverified_customer_outcome"
+    ]
+  },
+  "positioning": {
+    "problem": "Un sujet IA/data peut déclencher une discussion de technologie, de mission ou de budget alors que le cas d’usage, les contraintes, les acteurs, les prérequis et la preuve de succès ne sont pas encore explicités ensemble.",
+    "product": "Un framework PDF autonome de cadrage en quatre étapes.",
+    "buyer": "Responsables techniques ou de transformation qui ont besoin d’un premier cadre de décision avant d’élargir l’engagement.",
+    "bounded_outcome": "Obtenir un cas d’usage formulé, des inconnues visibles et une base structurée pour décider de la prochaine étape.",
+    "mechanism": "Maturité -> Impact -> Périmètre -> Proposition",
+    "core_statement": "Cadrez votre sujet IA avant d’engager plus de temps, de données ou de budget.",
+    "differentiation": "Le produit est positionné comme réduction de la taille de la première décision, avec limites de preuve explicites, plutôt que comme promesse de réussite du projet ou recommandation technologique prématurée."
+  },
+  "copy_sequences": [
+    {
+      "sequence_id": "copyseq:diagnostic-framework:hero:v2",
+      "dom_key": "seq-hero",
+      "section": "hero",
+      "buyer_question": "Est-ce que ce produit m’aide à clarifier mon sujet avant un engagement plus large ?",
+      "nlp_role": "PROBLEM_REFRAME_AND_OFFER_COMPREHENSION",
+      "commercial_role": "ENTRY_DECISION",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-hero']",
+      "copy": {
+        "eyebrow": "Framework Diagnostic IA · PDF autonome",
+        "headline": "Cadrez votre sujet IA avant d’engager plus de temps, de données ou de budget.",
+        "lead": "Le Framework Diagnostic IA est un PDF autonome à 49 € HT qui vous fait passer d’un cas d’usage encore flou à un premier dossier de décision : maturité, impact, périmètre et trame de proposition.",
+        "audience_line": "Pour les CTO, Head of AI/Data, responsables transformation, sécurité ou trust qui doivent rendre explicites le cas d’usage, les contraintes, les acteurs et les preuves disponibles avant une intervention plus large.",
+        "offer_card": {
+          "billing_label": "Achat unique",
+          "price": "49 € HT",
+          "access": "Accès permanent au framework PDF après confirmation du paiement.",
+          "cta": "Acheter le framework — 49 € HT"
+        }
+      },
+      "claim_status": "BOUNDED_FIRST_PARTY_PRODUCT_DESCRIPTION",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:problem:v2",
+      "dom_key": "seq-problem",
+      "section": "problem",
+      "buyer_question": "Quels signes indiquent que mon cadrage est encore insuffisant ?",
+      "nlp_role": "CONDITIONAL_PROBLEM_RECOGNITION",
+      "commercial_role": "PROBLEM_AGITATION_BOUNDED",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-problem']",
+      "copy": {
+        "eyebrow": "Le problème",
+        "headline": "Le vrai point de départ n’est pas la technologie. C’est la décision.",
+        "lead": "Si l’un de ces cas vous ressemble, le framework sert à rendre la discussion plus concrète avant d’élargir l’engagement.",
+        "problem_cards": [
+          {
+            "title": "Le cas d’usage est trop large.",
+            "body": "Vous parlez déjà de modèle, d’agent ou de plateforme alors que le problème, le résultat attendu et le premier incrément ne sont pas encore définis ensemble."
+          },
+          {
+            "title": "Les inconnues sont dispersées.",
+            "body": "Données, ownership, contraintes, conformité, environnement de test et supervision existent dans plusieurs équipes sans vue commune du sujet."
+          },
+          {
+            "title": "La proposition arrive trop tôt.",
+            "body": "Vous êtes sur le point de demander un devis ou une mission alors que les prérequis, critères de succès et limites du premier périmètre restent à expliciter."
+          }
+        ],
+        "evidence_graph_caption": "Dans NaPiRE, l’ambiguïté ne se réduit pas à un seul défaut.",
+        "evidence_graph_context": "Part des 228 répondants citant le problème parmi leurs cinq plus critiques · 10 pays · enquête 2014/15."
+      },
+      "evidence_binding": {
+        "qgeu_id": "QGEU-DIAG-NAPIRE-TOP5-RE-PROBLEMS-2026",
+        "placement_id": "eup:diagnostic-framework:napire-top5:2026-09-04",
+        "support_scope": "Observed requirements-engineering problem frequencies in the surveyed sample only; no product-effect inference.",
+        "public_citation_status": "REVIEW_ONLY_PENDING_PRESENTATION_JUDGE_AND_LIVE_DOM"
+      },
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:mechanism:v2",
+      "dom_key": "seq-mechanism",
+      "section": "mechanism",
+      "buyer_question": "Comment le framework structure-t-il le cadrage ?",
+      "nlp_role": "MECHANISM_DECOMPOSITION",
+      "commercial_role": "PRODUCT_EXPLANATION",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-mechanism']",
+      "copy": {
+        "eyebrow": "Le mécanisme",
+        "headline": "Un chemin court : 9 → 6 → 5 → 7.",
+        "lead": "Le contenu détaillé reste dans le PDF. La page ne montre ici que la logique de décision.",
+        "counts": [
+          {"value": 9, "label": "points de maturité à examiner", "semantic_type": "PRODUCT_FIELD_COUNT"},
+          {"value": 6, "label": "dimensions d’impact pondérées", "semantic_type": "PRODUCT_FIELD_COUNT"},
+          {"value": 5, "label": "questions de périmètre", "semantic_type": "PRODUCT_FIELD_COUNT"},
+          {"value": 7, "label": "champs pour structurer une proposition", "semantic_type": "PRODUCT_FIELD_COUNT"}
+        ],
+        "steps": [
+          {"index": 1, "title": "Maturité", "body": "Vérifiez les prérequis : données, qualité, ownership, compétences, utilisateur final, conformité, test et supervision."},
+          {"index": 2, "title": "Impact", "body": "Comparez valeur business, faisabilité technique, qualité data, adoption, effort et risque réglementaire. La grille 1–5 et ses seuils restent une heuristique interne."},
+          {"index": 3, "title": "Périmètre", "body": "Formulez le problème, le résultat mesurable, le premier incrément, le niveau d’automatisation et la preuve de succès attendue."},
+          {"index": 4, "title": "Proposition", "body": "Structurez contexte, objectif, approche, prérequis, plan, investissement/valeur attendue et risques/guardrails."}
+        ]
+      },
+      "claim_status": "FIRST_PARTY_PRODUCT_MECHANISM",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:outcomes:v2",
+      "dom_key": "seq-outcomes",
+      "section": "outcomes",
+      "buyer_question": "Avec quels artefacts concrets est-ce que je termine ?",
+      "nlp_role": "BOUNDED_OUTPUT_PREVIEW",
+      "commercial_role": "BENEFIT_TRANSLATION",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-outcomes']",
+      "copy": {
+        "eyebrow": "Ce que vous obtenez",
+        "headline": "Trois sorties utiles pour décider de la suite.",
+        "outputs": [
+          {"title": "Un cas d’usage formulé", "body": "Le problème, le résultat mesurable et la limite du premier incrément sont écrits au même endroit."},
+          {"title": "Des inconnues visibles", "body": "Les données, acteurs, contraintes, contrôles et prérequis à clarifier ne restent plus implicites dans la discussion."},
+          {"title": "Une base pour la prochaine décision", "body": "Vous disposez d’un support pour choisir entre continuer en interne, tester d’abord, requalifier le sujet ou demander une intervention ciblée."}
+        ]
+      },
+      "claim_status": "BOUNDED_DELIVERABLE_OUTPUTS_NOT_BUSINESS_OUTCOMES",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:problem-solution:v2",
+      "dom_key": "seq-problem-solution",
+      "section": "problem-solution",
+      "buyer_question": "Quelle étape utiliser selon le problème rencontré ?",
+      "nlp_role": "PROBLEM_TO_MECHANISM_MAPPING",
+      "commercial_role": "USE_CASE_MAPPING",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-problem-solution']",
+      "copy": {
+        "eyebrow": "Problème → étape utile",
+        "headline": "Allez directement au bloc qui réduit l’ambiguïté.",
+        "mappings": [
+          {"problem": "On ne sait pas si nous sommes prêts.", "step": "Maturité", "effect": "rend les prérequis à examiner visibles"},
+          {"problem": "Tout semble prioritaire.", "step": "Impact", "effect": "impose une même grille de comparaison"},
+          {"problem": "Le cas d’usage grossit à chaque réunion.", "step": "Périmètre", "effect": "fixe le premier incrément et ses critères"},
+          {"problem": "Nous voulons un devis, mais le brief change encore.", "step": "Proposition", "effect": "force les prérequis, le plan et les risques à être nommés"}
+        ]
+      },
+      "claim_status": "CONDITIONAL_METHOD_MAPPING",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:author-proof:v2",
+      "dom_key": "seq-author-proof",
+      "section": "author-proof",
+      "buyer_question": "Pourquoi faire confiance au concepteur pour structurer ce cadrage ?",
+      "nlp_role": "FIRST_PARTY_CAPABILITY_PROOF",
+      "commercial_role": "CREDIBILITY",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-author-proof']",
+      "copy": {
+        "eyebrow": "Pourquoi ce cadre est construit ainsi",
+        "headline": "Un cadrage pensé par un profil qui implémente, pas seulement qui conseille.",
+        "body": "Le framework reprend une pratique d’architecture IA/data orientée critères d’acceptation, traçabilité, contrôle humain, évaluation et handoff. Les preuves publiques sélectionnées couvrent notamment Python/LangChain, Docker/CI, Rust/SQLite, Solidity/EVM et Solana.",
+        "proof_pills": [
+          "Agentic AI · évaluations",
+          "Data lineage · evidence",
+          "Python · Docker · CI",
+          "Rust · SQLite",
+          "Solidity · EVM",
+          "Solana · Rust"
+        ]
+      },
+      "claim_status": "FIRST_PARTY_PUBLIC_IMPLEMENTATION_PROOF",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:fit-boundary:v2",
+      "dom_key": "seq-fit-boundary",
+      "section": "fit-boundary",
+      "buyer_question": "Quand ce framework est-il adapté, et que ne promet-il pas ?",
+      "nlp_role": "FIT_AND_EPISTEMIC_BOUNDARY",
+      "commercial_role": "QUALIFICATION_AND_RISK_REVERSAL",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-fit-boundary']",
+      "copy": {
+        "fit": {
+          "eyebrow": "Bon fit",
+          "headline": "Utilisez-le quand vous avez besoin d’un premier cadre, pas encore d’une grosse mission.",
+          "bullets": [
+            "Vous avez un cas d’usage IA/data mais le premier périmètre reste mouvant.",
+            "Vous voulez réunir données, contraintes, ownership et critères de succès dans un même support.",
+            "Vous souhaitez arriver à une demande d’aide ou de proposition plus ciblée."
+          ]
+        },
+        "boundary": {
+          "eyebrow": "Limites explicites",
+          "headline": "Vous achetez un cadre de décision, pas une promesse de résultat.",
+          "bullets": [
+            "Les poids et seuils de la grille d’impact sont une heuristique interne, pas un modèle prédictif validé.",
+            "Le framework ne certifie pas une conformité ISO, NIST ou réglementaire.",
+            "Il ne garantit ni ROI, ni réduction du risque projet, ni gain de temps, ni résultat de production."
+          ]
+        }
+      },
+      "claim_status": "QUALIFICATION_PLUS_EXPLICIT_BOUNDARY",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:faq:v2",
+      "dom_key": "seq-faq",
+      "section": "faq",
+      "buyer_question": "Quelles objections dois-je lever avant achat ?",
+      "nlp_role": "OBJECTION_HANDLING",
+      "commercial_role": "FAQ",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-faq']",
+      "copy": {
+        "eyebrow": "FAQ",
+        "headline": "Les objections à traiter avant l’achat.",
+        "items": [
+          {"question": "Est-ce un audit de conformité ?", "answer": "Non. Le framework vous aide à rendre visibles les questions de contexte, de conformité et de contrôle à examiner. Il ne remplace ni un audit, ni un avis juridique, ni une décision d’autorité."},
+          {"question": "Le score d’impact prédit-il la réussite du projet ?", "answer": "Non. Les poids, notes et seuils sont une heuristique interne de priorisation. Ils servent à structurer une discussion, pas à prédire une probabilité de succès."},
+          {"question": "Faut-il avoir déjà choisi une technologie ?", "answer": "Non. Le framework commence par le cas d’usage, les prérequis, l’impact et le périmètre. Une recommandation technologique ne doit venir qu’après ce cadrage."},
+          {"question": "Que se passe-t-il après l’achat ?", "answer": "Le paiement est traité par le checkout du produit. Après confirmation, l’entitlement donne accès au PDF. Cette copie de revue n’exécute aucune transaction."},
+          {"question": "Est-ce que l’achat inclut un accompagnement humain ?", "answer": "Non. Le produit décrit ici est le framework PDF autonome. Toute intervention de cadrage, revue ou implémentation relève d’une prestation distincte."}
+        ]
+      },
+      "claim_status": "BOUNDARY_AND_TRANSACTION_FAQ",
+      "publication_status": "REVIEW_ONLY"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:checkout:v2",
+      "dom_key": "seq-checkout",
+      "section": "checkout",
+      "buyer_question": "Quel est l’engagement commercial et comment l’accès est-il délivré ?",
+      "nlp_role": "TRANSACTION_COMPREHENSION",
+      "commercial_role": "PURCHASE",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@id='checkout-review']",
+      "copy": {
+        "eyebrow": "Commencer petit",
+        "headline": "49 € HT · achat unique · accès permanent.",
+        "lead": "Vous achetez le framework PDF autonome. Le montant réel reste autoritaire côté serveur ; cette page GitHub est uniquement une copie de revue.",
+        "form": {
+          "email_label": "Email professionnel *",
+          "name_label": "Nom — optionnel",
+          "organisation_label": "Organisation — optionnel",
+          "terms_label": "J’accepte les conditions applicables à cet achat.",
+          "cta": "Continuer vers le paiement — 49 € HT"
+        },
+        "microcopy": "Aucun bouton de téléchargement pré-achat n’est rendu dans cette copie : pour un produit payant, l’accès au PDF suit la confirmation du paiement et l’entitlement."
+      },
+      "claim_status": "FIRST_PARTY_TRANSACTION_CONTRACT_REVIEW_ONLY",
+      "publication_status": "BLOCKED_PENDING_LIVE_TRANSACTION_VERIFICATION"
+    },
+    {
+      "sequence_id": "copyseq:diagnostic-framework:evidence-review:v2",
+      "dom_key": "seq-evidence-review",
+      "section": "evidence-review",
+      "buyer_question": "Quelles sources sont conservées sans être injectées dans la copie publique ?",
+      "nlp_role": "PROGRESSIVE_DISCLOSURE_REVIEW_ONLY",
+      "commercial_role": "EVIDENCE_DISCLOSURE",
+      "xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-evidence-review']",
+      "copy": {
+        "summary": "Sources et citations conservées pour la revue — non publiées dans le niveau commercial",
+        "evidence_source": "Méndez Fernández et al., Naming the Pain in Requirements Engineering, Table 9.",
+        "recommendation_source": "NIST AI RMF 1.0 — MAP.",
+        "devicev_decision": "Le graphe est placé à côté d’une section préexistante et non dans une section autonome. Le rendu public reste bloqué jusqu’à matérialisation du DOM live exact et exécution du juge de présentation à trois répliques."
+      },
+      "claim_status": "REVIEW_ONLY_PROVENANCE_DISCLOSURE",
+      "publication_status": "REVIEW_ONLY"
+    }
+  ],
+  "evidence": {
+    "qgeu": {
+      "id": "QGEU-DIAG-NAPIRE-TOP5-RE-PROBLEMS-2026",
+      "epistemic_class": "DESCRIPTIVE",
+      "epistemic_status": "OBSERVED",
+      "population": "228 completed company datasets from 10 countries",
+      "period": "2014/15 NaPiRE survey run; article published 2017",
+      "geography": "10 countries",
+      "variable": "respondents citing each RE problem among their five most critical problems",
+      "unit": "percent of 228 respondents",
+      "data_points": [
+        {"order": 1, "label": "Incomplete / hidden requirements", "count": 109, "percent": 48, "status": "OBSERVED"},
+        {"order": 2, "label": "Communication flaws: project team ↔ customer", "count": 93, "percent": 41, "status": "OBSERVED"},
+        {"order": 3, "label": "Moving targets", "count": 76, "percent": 33, "status": "OBSERVED"},
+        {"order": 4, "label": "Requirements too abstract / underspecified", "count": 76, "percent": 33, "status": "OBSERVED"},
+        {"order": 5, "label": "Time boxing / not enough time", "count": 72, "percent": 32, "status": "OBSERVED"}
+      ],
+      "boundary": "Cross-domain practitioner survey. The displayed frequencies describe this sample only; they do not prove causal project outcomes, product efficacy, ROI, compliance, risk reduction or performance of Framework Diagnostic IA.",
+      "deterministic_preflight_status": "PASS",
+      "factfulness_gate_status": "PASS",
+      "factfulness_score": 100,
+      "agent_exploitability_status": "ALLOWED",
+      "presentation_judge_status": "PENDING_3_REPLICA_JUDGEMENT",
+      "publication_allowed": false,
+      "target_xpath": "//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-problem']//figure[@data-qgeu-id='QGEU-DIAG-NAPIRE-TOP5-RE-PROBLEMS-2026']",
+      "xpath_match_count_in_review_artifact": 1,
+      "live_page_xpath_validated": false
+    },
+    "qgeu_source": {
+      "title": "Naming the Pain in Requirements Engineering: Contemporary Problems, Causes, and Effects in Practice",
+      "canonical_url": "https://arxiv.org/abs/1611.10288",
+      "peer_reviewed_doi": "10.1007/s10664-016-9451-7",
+      "source_locator": "Table 9 — first five rows",
+      "origin_artifact_id": "artifact:diagnostic:napire-table9:v1",
+      "origin_artifact_path": "pages/ressources/produits/frameworks/evidence/diagnostic-framework.napire-table9.json",
+      "origin_artifact_sha256": "779a977db7b80c1e8120adb60f022e4dd402e60f3412ac3bbb6f30374c1fe904",
+      "origin_artifact_hash_verified": true
+    },
+    "recommendation_source": {
+      "type": "NORMATIVE_GUIDANCE",
+      "institution": "NIST",
+      "title": "AI Risk Management Framework 1.0 — Core / MAP",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "locators": ["Map 1.1", "Map 1.4", "Map 1.6", "Map 3.3"],
+      "supported_proposition": "Context, business use/value, relevant requirements and targeted application scope should be established and documented as part of AI risk mapping.",
+      "boundary": "Normative guidance supports the cadrage principle only. It does not prove NaPiRE frequencies or the efficacy, ROI or compliance effect of Framework Diagnostic IA."
+    },
+    "effect_recommendation_separation": "PASS"
+  },
+  "capability_proof": {
+    "role": "Supports author capability only; never used as evidence that the product causes external business outcomes.",
+    "projects": [
+      {"name": "Streamlit LangChain Prototype", "stack": ["Python", "Streamlit", "Docker", "GitLab CI"], "repository": "https://github.com/RickOwri/streamlit-lang"},
+      {"name": "Folder Mapper", "stack": ["Rust", "SQLite"], "repository": "https://github.com/RickOwri/folder_mapper"},
+      {"name": "Lottery dApp", "stack": ["Solidity", "EVM", "TypeScript"], "repository": "https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp"},
+      {"name": "Yield SOL", "stack": ["Solana", "Rust", "TypeScript"], "repository": "https://github.com/RickOwri/yield-sol"},
+      {"name": "AI/RAG Experiment Portfolio", "stack": ["Python", "RAG", "Chroma", "LlamaIndex", "LangChain", "Scrapy"], "repository": "https://github.com/RickOwri/projects-cv"}
+    ],
+    "nda_boundary": "Confidential client architectures, production metrics and security findings are not used as product efficacy proof."
+  },
+  "landing_recipe": {
+    "C1": "PASS",
+    "C2": "PASS_ROLE_FIRST",
+    "C3": "PASS",
+    "C4": "PASS_BOUNDED",
+    "C5": "PASS",
+    "C6": "PASS",
+    "C7": "ADAPTED_TO_4_IMPLEMENTED_STAGES_NOT_8",
+    "C8": "PASS_3_OUTCOMES",
+    "C9": "PASS_CONDITIONAL",
+    "C10": "PASS",
+    "C11": "REJECTED_NO_SCARCITY_EVIDENCE",
+    "C12": "NO_EXTERNAL_OUTCOME_GUARANTEE_BOUNDARY_USED_INSTEAD",
+    "C13": "PASS_REVIEW_ONLY_CTA",
+    "C14": "REJECTED_NO_VERIFIED_TESTIMONIAL",
+    "C15": "REJECTED_NO_VERIFIED_REVIEW",
+    "C16": "PASS_5_FAQ",
+    "C17": "COMPRESSED_TO_4_EVIDENCED_OR_CONDITIONAL_PROBLEMS",
+    "C18": "PASS",
+    "C19": "PASS_CHAMPION_HEADLINE_SELECTED"
+  },
+  "devicev": {
+    "policy_source": "@neofort",
+    "policy_resolution": "CURRENT_TRUE_ONLY",
+    "fail_closed": true,
+    "judge_config": {
+      "replicas": 3,
+      "temperature": 0,
+      "top_p": 1,
+      "hard_gate_reducer": "AND",
+      "score_reducer": "MIN",
+      "categorical_disagreement": "BLOCK"
+    },
+    "resolved_judges": [
+      "judge:evidence:factfulness-epistemology-methodology-v2",
+      "judge:evidence-unit:champion-v2",
+      "judge:evidence-placement:presentation-v1.2",
+      "judge:evidence-graphic:presentation-v3",
+      "judge:copy-claim:external-capability-grounding-v1.1"
+    ],
+    "resolved_policies": [
+      "policy:evidence-judge-applicability:v2",
+      "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+      "policy:evidence-agent-exploitability:proof-carrying-v3",
+      "policy:evidence-placement:claim-span-entailment-v2",
+      "policy:eug-placement:statistical-display-ordering-contract-v2",
+      "policy:llm-judge:deterministic-execution-v2"
+    ],
+    "validation": {
+      "deterministic_preflight": "PASS_FOR_QGEU",
+      "factfulness": "PASS_FOR_QGEU_PROOF_CARRYING_100",
+      "source_materialization_hash": "PASS_FOR_NAPIRE_ORIGIN_ARTIFACT",
+      "effect_recommendation_separation": "PASS",
+      "copy_structure": "PASS_REVIEW_ARTIFACT_TOP_LEVEL_SECTION_COUNT_1",
+      "live_dom_parity": "BLOCKED_NOT_MATERIALIZED",
+      "eug_presentation_judge": "PENDING_3_REPLICA_JUDGEMENT",
+      "evidence_placement_judge": "PENDING_3_REPLICA_JUDGEMENT",
+      "live_xpath_validation": "BLOCKED",
+      "transaction_route_validation": "BLOCKED_LIVE_PUBLIC_PAGE_CONFLICT",
+      "publication_allowed": false,
+      "final_decision": "REVIEW_ONLY_BLOCKED",
+      "blocking_reasons": [
+        "LIVE_RAW_HTML_NOT_MATERIALIZED",
+        "EXACT_LIVE_DOM_SELECTOR_PARITY_NOT_VALIDATED",
+        "FORMAL_3_REPLICA_EUG_PRESENTATION_JUDGE_NOT_EXECUTED",
+        "FORMAL_3_REPLICA_EVIDENCE_PLACEMENT_JUDGE_NOT_EXECUTED",
+        "LIVE_TRANSACTION_ROUTE_CONFLICT_NOT_RESOLVED"
+      ]
+    }
+  },
+  "github": {
+    "repository": "mckeopharma-web/copywriting",
+    "branch": "copy/diagnostic-framework-eug-sidecar-20260904",
+    "source_html_path": "pages/ressources/produits/frameworks/diagnostic-framework.html",
+    "source_html_blob_sha": "8a3fa34758a4673434e4dba705449c579f04d730",
+    "target_json_path": "pages/ressources/produits/frameworks/diagnostic-framework.copywriting.json"
+  },
+  "provenance": {
+    "live_page": "https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/",
+    "review_html_commit": "83c7762c68665e5f8df3bda7042a94654c49cd8c",
+    "landingpage_skill": "mckeopharma-web/copywriting/.skills/landingpage.md",
+    "vsl": "mckeopharma-web/VSL/generated/vsl-batch-2026-08-27/chapters/25.1.md",
+    "napire_extract_sha256": "779a977db7b80c1e8120adb60f022e4dd402e60f3412ac3bbb6f30374c1fe904"
+  }
+}
