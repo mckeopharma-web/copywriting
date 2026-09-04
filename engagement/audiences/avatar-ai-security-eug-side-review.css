@@ -1,0 +1,84 @@
+/*
+DEVICEV review patch — AI Security audience only.
+Target: engagement/audiences/avatar-ai-security.html
+Purpose: keep every existing EUG inside the pre-existing section it illustrates and render it at the side of that section on desktop.
+Scope lock: consequences, deliverables, intersection, commitments only. No copy, section order, navigation, CTA or other avatar is changed.
+Publication posture: REVIEW_ONLY_PENDING_TARGET_PLACEMENT_REPLICA_JUDGE.
+*/
+
+@media (min-width: 981px) {
+  #consequences > .shell,
+  #deliverables > .shell,
+  #intersection > .shell,
+  #commitments > .shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+    column-gap: 24px;
+    align-items: start;
+  }
+
+  #consequences > .shell > .section-kicker,
+  #consequences > .shell > .section-title,
+  #deliverables > .shell > .section-kicker,
+  #deliverables > .shell > .section-title,
+  #intersection > .shell > .section-kicker,
+  #intersection > .shell > .section-title,
+  #commitments > .shell > .section-kicker,
+  #commitments > .shell > .section-title {
+    grid-column: 1 / -1;
+  }
+
+  /* G1 — illustrates the enforceable decision-boundary consequences section. */
+  #consequences > .shell > .grid3 { grid-column: 1; grid-row: 3; }
+  #consequences > .shell > .section-intro { grid-column: 1; grid-row: 4; }
+  #consequences > .shell > .eug-card { grid-column: 2; grid-row: 3 / span 2; margin-top: 28px; }
+
+  /* G2 — illustrates the deliverables section through argument minimisation evidence. */
+  #deliverables > .shell > .grid3 { grid-column: 1; grid-row: 3; }
+  #deliverables > .shell > .section-intro { grid-column: 1; grid-row: 4; }
+  #deliverables > .shell > .eug-card { grid-column: 2; grid-row: 3 / span 2; margin-top: 28px; }
+
+  /* G3 — illustrates the policy ↔ engineering ↔ evidence intersection. */
+  #intersection > .shell > .grid3 { grid-column: 1; grid-row: 3; }
+  #intersection > .shell > .eug-card { grid-column: 2; grid-row: 3; margin-top: 28px; }
+
+  /* G4 — illustrates the human-decision boundary in commitments. */
+  #commitments > .shell > .commitment { grid-column: 1; grid-row: 3; }
+  #commitments > .shell > .section-intro { grid-column: 1; }
+  #commitments > .shell > .eug-card { grid-column: 2; grid-row: 3 / span 4; margin-top: 28px; }
+
+  /* Compact existing source-bound marks so the graph reads as a side diagnostic, not a second full-width section. */
+  #consequences .eug-card .bars,
+  #deliverables .eug-card .bars,
+  #intersection .eug-card .bars,
+  #commitments .eug-card .bars {
+    min-width: 0;
+  }
+
+  #consequences .eug-card .barrow,
+  #deliverables .eug-card .barrow,
+  #intersection .eug-card .barrow,
+  #commitments .eug-card .barrow {
+    grid-template-columns: minmax(105px, 135px) minmax(80px, 1fr) 48px;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  #consequences .eug-card .eug-head h3,
+  #deliverables .eug-card .eug-head h3,
+  #intersection .eug-card .eug-head h3,
+  #commitments .eug-card .eug-head h3 {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+}
+
+/* Responsive invariant: side-by-side becomes normal source order below the desktop breakpoint. */
+@media (max-width: 980px) {
+  #consequences > .shell,
+  #deliverables > .shell,
+  #intersection > .shell,
+  #commitments > .shell {
+    display: block;
+  }
+}
