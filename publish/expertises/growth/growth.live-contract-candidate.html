@@ -15,55 +15,54 @@
 <meta name="x-scope" content="ONLY /expertises/growth/">
 <meta name="x-section-contract" content="0,10,5,7,8">
 <meta name="x-topology-contract" content="hero + 2 offres + 3 cartes capacités + CTA + qualification 8 écrans">
-<meta name="x-fidelity" content="semantic-topology-and-form-contract; not byte-or-asset fidelity">
+<meta name="x-fidelity" content="semantic-topology-content-anatomy-and-form-contract; not byte-or-asset fidelity">
 <meta name="x-publication-status" content="BLOCKED">
 <style>
-:root{color-scheme:dark;--bg:#090c12;--panel:#101620;--panel2:#0c1119;--line:#29364a;--line2:#394b65;--text:#f4f7fb;--muted:#aab5c4;--accent:#d7ff64;--cyan:#9ee7ff;--amber:#ffd479;--max:1120px}
+:root{color-scheme:dark;--bg:#090c12;--panel:#101620;--panel2:#0c1119;--line:#29364a;--line2:#394b65;--text:#f4f7fb;--muted:#aab5c4;--accent:#d7ff64;--cyan:#9ee7ff;--max:1120px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 78% 0,rgba(158,231,255,.06),transparent 28rem),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 a{color:var(--cyan)}.s{width:min(var(--max),calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:9;background:#090c12ed;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.top .s{min-height:60px;display:flex;justify-content:space-between;align-items:center;gap:20px}.top a{text-decoration:none}.top nav{display:flex;gap:12px;align-items:center}
 .hero,.sec,.qual{padding:58px 0;border-bottom:1px solid var(--line)}.ey{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:800}h1,h2,h3{line-height:1.05;letter-spacing:-.03em}h1{font-size:clamp(50px,8vw,94px);margin:8px 0 14px}h2{font-size:clamp(30px,5vw,52px);margin:8px 0 18px}h3{font-size:20px;margin:6px 0 10px}.lead{font-size:21px;max-width:880px}.m{color:var(--muted)}
-.g2,.g3{display:grid;gap:14px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.card,.cta{border:1px solid var(--line2);border-radius:18px;background:linear-gradient(180deg,#111925,#0f151e);padding:19px}.offer{display:flex;flex-direction:column;gap:9px}.stack{color:var(--cyan);font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}.beforeafter{display:grid;grid-template-columns:1fr 28px 1fr;gap:9px;align-items:center;margin:6px 0}.beforeafter>div{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:11px}.arrow{text-align:center;color:var(--accent);font-size:18px}.score{font-size:32px;font-weight:850;letter-spacing:-.05em}.proofline{font-size:12px;color:#cbd5e1}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#09100c!important;padding:10px 14px;border-radius:99px;font-weight:800;text-decoration:none;border:0}.btn.secondary{background:transparent;color:var(--text)!important;border:1px solid var(--line2)}.cta{display:flex;justify-content:space-between;align-items:center;gap:20px}.actions{display:flex;gap:9px;flex-wrap:wrap}
-.screen{border-top:1px solid var(--line);padding:18px 0}.screen b{color:var(--accent)}fieldset{border:0;padding:0;margin:12px 0}.opts{display:flex;flex-wrap:wrap;gap:8px}.opt{display:inline-flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid var(--line2);border-radius:999px;background:#0d141e;color:#dbe4ee}.opt input{accent-color:var(--accent)}
-.qual input[type="text"],.qual input[type="email"],.qual textarea{padding:10px;background:#111927;border:1px solid var(--line2);color:#fff;border-radius:8px;width:min(620px,100%);font:inherit}.qual textarea{min-height:76px;resize:vertical}.field{display:grid;gap:6px;margin:10px 0}.field label{font-weight:700}.notice{border:1px dashed var(--line2);border-radius:12px;padding:12px;color:var(--muted);font-size:12px;margin-top:18px}
-footer{padding:25px 0;color:var(--muted);font-size:11px}
-@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.top nav a:not(:last-child){display:none}.cta{display:block}.beforeafter{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+.chips,.opts,.actions{display:flex;flex-wrap:wrap;gap:8px}.chip,.opt{display:inline-flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid var(--line2);border-radius:999px;background:#0d141e;color:#dbe4ee;text-decoration:none}.chip.active{color:#09100c;background:var(--accent);border-color:var(--accent)}
+.g2,.g3{display:grid;gap:14px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.card,.cta{border:1px solid var(--line2);border-radius:18px;background:linear-gradient(180deg,#111925,#0f151e);padding:19px}.offer{display:flex;flex-direction:column;gap:9px}.stack{color:var(--cyan);font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}.score{font-size:32px;font-weight:850;letter-spacing:-.05em}.proofline{font-size:12px;color:#cbd5e1}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#09100c!important;padding:10px 14px;border-radius:99px;font-weight:800;text-decoration:none;border:0}.btn.secondary{background:transparent;color:var(--text)!important;border:1px solid var(--line2)}.cta{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.screen{border-top:1px solid var(--line);padding:18px 0}.screen b{color:var(--accent)}fieldset{border:0;padding:0;margin:12px 0}.opt input{accent-color:var(--accent)}.field{display:grid;gap:6px;margin:10px 0}.field label,legend{font-weight:700}.qual input[type="text"],.qual input[type="email"],.qual textarea{padding:10px;background:#111927;border:1px solid var(--line2);color:#fff;border-radius:8px;width:min(620px,100%);font:inherit}.qual textarea{min-height:76px;resize:vertical}.notice{border:1px dashed var(--line2);border-radius:12px;padding:12px;color:var(--muted);font-size:12px;margin-top:18px}
+footer{padding:25px 0;color:var(--muted);font-size:11px}@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.top nav a:not(:last-child){display:none}.cta{display:block}}
 </style>
 </head>
 <body>
 <header class="top"><div class="s"><a href="https://mickael-umt.com/"><b>Mickael Rutembya</b></a><nav><a href="#offres">Offres</a><a href="#capacites">Preuves</a><a class="btn" href="#qualification">Qualifier</a></nav></div></header>
-
 <main>
+
 <section class="hero" data-section-id="growth:hero" data-section-token="0">
   <div class="s">
     <div class="ey">Expertise · Adoption & croissance</div>
     <h1>Adoption & croissance</h1>
     <p class="lead" data-seq-id="growth:hero:promise">De la compétence ou du contexte dispersé à un usage mesurable et réutilisable.</p>
-    <p class="m">Deux voies selon le goulot réel : transférer une capacité IA jusqu’au travail observable, ou transformer le contexte commercial en système versionné, traçable et mesurable. La qualification choisit la voie avant de proposer le scope.</p>
+    <div class="chips" aria-label="Catégories d'expertise">
+      <a class="chip" href="https://mickael-umt.com/expertises/it/">IT & plateformes data</a>
+      <a class="chip" href="https://mickael-umt.com/expertises/healthtech/">HealthTech & environnements régulés</a>
+      <a class="chip active" href="https://mickael-umt.com/expertises/growth/" aria-current="page">Adoption & croissance</a>
+      <a class="chip" href="https://mickael-umt.com/expertises/">Les dix expertises</a>
+    </div>
   </div>
 </section>
 
 <section class="sec" id="offres" data-section-id="growth:offers" data-section-token="10">
   <div class="s">
-    <div class="ey">Deux offres Growth</div>
-    <h2>Choisir le goulot, pas imposer un bundle.</h2>
     <div class="g2">
       <article class="card offer" data-seq-id="growth:offer:training">
+        <div class="ey">L&amp;D</div>
         <h3>AI Training &amp; Adoption Engineering — transfert de capacité gouverné</h3>
         <p class="m">Des équipes capables d’utiliser l’IA, d’en vérifier les résultats et de savoir quand escalader vers une validation humaine.</p>
-        <div class="beforeafter"><div><b>Avant</b><br><span class="m">Programme difficile à relier au travail réel.</span></div><div class="arrow">→</div><div><b>Après</b><br><span class="m">Tâches, compétences, critères de revue et preuve de transfert explicités.</span></div></div>
         <div class="stack">Python · AI adoption · cybersecurity · blockchain · assessment · document control</div>
-        <p><b>Livrables :</b> matrice compétences/tâches · banque d’exercices · grilles d’évaluation · registre de classification des données · matrice humain/IA · protocole de preuve de transfert · kit de passation.</p>
-        <p><b>Format :</b> cadrage → cohorte pilote ≤12 → programme 3–6 mois lorsque l’extension est justifiée.</p>
+        <a href="https://mickael-umt.com/expertises/training/">Voir l’offre</a>
       </article>
-
       <article class="card offer" data-seq-id="growth:offer:marketing">
+        <div class="ey">ME</div>
         <h3>Marketing Engineering &amp; Context Systems</h3>
         <p class="m">Transformer le contexte commercial en système mesurable, versionné et réutilisable.</p>
-        <div class="beforeafter"><div><b>Avant</b><br><span class="m">Avatars, offres, sources, routage et apprentissages dispersés.</span></div><div class="arrow">→</div><div><b>Après</b><br><span class="m">Contexte GTM gouverné reliant sources, métriques, expériences et décisions.</span></div></div>
         <div class="stack">Research · structured context · automation · analytics · prompt systems</div>
-        <p><b>Livrables :</b> Customer Avatars versionnés · offres et positionnement · registre sources/preuves · hypothèses de message · assets prompt/context · metric contracts · journaux d’expérience et de décision.</p>
-        <p><b>Format :</b> engagement de 3–6 mois · operating system marketing et automatisation.</p>
+        <a href="https://mickael-umt.com/expertises/marketing-engineering/">Voir l’offre</a>
       </article>
     </div>
   </div>
@@ -72,75 +71,80 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}
 <section class="sec" id="capacites" data-section-id="growth:capabilities" data-section-token="5">
   <div class="s">
     <div class="ey">Capacités CV correspondantes</div>
-    <h2>Trois capacités reliées à des preuves publiques ou professionnelles traçables.</h2>
+    <h2>Le filtre Adoption & croissance relié à la matrice de preuve.</h2>
+    <p class="m">Ces capacités sont classées globalement : leur numéro reste stable lorsque vous changez de filtre.</p>
     <div class="g3">
-      <article class="card" data-seq-id="growth:capability:training"><div>#3</div><div class="score">82/100</div><h3>Formation technique &amp; ingénierie pédagogique</h3><p class="m">Objectifs observables, exercices, rubriques d’évaluation et transfert au poste de travail.</p><p class="proofline"><b>Preuve :</b> programmes professionnels depuis 2021 · 5+ années documentées · confiance élevée.</p><div class="stack">Instructional design · évaluation · Python · IA · cybersécurité · blockchain</div></article>
-      <article class="card" data-seq-id="growth:capability:web"><div>#4</div><div class="score">67/100</div><h3>Web &amp; product engineering</h3><p class="m">Formulaires, dashboards et interfaces qui rendent le modèle opératoire utilisable au lieu de le laisser dans des slides.</p><p class="proofline"><b>Preuve publique :</b> Streamlit/LangChain prototype et projets web publics.</p><div class="stack">Python · Streamlit · Docker · GitLab CI · web engineering</div></article>
-      <article class="card" data-seq-id="growth:capability:llm"><div>#8</div><div class="score">55/100</div><h3>Applications LLM &amp; RAG</h3><p class="m">Retrieval, routage de contexte, sorties structurées et évaluation pour des workflows IA réutilisables.</p><p class="proofline"><b>Preuve publique :</b> portfolio AI/RAG et prototypes de routage documentaire.</p><div class="stack">Python · RAG · Chroma · LlamaIndex · LangChain · Scrapy</div></article>
+      <a class="card" data-seq-id="growth:capability:training" href="https://mickael-umt.com/expertises/technical-training/"><div>#3</div><div class="score">82/100</div><h3>Formation technique et ingénierie pédagogique</h3><p class="m">Objectifs observables, exercices, rubriques d’évaluation et transfert mesurable au poste de travail.</p></a>
+      <a class="card" data-seq-id="growth:capability:web" href="https://mickael-umt.com/expertises/web-engineering/"><div>#4</div><div class="score">67/100</div><h3>Ingénierie web et produit</h3><p class="m">Interfaces responsives, applications Django/React/Streamlit et intégrations API orientées opérations.</p></a>
+      <a class="card" data-seq-id="growth:capability:llm" href="https://mickael-umt.com/expertises/llm-applications/"><div>#8</div><div class="score">55/100</div><h3>Applications LLM et RAG</h3><p class="m">Assistants, recherche documentaire, outils, sorties structurées et évaluation des réponses.</p></a>
     </div>
   </div>
 </section>
 
 <section class="sec" id="next-step" data-section-id="growth:next-step" data-section-token="7">
-  <div class="s"><div class="cta"><div><div class="ey">Étape suivante</div><h2>Situer le besoin avant de choisir l’offre.</h2><p class="m">Apportez une décision d’adoption ou commerciale qui dépend aujourd’hui d’une capacité, d’un contexte acheteur ou d’une preuve dispersée. La qualification détermine la voie avant tout scope.</p></div><div class="actions"><a class="btn" href="#qualification">Qualification</a><a class="btn secondary" href="https://mickael-umt.com/contact/?ctx=diagnostic&amp;ref=growth">Diagnostic</a></div></div></div>
+  <div class="s">
+    <div class="ey">Prochaine étape</div>
+    <div class="cta"><div><h2>Situer le besoin avant de choisir l’offre.</h2><p class="m">Comparez les repères de marché, estimez une enveloppe ou décrivez directement la décision à prendre.</p></div><div class="actions"><a class="btn" href="#qualification">Qualifier une mission</a><a class="btn secondary" href="https://mickael-umt.com/outils/">Diagnostiquer ma mission, gratuitement</a></div></div>
+  </div>
 </section>
 
 <section class="qual" id="qualification" data-section-id="growth:qualification" data-section-token="8" data-form-contract="live-8-screen-v1">
   <div class="s">
     <div class="ey">Cette catégorie, appliquée à votre cas</div>
     <h2>Le bon format d’intervention, avant le premier rendez-vous.</h2>
-    <p class="m">Huit écrans, dans le même ordre sémantique que la page live. Prévisualisation contrôlée : aucun endpoint de soumission n’est connecté à cet artefact.</p>
+    <p class="lead">Décrivez la décision à prendre — pas votre budget. Vous repartez avec le format d’intervention adapté et les ressources qui y mènent.</p>
+    <p class="m">La catégorie que vous consultez est déjà renseignée : trois écrans suffisent pour recevoir la lecture et l’offre correspondante.</p>
 
-    <div class="screen" data-screen="1"><b>Écran 1 / 8</b><h3>Qu’est-ce qui doit avancer ?</h3>
-      <fieldset><legend class="m">Sélectionnez le ou les sujets concernés.</legend><div class="opts">
-        <label class="opt"><input type="checkbox" name="need" value="ai-agents"> IA / agents</label>
-        <label class="opt"><input type="checkbox" name="need" value="data"> Plateforme data / traçabilité</label>
-        <label class="opt"><input type="checkbox" name="need" value="regulated"> Réglementé / inspection</label>
-        <label class="opt"><input type="checkbox" name="need" value="solution"> Cadrage de solution</label>
-        <label class="opt"><input type="checkbox" name="need" value="upskill"> Faire monter l’équipe en compétence</label>
-        <label class="opt"><input type="checkbox" name="need" value="other"> Autre</label>
+    <div class="screen" data-screen="1"><b>Écran 1 / 8</b><h3>Qu’est-ce qui doit avancer ?</h3><p class="m">Cochez tout ce qui compte. Plusieurs réponses sont fréquentes.</p>
+      <div class="field"><label for="subject">Le sujet à traiter · facultatif</label><input id="subject" type="text" placeholder="Pré-rempli d’après cette page — modifiable."></div>
+      <fieldset><legend>Sujets</legend><div class="opts">
+        <label class="opt"><input type="checkbox" name="need" value="ai-agents"> Système IA, agents ou automatisation</label>
+        <label class="opt"><input type="checkbox" name="need" value="data"> Plateforme data ou traçabilité</label>
+        <label class="opt"><input type="checkbox" name="need" value="regulated"> Environnement régulé ou inspecté</label>
+        <label class="opt"><input type="checkbox" name="need" value="solution"> Cadrage d’une solution</label>
+        <label class="opt"><input type="checkbox" name="need" value="upskill"> Montée en compétence d’une équipe</label>
+        <label class="opt"><input type="checkbox" name="need" value="other"> Autre décision à instruire</label>
       </div></fieldset>
-      <div class="field"><label for="subject">Sujet précis — optionnel</label><input id="subject" type="text" placeholder="Ex. adoption IA, preuve, routage commercial…"></div>
     </div>
 
-    <div class="screen" data-screen="2"><b>Écran 2 / 8</b><h3>Dans quel cadre ?</h3>
-      <fieldset><legend class="m">Fenêtre de décision</legend><div class="opts">
-        <label class="opt"><input type="radio" name="timeline" value="30d"> &lt; 30 jours</label><label class="opt"><input type="radio" name="timeline" value="quarter"> Ce trimestre</label><label class="opt"><input type="radio" name="timeline" value="semester"> Ce semestre</label><label class="opt"><input type="radio" name="timeline" value="none"> Pas de date</label>
+    <div class="screen" data-screen="2"><b>Écran 2 / 8</b><h3>Dans quel cadre ?</h3><p class="m">Deux repères suffisent pour proposer un format réaliste.</p>
+      <fieldset><legend>Quand la décision se prend-elle ? · facultatif</legend><div class="opts">
+        <label class="opt"><input type="radio" name="timeline" value="30d"> Sous 30 jours</label><label class="opt"><input type="radio" name="timeline" value="quarter"> Ce trimestre</label><label class="opt"><input type="radio" name="timeline" value="semester"> Ce semestre</label><label class="opt"><input type="radio" name="timeline" value="none"> Pas encore de date</label>
       </div></fieldset>
-      <fieldset><legend class="m">Votre rôle dans la décision</legend><div class="opts">
+      <fieldset><legend>Votre rôle dans cette décision · facultatif</legend><div class="opts">
         <label class="opt"><input type="radio" name="role" value="decide"> Je décide</label><label class="opt"><input type="radio" name="role" value="recommend"> Je recommande</label><label class="opt"><input type="radio" name="role" value="instruct"> J’instruis le dossier</label>
       </div></fieldset>
     </div>
 
-    <div class="screen" data-screen="3"><b>Écran 3 / 8</b><h3>Comment souhaitez-vous avancer ?</h3><div class="opts">
-      <label class="opt"><input type="radio" name="mode" value="embedded"> Mission accompagnée</label><label class="opt"><input type="radio" name="mode" value="sprint"> Sprint daté</label><label class="opt"><input type="radio" name="mode" value="capability"> Construire la capacité équipe</label><label class="opt"><input type="radio" name="mode" value="frame"> Cadrer d’abord</label>
+    <div class="screen" data-screen="3"><b>Écran 3 / 8</b><h3>Comment souhaitez-vous avancer ?</h3><p class="m">C’est cette réponse qui détermine ce qui vous sera proposé.</p><div class="opts">
+      <label class="opt"><input type="radio" name="mode" value="embedded"> Une mission accompagnée</label><label class="opt"><input type="radio" name="mode" value="sprint"> Un sprint court et daté</label><label class="opt"><input type="radio" name="mode" value="capability"> Faire monter mon équipe</label><label class="opt"><input type="radio" name="mode" value="frame"> Cadrer par moi-même d’abord</label>
     </div></div>
 
-    <div class="screen" data-screen="4"><b>Écran 4 / 8</b><h3>À quel rythme hebdomadaire ?</h3><div class="opts">
-      <label class="opt"><input type="radio" name="cadence" value="1"> 1 jour/semaine</label><label class="opt"><input type="radio" name="cadence" value="2"> 2 jours/semaine</label><label class="opt"><input type="radio" name="cadence" value="3"> 3 jours/semaine</label><label class="opt"><input type="radio" name="cadence" value="4-5"> 4–5 jours/semaine</label>
+    <div class="screen" data-screen="4"><b>Écran 4 / 8</b><h3>À quel rythme, si l’on s’engage ?</h3><p class="m">Une intervention se dimensionne en jours par semaine, pas en promesses.</p><div class="opts">
+      <label class="opt"><input type="radio" name="cadence" value="1"> Un jour par semaine</label><label class="opt"><input type="radio" name="cadence" value="2"> Deux jours par semaine</label><label class="opt"><input type="radio" name="cadence" value="3"> Trois jours par semaine</label><label class="opt"><input type="radio" name="cadence" value="4-5"> Quatre à cinq jours par semaine</label>
     </div></div>
 
-    <div class="screen" data-screen="5"><b>Écran 5 / 8</b><h3>Quelle est la taille de l’organisation ?</h3><div class="opts">
-      <label class="opt"><input type="radio" name="org_size" value="10"> ≤10</label><label class="opt"><input type="radio" name="org_size" value="50"> 11–50</label><label class="opt"><input type="radio" name="org_size" value="250"> 51–250</label><label class="opt"><input type="radio" name="org_size" value="1000"> 251–1 000</label><label class="opt"><input type="radio" name="org_size" value="1000+"> &gt;1 000</label>
+    <div class="screen" data-screen="5"><b>Écran 5 / 8</b><h3>Combien de personnes doivent monter ?</h3><p class="m">La taille décide du format : une cohorte fermée ne se conduit pas comme un binôme.</p><div class="opts">
+      <label class="opt"><input type="radio" name="org_size" value="10"> Jusqu’à dix personnes</label><label class="opt"><input type="radio" name="org_size" value="50"> Onze à cinquante</label><label class="opt"><input type="radio" name="org_size" value="250"> Cinquante et un à deux cent cinquante</label><label class="opt"><input type="radio" name="org_size" value="1000"> Deux cent cinquante et un à mille</label><label class="opt"><input type="radio" name="org_size" value="1000+"> Plus de mille</label>
     </div></div>
 
-    <div class="screen" data-screen="6"><b>Écran 6 / 8</b><h3>Où en est le scope ?</h3><div class="opts">
-      <label class="opt"><input type="radio" name="maturity" value="brief"> Brief prêt</label><label class="opt"><input type="radio" name="maturity" value="outcome"> Résultat clair, scope à cadrer</label><label class="opt"><input type="radio" name="maturity" value="problem"> Problème connu, solution ouverte</label><label class="opt"><input type="radio" name="maturity" value="idea"> Idée / exploration</label>
+    <div class="screen" data-screen="6"><b>Écran 6 / 8</b><h3>Où en est le périmètre aujourd’hui ?</h3><p class="m">Vous cadrez seul : autant savoir d’où vous partez.</p><div class="opts">
+      <label class="opt"><input type="radio" name="maturity" value="brief"> Brief, équipe et résultat attendu sont prêts</label><label class="opt"><input type="radio" name="maturity" value="outcome"> Le résultat est clair, le périmètre reste à cadrer</label><label class="opt"><input type="radio" name="maturity" value="problem"> Le problème est identifié, la solution reste ouverte</label><label class="opt"><input type="radio" name="maturity" value="idea"> C’est encore une idée à explorer</label>
     </div></div>
 
-    <div class="screen" data-screen="7"><b>Écran 7 / 8</b><h3>Y a-t-il un déclencheur d’inspection ou de contrôle ?</h3><div class="opts">
-      <label class="opt"><input type="radio" name="inspection" value="planned"> Inspection planifiée</label><label class="opt"><input type="radio" name="inspection" value="deviations"> Déviations récurrentes</label><label class="opt"><input type="radio" name="inspection" value="validation"> Validation à défendre</label><label class="opt"><input type="radio" name="inspection" value="none"> Aucun événement</label>
+    <div class="screen" data-screen="7"><b>Écran 7 / 8</b><h3>Ce que l’inspection devra pouvoir suivre</h3><p class="m">Une seule précision, pour éviter de la demander au téléphone.</p><div class="opts">
+      <label class="opt"><input type="radio" name="inspection" value="planned"> Une inspection prévue</label><label class="opt"><input type="radio" name="inspection" value="deviations"> Des déviations qui reviennent</label><label class="opt"><input type="radio" name="inspection" value="validation"> Une validation à défendre</label><label class="opt"><input type="radio" name="inspection" value="none"> Aucun événement, je prends de l’avance</label>
     </div></div>
 
-    <div class="screen" data-screen="8"><b>Écran 8 / 8</b><h3>Où envoyer la réponse ?</h3>
-      <div class="field"><label for="email">Email professionnel</label><input id="email" type="email" placeholder="prenom.nom@organisation.com"></div>
-      <div class="field"><label for="name">Nom — optionnel</label><input id="name" type="text"></div>
-      <div class="field"><label for="org">Organisation — optionnel</label><input id="org" type="text"></div>
-      <div class="field"><label for="result">Résultat recherché — optionnel</label><textarea id="result"></textarea></div>
-      <label class="opt"><input type="checkbox" name="consent" value="yes"> J’accepte que ces informations soient utilisées pour préparer la réponse à cette qualification.</label>
+    <div class="screen" data-screen="8"><b>Écran 8 / 8</b><h3>Où envoyer la réponse ?</h3><p class="m">Une réponse écrite vous parvient sous 48 heures ouvrées : format proposé, périmètre et prochaine étape.</p>
+      <div class="field"><label for="email">Email professionnel</label><input id="email" type="email" placeholder="prenom.nom@organisation.fr"></div>
+      <div class="field"><label for="name">Nom · facultatif</label><input id="name" type="text"></div>
+      <div class="field"><label for="org">Organisation · facultatif</label><input id="org" type="text"></div>
+      <div class="field"><label for="result">Ce que vous cherchez à obtenir · facultatif</label><textarea id="result"></textarea></div>
+      <label class="opt"><input type="checkbox" name="consent" value="yes"> J’accepte que ces informations soient enregistrées localement pour préparer une réponse utile.</label>
     </div>
 
-    <div class="notice">Prévisualisation review-only. Aucun envoi n’est activé ici. Sur la page live, les réponses sont annoncées comme stockées sur l’infrastructure du site, sans tracker publicitaire tiers. Les preuves externes candidates restent hors du copy visitor tant qu’un EvidenceUnit admis, un selector consensus et un XPath unique ne sont pas matérialisés.</div>
+    <div class="notice">Vos réponses sont enregistrées sur l’infrastructure du site. Aucun service tiers, aucun traceur publicitaire. Prévisualisation review-only : cet artefact n’active aucun endpoint.</div>
   </div>
 </section>
 </main>
@@ -148,25 +152,10 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}
 <footer><div class="s">© 2026 Mickael Rutembya · Growth uniquement · topologie [0,10,5,7,8] · publication bloquée tant que les gates DEVICEV de preuve et placement ne sont pas tous PASS.</div></footer>
 
 <script type="application/json" id="growth-inductive-avatar-context">
-{
-  "status":"REVIEW_ONLY",
-  "scope":"https://mickael-umt.com/expertises/growth/",
-  "avatars":[
-    {"id":"buyer-role:training","name":"Nadia Benali","role":"AI Transformation & Training Director","status":"INDUCTIVE_WORKING_AVATAR","unsupported_fields":"NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH"},
-    {"id":"buyer-role:marketing-engineering","name":"Camille Ferrand","role":"Marketing / Revenue Operations Director","status":"INDUCTIVE_WORKING_AVATAR","unsupported_fields":"NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH"}
-  ]
-}
+{"status":"REVIEW_ONLY","avatars":[{"id":"buyer-role:training","name":"Nadia Benali","role":"AI Transformation & Training Director","status":"INDUCTIVE_WORKING_AVATAR"},{"id":"buyer-role:marketing-engineering","name":"Camille Ferrand","role":"Marketing / Revenue Operations Director","status":"INDUCTIVE_WORKING_AVATAR"}],"unsupported_fields_policy":"NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH; synthesized language is not customer verbatim."}
 </script>
 <script type="application/json" id="devicev-evidence-candidates">
-{
-  "publication_authorized":false,
-  "reason":"No current Growth EvidenceUnit + selected placement + immutable snapshot + unique XPath + 3-replica judge set is materialized in NeoFort.",
-  "candidates":[
-    {"id":"CAND-GR-EU-AI-LITERACY-2026","url":"https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers","class":"NORMATIVE_GUIDANCE","placement":"NOT_AUTHORIZED"},
-    {"id":"CAND-GR-INCREMENTALITY-2608.10182","url":"https://arxiv.org/abs/2608.10182","class":"METHOD_ONLY","placement":"NOT_AUTHORIZED"},
-    {"id":"CAND-GR-ADAPTIVE-TRAINING-2026","url":"https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1944626/abstract","class":"RESEARCH_CONTEXT","placement":"NOT_AUTHORIZED"}
-  ]
-}
+{"publication_authorized":false,"reason":"No current Growth EvidenceUnit + selected placement + immutable snapshot + unique XPath + 3-replica judge set is materialized in NeoFort.","candidates":[{"id":"CAND-GR-EU-AI-LITERACY-2026","url":"https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers","class":"NORMATIVE_GUIDANCE","placement":"NOT_AUTHORIZED"},{"id":"CAND-GR-INCREMENTALITY-2608.10182","url":"https://arxiv.org/abs/2608.10182","class":"METHOD_ONLY","placement":"NOT_AUTHORIZED"},{"id":"CAND-GR-ADAPTIVE-TRAINING-2026","url":"https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1944626/abstract","class":"RESEARCH_CONTEXT","placement":"NOT_AUTHORIZED"}]}
 </script>
 </body>
 </html>
