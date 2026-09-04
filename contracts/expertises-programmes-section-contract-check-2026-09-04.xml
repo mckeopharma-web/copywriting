@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SectionContractCheck version="1.0.0" observedAt="2026-09-04" mutationScope="READ_ONLY_CONTRACT_AUDIT">
+  <OwnerSource repository="mckeopharma-web/copywriting" path=".skills/source-first-atomic-design-v4/SKILL.md" contractFamily="v4-source-first-atomic-design"/>
+  <CanonicalSemanticOrder count="23">0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</CanonicalSemanticOrder>
+  <SemanticTokens>
+    <Token id="0" name="hero"/><Token id="11" name="triggers"/><Token id="20" name="problems"/><Token id="13" name="audience"/><Token id="14" name="qualification"/><Token id="1" name="proposition"/><Token id="2" name="value"/><Token id="10" name="offers"/><Token id="15" name="product"/><Token id="3" name="transformation"/><Token id="12" name="before_after"/><Token id="19" name="results"/><Token id="4" name="proof"/><Token id="16" name="scope"/><Token id="17" name="phases"/><Token id="18" name="modules"/><Token id="5" name="capabilities"/><Token id="21" name="intersection"/><Token id="6" name="benchmark"/><Token id="22" name="guarantee"/><Token id="23" name="faq"/><Token id="7" name="engagement"/><Token id="8" name="lead_form"/>
+  </SemanticTokens>
+  <Series>
+    <SeriesContract id="S" name="expertise_detail" inheritance="source-owner" hardTokens="D0-D3" softTokens="D5-D8"/>
+    <SeriesContract id="P" name="programme_detail" inheritance="source-owner" hardTokens="D0-D3" softTokens="D5-D8"/>
+    <SeriesContract id="R" name="regulated_programme_detail" inheritance="P-series-plus-regulated" hardTokens="D0-D3" softTokens="D5-D8"/>
+  </Series>
+  <ObservedDetailPages>
+    <Page family="S" url="https://mickael-umt.com/expertises/training/" source="LIVE_RENDERED" rawHtmlMaterialized="false">
+      <LocalNavigation anchorCount="17">declencheurs,consequences,pour-qui,qualification,proposition,offres,livrables,avant-apres,resultats,preuves,perimetre,deroule,modules,intersection,engagements,questions,engagement</LocalNavigation>
+      <PositioningInvariant>AI Training &amp; Adoption Engineering — transfert de capacité gouverné</PositioningInvariant>
+      <BuyerRole>Nadia Benali — Directrice transformation IA et formation · organisation régulée ou à fortes exigences de contrôle</BuyerRole>
+      <Verdict>CONFORMS_TO_17_ANCHOR_DETAIL_SEQUENCE</Verdict>
+    </Page>
+    <Page family="P" url="https://mickael-umt.com/programme/ai-production-assurance/" source="LIVE_RENDERED" rawHtmlMaterialized="false">
+      <LocalNavigation anchorCount="17">declencheurs,consequences,pour-qui,qualification,proposition,offres,livrables,avant-apres,resultats,preuves,perimetre,deroule,modules,intersection,engagements,questions,engagement</LocalNavigation>
+      <PositioningInvariant>AI Production Assurance</PositioningInvariant>
+      <Verdict>CONFORMS_TO_17_ANCHOR_DETAIL_SEQUENCE</Verdict>
+    </Page>
+  </ObservedDetailPages>
+  <HubContracts>
+    <Hub url="https://mickael-umt.com/expertises/" family="S-catalogue"><Rule>Render the complete 23-semantic-token buyer journey when data exists; omissions require an explicit justified subset.</Rule></Hub>
+    <Hub url="https://mickael-umt.com/programme/" family="P-hub"><CanonicalSubset count="8">0,11,20,13,14,10,7,8</CanonicalSubset></Hub>
+  </HubContracts>
+  <StructureRules sectionDeltaAllowed="0" reorderAllowed="false" preserveNavigation="true" preservePrimarySemanticFunction="true" preserveVisibleComposition="true"/>
+  <Boundary>Rendered page extraction proves visible semantic order and labels, not byte-identical DOM. Exact physical-section parity requires raw live HTML materialization or an owner-source build artifact.</Boundary>
+</SectionContractCheck>
