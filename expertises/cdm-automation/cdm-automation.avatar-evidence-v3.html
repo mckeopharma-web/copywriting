@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-loader-state="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Clinical Data Management Automation — side-EUG review build</title>
+  <style>
+    html,body{margin:0;min-height:100%;background:#071019;color:#d9e4ee;font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    #boot{min-height:100vh;display:grid;place-items:center;padding:32px;text-align:center;letter-spacing:.02em}
+    #boot strong{display:block;margin-bottom:6px;color:#fff}
+  </style>
+</head>
+<body>
+  <div id="boot"><div><strong>Loading verified CDM evidence build…</strong>Source copy and evidence data remain read-only; only graph placement is transformed.</div></div>
+<script>
+(async()=>{
+  'use strict';
+
+  const SOURCE_PATH='./cdm-automation.avatar-evidence-v2.html';
+  const SOURCE_BLOB_SHA='1608caed3ab5f2dc2ac7338395b84d4f04483704';
+  const SECTION_ORDER=['triggers','consequences','audience','qualification','proposition','offers','deliverables','before-after','results','proofs','scope','process','modules','intersection','commitments','questions','engagement'];
+  const PLACEMENTS=[{
+    evidenceId:'QGEU-CDM-CAND-INTEGRATION-DIFFICULTY-2020',
+    sourceSectionId:'consequences',
+    targetSectionId:'consequences',
+    note:'Evidence illustration · historical, source-specific integration-difficulty survey evidence only. It is not a 2026 prevalence, productivity, causal, or time-to-lock claim.'
+  }];
+
+  const SIDE_STYLE=`
+    /* Presentation-only EUG placement contract. The source page copy and graph data are unchanged. */
+    .eug-section-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(330px,.95fr);gap:24px;align-items:start}
+    .eug-section-main{min-width:0}
+    .eug-sidecar{min-width:0;position:relative}
+    .eug-sidecar .eug,.eug-sidecar .qgeu{margin-top:0!important}
+    .eug-sidecar-note{margin:10px 0 0;padding:10px 12px;border-left:2px solid currentColor;font-size:.78rem;line-height:1.45;opacity:.72}
+    @media (max-width:980px){.eug-section-layout{grid-template-columns:1fr}.eug-sidecar{position:static}}
+  `;
+
+  const RUNTIME=`(()=>{
+    'use strict';
+    const CONTRACT=${JSON.stringify({
+      version:'DEVICEV-CDM-EUG-SIDE-1.0.0',
+      pageScope:'https://mickael-umt.com/expertises/cdm-automation/',
+      sourceArtifact:'expertises/cdm-automation/cdm-automation.avatar-evidence-v2.html',
+      sourceBlobSha:'1608caed3ab5f2dc2ac7338395b84d4f04483704',
+      sectionOrder:['triggers','consequences','audience','qualification','proposition','offers','deliverables','before-after','results','proofs','scope','process','modules','intersection','commitments','questions','engagement'],
+      placements:[{
+        evidenceId:'QGEU-CDM-CAND-INTEGRATION-DIFFICULTY-2020',
+        sourceSectionId:'consequences',
+        targetSectionId:'consequences',
+        note:'Evidence illustration · historical, source-specific integration-difficulty survey evidence only. It is not a 2026 prevalence, productivity, causal, or time-to-lock claim.'
+      }],
+      finalPublicationStatus:'BLOCKED_PENDING_FORMAL_PRESENTATION_AND_PLACEMENT_JUDGES'
+    })};
+
+    const assert=(condition,message)=>{if(!condition)throw new Error(message)};
+    const root=document.documentElement;
+    const actualSections=[...document.querySelectorAll('main section.section[id]')].map(s=>s.id);
+    assert(actualSections.length===CONTRACT.sectionOrder.length,'SECTION_CARDINALITY_MISMATCH');
+    assert(actualSections.every((id,i)=>id===CONTRACT.sectionOrder[i]),'SECTION_ORDER_MISMATCH');
+
+    const placements=[];
+    for(const item of CONTRACT.placements){
+      const selector='figure.eug[data-evidence-id="'+item.evidenceId+'"]';
+      const matches=[...document.querySelectorAll(selector)];
+      assert(matches.length===1,'EUG_CARDINALITY_NOT_ONE:'+item.evidenceId+':'+matches.length);
+      const graph=matches[0];
+      const sourceSection=graph.closest('section.section[id]');
+      assert(sourceSection && sourceSection.id===item.sourceSectionId,'EUG_SOURCE_SECTION_MISMATCH:'+item.evidenceId);
+
+      const section=document.getElementById(item.targetSectionId);
+      assert(section,'TARGET_SECTION_MISSING:'+item.targetSectionId);
+      const wrap=section.querySelector(':scope > .wrap');
+      assert(wrap,'TARGET_WRAP_MISSING:'+item.targetSectionId);
+      assert(!wrap.querySelector(':scope > .eug-section-layout'),'DUPLICATE_EUG_LAYOUT:'+item.targetSectionId);
+
+      graph.remove();
+      const layout=document.createElement('div');
+      layout.className='eug-section-layout';
+      layout.dataset.eugp='SIDE_ILLUSTRATION';
+      layout.dataset.evidenceId=item.evidenceId;
+
+      const main=document.createElement('div');
+      main.className='eug-section-main';
+      while(wrap.firstChild)main.appendChild(wrap.firstChild);
+
+      const aside=document.createElement('aside');
+      aside.className='eug-sidecar';
+      aside.setAttribute('aria-label','Evidence illustration');
+      graph.dataset.placementMode='SIDE_ILLUSTRATION';
+      graph.dataset.publicationStatus='BLOCKED_PENDING_FORMAL_GATES';
+      aside.appendChild(graph);
+
+      const note=document.createElement('p');
+      note.className='eug-sidecar-note';
+      note.textContent=item.note;
+      aside.appendChild(note);
+
+      layout.append(main,aside);
+      wrap.appendChild(layout);
+
+      const xpath='//*[@id="'+item.targetSectionId+'"]//*[contains(concat(" ",normalize-space(@class)," ")," eug-sidecar ")]//figure[@data-evidence-id="'+item.evidenceId+'"]';
+      const xpathCount=document.evaluate(xpath,document,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null).snapshotLength;
+      assert(xpathCount===1,'XPATH_MATCH_COUNT_NOT_ONE:'+item.evidenceId+':'+xpathCount);
+      placements.push({evidenceId:item.evidenceId,sourceSectionId:item.sourceSectionId,targetSectionId:item.targetSectionId,placementMode:'SIDE_ILLUSTRATION',xpath,xpathMatchCount:xpathCount});
+    }
+
+    root.dataset.loaderState='ready';
+    root.dataset.pageScope='cdm-automation-only';
+    root.dataset.sourceArtifact=CONTRACT.sourceArtifact;
+    root.dataset.sourceBlobSha=CONTRACT.sourceBlobSha;
+    root.dataset.sourceShaValidation='PASS';
+    root.dataset.copyMutation='NONE_TO_SOURCE_COPY';
+    root.dataset.evidenceDataMutation='NONE';
+    root.dataset.eugPresentationMutation='SIDE_ILLUSTRATION_ONLY';
+    root.dataset.finalPublication=CONTRACT.finalPublicationStatus;
+
+    window.__CDM_EUG_SIDE_LAYOUT_REPORT__={
+      contractVersion:CONTRACT.version,
+      sourceBlobSha:CONTRACT.sourceBlobSha,
+      sourceShaValidation:'PASS',
+      pageScope:CONTRACT.pageScope,
+      sectionTopology:{expected:CONTRACT.sectionOrder,actual:actualSections,status:'PASS'},
+      copyMutation:'NONE_TO_SOURCE_COPY',
+      evidenceDataMutation:'NONE',
+      presentationAnnotation:'BOUNDARY_NOTE_ADDED',
+      placements,
+      publication:{status:CONTRACT.finalPublicationStatus,reason:'Fail-closed: formal graph-presentation, EvidencePlacement presentation, deterministic preflight/factfulness/agent-exploitability gates remain authoritative.'}
+    };
+  })();`;
+
+  const gitBlobSha=async(text)=>{
+    const enc=new TextEncoder();
+    const body=enc.encode(text);
+    const header=enc.encode('blob '+body.byteLength+'\\0');
+    const bytes=new Uint8Array(header.byteLength+body.byteLength);
+    bytes.set(header,0); bytes.set(body,header.byteLength);
+    const digest=await crypto.subtle.digest('SHA-1',bytes);
+    return [...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
+  };
+
+  const response=await fetch(SOURCE_PATH,{cache:'no-store'});
+  if(!response.ok)throw new Error('SOURCE_FETCH_FAILED:'+response.status);
+  const source=await response.text();
+  const actualSha=await gitBlobSha(source);
+  if(actualSha!==SOURCE_BLOB_SHA)throw new Error('SOURCE_BLOB_SHA_MISMATCH:expected='+SOURCE_BLOB_SHA+':actual='+actualSha);
+
+  if(!/<\/head>/i.test(source)||!/<\/body>/i.test(source))throw new Error('SOURCE_HTML_BOUNDARIES_MISSING');
+  const injected=source
+    .replace(/<\/head>/i,'<style id="cdm-eug-side-placement-style">'+SIDE_STYLE+'</style></head>')
+    .replace(/<\/body>/i,'<script id="cdm-eug-side-placement-runtime">'+RUNTIME+'<\\/script></body>');
+
+  document.open();
+  document.write(injected);
+  document.close();
+})().catch(error=>{
+  document.documentElement.dataset.loaderState='blocked';
+  const boot=document.getElementById('boot');
+  if(boot)boot.innerHTML='<div><strong>BLOCKED</strong><code></code></div>';
+  const code=boot&&boot.querySelector('code');
+  if(code)code.textContent=String(error&&error.message||error);
+  console.error(error);
+});
+</script>
+</body>
+</html>
