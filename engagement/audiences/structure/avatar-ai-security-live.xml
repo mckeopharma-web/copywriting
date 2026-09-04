@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liveSnapshot url="https://mickael-umt.com/engagement/audiences/#avatar-ai-security" captured="2026-09-04" sourceOfTruth="live_site">
+  <page title="Pour qui · Mickael Rutembya" profileCount="10">
+    <hero eyebrow="Unités de décision B2B" heading="Dix profils pour lesquels la combinaison de compétences crée le plus de levier." />
+    <avatar index="02" id="avatar-ai-security">
+      <name>Marc Lefèvre</name>
+      <role>Responsable gouvernance, risque ou sécurité IA</role>
+      <before>Une automatisation opaque, du shadow AI et des permissions excessives qu’aucun contrôle ne couvre encore.</before>
+      <after>Des systèmes responsables, avec un propriétaire, des limites explicites et des preuves versionnées à chaque décision de release.</after>
+      <links><link role="adapted_path">Voir le parcours adapté</link><link role="proof">Voir la preuve utile à ce rôle</link></links>
+    </avatar>
+    <qualificationForm screens="8" roleOptions="DECIDE|RECOMMEND|INSTRUCT" persistence="site_infrastructure" thirdPartyTracking="none_stated" />
+  </page>
+  <boundary>This snapshot records only text and form structure surfaced by the live page. It does not infer hidden DOM, buyer psychology, or unpublished source code.</boundary>
+</liveSnapshot>
