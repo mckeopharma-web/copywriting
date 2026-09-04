@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sectionContract schemaVersion="1.1"
+                 contractId="contract:programme:pharmaceutical-evidence-assurance:structure:2026-09-04"
+                 pageUrl="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/"
+                 repository="mckeopharma-web/copywriting"
+                 legacyRepositoryPath="pages/programme/pharmaceutical-evidence-assurance.html"
+                 executionPosture="FAIL_CLOSED">
+  <authority>
+    <neofort precedence="0" resolution="CURRENT_TRUE_ONLY">Evidence, judge, placement and publication authority.</neofort>
+    <liveSite precedence="1">Current public section topology, DOM ids, section tokens and section forms.</liveSite>
+    <sourceFirstOwner precedence="2" path=".skills/source-first-atomic-design-v4/SKILL.md">Canonical 23-token sequence.</sourceFirstOwner>
+    <legacyRepositoryArtifact precedence="3">Review artifact; may not override current live topology.</legacyRepositoryArtifact>
+  </authority>
+  <canonicalOwnerOrder tokens="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8" sectionCount="23"/>
+  <liveContract status="PASS" topLevelSectionCount="23" nestedLeadFormSectionCount="1">
+    <sections>
+      <section order="01" token="0" anchorId="haut" dataSectionId="hero" layout="split" surface="hero" density="standard" required="true"/>
+      <section order="02" token="11" anchorId="declencheurs" dataSectionId="triggers" layout="ledger" surface="base" density="expanded" required="true"/>
+      <section order="03" token="20" anchorId="problemes" dataSectionId="problems" layout="graph" surface="inset" density="expanded" required="true"/>
+      <section order="04" token="13" anchorId="pour-qui" dataSectionId="audience" layout="mosaic" surface="base" density="expanded" required="true"/>
+      <section order="05" token="14" anchorId="qualification" dataSectionId="qualification" layout="compare" surface="raised" density="expanded" required="true"/>
+      <section order="06" token="1" anchorId="proposition" dataSectionId="proposition" layout="editorial" surface="accent" density="expanded" required="true"/>
+      <section order="07" token="2" anchorId="valeur" dataSectionId="value" layout="matrix" surface="inset" density="expanded" required="true"/>
+      <section order="08" token="10" anchorId="offres" dataSectionId="offers" layout="ledger" surface="base" density="expanded" required="true"/>
+      <section order="09" token="15" anchorId="produit" dataSectionId="product" layout="console" surface="raised" density="expanded" required="true"/>
+      <section order="10" token="3" anchorId="transformation" dataSectionId="transformation" layout="editorial" surface="accent-soft" density="expanded" required="true"/>
+      <section order="11" token="12" anchorId="avant-apres" dataSectionId="before_after" layout="compare" surface="inset" density="expanded" required="true"/>
+      <section order="12" token="19" anchorId="resultats" dataSectionId="results" layout="ledger" surface="base" density="expanded" required="true"/>
+      <section order="13" token="4" anchorId="preuves" dataSectionId="proof" layout="mosaic" surface="raised" density="expanded" required="true"/>
+      <section order="14" token="16" anchorId="perimetre" dataSectionId="scope" layout="matrix" surface="inset" density="expanded" required="true"/>
+      <section order="15" token="17" anchorId="deroule" dataSectionId="phases" layout="timeline" surface="base" density="expanded" required="true"/>
+      <section order="16" token="18" anchorId="modules" dataSectionId="modules" layout="mosaic" surface="inset" density="expanded" required="true"/>
+      <section order="17" token="5" anchorId="capacites" dataSectionId="capabilities" layout="graph" surface="base" density="expanded" required="true"/>
+      <section order="18" token="21" anchorId="intersection" dataSectionId="intersection" layout="canvas" surface="accent" density="expanded" required="true"/>
+      <section order="19" token="6" anchorId="benchmark" dataSectionId="benchmark" layout="console" surface="raised" density="expanded" required="true"/>
+      <section order="20" token="22" anchorId="garantie" dataSectionId="guarantee" layout="matrix" surface="inset" density="expanded" required="true"/>
+      <section order="21" token="23" anchorId="faq" dataSectionId="faq" layout="ledger" surface="base" density="expanded" required="true"/>
+      <section order="22" token="7" anchorId="engagement" dataSectionId="engagement" layout="split" surface="accent" density="standard" required="true"/>
+      <section order="23" token="8" anchorId="demande" dataSectionId="lead_form" layout="form" surface="raised" density="standard" required="true"/>
+    </sections>
+    <nestedComponent parentAnchorId="demande" tag="section" id="lead-form-pharma-evidence-scope-programme-pharma" class="lead-form lead-form--panel" semanticRole="lead-form-panel"/>
+  </liveContract>
+  <legacyRepositoryContract status="STRUCTURAL_SUBSET_NOT_LIVE_PARITY" topologySha256="790b0e88dd04fec3d9304d9d5cca14851055db78cd08b698c6f4eb34a50934ce" heroOutsideSectionFlow="true" anchoredSectionCount="17">
+    <sections>
+      <section token="11" dataSectionId="triggers"/>
+      <section token="20" dataSectionId="consequences"/>
+      <section token="13" dataSectionId="for-whom"/>
+      <section token="14" dataSectionId="qualification"/>
+      <section token="1" dataSectionId="proposition"/>
+      <section token="10" dataSectionId="offers"/>
+      <section token="15" dataSectionId="deliverables"/>
+      <section token="12" dataSectionId="before-after"/>
+      <section token="19" dataSectionId="outcomes"/>
+      <section token="4" dataSectionId="evidence"/>
+      <section token="16" dataSectionId="scope"/>
+      <section token="17" dataSectionId="process"/>
+      <section token="18" dataSectionId="modules"/>
+      <section token="21" dataSectionId="intersection"/>
+      <section token="22" dataSectionId="commitments"/>
+      <section token="23" dataSectionId="questions"/>
+      <section token="7" dataSectionId="engagement"/>
+    </sections>
+    <missingCanonicalSections>
+      <section token="2" anchorId="valeur" dataSectionId="value"/>
+      <section token="3" anchorId="transformation" dataSectionId="transformation"/>
+      <section token="5" anchorId="capacites" dataSectionId="capabilities"/>
+      <section token="6" anchorId="benchmark" dataSectionId="benchmark"/>
+      <section token="8" anchorId="demande" dataSectionId="lead_form"/>
+    </missingCanonicalSections>
+    <parityWithLive status="FAIL"/>
+  </legacyRepositoryContract>
+  <deterministicAudit>
+    <gate id="live-token-order" expected="EXACT_23_CANONICAL" status="PASS"/>
+    <gate id="live-anchor-order" expected="23_CURRENT_ANCHORS" status="PASS"/>
+    <gate id="live-section-forms" expected="LAYOUT_SURFACE_DENSITY_PRESERVED" status="PASS"/>
+    <gate id="legacy-own-topology-report" expected="PASS" status="PASS"/>
+    <gate id="legacy-live-parity" expected="MATCH" status="FAIL"/>
+    <gate id="mutation-scope" expected="ONE_PAGE_ONLY" status="PASS"/>
+    <gate id="google-drive-mutation" expected="NONE_WITHOUT_EXPLICIT_APPROVAL" status="PASS"/>
+  </deterministicAudit>
+  <evidencePolicy>
+    <current policy="policy:evidence-agent-exploitability:deterministic-preflight-v2"/>
+    <current policy="policy:evidence-agent-exploitability:proof-carrying-v3"/>
+    <current policy="policy:evidence-judge-applicability:v2"/>
+    <current policy="policy:evidence-placement:claim-span-entailment-v2" version="2.2"/>
+    <current policy="evidence-placement-policy:site-v5"/>
+    <current policy="policy:llm-judge:deterministic-execution-v2" replicas="3" temperature="0" topP="1"/>
+    <current judge="judge:evidence:factfulness-epistemology-methodology-v2"/>
+    <current judge="judge:evidence-placement:presentation-v1.2"/>
+    <requestedLegacy judge="judge:eu:placementv1" applicability="NOT_CURRENT_DO_NOT_EXECUTE"/>
+  </evidencePolicy>
+  <evidenceAdmission targetEvidenceUnits="10" quotaForcingForbidden="true">
+    <canonicalPageTargetedReplacement id="EU-CANON-EMA-NDSG-WORKPLAN-2026-2028"/>
+    <canonicalPageTargetedReplacement id="EU-CANON-FDA-CSA-RISK-BASED-2026"/>
+    <canonicalPageTargetedReplacement id="EU-CANON-EHDS-EHR-TESTING-2026"/>
+    <canonicalPageTargetedReplacement id="EU-CANON-EMA-PRAC-GOVERNANCE-2026"/>
+    <canonicalPageTargetedReplacement id="EU-CANON-EMA-AI-GUIDANCE-PV-2028"/>
+    <canonicalPageTargetedReplacement id="EU-CANON-EMA-CLINICAL-DATA-ROUTINE-2028"/>
+    <additionalAdmittedPlacementCandidate id="EU-HT-EMA-FDA-GOOD-AI-2026" targetXPath="//*[@id='claim-eu-01']" xpathMatchCount="1" placementStatus="PENDING_TARGET_PAGE_PRESENTATION_JUDGE"/>
+  </evidenceAdmission>
+  <publication finalPass="false" pageCopyMutation="BLOCKED" reason="TARGET_PAGE_PRESENTATION_JUDGE_PENDING_AND_LEGACY_REPO_NOT_LIVE_PARITY"/>
+  <scope>
+    <allowed pageUrl="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/"/>
+    <forbidden mutation="OTHER_PAGE_CUD"/>
+    <googleDrive mutation="FORBIDDEN_WITHOUT_EXPLICIT_USER_APPROVAL"/>
+  </scope>
+</sectionContract>

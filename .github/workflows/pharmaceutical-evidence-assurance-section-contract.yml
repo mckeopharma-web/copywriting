@@ -1,0 +1,65 @@
+name: PEA section contract audit
+
+on:
+  push:
+    paths:
+      - 'pages/programme/pharmaceutical-evidence-assurance.html'
+      - 'pages/programme/pharmaceutical-evidence-assurance.*.structure.xml'
+      - 'contracts/pharmaceutical-evidence-assurance-section-contract.xml'
+      - 'tools/validate_pharmaceutical_evidence_assurance_contract.py'
+      - '.github/workflows/pharmaceutical-evidence-assurance-section-contract.yml'
+  pull_request:
+    paths:
+      - 'pages/programme/pharmaceutical-evidence-assurance.html'
+      - 'pages/programme/pharmaceutical-evidence-assurance.*.structure.xml'
+      - 'contracts/pharmaceutical-evidence-assurance-section-contract.xml'
+      - 'tools/validate_pharmaceutical_evidence_assurance_contract.py'
+      - '.github/workflows/pharmaceutical-evidence-assurance-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pea-section-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate live contract and snapshot
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Deterministic one-page preflight
+        run: |
+          python tools/validate_pharmaceutical_evidence_assurance_contract.py \
+            --repo-root . \
+            --check-live \
+            --save-live-html reports/pea-live-current.html \
+            --save-sanitized-html pages/programme/pharmaceutical-evidence-assurance.live.sanitized.html \
+            --report reports/pea-section-contract-ci.json
+      - name: Persist sanitized live HTML snapshot
+        if: success() && github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/programme/pharmaceutical-evidence-assurance.live.sanitized.html
+          if git diff --cached --quiet; then
+            echo "Sanitized live snapshot unchanged."
+          else
+            git commit -m "chore(pea): refresh sanitized live HTML snapshot [skip ci]"
+            git push
+          fi
+      - name: Upload immutable audit output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pea-section-contract-audit-${{ github.sha }}
+          path: |
+            reports/pea-section-contract-ci.json
+            reports/pea-live-current.html
+          if-no-files-found: error
+          retention-days: 30

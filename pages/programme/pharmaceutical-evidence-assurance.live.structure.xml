@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageSnapshot schemaVersion="1.1"
+              kind="LIVE_RENDERED_STRUCTURE"
+              capturedAt="2026-09-04"
+              sourceUrl="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/"
+              authority="LIVE_SITE_CURRENT"
+              liveHtmlSha256="2f14c44a665e69288ffc4f0a5fe937e58bcdf908d71bc2510bcf5666133cdaa0">
+  <capture method="github-actions-direct-http"
+           rawHtmlMaterializedInAudit="true"
+           renderedStructureVerified="true"
+           sourceFirstCanonicalOrderVerified="true"/>
+  <contractResolution>
+    <canonicalOwnerContract source=".skills/source-first-atomic-design-v4/SKILL.md"
+                            canonicalTokenOrder="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"/>
+    <livePublicForm topLevelSectionCount="23"
+                    nestedLeadFormSectionCount="1"
+                    canonicalOrderExact="true"
+                    mutationRule="PRESERVE_SECTION_COUNT_ORDER_ID_CLASS_AND_SEMANTIC_FORM"/>
+  </contractResolution>
+  <sections>
+    <section order="01" canonicalToken="00" id="haut" labelFr="Hero" form="split" surface="hero" density="standard" class="lp-section lp-section--split lp-surface--hero lp-density--standard"/>
+    <section order="02" canonicalToken="11" id="declencheurs" labelFr="Déclencheurs" form="ledger" surface="base" density="expanded" class="lp-section lp-section--ledger lp-surface--base lp-density--expanded"/>
+    <section order="03" canonicalToken="20" id="problemes" labelFr="Problèmes" form="graph" surface="inset" density="expanded" class="lp-section lp-section--graph lp-surface--inset lp-density--expanded"/>
+    <section order="04" canonicalToken="13" id="pour-qui" labelFr="Pour qui" form="mosaic" surface="base" density="expanded" class="lp-section lp-section--mosaic lp-surface--base lp-density--expanded"/>
+    <section order="05" canonicalToken="14" id="qualification" labelFr="Qualification" form="compare" surface="raised" density="expanded" class="lp-section lp-section--compare lp-surface--raised lp-density--expanded"/>
+    <section order="06" canonicalToken="01" id="proposition" labelFr="Proposition" form="editorial" surface="accent" density="expanded" class="lp-section lp-section--editorial lp-surface--accent lp-density--expanded"/>
+    <section order="07" canonicalToken="02" id="valeur" labelFr="Valeur" form="matrix" surface="inset" density="expanded" class="lp-section lp-section--matrix lp-surface--inset lp-density--expanded"/>
+    <section order="08" canonicalToken="10" id="offres" labelFr="Offres" form="ledger" surface="base" density="expanded" class="lp-section lp-section--ledger lp-surface--base lp-density--expanded"/>
+    <section order="09" canonicalToken="15" id="produit" labelFr="Produit" form="console" surface="raised" density="expanded" class="lp-section lp-section--console lp-surface--raised lp-density--expanded"/>
+    <section order="10" canonicalToken="03" id="transformation" labelFr="Transformation" form="editorial" surface="accent-soft" density="expanded" class="lp-section lp-section--editorial lp-surface--accent-soft lp-density--expanded"/>
+    <section order="11" canonicalToken="12" id="avant-apres" labelFr="Avant-après" form="compare" surface="inset" density="expanded" class="lp-section lp-section--compare lp-surface--inset lp-density--expanded"/>
+    <section order="12" canonicalToken="19" id="resultats" labelFr="Résultats" form="ledger" surface="base" density="expanded" class="lp-section lp-section--ledger lp-surface--base lp-density--expanded"/>
+    <section order="13" canonicalToken="04" id="preuves" labelFr="Preuves" form="mosaic" surface="raised" density="expanded" class="lp-section lp-section--mosaic lp-surface--raised lp-density--expanded"/>
+    <section order="14" canonicalToken="16" id="perimetre" labelFr="Périmètre" form="matrix" surface="inset" density="expanded" class="lp-section lp-section--matrix lp-surface--inset lp-density--expanded"/>
+    <section order="15" canonicalToken="17" id="deroule" labelFr="Déroulé" form="timeline" surface="base" density="expanded" class="lp-section lp-section--timeline lp-surface--base lp-density--expanded"/>
+    <section order="16" canonicalToken="18" id="modules" labelFr="Modules" form="mosaic" surface="inset" density="expanded" class="lp-section lp-section--mosaic lp-surface--inset lp-density--expanded"/>
+    <section order="17" canonicalToken="05" id="capacites" labelFr="Capacités" form="graph" surface="base" density="expanded" class="lp-section lp-section--graph lp-surface--base lp-density--expanded"/>
+    <section order="18" canonicalToken="21" id="intersection" labelFr="Intersection" form="canvas" surface="accent" density="expanded" class="lp-section lp-section--canvas lp-surface--accent lp-density--expanded"/>
+    <section order="19" canonicalToken="06" id="benchmark" labelFr="Benchmark" form="console" surface="raised" density="expanded" class="lp-section lp-section--console lp-surface--raised lp-density--expanded"/>
+    <section order="20" canonicalToken="22" id="garantie" labelFr="Garantie" form="matrix" surface="inset" density="expanded" class="lp-section lp-section--matrix lp-surface--inset lp-density--expanded"/>
+    <section order="21" canonicalToken="23" id="faq" labelFr="FAQ" form="ledger" surface="base" density="expanded" class="lp-section lp-section--ledger lp-surface--base lp-density--expanded"/>
+    <section order="22" canonicalToken="07" id="engagement" labelFr="Engagement" form="split" surface="accent" density="standard" class="lp-section lp-section--split lp-surface--accent lp-density--standard"/>
+    <section order="23" canonicalToken="08" id="demande" labelFr="Demande" form="form" surface="raised" density="standard" class="lp-section lp-section--form lp-surface--raised lp-density--standard"/>
+  </sections>
+  <nestedLeadForm parentSectionId="demande"
+                  id="lead-form-pharma-evidence-scope-programme-pharma"
+                  class="lead-form lead-form--panel"
+                  formCount="1"/>
+  <buyerDecisionUnit>
+    <primaryRoles>Qualified Person; Pharmacien Responsable; Quality Director; Pharmaceutical Operations</primaryRoles>
+    <technicalCoOwners>Engineering; Data; AI governance; system owners</technicalCoOwners>
+    <decisionModel>Multi-stakeholder decision unit; statutory authority remains human and outside the programme.</decisionModel>
+  </buyerDecisionUnit>
+  <hardBoundary>Le programme ne certifie ni ne libère jamais un lot et ne remplace jamais la Qualified Person, le pharmacien responsable ou l'autorité pharmaceutique statutaire.</hardBoundary>
+  <evidenceState policyResolution="CURRENT_TRUE_ONLY"
+                 targetEvidenceUnitCount="10"
+                 publication="BLOCKED_PENDING_TARGET_PAGE_PRESENTATION_JUDGE">
+    <currentJudge id="judge:evidence-placement:presentation-v1.2" replicas="3" temperature="0" topP="1" failClosed="true"/>
+    <note>The requested legacy placement-v1 judge is not current. No target-page placement PASS is inferred or fabricated.</note>
+  </evidenceState>
+  <provenance>
+    <source type="live-page" url="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/" verification="DIRECT_HTTP_2026-09-04"/>
+    <source type="github-action-audit" run="33821804825" artifact="9918514746"/>
+    <source type="site-offer-registry" system="@mysite" verification="READ_ONLY"/>
+    <source type="policy-graph" system="@neofort" policyResolution="current=true"/>
+  </provenance>
+  <googleDrive mutationPerformed="false" explicitApprovalRequired="true"/>
+</pageSnapshot>

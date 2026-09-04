@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageSnapshot schemaVersion="1.1"
+              kind="REPOSITORY_HTML_STRUCTURE"
+              repository="mckeopharma-web/copywriting"
+              branch="main"
+              path="pages/programme/pharmaceutical-evidence-assurance.html"
+              sourceBlobSha="c4f36103f4ad7edb582502934952d11e4a84f245"
+              topologySha256="790b0e88dd04fec3d9304d9d5cca14851055db78cd08b698c6f4eb34a50934ce">
+  <rootContract theme="dark" claimLoopVersion="external-capability-v1.2-topology-preserving" publicationStatus="PENDING_FORMAL_LLM_JUDGE" robots="noindex,nofollow"/>
+  <legacyStructure status="PASS_OWN_LEGACY_CONTRACT" heroOutsideSectionFlow="true" anchoredSectionCount="17">
+    <section order="01" token="11" dataSectionId="triggers"/>
+    <section order="02" token="20" dataSectionId="consequences"/>
+    <section order="03" token="13" dataSectionId="for-whom"/>
+    <section order="04" token="14" dataSectionId="qualification"/>
+    <section order="05" token="1" dataSectionId="proposition"/>
+    <section order="06" token="10" dataSectionId="offers"/>
+    <section order="07" token="15" dataSectionId="deliverables"/>
+    <section order="08" token="12" dataSectionId="before-after"/>
+    <section order="09" token="19" dataSectionId="outcomes"/>
+    <section order="10" token="4" dataSectionId="evidence"/>
+    <section order="11" token="16" dataSectionId="scope"/>
+    <section order="12" token="17" dataSectionId="process"/>
+    <section order="13" token="18" dataSectionId="modules"/>
+    <section order="14" token="21" dataSectionId="intersection"/>
+    <section order="15" token="22" dataSectionId="commitments"/>
+    <section order="16" token="23" dataSectionId="questions"/>
+    <section order="17" token="7" dataSectionId="engagement"/>
+  </legacyStructure>
+  <comparisonToLive status="FAIL_STRUCTURAL_SUBSET" liveTopLevelSectionCount="23" missingCanonicalSectionCount="5">
+    <missing token="2" anchorId="valeur" dataSectionId="value"/>
+    <missing token="3" anchorId="transformation" dataSectionId="transformation"/>
+    <missing token="5" anchorId="capacites" dataSectionId="capabilities"/>
+    <missing token="6" anchorId="benchmark" dataSectionId="benchmark"/>
+    <missing token="8" anchorId="demande" dataSectionId="lead_form"/>
+  </comparisonToLive>
+  <researchAnchorGate threshold="0.72" comparator="STRICT_GREATER_THAN" sourceCount="10" selectedResearchAnchorCount="3" sourcesPerSectionRatio="3.333333" status="PASS">
+    <anchor id="triggers"/><anchor id="consequences"/><anchor id="proposition"/>
+  </researchAnchorGate>
+  <publication finalPass="false" reason="TARGET_PAGE_PRESENTATION_JUDGE_PENDING_AND_REPO_LIVE_PARITY_FAIL"/>
+  <provenance>
+    <source type="repository-file" url="https://github.com/mckeopharma-web/copywriting/blob/main/pages/programme/pharmaceutical-evidence-assurance.html" blobSha="c4f36103f4ad7edb582502934952d11e4a84f245"/>
+    <source type="topology-report" path="reports/claim-loop-topology-preserving-v12.json" reportBlobSha="3a7f87d266ab35ad62cb1fd758c2efdf7600f2e8"/>
+    <source type="live-audit" actionRun="33821804825" liveHtmlSha256="2f14c44a665e69288ffc4f0a5fe937e58bcdf908d71bc2510bcf5666133cdaa0"/>
+  </provenance>
+</pageSnapshot>

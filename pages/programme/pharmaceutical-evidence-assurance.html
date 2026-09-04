@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark" data-claim-loop-version="external-capability-v1.2-topology-preserving" data-claim-loop="loop:copy-claim:external-capability-v1.2-topology-preserving" data-judge="judge:copy-claim:external-capability-grounding-v1.2" data-publication-status="PENDING_FORMAL_LLM_JUDGE">
+<html lang="en" data-theme="dark" data-claim-loop-version="external-capability-v1.2-topology-preserving" data-claim-loop="loop:copy-claim:external-capability-v1.2-topology-preserving" data-judge="judge:copy-claim:external-capability-grounding-v1.2" data-publication-status="BLOCKED_PENDING_TARGET_PAGE_PRESENTATION_JUDGE" data-eug-layout="SIDECAR_V1">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -57,6 +57,9 @@ section[data-section-id]{padding:72px 0;border-bottom:1px solid var(--line);scro
 .barset{display:grid;gap:4px} .barline{display:grid;grid-template-columns:72px 1fr 54px;gap:7px;align-items:center;font-size:10px;color:var(--muted)}
 .track{height:9px;background:#151e25;border-radius:999px;overflow:hidden;border:1px solid #1f2a32} .bar{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent2),var(--accent))} .bar.alt{background:linear-gradient(90deg,#9da8ff,#e4a9ff)} .bar.third{background:linear-gradient(90deg,#ffd479,#ff9d9d)}
 .eug-note{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)} .eug-note a{color:var(--accent)}
+.eug-sidecar-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(480px,1.1fr);gap:24px;align-items:start}
+.eug-sidecar-copy{min-width:0}.eug-sidecar-copy>.grid-2{grid-template-columns:1fr}.eug-sidecar-copy>.grid-4{grid-template-columns:repeat(2,1fr)}
+.eug-sidecar-layout>.eug{margin:0;min-width:0;align-self:start}.eug-sidecar-layout .chart-row{grid-template-columns:minmax(118px,1.05fr) 2.15fr}
 .audit-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0} .audit-stat{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--panel)} .audit-stat strong{font-size:28px;display:block} .audit-stat span{color:var(--muted);font-size:12px}
 .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px} .proof-card{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--panel)} .proof-card small{color:var(--accent);font:700 10px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace}
 .timeline{display:grid;gap:0;border-left:1px solid var(--line);margin-left:11px} .step{position:relative;padding:0 0 26px 28px} .step::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)} .step p{color:var(--muted);margin-top:6px}
@@ -64,8 +67,9 @@ section[data-section-id]{padding:72px 0;border-bottom:1px solid var(--line);scro
 .final-cta{text-align:center;padding:110px 0} .final-cta h2{margin-left:auto;margin-right:auto;max-width:800px} .final-cta p{max-width:720px;margin:0 auto;color:var(--muted)}
 footer{padding:36px 0 60px;color:var(--muted);font-size:12px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-@media(max-width:850px){.hero-grid,.section-head,.grid-3,.grid-4,.proof-grid,.audit-strip{grid-template-columns:1fr} .grid-2,.split-list{grid-template-columns:1fr} .chain{grid-template-columns:1fr} .matrix{grid-template-columns:1fr} .matrix > div{border-right:0} .hero{padding-top:52px} .section-head{gap:8px}}
-@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))} .sitebar .inner{min-height:56px} .nav-rail{top:56px} .chart-row{grid-template-columns:1fr} .barline{grid-template-columns:64px 1fr 48px}}
+@media(max-width:1040px){.eug-sidecar-layout{grid-template-columns:1fr}.eug-sidecar-copy>.grid-2{grid-template-columns:repeat(2,1fr)}.eug-sidecar-copy>.grid-4{grid-template-columns:repeat(2,1fr)}.eug-sidecar-layout>.eug{margin-top:10px}.eug-sidecar-layout .chart-row{grid-template-columns:minmax(130px,1.3fr) 3fr}}
+@media(max-width:850px){.hero-grid,.section-head,.grid-3,.grid-4,.proof-grid,.audit-strip{grid-template-columns:1fr} .grid-2,.split-list,.eug-sidecar-copy>.grid-2,.eug-sidecar-copy>.grid-4{grid-template-columns:1fr} .chain{grid-template-columns:1fr} .matrix{grid-template-columns:1fr} .matrix > div{border-right:0} .hero{padding-top:52px} .section-head{gap:8px}}
+@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 24px))} .sitebar .inner{min-height:56px} .nav-rail{top:56px} .chart-row,.eug-sidecar-layout .chart-row{grid-template-columns:1fr} .barline{grid-template-columns:64px 1fr 48px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <meta name="robots" content="noindex,nofollow">
@@ -374,6 +378,33 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12px}
 (() => {
   "use strict";
   const graphData = JSON.parse(document.getElementById("qgeu-data").textContent);
+  const sidecarPlacements = [
+    {section:"consequences",graph:"eug-framing-gap",content:[".grid-2"],status:"PLACEMENT_OBJECT_REQUIRED"},
+    {section:"deliverables",graph:"eug-toolmin",content:[".grid-4","#claim-eu-toolmin"],status:"TARGET_PAGE_3_REPLICA_PLACEMENT_PENDING"},
+    {section:"modules",graph:"eug-bounded-exfil",content:[".grid-2"],status:"TARGET_PAGE_3_REPLICA_PLACEMENT_PENDING"},
+    {section:"commitments",graph:"eug-permission-overreach",content:[".grid-2","#claim-eu-permission"],status:"TARGET_PAGE_3_REPLICA_PLACEMENT_PENDING"}
+  ];
+  function integrateGraphSidecars() {
+    sidecarPlacements.forEach(spec => {
+      const section = document.getElementById(spec.section), fig = document.getElementById(spec.graph);
+      if (!section || !fig) return;
+      const wrap = section.querySelector(":scope > .wrap");
+      if (!wrap || fig.parentElement?.classList.contains("eug-sidecar-layout")) return;
+      const layout = document.createElement("div"), copy = document.createElement("div");
+      layout.className = "eug-sidecar-layout";
+      layout.dataset.eugIllustratesSection = spec.section;
+      copy.className = "eug-sidecar-copy";
+      spec.content.forEach(selector => {
+        const node = wrap.querySelector(selector);
+        if (node && node !== fig) copy.appendChild(node);
+      });
+      fig.dataset.eugPlacement = "SIDECAR";
+      fig.dataset.eugIllustratesSection = spec.section;
+      fig.dataset.targetPlacementStatus = spec.status;
+      wrap.insertBefore(layout, fig);
+      layout.append(copy, fig);
+    });
+  }
   const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function renderGraph(fig) {
     const key = fig.dataset.eugKey, g = graphData[key];
@@ -388,8 +419,10 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12px}
       }).join("");
       return `<div class="chart-row"><div class="chart-label">${esc(label)}</div><div class="barset">${bars}</div></div>`;
     }).join("");
-    fig.innerHTML = `<div class="eug-head"><div><div class="eug-meta">${esc(g.id)} · ${esc(g.status)}</div><h3 id="${fig.id}-title">${esc(g.title)}</h3><div class="muted">${esc(g.subtitle)}</div></div><span class="status-pill">${esc(g.unit)}</span></div><div class="chart" role="img" aria-label="${esc(g.title)}">${rows}</div><figcaption class="eug-note"><b>Boundary.</b> ${esc(g.boundary)} <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Primary source ↗</a></figcaption>`;
+    const placementStatus = fig.dataset.targetPlacementStatus ? ` · ${esc(fig.dataset.targetPlacementStatus)}` : "";
+    fig.innerHTML = `<div class="eug-head"><div><div class="eug-meta">${esc(g.id)} · ${esc(g.status)}${placementStatus}</div><h3 id="${fig.id}-title">${esc(g.title)}</h3><div class="muted">${esc(g.subtitle)}</div></div><span class="status-pill">${esc(g.unit)}</span></div><div class="chart" role="img" aria-label="${esc(g.title)}">${rows}</div><figcaption class="eug-note"><b>Boundary.</b> ${esc(g.boundary)} <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Primary source ↗</a></figcaption>`;
   }
+  integrateGraphSidecars();
   document.querySelectorAll(".eug[data-eug-key]").forEach(renderGraph);
 
   const triggers = [...document.querySelectorAll("[data-evidence-trigger]")];
@@ -422,5 +455,6 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:12px}
   });
 })();
 </script>
+<script type="application/json" id="eug-sidecar-placement-contract">{"version":"1.0.0","page":"/programme/pharmaceutical-evidence-assurance/","base_blob_sha":"c4f36103f4ad7edb582502934952d11e4a84f245","layout":"SIDECAR_V1","primary_avatar_context":"buyer-role:reg-csv | Quality/CSV authority | Dr. Antoine Moreau (working persona)","copy_mutation":"NONE","evidence_data_mutation":"NONE","section_order_mutation":"NONE","xpath_identity_policy":"PRESERVE_GRAPH_IDS_EXACTLY_ONCE","publication_status":"BLOCKED_PENDING_TARGET_PAGE_PRESENTATION_JUDGE","placements":[{"section":"consequences","qgeu":"QGEU-AISEC-FRAMING-GAP-2026","graph_id":"eug-framing-gap","status":"PLACEMENT_OBJECT_REQUIRED"},{"section":"deliverables","qgeu":"QGEU-AISEC-TOOLMIN-PCS-2026","graph_id":"eug-toolmin","status":"TARGET_PAGE_3_REPLICA_PLACEMENT_PENDING"},{"section":"modules","qgeu":"QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026","graph_id":"eug-bounded-exfil","status":"TARGET_PAGE_3_REPLICA_PLACEMENT_PENDING"},{"section":"commitments","qgeu":"QGEU-AISEC-PERMISSION-OVERREACH-2026","graph_id":"eug-permission-overreach","status":"TARGET_PAGE_3_REPLICA_PLACEMENT_PENDING"}]}</script>
 <script type="application/json" id="neofort-claim-loop-contract">{"loop":"loop:copy-claim:external-capability-v1.2-topology-preserving","judge":"judge:copy-claim:external-capability-grounding-v1.2","family":"healthtech","topology_contract":"PRESERVE_SECTION_ORDER_IDS_NAVIGATION_CTA_AND_VISIBLE_COMPOSITION","body_replacement_forbidden":true,"visible_copy_wholesale_replacement_forbidden":true,"research_anchor_sections":["triggers","consequences","proposition"],"research_corpus":["https://arxiv.org/abs/2608.15888","https://arxiv.org/abs/2608.24957","https://arxiv.org/abs/2608.27443","https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai","https://health.ec.europa.eu/ehealth-digital-health-and-care/ehds-action/ehds-platform_en","https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf","https://www.ema.europa.eu/en/documents/other/guiding-principles-good-ai-practice-drug-development_en.pdf","https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-management-system-software","https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai","https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems"],"source_count":10,"section_count":3,"sources_per_section_ratio":3.333333,"source_section_threshold":0.72,"source_section_comparator":"STRICT_GREATER_THAN","source_section_gate":"PASS","capability_boundary":"CV/project proof remains invariant; product/configuration context is semi-mobile","sequence_upgrade_rule":"existing sequence -> external research -> semantic compression -> capability boundary -> 3-replica judge -> targeted patch only","topology_sha256":"790b0e88dd04fec3d9304d9d5cca14851055db78cd08b698c6f4eb34a50934ce","publication_status":"PENDING_FORMAL_LLM_JUDGE"}</script>
 </body></html>
