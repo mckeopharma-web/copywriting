@@ -49,6 +49,7 @@ class StructureParser(HTMLParser):
         self.section_data_ids: list[str] = []
         self.fragment_hrefs: list[str] = []
         self.forms = 0
+        self.element_ids: list[dict[str, str]] = []
 
     def handle_starttag(self, tag: str, attrs) -> None:
         a = dict(attrs)
@@ -65,6 +66,12 @@ class StructureParser(HTMLParser):
             href = a.get("href", "")
             if href.startswith("#") and len(href) > 1:
                 self.fragment_hrefs.append(href[1:])
+        if a.get("id"):
+            self.element_ids.append({
+                "tag": tag,
+                "id": a["id"],
+                "class": a.get("class", ""),
+            })
         if tag == "form":
             self.forms += 1
 
@@ -124,6 +131,7 @@ def main() -> int:
     ap.add_argument("--repo-root", default=".")
     ap.add_argument("--check-live", action="store_true")
     ap.add_argument("--report", default="")
+    ap.add_argument("--save-live-html", default="")
     args = ap.parse_args()
 
     root = Path(args.repo_root).resolve()
@@ -166,6 +174,10 @@ def main() -> int:
     live_summary = None
     if args.check_live:
         live_text, live = fetch_live()
+        if args.save_live_html:
+            live_out = root / args.save_live_html
+            live_out.parent.mkdir(parents=True, exist_ok=True)
+            live_out.write_text(live_text, encoding="utf-8")
         live_sections = unique_expected_in_order(live.section_refs)
         live_nav = unique_expected_in_order(live.fragment_hrefs)
         check_exact("live-section-order", live_sections, EXPECTED_SECTIONS, failures)
@@ -180,6 +192,9 @@ def main() -> int:
             "section_order": live_sections,
             "nav_order": live_nav,
             "form_count": live.forms,
+            "all_section_refs": live.section_refs,
+            "all_fragment_hrefs": live.fragment_hrefs,
+            "element_ids": live.element_ids,
         }
 
     summary = {
