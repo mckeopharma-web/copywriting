@@ -1,0 +1,128 @@
+name: HealthTech Product section contract lock
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'expertises/healthtech-product/**'
+      - '.github/workflows/healthtech-product-contract-lock.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Scope guard — target page only
+        shell: bash
+        run: |
+          python - <<'PY'
+          import subprocess
+          changed = subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'], text=True).splitlines()
+          forbidden=[]
+          for p in changed:
+              if p.startswith('programme/') or p.startswith('programmes/'):
+                  forbidden.append(p)
+              if p.startswith('expertises/') and not p.startswith('expertises/healthtech-product/'):
+                  forbidden.append(p)
+          if forbidden:
+              raise SystemExit('Out-of-scope page mutation detected:\n' + '\n'.join(forbidden))
+          print('PASS scope guard:', changed)
+          PY
+
+      - name: Validate XML, canonical order, forms and audited source SHA
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          import subprocess
+
+          report = Path('expertises/healthtech-product/healthtech-product_contract-audit_2026-09-04.xml')
+          html_path = Path('expertises/healthtech-product/healthtech-product.html')
+          root = ET.parse(report).getroot()
+          assert root.attrib['scope'] == 'ONLY /expertises/healthtech-product/'
+          assert root.attrib['execution_posture'] == 'FAIL_CLOSED'
+          assert root.attrib['publication_allowed'] == 'false'
+          expected = ['0','11','20','13','14','1','2','10','15','3','12','19','4','16','17','18','5','21','6','22','23','7','8']
+          declared = root.findtext('./v4_contract/canonical_full_order').split(',')
+          assert declared == expected, (declared, expected)
+          live = root.find('./live_page_xml')
+          sections = live.findall('./section')
+          assert len(sections) == 23, len(sections)
+          assert [s.attrib['token'] for s in sections] == expected
+          lead = next(s for s in sections if s.attrib['token'] == '8')
+          assert len(lead.findall('./screen')) == 8
+          assert int(live.attrib['local_navigation_anchor_count']) == 17
+          audited_sha = root.findtext('./mutation_decision/current_blob_sha')
+          actual_sha = subprocess.check_output(['git','hash-object',str(html_path)], text=True).strip()
+          assert actual_sha == audited_sha, f'audited source drift: {audited_sha} != {actual_sha}'
+          src = html_path.read_text(encoding='utf-8')
+          required = [
+              'data-theme="dark"',
+              'data-publication-status="PENDING_FORMAL_LLM_JUDGE"',
+              "const ARTIFACT_MODE='REVIEW_ONLY'",
+              "const BASE='https://raw.githubusercontent.com/mckeopharma-web/copywriting/main/expertises/healthtech-product/healthtech-product_lossless-evidence-v1.2_2026-09-02.html'",
+              'id="neofort-claim-loop-contract"'
+          ]
+          missing=[x for x in required if x not in src]
+          assert not missing, f'missing source contract markers: {missing}'
+          assert root.find('./final_decision').attrib['final_pass'] == 'false'
+          assert root.findtext('./final_decision/structural_contract') == 'PASS_LIVE'
+          assert root.findtext('./final_decision/repository_lossless_equivalence') == 'FAIL'
+          assert root.findtext('./final_decision/evidence_publication_contract') == 'BLOCKED'
+          print('PASS deterministic audit contract: 23 surfaces, 8 form screens, audited source SHA locked')
+          PY
+
+      - name: Recheck live semantic section order without changing the site
+        shell: bash
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from urllib.request import Request, urlopen
+          from xml.etree import ElementTree as ET
+          import html as htmlmod
+
+          class TextParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.parts=[]
+              def handle_data(self, data): self.parts.append(data)
+
+          root=ET.parse('expertises/healthtech-product/healthtech-product_contract-audit_2026-09-04.xml').getroot()
+          url=root.findtext('./request_basis/target_url')
+          req=Request(url, headers={'User-Agent':'healthtech-contract-lock/1.0'})
+          with urlopen(req, timeout=30) as r:
+              raw=r.read().decode('utf-8','replace')
+          parser=TextParser(); parser.feed(raw)
+          visible=' '.join(htmlmod.unescape(' '.join(parser.parts)).split())
+          pos=-1
+          missing=[]
+          for sec in root.findall('./live_page_xml/section'):
+              heading=' '.join((sec.findtext('heading') or '').split())
+              idx=visible.find(heading, pos+1)
+              if idx < 0:
+                  missing.append((sec.attrib['token'],heading))
+              else:
+                  pos=idx
+          if missing:
+              raise SystemExit('Live semantic contract drift or extraction mismatch: '+repr(missing))
+          print('PASS live semantic order: all 23 audited section headings found in order')
+          PY
+
+      - name: Fail-closed publication assertion
+        shell: bash
+        run: |
+          python - <<'PY'
+          from xml.etree import ElementTree as ET
+          root=ET.parse('expertises/healthtech-product/healthtech-product_contract-audit_2026-09-04.xml').getroot()
+          final=root.find('./final_decision')
+          assert final.attrib['status']=='BLOCKED'
+          assert final.attrib['final_pass']=='false'
+          print('PASS audit integrity: CI validates the contract while publication remains blocked; no false PASS promoted.')
+          PY
