@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<htmlStructureExtraction id="healthtech-html-structure-2026-09-04" extractionMode="LOSSLESS_STRUCTURE_SEMANTIC_CONTENT" status="FALLBACK_REPOSITORY_CAPTURE">
+  <requestedLivePage url="https://mickael-umt.com/expertises/healthtech/" retrievalStatus="UNAVAILABLE" fallbackInvoked="true"/>
+  <repositorySource repository="mckeopharma-web/copywriting" path="expertises/healthtech/healthtech.html" branch="main" commitSha="bd165acdd92e1a4de6b94fa20eddf535f67a7ef5" blobSha="dd4fed5b6ba91683ebb1aa39e4ab7667e750ce07" canonicalUrl="https://mickael-umt.com/expertises/healthtech/" theme="dark" publicationStatus="PENDING_FORMAL_LLM_JUDGE"/>
+  <document>
+    <header form="STICKY_SITE_NAV">
+      <brand>Mickael Rutembya</brand>
+      <nav hrefCount="4"><item>Expertise</item><item>Evidence</item><item>Engagement</item><item>Resources</item></nav>
+    </header>
+    <reviewBanner status="REVIEW_ONLY">DEVICEV review artifact; publication remains gated.</reviewBanner>
+    <main sectionCount="5">
+      <section order="1" id="healthtech-hero" class="sec hero" nature="HERO_ROUTING">
+        <kicker>Expertise · HealthTech &amp; regulated environments</kicker>
+        <heading level="1">HealthTech &amp; regulated environments</heading>
+        <lead>Keep regulated digital decisions reconstructible after automation.</lead>
+        <buyerScope>Quality/CSV; Clinical Data; Pharmacovigilance; HealthTech Product</buyerScope>
+        <evidence claimId="claim-good-ai-hero" euId="EU-HT-EMA-FDA-GOOD-AI-2026"/>
+        <routingPills count="4"/>
+      </section>
+      <section order="2" id="healthtech-offers" class="sec" nature="FOUR_ROUTE_OFFER_MATRIX">
+        <heading level="2">Choose the workflow where evidence continuity breaks.</heading>
+        <offerCards count="4">
+          <offer order="1" code="RT" buyer="Quality / CSV leadership" target="/expertises/reg-csv/"/>
+          <offer order="2" code="CDM" buyer="Clinical data leadership" target="/expertises/cdm-automation/"/>
+          <offer order="3" code="PV" buyer="Pharmacovigilance leadership" target="/expertises/pv-data-engineer/"/>
+          <offer order="4" code="HT" buyer="HealthTech / PharmaTech product leadership" target="/expertises/healthtech-product/"/>
+        </offerCards>
+        <evidencePlacementOccurrences knownTotal="8" sectionLocalCount="7"/>
+        <reviewOnlyGraphics status="BLOCKED_PENDING_CURRENT_JUDGES">
+          <candidate id="EUG-HT-EHDS-TIMELINE-2026-CAND" form="TIMELINE"/>
+          <candidate id="EUG-HT-ARXIV-AGENTIC-EXCLUSION-2026-CAND" form="BAR_COMPOSITION"/>
+        </reviewOnlyGraphics>
+      </section>
+      <section order="3" id="healthtech-capabilities" class="sec" nature="CAPABILITY_BOUNDARY_AND_PROOF">
+        <heading level="2">Regulated operations first. Software and AI second.</heading>
+        <capabilityCards count="5">
+          <capability order="1" key="regulated-operations" display="7+ yr"/>
+          <capability order="2" key="python-data" display="5+ yr"/>
+          <capability order="3" key="consulting-training" display="2021→"/>
+          <capability order="4" key="governed-data-ai" display="2024→"/>
+          <capability order="5" key="ai-assurance" display="2025→"/>
+        </capabilityCards>
+        <publicProof><project>Doctelligence</project><project>streamlit-lang</project></publicProof>
+        <evidence claimId="claim-cap-ehds" euId="EU-CANON-EHDS-EHR-TESTING-2026"/>
+        <evidence claimId="claim-cap-annex" euId="EU-REGCSV-EC-ANNEX11-RISK-2026"/>
+        <reviewOnlyGraphics status="BLOCKED_PENDING_CURRENT_JUDGES">
+          <candidate id="EUG-HT-OPENFDA-API-USAGE-2026-09-CAND" form="BAR_COMPARISON"/>
+          <candidate id="EUG-HT-PATIENTAGENTBENCH-TRIAGE-2026-CAND" form="BAR_COMPARISON"/>
+        </reviewOnlyGraphics>
+      </section>
+      <section order="4" id="healthtech-next-step" class="sec" nature="BOUNDED_NEXT_STEP_CTA">
+        <heading level="2">Bring one regulated decision you must be able to defend.</heading>
+        <cta href="#healthtech-qualifier">Qualify the mission</cta>
+        <secondaryCta href="https://mickael-umt.com/engagement/">Engagement model</secondaryCta>
+        <evidence claimId="claim-next-fda" euId="EU-REGCSV-FDA-CSA-RISK-2026"/>
+      </section>
+      <section order="5" id="healthtech-qualifier" class="sec" nature="EIGHT_SCREEN_QUALIFIER">
+        <heading level="2">Qualify the buyer situation before the solution.</heading>
+        <form id="healthtech-form" transmission="STATIC_REVIEW_NONE" screenCount="8">
+          <screen order="1" key="workflow"/><screen order="2" key="trigger"/><screen order="3" key="purchase-role"/><screen order="4" key="delivery-mode"/><screen order="5" key="weekly-rhythm"/><screen order="6" key="organisation-context"/><screen order="7" key="before-after"/><screen order="8" key="contact-dealkiller"/>
+        </form>
+        <evidence claimId="claim-qual-good-ai" euId="EU-HT-EMA-FDA-GOOD-AI-2026"/>
+      </section>
+    </main>
+    <footer form="DEVICEV_EVIDENCE_REGISTER">
+      <evidenceUnits unique="4" placementOccurrences="12">
+        <eu id="EU-REGCSV-EC-ANNEX11-RISK-2026" score="94" status="CHAMPION_PASS"/>
+        <eu id="EU-REGCSV-FDA-CSA-RISK-2026" score="92" status="CHAMPION_PASS"/>
+        <eu id="EU-CANON-EHDS-EHR-TESTING-2026" score="94" status="ADMITTED"/>
+        <eu id="EU-HT-EMA-FDA-GOOD-AI-2026" score="94" status="ADMITTED"/>
+      </evidenceUnits>
+    </footer>
+  </document>
+  <extractionBoundary>Live DOM could not be materialised in-session; this XML is therefore a repository-source structural capture, not a claim that live and repository DOMs are byte-identical.</extractionBoundary>
+</htmlStructureExtraction>

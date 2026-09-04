@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageSectionContract id="contract:expertise:healthtech:2026-09-04" version="1.0" failClosed="true">
+  <scope page="https://mickael-umt.com/expertises/healthtech/" mutationScope="ONLY_/expertises/healthtech/"/>
+  <authority>
+    <liveWebsite role="source-of-truth" status="UNAVAILABLE_AT_CAPTURE" reason="DNS/web retrieval failed in execution session"/>
+    <fallbackHtml repository="mckeopharma-web/copywriting" branch="main" path="expertises/healthtech/healthtech.html" blobSha="dd4fed5b6ba91683ebb1aa39e4ab7667e750ce07" commitSha="bd165acdd92e1a4de6b94fa20eddf535f67a7ef5" status="CAPTURED"/>
+    <existingTopology sha256="ecd37399bafc4bc5cc666397a94bc3cf926c3c7c7ab575e78552787527fa745f" source="reports/claim-loop-topology-preserving-v12.json"/>
+  </authority>
+  <familyContracts>
+    <expertiseDetailArchetype semantics="role-normalized; exact ids vary by expertise">
+      <role order="1">HERO_OR_TOP</role>
+      <role order="2">TRIGGERS</role>
+      <role order="3">CONSEQUENCES</role>
+      <role order="4">AUDIENCE_OR_FOR_WHOM_OR_BUYER</role>
+      <role order="5">QUALIFICATION</role>
+      <role order="6">PROPOSITION</role>
+      <role order="7">OFFERS</role>
+      <role order="8">DELIVERABLES</role>
+      <role order="9">TRANSFORMATION_OR_BEFORE_AFTER</role>
+      <role order="10">RESULTS_OR_OUTCOMES</role>
+      <role order="11">PROOFS_OR_EVIDENCE</role>
+      <role order="12">SCOPE</role>
+      <role order="13">PROCESS</role>
+      <role order="14">MODULES</role>
+      <role order="15">INTERSECTION</role>
+      <role order="16">COMMITMENTS</role>
+      <role order="17">FAQ_OR_QUESTIONS</role>
+      <role order="18">ENGAGEMENT</role>
+    </expertiseDetailArchetype>
+    <programmeArchetype reference="pages/programme/pharmaceutical-evidence-assurance.html" heroOutsideDataSectionContract="true">
+      <role order="1">HERO</role>
+      <role order="2" id="triggers">TRIGGERS</role>
+      <role order="3" id="consequences">CONSEQUENCES</role>
+      <role order="4" id="for-whom">FOR_WHOM</role>
+      <role order="5" id="qualification">QUALIFICATION</role>
+      <role order="6" id="proposition">PROPOSITION</role>
+      <role order="7" id="offers">OFFERS</role>
+      <role order="8" id="deliverables">DELIVERABLES</role>
+      <role order="9" id="before-after">BEFORE_AFTER</role>
+      <role order="10" id="outcomes">OUTCOMES</role>
+      <role order="11" id="evidence">EVIDENCE</role>
+      <role order="12" id="scope">SCOPE</role>
+      <role order="13" id="process">PROCESS</role>
+      <role order="14" id="modules">MODULES</role>
+      <role order="15" id="intersection">INTERSECTION</role>
+      <role order="16" id="commitments">COMMITMENTS</role>
+      <role order="17" id="questions">QUESTIONS</role>
+      <role order="18" id="engagement">ENGAGEMENT</role>
+    </programmeArchetype>
+  </familyContracts>
+  <healthtechArchetype kind="EXPERTISE_COMPOSITE_ROUTER" exactSectionCount="5" preserveExactly="true">
+    <section order="1" id="healthtech-hero" form="HERO_ROUTING" researchAnchor="true">
+      <required>h1</required><required>lead</required><required>bounded-buyer-context</required><required>evidence-disclosure</required><required>expertise-routing-pills</required>
+    </section>
+    <section order="2" id="healthtech-offers" form="FOUR_ROUTE_OFFER_MATRIX" researchAnchor="true">
+      <invariant name="offerCardCount" value="4"/>
+      <route code="RT">Regulatory Technology &amp; CSV Engineering</route>
+      <route code="CDM">Clinical Data Management Automation</route>
+      <route code="PV">Pharmacovigilance Data Engineering</route>
+      <route code="HT">HealthTech &amp; PharmaTech Product Engineering</route>
+      <required>buyer-trigger</required><required>before-after</required><required>bounded-promise</required><required>evidence-disclosure</required>
+    </section>
+    <section order="3" id="healthtech-capabilities" form="CAPABILITY_BOUNDARY_AND_PROOF" researchAnchor="true">
+      <invariant name="capabilityCardCount" value="5"/>
+      <required>regulated-operations-boundary</required><required>python-data-proof</required><required>consulting-training-proof</required><required>governed-data-ai-proof</required><required>ai-assurance-proof</required>
+    </section>
+    <section order="4" id="healthtech-next-step" form="BOUNDED_NEXT_STEP_CTA" researchAnchor="false">
+      <required>single-bounded-decision</required><required>engagement-link</required><required>qualifier-anchor</required>
+    </section>
+    <section order="5" id="healthtech-qualifier" form="EIGHT_SCREEN_QUALIFIER" researchAnchor="false">
+      <invariant name="formId" value="healthtech-form"/>
+      <invariant name="screenCount" value="8"/>
+      <invariant name="screenOrder" value="1,2,3,4,5,6,7,8"/>
+      <required>workflow</required><required>trigger</required><required>purchase-role</required><required>delivery-mode</required><required>weekly-rhythm</required><required>organisation-context</required><required>before-after-state</required><required>contact-and-dealkiller</required>
+    </section>
+  </healthtechArchetype>
+  <orderingContract exact="true" stable="true" nullOrder="FORBIDDEN" tiePolicy="NOT_APPLICABLE">
+    <sequence>healthtech-hero,healthtech-offers,healthtech-capabilities,healthtech-next-step,healthtech-qualifier</sequence>
+  </orderingContract>
+  <mutationRules>
+    <rule>Do not add, delete, reorder, merge or split top-level sections.</rule>
+    <rule>Do not convert the five-section HealthTech composite into the eighteen-block expertise-detail or programme archetype.</rule>
+    <rule>Preserve the four offer routes and the eight-screen qualifier form.</rule>
+    <rule>Commercial copy changes are allowed only as bounded text substitutions inside existing section forms.</rule>
+    <rule>Evidence placement remains downstream of current NeoFort admission, Factfulness, agent-exploitability and placement gates.</rule>
+  </mutationRules>
+</pageSectionContract>
