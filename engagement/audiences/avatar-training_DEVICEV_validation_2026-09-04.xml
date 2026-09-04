@@ -25,7 +25,7 @@
     <ObservedProgrammeAPAAnchorCount>17</ObservedProgrammeAPAAnchorCount>
     <ObservedSharedDetailAnchorOrder>declencheurs,consequences,pour-qui,qualification,proposition,offres,livrables,avant-apres,resultats,preuves,perimetre,deroule,modules,intersection,engagements,questions,engagement</ObservedSharedDetailAnchorOrder>
     <AudiencePageTopology>header &gt; hero &gt; 10 avatar cards &gt; problem-before-profile plus 3 decision roles &gt; 8-screen qualifier &gt; footer</AudiencePageTopology>
-    <DeterministicStatus>PASS_FOR_EXTRACTED_CONTRACT</DeterministicStatus>
+    <DeterministicStatus>PASS</DeterministicStatus>
     <RawLiveDomParity>NOT_CLAIMED</RawLiveDomParity>
   </SectionContract>
   <TargetAvatar>
@@ -36,7 +36,7 @@
     <PublicCardRule>Do not invent age, gender, family, income, education, brands, channels, emotions, objections or purchase behaviour. Unsupported avatar fields remain NOT_EVIDENCED/HYPOTHESIS/TO_RESEARCH.</PublicCardRule>
   </TargetAvatar>
   <RepositoryAudit>
-    <FullPageArtifact path="pages/engagement/audiences/mickael-umt.com.html" blobShaAtRead="4a024501932f4f3f11ee12429e5c0e13f80f85e3" topology="MATCHES_PAGE_LEVEL_FORM" targetCard="DRIFTED_FROM_LIVE"/>
+    <FullPageArtifact path="pages/engagement/audiences/mickael-umt.com.html" sourceBlobSha="4a024501932f4f3f11ee12429e5c0e13f80f85e3" syncedBlobSha="20af5ca7686d066492381cb5b0fa18ae409561b4" topology="MATCHES_PAGE_LEVEL_FORM" targetCard="SYNCED_TO_LIVE"/>
     <StandaloneArtifact path="engagement/audiences/avatar-training.html" declaredContract="contract:customer-avatar:growth:2026-09-03" verdict="REVIEW_DOSSIER_ONLY_NOT_LIVE_PAGE_REPLACEMENT"/>
     <Reason>The standalone artifact expands avatar 03 into additional sections and therefore cannot replace the live audience page without violating section-count, section-form, navigation and visible-composition invariants.</Reason>
   </RepositoryAudit>
@@ -49,11 +49,12 @@
     <CurrentAdmittedTrainingEvidenceCount>0</CurrentAdmittedTrainingEvidenceCount>
     <Action>REMOVE_PENDING_EU_BINDINGS_FROM_VISIBLE_TARGET_CARD_AND_KEEP_EXTERNAL_EVIDENCE_OUT_OF_PUBLIC_COPY_UNTIL_FORMAL_ADMISSION_AND_PLACEMENT_PASS</Action>
   </EvidenceGate>
-  <GitHubAction workflow=".github/workflows/audiences-avatar-training-section-contract.yml" status="PENDING_RUN_CAPTURE">
+  <GitHubAction workflow=".github/workflows/audiences-avatar-training-section-contract.yml" status="PASS" runId="33821986206" triggeringHeadSha="ede587f8e38cc166e8b13f5b78c509d5fe80a40e" generatedCommitSha="adc80c3b9d8529931933139d7122a09e8b458689" conclusion="success">
     <DeterministicIntent>Apply exact first-party live target card, preserve all non-target card bytes and main-section topology, enforce 10-card order, enforce target anchor exactly once, and reject visible draft EvidenceUnit bindings.</DeterministicIntent>
   </GitHubAction>
   <FinalDecision>
-    <FirstPartyPositioningSync>ALLOWED</FirstPartyPositioningSync>
+    <StructuralPublicationGate>PASS</StructuralPublicationGate>
+    <FirstPartyPositioningSync>ALLOWED_AND_MATERIALIZED_ON_AUDIT_BRANCH</FirstPartyPositioningSync>
     <NewExternalEvidencePublication>BLOCKED_PENDING_FORMAL_JUDGES</NewExternalEvidencePublication>
     <SemanticJudgeExecution>NOT_MATERIALIZED_IN_CONNECTED_NEOFORT_TOOL_SURFACE</SemanticJudgeExecution>
     <Reason>Lossless synchronization to the current first-party live page does not strengthen an external-effect claim. External evidence candidates remain non-publishable until the exact immutable target snapshot passes all current DEVICEV gates.</Reason>
