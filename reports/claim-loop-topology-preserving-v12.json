@@ -1,7 +1,7 @@
 {
   "loop": "loop:copy-claim:external-capability-v1.2-topology-preserving",
   "judge": "judge:copy-claim:external-capability-grounding-v1.2",
-  "html_total": 28,
+  "html_total": 29,
   "topology_preserved": true,
   "body_replacement_forbidden": true,
   "visible_copy_wholesale_replacement_forbidden": true,
@@ -503,6 +503,43 @@
         "intersection",
         "pricing",
         "engagements",
+        "questions",
+        "engagement"
+      ]
+    },
+    {
+      "path": "expertises/training/training.contract-aligned.candidate.html",
+      "family": "training",
+      "source_count": 4,
+      "section_count": 3,
+      "sources_per_section_ratio": 1.333333,
+      "gate": "PASS",
+      "research_anchor_sections": [
+        "triggers",
+        "consequences",
+        "proposition"
+      ],
+      "topology_sha256": "abcbea3c95e8776d4982c30041c9641bac1ec6406a2e198125c546bbe162723b",
+      "section_ids": [
+        "triggers",
+        "consequences",
+        "for-whom",
+        "qualification",
+        "proposition",
+        "value",
+        "offers",
+        "deliverables",
+        "transformation",
+        "before-after",
+        "results",
+        "proof",
+        "scope",
+        "process",
+        "modules",
+        "capabilities",
+        "intersection",
+        "benchmark",
+        "commitments",
         "questions",
         "engagement"
       ]
