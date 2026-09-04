@@ -117,6 +117,10 @@
     "qualifier_screen_order_locked": true,
     "xml_contract_created": true,
     "github_action_validator_created": true,
+    "github_action_run_id": 33820478791,
+    "github_action_job_id": 100861868668,
+    "github_action_status": "PASS",
+    "contract_sha256": "11dc22cd815e6739dfaf415454bddc51b04d15412b6545f66d22aa21592698a4",
     "status": "PASS_REPOSITORY_SCOPE"
   },
   "semantic_and_placement": {
@@ -131,7 +135,7 @@
     "requires_explicit_user_validation": true
   },
   "final_gate": {
-    "repository_structure_contract": "PASS_PENDING_GITHUB_ACTION",
+    "repository_structure_contract": "PASS_GITHUB_ACTION",
     "live_dom_equivalence": "BLOCKED_LIVE_UNAVAILABLE",
     "semantic_factfulness_new_external_claims": "NOT_APPLICABLE_NO_NEW_EXTERNAL_EFFECT_CLAIM",
     "new_evidence_placement": "BLOCKED_NONE_ATTEMPTED",
@@ -139,5 +143,5 @@
     "final_pass": false,
     "decision": "REVIEW_ONLY_BLOCKED"
   },
-  "generated_at": "2026-09-04T01:59:00+02:00"
+  "generated_at": "2026-09-04T02:10:00+02:00"
 }
