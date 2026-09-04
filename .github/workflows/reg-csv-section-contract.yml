@@ -1,0 +1,42 @@
+name: Reg CSV section contract
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'expertises/reg-csv/reg-csv.html'
+      - 'expertises/reg-csv/reg-csv.live.structure.2026-09-04.xml'
+      - 'expertises/reg-csv/reg-csv.repo.structure.2026-09-04.xml'
+      - 'expertises/reg-csv/reg-csv_DEVICEV_validation_2026-09-04.xml'
+      - 'scripts/validate_reg_csv_section_contract.py'
+      - '.github/workflows/reg-csv-section-contract.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'expertises/reg-csv/reg-csv.html'
+      - 'expertises/reg-csv/reg-csv.live.structure.2026-09-04.xml'
+      - 'expertises/reg-csv/reg-csv.repo.structure.2026-09-04.xml'
+      - 'expertises/reg-csv/reg-csv_DEVICEV_validation_2026-09-04.xml'
+      - 'scripts/validate_reg_csv_section_contract.py'
+      - '.github/workflows/reg-csv-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reg-csv-section-contract-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-reg-csv-structure-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate S-series v4 contract without mutating page topology
+        run: python scripts/validate_reg_csv_section_contract.py
