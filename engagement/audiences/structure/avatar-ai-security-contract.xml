@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sectionContract id="contract:audiences:avatar-ai-security:2026-09-04" version="1.0" failClosed="true">
+  <target url="https://mickael-umt.com/engagement/audiences/#avatar-ai-security" repository="mckeopharma-web/copywriting" htmlPath="engagement/audiences/avatar-ai-security.html" />
+  <inheritance>
+    <pattern family="expertise" exemplar="/expertises/blockchain/" sectionCount="18" />
+    <pattern family="expertise" exemplar="/expertises/agentic-ai/" sectionCount="18" />
+    <pattern family="programme" exemplar="/programme/ai-production-assurance/" contentSectionCount="17" heroSeparate="true" />
+  </inheritance>
+  <customerAvatarContract id="contract:customer-avatar:audiences:2026-09-03" components="DEMOGRAPHICS_INTERESTS|FRUSTRATIONS_FEARS|WANTS_ASPIRATIONS|KEY_PURCHASE_DRIVERS|BEFORE_AFTER" beforeAfter="HAVE|FEEL|AVERAGE_DAY|STATUS|EVIL_GOOD" />
+  <sections count="18">
+    <section order="0" id="hero" nature="offer_hero" semanticRole="decision_avatar_value_proposition" xpath="//*[@id='avatar-ai-security']/header[contains(@class,'hero')]" />
+    <section order="1" id="triggers" nature="purchase_triggers" semanticRole="frustrations_fears" xpath="//section[@id='triggers']" />
+    <section order="2" id="consequences" nature="problem_consequences" semanticRole="problem_cost_and_control_surface" xpath="//section[@id='consequences']" />
+    <section order="3" id="buyer" nature="buyer_fit" semanticRole="demographics_interests_identity" xpath="//section[@id='buyer']" />
+    <section order="4" id="qualification" nature="qualification_gate" semanticRole="key_purchase_drivers" xpath="//section[@id='qualification']" />
+    <section order="5" id="proposition" nature="value_mechanism" semanticRole="risk_policy_test_evidence_promote_block" xpath="//section[@id='proposition']" />
+    <section order="6" id="offers" nature="buying_configuration" semanticRole="commercial_offer" xpath="//section[@id='offers']" />
+    <section order="7" id="deliverables" nature="deliverables" semanticRole="inspectable_work_products" xpath="//section[@id='deliverables']" />
+    <section order="8" id="before-after" nature="state_transition" semanticRole="before_after_have_feel_average_day_status_evil_good" xpath="//section[@id='before-after']" />
+    <section order="9" id="results" nature="acceptance_results" semanticRole="wants_aspirations_and_testable_acceptance" xpath="//section[@id='results']" />
+    <section order="10" id="evidence" nature="execution_proof" semanticRole="capability_proof_and_provenance" xpath="//section[@id='evidence']" />
+    <section order="11" id="scope" nature="scope_boundary" semanticRole="included_excluded_client_dependencies" xpath="//section[@id='scope']" />
+    <section order="12" id="process" nature="delivery_process" semanticRole="mission_delivery_flow" xpath="//section[@id='process']" />
+    <section order="13" id="modules" nature="delivery_modules" semanticRole="control_blocks" xpath="//section[@id='modules']" />
+    <section order="14" id="intersection" nature="decision_unit" semanticRole="buyer_stakeholder_system" xpath="//section[@id='intersection']" />
+    <section order="15" id="commitments" nature="controllable_commitments" semanticRole="guarantees_limits_responsibility" xpath="//section[@id='commitments']" />
+    <section order="16" id="questions" nature="objections_faq" semanticRole="purchase_objections_hypotheses" xpath="//section[@id='questions']" />
+    <section order="17" id="engagement" nature="next_step_cta" semanticRole="qualification_and_buyer_evidence_capture" xpath="//section[@id='engagement']" />
+  </sections>
+  <publicationGate required="deterministic_preflight_pass AND factfulness_pass AND applicable_judges_pass AND agent_exploitability_pass AND placement_pass AND presentation_pass AND xpath_match_count==1" currentState="REVIEW_ONLY_PENDING_TARGET_PLACEMENT_REPLICA_JUDGE" />
+</sectionContract>
