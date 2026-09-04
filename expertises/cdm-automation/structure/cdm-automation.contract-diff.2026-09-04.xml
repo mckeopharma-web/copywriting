@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sectionContractAudit schemaVersion="1.0" target="https://mickael-umt.com/expertises/cdm-automation/" date="2026-09-04" posture="FAIL_CLOSED">
   <contractResolution>
-    <liveExpertiseContract>17 ordered anchors/sections</liveExpertiseContract>
-    <liveProgrammeReference>AI Production Assurance exposes the same 17 ordered anchors/sections</liveProgrammeReference>
+    <liveExpertiseContract checkedPages="10" matchingPages="10">17 ordered anchors/sections across all 10 current expertise pages</liveExpertiseContract>
+    <liveProgrammeReference checkedPages="2" matchingPages="2">Both current programme pages expose the same 17 ordered anchors/sections</liveProgrammeReference>
     <governingRule>Live website structure is source of truth for this page; no older incompatible section-count assumption overrides it.</governingRule>
+    <checkedPageSet>expertises: agentic-ai,data-engineering,ai-security,blockchain,reg-csv,cdm-automation,pv-data-engineer,healthtech-product,training,marketing-engineering; programmes: ai-production-assurance,pharmaceutical-evidence-assurance</checkedPageSet>
   </contractResolution>
   <checks>
     <check id="top_level_section_count" status="PASS" severity="HARD">Live=17; repository main=17.</check>
