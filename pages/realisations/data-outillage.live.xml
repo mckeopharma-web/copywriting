@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<renderedPageSnapshot version="1.0"
+  url="https://mickael-umt.com/realisations/data-outillage/"
+  capturedAt="2026-09-04"
+  extractionMode="RENDERED_TEXT_AND_LINK_STRUCTURE"
+  rawHtmlByteIdentity="UNAVAILABLE"
+  executionPosture="FAIL_CLOSED">
+  <boundary>Direct origin raw-HTML materialisation was unavailable in this execution environment. This XML represents the rendered public content and visible form topology; it must not be described as byte-identical source HTML.</boundary>
+  <pageShell>
+    <themeControl visible="true">EN / night-mode toggle visible on live page</themeControl>
+    <globalNavigation present="true"/>
+  </pageShell>
+  <main>
+    <section order="1" id="live-domain-hero" kind="domain_hero">
+      <eyebrow>Réalisations · Data &amp; outillage</eyebrow>
+      <h1>Data &amp; outillage</h1>
+      <lead>Outils systèmes, indexation et persistance vérifiables, écrits pour durer.</lead>
+      <filters>
+        <filter href="/realisations/">Tous les domaines</filter>
+        <filter href="/realisations/ia-agents/">IA, agents &amp; évaluation 4</filter>
+        <filter href="/realisations/blockchain/">Blockchain &amp; vérifiabilité 2</filter>
+        <filter current="true" href="/realisations/data-outillage/">Data &amp; outillage 1</filter>
+      </filters>
+      <selector candidate="true">//h1[normalize-space()='Data &amp; outillage']</selector>
+    </section>
+    <section order="2" id="live-project-list" kind="project_evidence">
+      <project id="folder-mapper">
+        <period>Septembre–octobre 2023</period>
+        <h2>Folder Mapper</h2>
+        <provenanceBadge>Création originale vérifiée</provenanceBadge>
+        <summary>Outil CLI Rust parcourant un système de fichiers et persistant les correspondances filename/path dans SQLite.</summary>
+        <provenanceClaim>Dépôt non forké ; 7 commits sur 7 attribués à RickOwri.</provenanceClaim>
+        <stack>Rust · SQLite</stack>
+        <link role="repository" href="https://github.com/RickOwri/folder_mapper">Voir le dépôt</link>
+        <link role="history" href="https://github.com/RickOwri/folder_mapper/commits/master/">Vérifier les commits</link>
+      </project>
+      <selector candidate="true">//h2[normalize-space()='Folder Mapper']</selector>
+    </section>
+    <section order="3" id="live-provenance-policy" kind="provenance_policy">
+      <eyebrow>Politique de provenance</eyebrow>
+      <h2>Création, contribution, preuve et niveau de confiance.</h2>
+      <copy>La propriété du dépôt ne suffit pas. L’audit combine commits, diffs, code, contexte de formation et attestation du propriétaire. Une attestation rétablit une contribution sous-créditée sans masquer les limites de la preuve publique.</copy>
+      <link role="certificates" href="/parcours/#certificats">Voir les certificats vérifiables on-chain</link>
+      <selector candidate="true">//h2[normalize-space()='Création, contribution, preuve et niveau de confiance.']</selector>
+    </section>
+    <section order="4" id="live-method" kind="method_and_lead_form">
+      <eyebrow>La méthode derrière ces preuves</eyebrow>
+      <h2>Le cadre utilisé sur ces travaux, publié et gratuit.</h2>
+      <copy>Dites en un clic sur quoi vous travaillez : la ressource envoyée est celle qui traite ce sujet, pas un catalogue générique.</copy>
+      <copy>Le domaine que vous consultez est déjà renseigné : un écran, et le cadre méthodologique correspondant vous est envoyé.</copy>
+      <form screenCount="2" visibleScreenLabel="Écran 1 / 2">
+        <fieldGroup name="workstream">
+          <option>Système IA, agents ou automatisation</option>
+          <option>Plateforme data ou traçabilité</option>
+          <option>Environnement régulé ou inspecté</option>
+          <option>Cadrage d’une solution</option>
+          <option>Montée en compétence d’une équipe</option>
+          <option>Autre décision à instruire</option>
+        </fieldGroup>
+        <fieldGroup name="next_use">
+          <option>Je cadre seul</option>
+          <option>Je le passe à mon équipe</option>
+          <option>Je veux un avis sur mon cas</option>
+        </fieldGroup>
+        <field name="email" type="email" label="Email professionnel"/>
+        <field name="name" type="text" optional="true" label="Nom"/>
+        <field name="consent" type="checkbox" label="J’accepte que ces informations soient enregistrées localement pour préparer une réponse utile."/>
+        <actions>← Retour | Suivant → | Recevoir le framework →</actions>
+        <privacy>Vos réponses sont enregistrées sur l’infrastructure du site. Aucun service tiers, aucun traceur publicitaire.</privacy>
+      </form>
+      <selector candidate="true">//h2[normalize-space()='Le cadre utilisé sur ces travaux, publié et gratuit.']</selector>
+    </section>
+  </main>
+  <footer present="true"/>
+</renderedPageSnapshot>
