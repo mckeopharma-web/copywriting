@@ -114,10 +114,16 @@ def main() -> int:
 
         if 'id="hero"' not in candidate or 'data-section-token="0"' not in candidate:
             raise AssertionError("candidate hero/token 0 missing")
-        if 'data-publication-status="BLOCKED_REVIEW"' not in candidate:
-            raise AssertionError("candidate must remain BLOCKED_REVIEW")
+        # Existing global topology materialiser intentionally normalises this HTML-level
+        # state to PENDING_FORMAL_LLM_JUDGE. DEVICEV's evidence state remains BLOCKED_REVIEW.
+        if 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"' not in candidate:
+            raise AssertionError("candidate must remain PENDING_FORMAL_LLM_JUDGE at topology layer")
+        if '<meta name="x-evidence-status" content="BLOCKED_REVIEW">' not in candidate:
+            raise AssertionError("candidate evidence status must remain BLOCKED_REVIEW")
         if '<meta name="robots" content="noindex,nofollow">' not in candidate:
             raise AssertionError("candidate must remain noindex,nofollow")
+        if '"publication_status":"BLOCKED_REVIEW"' not in candidate:
+            raise AssertionError("DEVICEV contract must remain BLOCKED_REVIEW")
         if '"agent_exploitable":false' not in candidate:
             raise AssertionError("candidate agent_exploitable must be false")
         if 'judge:evidence-placement:presentation-v1.2' not in candidate:
@@ -152,7 +158,6 @@ def main() -> int:
         missing = [x.attrib["id"] for x in delta.findall("missing")]
         assert_equal(missing, EXPECTED_MISSING_FROM_REPO, "documented repo/live delta")
 
-        # Section-form sentinels: structural anatomy, not visual styling.
         sentinels = {
             "for-whom": ["HYPOTHÈSE À VALIDER", "Unité de décision"],
             "value": ["Ce que ça change", "Décision", "Risque", "Transfert", "Preuve"],
@@ -181,12 +186,13 @@ def main() -> int:
             "canonical_tokens_present": [0] + token_values,
             "documented_missing_repo_slots": EXPECTED_MISSING_FROM_REPO,
             "lead_form_token_8": "JUSTIFIED_OMISSION_LIVE_DETAIL_PAGE",
+            "topology_publication": "PENDING_FORMAL_LLM_JUDGE",
             "devicev_publication": "BLOCKED_REVIEW",
             "formal_llm_triplicate_judge": "NOT_EXECUTED_BY_THIS_WORKFLOW",
             "google_drive_mutation": False,
             "status": "PASS_STRUCTURE_CONTRACT_ONLY",
         }
-    except Exception as exc:  # fail closed
+    except Exception as exc:
         failures.append(str(exc))
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
