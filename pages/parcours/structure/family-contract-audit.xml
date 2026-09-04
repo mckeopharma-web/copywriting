@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section_family_audit schema_version="1.0" audit_date="2026-09-04" execution_posture="FAIL_CLOSED" mutation_scope="ONLY /parcours/">
+  <reference_policy source="source-first-atomic-design-v4">
+    <canonical_full_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical_full_order>
+    <expertise_family>S-series</expertise_family><programme_family>P-series</programme_family><regulated_programme_family>R-series</regulated_programme_family><hard_tokens>D0-D3</hard_tokens><soft_tokens>D5-D8</soft_tokens>
+  </reference_policy>
+  <observations>
+    <page url="https://mickael-umt.com/expertises/" family="S-hub" mutation="NONE"><observed_main_semantic_order>hero/offers - capability-ranking - benchmark - qualification-form</observed_main_semantic_order><observed_token_subset>0,10,5,6,8</observed_token_subset><v4_status>PARTIAL_LEGACY_SUBSET</v4_status><note>The live hub remains a compact catalogue/benchmark/qualification flow rather than the complete v4 buyer journey described by the owner skill.</note></page>
+    <page url="https://mickael-umt.com/programme/" family="P-hub" mutation="NONE"><expected_hub_subset>0,11,20,13,14,10,7,8</expected_hub_subset><observed_main_semantic_order>hero/offers - fallback-engagement - engagement - qualification-form</observed_main_semantic_order><observed_token_subset>0,10,7,8</observed_token_subset><v4_status>PARTIAL_CONTRACT_DRIFT</v4_status><missing_as_dedicated_sections>11,20,13,14</missing_as_dedicated_sections><note>Qualification concepts occur inside the eight-screen form but are not materialized as the four dedicated pre-offer v4 sections.</note></page>
+  </observations>
+  <target_page url="https://mickael-umt.com/parcours/" family="PROFILE" contract="LIVE_LOCKED_11_SECTION"><inherit_v4_23_section_canon>false</inherit_v4_23_section_canon><reason>/parcours/ is outside the v4 expertise/programme scope and the user explicitly requires the live structure and section forms to remain lossless.</reason><section_count>11</section_count><qualification_screen_count>8</qualification_screen_count><topology_sha256>b3f19c47e1e711088752c6dabeb67f2b42a11e0f9fb679c29c5cf0b8470e2d2a</topology_sha256></target_page>
+  <scope_guard><other_page_cud>FORBIDDEN</other_page_cud><google_drive_mutation>false</google_drive_mutation></scope_guard>
+</section_family_audit>
