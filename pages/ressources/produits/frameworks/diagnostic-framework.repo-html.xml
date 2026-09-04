@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repo_html_snapshot schema_version="1.0"
+<repo_html_snapshot schema_version="1.1"
   repository="mckeopharma-web/copywriting"
   branch="main"
   source_path="pages/ressources/produits/frameworks/diagnostic-framework.html"
-  source_blob_sha="295f5afdca0390c615e2219a01bd5daff80ad0d9"
+  source_blob_sha="ce0465a2f168793215d707e2a4e50077bde436e1"
   target_url="https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/"
   extracted_at="2026-09-04"
   artifact_role="COPY_REVIEW_ONLY"
@@ -15,28 +15,36 @@
     <review_artifact>true</review_artifact>
     <live_fidelity_claim>false</live_fidelity_claim>
     <robots>noindex,nofollow</robots>
+    <copy_recipe>XYZ + C1-C19, bounded by DEVICEV</copy_recipe>
+    <inductive_avatar>customer-avatar:realisations:ia-agents:claire-dumas:v1</inductive_avatar>
   </metadata>
 
   <topology>
     <top_level_main_section_count>1</top_level_main_section_count>
     <section order="1" id="diagnostic-framework-review" family="PRODUCT_FRAMEWORK_DETAIL" xpath="//main/section[@id='diagnostic-framework-review']">
-      <component order="1" kind="hero_offer" selector="div.hero">
-        <heading level="h1">Clarifiez la décision avant d’engager une mission plus large.</heading>
+      <component order="1" kind="hero_offer" selector="div[data-copy-sequence='seq-hero']">
+        <heading level="h1">Cadrez votre sujet IA avant d’engager plus de temps, de données ou de budget.</heading>
         <commercial_terms>49 € HT · achat unique · accès permanent</commercial_terms>
         <primary_action>Acheter le framework — 49 € HT</primary_action>
         <action_state>REVIEW_ONLY_NON_TRANSACTIONAL</action_state>
       </component>
-      <component order="2" kind="framework_mechanism" selector="div[aria-label='Les quatre étapes du framework']" cardinality="4">
+      <component order="2" kind="conditional_problem_recognition" selector="div[data-copy-sequence='seq-problem']" cardinality="3" />
+      <component order="3" kind="framework_mechanism" selector="div[aria-label='Les quatre étapes du framework']" cardinality="4">
+        <compression>9 maturity checks → 6 impact dimensions → 5 scope prompts → 7 proposal fields</compression>
         <item index="1">Maturité</item>
         <item index="2">Impact</item>
         <item index="3">Périmètre</item>
         <item index="4">Proposition</item>
       </component>
-      <component order="3" kind="fit_boundary" selector="div.grid2">
-        <panel semantic="fit">Utilisez-le pour rendre le sujet explicite.</panel>
-        <panel semantic="claim_boundary">Ce document ne remplace pas une décision d’autorité.</panel>
+      <component order="4" kind="bounded_outcomes" selector="div[data-copy-sequence='seq-outcomes']" cardinality="3" />
+      <component order="5" kind="problem_to_mechanism_map" selector="div[data-copy-sequence='seq-problem-solution']" cardinality="4" />
+      <component order="6" kind="first_party_capability_proof" selector="div[data-copy-sequence='seq-author-proof']" />
+      <component order="7" kind="fit_boundary" selector="div[data-copy-sequence='seq-fit-boundary']">
+        <panel semantic="fit">Utilisez-le quand vous avez besoin d’un premier cadre, pas encore d’une grosse mission.</panel>
+        <panel semantic="claim_boundary">Vous achetez un cadre de décision, pas une promesse de résultat.</panel>
       </component>
-      <component order="4" kind="checkout_form" id="checkout-review" xpath="//div[@id='checkout-review']/form">
+      <component order="8" kind="faq" selector="div[data-copy-sequence='seq-faq']" cardinality="5" />
+      <component order="9" kind="checkout_form" id="checkout-review" xpath="//div[@id='checkout-review']/form">
         <form_semantics>PAID_PRODUCT_CHECKOUT_REVIEW_ONLY</form_semantics>
         <field order="1" name="email" type="email" required="true" />
         <field order="2" name="name" type="text" required="false" />
@@ -44,8 +52,9 @@
         <field order="4" name="accept_terms" type="checkbox" required="true" />
         <button type="button" aria_disabled="true">Continuer vers le paiement — 49 € HT</button>
       </component>
-      <component order="5" kind="review_evidence_note" selector="div.evidence-note">
+      <component order="10" kind="review_evidence_disclosure" selector="div[data-copy-sequence='seq-evidence-review']">
         <public_external_citations>0</public_external_citations>
+        <review_only_external_sources>2</review_only_external_sources>
       </component>
     </section>
   </topology>
@@ -55,25 +64,34 @@
     <claim id="df-c02" class="FIRST_PARTY_PRODUCT_FACT" xpath="//aside[contains(@class,'offer-card')]//span[contains(@class,'pill')]">Achat unique</claim>
     <claim id="df-c03" class="FIRST_PARTY_PRODUCT_FACT" xpath="//aside[contains(@class,'offer-card')]//p[contains(@class,'meta')]">Accès permanent au framework PDF après confirmation du paiement.</claim>
     <claim id="df-c04" class="FIRST_PARTY_IMPLEMENTATION_MECHANISM" xpath="//div[@aria-label='Les quatre étapes du framework']">Maturité → Impact → Périmètre → Proposition</claim>
-    <claim id="df-c05" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[1]">Les poids et seuils de la grille d’impact sont une heuristique interne, pas un modèle prédictif validé.</claim>
-    <claim id="df-c06" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[2]">Le framework ne certifie pas une conformité ISO, NIST ou réglementaire.</claim>
-    <claim id="df-c07" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[3]">Il ne garantit ni ROI, ni réduction du risque projet, ni gain de temps, ni résultat de production.</claim>
+    <claim id="df-c05" class="FIRST_PARTY_IMPLEMENTATION_MECHANISM" xpath="//div[@aria-label='Compression du mécanisme du framework']">9 points de maturité → 6 dimensions d’impact → 5 questions de périmètre → 7 champs de proposition</claim>
+    <claim id="df-c06" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[1]">Les poids et seuils de la grille d’impact sont une heuristique interne, pas un modèle prédictif validé.</claim>
+    <claim id="df-c07" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[2]">Le framework ne certifie pas une conformité ISO, NIST ou réglementaire.</claim>
+    <claim id="df-c08" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[3]">Il ne garantit ni ROI, ni réduction du risque projet, ni gain de temps, ni résultat de production.</claim>
+    <claim id="df-c09" class="FIRST_PARTY_CAPABILITY" xpath="//div[@data-copy-sequence='seq-author-proof']//p[1]">Public capability proof is limited to implementation domains and does not establish product efficacy.</claim>
   </claim_inventory>
 
   <copy_sequences>
-    <copy_sequence id="seq-hero" commercial_role="ENTRY_DECISION" buyer_question="Est-ce que mon sujet est assez clair pour justifier un engagement plus large?" nlp_role="PROBLEM_REFRAME_AND_OFFER_COMPREHENSION" xpath="//main/section[@id='diagnostic-framework-review']/div[contains(@class,'hero')]" />
-    <copy_sequence id="seq-mechanism" commercial_role="MECHANISM_EXPLANATION" buyer_question="Que contient réellement le diagnostic?" nlp_role="MECHANISM_DECOMPOSITION" xpath="//div[@aria-label='Les quatre étapes du framework']" />
-    <copy_sequence id="seq-fit-boundary" commercial_role="QUALIFICATION_AND_RISK_REVERSAL" buyer_question="Quand ce produit est-il adapté, et que ne promet-il pas?" nlp_role="FIT_AND_EPISTEMIC_BOUNDARY" xpath="//div[contains(@class,'grid2')]" />
-    <copy_sequence id="seq-checkout" commercial_role="PURCHASE" buyer_question="Quel est l’engagement commercial et quelles données sont demandées?" nlp_role="TRANSACTION_COMPREHENSION" xpath="//div[@id='checkout-review']" />
+    <copy_sequence id="seq-hero" commercial_role="ENTRY_DECISION" buyer_question="Est-ce que ce produit m’aide à clarifier mon sujet avant un engagement plus large?" nlp_role="PROBLEM_REFRAME_AND_OFFER_COMPREHENSION" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-hero']" />
+    <copy_sequence id="seq-problem" commercial_role="PROBLEM_AGITATION_BOUNDED" buyer_question="Quels signes indiquent que mon cadrage est encore insuffisant?" nlp_role="CONDITIONAL_PROBLEM_RECOGNITION" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-problem']" />
+    <copy_sequence id="seq-mechanism" commercial_role="PRODUCT_EXPLANATION" buyer_question="Comment le framework structure-t-il le cadrage?" nlp_role="MECHANISM_DECOMPOSITION" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-mechanism']" />
+    <copy_sequence id="seq-outcomes" commercial_role="BENEFIT_TRANSLATION" buyer_question="Avec quels artefacts concrets est-ce que je termine?" nlp_role="BOUNDED_OUTPUT_PREVIEW" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-outcomes']" />
+    <copy_sequence id="seq-problem-solution" commercial_role="USE_CASE_MAPPING" buyer_question="Quelle étape utiliser selon le problème rencontré?" nlp_role="PROBLEM_TO_MECHANISM_MAPPING" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-problem-solution']" />
+    <copy_sequence id="seq-author-proof" commercial_role="CREDIBILITY" buyer_question="Pourquoi faire confiance au concepteur pour structurer ce cadrage?" nlp_role="FIRST_PARTY_CAPABILITY_PROOF" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-author-proof']" />
+    <copy_sequence id="seq-fit-boundary" commercial_role="QUALIFICATION_AND_RISK_REVERSAL" buyer_question="Quand ce framework est-il adapté, et que ne promet-il pas?" nlp_role="FIT_AND_EPISTEMIC_BOUNDARY" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-fit-boundary']" />
+    <copy_sequence id="seq-faq" commercial_role="FAQ" buyer_question="Quelles objections dois-je lever avant achat?" nlp_role="OBJECTION_HANDLING" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-faq']" />
+    <copy_sequence id="seq-checkout" commercial_role="PURCHASE" buyer_question="Quel est l’engagement commercial et comment l’accès est-il délivré?" nlp_role="TRANSACTION_COMPREHENSION" xpath="//div[@id='checkout-review']" />
+    <copy_sequence id="seq-evidence-review" commercial_role="EVIDENCE_DISCLOSURE" buyer_question="Quelles sources sont conservées sans être injectées dans la copie publique?" nlp_role="PROGRESSIVE_DISCLOSURE_REVIEW_ONLY" xpath="//main/section[@id='diagnostic-framework-review']/div[@data-copy-sequence='seq-evidence-review']" />
   </copy_sequences>
 
   <evidence_binding>
     <public_external_placement_count>0</public_external_placement_count>
-    <reason>Current @neofort placement gate requires exact current target-page snapshot and unique claim-span/XPath placement; those target objects are not available.</reason>
+    <reason>Current @neofort placement gate requires an exact current target-page snapshot, selector consensus and unique claim-span/XPath placement; those target objects are not available.</reason>
     <first_party_sources>
       <source>drive:1lURGfe44s5nxIMnUt2lRyibY-B0n37hzuPtBjwuykuk</source>
       <source>drive:13CD3XGVizs5S1ksJO_Q9wek7sUqzLmC_fp_gJiyOf5s</source>
       <source>github:mckeopharma-web/VSL:generated/vsl-batch-2026-08-27/chapters/25.1.md</source>
+      <source>github:RickOwri public implementation portfolio</source>
     </first_party_sources>
     <candidate_external_eu id="EU-PV-NIST-MAP-3-3-SCOPE-DOCUMENTED" status="NOT_PLACED_TARGET_PAGE_BINDING_MISMATCH">
       <upstream_factfulness>PASS</upstream_factfulness>
@@ -81,5 +99,32 @@
       <champion_score>91</champion_score>
       <target_page_placement_eligible>false</target_page_placement_eligible>
     </candidate_external_eu>
+    <candidate_external_eu id="EU-DIAG-NAPIRE-228-COMPANIES" status="PENDING_ADMISSION_REVIEW_NOT_PLACED">
+      <deterministic_preflight>PASS</deterministic_preflight>
+      <agent_exploitability>QUARANTINED_PENDING_SPECIALIST_JUDGES</agent_exploitability>
+      <target_page_placement_eligible>false</target_page_placement_eligible>
+    </candidate_external_eu>
   </evidence_binding>
+
+  <copywriting_recipe>
+    <command id="C1" status="PASS" />
+    <command id="C2" status="PASS_ROLE_FIRST" />
+    <command id="C3" status="PASS" />
+    <command id="C4" status="PASS_BOUNDED" />
+    <command id="C5" status="PASS" />
+    <command id="C6" status="PASS" />
+    <command id="C7" status="ADAPTED_TO_4_IMPLEMENTED_STAGES_NOT_8" />
+    <command id="C8" status="PASS_3_OUTCOMES" />
+    <command id="C9" status="PASS_CONDITIONAL" />
+    <command id="C10" status="PASS" />
+    <command id="C11" status="REJECTED_NO_SCARCITY_EVIDENCE" />
+    <command id="C12" status="NO_GUARANTEE_INVENTED_BOUNDARY_USED_INSTEAD" />
+    <command id="C13" status="PASS_REVIEW_ONLY_CTA" />
+    <command id="C14" status="REJECTED_NO_VERIFIED_TESTIMONIAL" />
+    <command id="C15" status="REJECTED_NO_VERIFIED_REVIEW" />
+    <command id="C16" status="PASS_5_FAQ" />
+    <command id="C17" status="COMPRESSED_TO_4_EVIDENCED_OR_CONDITIONAL_PROBLEMS" />
+    <command id="C18" status="PASS" />
+    <command id="C19" status="PASS_CHAMPION_HEADLINE_SELECTED" />
+  </copywriting_recipe>
 </repo_html_snapshot>
