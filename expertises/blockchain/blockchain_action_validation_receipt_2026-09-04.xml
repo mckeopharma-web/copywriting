@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<github_action_validation_receipt version="1.0" status="PASS">
+  <repository>mckeopharma-web/copywriting</repository>
+  <workflow>.github/workflows/blockchain-offer-structure-lock.yml</workflow>
+  <workflow_name>Blockchain offer structure + commercial copy</workflow_name>
+  <validation_basis_commit>f2232521ea5362b0b018b5063a79f216e78a46a4</validation_basis_commit>
+  <workflow_run_id>33821374525</workflow_run_id>
+  <workflow_run_number>6</workflow_run_number>
+  <workflow_conclusion>success</workflow_conclusion>
+  <validated_at>2026-09-04T00:20:25Z</validated_at>
+  <checks>
+    <check name="blockchain_xml_well_formedness" status="PASS" detail="All blockchain XML artifacts parsed successfully."/>
+    <check name="commercial_copy_materialization" status="PASS" detail="Commercial copy materialized without evidence claim-span mutation."/>
+    <check name="top_level_section_contract" status="PASS" detail="18/18 sections, canonical order, semantic roles, evidence anchors, CTAs and repository commercial configurations preserved."/>
+    <check name="deterministic_repair" status="PASS_NO_CHANGE" detail="No HTML repair required."/>
+  </checks>
+  <scope_boundary>This receipt proves repository contract validation only. It does not convert the separate live-form losslessness gate or NeoFort evidence placement/presentation gate into PASS.</scope_boundary>
+  <devicev_final_publication_effect>NONE</devicev_final_publication_effect>
+</github_action_validation_receipt>
