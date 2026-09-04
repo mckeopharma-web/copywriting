@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<healthtech-section-contract schema_version="1.0" page="https://mickael-umt.com/expertises/healthtech/" date="2026-09-04" source_of_truth="live" execution_posture="FAIL_CLOSED">
+  <canonical-v4 family="S-series" strict_status="FAIL_FULL_CANON">
+    <order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</order>
+    <observed-live-subset>0,10,5,7,14,8</observed-live-subset>
+  </canonical-v4>
+  <live-representation retrieved_at="2026-09-04T02:01:00+02:00" raw_dom="UNAVAILABLE" semantic_source_lines="59-150">
+    <section sequence="1" semantic_id="hero" v4_tokens="0" label="HealthTech &amp; environnements régulés"/>
+    <section sequence="2" semantic_id="offers" v4_tokens="10" label="4 HealthTech offers"/>
+    <section sequence="3" semantic_id="capabilities" v4_tokens="5" label="5 CV capabilities"/>
+    <section sequence="4" semantic_id="engagement" v4_tokens="7" label="next step / 2 CTAs"/>
+    <section sequence="5" semantic_id="qualification+lead_form" v4_tokens="14,8" label="8-screen qualifier"/>
+    <offers count="4">
+      <offer code="RT" slug="reg-csv" avatar="Antoine Moreau" avatar_role="Directeur qualité / CSV"/>
+      <offer code="CDM" slug="cdm-automation" avatar="Sophie Lemercier" avatar_role="Data Manager / Chef de projet clinique"/>
+      <offer code="PV" slug="pv-data-engineer" avatar="Karim Benali" avatar_role="Responsable pharmacovigilance"/>
+      <offer code="HT" slug="healthtech-product" avatar="Isabelle Fontaine" avatar_role="Product Manager éditeur HealthTech"/>
+    </offers>
+    <capabilities count="5">
+      <capability rank="1" score="98" title="Opérations pharmaceutiques et réglementées"/>
+      <capability rank="2" score="82" title="Python et traitement de données"/>
+      <capability rank="4" score="67" title="Ingénierie web et produit"/>
+      <capability rank="7" score="63" title="Data science et machine learning"/>
+      <capability rank="11" score="49" title="Gouvernance et assurance IA"/>
+    </capabilities>
+    <qualifier screens="8" visible_copy_screen_count_conflict="three-screens-copy-vs-eight-rendered">
+      <screen sequence="1" id="need" model="multi-select + optional subject" question="Qu’est-ce qui doit avancer ?"/>
+      <screen sequence="2" id="decision_context" model="decision timing + purchase role" question="Dans quel cadre ?"/>
+      <screen sequence="3" id="delivery_mode" model="single-select" question="Comment souhaitez-vous avancer ?"/>
+      <screen sequence="4" id="weekly_rhythm" model="single-select" question="À quel rythme, si l’on s’engage ?"/>
+      <screen sequence="5" id="organization_size" model="single-select" question="Combien de personnes doivent monter ?"/>
+      <screen sequence="6" id="scope_clarity" model="single-select" question="Où en est le périmètre aujourd’hui ?"/>
+      <screen sequence="7" id="healthtech_trigger" model="single-select" question="Ce que l’inspection devra pouvoir suivre"/>
+      <screen sequence="8" id="contact" model="contact + optional objective + consent" question="Où envoyer la réponse ?"/>
+    </qualifier>
+  </live-representation>
+  <repository-representation repository="mckeopharma-web/copywriting" path="expertises/healthtech/healthtech.html" branch="main" blob_sha="dd4fed5b6ba91683ebb1aa39e4ab7667e750ce07" publication="PENDING_FORMAL_LLM_JUDGE">
+    <section sequence="1" dom_id="healthtech-hero" semantic_id="hero" v4_tokens="0"/>
+    <section sequence="2" dom_id="healthtech-offers" semantic_id="offers" v4_tokens="10"/>
+    <section sequence="3" dom_id="healthtech-capabilities" semantic_id="capabilities" v4_tokens="5"/>
+    <section sequence="4" dom_id="healthtech-next-step" semantic_id="engagement" v4_tokens="7"/>
+    <section sequence="5" dom_id="healthtech-qualifier" semantic_id="qualification+lead_form" v4_tokens="14,8"/>
+    <qualifier screens="8" live_fidelity="FAIL">
+      <screen sequence="1" id="workflow" model="workflow category"/>
+      <screen sequence="2" id="trigger" model="deadline / process failure / automation-AI trigger"/>
+      <screen sequence="3" id="role" model="decision-maker / advocate / champion"/>
+      <screen sequence="4" id="mode" model="diagnostic / implementation sprint / embedded-advisory"/>
+      <screen sequence="5" id="rhythm" model="1–2 / 3–4 touchpoints / daily"/>
+      <screen sequence="6" id="org" model="startup / mid-market / enterprise"/>
+      <screen sequence="7" id="before_after" model="free-text before/after"/>
+      <screen sequence="8" id="contact" model="name / work email / deal-killer"/>
+    </qualifier>
+    <evidence placement_occurrences="12" unique_eu="4" eug_candidates="4" target_placement_status="PENDING_EXTERNAL_3_REPLICA"/>
+  </repository-representation>
+  <contract-checks>
+    <check id="full_23_section_canon" status="FAIL" reason="Live page exposes a justified-looking subset, but the full v4 23-section canon is not rendered."/>
+    <check id="semantic_sequence_alignment" status="PASS_WITH_RESERVATION" reason="Live and repo both resolve to hero → offers → capabilities → engagement → qualification/lead-form at semantic level; raw live DOM section IDs were not exposed."/>
+    <check id="live_copy_fidelity" status="FAIL" reason="Repo artifact is English and materially rewrites the live French hero/offer framing."/>
+    <check id="live_form_fidelity" status="FAIL" reason="Both are 8-screen flows, but repo screen semantics differ materially from the live qualifier."/>
+    <check id="offer_membership" status="PASS" reason="Exactly four HealthTech offers: reg-csv, cdm-automation, pv-data-engineer, healthtech-product."/>
+    <check id="avatar_binding" status="PASS_WITH_UNCERTAINTY" reason="Four current inductive positioning models map one-to-one to the four offers; unsupported demographics remain NOT_EVIDENCED."/>
+    <check id="upstream_evidence_units" status="PASS" reason="Four current EUs are admitted/champion and proof-carrying."/>
+    <check id="target_evidence_placement" status="BLOCKED" reason="Current target-page placements remain PENDING_EXTERNAL_3_REPLICA under presentation-v1.2."/>
+    <check id="legacy_placementv1" status="NOT_APPLICABLE" reason="presentation-v1 is superseded; current policy requires presentation-v1.2."/>
+    <check id="github_publication" status="BLOCKED" reason="Do not merge/publish until current placement/presentation judge and exact DOM/XPath validation pass."/>
+  </contract-checks>
+  <evidence-gates current_placement_judge="judge:evidence-placement:presentation-v1.2" legacy_v1="SUPERSEDED" final="BLOCKED">
+    <eu id="EU-REGCSV-EC-ANNEX11-RISK-2026" status="CHAMPION_PASS" score="94" boundary="GMP computerised systems only" placement="PENDING_EXTERNAL_3_REPLICA"/>
+    <eu id="EU-REGCSV-FDA-CSA-RISK-2026" status="CHAMPION_PASS" score="92" boundary="medical-device production/QMS only" placement="PENDING_EXTERNAL_3_REPLICA"/>
+    <eu id="EU-CANON-EHDS-EHR-TESTING-2026" status="ADMITTED" score="94" boundary="EHDS-scope EHR only" placement="PENDING_EXTERNAL_3_REPLICA"/>
+    <eu id="EU-HT-EMA-FDA-GOOD-AI-2026" status="ADMITTED" score="94" boundary="medicines-lifecycle AI; normative only" placement="PENDING_EXTERNAL_3_REPLICA"/>
+  </evidence-gates>
+  <decision main_mutation="FORBIDDEN_PENDING_GATES" review_branch="recovery/topology-preserving-v1.2-2026-09-03">
+    <action>Persist review XML + live-structure HTML candidate; run topology-preserving GitHub Action; do not merge to main.</action>
+  </decision>
+</healthtech-section-contract>
