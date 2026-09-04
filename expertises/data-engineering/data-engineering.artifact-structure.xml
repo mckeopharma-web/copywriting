@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<pageSnapshot source="github-artifact" repository="mckeopharma-web/copywriting" path="expertises/data-engineering/data-engineering.html" branch="review/data-engineering-section-contract-2026-09-04" baseCommit="bd165acdd92e1a4de6b94fa20eddf535f67a7ef5" baseBlobSha="434343de90db523ec50fd904d831d3bfd3bf8ab3" generatedAt="2026-09-04T02:04:00+02:00" publicationAllowed="false" contractId="expertise-detail-18struct-23semantic-v1">
+  <routeFamilies>
+    <route path="/expertises/" family="EXPERTISE_HUB" detailContract="false" canonical="true"/>
+    <route path="/expertises/&lt;category&gt;/" family="S_SERIES_EXPERTISE_DETAIL" detailContract="true" canonical="true"/>
+    <route path="/programme/" family="PROGRAMME_HUB" detailContract="false" canonical="true"/>
+    <route path="/programme/&lt;slug&gt;/" family="P_OR_R_SERIES_PROGRAMME_DETAIL" detailContract="true" canonical="true"/>
+    <route path="/programmes/" family="NON_CANONICAL_ALIAS" detailContract="false" canonical="false"/>
+  </routeFamilies>
+  <lineage>
+    <previousEvidenceRun>graph-research:data-engineering:2026-09-03:v4</previousEvidenceRun>
+    <previousSelection>80 candidates → 30 shortlist → 14 EU placements · 4 EUG</previousSelection>
+    <preservation>Previous review artifact remains recoverable from Git history at base blob/commit; this change rematerializes the live section contract and does not promote pending EUs.</preservation>
+  </lineage>
+  <structuralForms count="18" expectedOrder="top,triggers,consequences,for-whom,qualification,proposition,offers,deliverables,before-after,results,proof,scope,process,modules,intersection,commitments,questions,engagement" reorderAllowed="false" sectionDeltaAllowed="0">
+    <form order="0" id="top" kind="hero" semanticRole="promise_result_format_decision_maker_stack" xpath="//*[@id='top']" expectedMatches="1"/>
+    <form order="1" id="triggers" kind="purchase_triggers" semanticRole="purchase_trigger_conditions" xpath="//section[@id='triggers']" expectedMatches="1"/>
+    <form order="2" id="consequences" kind="problem_consequences" semanticRole="problem_cost_and_failed_workarounds" xpath="//section[@id='consequences']" expectedMatches="1"/>
+    <form order="3" id="for-whom" kind="buyer_fit" semanticRole="buyer_and_operational_pressure" xpath="//section[@id='for-whom']" expectedMatches="1"/>
+    <form order="4" id="qualification" kind="qualification_gate" semanticRole="fit_and_unfit_conditions" xpath="//section[@id='qualification']" expectedMatches="1"/>
+    <form order="5" id="proposition" kind="value_mechanism" semanticRole="offer_mechanism_claim_to_proof" xpath="//section[@id='proposition']" expectedMatches="1"/>
+    <form order="6" id="offers" kind="buying_configurations" semanticRole="how_to_buy_and_offer_configurations" xpath="//section[@id='offers']" expectedMatches="1"/>
+    <form order="7" id="deliverables" kind="deliverables" semanticRole="delivered_artifacts" xpath="//section[@id='deliverables']" expectedMatches="1"/>
+    <form order="8" id="before-after" kind="transformation" semanticRole="state_transition_mechanism" xpath="//section[@id='before-after']" expectedMatches="1"/>
+    <form order="9" id="results" kind="acceptance_results" semanticRole="target_results_and_acceptance_criteria" xpath="//section[@id='results']" expectedMatches="1"/>
+    <form order="10" id="proof" kind="execution_proof" semanticRole="technical_proof_and_provenance" xpath="//section[@id='proof']" expectedMatches="1"/>
+    <form order="11" id="scope" kind="scope_boundary" semanticRole="included_and_excluded_scope" xpath="//section[@id='scope']" expectedMatches="1"/>
+    <form order="12" id="process" kind="delivery_process" semanticRole="mission_delivery_flow" xpath="//section[@id='process']" expectedMatches="1"/>
+    <form order="13" id="modules" kind="delivery_modules" semanticRole="modular_delivery_bricks" xpath="//section[@id='modules']" expectedMatches="1"/>
+    <form order="14" id="intersection" kind="differentiation" semanticRole="cross_skill_differentiation" xpath="//section[@id='intersection']" expectedMatches="1"/>
+    <form order="15" id="commitments" kind="controllable_commitments" semanticRole="guarantees_limits_and_responsibility" xpath="//section[@id='commitments']" expectedMatches="1"/>
+    <form order="16" id="questions" kind="objections_faq" semanticRole="purchase_objections_and_questions" xpath="//section[@id='questions']" expectedMatches="1"/>
+    <form order="17" id="engagement" kind="next_step_cta" semanticRole="qualification_and_next_step" xpath="//section[@id='engagement']" expectedMatches="1"/>
+  </structuralForms>
+  <semanticTokens count="23" expectedOrder="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8">
+    <token ordinal="0" token="0" name="hero" hostForm="top" semanticRole="promise_result_format_decision_maker_stack" xpath="//*[@data-canonical-token='0']" expectedMatches="1"/>
+    <token ordinal="1" token="11" name="purchase_triggers" hostForm="triggers" semanticRole="purchase_trigger_conditions" xpath="//*[@data-canonical-token='11']" expectedMatches="1"/>
+    <token ordinal="2" token="20" name="problem_consequences" hostForm="consequences" semanticRole="problem_cost_and_failed_workarounds" xpath="//*[@data-canonical-token='20']" expectedMatches="1"/>
+    <token ordinal="3" token="13" name="buyer_fit" hostForm="for-whom" semanticRole="buyer_and_operational_pressure" xpath="//*[@data-canonical-token='13']" expectedMatches="1"/>
+    <token ordinal="4" token="14" name="qualification_gate" hostForm="qualification" semanticRole="fit_and_unfit_conditions" xpath="//*[@data-canonical-token='14']" expectedMatches="1"/>
+    <token ordinal="5" token="1" name="value_mechanism" hostForm="proposition" semanticRole="offer_mechanism_claim_to_proof" xpath="//*[@data-canonical-token='1']" expectedMatches="1"/>
+    <token ordinal="6" token="2" name="value" hostForm="proposition" semanticRole="decision_value_attributes" xpath="//*[@data-canonical-token='2']" expectedMatches="1"/>
+    <token ordinal="7" token="10" name="buying_configurations" hostForm="offers" semanticRole="how_to_buy_and_offer_configurations" xpath="//*[@data-canonical-token='10']" expectedMatches="1"/>
+    <token ordinal="8" token="15" name="deliverables" hostForm="deliverables" semanticRole="delivered_artifacts" xpath="//*[@data-canonical-token='15']" expectedMatches="1"/>
+    <token ordinal="9" token="3" name="transformation" hostForm="before-after" semanticRole="state_transition_mechanism" xpath="//*[@data-canonical-token='3']" expectedMatches="1"/>
+    <token ordinal="10" token="12" name="before_after" hostForm="before-after" semanticRole="before_after_client_state" xpath="//*[@data-canonical-token='12']" expectedMatches="1"/>
+    <token ordinal="11" token="19" name="acceptance_results" hostForm="results" semanticRole="target_results_and_acceptance_criteria" xpath="//*[@data-canonical-token='19']" expectedMatches="1"/>
+    <token ordinal="12" token="4" name="execution_proof" hostForm="proof" semanticRole="technical_proof_and_provenance" xpath="//*[@data-canonical-token='4']" expectedMatches="1"/>
+    <token ordinal="13" token="16" name="scope_boundary" hostForm="scope" semanticRole="included_and_excluded_scope" xpath="//*[@data-canonical-token='16']" expectedMatches="1"/>
+    <token ordinal="14" token="17" name="delivery_process" hostForm="process" semanticRole="mission_delivery_flow" xpath="//*[@data-canonical-token='17']" expectedMatches="1"/>
+    <token ordinal="15" token="18" name="delivery_modules" hostForm="modules" semanticRole="modular_delivery_bricks" xpath="//*[@data-canonical-token='18']" expectedMatches="1"/>
+    <token ordinal="16" token="5" name="capabilities" hostForm="modules" semanticRole="capability_proof" xpath="//*[@data-canonical-token='5']" expectedMatches="1"/>
+    <token ordinal="17" token="21" name="differentiation" hostForm="intersection" semanticRole="cross_skill_differentiation" xpath="//*[@data-canonical-token='21']" expectedMatches="1"/>
+    <token ordinal="18" token="6" name="benchmark" hostForm="intersection" semanticRole="market_reference_not_contract_price" xpath="//*[@data-canonical-token='6']" expectedMatches="1"/>
+    <token ordinal="19" token="22" name="controllable_commitments" hostForm="commitments" semanticRole="guarantees_limits_and_responsibility" xpath="//*[@data-canonical-token='22']" expectedMatches="1"/>
+    <token ordinal="20" token="23" name="objections_faq" hostForm="questions" semanticRole="purchase_objections_and_questions" xpath="//*[@data-canonical-token='23']" expectedMatches="1"/>
+    <token ordinal="21" token="7" name="next_step_cta" hostForm="engagement" semanticRole="qualification_and_next_step" xpath="//*[@data-canonical-token='7']" expectedMatches="1"/>
+    <token ordinal="22" token="8" name="lead_form" hostForm="engagement" semanticRole="inline_qualification_form" xpath="//*[@data-canonical-token='8']" expectedMatches="1"/>
+  </semanticTokens>
+  <evidencePlacements policy="review-only">
+    <placement eu="EU-DE-FOIDL-INTEGRATION-INGESTION-47-2023" section="triggers" xpath="//*[@id='claim-foidl-questions']" expectedMatches="1" status="PENDING_EXTERNAL_REPLICA_EXECUTION" publicationAllowed="false"/>
+    <placement eu="EU-DE-FOIDL-DATATYPE-33-2023-CAND" section="consequences" xpath="//*[@id='claim-foidl-datatype']" expectedMatches="1" status="PENDING_EXTERNAL_REPLICA_EXECUTION" publicationAllowed="false"/>
+    <placement eu="EU-W3C-PROV-CORE-2013" section="proposition" xpath="//*[@id='claim-w3c-prov']" expectedMatches="1" status="PENDING_EXTERNAL_REPLICA_EXECUTION" publicationAllowed="false"/>
+    <placement eu="EU-DE-OPENLINEAGE-RUNEVENT-2026-CAND" section="deliverables" xpath="//*[@id='claim-openlineage-runevent']" expectedMatches="1" status="PENDING_EXTERNAL_REPLICA_EXECUTION" publicationAllowed="false"/>
+  </evidencePlacements>
+  <firstPartyProof>
+    <project name="Folder Mapper" repository="https://github.com/RickOwri/folder_mapper" claim="non-fork; 7/7 commits attributed to RickOwri; Rust + SQLite"/>
+    <project name="AI/RAG Experiment Portfolio" repository="https://github.com/RickOwri/projects-cv" claim="28 RickOwri commits; private history flattened for some imports"/>
+  </firstPartyProof>
+  <neoFortPolicyResolution currentOnly="true">
+    <policy id="judge:evidence:factfulness-epistemology-methodology-v2" current="true"/>
+    <policy id="judge:evidence-unit:champion-v2" current="true"/>
+    <policy id="judge:evidence-placement:presentation-v1.2" current="true"/>
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" current="true"/>
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true"/>
+    <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true"/>
+  </neoFortPolicyResolution>
+  <validation>
+    <deterministicPreflight state="PASS_LOCAL_EXPECTED"/>
+    <formalJudges state="NOT_EXECUTED" replicas="3" temperature="0" topP="1"/>
+    <finalPass state="false" publicationAllowed="false">
+      <blocker>formal_3_replica_judges_not_executed</blocker>
+      <blocker>immutable_origin_artifact_hashes_not_materialized_in_neofort</blocker>
+    </finalPass>
+  </validation>
+</pageSnapshot>
