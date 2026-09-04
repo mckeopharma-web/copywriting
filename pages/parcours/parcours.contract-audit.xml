@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page_contract_audit version="1.0" target_page="https://mickael-umt.com/parcours/" scope="ONLY /parcours/" execution_posture="FAIL_CLOSED" decision="REVIEW">
+  <scope_guard other_page_cud="FORBIDDEN" google_drive_crd="NOT_PERFORMED_REQUIRES_EXPLICIT_USER_APPROVAL"/>
+  <representations>
+    <live path="pages/parcours/structure/live-page.xml" section_count="11" raw_html_materialized="false"/>
+    <repository_html path="pages/parcours/parcours.html" blob_sha="3b3c0d08d9febf1ef2fbced13a5873e7707f0d80" section_count="11" theme="dark"/>
+    <repository_xml path="pages/parcours/structure/repo-html.xml" section_count="11"/>
+    <copy_evidence path="pages/parcours/structure/copy-evidence.xml"/>
+    <family_audit path="pages/parcours/structure/family-contract-audit.xml"/>
+  </representations>
+  <policy_resolution authority="@neofort" selector="current=true">
+    <requested_alias id="judge:eu:placementv1" current_resolution="NOT_FOUND_AS_CURRENT_JUDGE"/>
+    <current_placement_policy id="evidence-placement-policy:site-v5"/>
+    <current_presentation_judge id="judge:evidence-placement:presentation-v1.2" replicas="3" temperature="0" top_p="1"/>
+    <current_factfulness_judge id="judge:evidence:factfulness-epistemology-methodology-v2" replicas="3" temperature="0" top_p="1"/>
+    <current_determinism_policy id="policy:llm-judge:deterministic-execution-v2"/>
+    <current_exploitability_policy id="policy:evidence-agent-exploitability:proof-carrying-v3"/>
+  </policy_resolution>
+  <deterministic_checks>
+    <check name="live_repo_section_count" status="PASS"/><check name="section_order" status="PASS"/><check name="section_form_names" status="PASS"/><check name="qualification_screen_count" status="PASS" expected="8" observed="8"/><check name="target_scope_only" status="PASS"/><check name="google_drive_mutation" status="PASS" observed="false"/><check name="xpath_claim_ids_unique" status="PASS"/><topology_sha256>b3f19c47e1e711088752c6dabeb67f2b42a11e0f9fb679c29c5cf0b8470e2d2a</topology_sha256>
+  </deterministic_checks>
+  <devicev><llm_replica_execution status="NOT_EXECUTED"/><publication_allowed>false</publication_allowed><reason>Deterministic structure passes; the connected NeoFort surface resolves current policies but does not expose the required immutable three-replica semantic/presentation judge execution endpoint. Fail-closed publication therefore remains blocked.</reason></devicev>
+  <final_decision status="REVIEW"><github_persistence_allowed>true</github_persistence_allowed><production_site_mutation_allowed>false</production_site_mutation_allowed></final_decision>
+</page_contract_audit>
