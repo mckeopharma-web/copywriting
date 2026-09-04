@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html_artifact_structure_snapshot version="1.0" snapshot_kind="GITHUB_HTML" status="REVIEW_ARTIFACT" fail_mode="FAIL_CLOSED">
+  <metadata>
+    <repository>mckeopharma-web/copywriting</repository><branch>main</branch><path>expertises/blockchain/blockchain.html</path><blob_sha>e70669af1e0b10a251fe9b6757d4374475a2f91a</blob_sha><theme>night</theme><commercial_copy_version>blockchain-commercial-v1</commercial_copy_version><publication_status>BLOCKED_PENDING_FORMAL_SPECIALIST_AND_PLACEMENT_JUDGES</publication_status><captured_at>2026-09-04T02:05:00+02:00</captured_at>
+  </metadata>
+  <top_level_section_contract section_count="18" reorder_allowed="false" status="MATCHES_BLOCKCHAIN_LOCK">
+    <section order="1" id="top" kind="offer_hero" semantic_role="promise_result_format_decision_maker_stack"><heading>Blockchain systems that earn their complexity.</heading></section>
+    <section order="2" id="triggers" kind="purchase_triggers" semantic_role="purchase_trigger_conditions"><heading>Call when a verification problem is blocking a decision, partnership or launch.</heading></section>
+    <section order="3" id="consequences" kind="problem_consequences" semantic_role="problem_cost_and_failed_workarounds"><heading>The expensive mistake is paying for the wrong trust model.</heading></section>
+    <section order="4" id="for-whom" kind="buyer_fit" semantic_role="buyer_and_operational_pressure"><heading>For the owner of the architecture decision when security, legal and operations all need to sign off.</heading></section>
+    <section order="5" id="qualification" kind="qualification_gate" semantic_role="fit_and_unfit_conditions"><heading>Strong fit when the business cannot simply ask another party to trust your operator.</heading></section>
+    <section order="6" id="proposition" kind="value_mechanism" semantic_role="offer_mechanism_claim_to_proof"><heading>Buy the architecture decision first. Implement only what survives it.</heading></section>
+    <section order="7" id="offers" kind="buying_configurations" semantic_role="how_to_buy_and_offer_configurations"><heading>Five buyable configurations, from GO / NO-GO to implementation and handoff.</heading></section>
+    <section order="8" id="deliverables" kind="deliverables" semantic_role="delivered_artifacts"><heading>You leave with decision assets, implementation artifacts and acceptance evidence.</heading></section>
+    <section order="9" id="before-after" kind="state_transition" semantic_role="before_after_client_state"><heading>From a blockchain debate to an approved, testable trust decision.</heading></section>
+    <section order="10" id="results" kind="acceptance_results" semantic_role="target_results_and_acceptance_criteria"><heading>What you should be able to approve at the end of the engagement.</heading></section>
+    <section order="11" id="proof" kind="execution_proof" semantic_role="technical_proof_and_provenance"><heading>Evidence I can execute, not just advise.</heading></section>
+    <section order="12" id="scope" kind="scope_boundary" semantic_role="included_and_excluded_scope"><heading>Know exactly what you are buying — and what remains a separate specialist role.</heading></section>
+    <section order="13" id="process" kind="delivery_process" semantic_role="mission_delivery_flow"><heading>A delivery path that can stop before unnecessary implementation.</heading></section>
+    <section order="14" id="modules" kind="delivery_modules" semantic_role="modular_delivery_bricks"><heading>Add only the modules that change the acceptance decision.</heading></section>
+    <section order="15" id="intersection" kind="differentiation" semantic_role="cross_skill_differentiation"><heading>One owner across proof, data, authority and delivery removes expensive seams.</heading></section>
+    <section order="16" id="commitments" kind="controllable_commitments" semantic_role="guarantees_limits_and_responsibility"><heading>What I will make inspectable before handoff.</heading></section>
+    <section order="17" id="questions" kind="objections_faq" semantic_role="purchase_objections_and_questions"><heading>Common buying objections, answered before scope expands.</heading></section>
+    <section order="18" id="engagement" kind="next_step_cta" semantic_role="qualification_and_next_step"><heading>Bring one disputed claim. Leave with a next-step decision.</heading></section>
+  </top_level_section_contract>
+  <artifact_section_forms>
+    <offers configuration_count="5" status="OBSERVED_IN_HTML">
+      <configuration code="ZK-FIT" title="Tokenisation Fit &amp; Economic Architecture" cta="#engagement"/>
+      <configuration code="ZK-XB" title="Stablecoin &amp; Cross-Border Settlement Architecture" cta="#engagement"/>
+      <configuration code="ZK-ASSET" title="Tokenized Asset Lifecycle &amp; Governance" cta="#engagement"/>
+      <configuration code="ZK-RD" title="Selective Disclosure &amp; ZK Verification R&amp;D" cta="#engagement"/>
+      <configuration code="ZK" title="Blockchain &amp; Verifiable Computing Delivery" cta="#engagement"/>
+    </offers>
+    <deliverables card_count="4"/><process phase_count="4"/><modules module_count="4"/><proof public_proof_card_count="3"/><questions question_count="4"/><engagement_preview question_count="4"/>
+    <shared_qualifier_form status="NOT_REPRESENTED_IN_STANDALONE_REVIEW_HTML" live_screen_count="8" lossless_clone_implication="FAIL_IF_THIS_HTML_IS_CLAIMED_AS_100_PERCENT_LIVE_FAITHFUL"/>
+  </artifact_section_forms>
+  <evidence_claim_anchors required_count="9">
+    <claim_anchor id="claim-tokenised-assets-observed" required_match_count="1"/><claim_anchor id="claim-tokenised-assets-derived" required_match_count="1"/><claim_anchor id="claim-pontes-fees" required_match_count="1"/><claim_anchor id="claim-pontes-hours" required_match_count="1"/><claim_anchor id="claim-agora-settlement" required_match_count="1"/><claim_anchor id="claim-programmability" required_match_count="1"/><claim_anchor id="claim-provenance-model" required_match_count="1"/><claim_anchor id="claim-lottery-commits" required_match_count="1"/><claim_anchor id="claim-pqc-transition" required_match_count="1"/>
+  </evidence_claim_anchors>
+  <embedded_evidence evidence_units="9" qgeu_panels="4">
+    <evidence_unit id="EU-CANON-ECB-TOKENIZED-ASSETS-2025-2026"/><evidence_unit id="EU-CANON-ECB-TOKENIZED-ASSETS-GROWTH-4.96X-2026"/><evidence_unit id="EU-CANON-ECB-PONTES-PRICING-2026"/><evidence_unit id="EU-CANON-ECB-PONTES-AVAILABILITY-2028"/><evidence_unit id="EU-CANON-BIS-AGORA-SETTLEMENT-80S-2026"/><evidence_unit id="EU-CANON-ECB-PROGRAMMABILITY-COORDINATION-2026"/><evidence_unit id="EU-CANON-NIST-PQC-TRANSITION-2035"/><evidence_unit id="EU-SG-006"/><evidence_unit id="EU-DE-BUNEMAN-WHY-WHERE-2001"/>
+    <publication_boundary>Deterministic/factfulness gates are represented as passing for selected evidence in the HTML, while formal specialist, graph-presentation and placement replicas remain pending. This snapshot does not assert FINAL_PASS.</publication_boundary>
+  </embedded_evidence>
+</html_artifact_structure_snapshot>
