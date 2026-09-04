@@ -38,12 +38,15 @@ jobs:
           python tools/validate_pharmaceutical_evidence_assurance_contract.py \
             --repo-root . \
             --check-live \
+            --save-live-html reports/pea-live-current.html \
             --report reports/pea-section-contract-ci.json
       - name: Upload immutable audit output
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: pea-section-contract-audit-${{ github.sha }}
-          path: reports/pea-section-contract-ci.json
+          path: |
+            reports/pea-section-contract-ci.json
+            reports/pea-live-current.html
           if-no-files-found: error
           retention-days: 30
