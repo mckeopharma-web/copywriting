@@ -1,0 +1,89 @@
+name: Data Engineering section contract
+
+on:
+  push:
+    branches:
+      - main
+      - review/data-engineering-section-contract-2026-09-04
+    paths:
+      - 'expertises/data-engineering/**'
+      - '.github/workflows/data-engineering-section-contract.yml'
+  pull_request:
+    paths:
+      - 'expertises/data-engineering/**'
+      - '.github/workflows/data-engineering-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  section-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate live structural forms and v4 semantic tokens
+        shell: bash
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          PAGE=Path("expertises/data-engineering/data-engineering.html")
+          LIVE=Path("expertises/data-engineering/data-engineering.live-structure.xml")
+          ART=Path("expertises/data-engineering/data-engineering.artifact-structure.xml")
+          STRUCT=["top","triggers","consequences","for-whom","qualification","proposition","offers","deliverables","before-after","results","proof","scope","process","modules","intersection","commitments","questions","engagement"]
+          TOK=[0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8]
+
+          class P(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.struct=[]; self.tok=[]; self.ids=[]; self.screens=[]; self.html={}; self.forms=[]; self.eus=[]
+              def handle_starttag(self,tag,attrs):
+                  d=dict(attrs)
+                  if tag=="html": self.html=d
+                  if "id" in d: self.ids.append(d["id"])
+                  if tag=="article" and d.get("id")=="top": self.struct.append("top")
+                  elif tag=="section" and d.get("id"): self.struct.append(d["id"])
+                  if "data-canonical-token" in d: self.tok.append(int(d["data-canonical-token"]))
+                  if tag=="fieldset" and "data-screen" in d: self.screens.append(int(d["data-screen"]))
+                  if tag=="form": self.forms.append(d)
+                  if "data-eu" in d: self.eus.append(d["data-eu"])
+
+          def fail(x): raise SystemExit("FAIL: "+x)
+
+          text=PAGE.read_text(encoding="utf-8"); p=P(); p.feed(text)
+          if p.struct!=STRUCT: fail(f"structural order {p.struct}")
+          if p.tok!=TOK: fail(f"semantic order {p.tok}")
+          if p.html.get("data-source-page")!="https://mickael-umt.com/expertises/data-engineering/": fail("source binding")
+          if p.html.get("data-section-contract")!="expertise-detail-18struct-23semantic-v1": fail("contract marker")
+          if not p.html.get("data-publication-status","").startswith("BLOCKED"): fail("publication must be fail-closed")
+          if "audience" in p.ids or "proofs" in p.ids: fail("legacy artifact ids remain")
+          if p.screens!=list(range(1,9)): fail(f"qualifier screens {p.screens}")
+          q=[x for x in p.forms if x.get("id")=="qualification-form"]
+          if len(q)!=1 or q[0].get("data-review-only")!="true" or q[0].get("action","").strip(): fail("qualification form must be unique and review-only")
+          if "Marginalement" in text or "coût est en stockage, pas en temps de traitement" in text: fail("unsupported lineage performance claim remains")
+          if len(p.eus)!=len(set(p.eus)) or len(p.eus)<4: fail("EU identifiers must be unique and >=4")
+          if "https://github.com/RickOwri/folder_mapper" not in text or "7/7 commits attribués à RickOwri" not in text: fail("Folder Mapper proof boundary")
+
+          for f in (LIVE,ART):
+              try: ET.parse(f)
+              except Exception as e: fail(f"invalid XML {f}: {e}")
+          art=ET.parse(ART).getroot()
+          forms=[x.attrib["id"] for x in art.findall("./structuralForms/form")]
+          tokens=[int(x.attrib["token"]) for x in art.findall("./semanticTokens/token")]
+          if forms!=STRUCT or tokens!=TOK: fail("artifact XML contract mismatch")
+          routes={x.attrib["path"]:x.attrib for x in art.findall("./routeFamilies/route")}
+          if routes["/expertises/"]["detailContract"]!="false": fail("expertise hub misclassified")
+          if routes["/programme/"]["detailContract"]!="false": fail("programme hub misclassified")
+          if routes["/expertises/<category>/"]["detailContract"]!="true": fail("expertise detail contract missing")
+          if routes["/programme/<slug>/"]["detailContract"]!="true": fail("programme detail contract missing")
+          if routes["/programmes/"]["canonical"]!="false": fail("plural programmes route must be non-canonical")
+          if art.attrib.get("publicationAllowed")!="false": fail("artifact XML publicationAllowed")
+          print("PASS: 18/18 structural forms; 23/23 semantic tokens; live ids; 8-screen review-only qualifier; XML mirrors; fail-closed publication.")
+
+          PY
