@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository_html_snapshot schema_version="1.0" repository="mckeopharma-web/copywriting" branch="main" path="publish/expertises/growth/growth.html" blob_sha="10a8ea40a0f815646747f0a14e2cd5d91441649d" source_page="https://mickael-umt.com/expertises/growth/" theme="dark" scope="ONLY /expertises/growth/">
+  <embedded_contract_metadata>
+    <x_structure_contract>hero + 2 offres + 3 cartes capacités + CTA + qualification 8 écrans</x_structure_contract>
+    <claim_loop current_in_neofort="false_or_unresolved">loop:copy-claim:external-capability-v1.2-topology-preserving</claim_loop>
+    <claim_judge current_in_neofort="false_or_unresolved">judge:copy-claim:external-capability-grounding-v1.2</claim_judge>
+    <placement_judge current_in_neofort="true">judge:evidence-placement:presentation-v1.2</placement_judge>
+    <publication_status>PENDING_FORMAL_LLM_JUDGE</publication_status>
+  </embedded_contract_metadata>
+  <sections count="5">
+    <section order="1" token="0" semantic="hero" data_section_id="growth:hero"/>
+    <section order="2" token="10" semantic="offers" data_section_id="growth:offers" cardinality_or_screens="2"/>
+    <section order="3" token="5" semantic="capabilities" data_section_id="growth:capabilities" cardinality_or_screens="3"/>
+    <section order="4" token="7" semantic="engagement" data_section_id="growth:next-step"/>
+    <section order="5" token="8" semantic="lead_form" data_section_id="growth:qualification" cardinality_or_screens="8"/>
+  </sections>
+  <qualification_form screen_count="8" implementation="preview_only">
+    <screen index="1" control_type="displayed_options_only"><question>Qu’est-ce qui doit bouger ?</question></screen>
+    <screen index="2" control_type="displayed_options_only"><question>Quel événement déclenche le besoin, et pour quand ?</question></screen>
+    <screen index="3" control_type="displayed_options_only"><question>Quel est votre rôle dans la décision d’achat ?</question></screen>
+    <screen index="4" control_type="displayed_options_only"><question>Comment voulez-vous avancer ?</question></screen>
+    <screen index="5" control_type="displayed_options_only"><question>À quel rythme hebdomadaire ?</question></screen>
+    <screen index="6" control_type="displayed_options_only"><question>Combien de personnes ou d’équipes doivent bouger ?</question></screen>
+    <screen index="7" control_type="textarea"><question>Qu’est-ce qui est déjà prouvé, et qu’est-ce qui reste une hypothèse ?</question></screen>
+    <screen index="8" control_type="email_input"><question>Où envoyer la réponse ?</question></screen>
+    <submission_state>No submission endpoint connected in preview.</submission_state>
+  </qualification_form>
+  <inductive_working_avatars count="2" evidence_statused="true">
+    <avatar id="buyer-role:training" name="Nadia Benali" status="INDUCTIVE_WORKING_AVATAR"><role>AI Transformation &amp; Training Director</role><unsupported_fields_policy>NOT_EVIDENCED / HYPOTHESIS / TO_RESEARCH; synthesized language is not customer verbatim.</unsupported_fields_policy></avatar>
+    <avatar id="buyer-role:marketing-engineering" name="Camille Ferrand" status="INDUCTIVE_WORKING_AVATAR"><role>Marketing / Revenue Operations Director</role><unsupported_fields_policy>NOT_EVIDENCED / HYPOTHESIS / TO_RESEARCH; synthesized language is not customer verbatim.</unsupported_fields_policy></avatar>
+  </inductive_working_avatars>
+  <research_corpus declared_source_count="6" declared_anchor_section_count="3" declared_sources_per_section_ratio="2.0" density_gate="PASS">
+    <source url="https://arxiv.org/abs/2608.10182" classification="METHOD_ONLY"><boundary>Prediction versus causal incrementality; platform-specific result is not proof of consulting-offer effect.</boundary></source>
+    <source url="https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers" classification="NORMATIVE_GUIDANCE"><boundary>Article 4 implementation guidance; not proof of training effectiveness.</boundary></source>
+    <source url="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1944626/abstract" classification="RESEARCH_CONTEXT"><boundary>Bundled adaptive training in Chinese utilities; not transferable as offer-effect proof.</boundary></source>
+    <source url="https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service" classification="METHOD_ONLY"><boundary>Public-service measurement guidance.</boundary></source>
+    <source url="https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service" classification="METHOD_ONLY"><boundary>Public-service success-measurement guidance.</boundary></source>
+    <source url="https://www.w3.org/TR/prov-overview/" classification="STANDARD_METHOD"><boundary>Provenance model context; not growth-outcome evidence.</boundary></source>
+  </research_corpus>
+</repository_html_snapshot>
