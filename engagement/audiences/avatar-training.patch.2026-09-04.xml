@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TargetedCopyPatch version="1.0.0" targetPage="https://mickael-umt.com/engagement/audiences/" targetFragment="#avatar-training" mutationScope="avatar-training-only" applicationStatus="READY_FOR_LOSSLESS_SYNC">
+  <SourceOfTruth kind="LIVE_RENDERED_PAGE" observedAt="2026-09-04">https://mickael-umt.com/engagement/audiences/#avatar-training</SourceOfTruth>
+  <RepositoryTarget>pages/engagement/audiences/mickael-umt.com.html</RepositoryTarget>
+  <Selector before="article#avatar-03" after="article#avatar-training" expectedMatchCount="1"/>
+  <AvatarContract id="contract:customer-avatar:audiences:2026-09-03" current="true"/>
+  <Replacement>
+    <Number>03</Number>
+    <Name>Nadia Benali</Name>
+    <Role>Directrice transformation IA et formation · organisation régulée ou à fortes exigences de contrôle</Role>
+    <Before>L’usage de l’IA se diffuse déjà dans les équipes, mais elle ne peut ni démontrer les compétences acquises, ni prouver que les limites de confidentialité sont tenues.</Before>
+    <After>Une capacité où les équipes savent quoi automatiser, quoi vérifier et quand escalader — avec la preuve par équipe qui rend la généralisation défendable devant la direction.</After>
+    <Offer href="https://mickael-umt.com/expertises/training/">AI Training &amp; Adoption Engineering</Offer>
+    <Stack>Python · AI adoption · cybersecurity · blockchain · assessment · document control</Stack>
+  </Replacement>
+  <EvidenceCandidates publicationAllowed="false">
+    <EvidenceUnit id="EU-PV-NIST-GOVERN-2-1-ROLE-CLARITY" current="true" admissionStatus="JUDGE_SCORED_PENDING_ADMISSION" action="DO_NOT_BIND_TO_VISIBLE_COPY"/>
+    <EvidenceUnit id="EU-PV-NIST-GOVERN-2-2-TRAINING" current="true" admissionStatus="JUDGE_SCORED_PENDING_ADMISSION" action="DO_NOT_BIND_TO_VISIBLE_COPY"/>
+    <EvidenceUnit id="EU-TRAIN-EC-ART4-TAILORING-2026" current="true" admissionStatus="DRAFT_PENDING_FORMAL_JUDGES" action="DO_NOT_BIND_TO_VISIBLE_COPY"/>
+    <EvidenceUnit id="EU-TRAIN-EC-ART4-RECORDS-2026" current="true" admissionStatus="DRAFT_PENDING_FORMAL_JUDGES" action="DO_NOT_BIND_TO_VISIBLE_COPY"/>
+    <EvidenceUnit id="EU-TRAIN-OECD-SKILLS-BARRIER-2026" current="true" admissionStatus="DRAFT_PENDING_FORMAL_JUDGES" action="DO_NOT_BIND_TO_VISIBLE_COPY"/>
+  </EvidenceCandidates>
+  <DeterministicInvariants>
+    <Invariant>main_section_ids_after == main_section_ids_before</Invariant>
+    <Invariant>avatar_card_count == 10</Invariant>
+    <Invariant>avatar_order_after == avatar_order_before</Invariant>
+    <Invariant>all_non_target_avatar_html_after == all_non_target_avatar_html_before</Invariant>
+    <Invariant>problem_before_profile_unchanged</Invariant>
+    <Invariant>qualifier_unchanged</Invariant>
+    <Invariant>footer_unchanged</Invariant>
+    <Invariant>target_anchor_match_count == 1</Invariant>
+  </DeterministicInvariants>
+  <PublicationBoundary>The replacement is a lossless synchronization to first-party live positioning, not a new external-effect claim. No draft or pending EvidenceUnit is rendered in visible copy. Any future citation requires current admission, Factfulness, agent-exploitability and 3-replica EvidencePlacement PASS on the immutable target snapshot.</PublicationBoundary>
+</TargetedCopyPatch>
