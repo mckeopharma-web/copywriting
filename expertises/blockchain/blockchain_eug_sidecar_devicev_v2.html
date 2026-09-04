@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="night" data-artifact="blockchain-eug-sidecar-devicev-v2" data-publication-status="BLOCKED_PENDING_FORMAL_GRAPH_PRESENTATION_AND_PLACEMENT_JUDGES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blockchain · EUG sidecar review build v2</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Topology-preserving review build that materializes the authoritative blockchain.html snapshot and integrates each graph EvidenceUnit as a sidecar inside a pre-existing section.">
+<meta name="devicev-version" content="1.0.0">
+<meta name="source-artifact" content="expertises/blockchain/blockchain.html">
+<meta name="source-git-blob-sha" content="e70669af1e0b10a251fe9b6757d4374475a2f91a">
+<meta name="evidence-policy-snapshot" content="current=true @neofort · deterministic preflight v2 · factfulness v2 · proof-carrying v3 · evidence placement site v5 · placement presentation v1.2 · evidence graphic presentation v3 · dataviz v2">
+<style>
+:root{color-scheme:dark;--bg:#070b12;--ink:#f4f7fb;--muted:#9ba9bc;--line:#24344a;--warn:#ffd47a;--bad:#ff9f9f;--good:#8ff0bc}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.boot{width:min(900px,calc(100% - 36px));margin:15vh auto;padding:28px;border:1px solid var(--line);border-radius:20px;background:#0d1420}.boot h1{margin:.1em 0 .45em;font-size:clamp(2rem,6vw,4rem);line-height:1}.boot p{color:var(--muted)}.boot code{overflow-wrap:anywhere}.boot-status{margin-top:18px;padding:12px 14px;border-left:3px solid var(--warn);background:#15120c}.boot-status.fail{border-color:var(--bad);color:#ffd7d7}.boot-status.pass{border-color:var(--good);color:#d9ffe9}
+</style>
+</head>
+<body>
+<main class="boot" id="boot" aria-live="polite">
+  <div>DEVICEV · review-only materialization</div>
+  <h1>Blockchain EUG sidecar build</h1>
+  <p>This artifact does not rewrite the source page. It loads the exact reviewed <code>blockchain.html</code> Git blob, verifies its Git blob SHA, preserves the locked 18-section topology, then relocates the four existing QG-EU/EUG panels into sidecars of pre-existing sections.</p>
+  <div class="boot-status" id="boot-status">Verifying immutable source snapshot…</div>
+</main>
+<script type="application/json" id="devicev-eug-sidecar-contract">
+{
+  "run_id":"run:blockchain:eug-sidecar:2026-09-04:v2",
+  "page":"https://mickael-umt.com/expertises/blockchain/",
+  "repository":"mckeopharma-web/copywriting",
+  "source_path":"expertises/blockchain/blockchain.html",
+  "source_git_blob_sha":"e70669af1e0b10a251fe9b6757d4374475a2f91a",
+  "artifact_path":"expertises/blockchain/blockchain_eug_sidecar_devicev_v2.html",
+  "structure_contract":{"section_count":18,"order":["top","triggers","consequences","for-whom","qualification","proposition","offers","deliverables","before-after","results","proof","scope","process","modules","intersection","commitments","questions","engagement"],"section_delta_allowed":0,"reorder_allowed":false},
+  "placement_mode":"PRE_EXISTING_SECTION_SIDECAR",
+  "placements":[
+    {"qgeu":"QGEU-CANON-PONTES-PRICING-2026","section":"consequences","rationale":"cost-structure evidence illustrates the cost-of-trust-model consequence without claiming lower TCO"},
+    {"qgeu":"QGEU-CANON-PONTES-AVAILABILITY-2028","section":"qualification","rationale":"planned operating-window evidence illustrates a bounded operational-fit criterion; availability is not latency"},
+    {"qgeu":"QGEU-CANON-BIS-AGORA-80S-2026","section":"proposition","rationale":"bounded observed settlement reference illustrates the requirement to measure a delivery property instead of asserting universal speed"},
+    {"qgeu":"QGEU-CANON-TOKENIZED-ASSETS-GROWTH-2025-2026","section":"offers","rationale":"two-point market context illustrates why Tokenisation Fit remains an economic-architecture decision; no demand or outcome inference"}
+  ],
+  "epistemic_mutation":"NONE",
+  "copy_mutation":"NONE",
+  "evidence_data_mutation":"NONE",
+  "publication_status":"BLOCKED_PENDING_FORMAL_GRAPH_PRESENTATION_AND_PLACEMENT_JUDGES",
+  "judge_execution_required":{"temperature":0,"top_p":1,"replicas":3,"aggregate_boolean":"AND","aggregate_score":"MIN","disagreement":"BLOCK"}
+}
+</script>
+<script>
+(async()=>{
+  'use strict';
+  const SOURCE='./blockchain.html';
+  const EXPECTED_BLOB='e70669af1e0b10a251fe9b6757d4374475a2f91a';
+  const SECTION_ORDER=['top','triggers','consequences','for-whom','qualification','proposition','offers','deliverables','before-after','results','proof','scope','process','modules','intersection','commitments','questions','engagement'];
+  const SPEC=[
+    {qgeu:'QGEU-CANON-PONTES-PRICING-2026',section:'consequences',note:'Evidence illustration · published service-fee structure; not implementation TCO.'},
+    {qgeu:'QGEU-CANON-PONTES-AVAILABILITY-2028',section:'qualification',note:'Evidence illustration · planned operating-window property; availability ≠ latency.'},
+    {qgeu:'QGEU-CANON-BIS-AGORA-80S-2026',section:'proposition',note:'Evidence illustration · bounded observed settlement reference; not a universal benchmark.'},
+    {qgeu:'QGEU-CANON-TOKENIZED-ASSETS-GROWTH-2025-2026',section:'offers',note:'Evidence illustration · two observed market points; no demand, causality or forecast claim.'}
+  ];
+  const CLAIM_IDS=['claim-tokenised-assets-observed','claim-tokenised-assets-derived','claim-pontes-fees','claim-pontes-hours','claim-agora-settlement'];
+  const CSS=`
+  .eug-section-layout{display:grid;grid-template-columns:minmax(0,1.48fr) minmax(320px,.72fr);gap:clamp(28px,4vw,58px);align-items:start}
+  .eug-section-main{min-width:0}
+  .eug-section-sidecar{min-width:0;position:sticky;top:132px;align-self:start;display:grid;gap:12px}
+  .eug-sidecar-note{margin:0 0 8px;color:var(--muted);font-size:.72rem;line-height:1.4;text-transform:uppercase;letter-spacing:.07em}
+  .eug-section-sidecar .evidencePanel{padding:18px;box-shadow:none}
+  .eug-section-sidecar .evidencePanel h3{font-size:1.05rem}
+  .eug-section-sidecar .evidencePanel p{font-size:.84rem}
+  .eug-section-sidecar .barRow{grid-template-columns:96px minmax(0,1fr) 58px;gap:8px;font-size:.74rem}
+  .eug-section-sidecar .slope{height:132px}
+  .eug-section-sidecar .dotScale{height:68px}
+  .eug-layout-status{display:inline-flex;margin-top:12px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--good);font-size:.68rem;font-weight:800;letter-spacing:.07em}
+  @media(max-width:950px){.eug-section-layout{grid-template-columns:1fr}.eug-section-sidecar{position:static;max-width:none}.eug-section-sidecar .evidencePanel{max-width:none}}
+  `;
+  const fail=(message)=>{
+    const el=document.getElementById('boot-status');
+    if(el){el.className='boot-status fail';el.textContent='BLOCKED_PRECHECK · '+message;}
+    document.documentElement.dataset.eugPlacementStatus='BLOCKED_PRECHECK';
+    throw new Error(message);
+  };
+  const gitBlobSha1=async text=>{
+    const enc=new TextEncoder();
+    const body=enc.encode(text);
+    const header=enc.encode('blob '+body.byteLength+'\0');
+    const bytes=new Uint8Array(header.length+body.length);
+    bytes.set(header,0);bytes.set(body,header.length);
+    const digest=await crypto.subtle.digest('SHA-1',bytes);
+    return [...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
+  };
+  let source;
+  try{
+    const res=await fetch(SOURCE,{cache:'no-store',credentials:'same-origin'});
+    if(!res.ok) fail('source fetch returned HTTP '+res.status);
+    source=await res.text();
+  }catch(err){fail('unable to materialize '+SOURCE+' ('+err.message+')');}
+  let actualBlob;
+  try{actualBlob=await gitBlobSha1(source);}catch(err){fail('Git blob SHA verification unavailable ('+err.message+')');}
+  if(actualBlob!==EXPECTED_BLOB) fail('source snapshot changed: expected '+EXPECTED_BLOB+', got '+actualBlob);
+
+  const injectedMeta='<meta name="eug-placement-mode" content="PRE_EXISTING_SECTION_SIDECAR"><meta name="eug-source-blob" content="'+EXPECTED_BLOB+'"><style id="eug-sidecar-v2-style">'+CSS+'</style>';
+  const hook='<scr'+'ipt id="eug-sidecar-v2-runtime">('+placeSidecars.toString()+')('+JSON.stringify(SPEC)+','+JSON.stringify(SECTION_ORDER)+','+JSON.stringify(CLAIM_IDS)+','+JSON.stringify(EXPECTED_BLOB)+');<\/scr'+'ipt>';
+  const patched=source
+    .replace('<html ', '<html data-eug-placement-build="sidecar-v2" ')
+    .replace('</head>',injectedMeta+'</head>')
+    .replace('</body>',hook+'</body>');
+  document.open();document.write(patched);document.close();
+
+  function placeSidecars(spec,sectionOrder,claimIds,sourceBlob){
+    'use strict';
+    const exact=(selector,label)=>{const nodes=[...document.querySelectorAll(selector)];if(nodes.length!==1)throw new Error((label||selector)+' match_count='+nodes.length);return nodes[0];};
+    const block=(message)=>{
+      document.documentElement.dataset.eugPlacementStatus='BLOCKED_PRECHECK';
+      const banner=document.createElement('div');banner.className='reviewBanner';banner.setAttribute('role','alert');
+      banner.innerHTML='<div class="wrap"><b>BLOCKED_PRECHECK</b><span>'+String(message).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</span></div>';
+      document.body.prepend(banner);
+      throw new Error(message);
+    };
+    try{
+      const sections=[...document.querySelectorAll('main > section[id]')].map(n=>n.id);
+      if(sections.length!==sectionOrder.length) block('section_count='+sections.length+'; expected '+sectionOrder.length);
+      if(sections.some((id,i)=>id!==sectionOrder[i])) block('section order changed: '+sections.join(' > '));
+      claimIds.forEach(id=>exact('#'+CSS.escape(id),'claim '+id));
+      const graphMap=new Map();
+      spec.forEach(item=>{
+        exact('#'+CSS.escape(item.section),'target section '+item.section);
+        const graph=exact('[data-qgeu-id="'+CSS.escape(item.qgeu)+'"]','QGEU '+item.qgeu);
+        graphMap.set(item.qgeu,graph);
+      });
+      graphMap.forEach(graph=>graph.remove());
+      document.querySelectorAll('.chartDeck').forEach(deck=>{if(!deck.querySelector('[data-qgeu-id]'))deck.remove();});
+      spec.forEach(item=>{
+        const section=exact('#'+CSS.escape(item.section),'target section '+item.section);
+        const wrap=exact('#'+CSS.escape(item.section)+' > .wrap','section wrap '+item.section);
+        let layout=wrap.querySelector(':scope > .eug-section-layout');
+        if(!layout){
+          layout=document.createElement('div');layout.className='eug-section-layout';
+          const main=document.createElement('div');main.className='eug-section-main';
+          const aside=document.createElement('aside');aside.className='eug-section-sidecar';aside.setAttribute('aria-label','Evidence illustration for '+item.section);
+          while(wrap.firstChild)main.appendChild(wrap.firstChild);
+          layout.append(main,aside);wrap.appendChild(layout);
+        }
+        const aside=layout.querySelector(':scope > .eug-section-sidecar');
+        const note=document.createElement('p');note.className='eug-sidecar-note';note.textContent=item.note;aside.appendChild(note);
+        const graph=graphMap.get(item.qgeu);
+        graph.classList.add('eugSidecar');
+        graph.dataset.eugPlacement='sidecar';graph.dataset.illustratesSection=item.section;graph.dataset.sourceBlob=sourceBlob;
+        aside.appendChild(graph);
+        if(graph.closest('section')!==section) block(item.qgeu+' did not land in '+item.section);
+      });
+      spec.forEach(item=>{
+        const graph=exact('[data-qgeu-id="'+CSS.escape(item.qgeu)+'"]','post QGEU '+item.qgeu);
+        if(graph.closest('section')?.id!==item.section) block(item.qgeu+' post-placement section mismatch');
+      });
+      const status=document.createElement('span');status.className='eug-layout-status';status.textContent='Deterministic layout PASS · formal graph/placement judges pending';
+      exact('#consequences > .wrap','consequences wrap').appendChild(status);
+      document.documentElement.dataset.eugPlacementStatus='REVIEW_ONLY__DETERMINISTIC_LAYOUT_PASS__FORMAL_JUDGES_PENDING';
+      document.documentElement.dataset.eugSourceBlob=sourceBlob;
+      const review=document.querySelector('.reviewBanner .wrap span');
+      if(review)review.textContent='EUG sidecar review build: source snapshot and 18-section topology verified; four current QG-EU/EUG panels are integrated into pre-existing sections. Formal 3-replica graph-presentation and placement judges remain pending; no publication PASS is asserted.';
+    }catch(err){block(err.message);}
+  }
+})().catch(err=>console.error('[DEVICEV sidecar]',err));
+</script>
+</body>
+</html>
