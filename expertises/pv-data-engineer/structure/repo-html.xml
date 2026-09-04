@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository_html_snapshot schema_version="1.0"
+  repository="mckeopharma-web/copywriting"
+  branch="main"
+  path="expertises/pv-data-engineer/pv-data-engineer.html"
+  blob_sha="a86c3af79b5fb1d7a736d4f2fe181e284159015e"
+  source_page="https://mickael-umt.com/expertises/pv-data-engineer/"
+  theme="dark"
+  scope="ONLY /expertises/pv-data-engineer/">
+
+  <embedded_contract_metadata>
+    <claim_loop current_in_neofort="false_or_stale">loop:copy-claim:external-capability-v1.2-topology-preserving</claim_loop>
+    <claim_judge current_in_neofort="false_or_stale">judge:copy-claim:external-capability-grounding-v1.2</claim_judge>
+    <current_neofort_copy_loop>loop:copy-claim:external-capability-v1.1</current_neofort_copy_loop>
+    <current_neofort_copy_judge>judge:copy-claim:external-capability-grounding-v1.1</current_neofort_copy_judge>
+    <current_neofort_placement_judge>judge:evidence-placement:presentation-v1.2</current_neofort_placement_judge>
+    <publication_status>PENDING_FORMAL_LLM_JUDGE</publication_status>
+  </embedded_contract_metadata>
+
+  <topology>
+    <canonical_full_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical_full_order>
+    <observed_repo_token_order>0,11,20,13,14,1,15,12,4,16,17,22,23,7,8</observed_repo_token_order>
+    <observed_top_level_section_count>15</observed_top_level_section_count>
+    <missing_canonical_tokens>2,10,3,19,18,5,21,6</missing_canonical_tokens>
+    <relative_order_preserved>true</relative_order_preserved>
+    <live_structure_equivalent>false</live_structure_equivalent>
+    <reason>The preview preserves the older PV topology but omits eight semantic surfaces that are now present on the live page: value, offers, transformation, results, modules, capabilities, intersection and benchmark.</reason>
+  </topology>
+
+  <sections count="15">
+    <section order="1" token="0" semantic="hero" data_section_id="hero"/>
+    <section order="2" token="11" semantic="triggers" data_section_id="declencheurs"/>
+    <section order="3" token="20" semantic="problems" data_section_id="consequences"/>
+    <section order="4" token="13" semantic="audience" data_section_id="pourqui"/>
+    <section order="5" token="14" semantic="qualification" data_section_id="qualification"/>
+    <section order="6" token="1" semantic="proposition" data_section_id="proposition"/>
+    <section order="7" token="15" semantic="product" data_section_id="livrables" cardinality="3"/>
+    <section order="8" token="12" semantic="before_after" data_section_id="avantapres"/>
+    <section order="9" token="4" semantic="proof" data_section_id="preuves"/>
+    <section order="10" token="16" semantic="scope" data_section_id="perimetre"/>
+    <section order="11" token="17" semantic="phases" data_section_id="deroule" cardinality="4"/>
+    <section order="12" token="22" semantic="guarantee" data_section_id="engagements"/>
+    <section order="13" token="23" semantic="faq" data_section_id="faq" cardinality="4"/>
+    <section order="14" token="7" semantic="engagement" data_section_id="mission"/>
+    <section order="15" token="8" semantic="lead_form" data_section_id="qualification-form" screens="8"/>
+  </sections>
+
+  <qualification_form screen_count="8" implementation="repository_preview_only" submission="disabled">
+    <screen index="1" control_type="radio_choice">
+      <question>What is breaking?</question>
+      <options_or_fields>Signal detection/prioritisation; Case extraction/E2B(R3); Traceability/decision reconstruction; Data-quality/source integration</options_or_fields>
+    </screen>
+    <screen index="2" control_type="textarea">
+      <question>Which sources are in scope?</question>
+      <options_or_fields>Safety DB, literature, FAERS/openFDA, EudraVigilance exports…</options_or_fields>
+    </screen>
+    <screen index="3" control_type="text_input">
+      <question>Who owns the safety decision?</question>
+      <options_or_fields>PV lead, Medical Safety, Signal Management…</options_or_fields>
+    </screen>
+    <screen index="4" control_type="textarea">
+      <question>What is the recurring workload?</question>
+      <options_or_fields>Use your own measured workload; no generic benchmark.</options_or_fields>
+    </screen>
+    <screen index="5" control_type="textarea">
+      <question>What must remain human-reviewed?</question>
+      <options_or_fields>Escalation, causality, validation, regulatory action…</options_or_fields>
+    </screen>
+    <screen index="6" control_type="checkbox_choice">
+      <question>What evidence must survive?</question>
+      <options_or_fields>Source snapshot; model/transform version; threshold version; reviewer+rationale</options_or_fields>
+    </screen>
+    <screen index="7" control_type="textarea">
+      <question>What constraints are non-negotiable?</question>
+      <options_or_fields>Security, privacy, hosting, validation, integrations</options_or_fields>
+    </screen>
+    <screen index="8" control_type="email_input">
+      <question>Is there a deliverable sponsor?</question>
+      <options_or_fields>email only; live qualification route used for submission</options_or_fields>
+    </screen>
+  </qualification_form>
+
+  <evidence_surfaces>
+    <evidence_bubble_count declared_in_footer="12"/>
+    <eug_preview_count declared_in_footer="4"/>
+    <eug_publication_gate>PENDING_CANONICAL_CURRENT_PRESENTATION_JUDGE</eug_publication_gate>
+    <research_corpus declared_source_count="3" declared_anchor_section_count="3" declared_sources_per_section_ratio="1.0" density_threshold="strictly &gt; 0.72" density_gate="PASS_SUPPLEMENTAL_ONLY">
+      <source url="https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance-post-authorisation/good-pharmacovigilance-practices-gvp" classification="PUBLIC_REGULATOR"/>
+      <source url="https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/pharmacovigilance-post-authorisation/signal-management/prac-recommendations-safety-signals" classification="PUBLIC_REGULATOR"/>
+      <source url="https://www.fda.gov/drugs/surveillance-post-drug-approval-activities/fda-adverse-event-monitoring-system-aems" classification="PUBLIC_REGULATOR"/>
+    </research_corpus>
+  </evidence_surfaces>
+
+  <avatar>
+    <name>Karim Benali</name>
+    <role>Pharmacovigilance lead / Responsable pharmacovigilance</role>
+    <status>INDUCTIVE_WORKING_AVATAR</status>
+    <boundary>Role, operating problem and purchase fit are bounded; unsupported demographics and personal preferences are not asserted.</boundary>
+  </avatar>
+
+  <provenance>
+    <repository_path>expertises/pv-data-engineer/pv-data-engineer.html</repository_path>
+    <source_blob_sha>a86c3af79b5fb1d7a736d4f2fe181e284159015e</source_blob_sha>
+    <boundary>This snapshot describes the repository HTML that existed before this audit. It does not assert parity with the newer live website structure.</boundary>
+  </provenance>
+</repository_html_snapshot>
