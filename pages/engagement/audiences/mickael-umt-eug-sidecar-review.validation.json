@@ -1,0 +1,57 @@
+{
+  "page": "https://mickael-umt.com/engagement/audiences/",
+  "scope": "single-page-only",
+  "branch": "review/audiences-eug-sidecar-20260904",
+  "html_artifact": "pages/engagement/audiences/mickael-umt-eug-sidecar-review.html",
+  "html_commit_sha": "48ff73b7e1f25ad4ce07932dc5c5e46b9a611ee6",
+  "source_artifact": "pages/engagement/audiences/mickael-umt.com.html",
+  "source_blob_sha": "4a024501932f4f3f11ee12429e5c0e13f80f85e3",
+  "topology_contract": "hero > 10 avatar cards > problem-before-profile > decision roles > qualifier > footer",
+  "layout_rule": "Every QGEU is an in-section sidecar of an existing avatar card; no standalone graph section.",
+  "local_deterministic_precheck": {
+    "avatar_count": 10,
+    "qgeu_count": 4,
+    "qgeu_host_counts": {"avatar-01": 2, "avatar-02": 2},
+    "standalone_graph_section_count": 0,
+    "data_bound_mark_counts": {
+      "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026": 10,
+      "QGEU-AISEC-TOOLMIN-PCS-2026": 8,
+      "QGEU-AISEC-PERMISSION-OVERREACH-2026": 21,
+      "QGEU-AISEC-FRAMING-GAP-2026": 16
+    },
+    "expected_target_xpaths": {
+      "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026": "//*[@id='avatar-01']//*[@id='eug-bounded-exfil-audiences']",
+      "QGEU-AISEC-TOOLMIN-PCS-2026": "//*[@id='avatar-01']//*[@id='eug-toolmin-pcs-audiences']",
+      "QGEU-AISEC-PERMISSION-OVERREACH-2026": "//*[@id='avatar-02']//*[@id='eug-permission-overreach-audiences']",
+      "QGEU-AISEC-FRAMING-GAP-2026": "//*[@id='avatar-02']//*[@id='eug-framing-gap-audiences']"
+    },
+    "expected_xpath_match_count_each": 1,
+    "status": "PASS_FOR_GENERATION_CONTRACT"
+  },
+  "primary_source_crosscheck": [
+    "https://arxiv.org/abs/2608.15888",
+    "https://arxiv.org/abs/2608.24957",
+    "https://arxiv.org/abs/2608.27443",
+    "https://arxiv.org/abs/2608.27092"
+  ],
+  "neofort_current_policy_snapshot": [
+    "judge:evidence-graphic:presentation-v3",
+    "policy:qgeu:data-visualization-analyst-v2",
+    "policy:eug-placement:statistical-display-ordering-contract-v2",
+    "policy:evidence-placement:claim-span-entailment-v2",
+    "judge:evidence-placement:presentation-v1.2",
+    "judge:evidence:factfulness-epistemology-methodology-v2",
+    "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "policy:llm-judge:deterministic-execution-v2"
+  ],
+  "upstream_qgeu_status": {
+    "QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026": {"publication": "APPROVED", "score": 96, "agent_exploitability": "ALLOWED"},
+    "QGEU-AISEC-TOOLMIN-PCS-2026": {"publication": "APPROVED", "score": 95, "agent_exploitability": "ALLOWED"},
+    "QGEU-AISEC-PERMISSION-OVERREACH-2026": {"publication": "APPROVED", "score": 94, "agent_exploitability": "ALLOWED"},
+    "QGEU-AISEC-FRAMING-GAP-2026": {"publication": "APPROVED", "score": 95, "agent_exploitability": "ALLOWED"}
+  },
+  "target_page_placement_status": "PENDING_FRESH_3_REPLICA_PRESENTATION_JUDGE",
+  "publication_status": "BLOCKED_PENDING_TARGET_PAGE_JUDGE",
+  "google_drive_crud_performed": false
+}
