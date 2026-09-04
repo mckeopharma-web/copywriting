@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PageSnapshot schemaVersion="1.0" snapshotType="GITHUB_HTML_STRUCTURE" capturedAt="2026-09-04T02:45:00+02:00">
+  <GitHubArtifact repository="mckeopharma-web/copywriting" branch="main" path="pages/ressources/produits/frameworks/pharmaceutical-evidence-scope-note.html" blobSha="064761c484b604edd6f9255a9954c4acf2266dd4">
+    <SourceStatus>CURRENT_FETCHED_BEFORE_MUTATION</SourceStatus>
+  </GitHubArtifact>
+  <HtmlDocument language="fr" theme="dark" livePublication="false" publicationStatus="PENDING_FORMAL_LLM_JUDGE">
+    <Topology htmlSectionCount="3" heroOutsideSectionCount="true">
+      <Node order="0" id="hero" semanticRole="pre_disclosure_fit" />
+      <Node order="1" id="__anonymous_section_001" semanticRole="scope_note" />
+      <Node order="2" id="__anonymous_section_002" semanticRole="adjacent_help_routes" />
+      <Node order="3" id="qualification" semanticRole="qualification_wizard" />
+    </Topology>
+    <TopologySha256>fdb42f76a64568b293233f98732b71cfbdd2e72542c678b9ccd66f571ba734af</TopologySha256>
+    <Hero>
+      <Heading>Décidez si votre chaîne de preuve pharmaceutique mérite un sprint — avant d’exposer des enregistrements confidentiels.</Heading>
+      <Audience>Responsable Qualité / CSV, avec co-propriétaires selon le cas</Audience>
+      <Price>Gratuit</Price>
+      <PrimaryCTA>Télécharger le framework</PrimaryCTA>
+      <SecondaryCTA>Voir le programme</SecondaryCTA>
+    </Hero>
+  </HtmlDocument>
+  <DeviceVManifest>
+    <Avatar role="Directeur qualité / CSV" persona="Dr. Antoine Moreau" personaStatus="illustrative_non_testimonial" />
+    <EvidenceUnit id="EU-REGCSV-EC-ANNEX11-RISK-2026" status="CHAMPION_PASS" score="94" agentExploitability="ALLOWED" xpath="//*[@id=&quot;claim-annex11-scope&quot;]" xpathMatchCount="1" />
+    <JudgeExecution temperature="0" topP="1" replicas="3" placementStatus="PENDING_EXTERNAL_3_REPLICA" />
+    <Publication finalPass="false" live="false" reason="placement/presentation 3-replica verdict unavailable" />
+  </DeviceVManifest>
+  <ClaimLoopContract id="loop:copy-claim:external-capability-v1.2-topology-preserving" family="homepage" topologyContract="PRESERVE_SECTION_ORDER_IDS_NAVIGATION_CTA_AND_VISIBLE_COMPOSITION" bodyReplacementForbidden="true" visibleCopyWholesaleReplacementForbidden="true">
+    <SourceSectionGate sourceCount="4" selectedResearchSectionCount="3" ratio="1.333333" threshold="0.72" comparator="STRICT_GREATER_THAN" status="PASS" />
+    <ClassificationWarning>The generic materializer currently classifies this product path as 'homepage'. This is a tooling-family mismatch, not a reason to mutate the live page topology.</ClassificationWarning>
+  </ClaimLoopContract>
+  <QualificationWizard screenCount="8">
+    <Screen order="1"><Question>Qu’est-ce qui doit avancer ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="2"><Question>Quand la décision se prend-elle ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="3"><Question>Votre rôle dans la décision</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="4"><Question>Comment souhaitez-vous avancer ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="5"><Question>À quel rythme ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="6"><Question>Combien de personnes doivent monter ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="7"><Question>Où en est le périmètre — et quel est le déclencheur ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+    <Screen order="8"><Question>Où envoyer la réponse ?</Question><RenderedState>review_summary_not_submission_form</RenderedState></Screen>
+  </QualificationWizard>
+</PageSnapshot>
