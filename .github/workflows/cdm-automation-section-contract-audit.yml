@@ -1,0 +1,25 @@
+name: CDM Automation section contract audit
+
+on:
+  push:
+    branches:
+      - audit/cdm-automation-contract-2026-09-04
+    paths:
+      - 'expertises/cdm-automation/**'
+      - 'scripts/validate_cdm_automation_section_contract.py'
+      - '.github/workflows/cdm-automation-section-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-cdm-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate live-derived 17-section and 8-screen qualifier contract
+        run: python scripts/validate_cdm_automation_section_contract.py
