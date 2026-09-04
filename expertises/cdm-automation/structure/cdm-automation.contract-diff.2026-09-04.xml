@@ -14,6 +14,7 @@
     <check id="intersection_composition" status="FAIL" severity="HARD">Live section includes ranked CV capabilities, mission proof links, intersection seams and a market benchmark; repository main contains EMA context plus four capability cards only.</check>
     <check id="engagement_form_contract" status="FAIL" severity="HARD">Live page exposes an 8-screen qualifier with consent/storage disclosure; repository main exposes a single-page 5-field form redirecting to contact.</check>
     <check id="evidence_publication" status="BLOCKED" severity="HARD">Two canonical EMA EvidenceUnits pass deterministic/canonical Factfulness admission, but their placements remain READY_FOR_PRESENTATION_JUDGE; candidate CDM EUs remain PENDING_JUDGE/PENDING_FORMAL_PREFLIGHT.</check>
+    <check id="capability_claim_provenance" status="BLOCKED" severity="HARD">The live proof copy states that clinical-data pipelines, OMOP exports, Open Targets integrations and FAERS pipelines were already built. The current public project feed and supplied CV evidence reviewed in this execution do not materialize a traceable project artifact for those specific personal capability claims; NeoFort exposes an external FAERS EvidenceUnit, which is not proof that the consultant built such a pipeline. Do not use implementation substrate or external context as personal capability proof.</check>
   </checks>
   <policyResolution>
     <requestedLegacyJudge status="NOT_CURRENT">judge:eu:placementv1</requestedLegacyJudge>
