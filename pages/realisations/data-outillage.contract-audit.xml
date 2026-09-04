@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pageContractAudit version="1.0"
+  targetPage="https://mickael-umt.com/realisations/data-outillage/"
+  executionPosture="FAIL_CLOSED"
+  decision="BLOCKED_PENDING_FORMAL_JUDGES">
+  <scope>
+    <pageOnly>/realisations/data-outillage/</pageOnly>
+    <otherPageCUD>FORBIDDEN</otherPageCUD>
+    <googleDriveRead>PERFORMED</googleDriveRead>
+    <googleDriveWrite>NOT_PERFORMED_REQUIRES_EXPLICIT_USER_APPROVAL</googleDriveWrite>
+  </scope>
+  <policyResolution authority="NeoFort" selector="current=true">
+    <requestedJudgeAlias id="judge:eu:placementv1" currentResolution="NOT_FOUND_AS_CURRENT_JUDGE"/>
+    <currentFactfulnessJudge id="judge:evidence:factfulness-epistemology-methodology-v2" version="2.0"/>
+    <currentPlacementJudge id="judge:evidence-placement:presentation-v1.2" version="1.2" replicas="3" temperature="0" topP="1"/>
+    <currentCopyClaimJudge id="judge:copy-claim:external-capability-grounding-v1.1" version="1.1.0" replicas="3"/>
+    <determinismPolicy id="policy:llm-judge:deterministic-execution-v2" booleanReducer="AND" scoreReducer="MIN"/>
+    <agentExploitabilityPolicy id="policy:evidence-agent-exploitability:proof-carrying-v3" version="3.0"/>
+    <placementPolicy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2"/>
+  </policyResolution>
+
+  <referenceSectionContracts>
+    <contract family="expertise_offer" example="/expertises/blockchain/" majorSectionCount="18"
+      topology="hero,triggers,consequences,for-whom,qualification,proposition,offers,deliverables,before-after,results,proof,scope,process,modules,intersection,commitments,questions,engagement"
+      applicabilityToTarget="NOT_APPLICABLE_AS_TOPOLOGY"/>
+    <contract family="programme_offer" example="/programme/ai-production-assurance/" namedDecisionSections="17"
+      topology="triggers,consequences,for-whom,qualification,proposition,offers,deliverables,before-after,results,proof,scope,process,modules,intersection,commitments,questions,engagement"
+      applicabilityToTarget="NOT_APPLICABLE_AS_TOPOLOGY"/>
+    <reason>The target is a realization/proof page. Replacing it with an offer/programme lander would violate the user's live-structure requirement. Only proof, boundary and decision-readability principles are reused inside existing target sections.</reason>
+  </referenceSectionContracts>
+
+  <targetLiveContract source="mickael-umt.com" representation="pages/realisations/data-outillage.live.xml">
+    <majorSection order="1" role="domain_hero"/>
+    <majorSection order="2" role="project_evidence"/>
+    <majorSection order="3" role="provenance_policy"/>
+    <majorSection order="4" role="method_and_lead_form" formScreens="2"/>
+    <rawHtmlDownload>UNAVAILABLE_IN_EXECUTION_ENVIRONMENT</rawHtmlDownload>
+  </targetLiveContract>
+
+  <repositoryPriorState repository="mckeopharma-web/copywriting" branch="main">
+    <expectedPath>pages/realisations/data-outillage.html</expectedPath>
+    <status>ABSENT</status>
+    <existingSibling>pages/realisations/ia-agents.html</existingSibling>
+  </repositoryPriorState>
+
+  <candidateMutation>
+    <path>pages/realisations/data-outillage.html</path>
+    <branch>audit/data-outillage-contract-2026-09-04</branch>
+    <majorTopologyPreserved>true</majorTopologyPreserved>
+    <formTopologyPreserved>true</formTopologyPreserved>
+    <runtimeFormSubmission>DISABLED_IN_RECONSTRUCTION</runtimeFormSubmission>
+    <copyChange code="TERM_PRECISION" from="indexation" to="catalogage">No CREATE INDEX is present in the cited public source; avoid suggesting SQL indexing.</copyChange>
+    <copyChange code="FUNCTIONAL_PRECISION">Project summary names the explicit CLI input, recursive traversal and filename/filepath SQLite persistence actually visible in source.</copyChange>
+    <copyAddition code="BOUNDARY_DISCLOSURE">A non-claim block states what the public artifact does not prove.</copyAddition>
+  </candidateMutation>
+
+  <evidenceAdmission>
+    <source id="S1" kind="LIVE_FIRST_PARTY" href="https://mickael-umt.com/realisations/data-outillage/"/>
+    <source id="S2" kind="PUBLIC_SOURCE_CODE" href="https://github.com/RickOwri/folder_mapper/blob/master/src/main.rs" sha="5ef97790ed55d658ac8ef16325f31ddf77b7d508"/>
+    <source id="S3" kind="PUBLIC_MANIFEST" href="https://github.com/RickOwri/folder_mapper/blob/master/Cargo.toml" sha="b55351baa34a3cbb27be501ae807b982cd89d63f"/>
+    <source id="S4" kind="PUBLIC_HISTORY" href="https://github.com/RickOwri/folder_mapper/commits/master/"/>
+    <sourceDensity sourceCount="4" claimBearingMajorSectionCount="4" ratio="1.0" thresholdOperator="&gt;" threshold="0.72" deterministicResult="PASS"/>
+    <externalResearch status="NOT_ADMITTED">No causal or business-outcome claim requires external research. Adding adjacent research would not strengthen proof of personal implementation capability.</externalResearch>
+  </evidenceAdmission>
+
+  <avatarResolution>
+    <selected id="buyer-role:data-engineering" role="Head of Data / Lead Data Engineer" type="ROLE_FIRST"/>
+    <status>TO_VALIDATE</status>
+    <reason>The current NeoFort graph provides this role and the Google Drive source identifies technical/data/AI/transformation buyers as candidate audiences; no evidence supports inventing a named target avatar for this page.</reason>
+  </avatarResolution>
+
+  <devicevValidation>
+    <deterministicPreflight>PASS_LOCAL</deterministicPreflight>
+    <requiredMajorSections>4</requiredMajorSections>
+    <actualMajorSections>4</actualMajorSections>
+    <uniqueIds>PASS_LOCAL</uniqueIds>
+    <formScreens>2</formScreens>
+    <xpathCandidateUniqueness>PASS_ON_CANDIDATE</xpathCandidateUniqueness>
+    <semanticFactfulness>PENDING_3_REPLICAS</semanticFactfulness>
+    <copyClaimJudge>PENDING_3_REPLICAS</copyClaimJudge>
+    <placementPresentationJudge>PENDING_3_REPLICAS</placementPresentationJudge>
+    <agentExploitability>BLOCKED_UNTIL_ALL_APPLICABLE_JUDGES_PASS</agentExploitability>
+    <publicationAllowed>false</publicationAllowed>
+    <finalPass>false</finalPass>
+  </devicevValidation>
+
+  <finalDecision status="BLOCKED_PENDING_FORMAL_JUDGES">
+    <allowedPersistence>Candidate HTML, XML snapshots, audit, deterministic validator and target-scoped GitHub Action may be persisted on a non-production audit branch.</allowedPersistence>
+    <forbiddenPersistence>Do not merge/publish candidate HTML to the live production path until all current applicable NeoFort judges pass and the runtime form is verified against the actual site implementation.</forbiddenPersistence>
+  </finalDecision>
+</pageContractAudit>
