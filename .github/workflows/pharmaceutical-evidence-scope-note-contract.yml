@@ -1,0 +1,111 @@
+name: Pharmaceutical Evidence Scope Note — section contract
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pages/ressources/produits/frameworks/pharmaceutical-evidence-scope-note.html'
+      - 'reports/section-contracts/pharmaceutical-evidence-scope-note/**'
+      - '.github/workflows/pharmaceutical-evidence-scope-note-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate target-only section contract
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, re
+          import xml.etree.ElementTree as ET
+
+          target = Path('pages/ressources/produits/frameworks/pharmaceutical-evidence-scope-note.html')
+          audit = Path('reports/section-contracts/pharmaceutical-evidence-scope-note/contract-audit.xml')
+          live_xml = Path('reports/section-contracts/pharmaceutical-evidence-scope-note/live-rendered.xml')
+          repo_xml = Path('reports/section-contracts/pharmaceutical-evidence-scope-note/repository-html.xml')
+          failures=[]
+
+          s = target.read_text(encoding='utf-8')
+          section_re = re.compile(r'<section\b([^>]*)>(.*?)</section\s*>', re.I|re.S)
+          id_re = re.compile(r'\bid\s*=\s*(["\'])(.*?)\1', re.I|re.S)
+          ids=[]
+          for i,m in enumerate(section_re.finditer(s),1):
+              x=id_re.search(m.group(1))
+              ids.append(x.group(2) if x else f'__anonymous_section_{i:03d}')
+          expected=['__anonymous_section_001','__anonymous_section_002','qualification']
+          if ids != expected:
+              failures.append(f'target:section-order:{ids!r}')
+          topo_hash=hashlib.sha256('\n'.join(ids).encode()).hexdigest()
+          expected_hash='fdb42f76a64568b293233f98732b71cfbdd2e72542c678b9ccd66f571ba734af'
+          if topo_hash != expected_hash:
+              failures.append(f'target:topology-hash:{topo_hash}')
+
+          screens=[int(x) for x in re.findall(r'class="scr(?: on)?"\s+data-s="(\d+)"', s)]
+          if screens != list(range(1,9)):
+              failures.append(f'target:qualification-screen-order:{screens!r}')
+          if len(re.findall(r'class="route"', s)) != 4:
+              failures.append('target:adjacent-help-route-count')
+          if s.count('id="claim-annex11-scope"') != 1:
+              failures.append('target:claim-annex11-scope-not-unique')
+          if 'EU-REGCSV-EC-ANNEX11-RISK-2026' not in s:
+              failures.append('target:missing-admitted-eu')
+          if 'data-live-publication="false"' not in s:
+              failures.append('target:review-artifact-must-remain-non-live')
+          if 'PENDING_EXTERNAL_3_REPLICA' not in s:
+              failures.append('target:missing-fail-closed-placement-state')
+          if 'data-claim-loop-version="external-capability-v1.2-topology-preserving"' not in s:
+              failures.append('target:missing-topology-preserving-contract')
+          if s.count('id="neofort-claim-loop-contract"') != 1:
+              failures.append('target:neofort-contract-payload-not-unique')
+
+          a=ET.parse(audit).getroot()
+          d=a.find('./Summary/Decision')
+          if d is None or d.get('structuralContract') != 'PASS_WITH_RESERVATIONS':
+              failures.append('audit:structural-contract-state')
+          if d is None or d.get('publication') != 'BLOCKED':
+              failures.append('audit:publication-must-remain-blocked')
+          checks={x.get('id'):x.get('status') for x in a.findall('./Checks/Check')}
+          required={
+              'LIVE_SECTION_TOPOLOGY':'PASS',
+              'REPOSITORY_SECTION_TOPOLOGY':'PASS',
+              'ROUTE_CARDINALITY_AND_NATURE':'PASS',
+              'QUALIFICATION_STEP_COUNT':'PASS',
+              'QUALIFICATION_FORM_FIDELITY':'REVIEW',
+              'UPSTREAM_EVIDENCE':'PASS',
+              'PLACEMENT_XPATH':'PASS',
+              'PLACEMENT_PRESENTATION_JUDGE':'BLOCKED',
+              'FINAL_PASS':'FAIL_CLOSED',
+          }
+          for k,v in required.items():
+              if checks.get(k) != v:
+                  failures.append(f'audit:{k}:{checks.get(k)!r}!= {v!r}')
+
+          l=ET.parse(live_xml).getroot()
+          live_nodes=[x.get('id') for x in l.findall('./SectionContract/Topology/Node')]
+          if live_nodes != ['hero','scope-note','adjacent-help-routes','qualification']:
+              failures.append(f'live-xml:topology:{live_nodes!r}')
+          if l.find('./Section[@id="qualification"]/QualificationForm').get('stepCount') != '8':
+              failures.append('live-xml:qualification-step-count')
+
+          r=ET.parse(repo_xml).getroot()
+          repo_nodes=[x.get('id') for x in r.findall('./HtmlDocument/Topology/Node')]
+          if repo_nodes != ['hero','__anonymous_section_001','__anonymous_section_002','qualification']:
+              failures.append(f'repo-xml:topology:{repo_nodes!r}')
+
+          if failures:
+              raise SystemExit('\n'.join(failures))
+          print('PASS: target-only structural contract preserved')
+          print('PASS: hero + 3 product sections + 8-step qualification semantics + 4 route cards')
+          print('PASS: admitted Annex 11 EvidenceUnit anchor is unique')
+          print('REVIEW: live form-control fidelity is not asserted by this review artifact')
+          print('FAIL_CLOSED: publication remains blocked pending current 3-replica placement/presentation judge')
+          PY
