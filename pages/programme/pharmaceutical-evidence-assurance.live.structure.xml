@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageSnapshot schemaVersion="1.0"
+              kind="LIVE_RENDERED_STRUCTURE"
+              capturedAt="2026-09-04"
+              sourceUrl="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/"
+              authority="LIVE_SITE_CURRENT">
+  <capture method="rendered-web-crawl"
+           rawHtmlMaterializedInThisRuntime="false"
+           renderedStructureVerified="true"
+           fallbackNightModeRepositoryPath="pages/programme/pharmaceutical-evidence-assurance.html"
+           fallbackRepositoryBlobSha="c4f36103f4ad7edb582502934952d11e4a84f245"/>
+  <contractResolution>
+    <canonicalOwnerContract source=".skills/source-first-atomic-design-v4/SKILL.md"
+                            canonicalTokenOrder="0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8"/>
+    <livePublicForm heroRequired="true"
+                    anchoredSectionCount="17"
+                    canonicalSubsequencePreserved="true"
+                    mutationRule="PRESERVE_SECTION_COUNT_ORDER_AND_SEMANTIC_FORM"/>
+  </contractResolution>
+  <hero canonicalToken="00" required="true">
+    <eyebrow>PEA · programme réglementé · sprint borné de six semaines</eyebrow>
+    <decisionBoundary>Conseil et assurance technique uniquement. Le programme ne certifie ni ne libère un lot et ne remplace jamais la Qualified Person, le pharmacien responsable ou une autorité pharmaceutique statutaire.</decisionBoundary>
+    <scope>Un workflow, produit, décision matérielle ou événement opérationnel borné; gate de viabilité à la fin de la semaine 2.</scope>
+  </hero>
+  <sections>
+    <section order="01" canonicalToken="11" id="triggers" labelFr="Déclencheurs" labelEn="Triggers" semanticRole="dated-decision-trigger"/>
+    <section order="02" canonicalToken="20" id="consequences" labelFr="Conséquences" labelEn="Consequences" semanticRole="decision-risk-consequences"/>
+    <section order="03" canonicalToken="13" id="for-whom" labelFr="Pour qui" labelEn="For whom" semanticRole="decision-unit-audience"/>
+    <section order="04" canonicalToken="14" id="qualification" labelFr="Qualification" labelEn="Qualification" semanticRole="fit-and-exclusion-gates"/>
+    <section order="05" canonicalToken="01" id="proposition" labelFr="Proposition" labelEn="Proposition" semanticRole="bounded-programme-mechanism"/>
+    <section order="06" canonicalToken="10" id="offers" labelFr="Offres" labelEn="Offers" semanticRole="bounded-route-selector"/>
+    <section order="07" canonicalToken="15" id="deliverables" labelFr="Livrables" labelEn="Deliverables" semanticRole="artifact-and-control-deliverables"/>
+    <section order="08" canonicalToken="12" id="before-after" labelFr="Avant-après" labelEn="Before / after" semanticRole="decision-state-comparison"/>
+    <section order="09" canonicalToken="19" id="outcomes" labelFr="Résultats" labelEn="Outcomes" semanticRole="acceptance-oriented-outcomes"/>
+    <section order="10" canonicalToken="04" id="evidence" labelFr="Preuves" labelEn="Evidence" semanticRole="evidence-and-capability-ledger"/>
+    <section order="11" canonicalToken="16" id="scope" labelFr="Périmètre" labelEn="Scope" semanticRole="in-out-authority-boundary"/>
+    <section order="12" canonicalToken="17" id="process" labelFr="Déroulé" labelEn="Process" semanticRole="six-week-phases"/>
+    <section order="13" canonicalToken="18" id="modules" labelFr="Modules" labelEn="Modules" semanticRole="programme-module-lattice"/>
+    <section order="14" canonicalToken="21" id="intersection" labelFr="Intersection" labelEn="Intersection" semanticRole="cross-functional-capability-intersection"/>
+    <section order="15" canonicalToken="22" id="commitments" labelFr="Engagements" labelEn="Commitments" semanticRole="control-boundary-and-no-guarantee"/>
+    <section order="16" canonicalToken="23" id="questions" labelFr="Questions" labelEn="Questions" semanticRole="objection-and-faq-resolution"/>
+    <section order="17" canonicalToken="07" id="engagement" labelFr="Engagement" labelEn="Engagement" semanticRole="next-step-and-qualification"/>
+  </sections>
+  <buyerDecisionUnit>
+    <primaryRoles>Qualified Person; Pharmacien Responsable; Quality Director; Pharmaceutical Operations</primaryRoles>
+    <technicalCoOwners>Engineering; Data; AI governance; system owners</technicalCoOwners>
+    <decisionModel>Multi-stakeholder decision unit; statutory authority remains human and outside the programme.</decisionModel>
+  </buyerDecisionUnit>
+  <qualificationFlow>
+    <principle>Qualify the decision, evidence state, urgency and accountable role without requesting batch records or product-identifying regulated records in the public form.</principle>
+    <dataHandling>Professional email required; name and organisation optional; explicit local-storage consent; site wording states no public advertising tracker and no third-party service for the form.</dataHandling>
+  </qualificationFlow>
+  <evidenceState policyResolution="CURRENT_TRUE_ONLY"
+                 targetEvidenceUnitCount="10"
+                 currentFullyAdmittedPageRelevantEvidenceUnits="6"
+                 publication="BLOCKED_PENDING_TARGET_PAGE_PRESENTATION_JUDGE">
+    <currentJudge id="judge:evidence-placement:presentation-v1.2" replicas="3" temperature="0" topP="1" failClosed="true"/>
+    <note>The requested legacy placement-v1 judge is not current. No target-page placement PASS is inferred or fabricated.</note>
+  </evidenceState>
+  <provenance>
+    <source type="live-page" url="https://mickael-umt.com/programme/pharmaceutical-evidence-assurance/" verification="CRAWLED_2026-09-04"/>
+    <source type="site-offer-registry" system="@mysite" verification="READ_ONLY"/>
+    <source type="policy-graph" system="@neofort" policyResolution="current=true"/>
+  </provenance>
+  <googleDrive mutationPerformed="false" explicitApprovalRequired="true"/>
+</pageSnapshot>
