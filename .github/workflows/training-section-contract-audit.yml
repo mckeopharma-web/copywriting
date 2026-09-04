@@ -1,0 +1,47 @@
+name: Training expertise — live section contract audit
+
+on:
+  push:
+    branches:
+      - recovery/topology-preserving-v1.2-2026-09-03
+    paths:
+      - 'expertises/training/training.html'
+      - 'expertises/training/training.contract-aligned.candidate.html'
+      - 'expertises/training/training.section-contract.xml'
+      - 'expertises/training/training.live.structure.xml'
+      - 'expertises/training/training.repo.structure.xml'
+      - 'tools/training_section_contract_audit.py'
+      - '.github/workflows/training-section-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate training live/repository/candidate contract
+        run: python tools/training_section_contract_audit.py
+      - name: Show deterministic structural report
+        if: always()
+        run: cat reports/training-section-contract-audit.json
+      - name: Enforce fail-closed publication boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('reports/training-section-contract-audit.json').read_text())
+          assert r['final_pass'] is True, r
+          assert r['publication_pass'] is False, 'Structural CI must never manufacture DEVICEV publication PASS'
+          assert r['checks']['devicev_publication'] == 'BLOCKED_REVIEW'
+          assert r['checks']['formal_llm_triplicate_judge'] == 'NOT_EXECUTED_BY_THIS_WORKFLOW'
+          assert r['checks']['google_drive_mutation'] is False
+          print('PASS: structural contract validated; publication remains BLOCKED_REVIEW')
+          PY
