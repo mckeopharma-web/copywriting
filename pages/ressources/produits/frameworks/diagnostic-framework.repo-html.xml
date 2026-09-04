@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repo_html_snapshot schema_version="1.0"
+  repository="mckeopharma-web/copywriting"
+  branch="main"
+  source_path="pages/ressources/produits/frameworks/diagnostic-framework.html"
+  source_blob_sha="295f5afdca0390c615e2219a01bd5daff80ad0d9"
+  target_url="https://mickael-umt.com/ressources/produits/frameworks/diagnostic-framework/"
+  extracted_at="2026-09-04"
+  artifact_role="COPY_REVIEW_ONLY"
+  publication_allowed="false">
+
+  <metadata>
+    <language>fr</language>
+    <theme>dark</theme>
+    <review_artifact>true</review_artifact>
+    <live_fidelity_claim>false</live_fidelity_claim>
+    <robots>noindex,nofollow</robots>
+  </metadata>
+
+  <topology>
+    <top_level_main_section_count>1</top_level_main_section_count>
+    <section order="1" id="diagnostic-framework-review" family="PRODUCT_FRAMEWORK_DETAIL" xpath="//main/section[@id='diagnostic-framework-review']">
+      <component order="1" kind="hero_offer" selector="div.hero">
+        <heading level="h1">Clarifiez la décision avant d’engager une mission plus large.</heading>
+        <commercial_terms>49 € HT · achat unique · accès permanent</commercial_terms>
+        <primary_action>Acheter le framework — 49 € HT</primary_action>
+        <action_state>REVIEW_ONLY_NON_TRANSACTIONAL</action_state>
+      </component>
+      <component order="2" kind="framework_mechanism" selector="div[aria-label='Les quatre étapes du framework']" cardinality="4">
+        <item index="1">Maturité</item>
+        <item index="2">Impact</item>
+        <item index="3">Périmètre</item>
+        <item index="4">Proposition</item>
+      </component>
+      <component order="3" kind="fit_boundary" selector="div.grid2">
+        <panel semantic="fit">Utilisez-le pour rendre le sujet explicite.</panel>
+        <panel semantic="claim_boundary">Ce document ne remplace pas une décision d’autorité.</panel>
+      </component>
+      <component order="4" kind="checkout_form" id="checkout-review" xpath="//div[@id='checkout-review']/form">
+        <form_semantics>PAID_PRODUCT_CHECKOUT_REVIEW_ONLY</form_semantics>
+        <field order="1" name="email" type="email" required="true" />
+        <field order="2" name="name" type="text" required="false" />
+        <field order="3" name="organisation" type="text" required="false" />
+        <field order="4" name="accept_terms" type="checkbox" required="true" />
+        <button type="button" aria_disabled="true">Continuer vers le paiement — 49 € HT</button>
+      </component>
+      <component order="5" kind="review_evidence_note" selector="div.evidence-note">
+        <public_external_citations>0</public_external_citations>
+      </component>
+    </section>
+  </topology>
+
+  <claim_inventory>
+    <claim id="df-c01" class="FIRST_PARTY_PRODUCT_FACT" xpath="//aside[contains(@class,'offer-card')]//div[contains(@class,'price')]">49 € HT</claim>
+    <claim id="df-c02" class="FIRST_PARTY_PRODUCT_FACT" xpath="//aside[contains(@class,'offer-card')]//span[contains(@class,'pill')]">Achat unique</claim>
+    <claim id="df-c03" class="FIRST_PARTY_PRODUCT_FACT" xpath="//aside[contains(@class,'offer-card')]//p[contains(@class,'meta')]">Accès permanent au framework PDF après confirmation du paiement.</claim>
+    <claim id="df-c04" class="FIRST_PARTY_IMPLEMENTATION_MECHANISM" xpath="//div[@aria-label='Les quatre étapes du framework']">Maturité → Impact → Périmètre → Proposition</claim>
+    <claim id="df-c05" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[1]">Les poids et seuils de la grille d’impact sont une heuristique interne, pas un modèle prédictif validé.</claim>
+    <claim id="df-c06" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[2]">Le framework ne certifie pas une conformité ISO, NIST ou réglementaire.</claim>
+    <claim id="df-c07" class="BOUNDARY" xpath="//div[contains(@class,'boundary')]//li[3]">Il ne garantit ni ROI, ni réduction du risque projet, ni gain de temps, ni résultat de production.</claim>
+  </claim_inventory>
+
+  <copy_sequences>
+    <copy_sequence id="seq-hero" commercial_role="ENTRY_DECISION" buyer_question="Est-ce que mon sujet est assez clair pour justifier un engagement plus large?" nlp_role="PROBLEM_REFRAME_AND_OFFER_COMPREHENSION" xpath="//main/section[@id='diagnostic-framework-review']/div[contains(@class,'hero')]" />
+    <copy_sequence id="seq-mechanism" commercial_role="MECHANISM_EXPLANATION" buyer_question="Que contient réellement le diagnostic?" nlp_role="MECHANISM_DECOMPOSITION" xpath="//div[@aria-label='Les quatre étapes du framework']" />
+    <copy_sequence id="seq-fit-boundary" commercial_role="QUALIFICATION_AND_RISK_REVERSAL" buyer_question="Quand ce produit est-il adapté, et que ne promet-il pas?" nlp_role="FIT_AND_EPISTEMIC_BOUNDARY" xpath="//div[contains(@class,'grid2')]" />
+    <copy_sequence id="seq-checkout" commercial_role="PURCHASE" buyer_question="Quel est l’engagement commercial et quelles données sont demandées?" nlp_role="TRANSACTION_COMPREHENSION" xpath="//div[@id='checkout-review']" />
+  </copy_sequences>
+
+  <evidence_binding>
+    <public_external_placement_count>0</public_external_placement_count>
+    <reason>Current @neofort placement gate requires exact current target-page snapshot and unique claim-span/XPath placement; those target objects are not available.</reason>
+    <first_party_sources>
+      <source>drive:1lURGfe44s5nxIMnUt2lRyibY-B0n37hzuPtBjwuykuk</source>
+      <source>drive:13CD3XGVizs5S1ksJO_Q9wek7sUqzLmC_fp_gJiyOf5s</source>
+      <source>github:mckeopharma-web/VSL:generated/vsl-batch-2026-08-27/chapters/25.1.md</source>
+    </first_party_sources>
+    <candidate_external_eu id="EU-PV-NIST-MAP-3-3-SCOPE-DOCUMENTED" status="NOT_PLACED_TARGET_PAGE_BINDING_MISMATCH">
+      <upstream_factfulness>PASS</upstream_factfulness>
+      <agent_exploitability>ALLOWED</agent_exploitability>
+      <champion_score>91</champion_score>
+      <target_page_placement_eligible>false</target_page_placement_eligible>
+    </candidate_external_eu>
+  </evidence_binding>
+</repo_html_snapshot>
