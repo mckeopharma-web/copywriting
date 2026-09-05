@@ -1,0 +1,98 @@
+{
+  "artifact_type": "DEVICEV_BENCHMARK_AUDIT",
+  "version": "1.0.0",
+  "created_at": "2026-09-05T04:35:00+02:00",
+  "scope": {
+    "page_url": "https://mickael-umt.com/expertises/ai-security/",
+    "page_id": "page:source:7.1",
+    "repository": "mckeopharma-web/copywriting",
+    "page_path": "expertises/ai-security/ai-security.html",
+    "page_blob_sha_before_audit": "d93066839986e5f66be4e1f714a0416d307b56a9",
+    "page_commit_sha_before_audit": "76a474a3718d4e227f700df4f268f57d5bdb48d5",
+    "html_mutated": false,
+    "google_drive_mutated": false
+  },
+  "question": "Within AI Security / B2B technical assurance consulting, what is a standard lead magnet conversion rate?",
+  "industry_resolution": {
+    "value": "AI Security / B2B technical assurance consulting",
+    "status": "DERIVED_FROM_TARGET_PAGE_CONTEXT",
+    "boundary": "The user supplied [INPUT INDUSTRY] as a placeholder. The target page is AI Security, Assurance & DevSecOps; no broader cybersecurity-industry substitution is treated as equivalent without evidence."
+  },
+  "verdict": {
+    "status": "MISSING_EVIDENCE",
+    "publication_decision": "BLOCKED_QUANTITATIVE_CLAIM",
+    "standard_conversion_rate": null,
+    "reason": "No source located in the admissible evidence set establishes a representative lead-magnet conversion-rate distribution for AI Security / B2B technical assurance consulting with explicit metric definition, population, period, sampling frame and methodology."
+  },
+  "candidate_evidence": [
+    {
+      "candidate_id": "candidate:hubspot-deep-instinct-whitepaper-26pct",
+      "source_url": "https://www.hubspot.com/marketing-hub-for-cybersecurity",
+      "reported_value": 26,
+      "unit": "percent visitor-to-lead conversion",
+      "population": "Visitors to one Deep Instinct ransomware whitepaper campaign as described by HubSpot",
+      "period": "not sufficiently bounded in the surfaced source",
+      "observation_status": "OBSERVED_CASE_STUDY_AS_REPORTED_BY_VENDOR",
+      "competitive_product_class": "VENDOR_PROMOTIONAL",
+      "decision": "REJECT_FOR_STANDARD_BENCHMARK",
+      "boundary": "A single vendor-hosted customer case cannot establish an industry-standard lead-magnet conversion rate."
+    },
+    {
+      "candidate_id": "candidate:hubspot-cybersecurity-mql-sql-15-18pct",
+      "source_url": "https://blog.hubspot.com/marketing/2022-cpl-and-cac-benchmarks",
+      "reported_range": [15, 18],
+      "unit": "percent MQL-to-SQL conversion",
+      "population": "Cybersecurity leads represented in secondary benchmark aggregation",
+      "period": "2025/2026 benchmark context as surfaced",
+      "observation_status": "SECONDARY_AGGREGATED_BENCHMARK",
+      "decision": "REJECT_METRIC_MISMATCH",
+      "boundary": "MQL-to-SQL conversion is a different funnel transition from visitor-to-lead lead-magnet conversion and must not be substituted."
+    }
+  ],
+  "recommended_measurement_contract": {
+    "metric": "lead_magnet_visitor_to_lead_conversion_rate",
+    "formula": "unique_valid_lead_magnet_submissions / unique_eligible_lead_magnet_visitors",
+    "unit": "percent",
+    "population": "eligible visitors to the AI Security lead-magnet or diagnostic entry surface",
+    "period": "declare per measurement window",
+    "required_segmentation": [
+      "traffic_source",
+      "new_vs_returning",
+      "target-account-fit_or_role-fit_when_available",
+      "asset_or_diagnostic_variant"
+    ],
+    "baseline_policy": "Measure the page-specific first-party baseline before setting a target. Do not import 26% as a target or standard."
+  },
+  "avatar_context": {
+    "avatar_name": "Marc Lefèvre",
+    "type": "WORKING_COMPOSITE",
+    "decision_role": "AI governance, risk or security lead",
+    "unknown_fields_policy": "DO_NOT_INFER; validate from CRM, interviews or observed behaviour"
+  },
+  "policy_snapshot": {
+    "deterministic_preflight": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "judge_applicability": "policy:evidence-judge-applicability:v2",
+    "judge_determinism": "policy:llm-judge:deterministic-execution-v2",
+    "verdict_normalization": "policy:evidence-judge-verdict-normalization:v2",
+    "agent_exploitability": "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "placement": [
+      "evidence-placement-policy:site-v5",
+      "policy:evidence-placement:claim-span-entailment-v2"
+    ],
+    "copy_external_source_policy": "policy:copy-claim:external-semantic-compression-v1",
+    "copy_grounding_score_policy": "policy:copy-claim:grounding-score-v1.1",
+    "execution": {
+      "temperature": 0,
+      "top_p": 1,
+      "replicas": 3,
+      "boolean_reducer": "AND",
+      "score_reducer": "MIN",
+      "classification_reducer": "UNANIMOUS_ELSE_BLOCK"
+    }
+  },
+  "page_preservation": {
+    "positioning": "Security before promotion, not after incident",
+    "html_current_validation": "FINAL_PASS / PASS_CURRENT_TRUE_ONLY as recorded in NeoFort and the existing artifact",
+    "reason_no_copy_patch": "The requested benchmark does not pass the evidence gates; injecting it would weaken the currently validated page."
+  }
+}
