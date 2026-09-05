@@ -1,0 +1,224 @@
+{
+  "artifact_id": "devicev:blockchain:review:2026-09-05:v2",
+  "devicev_version": "1.0.0",
+  "generated_at": "2026-09-05T02:34:00+02:00",
+  "scope": {
+    "page_url": "https://mickael-umt.com/expertises/blockchain/",
+    "repository": "mckeopharma-web/copywriting",
+    "source_html_path": "expertises/blockchain/blockchain.html",
+    "source_html_blob_sha": "e70669af1e0b10a251fe9b6757d4374475a2f91a",
+    "review_html_path": "expertises/blockchain/blockchain_devicev_review_20260905.html",
+    "scope_rule": "Only /expertises/blockchain/ is in scope. Production source is not overwritten by this review artifact."
+  },
+  "policy_resolution": {
+    "requested_judge": "judge:eu:placementv1",
+    "requested_judge_resolution": "NOT_CURRENT_OR_NOT_FOUND",
+    "applicable_current_placement_judge": "judge:evidence-placement:presentation-v1.2",
+    "placement_policy": "policy:evidence-placement:claim-span-entailment-v2",
+    "deterministic_preflight_policy": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "factfulness_policy": "policy:evidence-judge:factfulness-semantic-100-v2",
+    "agent_exploitability_policy": "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "llm_determinism_policy": "policy:llm-judge:deterministic-execution-v2",
+    "judge_config": {
+      "replicas": 3,
+      "temperature": 0,
+      "top_p": 1,
+      "boolean_reducer": "AND",
+      "score_reducer": "MIN",
+      "disagreement": "BLOCK"
+    }
+  },
+  "avatar": {
+    "id": "customer-avatar:expertise-blockchain:elodie-marchand:2026-09-03:v1",
+    "name": "Élodie Marchand",
+    "role": "Responsable innovation / architecte de confiance",
+    "publication_status": "REVIEW_ONLY",
+    "unsupported_fields": [
+      "budget_authority",
+      "demographics",
+      "media_habits",
+      "event_attendance",
+      "verbatim_objections",
+      "price_sensitivity",
+      "procurement_route"
+    ]
+  },
+  "topology": {
+    "section_count": 18,
+    "section_order": [
+      "top",
+      "triggers",
+      "consequences",
+      "for-whom",
+      "qualification",
+      "proposition",
+      "offers",
+      "deliverables",
+      "before-after",
+      "results",
+      "proof",
+      "scope",
+      "process",
+      "modules",
+      "intersection",
+      "commitments",
+      "questions",
+      "engagement"
+    ],
+    "section_delta_allowed": 0,
+    "reorder_allowed": false,
+    "local_static_validation": {
+      "section_count_pass": true,
+      "section_order_pass": true
+    }
+  },
+  "copy_sequences": [
+    {
+      "id": "seq:blockchain:hero:h1",
+      "buyer_question": "What must another party verify independently?",
+      "nlp_role": "THESIS",
+      "commercial_role": "POSITIONING",
+      "target_claim": "Anchor on-chain what a third party must verify — never what merely needs storing.",
+      "evidence_required": false
+    },
+    {
+      "id": "seq:blockchain:consequences:db-vs-dlt",
+      "buyer_question": "Is DLT being justified as a faster database?",
+      "nlp_role": "NEGATIVE_EVIDENCE",
+      "commercial_role": "ARCHITECTURE_BOUNDARY",
+      "target_claim": "In one 2026 matched prototype, PostgreSQL delivered approximately 4.22× Fabric’s endpoint throughput.",
+      "evidence_required": true
+    },
+    {
+      "id": "seq:blockchain:qualification",
+      "buyer_question": "When is a conventional database sufficient?",
+      "nlp_role": "QUALIFICATION",
+      "commercial_role": "DISQUALIFY_BAD_FIT",
+      "evidence_required": false
+    },
+    {
+      "id": "seq:blockchain:proposition",
+      "buyer_question": "What is the minimum sufficient mechanism?",
+      "nlp_role": "MECHANISM",
+      "commercial_role": "VALUE_PROPOSITION",
+      "evidence_required": false
+    },
+    {
+      "id": "seq:blockchain:proof:lottery",
+      "buyer_question": "Can the consultant execute rather than only advise?",
+      "nlp_role": "CAPABILITY_PROOF",
+      "commercial_role": "CREDIBILITY",
+      "target_claim": "The public repository provenance audit attributes 26 of 29 commits to RickOwri.",
+      "evidence_required": true
+    },
+    {
+      "id": "seq:blockchain:engagement",
+      "buyer_question": "What property should the buyer bring to the first decision?",
+      "nlp_role": "CTA",
+      "commercial_role": "NEXT_STEP",
+      "evidence_required": false
+    }
+  ],
+  "selected_evidence": [
+    {
+      "eu_id": "EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026",
+      "claim_kind": "CONTROLLED_TECHNICAL_COMPARISON",
+      "epistemic_class": "COMPARATIVE",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/cpe.70897",
+      "source_snapshot_sha256": "14f9cf19940b84c6d9381d9b3ae426671c6be1931a47ef89856986c45c936ed9",
+      "population": "TOTP verification requests at 1,000 TPS target workload in a local two-organization SSO prototype",
+      "period": "2026-08 study context",
+      "observed": {
+        "postgresql_endpoint_tps": 924.79,
+        "fabric_endpoint_tps": 219.23
+      },
+      "derived": {
+        "ratio": 4.218,
+        "formula": "924.79/219.23",
+        "status": "DERIVED_DETERMINISTIC"
+      },
+      "boundary": "Bounded prototype throughput only; no universal database superiority, TCO, staffing, reconciliation or business-value inference.",
+      "deterministic_preflight": "PASS",
+      "factfulness": "PASS",
+      "agent_exploitability": "ALLOWED",
+      "all_applicable_llm_judges_pass": false,
+      "placement_status": "BLOCKED_PENDING_FORMAL_LLM_JUDGES",
+      "target_xpath": "//*[@id='claim-db-ratio']",
+      "static_source_xpath_match_count": 1
+    },
+    {
+      "eu_id": "EU-SG-006",
+      "claim_kind": "CAPABILITY_PROOF",
+      "epistemic_class": "OBSERVED",
+      "source_url": "https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp/commits/main/",
+      "source_snapshot_sha256": "7058c3055815942b222e886e90b8063ffde188bec9ef2abc34187f7d3bb10da4",
+      "variable": "rickowri_attributed_commits",
+      "value": 26,
+      "unit": "commits attributed to RickOwri",
+      "population": "29 commits in the public Lottery dApp repository history",
+      "period": "2023-05 to 2023-06",
+      "boundary": "Substantial repository contribution only; not production security efficacy or original authorship of the scaffold.",
+      "admission_status": "ADMITTED",
+      "deterministic_preflight": "PASS",
+      "factfulness": "PASS",
+      "all_applicable_llm_judges_pass": true,
+      "agent_exploitability": "ALLOWED",
+      "placement_status": "BLOCKED_NO_FORMAL_PLACEMENT_JUDGE_RUN",
+      "target_xpath": "//*[@id='claim-eu-sg-006']",
+      "static_source_xpath_match_count": 1
+    }
+  ],
+  "research_screening": [
+    {
+      "source": "ECB",
+      "date": "2026-08-26",
+      "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html",
+      "use": "market/context and Pontes roadmap",
+      "publication_use": "NOT_SELECTED_FOR_L1"
+    },
+    {
+      "source": "ECB",
+      "date": "2026-08-28",
+      "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260828~fe9afc86e8.en.html",
+      "use": "programmable repo coordination mechanism",
+      "publication_use": "NOT_SELECTED_FOR_L1"
+    },
+    {
+      "source": "BIS Project Agorá",
+      "date": "2026",
+      "url": "https://www.bis.org/project/agora",
+      "use": "bounded real-value test context",
+      "publication_use": "NOT_SELECTED_FOR_L1"
+    },
+    {
+      "source": "NIST",
+      "date": "2026-09-01",
+      "url": "https://www.nist.gov/news-events/news/2026/09/workshop-report-rolling-next-generation-secure-hardware-standards-nist-ir",
+      "use": "verification/provenance context",
+      "publication_use": "NOT_SELECTED_FOR_L1"
+    },
+    {
+      "source": "Yangeç & Koyun",
+      "date": "2026-08-03",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/cpe.70897",
+      "use": "matched DB-vs-DLT technical comparator",
+      "publication_use": "REVIEW_ONLY"
+    }
+  ],
+  "validation": {
+    "html_sha256": "fac5eb0ea3609321cdefd8acbc7fd71497e3bf645c79af1403d02547bb50a72e",
+    "local_static_xpath_validation": {
+      "//*[@id='claim-db-ratio']": 1,
+      "//*[@id='claim-eu-sg-006']": 1
+    },
+    "rendered_public_page_xpath_validation": "NOT_RUN_FOR_REVIEW_ARTIFACT",
+    "formal_three_replica_placement_judge": "NOT_AVAILABLE_IN_EXPOSED_TOOLING",
+    "final_pass": false,
+    "publication_allowed": false,
+    "blocking_predicates": [
+      "EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026 has all_applicable_llm_judges_pass=false",
+      "no formal 3-replica run of judge:evidence-placement:presentation-v1.2 for this immutable copy snapshot",
+      "review artifact is not the rendered production page, so rendered-page XPath/state consensus is not asserted"
+    ]
+  }
+}
