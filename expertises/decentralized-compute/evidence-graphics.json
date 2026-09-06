@@ -1,0 +1,38 @@
+{
+  "schema_version": "2.0",
+  "page_id": "page:planned:decentralized-compute",
+  "policy_source": "@neofort",
+  "publication_status": "REVIEW_ONLY",
+  "eugs": [
+    {
+      "id": "QGEU-DC-PINOCCHIO-VERIFIABLE-COMPUTE-2013",
+      "question": "What verification overhead did Pinocchio report for its evaluated applications?",
+      "answer_statement": "For the evaluated Pinocchio system, proofs were 288 bytes and verification was typically about 10 ms; worker proof effort was reported as 19–60× lower than prior work.",
+      "epistemic_status": "OBSERVED",
+      "graph_type": "faceted_small_multiples",
+      "series": {
+        "population": "Seven evaluated applications",
+        "metrics": [
+          {"name":"proof_size","value":288,"unit":"bytes"},
+          {"name":"verification_time","value":10,"unit":"ms"},
+          {"name":"prover_effort_reduction_min","value":19,"unit":"x"},
+          {"name":"prover_effort_reduction_max","value":60,"unit":"x"}
+        ]
+      },
+      "source": {"title":"Pinocchio: Nearly Practical Verifiable Computation","url":"https://www.microsoft.com/en-us/research/publication/pinocchio-nearly-practical-verifiable-computation/"},
+      "boundary": "Protocol-, implementation- and workload-specific measurements. No universal cheap/fast-verification claim.",
+      "quality_gate_status": "BLOCKED_SOURCE_SNAPSHOT_MATERIALIZATION"
+    },
+    {
+      "id": "QGEU-DC-PBFT-NFS-OVERHEAD-1999",
+      "question": "What normal-case overhead did the reported Byzantine-fault-tolerant NFS implementation show versus standard NFS?",
+      "answer_statement": "On the reported Andrew benchmark, the Byzantine-fault-tolerant NFS service took about 3% more time than standard unreplicated NFS.",
+      "epistemic_status": "DERIVED_FROM_REPORTED_RELATIVE_OVERHEAD",
+      "graph_type": "paired_bar",
+      "series": {"variable":"normalized_elapsed_time_index","unit":"index_standard_nfs_100","labels":["standard unreplicated NFS","Byzantine-fault-tolerant NFS"],"values":[100,103]},
+      "source": {"title":"Practical Byzantine Fault Tolerance","url":"https://www.usenix.org/legacy/events/osdi99/full_papers/castro/castro.pdf"},
+      "boundary": "Old, workload- and implementation-specific NFS benchmark; does not predict modern decentralized-compute overhead.",
+      "quality_gate_status": "BLOCKED_SOURCE_SNAPSHOT_MATERIALIZATION"
+    }
+  ]
+}
