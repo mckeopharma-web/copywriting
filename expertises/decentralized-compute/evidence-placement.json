@@ -1,0 +1,9 @@
+{
+  "page_id": "page:planned:decentralized-compute",
+  "placements": [
+    {"id":"eup:dc:proof:pinocchio-2013","kind":"EVIDENCE_UNIT","evidence_id":"EU-DC-PINOCCHIO-2013","section_id":"section:decentralized-compute:proof","target_jsonpath":"$.copy[?(@.token==4)]"},
+    {"id":"eup:dc:consequences:pbft-1999","kind":"EVIDENCE_UNIT","evidence_id":"EU-DC-PBFT-1999","section_id":"section:decentralized-compute:consequences","target_jsonpath":"$.copy[?(@.token==20)]"},
+    {"id":"eugp:dc:proof:pinocchio-2013","kind":"GRAPH_EVIDENCE_UNIT","evidence_id":"QGEU-DC-PINOCCHIO-VERIFIABLE-COMPUTE-2013","section_id":"section:decentralized-compute:proof","target_jsonpath":"$.copy[?(@.token==4)]"},
+    {"id":"eugp:dc:consequences:pbft-1999","kind":"GRAPH_EVIDENCE_UNIT","evidence_id":"QGEU-DC-PBFT-NFS-OVERHEAD-1999","section_id":"section:decentralized-compute:consequences","target_jsonpath":"$.copy[?(@.token==20)]"}
+  ]
+}
