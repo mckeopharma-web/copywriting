@@ -1,0 +1,244 @@
+{
+  "schema": "mickael-umt.offer-config.v1",
+  "artifact_id": "offers:decentralized-expertises:2026-09-06",
+  "generated_at": "2026-09-06T15:17:00+02:00",
+  "repository": "mckeopharma-web/copywriting",
+  "scope": [
+    "https://mickael-umt.com/expertises/decentralized-science/",
+    "https://mickael-umt.com/expertises/decentralized-compute/"
+  ],
+  "publication_status": "AUTHORING_CANON_NOT_LIVE",
+  "site_contract": {
+    "current_public_portfolio": "10 expertises",
+    "new_slugs": ["decentralized-science", "decentralized-compute"],
+    "pricing_engine_status": "PENDING_SITE_ENGINE_KEYS",
+    "pricing_rule": "Do not invent a pricing coefficient before the site pricing engine exposes a matching key.",
+    "shared_commercial_ladder": ["diagnostic", "architecture_sprint", "poc", "implementation", "assurance"]
+  },
+  "policy": {
+    "source": "@neofort",
+    "posture": "FAIL_CLOSED",
+    "current_true_only": true,
+    "judges": {
+      "factfulness": "judge:evidence:factfulness-epistemology-methodology-v2",
+      "evidence_unit": "judge:evidence-unit:champion-v2",
+      "placement": "judge:evidence-placement:presentation-v1.2",
+      "graphic": "judge:evidence-graphic:presentation-v3",
+      "determinism": "policy:llm-judge:deterministic-execution-v2"
+    },
+    "execution": {"temperature": 0, "top_p": 1, "replicas": 3, "hard_gate": "AND", "agreement": "UNANIMOUS"},
+    "quantitative_claim_contract": ["variable", "value", "unit", "population", "period", "source", "boundary"],
+    "epistemic_classes": ["OBSERVED", "DERIVED", "NORMATIVE", "PLANNED", "FORECAST", "SCENARIO"],
+    "rule": "A source being accessible does not make a claim publishable; admission, entailment and placement remain separate gates."
+  },
+  "composition_principles": {
+    "source_first": true,
+    "open_closed": "Reuse or adapt an owner module before creating a new module. New modules are allowed only when the domain object is not represented by an existing asset.",
+    "decentralization_gate": "If a conventional database, cloud or signed-record architecture satisfies the named verifier and trust boundary, prefer the simpler architecture.",
+    "asset_modes": ["REUSE", "ADAPT", "NEW", "COMPOSE"],
+    "canonical_section_order": [0, 11, 20, 13, 14, 1, 2, 10, 15, 3, 12, 19, 4, 16, 17, 18, 5, 21, 6, 22, 23, 7, 8]
+  },
+  "shared_module_catalog": [
+    {"id":"BLK-TRUST-BOUNDARY","source_expertise":"blockchain","mode":"ADAPT","function":"Map parties that cannot simply trust one another and name the property a third party must verify."},
+    {"id":"BLK-VERIFIER-MAP","source_expertise":"blockchain","mode":"ADAPT","function":"PROPERTY → VERIFIER → SOURCE → TRUST BOUNDARY → MINIMUM MECHANISM."},
+    {"id":"BLK-ATTESTATION","source_expertise":"blockchain","mode":"ADAPT","function":"Bind a bounded property to a signature, hash, attestation or ledger commitment when justified."},
+    {"id":"BLK-GOVERNANCE","source_expertise":"blockchain","mode":"ADAPT","function":"Change control for rules, schemas, validators, keys and recovery."},
+    {"id":"DE-SOURCE-CONTRACT","source_expertise":"data-engineering","mode":"REUSE","function":"Source authority, identity, frequency, owner and scope."},
+    {"id":"DE-DATA-MODEL","source_expertise":"data-engineering","mode":"ADAPT","function":"Grain, keys, invariants, schemas and bounded contexts."},
+    {"id":"DE-TRANSFORM","source_expertise":"data-engineering","mode":"REUSE","function":"Versioned transformations, checkpoints and failure states."},
+    {"id":"DE-QUALITY-GATE","source_expertise":"data-engineering","mode":"REUSE","function":"Executable invariants and pre-written acceptance gates."},
+    {"id":"DE-LINEAGE","source_expertise":"data-engineering","mode":"REUSE","function":"Traversable provenance from input through transformation to result or decision."},
+    {"id":"DE-EVIDENCE-STORE","source_expertise":"data-engineering","mode":"ADAPT","function":"Queryable evidence records and auditable APIs."},
+    {"id":"DE-REPLAY","source_expertise":"data-engineering","mode":"REUSE","function":"Replay, reproduction and handover runbook."},
+    {"id":"HT-RISK-BOUNDARY","source_expertise":"healthtech-product","mode":"ADAPT","function":"Separate technical mechanism, sensitive-data boundary, human authority and regulatory authority."},
+    {"id":"HT-HUMAN-REVIEW","source_expertise":"healthtech-product","mode":"ADAPT","function":"Explicit human validation boundary for consequential workflows."},
+    {"id":"SG-THREAT-MODEL","source_expertise":"ai-security","mode":"REUSE","function":"Threats, trust assumptions, permissions and attack paths."},
+    {"id":"SG-PROMOTION-GATE","source_expertise":"ai-security","mode":"ADAPT","function":"Make assurance conditions part of promotion/release rather than a late report."},
+    {"id":"AI-EVAL-HARNESS","source_expertise":"agentic-ai","mode":"ADAPT","function":"Versioned cases, thresholds and comparison across changes."},
+    {"id":"AI-EXEC-LOG","source_expertise":"agentic-ai","mode":"ADAPT","function":"Execution provenance adapted into a compute execution receipt."}
+  ],
+  "expertises": {
+    "decentralized-science": {
+      "code": "DS",
+      "title": "Decentralized Science & Verifiable Research Infrastructure",
+      "promise": "Rendre une affirmation scientifique reconstructible, reproductible et vérifiable par un tiers nommé sans déplacer inutilement les données sensibles.",
+      "primary_object": "scientific claim and its evidence chain",
+      "mechanism": "QUESTION → CLAIM → EVIDENCE → PROVENANCE → COMPUTATION → ATTESTATION → VERIFICATION",
+      "capability_ids": ["pharmaceutical-operations", "data-architecture-ddd", "data-science-ml", "ai-governance", "solidity-evm", "zk-zkml"],
+      "evidence_unit_target": 2,
+      "new_modules": [
+        {"id":"DS-RESEARCH-OBJECT","function":"Study → protocol → dataset → transformation → result → claim → evidence."},
+        {"id":"DS-CLAIM-GRAPH","function":"Claim-evidence graph connecting result, dataset, code, environment, contributor and attestation."},
+        {"id":"DS-REPRO-CAPSULE","function":"Code/environment/parameters/dataset-version package for bounded reproduction."},
+        {"id":"DS-ATTRIBUTION","function":"Contributor, reviewer and institutional-attestation graph."},
+        {"id":"DS-CONSENT-ACCESS","function":"Controlled access boundary separating sensitive data from shared provenance/verification metadata."},
+        {"id":"DS-STUDY-ATTEST","function":"Receipt stating who verified which property of which research artifact under which version."},
+        {"id":"DS-PROTOCOL-GOV","function":"Change control for schemas, validation rules, reviewers and disputes."},
+        {"id":"DS-REVIEW-GATE","function":"Independent-verification acceptance gate for a named scientific property."}
+      ],
+      "offers": [
+        {
+          "id": "DS-O1",
+          "tier": "diagnostic",
+          "name": "Research Trust & Feasibility Diagnostic",
+          "trigger": "A consequential research claim or workflow matters, but the trust boundary and verifier are unclear.",
+          "outcome": "Decide whether independent verification or a decentralized mechanism is justified.",
+          "modules": ["BLK-TRUST-BOUNDARY", "DS-RESEARCH-OBJECT", "DS-REVIEW-GATE"],
+          "deliverables": ["trust map", "claim/evidence map", "architecture decision record", "supported/bounded/unsupported claim register", "recommended next step"],
+          "commercial_model": "fixed-price diagnostic",
+          "price": null,
+          "acceptance": ["named verifier", "named property", "source boundary", "explicit simpler alternative", "documented decision"],
+          "exclusions": ["protocol implementation", "scientific peer review", "legal or regulatory opinion"]
+        },
+        {
+          "id": "DS-O2",
+          "tier": "architecture_sprint",
+          "name": "Verifiable Research Protocol Architecture Sprint",
+          "trigger": "Several organizations need to inspect provenance, computation, attribution or evidence without collapsing data ownership.",
+          "outcome": "Specify the minimum viable verifiable-research architecture and its acceptance tests.",
+          "modules": ["DS-RESEARCH-OBJECT", "DS-CLAIM-GRAPH", "DS-CONSENT-ACCESS", "SG-THREAT-MODEL", "DS-PROTOCOL-GOV"],
+          "deliverables": ["protocol specification", "evidence graph schema", "privacy/access boundary", "threat model", "governance model", "PoC backlog"],
+          "commercial_model": "fixed-price sprint",
+          "price": null,
+          "acceptance": ["named verifier and authority", "data plane vs evidence plane separated", "acceptance criteria pre-written", "residual uncertainty documented"],
+          "exclusions": ["production operations", "scientific-validity guarantee", "regulatory certification"]
+        },
+        {
+          "id": "DS-O3",
+          "tier": "poc",
+          "name": "Reproducible Evidence Pipeline PoC",
+          "trigger": "The architecture needs one bounded end-to-end proof before platform investment.",
+          "outcome": "Demonstrate one claim path from source to independently inspectable evidence and replay.",
+          "modules": ["DE-SOURCE-CONTRACT", "DE-TRANSFORM", "DE-LINEAGE", "DS-REPRO-CAPSULE", "DS-STUDY-ATTEST"],
+          "deliverables": ["working bounded pipeline", "evidence records", "reproducibility capsule", "verification receipt", "demo", "handover runbook"],
+          "commercial_model": "milestone PoC",
+          "price": null,
+          "acceptance": ["one claim path traversable", "one bounded run reproducible under documented environment", "failure state explicit", "handover completed"],
+          "exclusions": ["production-scale guarantee", "clinical validation", "external scientific endorsement"]
+        },
+        {
+          "id": "DS-O4",
+          "tier": "implementation",
+          "name": "Decentralized Science Infrastructure Implementation",
+          "trigger": "A bounded PoC has a justified production path and named operating owners.",
+          "outcome": "Implement reusable provenance, access, verification and governance infrastructure around research workflows.",
+          "modules": ["DE-DATA-MODEL", "DE-EVIDENCE-STORE", "DS-CONSENT-ACCESS", "DS-PROTOCOL-GOV", "SG-PROMOTION-GATE", "DE-REPLAY"],
+          "deliverables": ["production components", "APIs", "governance controls", "release gates", "monitoring evidence", "runbooks", "handover"],
+          "commercial_model": "3–9 months · retainer or milestones",
+          "price": null,
+          "acceptance": ["release evidence package", "owners assigned", "rollback/recovery documented", "critical evidence paths queryable"],
+          "exclusions": ["24/7 operations unless contracted", "legal qualification", "guaranteed research outcome"]
+        },
+        {
+          "id": "DS-O5",
+          "tier": "assurance",
+          "name": "DeSci Protocol Assurance & Evidence Review",
+          "trigger": "An existing protocol makes verification, provenance or reproducibility claims that need technical scrutiny.",
+          "outcome": "Classify protocol claims as supported, bounded or unsupported and make findings retestable.",
+          "modules": ["SG-THREAT-MODEL", "DE-QUALITY-GATE", "DS-REVIEW-GATE", "DS-PROTOCOL-GOV"],
+          "deliverables": ["assurance report", "claim-boundary ledger", "test cases", "remediation backlog", "re-test evidence"],
+          "commercial_model": "fixed review or recurring assurance",
+          "price": null,
+          "acceptance": ["every finding linked to an inspectable artifact", "claim boundary written", "re-test procedure supplied"],
+          "exclusions": ["formal certification", "scientific peer review", "guaranteed acceptance by an authority"]
+        }
+      ]
+    },
+    "decentralized-compute": {
+      "code": "DC",
+      "title": "Decentralized Compute Engineering",
+      "promise": "Distribuer un workload seulement quand la contrainte de confiance, souveraineté, résilience ou vérification justifie la complexité, puis rendre l’exécution mesurable et inspectable.",
+      "primary_object": "execution and its verification boundary",
+      "mechanism": "WORKLOAD → PROPERTY → TRUST BOUNDARY → MINIMUM VERIFICATION MECHANISM → EXECUTION → RECEIPT → VERIFIER",
+      "capability_ids": ["rust", "solidity-evm", "zk-zkml", "ai-security", "jenkins-terraform", "data-architecture-ddd"],
+      "evidence_unit_target": 2,
+      "new_modules": [
+        {"id":"DC-WORKLOAD-ENV","function":"CPU/GPU/memory/network/data-locality/latency/failure-tolerance workload contract."},
+        {"id":"DC-RESOURCE-TOPO","function":"Providers, nodes, regions, accelerators, trust and failure domains."},
+        {"id":"DC-EXEC-RECEIPT","function":"Workload identity, code/model hash, node, environment, inputs, outputs and attestation."},
+        {"id":"DC-VERIFY-EXEC","function":"Select signatures, remote attestation, TEE, ZK or replication from the property to verify."},
+        {"id":"DC-TEE-ZK-SELECT","function":"Decision asset selecting the minimum privacy/correctness mechanism instead of assuming a universal winner."},
+        {"id":"DC-BENCH-HARNESS","function":"Matched workload benchmark across candidate architectures with an explicit metric contract."},
+        {"id":"DC-RESILIENCE","function":"Failure, retry, replication, provider exit and centralized fallback plan."},
+        {"id":"DC-RESOURCE-MARKET","function":"Optional scheduling/provider/pricing adapter when a resource market is actually required."},
+        {"id":"DC-NODE-ATTEST","function":"Node/environment identity and attestation for the execution receipt."},
+        {"id":"DC-COST-PERF","function":"Throughput, latency, availability, cost and verification-overhead envelope for a bounded workload."}
+      ],
+      "offers": [
+        {
+          "id": "DC-O1",
+          "tier": "diagnostic",
+          "name": "Workload Decentralization Diagnostic",
+          "trigger": "A workload is proposed for distributed/decentralized execution, but the reason centralization is insufficient is not yet proven.",
+          "outcome": "Decide whether to centralize, distribute, prototype a verification mechanism, or stop the decentralized path.",
+          "modules": ["DC-WORKLOAD-ENV", "BLK-TRUST-BOUNDARY", "DC-TEE-ZK-SELECT"],
+          "deliverables": ["workload contract", "trust map", "centralized-vs-distributed decision record", "metric contract", "benchmark plan"],
+          "commercial_model": "fixed-price diagnostic",
+          "price": null,
+          "acceptance": ["representative workload named", "reason centralization is insufficient documented", "metrics and comparator defined", "simpler alternative evaluated"],
+          "exclusions": ["infrastructure build", "unmeasured cheaper/faster claim"]
+        },
+        {
+          "id": "DC-O2",
+          "tier": "architecture_sprint",
+          "name": "Distributed & Verifiable Compute Architecture Sprint",
+          "trigger": "Execution must span providers or be independently verifiable under a named trust boundary.",
+          "outcome": "Specify topology, verifier, failure model and minimum verification mechanism.",
+          "modules": ["DC-RESOURCE-TOPO", "DC-VERIFY-EXEC", "SG-THREAT-MODEL", "DC-RESILIENCE", "BLK-GOVERNANCE"],
+          "deliverables": ["architecture", "threat model", "verifier design", "failure/fallback plan", "acceptance tests", "PoC backlog"],
+          "commercial_model": "fixed-price sprint",
+          "price": null,
+          "acceptance": ["workload envelope closed", "failure domains explicit", "verification property testable", "TEE/ZK/replication choice justified"],
+          "exclusions": ["universal mechanism recommendation", "production availability guarantee"]
+        },
+        {
+          "id": "DC-O3",
+          "tier": "poc",
+          "name": "Verifiable Execution PoC",
+          "trigger": "The architecture needs measured evidence on one representative workload.",
+          "outcome": "Run a matched workload and produce an independently inspectable execution receipt and benchmark.",
+          "modules": ["DC-EXEC-RECEIPT", "DC-NODE-ATTEST", "DC-BENCH-HARNESS", "DE-REPLAY"],
+          "deliverables": ["PoC runtime", "execution receipts", "matched benchmark", "verification checks", "failure test", "replay runbook"],
+          "commercial_model": "milestone PoC",
+          "price": null,
+          "acceptance": ["metric contract complete", "observed and derived values separated", "receipt verifies stated fields", "benchmark replayable"],
+          "exclusions": ["production SLO guarantee", "generalized performance claim"]
+        },
+        {
+          "id": "DC-O4",
+          "tier": "implementation",
+          "name": "Decentralized Compute Infrastructure Implementation",
+          "trigger": "PoC measurements justify production integration and an operating owner exists.",
+          "outcome": "Implement distributed execution, verification, monitoring, provider/fallback integration and release evidence.",
+          "modules": ["DC-RESOURCE-TOPO", "DC-RESOURCE-MARKET", "DC-RESILIENCE", "SG-PROMOTION-GATE", "DE-EVIDENCE-STORE", "DE-REPLAY"],
+          "deliverables": ["runtime/integration", "scheduler/provider adapters", "verification service", "observability", "release gates", "benchmark history", "handover"],
+          "commercial_model": "3–9 months · retainer or milestones",
+          "price": null,
+          "acceptance": ["release gate passes on representative workloads", "rollback/fallback tested", "ownership transferred", "evidence retained"],
+          "exclusions": ["24/7 operations unless contracted", "unbounded cost/performance guarantee"]
+        },
+        {
+          "id": "DC-O5",
+          "tier": "assurance",
+          "name": "Compute Protocol Assurance",
+          "trigger": "An existing decentralized-compute design makes trust, execution or performance claims that need independent scrutiny.",
+          "outcome": "Check whether architecture, benchmark and attestation evidence support the published claims.",
+          "modules": ["SG-THREAT-MODEL", "DC-BENCH-HARNESS", "DC-NODE-ATTEST", "SG-PROMOTION-GATE"],
+          "deliverables": ["claim/evidence ledger", "benchmark audit", "threat model", "failure tests", "remediation backlog", "re-test procedure"],
+          "commercial_model": "fixed review or recurring assurance",
+          "price": null,
+          "acceptance": ["every numeric claim maps to a metric contract", "every assurance finding is retestable", "unsupported generalizations identified"],
+          "exclusions": ["formal certification", "unmeasured provider ranking"]
+        }
+      ]
+    }
+  },
+  "cross_sell_routes": [
+    {"from":"decentralized-science","condition":"Research computation itself must be independently verified across execution providers.","to":"decentralized-compute"},
+    {"from":"decentralized-science","condition":"The problem is only lineage/provenance inside one trusted organization.","to":"data-engineering"},
+    {"from":"decentralized-science","condition":"The dominant issue is regulated product validation rather than multi-party scientific verification.","to":"healthtech-product"},
+    {"from":"decentralized-compute","condition":"Only shared state/programmability is required; compute stays conventional.","to":"blockchain"},
+    {"from":"decentralized-compute","condition":"The workload is conventional and the dominant issue is deployment/security gating.","to":"ai-security"},
+    {"from":"decentralized-compute","condition":"One trusted cloud satisfies the property and failure model.","to":"conventional_architecture_no_decentralized_offer"}
+  ]
+}
