@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-06T19:07:00+02:00",
+  "policy_source": "@neofort",
+  "repository": "mckeopharma-web/copywriting",
+  "branch": "main",
+  "pages": [
+    {
+      "page_id": "page:planned:decentralized-science",
+      "folder": "expertises/decentralized-science",
+      "canonical_page_json": "expertises/decentralized-science/decentralized-science.json",
+      "evidence_units": "expertises/decentralized-science/evidence-units.json",
+      "evidence_graphics": "expertises/decentralized-science/evidence-graphics.json",
+      "evidence_placement": "expertises/decentralized-science/evidence-placement.json",
+      "evidence_library_count": 15,
+      "selected_eu_ids": ["EU-DS-RPCB-2021","EU-DS-FAIR-2016"],
+      "selected_eug_ids": ["QGEU-DS-RPCB-REPLICATION-CRITERIA-2021","QGEU-DS-RPCB-EXPERIMENT-COMPLETION-2021"]
+    },
+    {
+      "page_id": "page:planned:decentralized-compute",
+      "folder": "expertises/decentralized-compute",
+      "canonical_page_json": "expertises/decentralized-compute/decentralized-compute.json",
+      "evidence_units": "expertises/decentralized-compute/evidence-units.json",
+      "evidence_graphics": "expertises/decentralized-compute/evidence-graphics.json",
+      "evidence_placement": "expertises/decentralized-compute/evidence-placement.json",
+      "evidence_library_count": 13,
+      "selected_eu_ids": ["EU-DC-PINOCCHIO-2013","EU-DC-PBFT-1999"],
+      "selected_eug_ids": ["QGEU-DC-PINOCCHIO-VERIFIABLE-COMPUTE-2013","QGEU-DC-PBFT-NFS-OVERHEAD-1999"]
+    }
+  ],
+  "publication_gate": {
+    "status": "BLOCKED_SOURCE_SNAPSHOT_MATERIALIZATION",
+    "reason": "EUG data is source-grounded but @neofort requires immutable source snapshots/hashes and provenance manifests before live publication."
+  }
+}
