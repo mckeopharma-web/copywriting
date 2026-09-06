@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0",
+  "page_id": "page:planned:decentralized-science",
+  "policy_source": "@neofort",
+  "publication_status": "REVIEW_ONLY",
+  "eugs": [
+    {
+      "id": "QGEU-DS-RPCB-REPLICATION-CRITERIA-2021",
+      "question": "How strongly did the selected cancer-biology replication effects replicate under multiple published criteria?",
+      "answer_statement": "Across five published dichotomous criteria, reported replication success rates ranged from 25% to 63% in the analyzed sample.",
+      "epistemic_status": "OBSERVED",
+      "graph_type": "horizontal_bar",
+      "series": {
+        "variable": "replication_success_rate",
+        "unit": "percent",
+        "labels": ["same direction + statistical significance","original effect inside replication 95% CI","replication effect inside original 95% CI","replication effect inside 95% prediction interval","meta-analytic criterion"],
+        "values": [47,25,48,61,63]
+      },
+      "source": {"title":"Investigating the replicability of preclinical cancer biology","doi":"10.7554/eLife.71601","url":"https://elifesciences.org/articles/71601"},
+      "boundary": "Study-sample only; not a universal reproducibility rate and not evidence that decentralization causes better science.",
+      "quality_gate_status": "BLOCKED_SOURCE_SNAPSHOT_MATERIALIZATION"
+    },
+    {
+      "id": "QGEU-DS-RPCB-EXPERIMENT-COMPLETION-2021",
+      "question": "How much of the planned replication programme could be completed?",
+      "answer_statement": "The project completed 50 of 193 planned experiments, about 26%.",
+      "epistemic_status": "OBSERVED_WITH_DERIVED_RATE",
+      "graph_type": "paired_bar",
+      "series": {"variable":"experiment_count","unit":"experiments","labels":["planned","completed"],"values":[193,50],"derived_completion_rate_percent":25.9067357513},
+      "source": {"title":"Investigating the replicability of preclinical cancer biology","doi":"10.7554/eLife.71601","url":"https://elifesciences.org/articles/71601"},
+      "boundary": "Project-specific completion fraction; not a universal failure rate and not causal evidence for any DeSci architecture.",
+      "quality_gate_status": "BLOCKED_SOURCE_SNAPSHOT_MATERIALIZATION"
+    }
+  ]
+}
