@@ -1,0 +1,48 @@
+{
+  "source": {
+    "file": "decentralized_product_composer.xlsx",
+    "sha256": "066fdef7a40ae69f0fb5b92ec50c1b8b361c1c87f4f063359428987108534646",
+    "sheets": [
+      "Overview",
+      "Brick Library",
+      "23-Section Composer",
+      "DeSci Offers",
+      "Compute Offers",
+      "Evidence Map",
+      "Canon & Rules"
+    ]
+  },
+  "generation": {
+    "permutation_policy": "per-product contiguous ladder interval or empty; exclude both-empty",
+    "formula": "(1 + 15)^2 - 1",
+    "permutation_count": 255
+  },
+  "counts": {
+    "products": 2,
+    "offer_tiers": 5,
+    "offers": 10,
+    "bricks": 36,
+    "offer_bricks": 43,
+    "canonical_sections": 23,
+    "product_sections": 46,
+    "evidence_items": 12,
+    "canon_rules": 9,
+    "source_assets": 7,
+    "decision_layers": 5,
+    "offer_permutations": 255,
+    "permutation_offers": 1120
+  },
+  "validation": {
+    "foreign_key_check": "PASS",
+    "foreign_key_error_count": 0,
+    "integrity_check": "ok",
+    "missing_offer_bricks": 0,
+    "missing_primary_bricks": 0
+  },
+  "github_export": {
+    "format": "plain-text-rebuildable-sqlite",
+    "seed_parts": 6,
+    "permutations_materialized_by": "generate_permutations.py",
+    "path": "tools/product-composer/decentralized"
+  }
+}

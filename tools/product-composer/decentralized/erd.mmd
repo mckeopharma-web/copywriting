@@ -1,0 +1,18 @@
+erDiagram
+    PRODUCTS ||--o{ OFFERS : owns
+    OFFER_TIERS ||--o{ OFFERS : classifies
+    PRODUCTS ||--o{ PRODUCT_SECTIONS : composes
+    CANONICAL_SECTIONS ||--o{ PRODUCT_SECTIONS : instantiates
+    BRICKS ||--o{ PRODUCT_SECTIONS : primary_brick
+    BRICKS ||--o{ BRICK_PRODUCTS : targets
+    PRODUCTS ||--o{ BRICK_PRODUCTS : receives
+    BRICKS ||--o{ BRICK_SECTIONS : maps_to
+    CANONICAL_SECTIONS ||--o{ BRICK_SECTIONS : accepts
+    OFFERS ||--o{ OFFER_BRICKS : contains
+    BRICKS ||--o{ OFFER_BRICKS : reused_by
+    EVIDENCE_ITEMS ||--o{ EVIDENCE_PRODUCTS : supports
+    PRODUCTS ||--o{ EVIDENCE_PRODUCTS : has
+    EVIDENCE_ITEMS ||--o{ EVIDENCE_SECTIONS : placed_in
+    CANONICAL_SECTIONS ||--o{ EVIDENCE_SECTIONS : receives
+    OFFER_PERMUTATIONS ||--o{ PERMUTATION_OFFERS : includes
+    OFFERS ||--o{ PERMUTATION_OFFERS : participates
