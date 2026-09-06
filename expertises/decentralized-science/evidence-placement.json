@@ -1,0 +1,9 @@
+{
+  "page_id": "page:planned:decentralized-science",
+  "placements": [
+    {"id":"eup:ds:proof:rpcb-2021","kind":"EVIDENCE_UNIT","evidence_id":"EU-DS-RPCB-2021","section_id":"section:decentralized-science:proof","target_jsonpath":"$.copy[?(@.token==4)]"},
+    {"id":"eup:ds:proposition:fair-2016","kind":"EVIDENCE_UNIT","evidence_id":"EU-DS-FAIR-2016","section_id":"section:decentralized-science:proposition","target_jsonpath":"$.copy[?(@.token==1)]"},
+    {"id":"eugp:ds:proof:replication-criteria-2021","kind":"GRAPH_EVIDENCE_UNIT","evidence_id":"QGEU-DS-RPCB-REPLICATION-CRITERIA-2021","section_id":"section:decentralized-science:proof","target_jsonpath":"$.copy[?(@.token==4)]"},
+    {"id":"eugp:ds:consequences:completion-2021","kind":"GRAPH_EVIDENCE_UNIT","evidence_id":"QGEU-DS-RPCB-EXPERIMENT-COMPLETION-2021","section_id":"section:decentralized-science:consequences","target_jsonpath":"$.copy[?(@.token==20)]"}
+  ]
+}
