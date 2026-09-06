@@ -1,0 +1,449 @@
+{
+  "artifact": {
+    "id": "copywriting:expertise:decentralized-science:2026-09-06",
+    "schema_version": "1.0.0",
+    "page_id": "page:planned:decentralized-science",
+    "page_url": "https://mickael-umt.com/expertises/decentralized-science/",
+    "scope": "THIS_PAGE_ONLY",
+    "language": "fr-FR",
+    "publication_status": "BLOCKED_REVIEW",
+    "canonicality": "AUTHORING_CANON_NOT_LIVE",
+    "generated_at": "2026-09-06T15:17:00+02:00"
+  },
+  "contract": {
+    "skill": "mckeopharma-web/copywriting:.skills/source-first-atomic-design-v4/SKILL.md",
+    "canonical_tokens": [0, 11, 20, 13, 14, 1, 2, 10, 15, 3, 12, 19, 4, 16, 17, 18, 5, 21, 6, 22, 23, 7, 8],
+    "section_count": 23,
+    "section_delta_allowed": 0,
+    "reorder_allowed": false,
+    "offer_config": "contracts/decentralized-expertise-offers.json",
+    "source_first": true,
+    "live_nav": ["triggers", "consequences", "for-whom", "qualification", "proposition", "offers", "deliverables", "before-after", "results", "proof", "scope", "process", "modules", "intersection", "commitments", "questions", "engagement"]
+  },
+  "policy": {
+    "source": "@neofort",
+    "posture": "FAIL_CLOSED",
+    "current_true_only": true,
+    "current_stack": [
+      "judge:evidence:factfulness-epistemology-methodology-v2",
+      "judge:evidence-unit:champion-v2",
+      "evidence-placement-policy:site-v5",
+      "policy:evidence-placement:claim-span-entailment-v2",
+      "judge:evidence-placement:presentation-v1.2",
+      "policy:eug-placement:statistical-display-ordering-contract-v2",
+      "judge:evidence-graphic:presentation-v3",
+      "policy:llm-judge:deterministic-execution-v2"
+    ],
+    "judge": {"temperature": 0, "top_p": 1, "replicas": 3, "hard_gate": "AND", "agreement": "UNANIMOUS", "fresh_execution": "UNAVAILABLE", "decision": "BLOCKED_REVIEW"},
+    "quantitative_gate": "variable + value + unit + population + period + source + boundary",
+    "factfulness_rule": "Separate OBSERVED / DERIVED / NORMATIVE / PLANNED / FORECAST / SCENARIO and never infer client effect from mechanism or capability evidence.",
+    "evidence_rule": "Evidence Unit admission, claim entailment and placement are separate gates. Evidence Graph structure is not itself proof of scientific validity."
+  },
+  "avatar": {
+    "working_name": "Responsable plateforme de recherche vérifiable",
+    "role": "CTO biotech / Head of Research Data / Lead DeSci Protocol / responsable infrastructure scientifique",
+    "organization": "biotech, pharma R&D, consortium de recherche, CRO, université ou infrastructure scientifique multi-parties",
+    "status": "ROLE_FIRST_HYPOTHESIS_TO_VALIDATE",
+    "before": "Les données, transformations, résultats, auteurs et règles de validation existent, mais la chaîne entre une affirmation scientifique et ses preuves reste fragmentée ou dépend d'une autorité unique.",
+    "after": "Une affirmation bornée peut être reliée à ses sources, transformations, environnement de calcul, contributeurs, attestations et règles de vérification sans exposer inutilement les données sensibles."
+  },
+  "positioning": {
+    "category": "Decentralized Science & Verifiable Research Infrastructure",
+    "shift": "Web3 pour la science → infrastructure de recherche vérifiable",
+    "promise": "Rendre une affirmation scientifique reconstructible avant de la rendre décentralisée.",
+    "mechanism": "QUESTION → CLAIM → EVIDENCE → PROVENANCE → COMPUTATION → ATTESTATION → VERIFICATION",
+    "intersection": "sciences pharmaceutiques × data/evidence architecture × systèmes vérifiables × assurance/sécurité",
+    "decision_rule": "Nommer d'abord la propriété qu'un tiers doit vérifier. Si une architecture conventionnelle signée et auditée suffit, elle reste l'option par défaut.",
+    "boundaries": [
+      "No scientific-truth guarantee.",
+      "No clinical-effect guarantee.",
+      "No regulatory-compliance or authority-acceptance guarantee.",
+      "No token/DAO/blockchain requirement by default.",
+      "Sensitive health data remains off-chain by default; only necessary metadata, commitments or attestations may cross the verification boundary.",
+      "First-party capability proof does not establish client effect."
+    ]
+  },
+  "composition": {
+    "mode": "MODULAR_SOURCE_FIRST",
+    "reused": [
+      {"id":"DE-SOURCE-CONTRACT","from":"data-engineering","use":"source authority and ownership"},
+      {"id":"DE-TRANSFORM","from":"data-engineering","use":"versioned research transformations"},
+      {"id":"DE-LINEAGE","from":"data-engineering","use":"provenance graph"},
+      {"id":"DE-QUALITY-GATE","from":"data-engineering","use":"acceptance and publication gates"},
+      {"id":"DE-REPLAY","from":"data-engineering","use":"reproduction and handover"},
+      {"id":"SG-THREAT-MODEL","from":"ai-security","use":"trust and attack assumptions"}
+    ],
+    "adapted": [
+      {"id":"BLK-TRUST-BOUNDARY","from":"blockchain","use":"research verifier and multi-party trust boundary"},
+      {"id":"BLK-ATTESTATION","from":"blockchain","use":"bounded evidence commitments"},
+      {"id":"BLK-GOVERNANCE","from":"blockchain","use":"protocol/schema/reviewer change control"},
+      {"id":"HT-RISK-BOUNDARY","from":"healthtech-product","use":"sensitive-data and authority boundary"},
+      {"id":"HT-HUMAN-REVIEW","from":"healthtech-product","use":"human review boundary"},
+      {"id":"AI-EVAL-HARNESS","from":"agentic-ai","use":"versioned reproducibility/evaluation cases"}
+    ],
+    "new": ["DS-RESEARCH-OBJECT", "DS-CLAIM-GRAPH", "DS-REPRO-CAPSULE", "DS-ATTRIBUTION", "DS-CONSENT-ACCESS", "DS-STUDY-ATTEST", "DS-PROTOCOL-GOV", "DS-REVIEW-GATE"]
+  },
+  "copy": [
+    {
+      "token": 0,
+      "surface": "hero",
+      "eyebrow": "Expertise · Decentralized Science",
+      "title": "Decentralized Science & Verifiable Research Infrastructure",
+      "headline": "Rendez une affirmation scientifique reconstructible avant de la rendre décentralisée.",
+      "body": "Je conçois des protocoles et infrastructures de recherche où provenance, calcul, attribution et validation deviennent inspectables par un tiers nommé, sans transformer les données sensibles en données publiques.",
+      "cta": "Qualifier un protocole scientifique",
+      "secondary_cta": "Voir le mécanisme de vérification",
+      "result": "Research object schema · claim-evidence graph · provenance · reproducibility capsule · access boundary · attestations · governance · verification tests",
+      "format": "Diagnostic → Architecture Sprint → PoC → implémentation / assurance"
+    },
+    {
+      "token": 11,
+      "surface": "triggers",
+      "headline": "Le sujet commence quand une autre partie doit vérifier, pas quand le mot DeSci apparaît.",
+      "items": [
+        "Un résultat scientifique circule entre plusieurs organisations et personne ne peut reconstruire proprement sa chaîne de provenance.",
+        "Un reviewer, partenaire, financeur ou équipe interne doit vérifier un résultat sans recevoir l'intégralité des données sources.",
+        "Un dataset, un code ou un environnement change et il devient difficile d'expliquer quelle version soutient encore l'affirmation publiée.",
+        "L'attribution des contributions, validations et décisions dépend d'un document ou d'une plateforme unique difficile à auditer indépendamment.",
+        "Un projet envisage blockchain, DAO, token ou ZK avant d'avoir nommé la propriété scientifique à vérifier.",
+        "Une collaboration santé/recherche a besoin de partager de la preuve sans ouvrir inutilement les données sensibles."
+      ]
+    },
+    {
+      "token": 20,
+      "surface": "consequences",
+      "headline": "Quand la chaîne de preuve est reconstruite après coup, la technologie ne corrige pas l'ambiguïté.",
+      "items": [
+        "Un hash sans objet, version, auteur, méthode et règle d'acceptation explicites prouve au mieux l'intégrité d'un artefact identifié.",
+        "Un registre immuable n'établit ni la qualité de l'expérience, ni la validité statistique, ni la pertinence clinique.",
+        "Un workflow reproductible dans une seule équipe n'est pas encore un protocole de vérification inter-organisations.",
+        "Mettre des données de santé sur une infrastructure publique crée un problème de frontière au lieu de résoudre un problème de preuve.",
+        "Tokeniser la coordination ne remplace pas les règles d'autorité, de révocation, de validation et de dispute."
+      ]
+    },
+    {
+      "token": 13,
+      "surface": "audience",
+      "headline": "Pour les responsables qui doivent rendre un résultat scientifique vérifiable sans déplacer toute l'autorité vers une plateforme unique.",
+      "body": "Le rôle acheteur est typiquement un CTO biotech, Head of Research Data, responsable de plateforme scientifique, lead protocol ou responsable innovation/R&D. Le point commun est une décision réelle sur la provenance, la reproductibilité, l'accès ou la vérification entre plusieurs acteurs.",
+      "status": "ROLE_FIRST_NOT_VERBATIM"
+    },
+    {
+      "token": 14,
+      "surface": "qualification",
+      "headline": "La première décision est de savoir si la décentralisation apporte une propriété vérifiable supplémentaire.",
+      "fit": [
+        "Un tiers nommé doit vérifier une propriété scientifique ou opérationnelle précise.",
+        "Les sources, artefacts ou règles actuelles sont accessibles dans un périmètre contrôlé.",
+        "Les frontières de données, d'autorité et de confidentialité peuvent être décrites.",
+        "Une architecture conventionnelle peut être évaluée comme comparateur.",
+        "Un résultat borné peut être testé sur un workflow réel."
+      ],
+      "no_fit": [
+        "Recherche générale sur les tendances DeSci sans décision d'architecture.",
+        "Demande de tokenomics ou DAO comme fin en soi.",
+        "Aucune preuve ou workflow accessible.",
+        "Attente d'une validation scientifique, clinique, juridique ou réglementaire par le consultant.",
+        "Une base auditée et des signatures conventionnelles répondent déjà au besoin sans résidu de vérification externe."
+      ]
+    },
+    {
+      "token": 1,
+      "surface": "proposition",
+      "headline": "Un protocole de recherche vérifiable relie la question scientifique à la propriété qu'un tiers peut réellement contrôler.",
+      "body": "La mission ne commence pas par une chaîne. Elle commence par un claim borné, ses sources, ses transformations, son environnement de calcul, ses contributeurs et le test qui permet à une autre partie de décider si la preuve est suffisante.",
+      "mechanism": ["QUESTION", "CLAIM", "EVIDENCE", "PROVENANCE", "COMPUTATION", "ATTESTATION", "VERIFICATION"]
+    },
+    {
+      "token": 2,
+      "surface": "value",
+      "headline": "Quatre valeurs, sans confondre vérifiabilité et vérité scientifique.",
+      "items": [
+        "Reconstructibilité — retrouver les objets, versions, règles et propriétaires qui soutiennent un claim.",
+        "Reproductibilité — rejouer un calcul dans un environnement borné et documenter les écarts.",
+        "Vérification indépendante — permettre à un tiers de contrôler une propriété sans dépendre d'une explication orale ou d'une plateforme unique.",
+        "Coordination gouvernée — attribuer, attester, révoquer et faire évoluer les règles sans rendre l'autorité implicite."
+      ]
+    },
+    {
+      "token": 10,
+      "surface": "offers",
+      "headline": "Cinq configurations achetables, de la décision d'architecture à l'assurance continue.",
+      "configurations": [
+        "DS-O1 · Research Trust & Feasibility Diagnostic — nommer propriété, vérificateur, sources, frontières et alternative conventionnelle.",
+        "DS-O2 · Verifiable Research Protocol Architecture Sprint — schéma du protocole, evidence graph, privacy boundary, threat model et gouvernance.",
+        "DS-O3 · Reproducible Evidence Pipeline PoC — un claim traversable et un run borné reproductible avec receipt de vérification.",
+        "DS-O4 · Decentralized Science Infrastructure Implementation — composants, APIs, gouvernance, gates, monitoring et handover.",
+        "DS-O5 · DeSci Protocol Assurance & Evidence Review — classifier les claims du protocole comme supported, bounded ou unsupported."
+      ],
+      "offer_config_ref": "contracts/decentralized-expertise-offers.json",
+      "pricing": "PENDING_SITE_ENGINE_KEY"
+    },
+    {
+      "token": 15,
+      "surface": "deliverables",
+      "headline": "Les livrables sont des objets inspectables, pas une promesse de décentralisation.",
+      "items": [
+        "Research Object Schema — study, protocol, dataset, transformation, result, claim, evidence.",
+        "Claim–Evidence Graph — liens entre claim, résultats, sources, code, environnement, contributeurs et attestations.",
+        "Reproducibility Capsule — versions, paramètres, environnement, données référencées et checks attendus.",
+        "Consent & Access Boundary — ce qui reste privé, partagé, public ou non nécessaire à la vérification.",
+        "Verification Receipt — propriété vérifiée, artefact, version, vérificateur, méthode, statut et limite.",
+        "Protocol Governance — règles de changement, autorité, révocation, disputes et versioning.",
+        "Threat Model & Acceptance Tests — hypothèses de confiance, failure modes et tests.",
+        "Replay / Handover Runbook — reproduction, reprise et transfert de propriété."
+      ]
+    },
+    {
+      "token": 3,
+      "surface": "transformation",
+      "headline": "Le mandat déplace la preuve d'un récit à une structure interrogeable.",
+      "before": "Une affirmation renvoie vers un article, un dossier, un notebook ou une plateforme dont les liens de provenance doivent être reconstruits manuellement.",
+      "after": "Une affirmation bornée renvoie vers des objets versionnés, des transformations, des attestations et un chemin de vérification explicite.",
+      "status": "TARGET_OPERATING_STATE_NOT_CLIENT_EFFECT"
+    },
+    {
+      "token": 12,
+      "surface": "before-after",
+      "headline": "Les mêmes axes, avant et après.",
+      "axes": [
+        ["Provenance", "Références dispersées", "Graphe claim→evidence traversable"],
+        ["Reproduction", "Notebook ou environnement implicite", "Capsule versionnée + procédure de replay"],
+        ["Attribution", "Auteurs/contributeurs dans plusieurs registres", "Relations et attestations explicites"],
+        ["Accès", "Partager le dataset pour partager la preuve", "Séparer data plane et verification plane"],
+        ["Gouvernance", "Règles de validation implicites", "Autorité, changement et dispute versionnés"]
+      ]
+    },
+    {
+      "token": 19,
+      "surface": "results",
+      "headline": "Le succès est un ensemble de critères d'acceptation, pas un ROI inventé.",
+      "criteria": [
+        "Un claim cible possède un chemin explicite vers ses evidence objects et leurs versions.",
+        "Un run borné est rejouable selon une procédure documentée dans l'environnement convenu.",
+        "Le vérificateur, la propriété, la source et la règle d'acceptation sont nommés.",
+        "Les données non nécessaires à la vérification restent hors du plan de divulgation.",
+        "Les failure states et l'incertitude résiduelle sont visibles.",
+        "Le handover permet à l'équipe cliente d'inspecter les artefacts sans dépendance obligatoire au consultant."
+      ],
+      "not_claimed": ["validité scientifique universelle", "efficacité clinique", "ROI", "réduction de délai", "acceptation réglementaire", "sécurité absolue"]
+    },
+    {
+      "token": 4,
+      "surface": "proof",
+      "headline": "La preuve publique reste proportionnée à ce qu'elle démontre.",
+      "items": [
+        "EU-CANON-EHDS-EHR-TESTING-2026 — contexte normatif admis sur testing/documentation des systèmes EHR dans le périmètre EHDS; aucune extrapolation aux systèmes hors scope.",
+        "EU-HT-EMA-FDA-GOOD-AI-2026 — principes normatifs sur provenance, validation fondée sur le risque, interaction humain-IA et monitoring dans le cycle médicament; aucun effet clinique inféré.",
+        "EU-REGCSV-PROOF-PHARMACY-STUDIES-2014-2020 — preuve de cursus pharmaceutique public; capacité/contexte uniquement.",
+        "EU-REGCSV-PROOF-RADIOPHARMACY-2018-2019 — preuve de contexte qualité hospitalier/radiopharmacie; aucune certification de l'offre.",
+        "Data Engineering & Evidence Architecture — lineage, evidence stores et replay comme modules source-first réutilisés."
+      ],
+      "missing_public_proof": ["résultat client DeSci avant/après", "benchmark public de ce protocole", "validation scientifique externe du futur artefact"]
+    },
+    {
+      "token": 16,
+      "surface": "scope",
+      "headline": "Séparer données, preuve, autorité et mécanisme avant de choisir l'infrastructure.",
+      "in": [
+        "research object / evidence schema",
+        "lineage et provenance",
+        "reproducibility pipeline",
+        "attestations, signatures ou commitments quand justifiés",
+        "privacy/access architecture",
+        "protocol governance",
+        "threat model et verification tests",
+        "PoC et implémentation bornée",
+        "handover et assurance technique"
+      ],
+      "out": [
+        "mise on-chain des données patient par défaut",
+        "tokenomics ou DAO obligatoires",
+        "peer review scientifique",
+        "décision médicale",
+        "qualification juridique/réglementaire",
+        "garantie de validité scientifique ou clinique"
+      ],
+      "dependencies": ["sponsor", "claim cible", "sources accessibles", "data owner", "verifier", "règles d'accès", "environnement de calcul représentatif"]
+    },
+    {
+      "token": 17,
+      "surface": "process",
+      "headline": "Cartographier → contracter → instrumenter → reproduire → vérifier → transférer.",
+      "phases": [
+        "1 · Property mapping — claim, verifier, source, trust boundary.",
+        "2 · Research contract — objets, versions, ownership, accès et acceptation.",
+        "3 · Evidence instrumentation — lineage, transforms, attestations et journals.",
+        "4 · Reproduction — environnement, paramètres, replay et failure states.",
+        "5 · Independent verification — vérifier la propriété convenue sans sur-interpréter le mécanisme.",
+        "6 · Governance & handover — changement, révocation, disputes, runbook et transfert."
+      ],
+      "rule": "Chaque phase laisse un artefact inspectable."
+    },
+    {
+      "token": 18,
+      "surface": "modules",
+      "headline": "Huit briques nouvelles se composent avec les modules Data, Blockchain, HealthTech et Assurance existants.",
+      "items": [
+        "DS-RESEARCH-OBJECT — schéma canonique des objets de recherche.",
+        "DS-CLAIM-GRAPH — claim→evidence→result→dataset→code/environment.",
+        "DS-REPRO-CAPSULE — environnement et paramètres pour replay borné.",
+        "DS-ATTRIBUTION — contribution, review et attestation institutionnelle.",
+        "DS-CONSENT-ACCESS — frontière accès/confidentialité/divulgation.",
+        "DS-STUDY-ATTEST — receipt d'une propriété vérifiée.",
+        "DS-PROTOCOL-GOV — évolution des règles, schémas, reviewers et disputes.",
+        "DS-REVIEW-GATE — critère d'acceptation par un vérificateur indépendant."
+      ],
+      "shared_modules_ref": "contracts/decentralized-expertise-offers.json#shared_module_catalog"
+    },
+    {
+      "token": 5,
+      "surface": "capabilities",
+      "headline": "Les capacités engagées sont déjà présentes dans le portefeuille; leur composition est nouvelle.",
+      "primary": [
+        "pharmaceutical-operations — contexte scientifique, qualité, traçabilité et validation humaine",
+        "data-architecture-ddd — provenance, invariants, evidence stores et événements",
+        "data-science-ml — expérimentation et traitements scientifiques/ML",
+        "ai-governance — provenance, minimisation, auditabilité et frontières de décision",
+        "solidity-evm — smart contracts et état partagé lorsque justifiés",
+        "zk-zkml — divulgation sélective et vérification privée; niveau public à confirmer"
+      ],
+      "boundary": "Les scores/profils de capacité ne sont pas des mesures de résultat client."
+    },
+    {
+      "token": 21,
+      "surface": "intersection",
+      "headline": "La spécialisation vient du croisement science × evidence architecture × verifiable systems, pas du mot Web3.",
+      "body": "L'offre applique une discipline scientifique/régulée aux objets de preuve, une architecture data aux transformations et à la provenance, puis n'ajoute attestations, ZK, smart contracts ou ledger que lorsqu'un tiers nommé doit vérifier une propriété que l'architecture conventionnelle ne couvre pas suffisamment.",
+      "boundary": "Mécanisme et capacité, pas preuve causale d'amélioration de la science."
+    },
+    {
+      "token": 6,
+      "surface": "benchmark",
+      "headline": "Le premier Evidence Graph est structurel; le premier Evidence Graphic quantitatif reste bloqué tant que son metric contract n'est pas fermé.",
+      "evidence_graph": "EG-DS-CLAIM-PROVENANCE",
+      "planned_eug": "EUG-DS-RESEARCH-COVERAGE",
+      "planned_question": "Sur un corpus défini de research claims, quelles relations nécessaires à la reconstruction sont présentes, manquantes ou ambiguës ?",
+      "required_metric_contract": ["relation type", "coverage status", "population of claims", "sampling rule", "period", "source artifacts", "boundary"],
+      "publication_status": "BLOCKED_PENDING_SOURCE_CLOSURE_AND_FORMAL_JUDGES"
+    },
+    {
+      "token": 22,
+      "surface": "commitments",
+      "headline": "Ce qui est garanti est le produit de travail contrôlable, jamais la conclusion scientifique d'une autorité externe.",
+      "guarantees": [
+        "scope et critères d'acceptation écrits avant build",
+        "rework d'un livrable qui ne satisfait pas ses critères dans le périmètre convenu",
+        "réversibilité et handover des artefacts cœur",
+        "classification des données avant choix de divulgation",
+        "claim boundary explicite pour chaque Evidence Unit placée",
+        "séparation entre preuve de capacité, preuve de mécanisme et résultat client"
+      ],
+      "not_guaranteed": ["validité scientifique", "résultat clinique", "ROI", "certification", "conformité", "acceptation par un régulateur ou reviewer"]
+    },
+    {
+      "token": 23,
+      "surface": "faq",
+      "headline": "Les objections utiles sont des questions de frontière.",
+      "items": [
+        ["Faut-il une blockchain ?", "Non. Le besoin de vérification indépendante est qualifié avant le mécanisme. Une base auditée, signatures ou transparency log peuvent suffire."],
+        ["Les données scientifiques vont-elles on-chain ?", "Pas par défaut. Les données sensibles restent dans leur environnement contrôlé; seule l'information nécessaire à la preuve peut être engagée ou attestée."],
+        ["Un hash prouve-t-il qu'un résultat est vrai ?", "Non. Il peut aider à prouver l'intégrité ou l'identité d'un artefact précis; la validité scientifique demande d'autres méthodes et autorités."],
+        ["Peut-on utiliser ZK ?", "Oui si la propriété à vérifier et la confidentialité le justifient. ZK n'est pas un remplacement automatique du contrôle de données ou de la validation scientifique."],
+        ["Pouvez-vous construire un DAO de recherche ?", "La gouvernance décentralisée peut être un module, mais elle n'est activée qu'après avoir défini décisions, autorités, révocation, disputes et exigences de preuve."],
+        ["Est-ce une offre de conformité EHDS ?", "Non. Des Evidence Units normatives peuvent informer un cas en scope, mais l'offre ne se présente pas comme qualification juridique ou certification de conformité."]
+      ]
+    },
+    {
+      "token": 7,
+      "surface": "engagement",
+      "headline": "Apportez une affirmation scientifique que quelqu'un d'autre doit pouvoir vérifier.",
+      "body": "Le premier échange cartographie claim → evidence → provenance → computation → verifier. Si la chaîne est déjà suffisamment défendable dans l'architecture actuelle, on renforce le pattern existant. Sinon, on identifie le premier point où une couche de vérification supplémentaire crée une propriété utile.",
+      "inputs": ["claim ou décision", "verifier", "source systems", "data boundary", "date de décision", "evidence accessible"],
+      "outputs": ["architecture actuelle suffisante", "durcissement conventionnel recommandé", "protocole de vérification à prototyper", "périmètre de mission proposé"]
+    },
+    {
+      "token": 8,
+      "surface": "lead-form",
+      "headline": "Décrivez la propriété à vérifier, pas la technologie souhaitée.",
+      "subheadline": "Le formulaire sert à router vers diagnostic, sprint, PoC, implémentation, assurance — ou vers une architecture plus simple.",
+      "prefill": "Un claim scientifique doit être vérifiable par un tiers sans partager tout le contexte sensible.",
+      "fields": ["timing", "rôle", "organisation", "claim/décision", "verifier", "sources", "données sensibles", "mécanisme envisagé", "état du prototype", "email"]
+    }
+  ],
+  "evidence": {
+    "evidence_unit_target": 2,
+    "evidence_units": [
+      {
+        "id": "EU-CANON-EHDS-EHR-TESTING-2026",
+        "status": "ADMITTED",
+        "epistemic_class": "NORMATIVE",
+        "intended_use": "REGULATORY_CONTEXT_ONLY_WHEN_EHDS_SCOPE_APPLIES",
+        "source": "https://health.ec.europa.eu/ehealth-digital-health-and-care/ehds-action/ehds-platform_en",
+        "boundary": "Regulatory implementation requirement for EHDS-scope EHR systems; not a performance gain and not automatically applicable to unrelated research software."
+      },
+      {
+        "id": "EU-HT-EMA-FDA-GOOD-AI-2026",
+        "status": "ADMITTED",
+        "epistemic_class": "NORMATIVE",
+        "intended_use": "AI_MEDICINES_PROVENANCE_AND_LIFECYCLE_CONTEXT",
+        "source": "https://www.ema.europa.eu/en/documents/other/guiding-principles-good-ai-practice-drug-development_en.pdf",
+        "boundary": "Normative good-practice principles; no clinical effectiveness, commercial outcome or universal regulatory-scope inference."
+      },
+      {
+        "id": "EU-REGCSV-PROOF-PHARMACY-STUDIES-2014-2020",
+        "status": "CANONICAL_FACTFULNESS_PASS",
+        "epistemic_class": "OBSERVED",
+        "intended_use": "CAPABILITY_PROOF_ONLY",
+        "source": "https://mickael-umt.com/parcours/pharmacy-studies-strasbourg/#proof-pharmacy-studies-strasbourg--pharmaceutical-science-foundation",
+        "boundary": "Self-published professional/education record; not a DeSci certification or client result."
+      },
+      {
+        "id": "EU-REGCSV-PROOF-RADIOPHARMACY-2018-2019",
+        "status": "CANONICAL_FACTFULNESS_PASS",
+        "epistemic_class": "OBSERVED",
+        "intended_use": "CAPABILITY_PROOF_ONLY",
+        "source": "https://mickael-umt.com/parcours/strasbourg-radiopharmacy/#proof-strasbourg-radiopharmacy--radiopharmacy-quality-control",
+        "boundary": "Supports hospital quality-control context only; not proof of DeSci client outcome."
+      }
+    ],
+    "evidence_graphs": [
+      {
+        "id": "EG-DS-CLAIM-PROVENANCE",
+        "status": "PLANNED_AUTHORING_ASSET",
+        "epistemic_class": "ARCHITECTURAL",
+        "question": "What must be traversable for a named verifier to reconstruct the evidence chain behind a bounded scientific claim?",
+        "nodes": ["Study", "Protocol", "Dataset", "Transformation", "CodeArtifact", "ExecutionEnvironment", "Result", "Claim", "Contributor", "Reviewer", "Attestation", "Verifier"],
+        "edges": [
+          "Study HAS_PROTOCOL Protocol",
+          "Protocol USES Dataset",
+          "Dataset INPUT_TO Transformation",
+          "Transformation EXECUTED_WITH CodeArtifact",
+          "CodeArtifact RUNS_IN ExecutionEnvironment",
+          "Transformation PRODUCES Result",
+          "Claim SUPPORTED_BY Result",
+          "Contributor CONTRIBUTED_TO Dataset|CodeArtifact|Result|Claim",
+          "Reviewer ATTESTS Claim|Result|Process",
+          "Attestation VERIFIED_BY Verifier"
+        ],
+        "boundary": "The graph represents provenance and verification relationships. It does not establish scientific truth, causal validity or clinical relevance by itself."
+      }
+    ],
+    "eugs": [
+      {
+        "id": "EUG-DS-RESEARCH-COVERAGE",
+        "status": "BLOCKED_PENDING_SOURCE_CLOSURE_AND_FORMAL_JUDGES",
+        "graph_type": "paired_dot_or_dot_plot_after_metric_contract",
+        "minimum_datapoints": 5,
+        "metric_contract_status": "MISSING",
+        "publication_allowed": false
+      }
+    ],
+    "rejected_claims": [
+      {"claim":"Decentralization makes science more trustworthy.","decision":"REJECT","reason":"Over-generalization; trust depends on the property, verifier, source and mechanism."},
+      {"claim":"Blockchain makes scientific results immutable and therefore valid.","decision":"REJECT","reason":"Integrity/immutability does not establish scientific validity."},
+      {"claim":"This architecture improves reproducibility by a percentage.","decision":"REJECT","reason":"No baseline, comparator, population or observation window."},
+      {"claim":"Health/pharma experience makes the protocol compliant.","decision":"REJECT","reason":"Experience is capability/context evidence, not legal or regulatory certification."}
+    ]
+  }
+}
