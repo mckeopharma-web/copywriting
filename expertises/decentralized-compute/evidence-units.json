@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "page_id": "page:planned:decentralized-compute",
+  "page_url": "https://mickael-umt.com/expertises/decentralized-compute/",
+  "policy": {
+    "source": "@neofort",
+    "posture": "FAIL_CLOSED",
+    "resolution": "CURRENT_TRUE_ONLY",
+    "selected_evidence_unit_target": 2
+  },
+  "selected": [
+    {
+      "id": "EU-DC-PINOCCHIO-2013",
+      "status": "ADMITTED",
+      "epistemic_class": "COMPARATIVE",
+      "intended_use": "VERIFIABLE_COMPUTE_MECHANISM_AND_OVERHEAD_BOUNDARY",
+      "claim": "Pinocchio implements publicly verifiable outsourced computation and measures prover and verifier costs across seven applications, demonstrating very small proofs and low verification time for the evaluated system.",
+      "measurement_summary": "7 applications; 288-byte proof; ~10 ms verification; 19–60× prover-effort reduction versus prior work for the evaluated system",
+      "boundary": "Protocol-, implementation- and workload-specific; no universal cheap/fast-verification claim.",
+      "source": {"title":"Pinocchio: Nearly Practical Verifiable Computation","url":"https://www.microsoft.com/en-us/research/publication/pinocchio-nearly-practical-verifiable-computation/","year":2013,"bibliometric_citation_count":768,"bibliometric_provider":"SciSciNet / Metascience Observatory"}
+    },
+    {
+      "id": "EU-DC-PBFT-1999",
+      "status": "ADMITTED",
+      "epistemic_class": "OBSERVED",
+      "intended_use": "BYZANTINE_TRUST_BOUNDARY_AND_REPLICATION_OPTIONS",
+      "claim": "Practical Byzantine fault-tolerant state-machine replication can tolerate Byzantine faults under explicit replica and network assumptions, with optimizations evaluated experimentally.",
+      "measurement_summary": "BFT NFS implementation measured ~3% slower than standard unreplicated NFS on the Andrew benchmark in the reported environment; tolerates f Byzantine faults with 3f+1 replicas under stated assumptions",
+      "boundary": "Safety, liveness and performance depend on PBFT assumptions; not a universal recommendation for decentralized compute.",
+      "source": {"title":"Practical Byzantine fault tolerance","url":"https://www.usenix.org/legacy/events/osdi99/full_papers/castro/castro.pdf","year":1999,"bibliometric_citation_count":5066,"bibliometric_provider":"Semantic Scholar"}
+    }
+  ],
+  "research_library": [
+    {"id":"EU-DC-MAPREDUCE-2008","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":18538,"bibliometric_provider":"SciSpace","source_title":"MapReduce: simplified data processing on large clusters","source_url":"https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/","claim":"A runtime can automatically partition data, schedule execution across many machines, handle machine failures and coordinate inter-machine communication for large data-processing workloads.","boundary":"Distributed cluster execution under its workloads; not decentralized trust, multi-provider sovereignty or universal cost/performance superiority."},
+    {"id":"EU-DC-CHORD-2001","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":11160,"bibliometric_provider":"SciSpace","source_title":"Chord: A scalable peer-to-peer lookup service for internet applications","source_url":"https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf","claim":"Chord provides decentralized key-to-node lookup with logarithmic communication and state scaling while adapting to joins and leaves.","boundary":"Lookup protocol, not compute scheduler; does not establish workload throughput, execution correctness or economics."},
+    {"id":"EU-DC-DYNAMO-2007","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":4682,"bibliometric_provider":"Semantic Scholar","source_title":"Dynamo: Amazon's Highly Available Key-value Store","source_url":"https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf","claim":"Dynamo demonstrates a highly available distributed key-value design using partitioning, replication, object versioning and conflict resolution.","boundary":"Storage architecture with availability trade-offs; not compute correctness or generic decentralized-compute SLO evidence."},
+    {"id":"EU-DC-RDD-2012","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":4555,"bibliometric_provider":"SciSpace","source_title":"Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing","source_url":"https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf","claim":"RDDs use immutable transformations and lineage to recover distributed in-memory datasets after failures.","boundary":"Performance results are bounded to evaluated workloads and cluster implementation; not adversarial correctness or multi-provider decentralization."},
+    {"id":"EU-DC-GFS-2003","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":3900,"bibliometric_provider":"OpenAlex via Rankless","source_title":"The Google File System","source_url":"https://research.google/pubs/the-google-file-system/","claim":"A distributed file system can provide fault tolerance and high aggregate performance when designed for explicit workload and hardware assumptions.","boundary":"Google-specific workloads and environment; does not imply P2P decentralization or general performance claims."},
+    {"id":"EU-DC-KADEMLIA-2002","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":3464,"bibliometric_provider":"SciSpace","source_title":"Kademlia: A Peer-to-Peer Information System Based on the XOR Metric","source_url":"https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf","claim":"Kademlia uses an XOR metric and parallel asynchronous queries to locate nodes and data in a fault-prone peer-to-peer environment.","boundary":"Peer discovery/routing only; not compute-task execution, result correctness, provider quality or marketplace performance."},
+    {"id":"EU-DC-RAFT-2014","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":2657,"bibliometric_provider":"Semantic Scholar","source_title":"In Search of an Understandable Consensus Algorithm","source_url":"https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro","claim":"Raft decomposes replicated-log consensus into leader election, log replication and safety with overlapping-majority membership change.","boundary":"Crash-fault consensus, not Byzantine fault tolerance or compute verification."},
+    {"id":"EU-DC-BOINC-2004","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":2191,"bibliometric_provider":"SciSpace","source_title":"BOINC: A System for Public-Resource Computing and Storage","source_url":"https://boinc.berkeley.edu/grid_paper_04.pdf","claim":"BOINC provides an architecture for public-resource computing across heterogeneous volunteer resources and applications.","boundary":"Does not prove trustless result correctness, deterministic performance, guaranteed availability or marketplace economics."},
+    {"id":"EU-DC-SGX-2016","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":753,"bibliometric_provider":"SciLynk","source_title":"Intel SGX Explained","source_url":"https://eprint.iacr.org/2016/086","claim":"Intel SGX defines a hardware-assisted enclave model intended to protect integrity and confidentiality of security-sensitive computation.","boundary":"Attestation binds platform/enclave properties; does not prove application-level correctness or freedom from side channels."}
+  ],
+  "context_library": [
+    {"id":"EU-SG-006","status":"ADMITTED","epistemic_class":"OBSERVED","intended_use":"CAPABILITY_PROOF_ONLY","claim":"26 of 29 public repository commits are attributed to RickOwri.","boundary":"Implementation-contribution capability only; not production security efficacy, vulnerability reduction or decentralized-compute performance."},
+    {"id":"EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026","status":"CANONICAL_FACTFULNESS_PASS_NOT_FULL_PUBLICATION_GATE","epistemic_class":"COMPARATIVE","intended_use":"METHODOLOGICAL_BOUNDARY_ONLY","claim":"Under a matched local SSO/TOTP prototype workload, database-backed and ledger-backed endpoints had different measured throughput.","boundary":"Bounded prototype comparison; not evidence for decentralized-compute performance generally."}
+  ],
+  "library_count": 13
+}
