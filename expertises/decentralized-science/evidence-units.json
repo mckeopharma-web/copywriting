@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "page_id": "page:planned:decentralized-science",
+  "page_url": "https://mickael-umt.com/expertises/decentralized-science/",
+  "policy": {
+    "source": "@neofort",
+    "posture": "FAIL_CLOSED",
+    "resolution": "CURRENT_TRUE_ONLY",
+    "selected_evidence_unit_target": 2
+  },
+  "selected": [
+    {
+      "id": "EU-DS-RPCB-2021",
+      "status": "ADMITTED",
+      "epistemic_class": "OBSERVED",
+      "intended_use": "REPRODUCIBILITY_AND_RESEARCH_EVIDENCE_BOUNDARY",
+      "claim": "In the Reproducibility Project: Cancer Biology, 50 of 193 planned experiments were completed; across 112 comparable positive/null effects with numerical values, 51 (46%) met at least three of five binary replication-success criteria.",
+      "boundary": "Selected high-impact preclinical cancer-biology sample only; not a universal reproducibility rate, scientific truth, or evidence that decentralized infrastructure improves replication.",
+      "source": {
+        "title": "Investigating the replicability of preclinical cancer biology",
+        "doi": "10.7554/eLife.71601",
+        "url": "https://elifesciences.org/articles/71601",
+        "year": 2021,
+        "peer_reviewed": true,
+        "open_fulltext": true
+      }
+    },
+    {
+      "id": "EU-DS-FAIR-2016",
+      "status": "ADMITTED",
+      "epistemic_class": "NORMATIVE",
+      "intended_use": "RESEARCH_OBJECT_AND_METADATA_DESIGN",
+      "claim": "Scientific digital objects benefit from machine-actionable findability, accessibility, interoperability and reusability requirements with persistent identifiers and rich metadata.",
+      "boundary": "FAIR governs stewardship and reuse properties; it does not establish scientific truth, statistical validity, clinical validity, or superiority of decentralized infrastructure.",
+      "source": {
+        "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+        "url": "https://www.nature.com/articles/sdata201618",
+        "year": 2016,
+        "peer_reviewed": true,
+        "open_fulltext": true,
+        "bibliometric_citation_count": 14511,
+        "bibliometric_provider": "Semantic Scholar",
+        "bibliometric_verified_at": "2026-09-06T18:44:00+02:00"
+      }
+    }
+  ],
+  "research_library": [
+    {"id":"EU-DS-MUNAFO-REPRO-2017","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":2815,"bibliometric_provider":"Nature","source_title":"A manifesto for reproducible science","source_url":"https://www.nature.com/articles/s41562-016-0021","claim":"Improving research reliability requires interventions across methods, reporting, dissemination, reproducibility, evaluation and incentives.","boundary":"Motivates reproducibility controls; does not validate a DeSci protocol or prove decentralization improves scientific outcomes."},
+    {"id":"EU-DS-SANDVE-REPRO-2013","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":766,"bibliometric_provider":"OpenAlex","source_title":"Ten Simple Rules for Reproducible Computational Research","source_url":"https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285","claim":"Reproducible computational research requires tracking result production, exact software versions, version-controlled scripts, intermediate results, random seeds, raw data and links from statements to results.","boundary":"Rules and practices, not proof that a specific implementation is scientifically valid or reproducible."},
+    {"id":"EU-DS-BEST-PRACTICES-2014","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":667,"bibliometric_provider":"Semantic Scholar","source_title":"Best Practices for Scientific Computing","source_url":"https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745","claim":"Scientific software development benefits from explicit practices for data management, code design, collaboration, testing and reproducibility.","boundary":"Recommended practices; no client-outcome evidence and no requirement for decentralization."},
+    {"id":"EU-DS-OPM-2011","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":553,"bibliometric_provider":"Scopus","source_title":"The Open Provenance Model core specification (v1.1)","source_url":"https://eprints.soton.ac.uk/268332/2/opm.pdf","claim":"A technology-agnostic provenance model can represent and exchange provenance across systems and support valid provenance inferences.","boundary":"A provenance graph records lineage; graph structure alone does not prove correctness, quality or scientific truth."},
+    {"id":"EU-DS-FAIR4RS-2022","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":504,"bibliometric_provider":"Nature","source_title":"Introducing the FAIR Principles for research software","source_url":"https://www.nature.com/articles/s41597-022-01710-x","claim":"Research software FAIRness includes persistent/versioned identifiers, rich metadata, standardized access, licensing, provenance and interoperability.","boundary":"Community-endorsed principles; satisfying them does not prove reproducibility, correctness or scientific validity."},
+    {"id":"EU-DS-GOOD-ENOUGH-2017","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":400,"bibliometric_provider":"SciSpace","source_title":"Good enough practices in scientific computing","source_url":"https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510","claim":"Accessible research-computing practices include organized data, documented workflows, project organization, versioning, collaboration and citable artefacts.","boundary":"Supports maintainability and reproducibility practices; not a performance benchmark and does not imply decentralization."},
+    {"id":"EU-DS-FAIR-SOFTWARE-2020","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":232,"bibliometric_provider":"Mendeley","source_title":"Towards FAIR principles for research software","source_url":"https://doi.org/10.3233/DS-190026","claim":"FAIR concepts require software-specific interpretation because software is executable, composite, evolving and versioned.","boundary":"Frames FAIR-for-software requirements; not evidence that a given protocol satisfies them."},
+    {"id":"EU-DS-JUPYTER-2019","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":164,"bibliometric_provider":"SciSpace","source_title":"Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks","source_url":"https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007007","claim":"Reproducible notebook analyses require machine-readable environment/dependency descriptions and human-readable documentation linking code, results and narrative.","boundary":"Documentation improves inspectability but does not ensure scientific validity or independent reproduction."},
+    {"id":"EU-DS-ROCRATE-2022","status":"CANDIDATE_RESEARCH_NOT_ADMITTED","bibliometric_citation_count":114,"bibliometric_provider":"Scopus","source_title":"Packaging research artefacts with RO-Crate","source_url":"https://zenodo.org/records/5833456","claim":"RO-Crate provides a lightweight machine-readable package for research artefacts, identifiers, provenance, relations and annotations using JSON-LD and Schema.org.","boundary":"Supports packaging and metadata exchange; does not verify computation correctness or scientific truth."}
+  ],
+  "context_library": [
+    {"id":"EU-CANON-EHDS-EHR-TESTING-2026","status":"ADMITTED","epistemic_class":"NORMATIVE","intended_use":"REGULATORY_CONTEXT_ONLY_WHEN_EHDS_SCOPE_APPLIES","claim":"EHDS-scope EHR systems are subject to applicable implementation/testing/documentation requirements.","boundary":"EHDS-scope regulatory implementation context; not a measured performance gain and not automatically applicable to unrelated research software.","source_url":"https://health.ec.europa.eu/ehealth-digital-health-and-care/ehds-action/ehds-platform_en"},
+    {"id":"EU-HT-EMA-FDA-GOOD-AI-2026","status":"ADMITTED","epistemic_class":"NORMATIVE","intended_use":"AI_MEDICINES_PROVENANCE_AND_LIFECYCLE_CONTEXT","claim":"Good-AI-practice guidance for medicines emphasizes provenance, risk-based validation, human-AI interaction and lifecycle monitoring.","boundary":"Normative context; no clinical effectiveness, commercial outcome or universal regulatory-scope inference."},
+    {"id":"EU-REGCSV-PROOF-PHARMACY-STUDIES-2014-2020","status":"CANONICAL_FACTFULNESS_PASS","epistemic_class":"OBSERVED","intended_use":"CAPABILITY_PROOF_ONLY","claim":"Public professional/education record supports pharmaceutical-science training context.","boundary":"Capability context only; not a DeSci certification or client result."},
+    {"id":"EU-REGCSV-PROOF-RADIOPHARMACY-2018-2019","status":"CANONICAL_FACTFULNESS_PASS","epistemic_class":"OBSERVED","intended_use":"CAPABILITY_PROOF_ONLY","claim":"Public professional record supports hospital radiopharmacy quality-control context.","boundary":"Capability context only; not proof of DeSci client outcome."}
+  ],
+  "library_count": 15
+}
