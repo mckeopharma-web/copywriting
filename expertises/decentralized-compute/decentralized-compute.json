@@ -1,0 +1,456 @@
+{
+  "artifact": {
+    "id": "copywriting:expertise:decentralized-compute:2026-09-06",
+    "schema_version": "1.0.0",
+    "page_id": "page:planned:decentralized-compute",
+    "page_url": "https://mickael-umt.com/expertises/decentralized-compute/",
+    "scope": "THIS_PAGE_ONLY",
+    "language": "fr-FR",
+    "publication_status": "BLOCKED_REVIEW",
+    "canonicality": "AUTHORING_CANON_NOT_LIVE",
+    "generated_at": "2026-09-06T15:17:00+02:00"
+  },
+  "contract": {
+    "skill": "mckeopharma-web/copywriting:.skills/source-first-atomic-design-v4/SKILL.md",
+    "canonical_tokens": [0, 11, 20, 13, 14, 1, 2, 10, 15, 3, 12, 19, 4, 16, 17, 18, 5, 21, 6, 22, 23, 7, 8],
+    "section_count": 23,
+    "section_delta_allowed": 0,
+    "reorder_allowed": false,
+    "offer_config": "contracts/decentralized-expertise-offers.json",
+    "source_first": true,
+    "live_nav": ["triggers", "consequences", "for-whom", "qualification", "proposition", "offers", "deliverables", "before-after", "results", "proof", "scope", "process", "modules", "intersection", "commitments", "questions", "engagement"]
+  },
+  "policy": {
+    "source": "@neofort",
+    "posture": "FAIL_CLOSED",
+    "current_true_only": true,
+    "current_stack": [
+      "judge:evidence:factfulness-epistemology-methodology-v2",
+      "judge:evidence-unit:champion-v2",
+      "evidence-placement-policy:site-v5",
+      "policy:evidence-placement:claim-span-entailment-v2",
+      "judge:evidence-placement:presentation-v1.2",
+      "policy:eug-placement:statistical-display-ordering-contract-v2",
+      "judge:evidence-graphic:presentation-v3",
+      "policy:llm-judge:deterministic-execution-v2"
+    ],
+    "judge": {"temperature": 0, "top_p": 1, "replicas": 3, "hard_gate": "AND", "agreement": "UNANIMOUS", "fresh_execution": "UNAVAILABLE", "decision": "BLOCKED_REVIEW"},
+    "quantitative_gate": "variable + value + unit + population + period + source + boundary",
+    "factfulness_rule": "Separate OBSERVED / DERIVED / COMPARATIVE / PLANNED / FORECAST / SCENARIO. Never convert a bounded benchmark into a universal decentralized-compute claim.",
+    "evidence_rule": "Execution receipts and attestations prove only the fields and properties they actually bind; they do not prove application correctness or business outcome by default."
+  },
+  "avatar": {
+    "working_name": "Responsable infrastructure de calcul vérifiable",
+    "role": "CTO / Protocol Engineer / AI Infrastructure Lead / R&D Infrastructure Lead",
+    "organization": "AI infrastructure, protocol, research platform, sovereign compute initiative or multi-provider engineering team",
+    "status": "ROLE_FIRST_HYPOTHESIS_TO_VALIDATE",
+    "before": "Un workload doit être distribué, exécuté chez plusieurs opérateurs ou rendu vérifiable, mais les raisons, métriques et hypothèses de confiance restent mélangées.",
+    "after": "Le workload, son environnement, le nœud d'exécution, les résultats, les attestations, les métriques et le fallback sont bornés dans une architecture testable et transférable."
+  },
+  "positioning": {
+    "category": "Decentralized Compute Engineering",
+    "shift": "marketplace GPU / cloud alternatif → architecture d'exécution distribuée et vérifiable",
+    "promise": "Distribuer un workload seulement quand la contrainte le justifie, puis rendre l'exécution mesurable et inspectable.",
+    "mechanism": "WORKLOAD → PROPERTY → TRUST BOUNDARY → MINIMUM VERIFICATION MECHANISM → EXECUTION → RECEIPT → VERIFIER",
+    "intersection": "Rust/systems × verifiable computing × ZK/attestations × data/evidence architecture × security/DevSecOps",
+    "decision_rule": "Tester d'abord si un cloud ou cluster conventionnel satisfait la propriété. La décentralisation doit apporter une propriété de confiance, souveraineté, résilience ou vérification qui mérite son overhead.",
+    "boundaries": [
+      "No universal cheaper/faster claim.",
+      "No production availability guarantee without a measured workload and contractual SLO.",
+      "No universal TEE, ZK, replication or blockchain recommendation.",
+      "A node attestation does not prove application-level correctness beyond the attested property.",
+      "A benchmark remains bounded to workload, versions, environment, period and metric contract.",
+      "First-party capability proof does not establish client effect."
+    ]
+  },
+  "composition": {
+    "mode": "MODULAR_SOURCE_FIRST",
+    "reused": [
+      {"id":"DE-QUALITY-GATE","from":"data-engineering","use":"metric and acceptance gates"},
+      {"id":"DE-REPLAY","from":"data-engineering","use":"benchmark replay and handover"},
+      {"id":"SG-THREAT-MODEL","from":"ai-security","use":"provider/node/trust threat model"}
+    ],
+    "adapted": [
+      {"id":"BLK-TRUST-BOUNDARY","from":"blockchain","use":"provider/user/verifier trust boundary"},
+      {"id":"BLK-VERIFIER-MAP","from":"blockchain","use":"property-first verification architecture"},
+      {"id":"BLK-GOVERNANCE","from":"blockchain","use":"validator/provider/key/change governance"},
+      {"id":"SG-PROMOTION-GATE","from":"ai-security","use":"runtime/release admission gate"},
+      {"id":"AI-EVAL-HARNESS","from":"agentic-ai","use":"matched workload benchmark harness"},
+      {"id":"AI-EXEC-LOG","from":"agentic-ai","use":"execution receipt provenance"},
+      {"id":"DE-EVIDENCE-STORE","from":"data-engineering","use":"queryable execution and benchmark evidence"}
+    ],
+    "new": ["DC-WORKLOAD-ENV", "DC-RESOURCE-TOPO", "DC-EXEC-RECEIPT", "DC-VERIFY-EXEC", "DC-TEE-ZK-SELECT", "DC-BENCH-HARNESS", "DC-RESILIENCE", "DC-RESOURCE-MARKET", "DC-NODE-ATTEST", "DC-COST-PERF"]
+  },
+  "copy": [
+    {
+      "token": 0,
+      "surface": "hero",
+      "eyebrow": "Expertise · Decentralized Compute",
+      "title": "Decentralized Compute Engineering",
+      "headline": "Distribuez le calcul seulement quand la propriété à obtenir justifie la complexité.",
+      "body": "Je conçois et prototype des architectures de calcul distribuées où workload, environnement, nœud, résultat, attestation et métriques peuvent être inspectés sans confondre décentralisation, performance et vérification.",
+      "cta": "Qualifier un workload",
+      "secondary_cta": "Voir le modèle d'exécution vérifiable",
+      "result": "Workload envelope · resource topology · execution receipt · node attestation · verifier · matched benchmark · failure/fallback plan · release evidence",
+      "format": "Diagnostic → Architecture Sprint → PoC → implémentation / assurance"
+    },
+    {
+      "token": 11,
+      "surface": "triggers",
+      "headline": "Le sujet commence quand un workload ne peut plus être traité comme un simple job cloud.",
+      "items": [
+        "Un workload doit être exécuté chez plusieurs opérateurs pour une raison de souveraineté, résilience ou dépendance fournisseur clairement identifiée.",
+        "Un client ou protocole doit vérifier qui a exécuté un calcul, dans quel environnement et sur quelle version.",
+        "Des GPU/CPU distribués sont disponibles mais le scheduler, la confiance, la mesure et le fallback ne sont pas contractés.",
+        "Une architecture TEE, ZK, replication ou multi-provider est envisagée sans propriété de vérification nommée.",
+        "Les benchmarks existants comparent des systèmes sous des workloads ou environnements non équivalents.",
+        "Un protocole publie des claims de coût, performance ou vérifiabilité difficiles à relier à un metric contract."
+      ]
+    },
+    {
+      "token": 20,
+      "surface": "consequences",
+      "headline": "Sans workload contract, la décentralisation transforme les compromis en variables cachées.",
+      "items": [
+        "Un benchmark sans population, versions, environnement et métrique commune ne permet pas de décider entre deux architectures.",
+        "Un nœud identifié ne prouve pas automatiquement que l'application a produit un résultat correct.",
+        "Un système distribué ajoute failure domains, réseau, scheduling, réplication et gouvernance qu'un cluster centralisé peut ne pas avoir besoin de porter.",
+        "Une preuve cryptographique peut réduire une hypothèse de confiance tout en ajoutant overhead, complexité de build ou contraintes de workload.",
+        "Un marketplace de ressources ne remplace ni la définition du workload, ni l'observabilité, ni la procédure de reprise."
+      ]
+    },
+    {
+      "token": 13,
+      "surface": "audience",
+      "headline": "Pour les équipes qui possèdent un workload réel et une raison falsifiable de ne pas le laisser entièrement centralisé.",
+      "body": "Le rôle acheteur est typiquement CTO, Protocol Engineer, AI Infrastructure Lead ou responsable R&D infrastructure. Il doit arbitrer topologie, confiance, performance, coût, data locality, failure handling et vérification sur un workload représentatif.",
+      "status": "ROLE_FIRST_NOT_VERBATIM"
+    },
+    {
+      "token": 14,
+      "surface": "qualification",
+      "headline": "Une architecture conventionnelle est le premier comparateur, pas l'adversaire à éliminer.",
+      "fit": [
+        "Un workload représentatif est accessible.",
+        "La raison pour laquelle un opérateur unique est insuffisant peut être formulée.",
+        "Un vérificateur ou une propriété de souveraineté/résilience est nommé.",
+        "Les métriques d'acceptation peuvent être définies avant le PoC.",
+        "Les environnements candidats et le fallback peuvent être testés."
+      ],
+      "no_fit": [
+        "Recherche générale sur les réseaux de GPU sans workload cible.",
+        "Demande de performance supérieure garantie avant benchmark.",
+        "Aucune donnée sur l'environnement ou le comparateur centralisé.",
+        "Choix TEE/ZK/blockchain déjà imposé sans propriété à vérifier.",
+        "Le cloud ou cluster actuel satisfait déjà confiance, disponibilité, coûts et gouvernance sans résidu significatif."
+      ]
+    },
+    {
+      "token": 1,
+      "surface": "proposition",
+      "headline": "Une architecture de calcul vérifiable part du workload et de la propriété, puis choisit le mécanisme minimal.",
+      "body": "CPU/GPU, data locality, mémoire, réseau, latence, failure tolerance et confidentialité forment l'enveloppe. Ensuite seulement on choisit signatures, attestation distante, TEE, réplication, ZK, ledger ou combinaison minimale et on définit le receipt que le vérificateur doit pouvoir contrôler.",
+      "mechanism": ["WORKLOAD", "PROPERTY", "TRUST BOUNDARY", "MINIMUM VERIFICATION MECHANISM", "EXECUTION", "RECEIPT", "VERIFIER"]
+    },
+    {
+      "token": 2,
+      "surface": "value",
+      "headline": "La valeur vient de propriétés testables, pas du nombre de nœuds.",
+      "items": [
+        "Portabilité bornée — décrire ce qu'un workload exige pour changer de provider ou de failure domain.",
+        "Vérifiabilité — produire un receipt inspectable sur l'identité du workload, du code/modèle, de l'environnement et du nœud.",
+        "Résilience — documenter retry, réplication, provider exit et fallback, puis les tester.",
+        "Économie mesurée — comparer coût, throughput, latence et verification overhead uniquement sur des workloads et métriques compatibles."
+      ]
+    },
+    {
+      "token": 10,
+      "surface": "offers",
+      "headline": "Cinq configurations achetables, de la décision de distribution au contrôle d'un protocole existant.",
+      "configurations": [
+        "DC-O1 · Workload Decentralization Diagnostic — workload contract, trust map, alternative centralisée et plan de benchmark.",
+        "DC-O2 · Distributed & Verifiable Compute Architecture Sprint — topologie, verifier, threat model, failure/fallback et choix de mécanisme.",
+        "DC-O3 · Verifiable Execution PoC — runtime borné, execution receipts, node attestation, matched benchmark et replay.",
+        "DC-O4 · Decentralized Compute Infrastructure Implementation — intégrations providers/scheduler, verification, observability, gates et handover.",
+        "DC-O5 · Compute Protocol Assurance — auditer claims, benchmarks, attestations et failure assumptions d'une architecture existante."
+      ],
+      "offer_config_ref": "contracts/decentralized-expertise-offers.json",
+      "pricing": "PENDING_SITE_ENGINE_KEY"
+    },
+    {
+      "token": 15,
+      "surface": "deliverables",
+      "headline": "Chaque livrable rend une partie du calcul inspectable ou testable.",
+      "items": [
+        "Workload Envelope — CPU/GPU, mémoire, réseau, data locality, latence, volume, confidentialité, failure tolerance.",
+        "Resource Topology — providers, nodes, regions, accelerators, trust et failure domains.",
+        "Verification Decision Record — propriété, verifier, signatures/TEE/ZK/replication/ledger ou option conventionnelle.",
+        "Execution Receipt — workload ID, code/model hash, node, environment, inputs/outputs référencés, timestamps et attestation.",
+        "Matched Benchmark Harness — mêmes workload/metrics, versions et conditions explicites.",
+        "Resilience & Fallback Plan — retry, replication, provider exit, rollback et route centralisée de secours.",
+        "Evidence Store — historique des exécutions, receipts, benchmark runs et release gates.",
+        "Replay / Handover Runbook — reproduction et transfert à l'équipe opératrice."
+      ]
+    },
+    {
+      "token": 3,
+      "surface": "transformation",
+      "headline": "Le mandat déplace le calcul d'une boîte noire distante vers une exécution bornée et attribuable.",
+      "before": "Une tâche est envoyée à un provider ou réseau et le résultat est accepté avec des logs ou un dashboard dont les hypothèses de confiance restent implicites.",
+      "after": "Le workload, l'environnement, le nœud, le verifier, les métriques et les failure states sont explicités et reliés à un receipt et à une procédure de replay.",
+      "status": "TARGET_OPERATING_STATE_NOT_CLIENT_EFFECT"
+    },
+    {
+      "token": 12,
+      "surface": "before-after",
+      "headline": "Les mêmes axes, avant et après.",
+      "axes": [
+        ["Workload", "Décrit par l'application", "Enveloppe machine-readable et workload de référence"],
+        ["Trust", "Provider supposé", "Property + verifier + trust boundary explicites"],
+        ["Execution", "Logs locaux", "Execution receipt versionné"],
+        ["Benchmark", "Chiffres de sources différentes", "Metric contract + matched runs"],
+        ["Failure", "Retry/fallback implicites", "Failure domains et fallback testés"],
+        ["Portabilité", "Dépendance observée après incident", "Requirements et adapters documentés"]
+      ]
+    },
+    {
+      "token": 19,
+      "surface": "results",
+      "headline": "Le succès est défini avant le benchmark.",
+      "criteria": [
+        "Un workload représentatif et son comparateur sont versionnés.",
+        "Chaque métrique possède variable, unité, population, période, source et boundary.",
+        "Le receipt permet de vérifier les propriétés promises sur le nœud/environnement convenu.",
+        "Un failure test documente le comportement de retry, réplication ou fallback.",
+        "Les valeurs OBSERVED et DERIVED sont séparées.",
+        "Le handover permet de rejouer le benchmark sans dépendance obligatoire au consultant."
+      ],
+      "not_claimed": ["performance universelle", "coût universellement inférieur", "disponibilité absolue", "sécurité absolue", "ROI", "supériorité d'un provider"]
+    },
+    {
+      "token": 4,
+      "surface": "proof",
+      "headline": "La preuve publique sépare capacité d'implémentation, comparaison bornée et résultat client.",
+      "items": [
+        "EU-SG-006 — 26/29 commits publics attribués à RickOwri sur le Lottery dApp; preuve de contribution d'implémentation Solidity/EVM, pas de sécurité production.",
+        "Folder Mapper — projet public Rust + SQLite; preuve de systèmes/outillage et persistance, pas de plateforme compute distribuée production.",
+        "Capacité Rust — profil public high depuis 2023-09-15; capacité, pas résultat client.",
+        "Capacité ZK/ZKML — profil public to-confirm; utilisable comme piste technique, pas comme claim de maîtrise certifiée.",
+        "EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026 — comparaison technique bornée disponible comme rappel méthodologique; elle ne mesure pas le decentralized compute général et n'est pas utilisée comme claim de performance de cette offre."
+      ],
+      "missing_public_proof": ["benchmark public d'un workload decentralized-compute livré par cette offre", "résultat client avant/après", "SLO production public"]
+    },
+    {
+      "token": 16,
+      "surface": "scope",
+      "headline": "Le périmètre porte sur l'architecture d'exécution et la preuve; l'exploitation permanente reste une décision séparée.",
+      "in": [
+        "workload characterization",
+        "resource topology",
+        "provider/node trust model",
+        "attestation / TEE / ZK / replication architecture when justified",
+        "scheduler/provider adapters",
+        "execution receipts",
+        "matched benchmark harness",
+        "observability and evidence store",
+        "failure/fallback design",
+        "PoC, implementation and technical assurance",
+        "handover"
+      ],
+      "out": [
+        "garantie de coût ou performance avant mesure",
+        "classement fournisseur non mesuré",
+        "24/7 operations par défaut",
+        "choix obligatoire blockchain/TEE/ZK",
+        "certification formelle",
+        "infrastructure décentralisée sans workload cible"
+      ],
+      "dependencies": ["workload représentatif", "baseline/comparator", "SLOs ou critères", "data locality", "secrets model", "provider access", "operating owner"]
+    },
+    {
+      "token": 17,
+      "surface": "process",
+      "headline": "Caractériser → modéliser → benchmarker → vérifier → durcir → transférer.",
+      "phases": [
+        "1 · Characterize — workload, data locality, metrics, failure tolerance.",
+        "2 · Trust model — property, verifier, providers, secrets and attack assumptions.",
+        "3 · Architecture — topology, mechanism selector, receipt schema and fallback.",
+        "4 · Matched benchmark — comparator, metric contract, observed runs and derived values.",
+        "5 · Verification & hardening — attestation checks, failure tests, release gates and observability.",
+        "6 · Handover — replay, rollback, provider exit, ownership and evidence retention."
+      ],
+      "rule": "Chaque phase laisse un artefact rejouable ou inspectable."
+    },
+    {
+      "token": 18,
+      "surface": "modules",
+      "headline": "Dix briques nouvelles se composent avec les patterns Blockchain, Security, Data et Agentic existants.",
+      "items": [
+        "DC-WORKLOAD-ENV — contrat du workload et workload de référence.",
+        "DC-RESOURCE-TOPO — providers, nodes, accelerators et failure domains.",
+        "DC-EXEC-RECEIPT — identité de l'exécution et artefacts liés.",
+        "DC-VERIFY-EXEC — couche de vérification choisie après la propriété.",
+        "DC-TEE-ZK-SELECT — selector TEE/ZK/replication/signatures/option conventionnelle.",
+        "DC-BENCH-HARNESS — matched benchmark + metric contract.",
+        "DC-RESILIENCE — failure, retry, replication, provider exit et fallback.",
+        "DC-RESOURCE-MARKET — scheduling/provider/pricing adapter optionnel.",
+        "DC-NODE-ATTEST — identité et attestation du node/environment.",
+        "DC-COST-PERF — envelope throughput/latency/availability/cost/verification overhead."
+      ],
+      "shared_modules_ref": "contracts/decentralized-expertise-offers.json#shared_module_catalog"
+    },
+    {
+      "token": 5,
+      "surface": "capabilities",
+      "headline": "La composition mobilise des capacités systèmes et vérifiables déjà documentées.",
+      "primary": [
+        "rust — CLI, filesystem, SQLite et systems tooling; confiance high",
+        "solidity-evm — smart contracts, state machines et tests; confiance high",
+        "zk-zkml — preuves, attestations et divulgation sélective; confiance to-confirm",
+        "ai-security — threat modelling, permissions et gates; confiance high",
+        "jenkins-terraform — CI/CD, IaC, SBOM, scans et rollback; confiance medium-high",
+        "data-architecture-ddd — invariants, events, evidence stores et schema evolution; confiance high"
+      ],
+      "boundary": "Les scores/profils de capacité ne sont pas des mesures de performance client."
+    },
+    {
+      "token": 21,
+      "surface": "intersection",
+      "headline": "Decentralized Compute n'est pas synonyme de marketplace GPU.",
+      "body": "La spécialisation assemble systems engineering, verifier-first architecture, attestations/ZK quand justifiés, benchmark contractuel et assurance de release. Le resource market est un module optionnel; la propriété à vérifier et le workload restent centraux.",
+      "boundary": "Architecture et capacité, pas preuve que la décentralisation soit supérieure pour un workload non mesuré."
+    },
+    {
+      "token": 6,
+      "surface": "benchmark",
+      "headline": "Le benchmark est un contrat de comparaison avant d'être un graphique.",
+      "evidence_graph": "EG-DC-EXECUTION-RECEIPT",
+      "planned_eug": "EUG-DC-MATCHED-WORKLOAD",
+      "metric_dimensions": ["throughput", "latency", "availability within test window", "native cost", "verification overhead"],
+      "display_default": "dot plot; paired-dot for matched architectures when multiple values share the same metric",
+      "ordering_contract": "order by explicitly declared metric or architecture label; no arbitrary ordering",
+      "publication_status": "PLANNED_UNTIL_MATCHED_SOURCE_DATA_AND_FORMAL_JUDGES"
+    },
+    {
+      "token": 22,
+      "surface": "commitments",
+      "headline": "Le risque est borné par le workload, le metric contract et les critères d'acceptation.",
+      "guarantees": [
+        "workload et comparator écrits avant benchmark",
+        "metric contract avant tout claim numérique",
+        "rework d'un livrable qui ne satisfait pas ses critères dans le périmètre convenu",
+        "observed/derived separation",
+        "failure/fallback explicit",
+        "réversibilité et handover des artefacts cœur",
+        "claim boundary pour les attestations et benchmarks"
+      ],
+      "not_guaranteed": ["meilleure performance", "coût inférieur", "SLO production hors contrat", "sécurité absolue", "ROI", "supériorité fournisseur"]
+    },
+    {
+      "token": 23,
+      "surface": "faq",
+      "headline": "Les objections utiles sont des choix de mécanisme et de frontière.",
+      "items": [
+        ["Pourquoi ne pas rester sur AWS/GCP/Azure ou un cluster privé ?", "Si l'opérateur unique satisfait la propriété, le workload et le failure model, rester centralisé est un résultat parfaitement acceptable."],
+        ["TEE ou ZK ?", "La décision dépend de la propriété, du modèle de menace, du workload, des secrets et de l'overhead acceptable. Aucun mécanisme n'est choisi par défaut."],
+        ["Une attestation de node prouve-t-elle que le résultat est correct ?", "Elle ne prouve que les propriétés effectivement attestées. La correction applicative demande ses propres tests ou preuves."],
+        ["Peut-on comparer plusieurs réseaux de compute ?", "Oui si le workload, les versions, la période et les métriques sont compatibles. Sinon les chiffres restent séparés."],
+        ["Construisez-vous un marketplace GPU ?", "Possible comme module si scheduling, pricing et provider selection sont dans le problème; ce n'est pas le cœur obligatoire de l'offre."],
+        ["Garantissez-vous moins cher que le cloud ?", "Non. Le coût doit être mesuré sur un workload, une période, des unités natives et un comparateur explicitement définis."]
+      ]
+    },
+    {
+      "token": 7,
+      "surface": "engagement",
+      "headline": "Apportez un workload et une raison précise pour laquelle un opérateur unique est insuffisant.",
+      "body": "Le premier échange cartographie workload → property → trust boundary → mechanism → receipt → verifier. Si l'architecture conventionnelle répond déjà au besoin, on le documente. Sinon, on définit le plus petit PoC capable de tester le résidu de confiance, de souveraineté ou de résilience.",
+      "inputs": ["workload", "CPU/GPU/accelerator", "data locality", "reason for decentralization", "verifier", "SLO/acceptance metrics", "current comparator", "prototype state"],
+      "outputs": ["architecture conventionnelle suffisante", "hardening conventionnel", "PoC de vérification/distribution", "périmètre d'implémentation ou d'assurance"]
+    },
+    {
+      "token": 8,
+      "surface": "lead-form",
+      "headline": "Décrivez le workload et la propriété recherchée, pas le réseau que vous voulez utiliser.",
+      "subheadline": "Le formulaire route vers diagnostic, sprint, PoC, implémentation, assurance — ou vers une architecture plus simple.",
+      "prefill": "Un workload doit être exécuté hors d'un opérateur unique et son exécution doit rester mesurable et vérifiable.",
+      "fields": ["timing", "rôle", "organisation", "workload", "compute requirements", "data locality", "trust concern", "verifier", "current comparator", "acceptance metrics", "email"]
+    }
+  ],
+  "evidence": {
+    "evidence_unit_target": 2,
+    "evidence_units": [
+      {
+        "id": "EU-SG-006",
+        "status": "ADMITTED",
+        "epistemic_class": "OBSERVED",
+        "intended_use": "CAPABILITY_PROOF_ONLY",
+        "source": "https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp/commits/main/",
+        "fact": "26 of 29 public repository commits are attributed to RickOwri.",
+        "boundary": "Supports substantial implementation contribution only; not production security efficacy, vulnerability reduction or decentralized-compute performance."
+      },
+      {
+        "id": "EU-CANON-WILEY-DB-VS-DLT-THROUGHPUT-2026",
+        "status": "CANONICAL_FACTFULNESS_PASS_NOT_FULL_PUBLICATION_GATE",
+        "epistemic_class": "COMPARATIVE",
+        "intended_use": "METHODOLOGICAL_BOUNDARY_ONLY",
+        "source": "https://onlinelibrary.wiley.com/doi/10.1002/cpe.70897",
+        "fact": "Under the matched local SSO/TOTP prototype workload, database-backed and ledger-backed endpoints had different measured throughput.",
+        "boundary": "Bounded prototype comparison; not evidence for decentralized-compute performance generally and not promoted as a Level-1 performance claim on this page."
+      }
+    ],
+    "capability_evidence": [
+      {
+        "id": "CAP-RUST-FOLDER-MAPPER",
+        "status": "PUBLIC_FIRST_PARTY_CAPABILITY",
+        "source": "https://github.com/RickOwri/folder_mapper",
+        "boundary": "Supports Rust/systems tooling and SQLite persistence; not a production distributed-compute platform."
+      },
+      {
+        "id": "CAP-ZK-ZKML",
+        "status": "PROFILE_TO_CONFIRM",
+        "source": "https://mickael-umt.com/expertises/zk-zkml/",
+        "boundary": "Public profile records ZK/ZKML capability as to-confirm; do not upgrade this to certified expertise or client outcome."
+      }
+    ],
+    "evidence_graphs": [
+      {
+        "id": "EG-DC-EXECUTION-RECEIPT",
+        "status": "PLANNED_AUTHORING_ASSET",
+        "epistemic_class": "ARCHITECTURAL",
+        "question": "What must be linked for a named verifier to inspect who executed a bounded workload, under which environment, and what result/attestation was produced?",
+        "nodes": ["Workload", "CodeArtifact", "ModelArtifact", "InputReference", "ExecutionEnvironment", "ComputeNode", "Provider", "Execution", "OutputReference", "Attestation", "MetricObservation", "Verifier"],
+        "edges": [
+          "Workload USES CodeArtifact|ModelArtifact",
+          "Workload REFERENCES InputReference",
+          "Execution RUNS Workload",
+          "Execution RUNS_IN ExecutionEnvironment",
+          "Execution RUNS_ON ComputeNode",
+          "ComputeNode OPERATED_BY Provider",
+          "Execution PRODUCES OutputReference",
+          "Execution PRODUCES Attestation",
+          "Execution MEASURED_BY MetricObservation",
+          "Attestation VERIFIED_BY Verifier"
+        ],
+        "boundary": "The graph represents execution provenance and verification relationships. It does not prove application correctness, economic superiority or production availability by itself."
+      }
+    ],
+    "eugs": [
+      {
+        "id": "EUG-DC-MATCHED-WORKLOAD",
+        "status": "PLANNED_UNTIL_MATCHED_SOURCE_DATA_AND_FORMAL_JUDGES",
+        "graph_type": "dot_plot_or_paired_dot",
+        "metric_contract_required": true,
+        "minimum_datapoints": 5,
+        "dimensions": ["throughput", "latency", "cost", "availability_test_window", "verification_overhead"],
+        "publication_allowed": false
+      }
+    ],
+    "rejected_claims": [
+      {"claim":"Decentralized compute is cheaper than cloud.","decision":"REJECT","reason":"No bounded workload, period, native units or comparator."},
+      {"claim":"ZK proves the computation is correct for every application.","decision":"REJECT","reason":"Proof only covers the circuit/property actually encoded and verified."},
+      {"claim":"More nodes make the system more resilient.","decision":"REJECT","reason":"Resilience depends on failure correlation, topology, replication, scheduling and recovery."},
+      {"claim":"The DB-vs-DLT benchmark proves decentralized compute is slower.","decision":"REJECT","reason":"Different technical question and bounded prototype; no generalization to decentralized compute."},
+      {"claim":"Public implementation experience proves production-scale compute outcomes.","decision":"REJECT","reason":"Capability proof does not establish client or production effect."}
+    ]
+  }
+}
