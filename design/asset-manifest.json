@@ -1,0 +1,34 @@
+{
+  "manifest_version": "1.0",
+  "assets": [
+    {
+      "asset_id": "A01",
+      "task": "Step 1: Brand Vibe Report",
+      "target_page_url": "https://mickael-umt.com/expertises/",
+      "page_key": "expertises",
+      "output_path": "design/pages/expertises/foundations/brand-vibe.md",
+      "atomic_class": "foundations",
+      "depends_on": [],
+      "design_md_path": "DESIGN.md",
+      "design_md_status": "missing_in_repository_at_generation_time",
+      "design_md_spec": "https://github.com/google-labs-code/design.md/blob/main/docs/spec.md",
+      "version": "alpha",
+      "commit_sha": "f1013650c4c8f0d101a978d0ababbcda24e17605",
+      "generation_note": "Source-locked to the /expertises/ index. This is the first design-foundation artifact for the page. No upstream visual-token dependency was declared. The repository did not contain DESIGN.md or design/asset-manifest.json before generation, so concrete colors, typography, spacing, radii and component tokens were intentionally omitted rather than fabricated.",
+      "lint": {
+        "requested_command": "npx @google/design.md lint design/pages/expertises/foundations/brand-vibe.md",
+        "official_cli_status": "unavailable_in_execution_runtime",
+        "official_cli_reason": "npm registry DNS resolution failed with EAI_AGAIN; the package could not be fetched in the execution sandbox.",
+        "design_md_package_version_verified": "0.4.0",
+        "spec_version": "alpha",
+        "spec_parity_validation": {
+          "errors": 0,
+          "warnings": 0,
+          "infos": 5,
+          "info_reason": "Five intentionally omitted token sections: colors, typography, spacing, rounded, components."
+        },
+        "status": "PASS_SPEC_PARITY_OFFICIAL_CLI_UNAVAILABLE"
+      }
+    }
+  ]
+}
