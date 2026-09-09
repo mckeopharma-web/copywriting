@@ -1,0 +1,43 @@
+{
+  "asset_name": "brand-vibe-report-home-v1",
+  "task_name": "Step 1: Brand Vibe Report",
+  "page_url": "https://mickael-umt.com/",
+  "version": "1.0.0",
+  "created_at": "2026-09-09",
+  "repository": "mckeopharma-web/copywriting",
+  "branch": "design/brand-vibe-home-2026-09-09",
+  "dependencies": [
+    {
+      "path": "pages/mickael-umt.com.html",
+      "role": "primary page source",
+      "used_for": ["homepage copy", "information hierarchy", "CSS color tokens", "typography stack", "evidence UI grammar"],
+      "commit": "0551dc9b959a4417495cfa7b8b59a4128d6f6952"
+    },
+    {
+      "path": ".skills/source-first-atomic-design-v4/SKILL.md",
+      "role": "upstream design-system dependency",
+      "used_for": ["atomic-design visual source-of-truth rule", "t0 motif vocabulary", "source-first design DNA"],
+      "commit": "0551dc9b959a4417495cfa7b8b59a4128d6f6952"
+    }
+  ],
+  "live_validation": {
+    "url": "https://mickael-umt.com/",
+    "checked_on": "2026-09-09",
+    "role": "confirm current homepage hierarchy and page copy"
+  },
+  "generated_preview": {
+    "tool": "OpenAI image generation",
+    "gen_id": "035bd3f0-60f5-4c39-bb46-6aebc278b3d5",
+    "dimensions": "1024x1536",
+    "conversation_file": "a_dark_high_contrast_infographic_poster_dashboa.png",
+    "note": "The generated PNG is the rendered preview shown in the chat. The repository package uses a deterministic SVG export as the source-controlled final visual because the current GitHub connector accepts UTF-8 contents but does not expose a direct binary-file upload parameter."
+  },
+  "outputs": [
+    "design/foundations/home/brand-vibe-report-v1.md",
+    "design/tokens/home/brand-vibe-home-v1.tokens.json",
+    "design/dependencies/home/brand-vibe-home-v1.manifest.json",
+    "design/pages/home/brand-vibe-report-v1.svg",
+    "design/exports/home/brand-vibe-report-v1.svg",
+    "design/exports/home/brand-vibe-report-v1.metadata.json"
+  ]
+}

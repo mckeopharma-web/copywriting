@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200" role="img" aria-labelledby="title desc">
+  <title id="title">Brand Vibe Report — mickael-umt.com</title>
+  <desc id="desc">Brand foundation infographic for the homepage: controlled competence, emotional axes, client inner world, founder energy, voice, visual grammar and decision compass.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#58d7e7"/><stop offset="1" stop-color="#8b7cff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .bg{fill:url(#bg)}.panel{fill:#0d1118;stroke:#263247;stroke-width:2}.panel2{fill:#111823;stroke:#263247;stroke-width:2}
+      .kicker{fill:#58d7e7;font:700 20px Inter,system-ui,sans-serif;letter-spacing:4px}.title{fill:#f4f7fb;font:800 66px Inter,system-ui,sans-serif;letter-spacing:-2px}
+      .sub{fill:#c8d1df;font:400 26px Inter,system-ui,sans-serif}.h2{fill:#f4f7fb;font:750 28px Inter,system-ui,sans-serif}.h3{fill:#f4f7fb;font:750 22px Inter,system-ui,sans-serif}
+      .big{fill:#7ee8f5;font:800 42px Inter,system-ui,sans-serif}.body{fill:#c4ccda;font:400 19px Inter,system-ui,sans-serif}.small{fill:#a7b1c2;font:400 16px Inter,system-ui,sans-serif}.mono{fill:#8fa5c2;font:600 14px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px}
+      .cyan{fill:#58d7e7}.violet{fill:#8b7cff}.green{fill:#6de0a1}.line{stroke:#263247;stroke-width:2}.accentLine{stroke:url(#accent);stroke-width:4}.thinCyan{stroke:#58d7e7;stroke-width:2;fill:none}.thinViolet{stroke:#8b7cff;stroke-width:2;fill:none}
+      .chip{fill:#101722;stroke:#344057;stroke-width:1}.axis{stroke:#55708f;stroke-width:3}.dot{fill:#58d7e7;filter:url(#glow)}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="2200"/>
+  <circle cx="1340" cy="40" r="480" fill="#171739" opacity=".36"/>
+  <path d="M40 175 H1560" class="line" opacity=".55"/>
+
+  <text x="55" y="62" class="kicker">HOME / BRAND FOUNDATION / v1.0</text>
+  <text x="55" y="132" class="title">Brand Vibe Report</text>
+  <text x="55" y="170" class="sub">AI systems · Data engineering · Verifiable infrastructure</text>
+  <text x="1090" y="60" class="mono">COMPLEXITY → EVIDENCE → OWNERSHIP</text>
+  <text x="1090" y="90" class="small">Source-first · bounded · evidence-aware</text>
+
+  <!-- Emotional core -->
+  <rect x="45" y="215" width="920" height="370" rx="20" class="panel"/>
+  <text x="75" y="260" class="kicker">01  EMOTIONAL CORE</text>
+  <line x1="75" y1="278" x2="340" y2="278" class="accentLine"/>
+  <text x="75" y="335" class="big">CONTROLLED COMPETENCE</text>
+  <text x="75" y="380" class="sub">Rendre la complexité inspectable, bornée et reprise en main.</text>
+  <g transform="translate(82,435)">
+    <circle cx="55" cy="55" r="42" fill="#0b1420" stroke="#58d7e7" stroke-width="2"/><text x="55" y="62" text-anchor="middle" class="h3">P</text><text x="55" y="125" text-anchor="middle" class="small">Preuve</text>
+    <circle cx="225" cy="55" r="42" fill="#0b1420" stroke="#58d7e7" stroke-width="2"/><text x="225" y="62" text-anchor="middle" class="h3">T</text><text x="225" y="125" text-anchor="middle" class="small">Traçabilité</text>
+    <circle cx="395" cy="55" r="42" fill="#0b1420" stroke="#8b7cff" stroke-width="2"/><text x="395" y="62" text-anchor="middle" class="h3">R</text><text x="395" y="125" text-anchor="middle" class="small">Réversibilité</text>
+    <circle cx="565" cy="55" r="42" fill="#0b1420" stroke="#8b7cff" stroke-width="2"/><text x="565" y="62" text-anchor="middle" class="h3">H</text><text x="565" y="125" text-anchor="middle" class="small">Responsabilité</text>
+    <circle cx="735" cy="55" r="42" fill="#0b1420" stroke="#6de0a1" stroke-width="2"/><text x="735" y="62" text-anchor="middle" class="h3">∏</text><text x="735" y="125" text-anchor="middle" class="small">Production</text>
+    <line x1="97" y1="55" x2="183" y2="55" class="line"/><line x1="267" y1="55" x2="353" y2="55" class="line"/><line x1="437" y1="55" x2="523" y2="55" class="line"/><line x1="607" y1="55" x2="693" y2="55" class="line"/>
+  </g>
+
+  <!-- Brand axes -->
+  <rect x="995" y="215" width="560" height="370" rx="20" class="panel"/>
+  <text x="1025" y="260" class="kicker">02  BRAND AXES</text>
+  <g transform="translate(1030,315)">
+    <text x="0" y="0" class="body">Hype</text><text x="430" y="0" class="body">Preuve</text><line x1="115" y1="-8" x2="400" y2="-8" class="axis"/><circle cx="360" cy="-8" r="8" class="dot"/>
+    <text x="0" y="55" class="body">Opaque</text><text x="410" y="55" class="body">Inspectable</text><line x1="115" y1="47" x2="400" y2="47" class="axis"/><circle cx="372" cy="47" r="8" class="dot"/>
+    <text x="0" y="110" class="body">Dépendance</text><text x="415" y="110" class="body">Reprise</text><line x1="115" y1="102" x2="400" y2="102" class="axis"/><circle cx="368" cy="102" r="8" class="dot"/>
+    <text x="0" y="165" class="body">Démo</text><text x="402" y="165" class="body">Production</text><line x1="115" y1="157" x2="400" y2="157" class="axis"/><circle cx="382" cy="157" r="8" class="dot"/>
+    <text x="0" y="220" class="body">Promesse</text><text x="387" y="220" class="body">Limite explicite</text><line x1="115" y1="212" x2="400" y2="212" class="axis"/><circle cx="378" cy="212" r="8" class="dot"/>
+  </g>
+
+  <!-- Client inner world -->
+  <rect x="45" y="615" width="900" height="590" rx="20" class="panel"/>
+  <text x="75" y="660" class="kicker">03  CLIENT INNER WORLD</text>
+  <text x="75" y="700" class="small">Observed situations, translated into the emotional decision job.</text>
+  <g transform="translate(70,735)">
+    <rect width="850" height="130" rx="16" class="panel2"/><text x="28" y="38" class="h3">CTO / Head of AI Platform</text><text x="28" y="70" class="body">Agents convaincants en démo, runtime non gouverné.</text><text x="28" y="102" class="small">Desired feeling → CONTROL</text><line x1="630" y1="70" x2="790" y2="70" class="thinCyan"/><circle cx="790" cy="70" r="8" class="dot"/>
+    <rect y="155" width="850" height="130" rx="16" class="panel2"/><text x="28" y="193" class="h3">Quality / CSV</text><text x="28" y="225" class="body">Documentation reconstruite après coup.</text><text x="28" y="257" class="small">Desired feeling → DEFENSIBILITY</text><line x1="630" y1="225" x2="790" y2="225" stroke="#6de0a1" stroke-width="2"/><circle cx="790" cy="225" r="8" fill="#6de0a1"/>
+    <rect y="310" width="850" height="130" rx="16" class="panel2"/><text x="28" y="348" class="h3">Transformation IA / formation</text><text x="28" y="380" class="body">Usages individuels impossibles à prouver.</text><text x="28" y="412" class="small">Desired feeling → TRANSFER</text><line x1="630" y1="380" x2="790" y2="380" class="thinViolet"/><circle cx="790" cy="380" r="8" fill="#8b7cff"/>
+  </g>
+  <text x="75" y="1170" class="body">Shared job: replace invisible operational debt with an explicit system the client can inspect, challenge and own.</text>
+
+  <!-- Founder energy -->
+  <rect x="975" y="615" width="580" height="590" rx="20" class="panel"/>
+  <text x="1005" y="660" class="kicker">04  FOUNDER ENERGY</text>
+  <circle cx="1265" cy="900" r="150" fill="none" stroke="#263247" stroke-width="2" stroke-dasharray="9 8"/>
+  <circle cx="1265" cy="770" r="58" fill="#0b1420" stroke="#58d7e7" stroke-width="3"/><text x="1265" y="780" text-anchor="middle" class="h2">B</text><text x="1265" y="850" text-anchor="middle" class="h3">Builder</text>
+  <circle cx="1120" cy="980" r="58" fill="#0b1420" stroke="#58d7e7" stroke-width="3"/><text x="1120" y="990" text-anchor="middle" class="h2">A</text><text x="1120" y="1060" text-anchor="middle" class="h3">Auditor</text>
+  <circle cx="1410" cy="980" r="58" fill="#0b1420" stroke="#8b7cff" stroke-width="3"/><text x="1410" y="990" text-anchor="middle" class="h2">T</text><text x="1410" y="1060" text-anchor="middle" class="h3">Translator</text>
+  <text x="1265" y="915" text-anchor="middle" class="body">cadre · exécute</text><text x="1265" y="944" text-anchor="middle" class="body">puis transfère</text>
+  <text x="1005" y="1145" class="small">Energy: close to the work, technically literate, accountable.</text>
+
+  <!-- Voice -->
+  <rect x="45" y="1235" width="760" height="500" rx="20" class="panel"/>
+  <text x="75" y="1280" class="kicker">05  VOICE</text>
+  <g transform="translate(75,1325)">
+    <rect width="160" height="110" rx="14" class="panel2"/><text x="18" y="40" class="h3">Précis</text><text x="18" y="72" class="small">Ideas first.</text><line x1="18" y1="90" x2="110" y2="90" stroke="#58d7e7" stroke-width="4"/>
+    <rect x="180" width="160" height="110" rx="14" class="panel2"/><text x="198" y="40" class="h3">Sobre</text><text x="198" y="72" class="small">Low hype.</text><line x1="198" y1="90" x2="290" y2="90" stroke="#8b7cff" stroke-width="4"/>
+    <rect x="360" width="160" height="110" rx="14" class="panel2"/><text x="378" y="40" class="h3">Borné</text><text x="378" y="72" class="small">Limits visible.</text><line x1="378" y1="90" x2="470" y2="90" stroke="#8b7cff" stroke-width="4"/>
+    <rect x="540" width="160" height="110" rx="14" class="panel2"/><text x="558" y="40" class="h3">Vérifiable</text><text x="558" y="72" class="small">Claims traceable.</text><line x1="558" y1="90" x2="650" y2="90" stroke="#6de0a1" stroke-width="4"/>
+  </g>
+  <text x="75" y="1495" class="h3">Preferred verbs</text>
+  <text x="75" y="1530" class="body">cadrer · tracer · relier · vérifier · évaluer · sécuriser · reprendre · auditer · transférer</text>
+  <text x="75" y="1585" class="h3">Avoid unless evidenced</text>
+  <text x="75" y="1620" class="body">révolutionnaire · magique · autonome · garanti · sans risque · best-in-class</text>
+  <text x="75" y="1685" class="small">Pattern: subject → mechanism → boundary → outcome.</text>
+
+  <!-- Visual grammar -->
+  <rect x="835" y="1235" width="720" height="500" rx="20" class="panel"/>
+  <text x="865" y="1280" class="kicker">06  VISUAL GRAMMAR</text>
+  <text x="865" y="1325" class="h3">Observed palette</text>
+  <g transform="translate(865,1360)">
+    <circle cx="30" cy="30" r="28" fill="#07090d" stroke="#a7b1c2"/><text x="0" y="82" class="small">#07090d</text>
+    <circle cx="155" cy="30" r="28" fill="#263247"/><text x="125" y="82" class="small">#263247</text>
+    <circle cx="280" cy="30" r="28" fill="#58d7e7"/><text x="250" y="82" class="small">#58d7e7</text>
+    <circle cx="405" cy="30" r="28" fill="#8b7cff"/><text x="375" y="82" class="small">#8b7cff</text>
+    <circle cx="530" cy="30" r="28" fill="#6de0a1"/><text x="500" y="82" class="small">#6de0a1</text>
+  </g>
+  <text x="865" y="1490" class="h3">Interface grammar</text>
+  <rect x="865" y="1520" width="190" height="70" rx="12" class="panel2"/><text x="885" y="1563" class="body">Evidence chip</text><circle cx="1024" cy="1555" r="7" fill="#6de0a1"/>
+  <rect x="1070" y="1520" width="190" height="70" rx="12" class="panel2"/><path d="M1095 1560 H1120 L1135 1535 L1155 1575 L1175 1548 L1205 1560" class="thinCyan"/><text x="1220" y="1563" class="small">signal</text>
+  <rect x="1275" y="1520" width="245" height="70" rx="12" class="panel2"/><circle cx="1315" cy="1555" r="9" fill="none" stroke="#58d7e7" stroke-width="2"/><line x1="1324" y1="1555" x2="1480" y2="1555" class="line"/><circle cx="1480" cy="1555" r="9" fill="#58d7e7"/>
+  <text x="865" y="1645" class="body">Decision-control-room feel: evidence markers, thin structural lines, bounded charts, no decorative AI theater.</text>
+
+  <!-- Decision compass -->
+  <rect x="45" y="1765" width="1510" height="360" rx="20" class="panel"/>
+  <text x="75" y="1810" class="kicker">07  DECISION COMPASS</text>
+  <circle cx="800" cy="1950" r="105" fill="#0b1420" stroke="url(#accent)" stroke-width="5"/>
+  <circle cx="800" cy="1950" r="78" fill="none" stroke="#263247" stroke-width="2"/>
+  <text x="800" y="1938" text-anchor="middle" class="h3">Can this be</text><text x="800" y="1970" text-anchor="middle" class="h3">produced, audited</text><text x="800" y="2002" text-anchor="middle" class="h3">and defended?</text>
+  <g>
+    <rect x="620" y="1818" width="360" height="58" rx="12" class="chip"/><text x="800" y="1854" text-anchor="middle" class="body">Architecture + ownership</text><line x1="800" y1="1876" x2="800" y2="1845" class="thinCyan"/>
+    <rect x="240" y="1888" width="310" height="58" rx="12" class="chip"/><text x="395" y="1925" text-anchor="middle" class="body">Execution evidence</text><line x1="550" y1="1917" x2="695" y2="1940" class="thinCyan"/>
+    <rect x="245" y="2000" width="305" height="58" rx="12" class="chip"/><text x="397" y="2037" text-anchor="middle" class="body">Security + rollback</text><line x1="550" y1="2028" x2="700" y2="1983" class="thinCyan"/>
+    <rect x="1050" y="1888" width="310" height="58" rx="12" class="chip"/><text x="1205" y="1925" text-anchor="middle" class="body">Permissions + human handoff</text><line x1="1050" y1="1917" x2="905" y2="1940" class="thinViolet"/>
+    <rect x="1050" y="2000" width="310" height="58" rx="12" class="chip"/><text x="1205" y="2037" text-anchor="middle" class="body">Data lineage + evaluation</text><line x1="1050" y1="2028" x2="900" y2="1983" class="thinViolet"/>
+  </g>
+  <text x="75" y="2088" class="small">Filter every initiative through: decision · boundary · inspectability · evidence · human owner · reversibility · mechanism.</text>
+
+  <text x="55" y="2170" class="small">Source anchors: pages/mickael-umt.com.html · .skills/source-first-atomic-design-v4/SKILL.md · live homepage check 2026-09-09</text>
+  <text x="1480" y="2170" text-anchor="end" class="mono">BRAND FOUNDATION / v1.0.0</text>
+</svg>
