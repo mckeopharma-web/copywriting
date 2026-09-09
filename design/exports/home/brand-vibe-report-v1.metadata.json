@@ -1,0 +1,25 @@
+{
+  "asset_name": "brand-vibe-report-home-v1",
+  "intended_folder": "design/exports/home/",
+  "page_url": "https://mickael-umt.com/",
+  "task_name": "Step 1: Brand Vibe Report",
+  "version": "1.0.0",
+  "version_note": "Initial source-first brand foundation generated from the homepage and the repository atomic-design dependency.",
+  "parent_dependency_files": [
+    "pages/mickael-umt.com.html",
+    ".skills/source-first-atomic-design-v4/SKILL.md",
+    "design/foundations/home/brand-vibe-report-v1.md",
+    "design/tokens/home/brand-vibe-home-v1.tokens.json"
+  ],
+  "final_export": "design/exports/home/brand-vibe-report-v1.svg",
+  "editable_source": "design/pages/home/brand-vibe-report-v1.svg",
+  "generated_chat_preview": {
+    "gen_id": "035bd3f0-60f5-4c39-bb46-6aebc278b3d5",
+    "dimensions": [1024, 1536],
+    "format": "png",
+    "local_runtime_path": "/mnt/data/a_dark_high_contrast_infographic_poster_dashboa.png"
+  },
+  "brand_emotion": "controlled competence",
+  "one_emotion_sentence": "Rendre la complexité inspectable, bornée et reprise en main.",
+  "evidence_policy": "Observed page facts are kept distinct from brand-strategy synthesis. No unsupported metrics, logos, testimonials, people, certifications, regulatory conclusions or product features are introduced."
+}
