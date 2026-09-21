@@ -1,54 +1,373 @@
 <!doctype html>
-<html lang="fr" data-theme="dark" data-publication-status="PENDING_FORMAL_LLM_JUDGE" data-claim-loop-version="external-capability-v1.2-topology-preserving" data-claim-loop="loop:copy-claim:external-capability-v1.2-topology-preserving" data-judge="judge:copy-claim:external-capability-grounding-v1.2">
+<html lang="fr" data-theme="dark" data-design-contract="one-section-many-image-assets-v1" data-source-of-truth="site-sections-copywriting.xml">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex,nofollow">
-<title>mickael-umt.com — Evidence-grounded homepage</title>
-<meta name="description" content="Homepage night-mode : IA, data, infrastructure vérifiable, preuves progressives et graphiques bornés.">
+<link rel="canonical" href="https://mickael-umt.com/">
+<title>Mickael UMT — Homepage</title>
+<meta name="description" content="Homepage Mickael UMT — système visuel evidence-first, sections XML et assets réutilisables.">
 <style>
-:root{--b:#07090d;--p:#0d1118;--p2:#111823;--l:#263247;--t:#f4f7fb;--m:#a7b1c2;--c:#58d7e7;--a:#8b7cff;--ok:#6de0a1;--w:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 70% -10%,#171739 0,transparent 70%),var(--b);color:var(--t);font:16px/1.55 Inter,system-ui,sans-serif}
-.wrap{width:min(var(--w),calc(100% - 40px));margin:auto}a{color:inherit}.nav{position:sticky;top:0;z-index:40;background:#07090de8;border-bottom:1px solid var(--l);backdrop-filter:blur(14px)}
-.navin{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800}.links{display:flex;gap:16px;color:var(--m);font-size:.9rem}
-.btn{display:inline-flex;min-height:44px;align-items:center;padding:0 17px;border:1px solid var(--l);border-radius:12px;text-decoration:none;font-weight:750;background:#101722}.primary{background:linear-gradient(135deg,#7667ff,#9c77ff);border:0}
-.hero{padding:88px 0 68px}.hero h1{font-size:clamp(2.6rem,6vw,5.7rem);line-height:.98;letter-spacing:-.055em;max-width:1050px;margin:12px 0 24px}.hero p,.lead{max-width:870px;color:#c2c9d6;font-size:1.07rem}
-.section{padding:68px 0;border-top:1px solid var(--l)}.ey{color:var(--c);font-size:.76rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-h2{font-size:clamp(2rem,4vw,3.35rem);line-height:1.05;letter-spacing:-.04em;margin:8px 0 16px}h3{margin:0 0 9px}
-.grid{display:grid;gap:14px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
-.card,.eug{background:linear-gradient(180deg,var(--p2),var(--p));border:1px solid var(--l);border-radius:18px;padding:20px}.card p{color:var(--m)}.tag{font-size:.74rem;border:1px solid #344057;border-radius:999px;padding:5px 8px;color:#bec9d8}
-.rows{display:grid;gap:1px;background:var(--l);border:1px solid var(--l);border-radius:16px;overflow:hidden}.row{display:grid;grid-template-columns:56px 1fr 1.35fr;gap:16px;padding:16px;background:var(--p)}.row small{color:var(--m)}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--l);border:1px solid var(--l);border-radius:16px;overflow:hidden;margin-top:20px}.metric{background:var(--p);padding:18px}.metric b{font-size:2rem}.metric span{display:block;color:var(--m);font-size:.84rem}
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ba div{padding:12px;border:1px solid var(--l);border-radius:10px;background:#0a0e14}.ba b{color:var(--ok)}
-.lp-cite{position:relative;display:inline-flex;vertical-align:super;font-size:.68em;margin-left:.15em}.lp-cite>a{color:var(--c);font-weight:900;text-decoration:none;padding:2px}.lp-cite>a:focus-visible{outline:2px solid var(--c)}
-.lp-evidence-bubble-scroll{display:none;position:absolute;z-index:80;left:0;top:1.4rem;width:min(410px,82vw);max-height:250px;overflow:auto;background:#09111c;border:1px solid #3a4b65;border-radius:12px;padding:12px;color:#c9d5e5;font-size:12px;line-height:1.4;box-shadow:0 18px 50px #0008}
-.lp-cite:hover .lp-evidence-bubble-scroll,.lp-cite:focus-within .lp-evidence-bubble-scroll{display:block}.lp-evidence-bubble-scroll b{display:block;color:#fff}.lp-evidence-bubble-scroll em{display:block;color:#91a3bb;margin-top:5px}
-.eug{margin-top:22px;background:#090e15}.eug-head{display:flex;justify-content:space-between;gap:12px}.badge{font:700 .7rem ui-monospace,monospace;border:1px solid #34445c;border-radius:999px;padding:5px 7px;color:#b9c8dc}
-.bars{display:grid;gap:8px;margin-top:14px}.bar{display:grid;grid-template-columns:minmax(105px,1.2fr) 4fr 60px;gap:9px;align-items:center}.track{height:11px;background:#17202d;border-radius:999px;overflow:hidden}.fill{display:block;height:100%;width:calc(var(--v)*1%);background:linear-gradient(90deg,#6659dd,#65c7df)}.alt{background:linear-gradient(90deg,#8a6ddb,#b58de7)}.val{text-align:right;font-size:.82rem}
-.panels{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{border:1px solid #1f2b3d;border-radius:12px;padding:12px}.note{color:#8fa0b7;font-size:.76rem;margin-top:12px}
-.refs{display:grid;gap:7px}.ref{padding:9px 11px;background:#0a0e14;border:1px solid var(--l);border-radius:9px;color:#abb7c8;font-size:.8rem}.ref b{color:#edf2f8}.ref a{color:#a8ddea}.footer{padding:44px 0;color:#8e9bb0;border-top:1px solid var(--l)}
-@media(max-width:820px){.links{display:none}.g3,.g2,.metrics,.panels{grid-template-columns:1fr}.row{grid-template-columns:1fr}.bar{grid-template-columns:92px 1fr 54px}.lp-evidence-bubble-scroll{position:fixed;left:20px;right:20px;top:auto;bottom:20px;width:auto;max-height:45vh}}
+:root{
+  --primary:#8B7CFF;--secondary:#58D7E7;--tertiary:#6DE0A1;
+  --background:#07090D;--surface:#0D1118;--elevated:#111823;--outline:#263247;
+  --on-surface:#F4F7FB;--muted:#A7B1C2;--evidence:#09111C;--content:1180px;
+  --r-sm:8px;--r-md:12px;--r-lg:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--background)}
+body{margin:0;background:var(--background);color:var(--on-surface);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.shell{width:min(var(--content),calc(100% - 48px));margin-inline:auto}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(7,9,13,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(38,50,71,.72)}
+.topbar .shell{min-height:64px;display:flex;align-items:center;gap:24px}
+.brand{font-weight:800;letter-spacing:-.025em;white-space:nowrap}
+.nav{margin-left:auto;display:flex;gap:4px;align-items:center;overflow:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{color:var(--muted);font-size:12px;padding:9px 10px;border-radius:var(--r-sm);white-space:nowrap}
+.nav a:hover,.nav a:focus-visible{color:var(--on-surface);background:var(--elevated);outline:1px solid var(--outline)}
+.section-kicker{display:flex;align-items:center;gap:10px;color:var(--secondary);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.section-kicker span{color:var(--primary)}
+.hero{min-height:calc(100vh - 64px);display:grid;align-items:center;position:relative;overflow:hidden;isolation:isolate;background:var(--background);padding:88px 0 72px}
+.hero:before{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(90deg,var(--background) 0%,rgba(7,9,13,.99) 25%,rgba(7,9,13,.93) 39%,rgba(7,9,13,.64) 53%,rgba(7,9,13,.18) 73%,rgba(7,9,13,.03) 100%);pointer-events:none}
+.hero-copy{position:relative;z-index:6;min-height:560px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.hero h1{font-size:clamp(56px,6.4vw,91px);font-weight:800;line-height:.98;letter-spacing:-.055em;margin:22px 0 0;max-width:620px;text-wrap:balance}
+.hero-media{position:absolute;inset:0;z-index:1;pointer-events:none}
+.layer{position:absolute;margin:0;overflow:hidden}
+.layer img{position:absolute;max-width:none}
+.layer-master{right:-1px;top:9%;width:min(78vw,1120px);height:78%;border:1px solid rgba(38,50,71,.9);border-radius:18px 0 0 18px;background:var(--surface)}
+.layer-master:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,13,.52),rgba(7,9,13,.08) 42%,transparent 64%),linear-gradient(180deg,rgba(7,9,13,.06),transparent 62%,rgba(7,9,13,.5))}
+.layer-master img{width:244%;left:-72%;top:-64%;filter:saturate(.72) contrast(1.08) brightness(.67)}
+.layer-architecture{right:5vw;top:18%;width:120px;height:60px;z-index:2;opacity:.72;mix-blend-mode:screen;-webkit-mask-image:radial-gradient(ellipse at 62% 50%,#000 0%,#000 30%,rgba(0,0,0,.72) 48%,transparent 82%);mask-image:radial-gradient(ellipse at 62% 50%,#000 0%,#000 30%,rgba(0,0,0,.72) 48%,transparent 82%)}
+.layer-architecture img{width:2048px;left:-210px;top:-236px;filter:saturate(.65) contrast(1.28) brightness(.86)}
+.layer-landing{right:5.5vw;bottom:11%;width:92px;height:270px;z-index:2;opacity:.62;mix-blend-mode:screen;-webkit-mask-image:radial-gradient(ellipse at 50% 56%,#000 0%,#000 24%,rgba(0,0,0,.76) 44%,transparent 78%);mask-image:radial-gradient(ellipse at 50% 56%,#000 0%,#000 24%,rgba(0,0,0,.76) 44%,transparent 78%)}
+.layer-landing img{width:2048px;left:-1956px;top:-2620px;filter:saturate(.68) contrast(1.18) brightness(.82)}
+.section{padding:100px 0;border-top:1px solid rgba(38,50,71,.55);position:relative;overflow:hidden;background:var(--background)}
+.section-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:70px;align-items:start}
+.section-meta{position:sticky;top:94px;align-self:start}
+.asset-meta{margin-top:12px;color:#71809a;font:11px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace}
+.section-main h2{font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-.045em;margin:0 0 30px;max-width:930px}
+.visual-stack{position:relative;min-height:520px;isolation:isolate}
+.section-master{position:absolute;inset:0;margin:0;border:1px solid var(--outline);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);z-index:1}
+.section-master:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,9,13,.02),rgba(7,9,13,.18))}
+.section-master img{width:100%;height:100%;object-fit:cover;filter:saturate(.80) contrast(1.05) brightness(.78)}
+.shared-layer,.cross-layer{position:absolute;margin:0;overflow:hidden;pointer-events:none;z-index:2}
+.shared-layer--accent{right:28px;top:24px;width:168px;height:92px;opacity:.46;mix-blend-mode:screen;border-radius:var(--r-md)}
+.shared-layer--accent img{width:190%;height:190%;object-fit:cover;object-position:8% 4%;transform:translate(-8%,-4%);filter:saturate(.60) brightness(.72) contrast(1.18)}
+.shared-layer--field{right:24px;bottom:24px;width:290px;height:112px;opacity:.36;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+.shared-layer--field img{width:130%;height:130%;object-fit:cover;object-position:center}
+.cross-layer{left:26px;bottom:24px;width:190px;height:118px;opacity:.34;border:1px solid rgba(88,215,231,.18);border-radius:var(--r-md);background:var(--evidence)}
+.cross-layer img{width:100%;height:100%;object-fit:cover;filter:saturate(.65) brightness(.70) contrast(1.10)}
+.footer{padding:48px 0 72px;border-top:1px solid rgba(38,50,71,.65);color:var(--muted)}
+.footer strong{color:var(--on-surface)}
+@media (max-width:900px){
+  .shell{width:min(100% - 32px,var(--content))}
+  .nav{display:none}
+  .hero{display:block;min-height:auto;padding:64px 0 54px}
+  .hero:before{display:none}
+  .hero-copy{min-height:0;padding-bottom:30px}
+  .hero h1{font-size:clamp(42px,11.8vw,56px);max-width:8ch;margin-top:18px}
+  .hero-media{position:relative;inset:auto;display:flex;flex-direction:column;gap:12px;height:auto;padding:0 16px}
+  .layer{position:relative;inset:auto;right:auto;bottom:auto;transform:none}
+  .layer-master{width:100%;height:286px;border-radius:16px}
+  .layer-master img{width:246%;left:-93%;top:-60%}
+  .layer-architecture{width:96px;height:48px;opacity:.72;align-self:flex-end}
+  .layer-architecture img{width:1640px;left:-168px;top:-189px}
+  .layer-landing{width:56px;height:150px;opacity:.62;align-self:flex-start}
+  .layer-landing img{width:1440px;left:-1375px;top:-1842px}
+  .section{padding:72px 0}
+  .section-grid{grid-template-columns:1fr;gap:24px}
+  .section-meta{position:static}
+  .visual-stack{min-height:360px}
+  .shared-layer,.cross-layer{display:none}
+}
+@media (max-width:520px){
+  .shell{width:calc(100% - 24px)}
+  .visual-stack{min-height:300px}
+  .section-main h2{font-size:clamp(34px,10vw,46px)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap navin"><div class="brand">Mickael Rutembya · IA · Data · R&amp;D vérifiable</div><div class="links"><a href="#situations">Situations</a><a href="#preuves">Preuves</a><a href="#expertises">Expertises</a><a href="#engagement">Engagement</a><a href="#ressources">Ressources</a></div><a class="btn primary" href="https://mickael-umt.com/qualification/">Qualifier une mission</a></div></nav>
+<header class="topbar">
+  <div class="shell">
+    <a class="brand" href="#hero">Mickael UMT</a>
+    <nav class="nav" aria-label="Sections"><a href="#hero">Hero</a><a href="#pour-qui">Pour qui</a><a href="#situations">Situations</a><a href="#consultant">Consultant</a><a href="#preuves">Preuves</a><a href="#systeme">Système</a><a href="#catalogue">Catalogue</a><a href="#architecture">Architecture</a><a href="#formats">Formats</a><a href="#articles">Articles</a><a href="#produits">Produits</a><a href="#newsletter">Newsletter</a></nav>
+  </div>
+</header>
 <main>
-<section class="hero" id="home-hero" data-neo-section="home-section:hero"><div class="wrap"><div class="ey">AI systems · Data engineering · Verifiable infrastructure</div><h1>Des systèmes IA et data que l’entreprise peut mettre en production — puis reprendre, auditer et défendre.</h1><p>Architecture agentique, pipelines de données, permissions, évaluations, sécurité et preuves d’exécution : l’objectif est un système documenté dont vos équipes connaissent les limites, les critères de promotion et le mode de reprise.</p><div class="actions"><a class="btn primary" href="https://mickael-umt.com/qualification/">Évaluer la mission</a><a class="btn" href="https://mickael-umt.com/diagnostic/">Diagnostic sans rendez-vous</a></div></div></section>
-<section class="section" id="situations" data-neo-section="home-section:intent-mosaic"><div class="wrap"><div class="ey">Pour qui</div><h2>Commencez par la situation qui bloque la décision.</h2><p class="lead">En 2025, Eurostat mesure 19,95% des entreprises de l’UE de 10 personnes ou plus utilisant au moins une technologie d’IA.<span class="lp-cite"><a href="#ref-1" aria-label="Source 1">[1]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Eurostat · 2025</b>19,95% dans le champ UE.<em>OBSERVED · 157 000 entreprises interrogées ; ce n’est pas une mesure de maturité de production.</em></div></span></p><div class="grid g3"><article class="card"><span class="tag">Claire Dumas · CTO / AI Platform</span><h3>Démo convaincante, runtime non gouverné ?</h3><p>Cadrez outils, permissions, mémoire, observabilité et critères de promotion.</p></article><article class="card"><span class="tag">Dr. Antoine Moreau · Quality / CSV</span><h3>La preuve se reconstitue après coup ?</h3><p>Reliez exigences, données, contrôles, exceptions et décisions humaines.</p></article><article class="card"><span class="tag">Nadia Benali · AI Transformation</span><h3>L’usage IA reste individuel ?</h3><p>Transformez l’usage dispersé en compétences observables et règles d’escalade.</p></article></div><figure class="eug" role="img" aria-label="Part des entreprises utilisant l’IA en 2025, sept observations Eurostat" data-eug-id="EUG-HOME-EUROSTAT-AI-COUNTRY-2025" data-status="OBSERVED"><div class="eug-head"><h3>Adoption IA : l’écart entre pays reste massif.<span class="lp-cite"><a href="#ref-1" aria-label="Source 1, graphique adoption">[1]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Eurostat</b>Sept valeurs observées 2025, même métrique et même champ.<em>Échelle linéaire 0–100 ; aucune interpolation.</em></div></span></h3><span class="badge">7 marks · observed</span></div><div class="bars"><div class="bar"><span>Danemark</span><i class="track"><i class="fill" style="--v:42.03"></i></i><b class="val">42,03%</b></div><div class="bar"><span>Finlande</span><i class="track"><i class="fill" style="--v:37.82"></i></i><b class="val">37,82%</b></div><div class="bar"><span>Suède</span><i class="track"><i class="fill" style="--v:35.04"></i></i><b class="val">35,04%</b></div><div class="bar"><span>UE</span><i class="track"><i class="fill" style="--v:19.95"></i></i><b class="val">19,95%</b></div><div class="bar"><span>Bulgarie</span><i class="track"><i class="fill" style="--v:8.55"></i></i><b class="val">8,55%</b></div><div class="bar"><span>Pologne</span><i class="track"><i class="fill" style="--v:8.36"></i></i><b class="val">8,36%</b></div><div class="bar"><span>Roumanie</span><i class="track"><i class="fill" style="--v:5.21"></i></i><b class="val">5,21%</b></div></div><figcaption class="note">Population : entreprises UE ≥10 personnes ; période 2025 ; sélection de pays + agrégat UE ; échelle 0–100 ; aucune interpolation.</figcaption></figure></div></section>
-<section class="section" id="route" data-neo-section="home-section:route"><div class="wrap"><div class="ey">Qu’est-ce qui doit changer ?</div><h2>Six tensions, un principe : rendre l’exécution explicite.</h2><div class="rows"><div class="row"><b>01</b><strong>Systèmes agentiques</strong><small>Runtime, permissions, mémoire et évaluations bornées.</small></div><div class="row"><b>02</b><strong>Livraison &amp; sécurité</strong><small>Gates, threat model, rollback et propriétaires explicites.</small></div><div class="row"><b>03</b><strong>Données &amp; preuve</strong><small>Lineage, provenance et transformations reconstituables.</small></div><div class="row"><b>04</b><strong>Régulé</strong><small>Validation et contrôle proportionnés au risque : principe convergent des guidance publiques 2026.<span class="lp-cite"><a href="#ref-5" aria-label="Source 5">[5]</a><div class="lp-evidence-bubble-scroll" role="note" data-eu-id="EU-HT-EMA-FDA-GOOD-AI-2026"><b>EMA + FDA · janvier 2026</b>Principes : approche fondée sur le risque, provenance des données, performance adaptée au contexte, interaction humain–IA et suivi lifecycle.<em>Guidance, pas preuve d’un gain opérationnel.</em></div></span></small></div><div class="row"><b>05</b><strong>Adoption</strong><small>Tâches observables et règles de vérification.</small></div><div class="row"><b>06</b><strong>Contexte</strong><small>Sources, hypothèses, offres et mesures versionnées.</small></div></div><p class="lead">Parmi les entreprises sans IA qui l’avaient envisagée, Eurostat rapporte 70,89% citant le manque d’expertise<span class="lp-cite"><a href="#ref-4" aria-label="Source 4 expertise">[4]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Eurostat · sous-population</b>70,89% expertise ; 52,52% conséquences juridiques ; 48,83% protection des données / vie privée.<em>Raisons déclarées, pas effets causaux.</em></div></span>, 52,52% l’incertitude juridique<span class="lp-cite"><a href="#ref-4" aria-label="Source 4 juridique">[4]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Même dénominateur</b>Entreprises non utilisatrices ayant envisagé l’IA.</div></span> et 48,83% la protection des données.<span class="lp-cite"><a href="#ref-4" aria-label="Source 4 données">[4]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Boundary</b>Mesure déclarative ; aucune causalité inférée.</div></span></p><figure class="eug" role="img" aria-label="Eurostat 2025 par taille d’entreprise, deux panneaux à dénominateurs distincts" data-eug-id="EUG-HOME-EUROSTAT-AI-SIZE-2025" data-status="OBSERVED"><div class="eug-head"><h3>Taille d’entreprise : usage observé vs intérêt non converti.</h3><span class="badge">8 marks · observed</span></div><div class="panels"><div class="panel"><b>Usage IA — toutes entreprises<span class="lp-cite"><a href="#ref-1" aria-label="Source 1, taille">[1]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Eurostat</b>19,95 / 17,00 / 30,36 / 55,03%.</div></span></b><div class="bars"><div class="bar"><span>Total</span><i class="track"><i class="fill" style="--v:19.95"></i></i><b class="val">19,95%</b></div><div class="bar"><span>Petites</span><i class="track"><i class="fill" style="--v:17"></i></i><b class="val">17%</b></div><div class="bar"><span>Moyennes</span><i class="track"><i class="fill" style="--v:30.36"></i></i><b class="val">30,36%</b></div><div class="bar"><span>Grandes</span><i class="track"><i class="fill" style="--v:55.03"></i></i><b class="val">55,03%</b></div></div></div><div class="panel"><b>A envisagé l’IA — parmi non-utilisatrices</b><div class="bars"><div class="bar"><span>Total</span><i class="track"><i class="fill alt" style="--v:14.21"></i></i><b class="val">14,21%</b></div><div class="bar"><span>Petites</span><i class="track"><i class="fill alt" style="--v:12.65"></i></i><b class="val">12,65%</b></div><div class="bar"><span>Moyennes</span><i class="track"><i class="fill alt" style="--v:22.26"></i></i><b class="val">22,26%</b></div><div class="bar"><span>Grandes</span><i class="track"><i class="fill alt" style="--v:36.54"></i></i><b class="val">36,54%</b></div></div></div></div><figcaption class="note">Deux panneaux, deux dénominateurs explicitement séparés. Période 2025 ; échelle 0–100.</figcaption></figure></div></section>
-<section class="section" id="consultant" data-neo-section="home-section:consultant"><div class="wrap"><div class="ey">Le consultant</div><h2>Une même personne du cadrage au transfert.</h2><p class="lead">AI systems engineer · Data engineer. Le profil public indique Paris et des missions sur site, hybrides ou à distance.<span class="lp-cite"><a href="#ref-6" aria-label="Source 6">[6]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Profil public</b>Localisation et modes de mission uniquement ; aucune promesse de disponibilité future.</div></span></p><div class="metrics"><div class="metric"><b>Paris</b><span>base publique</span></div><div class="metric"><b>Hybride</b><span>sur site ou remote également</span></div><div class="metric"><b>1 owner</b><span>cadrage → transfert</span></div></div></div></section>
-<section class="section" id="preuves" data-neo-section="home-section:proof"><div class="wrap"><div class="ey">Ce qui est vérifiable, et jusqu’où</div><h2>La preuve publique est montrée. Le travail NDA reste borné.</h2><div class="grid g3"><article class="card"><span class="tag">NDA</span><h3>Governed AI Operations</h3><p>R&amp;D décrite sans transformer l’absence de code public en résultat vérifié.</p></article><article class="card"><span class="tag">Public</span><h3>Folder Mapper</h3><p>Le dépôt public expose un historique attribuable ; il sert de preuve de provenance de code, pas de performance externe.<span class="lp-cite"><a href="#ref-7" aria-label="Source 7">[7]</a><div class="lp-evidence-bubble-scroll" role="note"><b>GitHub · RickOwri/folder_mapper</b>Dépôt non-fork ; 7 commits attribués à RickOwri.<em>Preuve de réalisation, pas de performance client.</em></div></span></p></article><article class="card"><span class="tag">Bootcamp</span><h3>Lottery dApp</h3><p>Contribution sur scaffold de bootcamp explicitement présentée comme telle.<span class="lp-cite"><a href="#ref-8" aria-label="Source 8">[8]</a><div class="lp-evidence-bubble-scroll" role="note" data-eu-id="EU-SG-006"><b>GitHub · Lottery dApp</b>26 des 29 commits attribués à RickOwri ; provenance de contribution, pas création initiale.</div></span></p></article></div><p class="lead">Le préprint Bounded Agents évalue 3 154 instances<span class="lp-cite"><a href="#ref-2" aria-label="Source 2">[2]</a><div class="lp-evidence-bubble-scroll" role="note" data-eu-id="EU-AGENTIC-BOUNDED-EXFIL-0-2026"><b>arXiv:2608.15888 · 16 août 2026</b>3 154 instances incluant InjecAgent, AgentDojo et ASB.<em>Préprint ; benchmarks synthétiques ; pas de données de déploiement production.</em></div></span> ; son tableau 11 laisse des taux résiduels très différents selon la classe d’attaque.<span class="lp-cite"><a href="#ref-3" aria-label="Source 3">[3]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Table 11</b>0%, 0%, 4%, 12,1%, 60,4% ; la classe « parameter-level misuse » reste non quantifiée.</div></span></p><figure class="eug" role="img" aria-label="Taux résiduel de réussite d’attaque par cinq classes dans Bounded Agents" data-eug-id="EUG-HOME-BOUNDED-RESIDUAL-ASR-2026" data-status="OBSERVED_PREPRINT"><div class="eug-head"><h3>Un contrôle peut fermer certaines classes et en laisser d’autres ouvertes.<span class="lp-cite"><a href="#ref-3" aria-label="Source 3, graphique ASR">[3]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Préprint · Table 11</b>Résultats benchmark-spécifiques, non généralisables à tous les systèmes.</div></span></h3><span class="badge">5 marks · preprint</span></div><div class="bars"><div class="bar"><span>Exfiltration multi-step</span><i class="track"><i class="fill" style="--v:0"></i></i><b class="val">0%</b></div><div class="bar"><span>Privilege escalation</span><i class="track"><i class="fill" style="--v:0"></i></i><b class="val">0%</b></div><div class="bar"><span>Destruction</span><i class="track"><i class="fill" style="--v:4"></i></i><b class="val">4%</b></div><div class="bar"><span>Manipulation</span><i class="track"><i class="fill" style="--v:12.1"></i></i><b class="val">12,1%</b></div><div class="bar"><span>Single-action scope</span><i class="track"><i class="fill" style="--v:60.4"></i></i><b class="val">60,4%</b></div></div><figcaption class="note">Préprint 16 août 2026 ; benchmark synthétique ; taux d’attaque observé, pas taux d’incident en production.</figcaption></figure></div></section>
-<section class="section" id="expertises" data-neo-section="home-section:ecosystem"><div class="wrap"><div class="ey">Comment ça marche</div><h2>Dix expertises, un seul système de décision.</h2><p class="lead">Le moteur public expose dix clés de spécialité.<span class="lp-cite"><a href="#ref-9" aria-label="Source 9">[9]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Pricing specification</b>Dix specialty keys ; preuve de taxonomie, pas de qualité.</div></span></p><div class="grid g2"><article class="card"><h3>Agentic AI Engineering</h3><p>Runtime · tools · memory · evals</p></article><article class="card"><h3>Data Engineering</h3><p>Lineage · provenance · pipelines</p></article><article class="card"><h3>AI Security</h3><p>Threat model · policy gates · rollback</p></article><article class="card"><h3>Blockchain &amp; Verifiable Computing</h3><p>Shared state · proofs · key governance</p></article><article class="card"><h3>Reg / CSV</h3><p>Risk-based validation · traceability</p></article><article class="card"><h3>Clinical Data</h3><p>Quality automation · standards</p></article><article class="card"><h3>Pharmacovigilance</h3><p>Safety data · human review</p></article><article class="card"><h3>HealthTech Product</h3><p>Evidence-by-design · permissions</p></article><article class="card"><h3>Training</h3><p>Assessment · transfer · governance</p></article><article class="card"><h3>Marketing Engineering</h3><p>Context · research · measurement</p></article></div></div></section>
-<section class="section" id="positioning" data-neo-section="home-section:catalogue"><div class="wrap"><h2>Construire, sécuriser et évaluer le même système — pour qu’un propriétaire puisse le reprendre.</h2><div class="grid g3"><article class="card"><h3>Systèmes agentiques</h3><div class="ba"><div>Avant<br>outils implicites</div><div><b>Après</b><br>autorité bornée</div></div></article><article class="card"><h3>Livraison</h3><div class="ba"><div>Avant<br>contrôles tardifs</div><div><b>Après</b><br>promotion gates</div></div></article><article class="card"><h3>Transfert</h3><div class="ba"><div>Avant<br>savoir tacite</div><div><b>Après</b><br>preuves &amp; reprise</div></div></article></div><figure class="eug" role="img" aria-label="Taux de réussite des tâches AgentDojo, baseline contre mode interactif Bounded Agents, quatre domaines" data-eug-id="EUG-HOME-BOUNDED-UTILITY-2026" data-status="OBSERVED_PREPRINT"><div class="eug-head"><h3>La sécurité doit aussi mesurer ce qu’elle coûte en utilité.<span class="lp-cite"><a href="#ref-2" aria-label="Source 2, graphique utilité">[2]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Bounded Agents · Table 7</b>Moyennes de 3 runs ; 949 task–injection pairs ; comparaison baseline vs interactive.</div></span></h3><span class="badge">8 marks · preprint</span></div><div class="panels"><div class="panel"><b>Baseline</b><div class="bars"><div class="bar"><span>Workspace</span><i class="track"><i class="fill" style="--v:96.2"></i></i><b class="val">96,2%</b></div><div class="bar"><span>Banking</span><i class="track"><i class="fill" style="--v:68.8"></i></i><b class="val">68,8%</b></div><div class="bar"><span>Travel</span><i class="track"><i class="fill" style="--v:59.8"></i></i><b class="val">59,8%</b></div><div class="bar"><span>Slack</span><i class="track"><i class="fill" style="--v:73"></i></i><b class="val">73%</b></div></div></div><div class="panel"><b>Interactive enforcement</b><div class="bars"><div class="bar"><span>Workspace</span><i class="track"><i class="fill alt" style="--v:86.7"></i></i><b class="val">86,7%</b></div><div class="bar"><span>Banking</span><i class="track"><i class="fill alt" style="--v:58.8"></i></i><b class="val">58,8%</b></div><div class="bar"><span>Travel</span><i class="track"><i class="fill alt" style="--v:60"></i></i><b class="val">60%</b></div><div class="bar"><span>Slack</span><i class="track"><i class="fill alt" style="--v:60"></i></i><b class="val">60%</b></div></div></div></div><figcaption class="note">Même benchmark, mêmes domaines ; taux de réussite de tâche ; pas une estimation de productivité d’entreprise.</figcaption></figure></div></section>
-<section class="section" id="engagement" data-neo-section="home-section:positioning"><div class="wrap"><div class="ey">Engagement</div><h2>Cinq façons de travailler ensemble.</h2><p class="lead">Le moteur public décrit un calcul déterministe : mêmes entrées, même montant.<span class="lp-cite"><a href="#ref-10" aria-label="Source 10">[10]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Pricing determinism</b>Propriété de la spécification publique, pas preuve d’adéquation commerciale.</div></span></p><div class="grid g3"><article class="card"><h3>Diagnostic</h3><p>Qualifier avant implémentation.</p></article><article class="card"><h3>Sprint / programme</h3><p>Mandat borné et critères de sortie.</p></article><article class="card"><h3>Ingénieur intégré</h3><p>Exécution dans votre environnement.</p></article><article class="card"><h3>Lead fractionnel</h3><p>Architecture et arbitrage.</p></article><article class="card"><h3>Rôle permanent</h3><p>Quand la continuité exige un owner durable.</p></article></div></div></section>
-<section class="section" id="current-work" data-neo-section="home-section:engagement"><div class="wrap"><div class="ey">Ce qui vient de paraître</div><h2>Garder la frontière entre projet, règle et observation.</h2><div class="grid g2"><article class="card"><h3>Annexes GMP</h3><p>Traiter un projet comme signal de conception, pas comme texte final.</p></article><article class="card"><h3>ICH E6(R3)</h3><p>Le guideline consolidé a une date d’effet UE au 15 janvier 2027.<span class="lp-cite"><a href="#ref-11" aria-label="Source 11">[11]</a><div class="lp-evidence-bubble-scroll" role="note"><b>EMA</b>Date d’effet UE 15/01/2027 ; statut réglementaire, pas résultat observé.</div></span></p></article><article class="card"><h3>EHDS</h3><p>Préparer interopérabilité, journalisation et provenance sans promettre un gain non mesuré.</p></article><article class="card"><h3>Tokenisation</h3><p>La BCE rapporte 4,7 Md€ fin T1 2025 et 23,3 Md€ fin T1 2026 pour les actifs traditionnels tokenisés sur blockchains publiques dans son périmètre.<span class="lp-cite"><a href="#ref-12" aria-label="Source 12">[12]</a><div class="lp-evidence-bubble-scroll" role="note" data-eu-id="EU-MACRO-TOKENIZED-ASSETS-23.3B-2026Q1"><b>BCE · 26 août 2026</b>Deux observations : 4,7 Md€ → 23,3 Md€.<em>Aucune interpolation ni causalité ; métrique de marché, pas preuve de supériorité technique.</em></div></span></p></article></div></div></section>
-<section class="section" id="ressources" data-neo-section="home-section:current-work"><div class="wrap"><div class="ey">Le catalogue</div><h2>Ce qui s’achète sans me parler.</h2><p class="lead">La homepage publique affichait le 3 septembre 2026 40 produits à paiement unique : 27 frameworks/guides, 2 office-hours, 2 cohortes et 9 packs.<span class="lp-cite"><a href="#ref-13" aria-label="Source 13">[13]</a><div class="lp-evidence-bubble-scroll" role="note"><b>Homepage publique</b>27 + 2 + 2 + 9 = 40 ; snapshot du 03/09/2026.</div></span></p><div class="grid g3"><article class="card"><h3>Frameworks</h3><p>Cadrage réutilisable.</p></article><article class="card"><h3>Office hours</h3><p>Questions techniques bornées.</p></article><article class="card"><h3>Cohortes</h3><p>Accompagnement collectif.</p></article><article class="card"><h3>Packs</h3><p>Mécanismes combinés.</p></article><article class="card"><h3>Capacité</h3><p>Expertise récurrente.</p></article></div></div></section>
-<section class="section" id="newsletter" data-neo-section="home-section:faq"><div class="wrap"><div class="ey">Newsletter</div><h2>Articles et cadres méthodologiques, sans bruit supplémentaire.</h2><p class="lead">L’inscription reste séparée de la qualification commerciale.</p><div class="actions"><a class="btn" href="https://mickael-umt.com/">S’abonner sur le site</a></div></div></section>
-<section class="section" id="faq" data-neo-section="home-section:close"><div class="wrap"><h2>Ce que vous devez savoir avant de travailler ensemble.</h2><div class="grid g2"><article class="card"><h3>Quand intervenir ?</h3><p>Quand un système doit franchir un cap vérifiable.</p></article><article class="card"><h3>Avec vos équipes ?</h3><p>Prendre l’intersection architecture, data, IA, sécurité et production.</p></article><article class="card"><h3>Quel livrable ?</h3><p>Un actif repris après la mission : composant, pipeline, registre, evals, gates, tests ou documentation.</p></article><article class="card"><h3>Durée et budget ?</h3><p>Le plus petit engagement capable de produire le résultat attendu.</p></article></div></div></section>
-<section class="section" id="lead-form" data-neo-section="home-section:lead-form"><div class="wrap"><div class="ey">Prochaine étape</div><h2>Décrivez le système. Je renvoie un cadrage écrit.</h2><p class="lead">Périmètre, hypothèses, architecture probable, livrables, format d’engagement, critères d’acceptation — et limites.</p><div class="actions"><a class="btn primary" href="https://mickael-umt.com/qualification/">Évaluer la mission en 20 minutes</a><a class="btn" href="https://mickael-umt.com/engagement/">Voir les engagements</a></div></div></section>
+
+<section class="hero" id="hero" data-section="Hero" data-canonical-master="1aTa0rG2rHxqiRncNiC9_MTExBQVNqCXP" data-explicit-cross-binding="A15" data-shared-candidates="A04 A05 A16">
+  <div class="shell hero-copy">
+    <div class="section-kicker"><span>01</span>Hero</div>
+    <h1>Positionnement central.</h1>
+  </div>
+  <div class="hero-media" aria-hidden="true">
+    <figure class="layer layer-master" data-layer-role="dominant">
+      <img src="https://drive.google.com/uc?export=view&id=1aTa0rG2rHxqiRncNiC9_MTExBQVNqCXP" alt="" data-canonical-source="https://drive.google.com/file/d/1aTa0rG2rHxqiRncNiC9_MTExBQVNqCXP/view?usp=drivesdk">
+    </figure>
+    <figure class="layer layer-architecture" data-layer-role="grammar">
+      <img src="https://drive.google.com/uc?export=view&id=1_J4ENefJ0261EKs28d_PVKPEFhPZMQ_s" alt="" data-canonical-source="https://drive.google.com/file/d/1_J4ENefJ0261EKs28d_PVKPEFhPZMQ_s/view?usp=drivesdk">
+    </figure>
+    <figure class="layer layer-landing" data-layer-role="grammar">
+      <img src="https://drive.google.com/uc?export=view&id=1bAwKaNaXORbSutFE9_3L5H8cyzTRbMwr" alt="" data-canonical-source="https://drive.google.com/file/d/1bAwKaNaXORbSutFE9_3L5H8cyzTRbMwr/view?usp=drivesdk">
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="pour-qui" data-section="Pour qui" data-canonical-master="1aTvrj26Y8erUqTAd1fWPNzgxhZqegnAF" data-explicit-cross-binding="A02" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>02</span>Pour qui</div>
+      <div class="asset-meta">master · cross A02 · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Rôles de décision visés.</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1aTvrj26Y8erUqTAd1fWPNzgxhZqegnAF" alt="Rôles de décision visés." data-canonical-source="https://drive.google.com/file/d/1aTvrj26Y8erUqTAd1fWPNzgxhZqegnAF/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--accent" aria-hidden="true" data-asset="A04" data-layer-role="accent"><img src="https://drive.google.com/uc?export=view&id=1wUJy5BE9lDEbjyZOwcH0gZZC_lDkB05c" alt=""></figure>
+        <figure class="cross-layer" aria-hidden="true" data-asset="A02" data-layer-role="cross-binding"><img src="https://drive.google.com/uc?export=view&id=1pm1A1bnw7V2lzPJO3YwPIr3l9UQqpUE-" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="situations" data-section="Situations" data-canonical-master="1qBHzZBDIcnjClYjTchW6BxkvRNKwo0w_" data-explicit-cross-binding="A13" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>03</span>Situations</div>
+      <div class="asset-meta">master · cross A13 · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Situations d’achat et problèmes à résoudre.</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1qBHzZBDIcnjClYjTchW6BxkvRNKwo0w_" alt="Situations d’achat et problèmes à résoudre." data-canonical-source="https://drive.google.com/file/d/1qBHzZBDIcnjClYjTchW6BxkvRNKwo0w_/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--field" aria-hidden="true" data-asset="A05" data-layer-role="background"><img src="https://drive.google.com/uc?export=view&id=1R3OBarJciHGkC4nrQtRVWAT1upDhMt1y" alt=""></figure>
+        <figure class="cross-layer" aria-hidden="true" data-asset="A13" data-layer-role="cross-binding"><img src="https://drive.google.com/uc?export=view&id=1F8ZvYVJyG-Cr6lIfKdagQYBklHusiRch" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="consultant" data-section="Consultant" data-canonical-master="1MwcHL_HqTnxT7_b0o_oJKi9cSuzeC0z6" data-explicit-cross-binding="A13" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>04</span>Consultant</div>
+      <div class="asset-meta">master · cross A13 · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Intersection ingénierie, environnements régulés et preuve.</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1MwcHL_HqTnxT7_b0o_oJKi9cSuzeC0z6" alt="Intersection ingénierie, environnements régulés et preuve." data-canonical-source="https://drive.google.com/file/d/1MwcHL_HqTnxT7_b0o_oJKi9cSuzeC0z6/view?usp=drivesdk">
+        </figure>
+        
+        <figure class="cross-layer" aria-hidden="true" data-asset="A13" data-layer-role="cross-binding"><img src="https://drive.google.com/uc?export=view&id=1F8ZvYVJyG-Cr6lIfKdagQYBklHusiRch" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="preuves" data-section="Preuves" data-canonical-master="1eZXu0GX75xl0Q-rWOQoeuQycoxvEK2zA" data-explicit-cross-binding="none" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>05</span>Preuves</div>
+      <div class="asset-meta">master · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Projets publics, provenance et limites.</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1eZXu0GX75xl0Q-rWOQoeuQycoxvEK2zA" alt="Projets publics, provenance et limites." data-canonical-source="https://drive.google.com/file/d/1eZXu0GX75xl0Q-rWOQoeuQycoxvEK2zA/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--accent" aria-hidden="true" data-asset="A04" data-layer-role="accent"><img src="https://drive.google.com/uc?export=view&id=1wUJy5BE9lDEbjyZOwcH0gZZC_lDkB05c" alt=""></figure>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="systeme" data-section="Système" data-canonical-master="1Eow4-HYGui57xtRr696jgyvSQciGWOVw" data-explicit-cross-binding="A13" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>06</span>Système</div>
+      <div class="asset-meta">master · cross A13 · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Système</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1Eow4-HYGui57xtRr696jgyvSQciGWOVw" alt="Système" data-canonical-source="https://drive.google.com/file/d/1Eow4-HYGui57xtRr696jgyvSQciGWOVw/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--field" aria-hidden="true" data-asset="A05" data-layer-role="background"><img src="https://drive.google.com/uc?export=view&id=1R3OBarJciHGkC4nrQtRVWAT1upDhMt1y" alt=""></figure>
+        <figure class="cross-layer" aria-hidden="true" data-asset="A13" data-layer-role="cross-binding"><img src="https://drive.google.com/uc?export=view&id=1F8ZvYVJyG-Cr6lIfKdagQYBklHusiRch" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="catalogue" data-section="Catalogue" data-canonical-master="1wsWtW5BVuKnGDLssbxlEZG6MaZlRR1te" data-explicit-cross-binding="none" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>07</span>Catalogue</div>
+      <div class="asset-meta">master · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Catalogue</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1wsWtW5BVuKnGDLssbxlEZG6MaZlRR1te" alt="Catalogue" data-canonical-source="https://drive.google.com/file/d/1wsWtW5BVuKnGDLssbxlEZG6MaZlRR1te/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--accent" aria-hidden="true" data-asset="A04" data-layer-role="accent"><img src="https://drive.google.com/uc?export=view&id=1wUJy5BE9lDEbjyZOwcH0gZZC_lDkB05c" alt=""></figure>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="architecture" data-section="Architecture" data-canonical-master="1gYqUe6qX29Wszbt_xWDxjJRVtQPPMJAK" data-explicit-cross-binding="A02" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>08</span>Architecture</div>
+      <div class="asset-meta">master · cross A02 · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Architecture</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1gYqUe6qX29Wszbt_xWDxjJRVtQPPMJAK" alt="Architecture" data-canonical-source="https://drive.google.com/file/d/1gYqUe6qX29Wszbt_xWDxjJRVtQPPMJAK/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--field" aria-hidden="true" data-asset="A05" data-layer-role="background"><img src="https://drive.google.com/uc?export=view&id=1R3OBarJciHGkC4nrQtRVWAT1upDhMt1y" alt=""></figure>
+        <figure class="cross-layer" aria-hidden="true" data-asset="A02" data-layer-role="cross-binding"><img src="https://drive.google.com/uc?export=view&id=1pm1A1bnw7V2lzPJO3YwPIr3l9UQqpUE-" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="formats" data-section="Formats" data-canonical-master="1obg9772f2wPuDfS1zUPxSQzEvwZdWqvo" data-explicit-cross-binding="A02" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>09</span>Formats</div>
+      <div class="asset-meta">master · cross A02 · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Formats</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1obg9772f2wPuDfS1zUPxSQzEvwZdWqvo" alt="Formats" data-canonical-source="https://drive.google.com/file/d/1obg9772f2wPuDfS1zUPxSQzEvwZdWqvo/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--accent" aria-hidden="true" data-asset="A04" data-layer-role="accent"><img src="https://drive.google.com/uc?export=view&id=1wUJy5BE9lDEbjyZOwcH0gZZC_lDkB05c" alt=""></figure>
+        <figure class="cross-layer" aria-hidden="true" data-asset="A02" data-layer-role="cross-binding"><img src="https://drive.google.com/uc?export=view&id=1pm1A1bnw7V2lzPJO3YwPIr3l9UQqpUE-" alt=""></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="articles" data-section="Articles" data-canonical-master="1kH0r4IUwt9Tof8fAeICq_0geT2EJYqJw" data-explicit-cross-binding="none" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>10</span>Articles</div>
+      <div class="asset-meta">master · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Articles</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=1kH0r4IUwt9Tof8fAeICq_0geT2EJYqJw" alt="Articles" data-canonical-source="https://drive.google.com/file/d/1kH0r4IUwt9Tof8fAeICq_0geT2EJYqJw/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--field" aria-hidden="true" data-asset="A05" data-layer-role="background"><img src="https://drive.google.com/uc?export=view&id=1R3OBarJciHGkC4nrQtRVWAT1upDhMt1y" alt=""></figure>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="produits" data-section="Produits" data-canonical-master="14s3lenjSby8munAljje1rb8VlYwFbbht" data-explicit-cross-binding="none" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>11</span>Produits</div>
+      <div class="asset-meta">master · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Produits</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=14s3lenjSby8munAljje1rb8VlYwFbbht" alt="Produits" data-canonical-source="https://drive.google.com/file/d/14s3lenjSby8munAljje1rb8VlYwFbbht/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--accent" aria-hidden="true" data-asset="A04" data-layer-role="accent"><img src="https://drive.google.com/uc?export=view&id=1wUJy5BE9lDEbjyZOwcH0gZZC_lDkB05c" alt=""></figure>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="newsletter" data-section="Newsletter" data-canonical-master="19XXJ0a9x__srFgJK60GEtVusNp4nuy9D" data-explicit-cross-binding="none" data-shared-candidates="A04 A05 A16" data-page-grammar="A16">
+  <div class="shell section-grid">
+    <div class="section-meta">
+      <div class="section-kicker"><span>12</span>Newsletter</div>
+      <div class="asset-meta">master · shared A04/A05/A16</div>
+    </div>
+    <div class="section-main">
+      <h2>Newsletter</h2>
+      <div class="visual-stack">
+        <figure class="section-master" data-layer-role="dominant">
+          <img src="https://drive.google.com/uc?export=view&id=19XXJ0a9x__srFgJK60GEtVusNp4nuy9D" alt="Newsletter" data-canonical-source="https://drive.google.com/file/d/19XXJ0a9x__srFgJK60GEtVusNp4nuy9D/view?usp=drivesdk">
+        </figure>
+        <figure class="shared-layer shared-layer--field" aria-hidden="true" data-asset="A05" data-layer-role="background"><img src="https://drive.google.com/uc?export=view&id=1R3OBarJciHGkC4nrQtRVWAT1upDhMt1y" alt=""></figure>
+        
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="footer"><div class="wrap"><div class="ey">Evidence register</div><p>Les marqueurs [n] suivent le plus petit claim supporté ; hover/focus expose un résumé et l’activation mène au registre. Les EUG reconstruisent uniquement des valeurs publiées.</p><div class="refs"><div class="ref" id="ref-1"><b>[1] Eurostat — Use of artificial intelligence in enterprises.</b> Données 2025 ; échantillon 157 000 entreprises sur 1,53 M dans le champ. <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises">Source</a>.</div><div class="ref" id="ref-2"><b>[2] X. Muruaga — Bounded Agents.</b> arXiv:2608.15888v1, 16 août 2026, CC BY 4.0 ; 3 154 instances ; benchmarks synthétiques. <a href="https://arxiv.org/html/2608.15888v1">Méthodes &amp; tables</a>.</div><div class="ref" id="ref-3"><b>[3] Bounded Agents — Table 11.</b> ASR résiduel : 0%, 0%, 4%, 12,1%, 60,4% ; parameter-level misuse non quantifié. <a href="https://arxiv.org/html/2608.15888v1">Table 11</a>.</div><div class="ref" id="ref-4"><b>[4] Eurostat — Reasons for not using AI.</b> Dénominateur : non-utilisatrices ayant envisagé l’IA ; 70,89%, 52,52%, 48,83%.</div><div class="ref" id="ref-5"><b>[5] EMA + FDA — Guiding principles of good AI practice.</b> Janvier 2026 ; page EMA mise à jour 14 août 2026. <a href="https://www.ema.europa.eu/en/about-us/how-we-work/data-regulation-big-data-other-sources/artificial-intelligence">EMA</a>.</div><div class="ref" id="ref-6"><b>[6] Profil public mickael-umt.com.</b> Paris ; missions sur site, hybrides ou à distance. <a href="https://mickael-umt.com/">Source</a>.</div><div class="ref" id="ref-7"><b>[7] GitHub — RickOwri/folder_mapper.</b> Provenance de dépôt uniquement. <a href="https://github.com/RickOwri/folder_mapper">Dépôt</a>.</div><div class="ref" id="ref-8"><b>[8] GitHub — Lottery dApp bootcamp.</b> Contribution sur scaffold, pas création initiale. <a href="https://github.com/RickOwri/Encode-Club-Solidity-Bootcamp-Project-W5-LotteryDapp">Dépôt</a>.</div><div class="ref" id="ref-9"><b>[9] Mission pricing specification.</b> Dix specialty keys. <a href="https://mickael-umt.com/api/public/pricing-spec">Spec</a>.</div><div class="ref" id="ref-10"><b>[10] Pricing determinism.</b> Propriété bornée au moteur public.</div><div class="ref" id="ref-11"><b>[11] EMA — ICH E6(R3).</b> Date d’effet UE : 15 janvier 2027. <a href="https://www.ema.europa.eu/en/ich-e6-good-clinical-practice-scientific-guideline">EMA</a>.</div><div class="ref" id="ref-12"><b>[12] BCE — From vision to delivery.</b> 26 août 2026 ; 4,7 Md€ T1 2025 → 23,3 Md€ T1 2026. <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html">BCE</a>.</div><div class="ref" id="ref-13"><b>[13] Homepage publique.</b> Snapshot 03/09/2026 : 27 frameworks, 2 office-hours, 2 cohortes, 9 packs = 40. <a href="https://mickael-umt.com/">Source</a>.</div></div><p class="note">Publication boundary : représentation night-mode de travail basée sur l’artefact GitHub préexistant ; pas un patch du DOM live tant que les sélecteurs/XPath du build déployé et les verdicts LLM NeoFort concordants ne sont pas matérialisés sur ce snapshot.</p></div></footer>
-<script type="application/json" id="devicev-evidence-manifest">{"run_id":"DEVICEV-HOME-2026-09-03","page":"https://mickael-umt.com/","repository":"mckeopharma-web/copywriting","artifact_path":"pages/mickael-umt.com.html","structure_lock":{"source":"page:home","section_count":13,"section_delta":0,"reorder":false},"evidence_loop":{"requested_candidate_pool":80,"neofort_eligible_pool_found":100,"admitted_or_judge_pass_in_eligible_pool":60,"arxiv_candidates_in_eligible_pool":6,"selected_count":30,"selection_rule":"Only ADMITTED, JUDGE_PASS, or ADMITTED_BY_MACRO_MARKET_JUDGE items are agent-exploitable in this artifact; pending/blocked candidates are excluded.","selected_30":["EU-MNSC-DEV-AI-RCT-4867-2026","EU-NATMED-CDSS-ADOPTION-1138-2026","EU-MKTSCI-GENAI-PERSONALIZED-VIDEO-2025","EU-REQENG-TRACEABILITY-QE-2025","EU-AGENTIC-AGENTDOJO-629-2024","EU-AGENTIC-NIST-AIRMF-4-FUNCTIONS","EU-AGENTIC-NIST-TEVV-4-STAGES-2026","EU-AGENTIC-TASKBENCH-3-STAGES-2024","EU-AGENTIC-BOUNDED-EXFIL-0-2026","EU-AGENTIC-BOUNDED-INJEC-544-2026","EU-AGENTIC-MEMSECBENCH-PERSIST-84_2-2026","EU-AGENTIC-PERMISSIONS-21-PROPOSALS-2026","EU-SG-001","EU-SG-002","EU-SG-003","EU-SG-004","EU-SG-005","EU-SG-007","EU-HT-EMA-FDA-GOOD-AI-2026","EU-CANON-EHDS-EHR-TESTING-2026","EU-BC-IRONDICT-VERIFY-2026","EU-BC-MHOT-WRITE-THROUGHPUT-2026","EU-BLOCKBENCH-THROUGHPUT-SPREAD-2017","EU-BLOCKBENCH-LATENCY-SPREAD-2017","EU-CROSBY-LOG-INSERT-2009","EU-CONIKS-LOOKUP-SIZE-2015","EU-ZKSA-VERIFY-2021","EU-JISA-BBS-VERIFY-2024","EU-MACRO-TOKENIZED-ASSETS-23.3B-2026Q1","EU-SG-006"]},"public_surface":{"distinct_reference_records":13,"distributed_inline_markers":17,"eug_count":4,"eug_ids":["EUG-HOME-EUROSTAT-AI-COUNTRY-2025","EUG-HOME-EUROSTAT-AI-SIZE-2025","EUG-HOME-BOUNDED-RESIDUAL-ASR-2026","EUG-HOME-BOUNDED-UTILITY-2026"]},"policy_snapshot":["policy:qgeu:data-visualization-analyst-v1","policy:evidence-agent-exploitability:proof-carrying-v3","policy:evidence-agent-exploitability:deterministic-preflight-v2","evidence-placement-policy:site-v5","policy:evidence-placement:claim-span-entailment-v2.2","judge:evidence-unit:champion-v2","judge:evidence:factfulness-epistemology-methodology-v2","judge:evidence-graphic:presentation-v1","judge:evidence-placement:presentation-v1.2","policy:evidence-judge-applicability:v2","policy:evidence-judge-verdict-normalization:v2","policy:llm-judge:deterministic-execution-v2"],"publication_state":"GITHUB_VALIDATED_PREVIEW_NOT_LIVE","publication_boundary":"GitHub preview only. No live DOM write and no Google Drive write."}</script>
-<script type="application/json" id="neofort-claim-loop-contract">{"loop":"loop:copy-claim:external-capability-v1.2-topology-preserving","judge":"judge:copy-claim:external-capability-grounding-v1.2","family":"homepage","topology_contract":"PRESERVE_SECTION_ORDER_IDS_NAVIGATION_CTA_AND_VISIBLE_COMPOSITION","body_replacement_forbidden":true,"visible_copy_wholesale_replacement_forbidden":true,"research_anchor_sections":["preuves","home-hero","situations"],"research_corpus":["https://arxiv.org/html/2608.15888v1","https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises","https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html","https://www.ema.europa.eu/en/about-us/how-we-work/data-regulation-big-data-other-sources/artificial-intelligence","https://www.ema.europa.eu/en/ich-e6-good-clinical-practice-scientific-guideline","https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence","https://www.w3.org/TR/prov-overview/"],"source_count":7,"section_count":3,"sources_per_section_ratio":2.333333,"source_section_threshold":0.72,"source_section_comparator":"STRICT_GREATER_THAN","source_section_gate":"PASS","capability_boundary":"CV/project proof remains invariant; product/configuration context is semi-mobile","sequence_upgrade_rule":"existing sequence -> external research -> semantic compression -> capability boundary -> 3-replica judge -> targeted patch only","topology_sha256":"892abac1496ea8109803d1dac644d47bad395d7d1c6f50dab911667f326e081e","publication_status":"PENDING_FORMAL_LLM_JUDGE"}</script>
-</body></html>
+<footer class="footer">
+  <div class="shell">
+    <strong>Homepage /</strong> · 12 sections XML · canonical masters + separate reusable layers · A16 remains page-level composition grammar and is not flattened into section imagery.
+  </div>
+</footer>
+<script type="application/json" id="asset-contract">
+{
+  "version": "one-section-many-image-assets-v1",
+  "page": "/",
+  "source_of_truth": "design/mickael-umt.com/site-sections-copywriting.xml",
+  "design_tokens": "design/mickael-umt.com/_index--DESIGN.md",
+  "shared_candidate_pool": {
+    "A04": {
+      "id": "1wUJy5BE9lDEbjyZOwcH0gZZC_lDkB05c",
+      "role": "accent"
+    },
+    "A05": {
+      "id": "1R3OBarJciHGkC4nrQtRVWAT1upDhMt1y",
+      "role": "background"
+    },
+    "A16": {
+      "id": "1TBcLS-Olw9DD9276GjIji5-oDICtuevD",
+      "role": "page-level-grammar"
+    }
+  },
+  "section_order": [
+    "Hero",
+    "Pour qui",
+    "Situations",
+    "Consultant",
+    "Preuves",
+    "Système",
+    "Catalogue",
+    "Architecture",
+    "Formats",
+    "Articles",
+    "Produits",
+    "Newsletter"
+  ],
+  "rule": "REUSE > CROP/EXTRACT > LAYER > VECTORIZE > GENERATE NEW"
+}
+</script>
+</body>
+</html>
