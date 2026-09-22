@@ -1,0 +1,40 @@
+name: avatar-agentic-ai section contract
+
+on:
+  pull_request:
+    paths:
+      - 'engagement/audiences/avatar-agentic-ai.html'
+      - 'engagement/audiences/avatar-agentic-ai_contract-audit_2026-09-04.xml'
+      - 'tools/validate_avatar_agentic_ai_section_contract.py'
+      - '.github/workflows/avatar-agentic-ai-section-contract.yml'
+  push:
+    branches:
+      - 'review/avatar-agentic-ai-contract-2026-09-04'
+    paths:
+      - 'engagement/audiences/avatar-agentic-ai.html'
+      - 'engagement/audiences/avatar-agentic-ai_contract-audit_2026-09-04.xml'
+      - 'tools/validate_avatar_agentic_ai_section_contract.py'
+      - '.github/workflows/avatar-agentic-ai-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic-section-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate target-only section contract
+        run: |
+          python tools/validate_avatar_agentic_ai_section_contract.py \
+            engagement/audiences/avatar-agentic-ai_contract-audit_2026-09-04.xml \
+            engagement/audiences/avatar-agentic-ai.html
+      - name: Fail closed on publication status
+        run: |
+          grep -q 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"' engagement/audiences/avatar-agentic-ai.html
+          grep -q 'status="PENDING_NOT_FABRICATED"' engagement/audiences/avatar-agentic-ai_contract-audit_2026-09-04.xml
+          grep -q 'status="BLOCKED_PENDING_3_REPLICA_PLACEMENT_JUDGE"' engagement/audiences/avatar-agentic-ai_contract-audit_2026-09-04.xml
