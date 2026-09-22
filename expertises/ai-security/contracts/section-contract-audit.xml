@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section-contract-audit
+  audit-id="AISEC-SECTION-CONTRACT-2026-09-04"
+  version="1.0"
+  execution-posture="FAIL_CLOSED"
+  target-url="https://mickael-umt.com/expertises/ai-security/"
+  repository="mckeopharma-web/copywriting"
+  branch-base="main"
+  base-commit="bd165acdd92e1a4de6b94fa20eddf535f67a7ef5">
+
+  <scope-lock>
+    <mutable-page>expertises/ai-security/ai-security.html</mutable-page>
+    <other-expertise-pages mutation="FORBIDDEN"/>
+    <programme-pages mutation="FORBIDDEN"/>
+    <google-drive mutation="FORBIDDEN_UNTIL_EXPLICIT_USER_APPROVAL"/>
+  </scope-lock>
+
+  <contract-source>
+    <repository-path>.skills/source-first-atomic-design-v4/SKILL.md</repository-path>
+    <contract-name>Update Plan: expertise/ and programmes/ (v4 Source-First + Atomic Design)</contract-name>
+    <contract-date>2026-08-12</contract-date>
+    <mode>Option C — content refresh + template refactor</mode>
+    <visual-source-of-truth>assets/design/design-system/atomic-design/</visual-source-of-truth>
+    <canonical-order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical-order>
+    <hard-dna>D0-D3: structure_family, topology, content_anatomy, primary_interaction_model</hard-dna>
+    <soft-dna>D5-D8 may adapt without changing inherited structure</soft-dna>
+  </contract-source>
+
+  <family-contracts>
+    <family id="S-series" routes="/expertises/, /expertises/&lt;category&gt;/, expertise detail surfaces">
+      <rule>Render the complete 23-section buyer journey when the page can bear it; omission requires an explicit justified-subset record.</rule>
+      <semantic-order>hero,triggers,problems,audience,qualification,proposition,value,offers,product,transformation,before_after,results,proof,scope,phases,modules,capabilities,intersection,benchmark,guarantee,faq,engagement,lead_form</semantic-order>
+    </family>
+    <family id="P-series" routes="/programme/, /programme/&lt;slug&gt;/">
+      <hub-minimum>hero,triggers,problems,audience,qualification,offers,engagement,lead_form</hub-minimum>
+      <detail-rule>Programme detail pages inherit the 23-section canonical order when applicable.</detail-rule>
+    </family>
+    <family id="R-series" routes="regulated programme details">
+      <detail-rule>Preserve P-series sequence while retaining regulated-content forms, decision chain and evidence boundaries.</detail-rule>
+    </family>
+    <common-sections>hero,proof,engagement</common-sections>
+  </family-contracts>
+
+  <neofort-current-policy-resolution>
+    <policy id="policy:evidence-agent-exploitability:deterministic-preflight-v2" version="2.0" current="true" fail-closed="true"/>
+    <policy id="policy:evidence-agent-exploitability:proof-carrying-v3" version="3.0" current="true" fail-closed="true"/>
+    <policy id="policy:evidence-judge-applicability:v2" version="2.0" current="true" fail-closed="true"/>
+    <policy id="policy:evidence-judge-verdict-normalization:v2" version="2.0" current="true" fail-closed="true"/>
+    <policy id="policy:llm-judge:deterministic-execution-v2" version="2.0" current="true" replicas="3" temperature="0" top-p="1"/>
+    <policy id="policy:evidence-placement:claim-span-entailment-v2" version="2.2" current="true" fail-closed="true"/>
+    <policy id="evidence-placement-policy:site-v5" version="5.0" current="true"/>
+    <judge id="judge:evidence:factfulness-epistemology-methodology-v2" version="2.0" current="true" replicas="3" temperature="0" top-p="1" threshold="90"/>
+    <judge id="judge:evidence-placement:presentation-v1.2" version="1.2" current="true" replicas="3" temperature="0" top-p="1" threshold="85"/>
+    <judge id="judge:evidence-placement:presentation-v1" version="1.1" current="false" disposition="SUPERSEDED_NOT_EXECUTED" superseded-by="judge:evidence-placement:presentation-v1.2"/>
+    <reduction>Required booleans = AND; aggregate score = MIN; categorical disagreement blocks; majority voting is forbidden.</reduction>
+  </neofort-current-policy-resolution>
+
+  <target-page-state neo4j-id="page:source:7.1">
+    <page-record publication-status="PERSISTED_GITHUB" evidence-units="10" graph-evidence-units="4" public-citations="14"/>
+    <page-level-record factfulness="PASS" placement="PASS" copy-claim="PASS" agent-exploitability="PASS_10_EU_4_QGEU" current-policy-validation="FINAL_PASS"/>
+    <buyer-role id="buyer-role:ai-security" persona="Marc Lefèvre" role="Responsable gouvernance, risque ou sécurité IA" validation="PARTIAL_TO_VALIDATE">
+      <quote-status>SYNTHESIS_NOT_CUSTOMER_VERBATIM</quote-status>
+      <unknown-fields>age,gender,marital-status,children,income,exact-geography,education,information-sources,brands-influencers</unknown-fields>
+    </buyer-role>
+  </target-page-state>
+
+  <comparison>
+    <live-reference semantic-count="23" anchor-count="17" status="PASS">
+      <snapshot>expertises/ai-security/contracts/live-structure.xml</snapshot>
+    </live-reference>
+    <repository-html semantic-exact-or-nested-count="19" anchor-count="17" status="BLOCKED_REFERENCE_DRIFT">
+      <snapshot>expertises/ai-security/contracts/source-html-structure.xml</snapshot>
+      <missing token="03" canonical="transformation" live-form="state-shift"/>
+      <missing token="05" canonical="capabilities" live-form="CV-ranked capability proof"/>
+      <missing token="06" canonical="benchmark" live-form="market reference" evidence-state="structure-only; no re-admission"/>
+      <missing token="08" canonical="lead_form" live-form="eight-screen qualification flow"/>
+    </repository-html>
+  </comparison>
+
+  <github-validation-design>
+    <existing-workflow path=".github/workflows/claim-loop-topology-preserving-v12.yml" use-for-this-audit="NO">
+      <reason>It runs on HTML changes and has contents:write plus a repository-wide materialisation step; that is broader than the page-only mutation scope.</reason>
+    </existing-workflow>
+    <scoped-workflow path=".github/workflows/ai-security-section-contract.yml" permissions="contents:read">
+      <purpose>Validate that the XML snapshots are well-formed, the repository HTML still preserves the 17-anchor topology, and the declared four-token drift matches observable source state without mutating HTML.</purpose>
+      <validator-pass-semantics>PASS means the audit is internally consistent. It does not convert BLOCKED_REFERENCE_DRIFT into publication PASS.</validator-pass-semantics>
+    </scoped-workflow>
+  </github-validation-design>
+
+  <final-decision status="BLOCKED_REFERENCE_DRIFT">
+    <reason>The live source of truth carries all 23 semantic forms. The GitHub HTML preserves the 17 navigation anchors but omits four distinct live forms: transformation, capabilities, benchmark and lead form.</reason>
+    <safe-next-mutation>Patch only expertises/ai-security/ai-security.html to restore those four live forms while preserving the existing anchor topology, evidence placements and dark visual structure; rerun deterministic and placement validation before any merge.</safe-next-mutation>
+  </final-decision>
+</section-contract-audit>

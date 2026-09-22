@@ -1,0 +1,108 @@
+name: AI Security section contract audit
+
+on:
+  pull_request:
+    paths:
+      - 'expertises/ai-security/ai-security.html'
+      - 'expertises/ai-security/contracts/*.xml'
+      - '.github/workflows/ai-security-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate live/source XML and page-only topology
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          page = Path('expertises/ai-security/ai-security.html')
+          live_xml = Path('expertises/ai-security/contracts/live-structure.xml')
+          src_xml = Path('expertises/ai-security/contracts/source-html-structure.xml')
+          audit_xml = Path('expertises/ai-security/contracts/section-contract-audit.xml')
+
+          for p in (page, live_xml, src_xml, audit_xml):
+              if not p.is_file():
+                  raise SystemExit(f'MISSING_REQUIRED_FILE:{p}')
+
+          live = ET.parse(live_xml).getroot()
+          src = ET.parse(src_xml).getroot()
+          audit = ET.parse(audit_xml).getroot()
+
+          if live.get('semantic-contract-status') != 'PASS_23_OF_23':
+              raise SystemExit('LIVE_SNAPSHOT_NOT_23_OF_23')
+
+          live_seq = live.find('canonical-semantic-sequence')
+          src_seq = src.find('canonical-semantic-sequence')
+          if live_seq is None or len(live_seq.findall('section')) != 23:
+              raise SystemExit('LIVE_CANONICAL_SECTION_COUNT_MISMATCH')
+          if src_seq is None or len(src_seq.findall('section')) != 23:
+              raise SystemExit('SOURCE_CANONICAL_MAPPING_COUNT_MISMATCH')
+
+          html = page.read_text(encoding='utf-8')
+          nav = re.search(r'<nav class="anchorbar"[^>]*>(.*?)</nav>', html, re.S)
+          if not nav:
+              raise SystemExit('ANCHORBAR_NOT_FOUND')
+          observed_anchors = re.findall(r'href="#([^"]+)"', nav.group(1))
+          expected_anchors = [
+              'triggers','consequences','buyer','qualification','proposition',
+              'offers','deliverables','before-after','results','evidence','scope',
+              'process','modules','intersection','commitments','questions','engagement'
+          ]
+          if observed_anchors != expected_anchors:
+              raise SystemExit(
+                  'ANCHOR_TOPOLOGY_DRIFT\n'
+                  f'expected={expected_anchors}\nobserved={observed_anchors}'
+              )
+
+          # The current GitHub reconstruction is intentionally audited, not silently repaired.
+          # These four canonical forms exist on the live source of truth but are not distinct
+          # section forms in this HTML snapshot.
+          required_distinct = {
+              '03': 'transformation',
+              '05': 'capabilities',
+              '06': 'benchmark',
+              '08': 'lead-form',
+          }
+          observed_missing = []
+          for token, section_id in required_distinct.items():
+              pattern = rf'<section\b[^>]*\bid=["\']{re.escape(section_id)}["\']'
+              if not re.search(pattern, html, re.I):
+                  observed_missing.append(token)
+
+          declared_missing = sorted(
+              node.get('token') for node in audit.findall('./comparison/repository-html/missing')
+          )
+          observed_missing = sorted(observed_missing)
+          if observed_missing != declared_missing:
+              raise SystemExit(
+                  'AUDIT_DRIFT_DECLARATION_MISMATCH\n'
+                  f'declared={declared_missing}\nobserved={observed_missing}'
+              )
+
+          verdict = audit.find('final-decision')
+          if verdict is None or verdict.get('status') != 'BLOCKED_REFERENCE_DRIFT':
+              raise SystemExit('FAIL_CLOSED_VERDICT_MISSING')
+
+          if src.find('./structure-verdict').get('status') != 'BLOCKED_REFERENCE_DRIFT':
+              raise SystemExit('SOURCE_SNAPSHOT_VERDICT_MISMATCH')
+
+          print('VALIDATOR=PASS')
+          print('PAGE_CONTRACT=BLOCKED_REFERENCE_DRIFT')
+          print('ANCHOR_TOPOLOGY=PASS_17_OF_17')
+          print('LIVE_SEMANTIC_CANON=PASS_23_OF_23')
+          print('SOURCE_EXACT_OR_NESTED_CANON=19_OF_23')
+          print('MISSING_CANONICAL_TOKENS=' + ','.join(observed_missing))
+          print('MUTATION_SCOPE=AI_SECURITY_CONTRACT_ARTIFACTS_ONLY')
+          PY
