@@ -1,0 +1,263 @@
+schema_version: blockchain-programmability-evidence-placement/v3
+page_id: page:source:8.1
+page_url: https://mickael-umt.com/expertises/blockchain/
+evidence_policy_id: policy:blockchain:programmability-performance-evidence-v1
+status: COPYWRITING_TRIAGE_ONLY
+site_modified: false
+revision_date: 2026-09-01
+
+ordering_contract:
+  - PageSection.order
+  - UIComponent
+  - CopySubcomponent
+  - CopySequence
+  - NLP.semantic_role
+  - XPath
+  - EvidencePlacement
+  - SourceBoundary
+
+tokenizer:
+  token_count_source: NeoFort.CopySequence.token_count
+  current_status: PENDING_MATERIALIZATION
+  rule: do_not_invent_token_counts
+
+xpath_policy:
+  existing_sequences: TEXT_ANCHORED_CURRENT_RENDER
+  proposed_sequences: DATA_COPY_SEQ_DOM_CONTRACT
+  proposed_xpath_status: PROPOSED_DOM_CONTRACT__NOT_IN_CURRENT_SITE
+
+aliases:
+  seq:blockchain:consequences:history-integrity: seq:blockchain:consequence:history
+  seq:blockchain:proposition:onchain-offchain: seq:blockchain:functional:selective-disclosure
+
+sequences:
+  - order: 1
+    section_id: section:blockchain:hero
+    component_id: hero-h1
+    sequence_id: seq:blockchain:hero:h1
+    semantic_role: CATEGORY_POSITIONING
+    token_count: null
+    action: KEEP
+    xpath: '//main//h1[normalize-space(.)="Ancrez on-chain ce qu’un tiers doit vérifier, jamais ce qu’il suffit de stocker."]'
+
+  - order: 2
+    section_id: section:blockchain:hero
+    component_id: hero-evidence-strip
+    sequence_id: seq:blockchain:hero:evidence-strip:programmability-quality
+    semantic_role: ARCHITECTURE_DECISION_PROOF
+    token_count: null
+    action: REPLACE_MARKET_EVIDENCE
+    xpath: '//main//*[contains(normalize-space(.),"Cinq fois plus d’actifs tokenisés sur blockchains publiques en un an") and contains(normalize-space(.),"BCE")]'
+    placement:
+      id: eugp:blockchain:hero:programmability-quality:2026-09-01
+      kind: GRAPH_EVIDENCE_UNIT
+      eug_id: QGEU-PROGRAMMABILITY-QUALITY-DB-VS-DLT-2026
+      graph_support_id: QGEU-DB-VS-DLT-THROUGHPUT-2026
+      score: 99.5
+      gate: PASS
+
+  - order: 3
+    section_id: section:blockchain:triggers
+    component_id: component:blockchain:triggers:coordination
+    sequence_id: seq:blockchain:trigger:coordination
+    semantic_role: COORDINATION_TRIGGER
+    token_count: null
+    action: ADD_PROPOSED
+    xpath: "//*[@data-copy-seq='seq:blockchain:trigger:coordination']"
+    placement:
+      id: eup:blockchain:triggers:coordination-mechanism:2026-09-01
+      kind: MECHANISM_SUPPORT_EUP
+      eu_id: EU-ECB-PROGRAMMABILITY-COORDINATION-MECHANISM-2026
+      numeric_claim_allowed: false
+
+  - order: 4
+    section_id: section:blockchain:triggers
+    component_id: component:blockchain:triggers:conditional-execution
+    sequence_id: seq:blockchain:trigger:conditional-execution
+    semantic_role: EXECUTION_TRIGGER
+    token_count: null
+    action: ADD_PROPOSED
+    xpath: "//*[@data-copy-seq='seq:blockchain:trigger:conditional-execution']"
+    placement:
+      kind: MECHANISM_CONTINUATION
+      source_eu_id: EU-ECB-PROGRAMMABILITY-COORDINATION-MECHANISM-2026
+      duplicate_public_eup: false
+
+  - order: 5
+    section_id: section:blockchain:triggers
+    component_id: trigger-selective-verification
+    sequence_id: seq:blockchain:trigger:privacy
+    semantic_role: SELECTIVE_VERIFICATION_TRIGGER
+    token_count: null
+    action: KEEP_AND_DEMOTE_TO_THIRD_TRIGGER
+    xpath: '//main//*[self::p or self::li][normalize-space(.)="Un partenaire doit vérifier une affirmation sans avoir accès aux données qui la fondent."]'
+    placement:
+      kind: EVIDENCE_UNIT
+      eu_id: EU-ZKSA-VERIFY-2021
+      value: 1.4
+      unit: ms/proof
+
+  - order: 6
+    section_id: section:blockchain:consequences
+    component_id: claim-platform-first
+    sequence_id: seq:blockchain:consequences:platform-first
+    semantic_role: FIT_DISCRIMINATOR
+    token_count: null
+    action: REWRITE
+    xpath: '//*[contains(normalize-space(.),"Le projet démarre par une plateforme")][not(.//*[contains(normalize-space(.),"Le projet démarre par une plateforme")])]'
+    placement:
+      id: eugp:blockchain:consequences:db-vs-dlt-throughput:2026-09-01
+      kind: GRAPH_EVIDENCE_UNIT
+      eug_id: QGEU-DB-VS-DLT-THROUGHPUT-2026
+      score: 98
+      gate: PASS
+
+  - order: 7
+    section_id: section:blockchain:consequences
+    component_id: claim-history-integrity
+    sequence_id: seq:blockchain:consequence:history
+    semantic_role: OBJECTION_REFRAME
+    token_count: null
+    action: REWRITE
+    xpath: '//main//*[self::p or self::div][contains(normalize-space(.),"Signer les exports ne suffit pas") and contains(normalize-space(.),"réécriture de l’historique")]'
+    placement:
+      kind: EVIDENCE_UNIT
+      eu_id: EU-BC-MERKLE-LOG-VERIFY-2026
+      value: 0.000035
+      unit: seconds/log-record
+
+  - order: 8
+    section_id: section:blockchain:consequences
+    component_id: claim-multisig-governance
+    sequence_id: seq:blockchain:consequences:multisig-governance
+    semantic_role: GOVERNANCE_RISK
+    token_count: null
+    action: REWRITE
+    xpath: '//*[contains(normalize-space(.),"Un multisig ne répond pas à la question")][not(.//*[contains(normalize-space(.),"Un multisig ne répond pas à la question")])]'
+    placement:
+      kind: EVIDENCE_UNIT
+      eu_id: EU-BC-EIP7702-MALICIOUS-AUTH-2026
+      value: '>63'
+      unit: percent
+
+  - order: 9
+    section_id: section:blockchain:proposition
+    component_id: proposition-process-model
+    sequence_id: seq:blockchain:proposition:mechanism
+    semantic_role: VALUE_DIFFERENTIATOR
+    token_count: null
+    action: REWRITE_PROCESS_FIRST
+    xpath: '//main//*[self::p or self::div][contains(normalize-space(.),"La plupart des projets blockchain paient pour stocker") and contains(normalize-space(.),"frontière claim/evidence")]'
+    mechanism_support_eu_id: EU-ECB-PROGRAMMABILITY-COORDINATION-MECHANISM-2026
+
+  - order: 10
+    section_id: section:blockchain:functional
+    component_id: functional-selective-disclosure
+    sequence_id: seq:blockchain:functional:selective-disclosure
+    semantic_role: MECHANISM_EXPLANATION
+    token_count: null
+    action: KEEP_AS_SPECIALIZED_CAPABILITY
+    xpath: '//main//*[self::p or self::div][contains(normalize-space(.),"La preuve va on-chain") and contains(normalize-space(.),"donnée confidentielle reste off-chain")]'
+    placement:
+      kind: EVIDENCE_UNIT
+      eu_id: EU-JISA-BBS-VERIFY-2024
+      support_eu_id: EU-BC-ZKP-VERIFY-LATENCY-2026
+
+  - order: 11
+    section_id: section:blockchain:delivery-performance
+    component_id: component:blockchain:delivery:settlement
+    sequence_id: seq:blockchain:delivery-performance:settlement
+    semantic_role: DELIVERY_SPEED_EVIDENCE
+    token_count: null
+    action: ADD_PROPOSED
+    xpath: "//*[@data-copy-seq='seq:blockchain:delivery-performance:settlement']"
+    placement:
+      id: eugp:blockchain:delivery:settlement-80s:2026-09-01
+      kind: GRAPH_EVIDENCE_UNIT
+      eug_id: QGEU-BIS-AGORA-SETTLEMENT-80S-2026
+      score: 95.5
+      gate: PASS
+
+  - order: 12
+    section_id: section:blockchain:delivery-performance
+    component_id: component:blockchain:delivery:cost
+    sequence_id: seq:blockchain:delivery-performance:cost
+    semantic_role: DELIVERY_COST_EVIDENCE
+    token_count: null
+    action: ADD_PROPOSED
+    xpath: "//*[@data-copy-seq='seq:blockchain:delivery-performance:cost']"
+    placement:
+      id: eugp:blockchain:delivery:pontes-cost:2026-09-01
+      kind: GRAPH_EVIDENCE_UNIT
+      eug_id: QGEU-ECB-PONTES-DELIVERY-COST-STRUCTURE-2026
+      score: 93.5
+      gate: PASS
+
+  - order: 13
+    section_id: section:blockchain:delivery-performance
+    component_id: component:blockchain:delivery:availability
+    sequence_id: seq:blockchain:delivery-performance:availability
+    semantic_role: OPERATING_MODEL_EVIDENCE
+    token_count: null
+    action: ADD_PROPOSED
+    xpath: "//*[@data-copy-seq='seq:blockchain:delivery-performance:availability']"
+    placement:
+      id: eugp:blockchain:delivery:pontes-availability:2026-09-01
+      kind: GRAPH_EVIDENCE_UNIT
+      eug_id: QGEU-ECB-PONTES-AVAILABILITY-ROADMAP-2026-2028
+      score: 92.5
+      gate: PASS
+
+  - order: 14
+    section_id: section:blockchain:resultats
+    component_id: claim-independent-verifier
+    sequence_id: seq:blockchain:resultats:independent-verifier
+    semantic_role: ACCEPTANCE_CRITERION
+    token_count: null
+    action: REPLACE_PRIMARY_EU
+    xpath: '//*[contains(normalize-space(.),"Un tiers recalcule la preuve sans accès à vos systèmes")][not(.//*[contains(normalize-space(.),"Un tiers recalcule la preuve sans accès à vos systèmes")])]'
+    placement:
+      id: eup:blockchain:resultats:irondict-independent-verification:2026-09-01
+      kind: EVIDENCE_UNIT
+      eu_id: EU-BC-IRONDICT-VERIFY-2026
+      value: 35
+      unit: milliseconds
+
+  - order: 15
+    section_id: section:blockchain:resultats
+    component_id: component:blockchain:resultats:assurance-coverage
+    sequence_id: seq:blockchain:resultats:assurance-coverage
+    semantic_role: ASSURANCE_COVERAGE
+    token_count: null
+    action: ADD_PROPOSED
+    xpath: "//*[@data-copy-seq='seq:blockchain:resultats:assurance-coverage']"
+    placement:
+      id: eup:blockchain:resultats:solidity-assurance-coverage:2026-09-01
+      kind: EVIDENCE_UNIT
+      eu_id: EU-BC-SOLIDITY-TOOLS-COVERAGE-2026
+      value: 76.78
+      unit: percent
+
+  - order: 16
+    section_id: section:blockchain:engagements
+    component_id: claim-crypto-not-audit
+    sequence_id: seq:blockchain:engagements:crypto-not-audit
+    semantic_role: BOUNDARY_CONDITION
+    token_count: null
+    action: KEEP_REWRITE_WITH_NATIVE_EU
+    xpath: '//*[contains(normalize-space(.),"Un engagement cryptographique n’est pas un audit de sécurité")][not(.//*[contains(normalize-space(.),"Un engagement cryptographique n’est pas un audit de sécurité")])]'
+    placement:
+      kind: EVIDENCE_UNIT
+      eu_id: EU-BC-SC-SLR-TAXONOMY-2026
+
+publication_gates:
+  - existing_xpath_match_count_must_equal_1
+  - proposed_xpath_blocked_until_dom_attribute_exists
+  - graph_quality_gate_must_be_PASS
+  - no_cross_panel_arithmetic
+  - ecb_coordination_eu_is_mechanism_only
+  - agora_80s_has_no_legacy_speedup_factor
+  - pontes_pricing_is_not_TCO
+  - pontes_availability_is_PLANNED
+  - alias_sequences_do_not_duplicate_public_placements
+  - tokenizer_counts_fail_closed_until_materialized
