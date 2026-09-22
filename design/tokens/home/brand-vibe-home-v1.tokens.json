@@ -1,0 +1,48 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "asset": "brand-vibe-report-home-v1",
+    "page_url": "https://mickael-umt.com/",
+    "version": "1.0.0",
+    "date": "2026-09-09",
+    "source_paths": [
+      "pages/mickael-umt.com.html",
+      ".skills/source-first-atomic-design-v4/SKILL.md"
+    ],
+    "note": "Observed homepage tokens plus explicitly labeled brand-foundation synthesis."
+  },
+  "color": {
+    "background": {"$value": "#07090d", "$type": "color", "$description": "Observed homepage base background."},
+    "panel": {"$value": "#0d1118", "$type": "color", "$description": "Observed homepage panel surface."},
+    "panelElevated": {"$value": "#111823", "$type": "color", "$description": "Observed homepage elevated panel surface."},
+    "line": {"$value": "#263247", "$type": "color", "$description": "Observed homepage structural line/border."},
+    "text": {"$value": "#f4f7fb", "$type": "color", "$description": "Observed homepage primary text."},
+    "muted": {"$value": "#a7b1c2", "$type": "color", "$description": "Observed homepage secondary text."},
+    "cyan": {"$value": "#58d7e7", "$type": "color", "$description": "Observed homepage cyan accent; use for evidence, inspection and active states."},
+    "violet": {"$value": "#8b7cff", "$type": "color", "$description": "Observed homepage violet accent; use for architecture and system relationships."},
+    "positive": {"$value": "#6de0a1", "$type": "color", "$description": "Observed homepage positive accent; reserve for accepted or verified state."}
+  },
+  "typography": {
+    "fontFamily": {"$value": ["Inter", "system-ui", "sans-serif"], "$type": "fontFamily", "$description": "Observed homepage stack."},
+    "voiceDensity": {"$value": "information-dense", "$type": "string", "$description": "Synthesis: high information density without decorative clutter."},
+    "headingBehavior": {"$value": "large, compact line-height, negative tracking", "$type": "string", "$description": "Observed homepage hero/section heading behavior."}
+  },
+  "radius": {
+    "button": {"$value": "12px", "$type": "dimension", "$description": "Observed homepage button radius."},
+    "card": {"$value": "18px", "$type": "dimension", "$description": "Observed homepage card radius."}
+  },
+  "motif": {
+    "pulseLine": {"$value": "pulse-line", "$type": "string", "$description": "Atomic-design t0 signature motif."},
+    "shieldOrbit": {"$value": "shield-orbit", "$type": "string", "$description": "Atomic-design t0 signature motif."},
+    "proofRing": {"$value": "proof-ring", "$type": "string", "$description": "Atomic-design t0 signature motif."},
+    "dataStream": {"$value": "data-stream", "$type": "string", "$description": "Atomic-design t0 signature motif."},
+    "hexGrid": {"$value": "hex-grid", "$type": "string", "$description": "Atomic-design t0 signature motif."},
+    "orbitPoint": {"$value": "orbit-point", "$type": "string", "$description": "Atomic-design t0 signature motif."}
+  },
+  "semantic": {
+    "brandEmotion": {"$value": "controlled competence", "$type": "string", "$description": "SYNTHESIS — primary brand emotion."},
+    "oneEmotionSentence": {"$value": "Rendre la complexité inspectable, bornée et reprise en main.", "$type": "string", "$description": "SYNTHESIS — portable emotional anchor."},
+    "narrativeLoop": {"$value": "situation -> hidden risk -> system boundary -> mechanism -> evidence -> residual limit -> human owner -> next decision", "$type": "string", "$description": "SYNTHESIS — recommended brand narrative rhythm."},
+    "visualMetaphor": {"$value": "decision control room", "$type": "string", "$description": "SYNTHESIS — use as a visual design test, not as literal copy."}
+  }
+}
