@@ -1,0 +1,51 @@
+name: Agentic AI offer structure lock
+
+on:
+  push:
+    paths:
+      - 'expertises/agentic-ai/**'
+      - 'contracts/agentic-ai-offer-structure-lock.json'
+      - 'scripts/validate_agentic_ai_offer_structure.py'
+      - '.github/workflows/agentic-ai-offer-structure-lock.yml'
+  pull_request:
+    paths:
+      - 'expertises/agentic-ai/**'
+      - 'contracts/agentic-ai-offer-structure-lock.json'
+      - 'scripts/validate_agentic_ai_offer_structure.py'
+      - '.github/workflows/agentic-ai-offer-structure-lock.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agentic-ai-offer-structure-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-structure-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate exact 18-section live contract and 8-screen qualifier
+        run: python3 scripts/validate_agentic_ai_offer_structure.py
+
+      - name: Assert DEVICEV publication remains fail-closed before formal placement judge
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path('contracts/agentic-ai-offer-structure-lock.json').read_text())
+          assert p['publication_gate']['current_status'] == 'BLOCKED_PENDING_FORMAL_PLACEMENT_JUDGE'
+          assert p['publication_gate']['formal_placement_judge_executed'] is False
+          assert p['policy_resolution']['replicas'] == 3
+          assert p['policy_resolution']['temperature'] == 0
+          assert p['policy_resolution']['top_p'] == 1
+          print('PASS: structure may validate; publication remains blocked until formal placement/presentation judge output exists.')
+          PY

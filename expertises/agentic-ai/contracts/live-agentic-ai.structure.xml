@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageSnapshot
+  schemaVersion="1.0"
+  pageId="page:source:5.1"
+  source="https://mickael-umt.com/expertises/agentic-ai/"
+  observedAt="2026-09-04T02:03:00+02:00"
+  theme="night-compatible"
+  rawOriginBuildMaterialized="false"
+  reconstructionPolicy="SEMANTIC_AND_VISIBLE_COPY_RECONSTRUCTION">
+
+  <sourceState>
+    <authority>LIVE_WEBSITE_SOURCE_OF_TRUTH</authority>
+    <fidelityBoundary>Section count, order, section nature, visible headings, buyer role, CTA position and qualification-form topology are represented. Exact server-rendered DOM, template ancestry and CSS byte identity are not asserted.</fidelityBoundary>
+    <publicationPosture>FAIL_CLOSED</publicationPosture>
+  </sourceState>
+
+  <pageIdentity>
+    <offer>Agentic AI Engineering</offer>
+    <heroClaim>Un agent que vous ne pouvez ni tracer ni arrêter n’est pas production-ready.</heroClaim>
+    <promise>Transformer des agents prometteurs en services observables, contrôlables et exploitables.</promise>
+    <result>Une architecture d’agents avec permissions explicites, mémoire gouvernée, évaluations, supervision humaine et preuves d’exécution.</result>
+    <format>3–12 mois · 2–5 jours/semaine · lead technique ou ingénieur intégré</format>
+    <decisionMaker>CTO / Head of AI Platform</decisionMaker>
+    <stack>Python · FastAPI · MCP · RAG · evaluation harnesses · PostgreSQL</stack>
+  </pageIdentity>
+
+  <sectionContract sectionCount="18" sectionDeltaAllowed="0" reorderAllowed="false">
+    <section order="0" id="hero" canonicalAlias="top" kind="offer_hero" semanticRole="promise_result_format_decision_maker_stack">
+      <label>Agentic AI Engineering</label>
+      <heading>Un agent que vous ne pouvez ni tracer ni arrêter n’est pas production-ready.</heading>
+      <form>hero + mandate summary + primary/secondary CTA</form>
+    </section>
+    <section order="1" id="triggers" canonicalAlias="triggers" kind="purchase_triggers" semanticRole="purchase_trigger_conditions">
+      <label>Le moment où ça devient un sujet</label>
+      <heading>Vous reconnaissez l’un de ces moments, ou ce n’est pas encore le sujet.</heading>
+      <form>four dated trigger cards</form>
+    </section>
+    <section order="2" id="consequences" canonicalAlias="consequences" kind="problem_consequences" semanticRole="problem_cost_and_failed_workarounds">
+      <label>Ce que ça coûte, et pourquoi le contournement ne tient pas</label>
+      <heading>Ce que ça coûte, et pourquoi le contournement évident ne tient pas.</heading>
+      <form>problem → workaround → limitation sequences</form>
+    </section>
+    <section order="3" id="audience" canonicalAlias="for-whom" kind="buyer_fit" semanticRole="buyer_and_operational_pressure">
+      <label>Pour qui, et sous quelle pression</label>
+      <heading>Le décideur qui achète ce mandat, et ce qui pèse sur lui.</heading>
+      <form>role-first avatar + today/after state</form>
+      <avatar name="Claire Dumas" role="CTO / Head of AI Platform" validation="PARTIAL_EVIDENCE_ROLE_FIRST"/>
+    </section>
+    <section order="4" id="qualification" canonicalAlias="qualification" kind="qualification_gate" semanticRole="fit_and_unfit_conditions">
+      <label>Avant de réserver quoi que ce soit</label>
+      <heading>Les conditions, avant de réserver quoi que ce soit.</heading>
+      <form>fit / no-fit two-column gate</form>
+    </section>
+    <section order="5" id="proposition" canonicalAlias="proposition" kind="value_mechanism" semanticRole="offer_mechanism_claim_to_proof">
+      <label>La logique, avant les outils</label>
+      <heading>Transformer des agents prometteurs en services observables, contrôlables et exploitables.</heading>
+      <form>mechanism narrative + four buying attributes</form>
+    </section>
+    <section order="6" id="offers" canonicalAlias="offers" kind="buying_configurations" semanticRole="how_to_buy_and_offer_configurations">
+      <label>Comment on l’achète</label>
+      <heading>Quelle configuration, et combien.</heading>
+      <form>seven configurations routed to solution atlas</form>
+    </section>
+    <section order="7" id="deliverables" canonicalAlias="deliverables" kind="deliverables" semanticRole="delivered_artifacts">
+      <label>Ce qui existe à la fin, et qui n’existait pas avant</label>
+      <heading>Ce qui existe à la fin et n’existait pas avant.</heading>
+      <form>three numbered deliverables + handoff state</form>
+    </section>
+    <section order="8" id="transformation" canonicalAlias="before-after" kind="state_transition" semanticRole="before_after_client_state">
+      <label>L’état d’arrivée</label>
+      <heading>Ce que le mandat déplace.</heading>
+      <form>single before → after transformation + axis comparison</form>
+    </section>
+    <section order="9" id="results" canonicalAlias="results" kind="acceptance_results" semanticRole="target_results_and_acceptance_criteria">
+      <label>Ce qui est visé, et de quel type</label>
+      <heading>Ce qui est visé, et de quel type.</heading>
+      <form>status-labelled acceptance criteria and already-built example</form>
+    </section>
+    <section order="10" id="proofs" canonicalAlias="proof" kind="execution_proof" semanticRole="technical_proof_and_provenance">
+      <label>Ce sur quoi ça repose, et ce que ça ne prouve pas</label>
+      <heading>Des preuves proportionnées à la promesse.</heading>
+      <form>public projects + NDA R&amp;D + explicit missing production metrics</form>
+    </section>
+    <section order="11" id="scope" canonicalAlias="scope" kind="scope_boundary" semanticRole="included_and_excluded_scope">
+      <label>Ce qui est dedans, ce qui n’y est pas</label>
+      <heading>Le périmètre, ses exclusions et ses dépendances.</heading>
+      <form>in-scope / out-of-scope / client dependencies</form>
+    </section>
+    <section order="12" id="process" canonicalAlias="process" kind="delivery_process" semanticRole="mission_delivery_flow">
+      <label>Le déroulé, et où l’on peut s’arrêter</label>
+      <heading>Quatre phases, quatre sorties possibles.</heading>
+      <form>Cartographie → Bornage → Évaluation → Passation</form>
+    </section>
+    <section order="13" id="modules" canonicalAlias="modules" kind="delivery_modules" semanticRole="modular_delivery_bricks">
+      <label>Les blocs de travail</label>
+      <heading>Les blocs de travail, sans ordre imposé.</heading>
+      <form>Permission / Mémoire / Évaluation / Observation</form>
+    </section>
+    <section order="14" id="intersection" canonicalAlias="intersection" kind="differentiation" semanticRole="cross_skill_differentiation">
+      <label>Capacités extraites du CV + ce que le croisement supprime</label>
+      <heading>Le différenciateur est le croisement, pas l’addition.</heading>
+      <form>capability proof atoms + cross-skill seams + market reference</form>
+    </section>
+    <section order="15" id="commitments" canonicalAlias="commitments" kind="controllable_commitments" semanticRole="guarantees_limits_and_responsibility">
+      <label>Ce qui est garanti, et ce qui ne peut pas l’être</label>
+      <heading>Ce qui est garanti est le produit de travail, jamais le résultat d’une autorité.</heading>
+      <form>controllable commitments + explicit non-guarantees</form>
+    </section>
+    <section order="16" id="faq" canonicalAlias="questions" kind="objections_faq" semanticRole="purchase_objections_and_questions">
+      <label>Ce qui reste à lever</label>
+      <heading>Ce qui reste à lever.</heading>
+      <form>four purchase objections / answers</form>
+    </section>
+    <section order="17" id="engagement" canonicalAlias="engagement" kind="next_step_cta" semanticRole="qualification_and_next_step">
+      <label>La prochaine étape, en entier</label>
+      <heading>Évaluer la mission en 20 minutes</heading>
+      <form>meeting expectation + fit/no-fit outcome + CTA routes</form>
+    </section>
+  </sectionContract>
+
+  <postEngagementQualification countedAsSection="false" screenCount="8" collection="live-site-only">
+    <heading>Le bon format d’intervention, avant le premier rendez-vous.</heading>
+    <screen order="1" topic="decision_subject"/>
+    <screen order="2" topic="decision_timing_and_buying_role"/>
+    <screen order="3" topic="intervention_mode"/>
+    <screen order="4" topic="weekly_cadence"/>
+    <screen order="5" topic="organisation_size"/>
+    <screen order="6" topic="scope_maturity"/>
+    <screen order="7" topic="regulated_trigger"/>
+    <screen order="8" topic="contact_and_expected_outcome"/>
+  </postEngagementQualification>
+
+  <buyerEvidence>
+    <avatar name="Claire Dumas" role="CTO / Head of AI Platform" mode="ROLE_FIRST">
+      <known>production decision ownership; agent authority; security; data; reliability; governance</known>
+      <notEvidenced>age; gender; family status; children; individual income; education; brands/influencers; information sources; events; platform use; real client verbatim; validated budget range</notEvidenced>
+    </avatar>
+  </buyerEvidence>
+
+  <evidenceCandidates>
+    <evidenceUnit id="EU-AGENTIC-AGENTDOJO-629-2024" status="ADMITTED_AGENT_EXPLOITABLE_FACTFULNESS_PASS" targetSection="consequences" boundary="benchmark only"/>
+    <evidenceUnit id="EU-AGENTIC-NIST-TEVV-4-STAGES-2026" status="ADMITTED_AGENT_EXPLOITABLE_FACTFULNESS_PASS" targetSection="proposition" boundary="official draft methodology; no business-outcome inference"/>
+    <evidenceUnit id="EU-AGENTIC-MEMSECBENCH-PERSIST-84_2-2026" status="ADMITTED_AGENT_EXPLOITABLE_FACTFULNESS_PASS" targetSection="modules" boundary="controlled preprint benchmark; no production prevalence inference"/>
+  </evidenceCandidates>
+
+  <validation>
+    <structureExpected>PASS</structureExpected>
+    <formalPlacementJudge>NOT_EXECUTED</formalPlacementJudge>
+    <publication>BLOCKED_PENDING_3_REPLICA_PLACEMENT_JUDGE</publication>
+  </validation>
+</pageSnapshot>

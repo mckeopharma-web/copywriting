@@ -1,0 +1,77 @@
+{
+  "schema_version": "devicev-placement-candidates-v1",
+  "page": "expertises/agentic-ai/agentic-ai-live-devicev-v1.html",
+  "source_page": "https://mickael-umt.com/expertises/agentic-ai/",
+  "policy_source": "NeoFort current=true",
+  "requested_judge_alias": "judge:eu:placementv1",
+  "resolved_judge": "judge:evidence-placement:presentation-v1.2",
+  "execution": {
+    "replicas": 3,
+    "temperature": 0,
+    "top_p": 1,
+    "hard_gate_reducer": "AND",
+    "score_reducer": "MIN",
+    "identical_immutable_snapshot_required": true
+  },
+  "candidates": [
+    {
+      "eu_id": "EU-AGENTIC-AGENTDOJO-629-2024",
+      "section_id": "consequences",
+      "claim_element_id": "claim-agentdojo",
+      "xpath": "//*[@id='claim-agentdojo']",
+      "claim": "AgentDojo, benchmark NeurIPS 2024 pour des agents utilisant des outils sur des données non fiables, comporte 97 tâches réalistes et 629 cas de test de sécurité.",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html",
+      "source_locator": "abstract benchmark-size sentence",
+      "upstream": {
+        "deterministic_preflight": "PASS",
+        "factfulness": "PASS",
+        "admission": "ADMITTED",
+        "agent_exploitability": "ALLOWED",
+        "all_applicable_llm_judges": "PASS",
+        "champion_score": 97
+      },
+      "boundary": "Benchmark scope only; not a production incident rate.",
+      "placement_status": "PENDING_FORMAL_3_REPLICA"
+    },
+    {
+      "eu_id": "EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "section_id": "proposition",
+      "claim_element_id": "claim-nist-tevv",
+      "xpath": "//*[@id='claim-nist-tevv']",
+      "claim": "Le projet public TEVV-Athlon de NIST décrit en 2026 une méthode en quatre étapes pour construire des évaluations IA adaptées au contexte et inclut explicitement les systèmes agentiques dans son périmètre.",
+      "source": "https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+      "source_locator": "NIST TEVV-Athlon overview and abstract",
+      "upstream": {
+        "deterministic_preflight": "PASS",
+        "factfulness": "PASS",
+        "admission": "ADMITTED",
+        "agent_exploitability": "ALLOWED",
+        "all_applicable_llm_judges": "PASS",
+        "champion_score": 96
+      },
+      "boundary": "Official initial public draft methodology; not proof of consulting efficacy or business outcomes.",
+      "placement_status": "PENDING_FORMAL_3_REPLICA"
+    },
+    {
+      "eu_id": "EU-AGENTIC-MEMSECBENCH-PERSIST-84_2-2026",
+      "section_id": "modules",
+      "claim_element_id": "claim-memsec",
+      "xpath": "//*[@id='claim-memsec']",
+      "claim": "Dans MemSecBench, sur 310 cas et 24 configurations, la mémoire malveillante persiste dans 84,2 % des cas de l’évaluation contrôlée.",
+      "source": "https://arxiv.org/abs/2607.27080",
+      "source_locator": "abstract, benchmark size and persistence result",
+      "upstream": {
+        "deterministic_preflight": "PASS",
+        "factfulness": "PASS",
+        "admission": "ADMITTED",
+        "agent_exploitability": "ALLOWED",
+        "all_applicable_llm_judges": "PASS",
+        "champion_score": 90
+      },
+      "boundary": "Controlled open-preprint benchmark; not production prevalence.",
+      "placement_status": "PENDING_FORMAL_3_REPLICA"
+    }
+  ],
+  "publication_status": "BLOCKED_PENDING_FORMAL_PLACEMENT_JUDGE",
+  "rule": "No candidate is promoted to FINAL_PASS merely because its upstream EvidenceUnit is admitted. Placement and presentation remain independent hard gates."
+}

@@ -1,0 +1,131 @@
+{
+  "contract_id": "rule:agentic-ai:offer-structure-lock:v1",
+  "version": "1.0.0",
+  "scope": "expertises/agentic-ai only",
+  "source_of_truth": "https://mickael-umt.com/expertises/agentic-ai/",
+  "source_page_id": "page:source:5.1",
+  "candidate_page": "expertises/agentic-ai/agentic-ai-live-devicev-v1.html",
+  "existing_repository_page": "expertises/agentic-ai/agentic-ai.html",
+  "existing_repository_blob_sha": "021640d7945de8ebc81083e27191f21c0b30f1b0",
+  "section_count": 18,
+  "section_delta_allowed": 0,
+  "reorder_allowed": false,
+  "fail_closed": true,
+  "source_snapshot": {
+    "observed_at": "2026-09-04T02:03:00+02:00",
+    "raw_build_materialized": false,
+    "fallback_mode": "SEMANTIC_AND_VISIBLE_COPY_RECONSTRUCTION",
+    "fidelity_claim": "Structure, section nature, visible positioning, buyer role and qualification-form topology are locked. Raw server-side DOM/CSS identity is NOT claimed because the complete origin build could not be materialized in this execution environment."
+  },
+  "policy_resolution": {
+    "policy_source": "NeoFort current=true",
+    "requested_alias": "judge:eu:placementv1",
+    "resolved_current_judge": "judge:evidence-placement:presentation-v1.2",
+    "placement_policy": "policy:evidence-placement:claim-span-entailment-v2",
+    "deterministic_preflight_policy": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "factfulness_judge": "judge:evidence:factfulness-epistemology-methodology-v2",
+    "llm_judge_policy": "policy:llm-judge:deterministic-execution-v2",
+    "replicas": 3,
+    "temperature": 0,
+    "top_p": 1,
+    "boolean_reducer": "AND",
+    "score_reducer": "MIN",
+    "publication_posture": "FAIL_CLOSED"
+  },
+  "sections": [
+    {"order": 0, "id": "hero", "canonical_alias": "top", "kind": "offer_hero", "semantic_role": "promise_result_format_decision_maker_stack"},
+    {"order": 1, "id": "triggers", "canonical_alias": "triggers", "kind": "purchase_triggers", "semantic_role": "purchase_trigger_conditions"},
+    {"order": 2, "id": "consequences", "canonical_alias": "consequences", "kind": "problem_consequences", "semantic_role": "problem_cost_and_failed_workarounds"},
+    {"order": 3, "id": "audience", "canonical_alias": "for-whom", "kind": "buyer_fit", "semantic_role": "buyer_and_operational_pressure"},
+    {"order": 4, "id": "qualification", "canonical_alias": "qualification", "kind": "qualification_gate", "semantic_role": "fit_and_unfit_conditions"},
+    {"order": 5, "id": "proposition", "canonical_alias": "proposition", "kind": "value_mechanism", "semantic_role": "offer_mechanism_claim_to_proof"},
+    {"order": 6, "id": "offers", "canonical_alias": "offers", "kind": "buying_configurations", "semantic_role": "how_to_buy_and_offer_configurations"},
+    {"order": 7, "id": "deliverables", "canonical_alias": "deliverables", "kind": "deliverables", "semantic_role": "delivered_artifacts"},
+    {"order": 8, "id": "transformation", "canonical_alias": "before-after", "kind": "state_transition", "semantic_role": "before_after_client_state"},
+    {"order": 9, "id": "results", "canonical_alias": "results", "kind": "acceptance_results", "semantic_role": "target_results_and_acceptance_criteria"},
+    {"order": 10, "id": "proofs", "canonical_alias": "proof", "kind": "execution_proof", "semantic_role": "technical_proof_and_provenance"},
+    {"order": 11, "id": "scope", "canonical_alias": "scope", "kind": "scope_boundary", "semantic_role": "included_and_excluded_scope"},
+    {"order": 12, "id": "process", "canonical_alias": "process", "kind": "delivery_process", "semantic_role": "mission_delivery_flow"},
+    {"order": 13, "id": "modules", "canonical_alias": "modules", "kind": "delivery_modules", "semantic_role": "modular_delivery_bricks"},
+    {"order": 14, "id": "intersection", "canonical_alias": "intersection", "kind": "differentiation", "semantic_role": "cross_skill_differentiation"},
+    {"order": 15, "id": "commitments", "canonical_alias": "commitments", "kind": "controllable_commitments", "semantic_role": "guarantees_limits_and_responsibility"},
+    {"order": 16, "id": "faq", "canonical_alias": "questions", "kind": "objections_faq", "semantic_role": "purchase_objections_and_questions"},
+    {"order": 17, "id": "engagement", "canonical_alias": "engagement", "kind": "next_step_cta", "semantic_role": "qualification_and_next_step"}
+  ],
+  "cross_family_contract": {
+    "programme_reference": "/programme/ai-production-assurance/",
+    "programme_sequence": ["triggers", "consequences", "for-whom", "qualification", "proposition", "offers", "deliverables", "before-after", "results", "proof", "scope", "process", "modules", "intersection", "commitments", "questions", "engagement"],
+    "rule": "Preserve the live Agentic AI DOM ids. Canonical aliases express semantic equivalence with programme pages; aliases MUST NOT be used to rename live anchors."
+  },
+  "buyer_contract": {
+    "avatar_name": "Claire Dumas",
+    "decision_role": "CTO / Head of AI Platform",
+    "avatar_mode": "ROLE_FIRST_PARTIAL_EVIDENCE",
+    "required_unknown_markers": [
+      "age",
+      "gender",
+      "family_status",
+      "children",
+      "campaign_location",
+      "individual_income",
+      "education",
+      "brands_influencers",
+      "information_sources",
+      "events_conferences",
+      "real_client_verbatim",
+      "observed_objections",
+      "validated_budget_range"
+    ],
+    "rule": "Do not invent demographic or psychographic detail to complete the avatar."
+  },
+  "post_engagement_form_contract": {
+    "counted_as_marketing_section": false,
+    "required": true,
+    "screen_count": 8,
+    "screen_topics": [
+      "decision_subject",
+      "decision_timing_and_buying_role",
+      "intervention_mode",
+      "weekly_cadence",
+      "organisation_size",
+      "scope_maturity",
+      "regulated_trigger",
+      "contact_and_expected_outcome"
+    ],
+    "collection_policy": "STATIC_RECONSTRUCTION_ONLY_NO_ENDPOINT",
+    "rule": "The qualification form follows engagement and must remain structurally separate from the 18-section offer contract."
+  },
+  "evidence_placement_candidates": [
+    {
+      "eu_id": "EU-AGENTIC-AGENTDOJO-629-2024",
+      "upstream_status": "ADMITTED_AGENT_EXPLOITABLE_FACTFULNESS_PASS",
+      "champion_score": 97,
+      "target_section": "consequences",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html",
+      "boundary": "Benchmark scope only; not a universal production attack rate."
+    },
+    {
+      "eu_id": "EU-AGENTIC-NIST-TEVV-4-STAGES-2026",
+      "upstream_status": "ADMITTED_AGENT_EXPLOITABLE_FACTFULNESS_PASS",
+      "champion_score": 96,
+      "target_section": "proposition",
+      "source": "https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems",
+      "boundary": "Official draft methodology; not proof of consulting or business outcomes."
+    },
+    {
+      "eu_id": "EU-AGENTIC-MEMSECBENCH-PERSIST-84_2-2026",
+      "upstream_status": "ADMITTED_AGENT_EXPLOITABLE_FACTFULNESS_PASS",
+      "champion_score": 90,
+      "target_section": "modules",
+      "source": "https://arxiv.org/abs/2607.27080",
+      "boundary": "Controlled preprint benchmark; not prevalence in deployed production agents."
+    }
+  ],
+  "publication_gate": {
+    "structure_validation_can_pass_independently": true,
+    "formal_placement_judge_executed": false,
+    "required_placement_replicas": 3,
+    "current_status": "BLOCKED_PENDING_FORMAL_PLACEMENT_JUDGE",
+    "final_pass_rule": "deterministic_preflight && factfulness && every_applicable_specialist_judge && agent_exploitability && exact_entailment && placement && presentation && xpath_match_count==1"
+  }
+}

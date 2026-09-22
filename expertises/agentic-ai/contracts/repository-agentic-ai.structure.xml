@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositoryPageSnapshot
+  schemaVersion="1.0"
+  repository="mckeopharma-web/copywriting"
+  ref="main"
+  path="expertises/agentic-ai/agentic-ai.html"
+  blobSha="021640d7945de8ebc81083e27191f21c0b30f1b0"
+  capturedAt="2026-09-04T02:03:00+02:00">
+
+  <metadata>
+    <theme>night</theme>
+    <sourcePage>https://mickael-umt.com/expertises/agentic-ai/</sourcePage>
+    <declaredStructureLock>17 anchored sections + hero</declaredStructureLock>
+    <artifactStatus>COPYWRITING_DRAFT_NOT_LIVE_PUBLICATION</artifactStatus>
+    <publicationStatus>PENDING_FORMAL_LLM_JUDGE</publicationStatus>
+    <declaredTargetAvatar>Director of AI Governance and Agentic Systems · Claire Martin</declaredTargetAvatar>
+  </metadata>
+
+  <sectionContract observedSectionCount="18" orderMatchesLive="true">
+    <section order="0" id="hero"/>
+    <section order="1" id="triggers"/>
+    <section order="2" id="consequences"/>
+    <section order="3" id="audience"/>
+    <section order="4" id="qualification"/>
+    <section order="5" id="proposition"/>
+    <section order="6" id="offers"/>
+    <section order="7" id="deliverables"/>
+    <section order="8" id="transformation"/>
+    <section order="9" id="results"/>
+    <section order="10" id="proofs"/>
+    <section order="11" id="scope"/>
+    <section order="12" id="process"/>
+    <section order="13" id="modules"/>
+    <section order="14" id="intersection"/>
+    <section order="15" id="commitments"/>
+    <section order="16" id="faq"/>
+    <section order="17" id="engagement"/>
+  </sectionContract>
+
+  <deltaAgainstLive>
+    <item severity="PASS" field="section_count">18 equals live contract.</item>
+    <item severity="PASS" field="section_order">Section ids and order match the live Agentic AI anchor sequence.</item>
+    <item severity="FAIL" field="semantic_contract_metadata">Existing section elements do not carry the explicit data-section-kind and data-semantic-role contract required by the new fail-closed validator.</item>
+    <item severity="FAIL" field="avatar">Repository metadata says Claire Martin / Director of AI Governance and Agentic Systems; live site and NeoFort current=true resolve Claire Dumas / CTO / Head of AI Platform.</item>
+    <item severity="FAIL" field="copy_language_and_positioning">The repository candidate is primarily English while the live source of truth is French and uses a different current commercial argument.</item>
+    <item severity="FAIL" field="qualification_form">No matching eight-screen post-engagement form was found in the existing agentic-ai.html code-search snapshot; live source contains the qualifier after Engagement.</item>
+    <item severity="REVIEW" field="evidence_placement">Existing candidate contains evidence disclosures, but placement publication remains PENDING_FORMAL_LLM_JUDGE.</item>
+  </deltaAgainstLive>
+
+  <devicevResolution>
+    <requestedPlacementAlias>judge:eu:placementv1</requestedPlacementAlias>
+    <resolvedCurrentJudge>judge:evidence-placement:presentation-v1.2</resolvedCurrentJudge>
+    <replicas>3</replicas>
+    <temperature>0</temperature>
+    <topP>1</topP>
+    <hardGateReducer>AND</hardGateReducer>
+    <scoreReducer>MIN</scoreReducer>
+    <status>BLOCKED_PENDING_FORMAL_PLACEMENT_JUDGE</status>
+  </devicevResolution>
+
+  <decision>
+    <repositoryFileMutated>false</repositoryFileMutated>
+    <reason>The existing draft is retained as lineage. A separate live-structure candidate is created and validated first; replacement of the canonical repository page should occur only after contract and formal placement gates pass.</reason>
+  </decision>
+</repositoryPageSnapshot>
