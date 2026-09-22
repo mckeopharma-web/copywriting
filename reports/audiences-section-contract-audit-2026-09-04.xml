@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section_contract_audit schema_version="2.0"
+  scope="ONLY /engagement/audiences/"
+  audit_date="2026-09-04"
+  execution_posture="FAIL_CLOSED"
+  publication_allowed="false"
+  html_mutation_allowed="false">
+
+  <request_basis>
+    <target_url>https://mickael-umt.com/engagement/audiences/</target_url>
+    <target_repository>mckeopharma-web/copywriting</target_repository>
+    <target_html_path>pages/engagement/audiences/mickael-umt.com.html</target_html_path>
+    <base_main_sha>6154460a6d4eb3e1d2e74796604dc2ef9f87b210</base_main_sha>
+    <target_blob_sha>4a024501932f4f3f11ee12429e5c0e13f80f85e3</target_blob_sha>
+    <google_drive_policy>READ_ONLY_INSPECTION_ALLOWED; NO_CREATE_UPDATE_DELETE_BEFORE_EXPLICIT_USER_APPROVAL</google_drive_policy>
+    <cross_page_mutation_policy>DO_NOT_CUD_EXPERTISE_OR_PROGRAMME_PAGES_IN_THIS_RUN</cross_page_mutation_policy>
+  </request_basis>
+
+  <v4_contract source=".skills/source-first-atomic-design-v4/SKILL.md">
+    <canonical_full_order>0,11,20,13,14,1,2,10,15,3,12,19,4,16,17,18,5,21,6,22,23,7,8</canonical_full_order>
+    <expertise_source_owner>S-series</expertise_source_owner>
+    <programme_source_owner>P-series</programme_source_owner>
+    <regulated_programme_source_owner>R-series</regulated_programme_source_owner>
+    <programme_hub_reference_subset>0,11,20,13,14,10,7,8</programme_hub_reference_subset>
+    <hard_dna>D0-D3 structure_family, topology, content_anatomy and primary_interaction_model cannot drift without updating the source owner first.</hard_dna>
+  </v4_contract>
+
+  <reference_contract_checks read_only="true">
+    <page url="https://mickael-umt.com/expertises/" family="S-series-hub" status="PARTIAL_V4_IMPLEMENTATION_DO_NOT_MUTATE">
+      <live_observed captured_at="2026-09-04" raw_html_materialized="false">
+        <surface order="1" semantic="hero" token="0" heading="Des spécialités distinctes, une seule chaîne de livraison."/>
+        <surface order="2" semantic="category_and_offer_catalogue" cardinality="10"/>
+        <surface order="3" semantic="capability_matrix" cardinality="16"/>
+        <surface order="4" semantic="market_benchmark" token="6"/>
+        <surface order="5" semantic="qualification_form" token="8" screen_count="8"/>
+        <surface order="6" semantic="footer"/>
+      </live_observed>
+      <expected_by_v4>Full 23-section buyer journey where data exists; source-first owner is S-series.</expected_by_v4>
+      <gaps>Distinct triggers(11), problems(20), audience(13), qualification(14), proposition(1), value(2), product(15), transformation(3), before_after(12), results(19), proof(4), scope(16), phases(17), modules(18), intersection(21), guarantee(22), faq(23) are not materialized as the full canonical journey on the current hub.</gaps>
+      <repository_html searched_path="pages/expertises/" status="MISSING_REPOSITORY_HUB_HTML">Only blockchain.md and growth.md were present in the reviewed hub folder.</repository_html>
+      <mutation_decision>OBSERVE_ONLY</mutation_decision>
+    </page>
+
+    <page url="https://mickael-umt.com/programme/" family="P-series-hub" status="PARTIAL_REFERENCE_SUBSET_DO_NOT_MUTATE">
+      <live_observed captured_at="2026-09-04" raw_html_materialized="false">
+        <surface order="1" semantic="hero" token="0" heading="Un mandat, une décision, une échéance."/>
+        <surface order="2" semantic="offers" token="10" programme_card_count="2"/>
+        <surface order="3" semantic="fallback_engagement" token="7"/>
+        <surface order="4" semantic="next_step" token="7"/>
+        <surface order="5" semantic="qualification_form" token="8" screen_count="8"/>
+        <surface order="6" semantic="footer"/>
+      </live_observed>
+      <expected_by_v4 subset="0,11,20,13,14,10,7,8">Hub-level hero, triggers, problems, audience, qualification, offers, engagement and lead_form.</expected_by_v4>
+      <gaps>Triggers(11), problems(20), audience(13) and qualification(14) are not distinct live hub surfaces; the live page is still primarily hero → two programme cards → fallback/CTA → qualifier.</gaps>
+      <repository_html searched_path="pages/programme/" status="MISSING_REPOSITORY_HUB_HTML">Only programme-detail review HTML files were present.</repository_html>
+      <mutation_decision>OBSERVE_ONLY</mutation_decision>
+    </page>
+  </reference_contract_checks>
+
+  <target_page_contract url="https://mickael-umt.com/engagement/audiences/" family="audience-decision-selector">
+    <live_snapshot>pages/engagement/audiences/structure/live-page.xml</live_snapshot>
+    <repository_snapshot>pages/engagement/audiences/structure/repo-html.xml</repository_snapshot>
+    <required_topology>hero → 10 avatar cards → problem-before-profile → decision-role triad → 8-screen qualifier → footer</required_topology>
+    <avatar_contract id="contract:customer-avatar:audiences:2026-09-03" current="true" avatar_count="10"/>
+    <live_copy_defect id="AUD-LIVE-001" status="CONFIRMED">The qualifier says “Les trois profils de cette page” although the page contains ten profiles; the referent is the three decision roles.</live_copy_defect>
+  </target_page_contract>
+
+  <neofort_current_policy_resolution>
+    <policy role="deterministic_preflight" id="policy:evidence-agent-exploitability:deterministic-preflight-v2" current="true"/>
+    <policy role="agent_exploitability" id="policy:evidence-agent-exploitability:proof-carrying-v3" current="true"/>
+    <policy role="factfulness" id="judge:evidence:factfulness-epistemology-methodology-v2" current="true"/>
+    <policy role="llm_determinism" id="policy:llm-judge:deterministic-execution-v2" current="true" replicas="3" temperature="0" top_p="1" boolean_reducer="AND" score_reducer="MIN" disagreement_blocks="true"/>
+    <policy role="copy_claim_loop" id="loop:copy-claim:external-capability-v1.1" current="true"/>
+    <policy role="copy_claim_judge" id="judge:copy-claim:external-capability-grounding-v1.1" current="true"/>
+    <policy role="placement_policy" id="policy:evidence-placement:claim-span-entailment-v2" current="true" version="2.2"/>
+    <policy role="placement_judge" id="judge:evidence-placement:presentation-v1.2" current="true" replicas="3" temperature="0" top_p="1" pass_threshold="85" auto_publish="false"/>
+    <policy role="graph_presentation" id="judge:evidence-graphic:presentation-v3" current="true"/>
+    <resolution_note>Requested judge:eu:placementv1 was not present as a current NeoFort object. CURRENT_TRUE_ONLY therefore resolves placement to judge:evidence-placement:presentation-v1.2; no historical alias may override it.</resolution_note>
+  </neofort_current_policy_resolution>
+
+  <evidence_and_copy_state>
+    <candidate_evidence_status>REVIEW_ONLY_PENDING_TARGET_PLACEMENT_REPLICA_JUDGE</candidate_evidence_status>
+    <target_placement_examples>
+      <evidence id="EU-CANON-BOUNDED-AGENTS-EXFIL-2026" admission_status="ADMITTED" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-AISEC-RUN-22" admission_status="ADMITTED" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-AISEC-RUN-34" admission_status="ADMITTED" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-REGCSV-EC-ANNEX11-RISK-2026" admission_status="CHAMPION_PASS" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-REGCSV-FDA-CSA-RISK-2026" admission_status="CHAMPION_PASS" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-HT-EMA-FDA-GOOD-AI-2026" admission_status="ADMITTED" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-CANON-EHDS-EHR-TESTING-2026" admission_status="ADMITTED" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-PV-NIST-GOVERN-2-1-ROLE-CLARITY" admission_status="JUDGE_SCORED_PENDING_ADMISSION" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-PV-NIST-GOVERN-2-2-TRAINING" admission_status="JUDGE_SCORED_PENDING_ADMISSION" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-PV-EMA-GVP-AUDIT-TRAIL-TRACEABILITY" admission_status="JUDGE_SCORED_PENDING_ADMISSION" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+      <evidence id="EU-PV-EMA-PRAC-SIGNAL-NOT-CAUSALITY-2026" admission_status="JUDGE_SCORED_PENDING_ADMISSION" target_placement_status="PENDING_TARGET_PAGE_PRESENTATION_JUDGE" xpath_match_count="1"/>
+    </target_placement_examples>
+    <graph_evidence_examples upstream_graph_presentation="PASS" target_placement="PENDING_TARGET_PAGE_PRESENTATION_JUDGE">
+      <evidence id="QGEU-AISEC-BOUNDED-EXFIL-DETAIL-2026"/>
+      <evidence id="QGEU-AISEC-TOOLMIN-PCS-2026"/>
+      <evidence id="QGEU-AISEC-PERMISSION-OVERREACH-2026"/>
+      <evidence id="QGEU-AISEC-FRAMING-GAP-2026"/>
+    </graph_evidence_examples>
+    <copy_rule>Do not upgrade an avatar Before/After statement from mechanism/recommendation to observed business outcome unless the selected EvidenceUnit exactly entails that claim span.</copy_rule>
+  </evidence_and_copy_state>
+
+  <gates>
+    <gate name="live_target_topology" status="PASS" detail="6 locked surfaces; 10 avatars; 3 decision roles; 8 qualifier screens."/>
+    <gate name="live_customer_avatar_contract" status="PASS" detail="10 BuyerRole objects + canonical evidence-aware CustomerAvatarContract resolved in NeoFort."/>
+    <gate name="live_raw_html_materialization" status="BLOCKED" detail="Crawler-rendered semantic DOM is available; exact current origin bytes were not materialized."/>
+    <gate name="expertises_v4_full_journey" status="FAIL_PARTIAL_HUB"/>
+    <gate name="programme_v4_reference_subset" status="FAIL_PARTIAL_HUB"/>
+    <gate name="expertises_repo_hub_html" status="MISSING"/>
+    <gate name="programme_repo_hub_html" status="MISSING"/>
+    <gate name="repo_target_top_level_topology" status="PASS"/>
+    <gate name="repo_avatar_card_form_fidelity" status="FAIL" detail="4 visible EUG figures are injected inside avatar cards while live cards have no inline EUG panels."/>
+    <gate name="repo_qualification_screen_count" status="PASS" detail="Both live and repo review artifact have eight screens."/>
+    <gate name="repo_qualification_semantic_fidelity" status="FAIL" detail="Live screen 2 groups timing+decision role; repo splits role to screen 3 and later merges scope+trigger."/>
+    <gate name="repo_navigation_fidelity" status="FAIL" detail="Review artifact contains /programmes/ while current live hub is /programme/."/>
+    <gate name="repo_current_copy_policy_alignment" status="FAIL_STALE_REPO_METADATA"/>
+    <gate name="target_evidence_admission" status="BLOCKED_MIXED" detail="Some selected EUs are admitted; others are still judge-scored pending admission."/>
+    <gate name="target_placement_three_replica_judge" status="BLOCKED" detail="Current target placements are pending judge:evidence-placement:presentation-v1.2 execution."/>
+    <gate name="xpath_unique_binding" status="PARTIAL_PASS" detail="Recorded target placements have xpath_match_count=1, but this cannot override missing current 3-replica target placement verdicts."/>
+    <gate name="publication" status="BLOCKED"/>
+  </gates>
+
+  <mutation_decision>
+    <target_html>pages/engagement/audiences/mickael-umt.com.html</target_html>
+    <decision>DO_NOT_MUTATE_HTML_IN_THIS_RUN</decision>
+    <reason>DEVICEV requires lossless live form preservation and current target placement validation. The exact live origin bytes are not materialized; the repository review HTML currently changes avatar-card form and qualifier screen semantics; selected evidence still has pending target placement gates. Mutating the HTML now would manufacture a false publication-ready state.</reason>
+    <safe_copy_change_after_source_materialization defect_id="AUD-LIVE-001">Replace “Les trois profils de cette page...” with a role-correct formulation while retaining the timing+role grouping on live screen 2.</safe_copy_change_after_source_materialization>
+  </mutation_decision>
+
+  <google_drive_execution read_only="true" write_performed="false">
+    <folder>20.1 Chapter 20 - Pourquoi Quality Clinical Data PV et Product ont besoin de la même continuité de preuve - mickael-umt.com_engagement_audiences</folder>
+    <documents_read>VSL ADS continuity-of-proof; HITL review plan</documents_read>
+    <write_condition>EXPLICIT_USER_APPROVAL_REQUIRED</write_condition>
+  </google_drive_execution>
+
+  <final_decision final_pass="false" status="BLOCKED">
+    <structural_contract>PASS_LIVE_TARGET</structural_contract>
+    <reference_hub_contracts>PARTIAL</reference_hub_contracts>
+    <repository_lossless_equivalence>FAIL</repository_lossless_equivalence>
+    <evidence_publication_contract>BLOCKED</evidence_publication_contract>
+    <next_release_condition>Materialize exact current target-page HTML or canonical owner template; preserve the six target surfaces and exact eight-screen semantics; remove or relocate review-only EUG panels so avatar-card form remains live-faithful; correct /programmes/ route drift; align current NeoFort copy contract; complete EU admission and 3-replica target placement judge v1.2 for every published claim; require xpath_match_count=1; rerun GitHub Action.</next_release_condition>
+  </final_decision>
+</section_contract_audit>

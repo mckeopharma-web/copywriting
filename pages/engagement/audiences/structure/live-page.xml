@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page_snapshot schema_version="1.0"
+  page_id="page:source:20.1"
+  source_url="https://mickael-umt.com/engagement/audiences/"
+  scope="ONLY /engagement/audiences/"
+  captured_at="2026-09-04"
+  capture_mode="crawler_rendered_dom_semantic_extraction"
+  raw_html_materialized="false"
+  execution_posture="FAIL_CLOSED">
+
+  <source_authority>
+    <source kind="live_site" priority="1">https://mickael-umt.com/engagement/audiences/</source>
+    <source kind="neofort" priority="2" policy_resolution="CURRENT_TRUE_ONLY">CustomerAvatarContract + BuyerRole + EvidencePlacement</source>
+    <source kind="github" priority="3">mckeopharma-web/copywriting</source>
+  </source_authority>
+
+  <page_contract family="audience-decision-selector"
+    top_level_surface_count="6"
+    reorder_allowed="false"
+    structure_lock="LIVE_AUDIENCES_2026-09-04"
+    avatar_count="10"
+    decision_role_count="3"
+    qualification_screen_count="8">
+    <surface_order>hero,audience-cards,problem-before-profile,decision-roles,qualifier,footer</surface_order>
+  </page_contract>
+
+  <sections>
+    <section order="1" id="decision-profiles" kind="hero" semantic_role="audience_positioning" locator="web:59-62">
+      <eyebrow>Unités de décision B2B</eyebrow>
+      <heading>Dix profils pour lesquels la combinaison de compétences crée le plus de levier.</heading>
+      <boundary>Ces avatars structurent le message et l’offre. Ils ne prétendent pas décrire chaque personne et doivent être validés par entretiens, CRM et comportements observés.</boundary>
+    </section>
+
+    <section order="2" id="audience-cards" kind="avatar_grid" semantic_role="buyer_role_recognition_and_offer_matching" locator="web:64-211" cardinality="10">
+      <avatar order="1" id="avatar-01" name="Claire Dumas" role="CTO / Head of AI Platform" expertise="agentic-ai" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="2" id="avatar-02" name="Marc Lefèvre" role="Responsable gouvernance, risque ou sécurité IA" expertise="ai-security" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="3" id="avatar-03" name="Nadia Benali" role="Directrice transformation IA et formation · organisation régulée ou à fortes exigences de contrôle" expertise="training" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="4" id="avatar-04" name="Dr. Antoine Moreau" role="Directeur qualité / CSV" expertise="reg-csv" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="5" id="avatar-05" name="Sophie Lemercier" role="Data Manager / Chef de projet clinique" expertise="cdm-automation" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="6" id="avatar-06" name="Karim Benali" role="Responsable pharmacovigilance" expertise="pv-data-engineer" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="7" id="avatar-07" name="Isabelle Fontaine" role="Product Manager éditeur HealthTech" expertise="healthtech-product" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="8" id="avatar-08" name="Julien Rocher" role="Head of Data / Lead Data Engineer" expertise="data-engineering" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="9" id="avatar-09" name="Élodie Marchand" role="Responsable innovation / architecte de confiance" expertise="blockchain" form="before_after_plus_offer_and_proof_link"/>
+      <avatar order="10" id="avatar-10" name="Camille Ferrand" role="Directrice marketing / revenue operations" expertise="marketing-engineering" form="before_after_plus_offer_and_proof_link"/>
+    </section>
+
+    <section order="3" id="problem-before-profile" kind="fallback_problem" semantic_role="problem_first_recommendation" locator="web:213-218">
+      <heading>Je reconnais le problème, mais pas le rôle exact.</heading>
+      <rule>Le rôle affine la preuve ; il ne bloque jamais la recommandation.</rule>
+    </section>
+
+    <section order="4" id="decision-roles" kind="decision_role_triad" semantic_role="decision_unit_classification" locator="web:220-230" cardinality="3">
+      <role order="1" id="DECISION_MAKER" live_label="Décideur">Budget, risque, délai et résultat défendable.</role>
+      <role order="2" id="ADVOCATE" live_label="Advocate">Une solution compréhensible à défendre en interne.</role>
+      <role order="3" id="CHAMPION" live_label="Champion">Un système utilisable qui réduit la friction quotidienne.</role>
+    </section>
+
+    <section order="5" id="qualifier" kind="lead_form" semantic_role="engagement_matching" locator="web:234-301" screen_count="8">
+      <heading>Le bon format d’intervention, avant le premier rendez-vous.</heading>
+      <screen order="1" semantic="need_scope" live_anchor="Qu’est-ce qui doit avancer ?"/>
+      <screen order="2" semantic="timing_and_decision_role" live_anchor="Dans quel cadre ?" inputs="t,r"/>
+      <screen order="3" semantic="engagement_mode" live_anchor="Comment souhaitez-vous avancer ?"/>
+      <screen order="4" semantic="weekly_cadence" live_anchor="À quel rythme, si l’on s’engage ?"/>
+      <screen order="5" semantic="organisation_size" live_anchor="Combien de personnes doivent monter ?"/>
+      <screen order="6" semantic="scope_maturity" live_anchor="Où en est le périmètre aujourd’hui ?" inputs="s"/>
+      <screen order="7" semantic="inspection_or_validation_trigger" live_anchor="Ce que l’inspection devra pouvoir suivre" inputs="i"/>
+      <screen order="8" semantic="contact_and_consent" live_anchor="Où envoyer la réponse ?"/>
+      <copy_defect id="AUD-LIVE-001" severity="semantic_conflict" locator="web:259" status="TO_FIX_TARGET_ONLY">
+        <observed>Les trois profils de cette page sont les trois réponses possibles : décider, recommander, instruire.</observed>
+        <reason>The page contains ten avatar profiles; the sentence is about three decision roles, not three profiles.</reason>
+        <lossless_safe_replacement>Les trois rôles de décision de cette étape sont : décider, recommander, instruire.</lossless_safe_replacement>
+      </copy_defect>
+    </section>
+
+    <section order="6" id="footer" kind="site_footer" semantic_role="navigation_and_legal" locator="web:303-352"/>
+  </sections>
+
+  <customer_avatar_contract id="contract:customer-avatar:audiences:2026-09-03" current="true">
+    <components>DEMOGRAPHICS_INTERESTS,FRUSTRATIONS_FEARS,WANTS_ASPIRATIONS,KEY_PURCHASE_DRIVERS,BEFORE_AFTER</components>
+    <before_after_dimensions>HAVE,FEEL,AVERAGE_DAY,STATUS,EVIL_GOOD</before_after_dimensions>
+    <decision_roles>DECISION_MAKER,ADVOCATE,CHAMPION</decision_roles>
+    <evidence_rule>Unsupported demographic, psychographic, quote, objection, buying-behaviour and causal detail must remain NOT_EVIDENCED, HYPOTHESIS or TO_RESEARCH. Synthesized copy is never customer verbatim.</evidence_rule>
+  </customer_avatar_contract>
+
+  <live_form_invariants>
+    <invariant id="I-01">Ten avatar cards remain ten cards, in the current order.</invariant>
+    <invariant id="I-02">Every avatar card retains Before → After → offer/proof route anatomy.</invariant>
+    <invariant id="I-03">Problem-first fallback remains between avatar grid and decision-role triad.</invariant>
+    <invariant id="I-04">Decision-role triad remains DECISION_MAKER / ADVOCATE / CHAMPION.</invariant>
+    <invariant id="I-05">Qualifier remains eight screens with timing + decision role grouped on live screen 2, scope maturity on screen 6 and inspection/validation trigger on screen 7.</invariant>
+    <invariant id="I-06">No evidence visual may alter an avatar-card form unless the live owner structure is changed first.</invariant>
+  </live_form_invariants>
+</page_snapshot>

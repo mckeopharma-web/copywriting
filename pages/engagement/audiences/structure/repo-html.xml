@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository_page_snapshot schema_version="1.0"
+  scope="ONLY /engagement/audiences/"
+  repository="mckeopharma-web/copywriting"
+  branch="main"
+  path="pages/engagement/audiences/mickael-umt.com.html"
+  fetched_blob_sha="4a024501932f4f3f11ee12429e5c0e13f80f85e3"
+  captured_at="2026-09-04"
+  html_lang="fr"
+  data_theme="dark"
+  publication_status="PENDING_FORMAL_LLM_JUDGE">
+
+  <embedded_contract_metadata>
+    <structure_lock>hero &gt; 10 avatar cards &gt; problem-before-profile &gt; decision roles &gt; qualifier &gt; footer</structure_lock>
+    <claim_loop>loop:copy-claim:external-capability-v1.2-topology-preserving</claim_loop>
+    <claim_judge>judge:copy-claim:external-capability-grounding-v1.2</claim_judge>
+    <declared_selection_pool evidence_units="139" graph_evidence_units="36"/>
+    <declared_selected evidence_units="11" graph_evidence_units="4"/>
+    <declared_target_placement_state>REVIEW_ONLY_PENDING_TARGET_PLACEMENT_REPLICA_JUDGE</declared_target_placement_state>
+  </embedded_contract_metadata>
+
+  <top_level_structure count="6" structure_order_pass="true">
+    <surface order="1" id="decision-profiles" kind="hero"/>
+    <surface order="2" id="audience-cards" kind="avatar_grid" avatar_count="10"/>
+    <surface order="3" id="problem-before-profile" kind="fallback_problem"/>
+    <surface order="4" id="decision-roles" kind="decision_role_triad" role_count="3"/>
+    <surface order="5" id="qualifier" kind="lead_form" fieldset_count="8"/>
+    <surface order="6" id="footer" kind="site_footer"/>
+  </top_level_structure>
+
+  <avatar_grid>
+    <avatar order="1" id="avatar-01" name="Claire Dumas" visible_eug_count="2"/>
+    <avatar order="2" id="avatar-02" name="Marc Lefèvre" visible_eug_count="2"/>
+    <avatar order="3" id="avatar-03" name="Nadia Benali" visible_eug_count="0"/>
+    <avatar order="4" id="avatar-04" name="Dr. Antoine Moreau" visible_eug_count="0"/>
+    <avatar order="5" id="avatar-05" name="Sophie Lemercier" visible_eug_count="0"/>
+    <avatar order="6" id="avatar-06" name="Karim Benali" visible_eug_count="0"/>
+    <avatar order="7" id="avatar-07" name="Isabelle Fontaine" visible_eug_count="0"/>
+    <avatar order="8" id="avatar-08" name="Julien Rocher" visible_eug_count="0"/>
+    <avatar order="9" id="avatar-09" name="Élodie Marchand" visible_eug_count="0"/>
+    <avatar order="10" id="avatar-10" name="Camille Ferrand" visible_eug_count="0"/>
+    <visible_eug_total>4</visible_eug_total>
+    <live_visible_eug_total>0</live_visible_eug_total>
+    <fidelity status="FAIL">The review HTML inserts four evidence graphics inside avatar cards. The live owner form is Before → After → offer/proof route without inline EUG panels.</fidelity>
+  </avatar_grid>
+
+  <qualification_form screen_count="8" cardinality_pass="true" semantic_fidelity="FAIL">
+    <screen order="1" semantic="need_scope"/>
+    <screen order="2" semantic="timing_only" inputs="t" drift_from_live="true"/>
+    <screen order="3" semantic="decision_role_only" inputs="r" drift_from_live="true"/>
+    <screen order="4" semantic="engagement_mode"/>
+    <screen order="5" semantic="weekly_cadence"/>
+    <screen order="6" semantic="organisation_size"/>
+    <screen order="7" semantic="scope_maturity_plus_trigger" inputs="s,i" drift_from_live="true"/>
+    <screen order="8" semantic="contact_and_consent"/>
+    <live_required_mapping>1=need_scope;2=timing_and_decision_role;3=engagement_mode;4=weekly_cadence;5=organisation_size;6=scope_maturity;7=inspection_or_validation_trigger;8=contact_and_consent</live_required_mapping>
+  </qualification_form>
+
+  <navigation_fidelity status="FAIL">
+    <issue id="NAV-001" observed="https://mickael-umt.com/programmes/" expected="https://mickael-umt.com/programme/">Repository review footer uses the plural route while the current live programme hub is singular.</issue>
+  </navigation_fidelity>
+
+  <copy_contract_fidelity status="FAIL_STALE_METADATA">
+    <repo_loop>loop:copy-claim:external-capability-v1.2-topology-preserving</repo_loop>
+    <repo_judge>judge:copy-claim:external-capability-grounding-v1.2</repo_judge>
+    <neofort_current_loop>loop:copy-claim:external-capability-v1.1</neofort_current_loop>
+    <neofort_current_judge>judge:copy-claim:external-capability-grounding-v1.1</neofort_current_judge>
+  </copy_contract_fidelity>
+
+  <repository_hub_html_availability>
+    <hub url="https://mickael-umt.com/expertises/" searched_path="pages/expertises/" status="MISSING_REPOSITORY_HUB_HTML">
+      <observed_files>blockchain.md,growth.md</observed_files>
+    </hub>
+    <hub url="https://mickael-umt.com/programme/" searched_path="pages/programme/" status="MISSING_REPOSITORY_HUB_HTML">
+      <observed_files>ai-production-assurance.html,pharmaceutical-evidence-assurance-avatar-v2.html,pharmaceutical-evidence-assurance.html</observed_files>
+    </hub>
+  </repository_hub_html_availability>
+
+  <mutation_boundary>
+    <allowed>ONLY files belonging to /engagement/audiences/ plus scoped audit/validation support.</allowed>
+    <forbidden>No content mutation of /expertises/, /programme/, or their detail pages in this run.</forbidden>
+  </mutation_boundary>
+</repository_page_snapshot>
