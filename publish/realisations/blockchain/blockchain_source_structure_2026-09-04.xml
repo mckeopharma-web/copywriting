@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page-structure id="realisations-blockchain-source-2026-09-04" status="OBSERVED" scope="REPOSITORY_HTML">
+  <source kind="github" repository="mckeopharma-web/copywriting" branch="main" path="publish/realisations/blockchain/blockchain.html" blob-sha="cb032019cba615572736944abc35edacbb70bbb3"/>
+  <html-contract>
+    <page>realisations/blockchain</page>
+    <claim-loop-version>external-capability-v1.2-topology-preserving</claim-loop-version>
+    <publication-status>PENDING_FORMAL_LLM_JUDGE</publication-status>
+    <robots>noindex,nofollow</robots>
+    <visible-copy-wholesale-replacement-forbidden>true</visible-copy-wholesale-replacement-forbidden>
+    <body-replacement-forbidden>true</body-replacement-forbidden>
+  </html-contract>
+  <structure actual-section-count="5" original-slot-count="5">
+    <section order="1" original-slot="1" id="page-intro" kind="realisation-domain-hero"/>
+    <section order="2" original-slot="2" id="lottery-dapp" kind="realisation-record"/>
+    <section order="3" original-slot="3" id="tokenized-voting-backend" kind="realisation-record"/>
+    <section order="4" original-slot="4" id="provenance-policy" kind="provenance-policy"/>
+    <section order="5" original-slot="5" id="method-behind-proof" kind="method-lead-capture" contains-form="true"/>
+  </structure>
+  <research-contract>
+    <research-anchor-count>3</research-anchor-count>
+    <research-anchor id="method-behind-proof"/>
+    <research-anchor id="page-intro"/>
+    <research-anchor id="lottery-dapp"/>
+    <important-boundary>The embedded claim-loop field section_count equals the selected research-anchor count, not the page topology count. Therefore section_count=3 is not a five-section topology defect.</important-boundary>
+  </research-contract>
+  <avatar-contract>
+    <avatar-id>customer-avatar:blockchain:elodie-marchand:2026-09-03:v1</avatar-id>
+    <buyer-role>Responsable innovation / architecte de confiance</buyer-role>
+    <demographics-status>MISSING_NOT_INFERRED</demographics-status>
+    <information-sources-status>HYPOTHESES_TO_VALIDATE</information-sources-status>
+    <representative-quote-status>SYNTHESIS_NOT_CUSTOMER_VERBATIM</representative-quote-status>
+    <decision-role>DECISION_MAKER_OR_ADVOCATE_TO_VALIDATE_BY_ORGANISATION</decision-role>
+    <final-budget-authority>TO_VALIDATE</final-budget-authority>
+  </avatar-contract>
+  <evidence-boundaries>
+    <boundary id="B1">External institutional evidence is decision context, never personal project-outcome proof.</boundary>
+    <boundary id="B2">Repository provenance supports implementation capability only.</boundary>
+    <boundary id="B3">Derived ratios remain DERIVED_DETERMINISTIC and are not forecasts.</boundary>
+    <boundary id="B4">The page remains publication-pending until every currently applicable specialist and placement judge passes.</boundary>
+  </evidence-boundaries>
+</page-structure>

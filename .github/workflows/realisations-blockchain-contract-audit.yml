@@ -1,0 +1,152 @@
+name: Realisations blockchain — lossless section contract
+
+on:
+  push:
+    branches:
+      - audit/realisations-blockchain-contract-20260904
+    paths:
+      - 'publish/realisations/blockchain/**'
+      - 'expertises/blockchain/blockchain.html'
+      - '.github/workflows/realisations-blockchain-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate XML, topology, reference contract and form fidelity
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          import re
+          import xml.etree.ElementTree as ET
+
+          target = Path('publish/realisations/blockchain/blockchain.html')
+          live_xml = Path('publish/realisations/blockchain/blockchain_live_structure_2026-09-04.xml')
+          source_xml = Path('publish/realisations/blockchain/blockchain_source_structure_2026-09-04.xml')
+          audit_xml = Path('publish/realisations/blockchain/blockchain_contract_audit_2026-09-04.xml')
+          candidate = Path('publish/realisations/blockchain/blockchain_slot5_form_repair_candidate.html')
+          expertise = Path('expertises/blockchain/blockchain.html')
+
+          for path in (live_xml, source_xml, audit_xml):
+              ET.parse(path)
+              print(f'XML PASS: {path}')
+
+          expected_target_ids = [
+              'page-intro',
+              'lottery-dapp',
+              'tokenized-voting-backend',
+              'provenance-policy',
+              'method-behind-proof',
+          ]
+          target_text = target.read_text(encoding='utf-8')
+          slot_matches = re.findall(
+              r'<section\b(?=[^>]*\bdata-original-slot="(\d+)")(?=[^>]*\bid="([^"]+)")[^>]*>',
+              target_text,
+              flags=re.I,
+          )
+          slot_ids = [sid for _, sid in sorted(slot_matches, key=lambda x: int(x[0]))]
+          if slot_ids != expected_target_ids:
+              raise SystemExit(f'TARGET TOPOLOGY FAIL: {slot_ids!r}')
+          print('TARGET TOPOLOGY PASS: 5 live-mapped slots preserved')
+
+          expected_expertise_ids = [
+              'top','triggers','consequences','for-whom','qualification','proposition',
+              'offers','deliverables','before-after','results','proof','scope','process',
+              'modules','intersection','commitments','questions','engagement'
+          ]
+          expertise_text = expertise.read_text(encoding='utf-8')
+          expertise_ids = re.findall(r'<section\b[^>]*\bid="([^"]+)"', expertise_text, flags=re.I)
+          if expertise_ids != expected_expertise_ids:
+              raise SystemExit(f'EXPERTISE 18-SECTION LOCK FAIL: {expertise_ids!r}')
+          print('EXPERTISE REFERENCE PASS: exact 18-section HARD LOCK order')
+
+          live_root = ET.parse(live_xml).getroot()
+          source_root = ET.parse(source_xml).getroot()
+          live_ids = [n.attrib['mapped-id'] for n in live_root.findall('./structure/section')]
+          source_ids = [n.attrib['id'] for n in source_root.findall('./structure/section')]
+          if live_ids != expected_target_ids or source_ids != expected_target_ids:
+              raise SystemExit(f'XML TOPOLOGY FAIL: live={live_ids!r} source={source_ids!r}')
+          print('XML TOPOLOGY PASS: live/source representations are aligned')
+
+          contract_match = re.search(
+              r'<script\b[^>]*id="neofort-claim-loop-contract"[^>]*>(.*?)</script>',
+              target_text,
+              flags=re.I | re.S,
+          )
+          if not contract_match:
+              raise SystemExit('CLAIM LOOP CONTRACT FAIL: payload missing')
+          contract = json.loads(contract_match.group(1))
+          anchors = contract.get('research_anchor_sections', [])
+          if contract.get('section_count') != len(anchors) or len(anchors) != 3:
+              raise SystemExit('CLAIM LOOP CONTRACT FAIL: section_count must equal 3 selected research anchors')
+          if slot_ids == anchors:
+              raise SystemExit('CLAIM LOOP SEMANTICS FAIL: research anchor count was confused with page section count')
+          print('CLAIM LOOP PASS: 3 research anchors are correctly distinct from 5 page sections')
+
+          if 'data-publication-status="PENDING_FORMAL_LLM_JUDGE"' not in target_text:
+              raise SystemExit('FAIL CLOSED STATUS FAIL: canonical source must remain pending')
+          print('FAIL CLOSED STATUS PASS: canonical source remains publication-pending')
+
+          avatar_match = re.search(
+              r'<script\b[^>]*id="customer-avatar-contract"[^>]*>(.*?)</script>',
+              target_text,
+              flags=re.I | re.S,
+          )
+          if not avatar_match:
+              raise SystemExit('AVATAR CONTRACT FAIL: payload missing')
+          avatar = json.loads(avatar_match.group(1))
+          if avatar.get('buyer_role') != 'Responsable innovation / architecte de confiance':
+              raise SystemExit('AVATAR CONTRACT FAIL: buyer role drift')
+          if avatar.get('representative_quote_status') != 'SYNTHESIS_NOT_CUSTOMER_VERBATIM':
+              raise SystemExit('AVATAR CONTRACT FAIL: verbatim boundary drift')
+          print('AVATAR CONTRACT PASS: inductive buyer remains bounded and non-fabricated')
+
+          candidate_text = candidate.read_text(encoding='utf-8')
+          cand_work = len(re.findall(r'name="work"', candidate_text))
+          cand_use = len(re.findall(r'name="intended_use"', candidate_text))
+          cand_consent = 'name="local_storage_consent"' in candidate_text
+          cand_email = bool(re.search(r'<input[^>]+type="email"[^>]+required', candidate_text))
+          cand_controls = all(x in candidate_text for x in ('← Retour', 'Suivant →', 'Recevoir le framework →'))
+          cand_privacy = 'Aucun service tiers, aucun traceur publicitaire.' in candidate_text
+          if (cand_work, cand_use, cand_consent, cand_email, cand_controls, cand_privacy) != (6,3,True,True,True,True):
+              raise SystemExit(
+                  'FORM REPAIR CANDIDATE FAIL: '
+                  f'work={cand_work} intended={cand_use} consent={cand_consent} '
+                  f'email={cand_email} controls={cand_controls} privacy={cand_privacy}'
+              )
+          print('FORM REPAIR CANDIDATE PASS: 6 work + 3 intended-use + consent + email + navigation + privacy')
+
+          canonical_work = len(re.findall(r'name="work"', target_text))
+          canonical_use = len(re.findall(r'name="intended_use"', target_text))
+          canonical_consent = 'local_storage_consent' in target_text
+          canonical_controls = all(x in target_text for x in ('← Retour', 'Suivant →', 'Recevoir le framework →'))
+
+          audit_root = ET.parse(audit_xml).getroot()
+          c4 = audit_root.find("./comparison/check[@id='C4']")
+          if c4 is None or c4.attrib.get('result') != 'FAIL':
+              raise SystemExit('AUDIT RECEIPT FAIL: C4 must record canonical form drift as FAIL')
+
+          if (canonical_work, canonical_use, canonical_consent, canonical_controls) != (6,3,True,True):
+              print(
+                  'CANONICAL FORM FAIL (expected, fail-closed): '
+                  f'work={canonical_work}; intended_use={canonical_use}; '
+                  f'consent={canonical_consent}; controls={canonical_controls}'
+              )
+              raise SystemExit(
+                  'BLOCKED_CANONICAL_FORM_DRIFT: preserve the live two-screen form before canonical publication.'
+              )
+
+          raise SystemExit('UNEXPECTED: canonical form already matches; update audit C4 before publication.')
+          PY

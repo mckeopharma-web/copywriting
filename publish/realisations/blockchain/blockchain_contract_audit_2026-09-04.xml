@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contract-audit id="audit:realisations-blockchain:2026-09-04:v2" devicev-version="1.0.0" execution-posture="FAIL_CLOSED">
+  <target>
+    <url>https://mickael-umt.com/realisations/blockchain/</url>
+    <repository>mckeopharma-web/copywriting</repository>
+    <path>publish/realisations/blockchain/blockchain.html</path>
+    <source-blob-sha>cb032019cba615572736944abc35edacbb70bbb3</source-blob-sha>
+  </target>
+  <reference-contracts>
+    <reference id="expertise:blockchain" url="https://mickael-umt.com/expertises/blockchain/" source-of-truth="NeoFort+live-site">
+      <contract-name>HARD_LOCK_BLOCKCHAIN_OFFER_STRUCTURE_V1</contract-name>
+      <section-count>18</section-count>
+      <section order="1" id="top" kind="offer_hero" role="promise_result_format_decision_maker_stack"/>
+      <section order="2" id="triggers" kind="purchase_triggers" role="purchase_trigger_conditions"/>
+      <section order="3" id="consequences" kind="problem_consequences" role="problem_cost_and_failed_workarounds"/>
+      <section order="4" id="for-whom" kind="buyer_fit" role="buyer_and_operational_pressure"/>
+      <section order="5" id="qualification" kind="qualification_gate" role="fit_and_unfit_conditions"/>
+      <section order="6" id="proposition" kind="value_mechanism" role="offer_mechanism_claim_to_proof"/>
+      <section order="7" id="offers" kind="buying_configurations" role="how_to_buy_and_offer_configurations"/>
+      <section order="8" id="deliverables" kind="deliverables" role="delivered_artifacts"/>
+      <section order="9" id="before-after" kind="state_transition" role="before_after_client_state"/>
+      <section order="10" id="results" kind="acceptance_results" role="target_results_and_acceptance_criteria"/>
+      <section order="11" id="proof" kind="execution_proof" role="technical_proof_and_provenance"/>
+      <section order="12" id="scope" kind="scope_boundary" role="included_and_excluded_scope"/>
+      <section order="13" id="process" kind="delivery_process" role="mission_delivery_flow"/>
+      <section order="14" id="modules" kind="delivery_modules" role="modular_delivery_bricks"/>
+      <section order="15" id="intersection" kind="differentiation" role="cross_skill_differentiation"/>
+      <section order="16" id="commitments" kind="controllable_commitments" role="guarantees_limits_and_responsibility"/>
+      <section order="17" id="questions" kind="objections_faq" role="purchase_objections_and_questions"/>
+      <section order="18" id="engagement" kind="next_step_cta" role="qualification_and_next_step"/>
+    </reference>
+    <reference id="programmes-index" url="https://mickael-umt.com/programme/" source-of-truth="live-site">
+      <route-note>The canonical live route is singular /programme/; the user request used /programmes.</route-note>
+      <commercial-role>bounded mandate sold as a decision and deadline, not as an hourly rate</commercial-role>
+      <required-shape>programme catalogue + bounded outcome + next-step qualification + local multi-screen form</required-shape>
+      <form-boundary>qualification captures decision context while retaining local-storage/no-third-party-tracker constraints</form-boundary>
+    </reference>
+  </reference-contracts>
+  <target-contract>
+    <page-family>realisations</page-family>
+    <section-count>5</section-count>
+    <semantic-role>public implementation proof, provenance and method handoff</semantic-role>
+    <positioning-rule>Borrow decision vocabulary from expertise/programme pages without importing their section topology.</positioning-rule>
+    <lossless-rule>Preserve the five live sections, two project records, project-card forms, provenance section and final two-screen method form.</lossless-rule>
+  </target-contract>
+  <comparison>
+    <check id="C1" name="live-vs-source-section-count" result="PASS">5 = 5</check>
+    <check id="C2" name="live-vs-source-section-order" result="PASS">page-intro → lottery-dapp → tokenized-voting-backend → provenance-policy → method-behind-proof</check>
+    <check id="C3" name="project-member-count" result="PASS">2 implementation records retained</check>
+    <check id="C4" name="final-form-preservation" result="FAIL">Live form is two-screen and contains six current-work choices, three intended-use choices, professional email, optional name, explicit local-storage consent, navigation controls and a no-third-party-tracker statement. The repository review HTML collapses this to six work choices + email/name + submit and therefore is not lossless.</check>
+    <check id="C5" name="expertise-topology-transplant" result="PASS">FORBIDDEN: 18-section offer topology is a reference, not the target topology</check>
+    <check id="C6" name="programme-topology-transplant" result="PASS">FORBIDDEN: programme page remains a commercial-reference contract only</check>
+  </comparison>
+  <devicev-gates>
+    <policy-resolution result="PARTIAL_PASS">Current NeoFort policies resolved for deterministic preflight, factfulness, evidence-unit publication, agent exploitability and placement.</policy-resolution>
+    <requested-judge id="judge:eu:placementv1" current-object-found="false" result="BLOCKED_POLICY_RESOLUTION">No current NeoFort object with this exact id or a proven alias was found.</requested-judge>
+    <current-placement-judge id="judge:evidence-placement:presentation-v1.2" version="1.2" status="CURRENT" note="Observed as current and superseding v1, but not silently substituted for the unresolved requested id."/>
+    <selected-evidence id="EU-CANON-BIS-AGORA-SETTLEMENT-80S-2026" deterministic-preflight="PASS" factfulness="PASS" agent-exploitability="ALLOWED" all-applicable-publication-judges-pass="false" all-judge-snapshots-current="false"/>
+    <final-publication result="BLOCKED">The audit may be persisted for review; the page must not be declared FINAL_PASS or merged as publication-approved until form fidelity is restored, requested policy resolution is complete, and all applicable publication/placement replicas pass.</final-publication>
+  </devicev-gates>
+  <mutation-decision>
+    <visible-copy-mutation>QUARANTINED_PENDING_FORM_REPAIR_AND_JUDGE_RESOLUTION</visible-copy-mutation>
+    <required-repair>Restore the live slot-5 two-screen qualification form without altering the five section ids/order, the two project records, the provenance boundary or evidence semantics.</required-repair>
+    <reason>Evidence-bearing source copy is already publication-pending and the requested placement judge remains unresolved. A canonical overwrite would violate fail-closed execution until both the deterministic form contract and semantic publication gates pass.</reason>
+  </mutation-decision>
+  <google-drive>
+    <read-status>READ_ONLY_USED</read-status>
+    <folder-id>1R-1YEeeuoYfpZMRbuR15X2z-Nv6bEEQi</folder-id>
+    <folder-title>22.1 Chapter 22 - Smart contracts et vérifiabilité - preuves publiques utiles pas buzzwords - mickael-umt.com_realisations_blockchain</folder-title>
+    <write-status>NOT_PERFORMED_PENDING_EXPLICIT_USER_APPROVAL</write-status>
+  </google-drive>
+</contract-audit>
