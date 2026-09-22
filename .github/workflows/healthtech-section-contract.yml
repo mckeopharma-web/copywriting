@@ -1,0 +1,33 @@
+name: HealthTech section contract
+
+on:
+  pull_request:
+    paths:
+      - 'expertises/healthtech/**'
+      - 'tools/validate_healthtech_section_contract.py'
+      - '.github/workflows/healthtech-section-contract.yml'
+  push:
+    branches:
+      - 'review/healthtech-section-contract-2026-09-04'
+    paths:
+      - 'expertises/healthtech/**'
+      - 'tools/validate_healthtech_section_contract.py'
+      - '.github/workflows/healthtech-section-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate HealthTech five-section topology and forms
+        run: python tools/validate_healthtech_section_contract.py
+      - name: Publish deterministic validation summary
+        if: always()
+        run: cat reports/healthtech-section-contract-validation.json || true

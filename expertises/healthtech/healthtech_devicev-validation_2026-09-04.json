@@ -1,0 +1,147 @@
+{
+  "artifact": {
+    "page_url": "https://mickael-umt.com/expertises/healthtech/",
+    "scope": "ONLY_/expertises/healthtech/",
+    "branch": "review/healthtech-section-contract-2026-09-04",
+    "base_commit": "bd165acdd92e1a4de6b94fa20eddf535f67a7ef5",
+    "base_html_blob_sha": "dd4fed5b6ba91683ebb1aa39e4ab7667e750ce07",
+    "mode": "REVIEW_ONLY"
+  },
+  "source_resolution": {
+    "live_website": {
+      "authority": "SOURCE_OF_TRUTH",
+      "retrieval": "FAILED_IN_SESSION",
+      "failure_class": "DNS_OR_WEB_FETCH_UNAVAILABLE",
+      "equivalence_claim": "NOT_MADE"
+    },
+    "fallback_repository_html": {
+      "repository": "mckeopharma-web/copywriting",
+      "path": "expertises/healthtech/healthtech.html",
+      "status": "CAPTURED"
+    }
+  },
+  "section_contract": {
+    "classification": "EXPERTISE_COMPOSITE_ROUTER",
+    "exact_top_level_sections": 5,
+    "section_ids": [
+      "healthtech-hero",
+      "healthtech-offers",
+      "healthtech-capabilities",
+      "healthtech-next-step",
+      "healthtech-qualifier"
+    ],
+    "four_offer_routes": true,
+    "qualifier_screen_count": 8,
+    "existing_topology_sha256": "ecd37399bafc4bc5cc666397a94bc3cf926c3c7c7ab575e78552787527fa745f",
+    "decision": "LOCK_EXACT_PAGE_TOPOLOGY",
+    "reason": "The repository demonstrates multiple expertise/programme archetypes. HealthTech is a five-section composite/router and must not be expanded into the long-form detail/programme contract when the live-page form is to remain lossless."
+  },
+  "programme_reference_contract": {
+    "reference_path": "pages/programme/pharmaceutical-evidence-assurance.html",
+    "hero_outside_data_section_contract": true,
+    "contracted_section_ids": [
+      "triggers",
+      "consequences",
+      "for-whom",
+      "qualification",
+      "proposition",
+      "offers",
+      "deliverables",
+      "before-after",
+      "outcomes",
+      "evidence",
+      "scope",
+      "process",
+      "modules",
+      "intersection",
+      "commitments",
+      "questions",
+      "engagement"
+    ]
+  },
+  "neofort_current_policy_resolution": {
+    "customer_avatar_contract": "customer-avatar-contract:healthtech-product:v1.6",
+    "deterministic_preflight": "policy:evidence-agent-exploitability:deterministic-preflight-v2",
+    "factfulness": "judge:evidence:factfulness-epistemology-methodology-v2",
+    "agent_exploitability": "policy:evidence-agent-exploitability:proof-carrying-v3",
+    "judge_applicability": "policy:evidence-judge-applicability:v2",
+    "verdict_normalization": "policy:evidence-judge-verdict-normalization:v2",
+    "llm_determinism": "policy:llm-judge:deterministic-execution-v2",
+    "site_placement_policy": "evidence-placement-policy:site-v5",
+    "claim_span_placement_policy": "policy:evidence-placement:claim-span-entailment-v2@2.2",
+    "placement_judge": "judge:evidence-placement:presentation-v1.2",
+    "copy_claim_judge": "judge:copy-claim:external-capability-grounding-v1.1"
+  },
+  "legacy_requested_judge_resolution": {
+    "requested_name": "judge:eu:placementv1",
+    "current_true_match": false,
+    "action": "DO_NOT_EXECUTE_STALE_OR_UNRESOLVED_JUDGE",
+    "current_equivalent_chain": [
+      "evidence-placement-policy:site-v5",
+      "policy:evidence-placement:claim-span-entailment-v2@2.2",
+      "judge:evidence-placement:presentation-v1.2"
+    ]
+  },
+  "existing_evidence": {
+    "unique_evidence_units": 4,
+    "placement_occurrences": 12,
+    "eug_candidates": 4,
+    "eug_publication_status": "BLOCKED_PENDING_CURRENT_JUDGES_AND_SOURCE_CLOSURE"
+  },
+  "recent_external_candidate": {
+    "status": "CANDIDATE_NOT_PLACED",
+    "source": "FDA",
+    "published": "2026-08-18",
+    "title": "FDA Seeks Public Feedback to Inform Regulatory Approach for Generative AI-Enabled Medical Devices",
+    "claim_class": "SOURCE_STATEMENT",
+    "bounded_support": "FDA opened a discussion paper covering risk assessment, premarket evaluation and postmarket monitoring considerations for GenAI-enabled medical devices.",
+    "boundary": "Regulatory discussion context only; no claim of safety, effectiveness, approval probability, commercial value or consulting outcome.",
+    "reason_not_placed": "No current proof-carrying EvidenceUnit plus unanimous three-replica placement/presentation certificate exists for this exact page snapshot. Fail closed."
+  },
+  "commercial_review": {
+    "artifact": "expertises/healthtech/healthtech_commercial-review-v3_2026-09-04.html",
+    "mutation_class": "BOUNDED_TEXT_SUBSTITUTION",
+    "new_external_effect_claims": 0,
+    "new_evidence_placements": 0,
+    "top_level_topology_mutation": false,
+    "offer_route_mutation": false,
+    "qualifier_form_mutation": false,
+    "copy_rule": "MONOTONIC_NARROWING_OR_CLARIFICATION"
+  },
+  "deterministic_preflight": {
+    "repository_html_available": true,
+    "section_ids_known": true,
+    "section_order_locked": true,
+    "section_count_locked": true,
+    "offer_route_count_locked": true,
+    "qualifier_screen_order_locked": true,
+    "xml_contract_created": true,
+    "github_action_validator_created": true,
+    "github_action_run_id": 33820478791,
+    "github_action_job_id": 100861868668,
+    "github_action_status": "PASS",
+    "contract_sha256": "11dc22cd815e6739dfaf415454bddc51b04d15412b6545f66d22aa21592698a4",
+    "status": "PASS_REPOSITORY_SCOPE"
+  },
+  "semantic_and_placement": {
+    "three_replica_execution_available_in_session": false,
+    "new_claim_scoring_attempted": false,
+    "new_evidence_placement_authorized": false,
+    "status": "BLOCKED_PENDING_EXTERNAL_3_REPLICA"
+  },
+  "google_drive": {
+    "write_performed": false,
+    "create_update_delete_performed": false,
+    "requires_explicit_user_validation": true
+  },
+  "final_gate": {
+    "repository_structure_contract": "PASS_GITHUB_ACTION",
+    "live_dom_equivalence": "BLOCKED_LIVE_UNAVAILABLE",
+    "semantic_factfulness_new_external_claims": "NOT_APPLICABLE_NO_NEW_EXTERNAL_EFFECT_CLAIM",
+    "new_evidence_placement": "BLOCKED_NONE_ATTEMPTED",
+    "publication": false,
+    "final_pass": false,
+    "decision": "REVIEW_ONLY_BLOCKED"
+  },
+  "generated_at": "2026-09-04T02:10:00+02:00"
+}

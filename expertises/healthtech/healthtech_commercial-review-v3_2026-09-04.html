@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-publication-status="REVIEW_ONLY_BLOCKED" data-devicev-version="1.0.0" data-section-contract="contract:expertise:healthtech:2026-09-04">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#070B18">
+<title>HealthTech · topology-preserving commercial review · 2026-09-04</title>
+<style>:root{color-scheme:dark;--b:#070B18;--p:#EEF2FF;--m:#A8B0C7;--c:#51E6D5;--w:#F3B83F;--l:#a8b0c738}.boot{min-height:100vh;display:grid;place-items:center;padding:32px;background:var(--b);color:var(--p);font:16px/1.55 Inter,system-ui,sans-serif}.boot>div{max-width:760px;padding:26px;border:1px solid var(--l);border-radius:18px;background:#0B1230}.boot p{color:var(--m)}.boot small{color:var(--c);font-weight:800;letter-spacing:.08em}</style>
+</head>
+<body><main class="boot" id="boot"><div><small>DEVICEV · NIGHT MODE · TOPOLOGY-PRESERVING · REVIEW ONLY</small><h1>HealthTech commercial review</h1><p>Loading the complete HealthTech repository snapshot, then applying bounded copy substitutions only. No top-level section, offer route, evidence disclosure or qualifier screen is added, deleted, merged, split or reordered.</p></div></main>
+<script>
+(()=>{'use strict';
+const BASE='https://raw.githubusercontent.com/mckeopharma-web/copywriting/bd165acdd92e1a4de6b94fa20eddf535f67a7ef5/expertises/healthtech/healthtech.html';
+const EXPECTED=['healthtech-hero','healthtech-offers','healthtech-capabilities','healthtech-next-step','healthtech-qualifier'];
+const PATCHES=[
+ ['#healthtech-hero h1','Make one regulated HealthTech decision reconstructible before audit, lock or release.'],
+ ['#healthtech-hero .lead','Build the evidence chain into the workflow before the decision has to be defended.'],
+ ['#healthtech-hero .sub','For Quality/CSV, Clinical Data, Pharmacovigilance and HealthTech Product teams with one decision path where source, version, transformation, control, exception or accountable human sign-off is fragmented.'],
+ ['#healthtech-offers h2','Choose the decision path that must survive review.'],
+ ['#healthtech-offers .sh p','Start from the trigger already creating delivery or review pressure. Each route is bounded to what must become traceable, testable, reviewable and handover-ready.'],
+ ['#healthtech-next-step h2','Bring the decision you need to defend—not a generic AI transformation.'],
+ ['#healthtech-next-step .sub','Name the decision, accountable owner, deadline, source systems and exact break in the evidence chain. The first response is a route and scope decision, not a promise to automate everything.'],
+ ['#healthtech-next-step .btn.primary','Qualify this decision'],
+ ['#healthtech-qualifier h2','Qualify the mission in eight questions.']
+];
+function sectionIds(){return [...document.querySelectorAll('main>section')].map(x=>x.id)}
+function assertContract(){
+ const ids=sectionIds();
+ if(JSON.stringify(ids)!==JSON.stringify(EXPECTED))throw new Error('SECTION_CONTRACT_FAIL:'+ids.join(','));
+ const cards=document.querySelectorAll('#healthtech-offers article.card').length;
+ if(cards!==4)throw new Error('OFFER_ROUTE_COUNT_FAIL:'+cards);
+ const screens=[...document.querySelectorAll('#healthtech-form .screen')].map(x=>Number(x.dataset.screen));
+ if(JSON.stringify(screens)!==JSON.stringify([1,2,3,4,5,6,7,8]))throw new Error('QUALIFIER_SCREEN_ORDER_FAIL:'+screens.join(','));
+}
+fetch(BASE,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('BASE_FETCH_'+r.status);return r.text()}).then(html=>{
+ document.open();document.write(html);document.close();
+ assertContract();
+ PATCHES.forEach(([sel,text])=>{const n=document.querySelector(sel);if(!n)throw new Error('PATCH_SELECTOR_MISS:'+sel);n.textContent=text});
+ document.documentElement.dataset.publicationStatus='REVIEW_ONLY_BLOCKED';
+ document.documentElement.dataset.sectionContract='contract:expertise:healthtech:2026-09-04';
+ const banner=document.querySelector('.review .wrap');if(banner)banner.textContent='● DEVICEV commercial review · exact five-section HealthTech topology preserved · no new external-effect claim placed · publication remains blocked pending current semantic/placement replicas and live-DOM equivalence check.';
+ assertContract();
+}).catch(err=>{document.body.innerHTML='<main class="boot"><div><small>FAIL CLOSED</small><h1>Review could not be materialised.</h1><p>'+String(err).replace(/[<>]/g,'')+'</p></div></main>'});
+})();
+</script>
+<script type="application/json" id="devicev-review-contract">{
+  "page":"https://mickael-umt.com/expertises/healthtech/",
+  "base_commit":"bd165acdd92e1a4de6b94fa20eddf535f67a7ef5",
+  "base_blob_sha":"dd4fed5b6ba91683ebb1aa39e4ab7667e750ce07",
+  "section_contract":"contract:expertise:healthtech:2026-09-04",
+  "expected_sections":["healthtech-hero","healthtech-offers","healthtech-capabilities","healthtech-next-step","healthtech-qualifier"],
+  "offer_routes":4,
+  "qualifier_screens":8,
+  "new_external_effect_claims":0,
+  "new_evidence_placements":0,
+  "copy_posture":"MONOTONIC_NARROWING_OR_CLARIFICATION",
+  "publication_status":"REVIEW_ONLY_BLOCKED"
+}</script>
+</body></html>
