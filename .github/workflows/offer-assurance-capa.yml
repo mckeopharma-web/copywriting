@@ -1,0 +1,100 @@
+name: Offer assurance + CAPA evidence
+
+on:
+  pull_request:
+    paths:
+      - 'pages/**'
+      - 'expertises/**'
+      - 'publish/**'
+      - 'quality/**'
+      - 'contracts/offer-assurance-v1.schema.json'
+      - 'src/asset_quality/**'
+      - 'tests/asset_quality/**'
+      - '.github/workflows/offer-assurance-capa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'pages/**'
+      - 'expertises/**'
+      - 'publish/**'
+      - 'quality/**'
+      - 'contracts/offer-assurance-v1.schema.json'
+      - 'src/asset_quality/**'
+      - 'tests/asset_quality/**'
+      - '.github/workflows/offer-assurance-capa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offer-assurance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate governed offer assets
+        run: |
+          python -m src.asset_quality.validate \
+            --root . \
+            --manifests quality/assets \
+            --report reports/offer-assurance-gate.json
+
+      - name: Run regression tests
+        run: python -m unittest discover -s tests/asset_quality -p 'test_*.py' -v
+
+      - name: Publish quality receipt artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offer-assurance-quality-receipt
+          path: reports/offer-assurance-gate.json
+          if-no-files-found: error
+
+      - name: Forward receipt to app control plane when configured
+        if: ${{ always() && secrets.CONTROL_PLANE_QUALITY_URL != '' && secrets.CONTROL_PLANE_QUALITY_TOKEN != '' }}
+        env:
+          CONTROL_PLANE_QUALITY_URL: ${{ secrets.CONTROL_PLANE_QUALITY_URL }}
+          CONTROL_PLANE_QUALITY_TOKEN: ${{ secrets.CONTROL_PLANE_QUALITY_TOKEN }}
+          GITHUB_SHA_VALUE: ${{ github.sha }}
+          GITHUB_RUN_ID_VALUE: ${{ github.run_id }}
+          GITHUB_REPOSITORY_VALUE: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, uuid
+          from pathlib import Path
+
+          report = json.loads(Path('reports/offer-assurance-gate.json').read_text())
+          payload = {
+              'schema_version': '1.0',
+              'event_id': str(uuid.uuid5(uuid.NAMESPACE_URL, f"{os.environ['GITHUB_REPOSITORY_VALUE']}:{os.environ['GITHUB_SHA_VALUE']}:offer-assurance")),
+              'event_type': 'asset.quality.checked.v1',
+              'source': {
+                  'system': 'github_ci',
+                  'repository': os.environ['GITHUB_REPOSITORY_VALUE'],
+                  'commit_sha': os.environ['GITHUB_SHA_VALUE'],
+                  'run_id': os.environ['GITHUB_RUN_ID_VALUE'],
+              },
+              'assets': report['assets'],
+              'summary': {
+                  'status': report['status'],
+                  'error_count': report['error_count'],
+                  'warning_count': report['warning_count'],
+                  'registered_asset_count': report['registered_asset_count'],
+              },
+          }
+          request = urllib.request.Request(
+              os.environ['CONTROL_PLANE_QUALITY_URL'],
+              data=json.dumps(payload).encode(),
+              headers={
+                  'Authorization': f"Bearer {os.environ['CONTROL_PLANE_QUALITY_TOKEN']}",
+                  'Content-Type': 'application/json',
+              },
+              method='POST',
+          )
+          with urllib.request.urlopen(request, timeout=20) as response:
+              print(response.status, response.read().decode())
+          PY
