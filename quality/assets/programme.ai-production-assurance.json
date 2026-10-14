@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "programme.ai-production-assurance",
+  "asset_kind": "programme",
+  "source_path": "pages/programme/ai-production-assurance.html",
+  "canonical_url": "https://mickael-umt.com/programme/ai-production-assurance/",
+  "value_equation": {
+    "dream_outcome": {
+      "statement": "One critical AI use case. Twelve weeks. A production decision that leadership, IT and compliance can all defend.",
+      "evidence_refs": [
+        "pages/programme/ai-production-assurance_avatar_copywriting_devicev_v1.json",
+        "pages/programme/ai-production-assurance.html"
+      ]
+    },
+    "perceived_likelihood": {
+      "evidence_unit_count": 4,
+      "evidence_coverage": 0.14,
+      "evidence_refs": [
+        "pages/programme/ai-production-assurance_avatar_copywriting_devicev_v1.json"
+      ]
+    },
+    "time_delay": {
+      "full_outcome": "12 weeks to the go / limited-go / no-go decision package and handover.",
+      "first_verified_value": "Weeks 1-2 produce the mandate, baseline, risk map, ownership and acceptance criteria.",
+      "measurement_status": "planned"
+    },
+    "effort_sacrifice": {
+      "client_inputs": [
+        "A named sponsor able to arbitrate scope across the engagement.",
+        "Access to the selected use case systems, logs, data or documents under NDA.",
+        "Two internal people available for the transfer phase."
+      ],
+      "estimated_commitment": null,
+      "measurement_status": "to_measure"
+    },
+    "risk_reversal": {
+      "guarantee_type": "deliverable-bound",
+      "controlled_commitments": [
+        "Validated architecture and identified-risk register within the agreed scope.",
+        "Automated quality gates and regression criteria defined for the selected use case.",
+        "Governance layer, execution evidence and operational runbooks delivered for the selected use case."
+      ],
+      "excluded_outcomes": [
+        "Regulatory compliance or certification is not guaranteed.",
+        "The production decision remains with the accountable client owner.",
+        "Company-wide AI transformation is outside the core engagement.",
+        "Ongoing operations and on-call after handover are outside the core engagement."
+      ]
+    }
+  },
+  "quality_targets": {
+    "evidence_coverage_min": 0.5,
+    "unsupported_claims_max": 0,
+    "first_verified_value_declared": true
+  },
+  "mesh": {
+    "programme_ids": [
+      "programme.ai-production-assurance"
+    ],
+    "learning_program_ids": [
+      "learning-program.ai-agent-production"
+    ],
+    "capability_ids": [],
+    "app_tool_ids": [],
+    "mesh_status": "partial"
+  },
+  "capa": {
+    "crm_issue_id": null,
+    "crm_quality_action_id": null,
+    "crm_effectiveness_review_id": null
+  }
+}
