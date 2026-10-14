@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mickael-umt.com/contracts/offer-assurance-v1.schema.json",
+  "title": "Offer Assurance Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "asset_id",
+    "asset_kind",
+    "source_path",
+    "canonical_url",
+    "value_equation",
+    "quality_targets",
+    "mesh"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "asset_id": {
+      "type": "string",
+      "pattern": "^(offer|programme|expertise|page)\\.[a-z0-9][a-z0-9-]*(\\.[a-z0-9][a-z0-9-]*)*$"
+    },
+    "asset_kind": {
+      "type": "string",
+      "enum": ["offer", "programme", "expertise", "page"]
+    },
+    "source_path": {"type": "string", "minLength": 1},
+    "canonical_url": {
+      "type": "string",
+      "pattern": "^https://mickael-umt\\.com/"
+    },
+    "value_equation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dream_outcome",
+        "perceived_likelihood",
+        "time_delay",
+        "effort_sacrifice",
+        "risk_reversal"
+      ],
+      "properties": {
+        "dream_outcome": {"$ref": "#/$defs/dreamOutcome"},
+        "perceived_likelihood": {"$ref": "#/$defs/perceivedLikelihood"},
+        "time_delay": {"$ref": "#/$defs/timeDelay"},
+        "effort_sacrifice": {"$ref": "#/$defs/effortSacrifice"},
+        "risk_reversal": {"$ref": "#/$defs/riskReversal"}
+      }
+    },
+    "quality_targets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_coverage_min", "unsupported_claims_max", "first_verified_value_declared"],
+      "properties": {
+        "evidence_coverage_min": {"type": "number", "minimum": 0, "maximum": 1},
+        "unsupported_claims_max": {"type": "integer", "minimum": 0},
+        "first_verified_value_declared": {"type": "boolean"}
+      }
+    },
+    "mesh": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["programme_ids", "learning_program_ids", "capability_ids", "app_tool_ids", "mesh_status"],
+      "properties": {
+        "programme_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "learning_program_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "capability_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "app_tool_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "mesh_status": {"type": "string", "enum": ["complete", "partial", "not_applicable"]}
+      }
+    },
+    "capa": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "crm_issue_id": {"type": ["string", "null"]},
+        "crm_quality_action_id": {"type": ["string", "null"]},
+        "crm_effectiveness_review_id": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "$defs": {
+    "evidenceRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dreamOutcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement", "evidence_refs"],
+      "properties": {
+        "statement": {"type": "string", "minLength": 1},
+        "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/evidenceRef"}, "uniqueItems": true}
+      }
+    },
+    "perceivedLikelihood": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_unit_count", "evidence_coverage", "evidence_refs"],
+      "properties": {
+        "evidence_unit_count": {"type": "integer", "minimum": 0},
+        "evidence_coverage": {"type": "number", "minimum": 0, "maximum": 1},
+        "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/evidenceRef"}, "uniqueItems": true}
+      }
+    },
+    "timeDelay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["full_outcome", "first_verified_value", "measurement_status"],
+      "properties": {
+        "full_outcome": {"type": "string", "minLength": 1},
+        "first_verified_value": {"type": ["string", "null"]},
+        "measurement_status": {"type": "string", "enum": ["measured", "planned", "to_measure"]}
+      }
+    },
+    "effortSacrifice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["client_inputs", "estimated_commitment", "measurement_status"],
+      "properties": {
+        "client_inputs": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "estimated_commitment": {"type": ["string", "null"]},
+        "measurement_status": {"type": "string", "enum": ["measured", "planned", "to_measure"]}
+      }
+    },
+    "riskReversal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["guarantee_type", "controlled_commitments", "excluded_outcomes"],
+      "properties": {
+        "guarantee_type": {"type": "string", "enum": ["none", "deliverable-bound", "conditional"]},
+        "controlled_commitments": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "excluded_outcomes": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    }
+  }
+}
