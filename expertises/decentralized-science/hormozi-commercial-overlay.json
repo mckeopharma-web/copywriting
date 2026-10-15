@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "commercial-overlay",
+  "page_id": "page:planned:decentralized-science",
+  "page_url": "https://mickael-umt.com/expertises/decentralized-science/",
+  "status": "PROPOSED_PATCH",
+  "created_at": "2026-10-15",
+  "commercial_source": "mckeopharma-web/these:commercial/hormozi-offer-system.json",
+  "scientific_sources": [
+    "mckeopharma-web/these:research-contract.json",
+    "mckeopharma-web/these:thesis-proposal.md",
+    "mckeopharma-web/WBNK:documentation/curricula/desci-140h/capstone/profile.json",
+    "mckeopharma-web/WBNK:documentation/curricula/desci-140h/capstone/site-promise-traceability.json"
+  ],
+  "intent": "Reduce first-purchase ambiguity by making the 14-Day Verifiable Research Sprint the single primary commercial CTA while retaining the existing five DS configurations as secondary fulfillment/expansion paths.",
+  "hero_patch": {
+    "eyebrow": "Expertise · Verifiable Research Infrastructure",
+    "title": "14-Day Verifiable Research Sprint",
+    "headline": "Rendez un claim de recherche vérifiable par un tiers — sans rendre publiques les données qui ne servent pas à la preuve.",
+    "body": "En cinq jours de production à distance répartis sur une fenêtre cible de 14 jours, nous transformons un claim borné en paquet de vérification : sources et versions, graphe claim→evidence, provenance, capsule de replay ou d’inspection, frontière d’accès, tests d’acceptation et reviewer pack. Blockchain, attestations ou ZK ne sont retenus que s’ils ajoutent une propriété d’assurance mesurable par rapport à une baseline centralisée signée.",
+    "primary_cta": "Cadrer le sprint de 14 jours",
+    "secondary_cta": "Tester gratuitement la méthode — DeSci 140 h",
+    "price_reference": {
+      "amount_eur": 5038.85,
+      "label": "Repère actuel pour 5 jours de production à distance",
+      "pricing_engine_reference": "2BB3718ACC9D6AD3",
+      "binding": false,
+      "note": "Le devis final reste déterminé par le moteur public selon la mission, la complexité, la durée et la logistique."
+    }
+  },
+  "value_equation": {
+    "dream_outcome": "One bounded research claim can be handed to an independent reviewer as a coherent verification package.",
+    "likelihood": "Increase through pre-written acceptance gates, explicit claim/evidence lineage, replay or inspection instructions, and a reviewer receipt.",
+    "time_delay": "Target 14 calendar days for the entry sprint.",
+    "effort": "Buyer supplies one claim/workflow, one accountable owner, controlled evidence access, two 45-minute working sessions and one 60-minute final review."
+  },
+  "offer_stack": [
+    {
+      "order": 0,
+      "id": "DS-H0",
+      "name": "DeSci Evidence-Native Curriculum — 140 h",
+      "role": "free proof / education asset",
+      "price_eur": 0,
+      "cta": "Tester gratuitement la méthode"
+    },
+    {
+      "order": 1,
+      "id": "DS-H1",
+      "name": "14-Day Verifiable Research Sprint",
+      "role": "single primary entry offer",
+      "reference_price_eur": 5038.85,
+      "cta": "Cadrer le sprint"
+    },
+    {
+      "order": 2,
+      "id": "DS-H2",
+      "name": "Reproducible Evidence Pipeline PoC",
+      "role": "expansion",
+      "price": "quote"
+    },
+    {
+      "order": 3,
+      "id": "DS-H3",
+      "name": "Implementation / Protocol Assurance",
+      "role": "production expansion",
+      "price": "quote"
+    },
+    {
+      "order": 4,
+      "id": "DS-H4",
+      "name": "ENARP Thesis / Industrial Research Partnership",
+      "role": "premium research partnership",
+      "price": "institutional framing"
+    }
+  ],
+  "core_deliverables": [
+    "Claim & verifier contract",
+    "Research-object schema",
+    "Claim-evidence graph",
+    "Source/version/provenance register",
+    "Replay or independent-inspection capsule",
+    "Consent & access boundary",
+    "Threat model & acceptance tests",
+    "Verification receipt + reviewer pack",
+    "Architecture decision record comparing conventional signed baseline vs selective verifiable mechanism"
+  ],
+  "bonuses": [
+    "DeSci 140 h curriculum access",
+    "Research Evidence Readiness Scorecard",
+    "Selective-Disclosure Decision Tree",
+    "Failure-Injection Checklist",
+    "Handover Runbook Template"
+  ],
+  "risk_reversal": {
+    "publication_status": "DO_NOT_PUBLISH_UNTIL_OWNER_APPROVAL",
+    "name": "Artifact Completeness Commitment",
+    "terms": "If the sponsor provides agreed inputs and access on time and an agreed mandatory artifact is incomplete at the final acceptance gate, remedial production continues for up to two additional remote production days at no extra consulting fee.",
+    "excluded_outcomes": [
+      "scientific truth",
+      "clinical effect",
+      "regulatory acceptance",
+      "peer-review acceptance",
+      "doctoral-school acceptance",
+      "mandatory blockchain or ZK"
+    ]
+  },
+  "scarcity_and_urgency": {
+    "scarcity": "Publish capacity only from measured CRM delivery capacity; never invent slot counts.",
+    "urgency": "Use real buyer decision windows and the public quote validity period; no artificial countdown."
+  },
+  "existing_ds_offer_mapping": {
+    "DS-O1": "Absorbed into entry-sprint claim/verifier/property mapping rather than marketed as a competing first purchase.",
+    "DS-O2": "Becomes an optional sprint expansion when architecture work exceeds the bounded entry scope.",
+    "DS-O3": "Becomes the default post-sprint PoC expansion.",
+    "DS-O4": "Remains implementation expansion.",
+    "DS-O5": "Remains assurance / recurring review expansion."
+  },
+  "publication_gates": [
+    "The public desci-140h product route resolves and is linked from the catalogue.",
+    "At least one real allowed-source capstone submission exists.",
+    "At least one independent verification receipt exists.",
+    "Any numeric scarcity reflects real CRM capacity.",
+    "The risk-reversal wording is owner-approved before publication.",
+    "No sentence implies scientific, clinical, regulatory, reviewer or doctoral-school acceptance."
+  ]
+}
